@@ -1,0 +1,87 @@
+//
+// Icons
+//
+// Since: 1.0.0
+//
+// Styleguide Base.Icons
+//
+
+@font-face {
+  font-family: "<%= fontName %>";
+  src: url('../fonts/<%= fontName %>.eot');
+  src: url('../fonts/<%= fontName %>.eot?#iefix') format('eot'),
+       url('../fonts/<%= fontName %>.woff2') format('woff2'),
+       url('../fonts/<%= fontName %>.woff') format('woff'),
+       url('../fonts/<%= fontName %>.ttf') format('truetype'),
+       url('../fonts/<%= fontName %>.svg#<%= fontName %>') format('svg');
+}
+
+%icon,
+*[class*='icon-'] {
+  position: relative;
+  display:inline-block;
+  font-family:"<%= fontName %>";
+  font-size: inherit;
+  font-style:normal;
+  font-weight:normal;
+  speak:none;
+  text-decoration:inherit;
+  text-transform:none;
+  text-rendering:optimizeLegibility;
+  vertical-align: -12%;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.icon--medium { font-size: 2rem; }
+.icon--large { font-size: 3rem; }
+
+@function icon-char($filename) {
+  $char: "";
+<% _.each(glyphs, function(glyph) { %>
+  @if $filename == <%= glyph.fileName %> {
+    $char: "\<%= glyph.codePoint %>";
+  }<% }); %>
+
+  @return $char;
+}
+
+@mixin icon($filename) {
+  content: icon-char($filename);
+}
+
+//
+// Inventory
+//
+// Markup:
+// <div class="base-margin-top row"><% _.each(glyphs, function(glyph) { %>
+//   <div class="col-xs-6 col-sm-4 col-md-3" title="icon-<%= glyph.fileName %>">
+//     <div class="panel panel--bordered qtr-margin-bottom">
+//         <div class="flex-center-vertical">
+//             <div class="flex-center" style="width:48px;height:48px">
+//                 <span class="icon-<%= glyph.fileName %> icon-medium"></span>
+//             </div>
+//             <div class="flex-fluid half-margin-left text-ellipsis">
+//                 <div class="text-ellipsis">icon-<%= glyph.fileName %></div>
+//                 <small class="text-lowercase text-muted"><%= glyph.codePoint %></small>
+//             </div>
+//         </div>
+//     </div>
+//   </div><% }); %>
+// </div>
+//
+// Styleguide Base.Icons.Inventory
+//
+
+<% _.each(glyphs, function(glyph) { %>
+.icon-<%= glyph.fileName %>{
+  &:before {
+    @include icon(<%= glyph.fileName %>);
+  }
+}
+
+@mixin icon-<%= glyph.fileName %> {
+  @extend %icon;
+  @include icon(<%= glyph.fileName %>);
+}
+<% }); %>

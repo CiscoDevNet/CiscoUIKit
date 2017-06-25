@@ -1,0 +1,463 @@
+//
+// Panel updated
+//
+// A panel is a fundamental general purpose container.<br><br>
+// Since: 1.0.0
+//
+// Styleguide Base.Panel
+//
+
+
+//
+// Color / Background
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6 panel-group panel-group--compressed">
+//         <div class="panel panel--bordered">
+//             <h6>Default</h6>
+//         </div>
+//         <div class="panel panel--blue">
+//             <h6>Blue</h6>
+//         </div>
+//         <div class="panel panel--ltgray">
+//             <h6>Light Gray</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-6 panel-group panel-group--compressed">
+//         <div class="panel panel--mdgray">
+//             <h6>Medium Gray</h6>
+//         </div>
+//         <div class="panel panel--dkgray">
+//             <h6>Dark Gray</h6>
+//         </div>
+//         <div class="panel panel--dkblue">
+//             <h6>Dark Blue</h6>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Base.Panel.Color
+//
+
+
+//
+// Color / Status
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6 panel-group panel-group--compressed">
+//         <div class="panel panel--info">
+//             <h6>Informational</h6>
+//         </div>
+//         <div class="panel panel--success">
+//             <h6>Success</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-6 panel-group panel-group--compressed">
+//         <div class="panel panel--warning">
+//             <h6>Warning</h6>
+//         </div>
+//         <div class="panel panel--danger">
+//             <h6>Danger</h6>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Base.Panel.Status
+//
+
+
+//
+// Padding
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="panel panel--blue panel--compressed">
+//             <h6>Compressed</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="panel panel--blue panel--regular">
+//             <h6>Regular (default)</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="panel panel--blue panel--loose">
+//             <h6>Loose</h6>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Base.Panel.Padding
+//
+
+
+//
+// Spacing
+//
+// <blockquote>See pattern <a href="section-style-guide.html#style-guide-base-list">@List</a> for how to manage panel spacing</blockquote>
+//
+// Weight: 3
+//
+// Styleguide Base.Panel.Spacing
+//
+
+
+//
+// Raised
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="panel panel--blue">
+//             <h6>Flat (default)</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="panel panel--raised">
+//             <h6>Raised</h6>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Base.Panel.Raised
+//
+
+
+//
+// Bordered
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="panel panel--bordered">
+//             <h6>Bordered</h6>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Base.Panel.Bordered
+//
+
+
+//
+// Well
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="panel panel--ltgray panel--well">
+//             <h6>Well</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="panel panel--success panel--well">
+//             <h6>Well</h6>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Base.Panel.Well
+//
+
+
+//
+// Hover
+//
+// <blockquote>Add a hover effect to your panels by turning them into anchors</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-2">
+//         <a class="panel panel--blue">
+//             <h6>blue</h6>
+//         </a>
+//     </div>
+//     <div class="col-md-2">
+//         <a class="panel panel--ltgray">
+//             <h6>ltgray</h6>
+//         </a>
+//     </div>
+//     <div class="col-md-2">
+//         <a class="panel panel--mdgray">
+//             <h6>mdgray</h6>
+//         </a>
+//     </div>
+//     <div class="col-md-2">
+//         <a class="panel panel--dkgray">
+//             <h6>dkgray</h6>
+//         </a>
+//     </div>
+//     <div class="col-md-2">
+//         <a class="panel panel--dkblue">
+//             <h6>dkblue</h6>
+//         </a>
+//     </div>
+//     <div class="col-md-2">
+//         <a class="panel panel--info">
+//             <h6>info</h6>
+//         </a>
+//     </div>
+//     <div class="col-md-2">
+//         <a class="panel panel--success">
+//             <h6>success</h6>
+//         </a>
+//     </div>
+//     <div class="col-md-2">
+//         <a class="panel panel--warning">
+//             <h6>warning</h6>
+//         </a>
+//     </div>
+//     <div class="col-md-2">
+//         <a class="panel panel--danger">
+//             <h6>danger</h6>
+//         </a>
+//     </div>
+// </div>
+//
+// Weight: 7
+//
+// Styleguide Base.Panel.Hover
+//
+
+
+//
+// Examples
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="panel panel--bordered text-center">
+//             <div class="panel__body">
+//                 <div class="flex-inline thumb thumb--large">
+//                     <img src="public/img/user-photo-thumb-1.png">
+//                 </div>
+//                 <h1>Jane Doe<h1>
+//                 <h5 class="subheading">Business Analyst</h6>
+//                 <div><small>jane.doe@cisco.com</small></div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="panel panel--blue panel--loose">
+//             <h1>John Smith</h1>
+//             <div><span class="icon-mail"></span> jsmith@cisco.com</div>
+//             <div><span class="icon-home"></span> 2100 Kit Creek Road, Bldg 9</div>
+//             <div><span class="icon-phone"></span> +555 222-9980</div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="panel panel--dkblue">
+//             <h1>$1,250</h1>
+//             <div>Quarterly Income</div>
+//             <div>
+//                 <small>Sales and Marketing</small>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="panel panel--danger panel--loose">
+//             <h1><span class="icon-alert"></span> 21 Alerts</h1>
+//             <div>Router Configuration Anomalies</div>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <div class="panel panel--bordered">
+//     <div class="row">
+//         <div class="col-md-6">
+//             <img src="public/img/section-1.jpg">
+//         </div>
+//         <div class="col-md-6">
+//             <div class="panel panel--loose">
+//                 <h2><a href="https://wwww.cisco.com" target="_blank">Know the now: Cisco Tetration Analytics</a></h2>
+//                 <p>Pervasive visibility across everything in your data center in real-time. Radically simplify cloud migration, SDN, and zero-trust security.</p>
+//                 <a href="https://www.cisco.com" target="_blank">Find out how <span class="icon-right-arrow-outline"></span></a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <div class="panel">
+//     <div class="row">
+//         <div class="col-md-4">
+//             <div class="panel panel--ltgray panel--loose">
+//                 <img src="public/img/section-2-1.jpg">
+//                 <h2>Value-added resellers</h2>
+//                 <p>Sell and support products, services, and solutions for your customers.</p>
+//                 <a href="https://www.cisco.com" target="_blank">Channel Partner Program</a>
+//             </div>
+//         </div>
+//         <div class="col-md-4">
+//             <div class="panel panel--loose panel--bordered">
+//                 <img src="public/img/section-2-2.jpg">
+//                 <h2>Providers</h2>
+//                 <p>Build and deliver managed and cloud services.</p>
+//                 <a href="https://www.cisco.com" target="_blank">Cloud and Managed Services Program</a>
+//             </div>
+//         </div>
+//         <div class="col-md-4">
+//             <div class="panel panel--ltgray panel--loose">
+//                 <img src="public/img/section-2-3.jpg">
+//                 <h2>Consultants</h2>
+//                 <p>Use your expertise to define business outcomes and deliver results.</p>
+//                 <a href="https://www.cisco.com" target="_blank">Become a Consultant</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 8
+//
+// Styleguide Base.Panel.Examples
+//
+
+.panel-group { // Deprecated. Wrap panels in unordered list
+    .panel + .panel {
+        margin-top: 2px;
+    }
+    .panel-group__header {
+        margin: 0 ($base-spacing * 0.5);
+    }
+}
+
+.panel {
+    display: block;
+    position: relative;
+    margin: 0;
+    border: 0 none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &__header {
+        user-select: none;
+    }
+
+    &__header,
+    &__body,
+    &__footer {
+        @include panel-section();
+    }
+
+    @include panel();
+    @include panel-padding();
+
+    @each $panel-obj in $panel-colors {
+        &--#{map-get($panel-obj, name)} {
+            @include panel(map-get($panel-obj, params)...);
+        }
+    }
+
+    &--raised {
+        box-shadow: $base-panel-box-shadow;
+    }
+
+    &--skinny,
+    &--compressed {
+        @include panel-padding($padding: $base-panel-compressed-padding);
+    }
+
+    &--regular {
+        @include panel-padding($padding: $base-panel-regular-padding);
+    }
+
+    &--loose,
+    &--xspace {
+        @include panel-padding($padding: $base-panel-loose-padding);
+    }
+
+    &--bordered {
+        border: $base-border;
+    }
+
+    &--hover {
+        &:hover {
+            background-color: $base-background-color;
+        }
+    }
+
+    &--active {
+        box-shadow: inset 0 0 0 2px $base-accent-color;
+    }
+
+    &--transparency {
+        z-index: 1;
+        color: white;
+        background-color: rgba($white, .25);
+
+        &:hover {
+            background-color: rgba($white, 0.15);
+        }
+
+        &.panel--blue {
+            background-color: rgba($cisco-blue, .75);
+            &:hover {
+                background-color: rgba($cisco-blue, .5);
+            }
+        }
+        &.panel--warning {
+            background-color: rgba($warning, .50);
+            &:hover {
+                background-color: rgba($warning, .25);
+            }
+        }
+
+        &:hover {
+
+        }
+    }
+
+    &--well {
+        box-shadow: inset 0 5px 10px -5px rgba(0,0,0,0.25);
+    }
+}
+
+a.panel {
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        color: $base-font-color;
+        background-color: tint($white, $base-panel-hover-tint);
+    }
+
+    @each $panel-obj in $panel-colors {
+        &--#{map-get($panel-obj, name)}:hover {
+            background-color: tint(map-deep-get($panel-obj, 'params', 'background'), $base-panel-hover-tint);
+            @if map-has-nested-keys($panel-obj, 'params', 'color') {
+                color: map-deep-get($panel-obj, 'params', 'color');
+            }
+        }
+    }
+}
+
+.panels {
+    @include panel-margin();
+
+    &--striping {
+        > .panel:nth-child(odd) {
+            background: $white;
+        }
+
+        > .panel:nth-child(even) {
+            background: $off-white;
+        }
+    }
+
+    &--compressed   { @include panel-margin($base-spacing-compressed 0); }
+    &--regular      { @include panel-margin($base-spacing-regular 0); }
+    &--loose        { @include panel-margin($base-spacing-loose 0); }
+}

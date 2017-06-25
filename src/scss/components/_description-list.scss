@@ -1,0 +1,172 @@
+
+
+//
+// Description Lists
+//
+// Supports the following modifiers: <br><br>
+//     **Style** <br>
+//     `dl--inline` Inline side-by-side <br>
+//     `dl--inline-centered` Inline with labels and values centered <br>
+//     `dl--inline-wrap` Inline with wrapping description text <br><br>
+//     **Inline Size** <br>
+//     `dl--inline-xsmall` Extra small width labels <br>
+//     `dl--inline-small` Small width labels (default) <br>
+//     `dl--inline-medium` Medium width labels <br>
+//     `dl--inline-large` Large width labels <br>
+//     `dl--inline-xlarge` Extra large width labels <br>
+// NOTE: At the smallest breakpoint all description lists become stacked by default.
+//
+// Markup:
+// <fieldset>
+//     <legend>Stacked (default)</legend>
+//     <dl>
+//         <dt>But I must explain</dt>
+//         <dd>To you how all this mistaken</dd>
+//         <dt>Idea of denouncing hatred</dt>
+//         <dd>Great explorer of the truth</dd>
+//         <dt>To take a trivial example</dt>
+//         <dd>That they cannot foresee</dd>
+//         <dt>Who avoids a pain that produced</dt>
+//         <dd>Consequences that are extremely</dd>
+//     </dl>
+// </fieldset>
+// <fieldset>
+//     <legend>Inline</legend>
+//     <dl class="dl--inline">
+//         <dt>But I must explain</dt>
+//         <dd>To you how all this mistaken</dd>
+//         <dt>Idea of denouncing hatred</dt>
+//         <dd>Great explorer of the truth</dd>
+//         <dt>To take a trivial example</dt>
+//         <dd>That they cannot foresee</dd>
+//         <dt>Who avoids a pain that produced</dt>
+//         <dd>Consequences that are extremely</dd>
+//     </dl>
+// </fieldset>
+// <fieldset>
+//     <legend>Inline Centered</legend>
+//     <dl class="dl--inline-centered">
+//         <dt>But I must explain</dt>
+//         <dd>To you how all this mistaken</dd>
+//         <dt>Idea of denouncing hatred</dt>
+//         <dd>Great explorer of the truth</dd>
+//         <dt>To take a trivial example</dt>
+//         <dd>That they cannot foresee</dd>
+//         <dt>Who avoids a pain that produced</dt>
+//         <dd>Consequences that are extremely</dd>
+//     </dl>
+// </fieldset>
+// <fieldset>
+//     <legend>Inline Wrapped</legend>
+//     <dl class="dl--inline-wrap">
+//         <dt>But I must explain</dt>
+//         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
+//         <dt>Idea of denouncing hatred</dt>
+//         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
+//         <dt>To take a trivial example</dt>
+//         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
+//         <dt>Who avoids a pain that produced</dt>
+//         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
+//     </dl>
+// </fieldset>
+// <fieldset>
+//     <legend>Inline Wrapped and Centered</legend>
+//     <dl class="dl--inline-wrap dl--inline-centered">
+//         <dt>But I must explain</dt>
+//         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
+//         <dt>Idea of denouncing hatred</dt>
+//         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
+//         <dt>To take a trivial example</dt>
+//         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
+//         <dt>Who avoids a pain that produced</dt>
+//         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius elit sit amet aliquam luctus. In sed odio ut nulla bibendum faucibus. Maecenas consequat sagittis nisl in dignissim. In varius turpis at neque fermentum, eget commodo arcu fermentum.</dd>
+//     </dl>
+// </fieldset>
+//         
+
+
+
+
+@mixin dl-size($width) {
+  width: $width;
+}
+
+dl, dt, dd {
+  margin: 0;
+}
+
+dt {
+  @include text-ellipsis;
+  font-weight: $base-dl-label-font-weight;
+}
+
+dd {
+  color: $base-dl-value-color;
+  margin-bottom: $base-dl-label-bottom-spacing;
+}
+
+dl.dl--skinny {
+  dt {
+    width: 8rem;
+  }
+}
+
+.dl--inline,
+.dl--inline-centered,
+.dl--inline-wrap,
+.dl--horizontal {
+  @include text-ellipsis;
+  @include clearfix;
+
+  dt {
+    width: auto;
+    float: none;
+    padding-right: 0;
+
+    @include break-at(xsmall) {
+      @include text-ellipsis;
+      @include dl-size($width: $base-dl-label-width-medium);
+      padding-right: $base-dl-label-right-spacing;
+      float: left;
+      clear: left;
+    }
+  }
+
+  dd {
+    @include text-ellipsis;
+    float: none;
+    margin-bottom: $base-dl-label-bottom-spacing;
+
+    @include break-at(xsmall) {
+      margin-bottom: 0;
+      float: left;
+    }
+  }
+}
+
+.dl--inline-centered {
+  dt {
+    text-align: left;
+
+    @include break-at(xsmall) {
+      text-align: right;
+    }
+  }
+}
+
+.dl--inline-wrap {
+  dd {
+    white-space: normal;
+    float: none;
+  }
+}
+
+@each $label, $size in $base-dl-sizes {
+  .dl--inline-#{$label} {
+    dt {
+      @include break-at(xsmall) {
+        @include dl-size($width: $size);
+      }
+    }
+  }
+}

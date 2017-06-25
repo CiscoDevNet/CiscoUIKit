@@ -1,0 +1,176 @@
+//
+// Loader new
+//
+// Since: 1.0.4
+//
+// Styleguide Components.Loader
+//
+
+
+//
+// Examples
+//
+// Markup:
+// <div class="panel panel--bordered IGNORE">
+// <div>
+//     <div class="loading-dots loading-dots--muted">
+//         <span></span>
+//         <span></span>
+//         <span></span>
+//     </div>
+// </div>
+// </div IGNORE>
+// <br>
+// <div class="panel panel--bordered IGNORE">
+// <div>
+//     <h4 class="text-center">Loader with Text</h4>
+//     <div class="loading-dots loading-dots--muted">
+//         <span></span>
+//         <span></span>
+//         <span></span>
+//     </div>
+// </div>
+// </div IGNORE>
+//
+// Weight: 1
+//
+// Styleguide Components.Loader.Examples
+//
+
+
+//
+// Color
+//
+// Markup:
+// <div class="panel panel--dkgray IGNORE">
+// <div>
+//     <h4 class="text-center">White</h4>
+//     <div class="loading-dots">
+//         <span></span>
+//         <span></span>
+//         <span></span>
+//     </div>
+// </div>
+// </div IGNORE>
+// <br>
+// <div class="panel panel--bordered IGNORE">
+// <div>
+//     <h4 class="text-center">Muted</h4>
+//     <div class="loading-dots loading-dots--muted">
+//         <span></span>
+//         <span></span>
+//         <span></span>
+//     </div>
+// </div>
+// </div IGNORE>
+// <br>
+// <div class="panel panel--bordered IGNORE">
+// <div>
+//     <h4 class="text-center">Success</h4>
+//     <div class="loading-dots loading-dots--success">
+//         <span></span>
+//         <span></span>
+//         <span></span>
+//     </div>
+// </div>
+// </div IGNORE>
+// <br>
+// <div class="panel panel--bordered IGNORE">
+// <div>
+//     <h4 class="text-center">Info</h4>
+//     <div class="loading-dots loading-dots--info">
+//         <span></span>
+//         <span></span>
+//         <span></span>
+//     </div>
+// </div>
+// </div IGNORE>
+//
+// Weight: 2
+//
+// Styleguide Components.Loader.Color
+//
+
+.loader {
+    @include full-page;
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+
+    &--app-loading {
+        background-color: $alt-background-color;
+        background: radial-gradient(ellipse at center, $alt-background-color 15%, $light-gray-3 75%);
+        z-index: 10000;
+
+        span.icon-cisco {
+            padding: $base-spacing * 0.5;
+            color: $base-disabled-color;
+            font-size: 4rem;
+            line-height: 1;
+        }
+    }
+
+    &--page-loading {
+        background: $base-overlay-background;
+        color: $white;
+        z-index: 1060;
+    }
+}
+
+.loading-dots {
+    padding: $base-spacing * 0.5;
+    text-align: center;
+
+    &.loading-dots--muted {
+        > span {
+            background: $base-disabled-color;
+        }
+    }
+
+    &.loading-dots--info {
+        > span {
+            background: $cisco-blue;
+        }
+    }
+
+    &.loading-dots--success {
+        > span {
+            background: $success;
+        }
+    }
+
+    > span {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin: 0 2px;
+        background: $white;
+        border-radius: 50%;
+        animation: pulse 1.4s infinite both ease-in-out;
+
+        &:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+    }
+}
+
+// If the loader is used inside a modal dialog we match the backdrop to the modal
+.modal-dialog {
+    .loader--page-loading {
+        top: $base-spacing;
+        right: $base-spacing * 0.5;
+        bottom: $base-spacing;
+        left: $base-spacing * 0.5;
+
+        @include break-at(small) {
+            top: $base-spacing * 1.5;
+            right: $base-spacing;
+            bottom: $base-spacing * 1.5;
+            left: $base-spacing;
+        }
+    }
+}

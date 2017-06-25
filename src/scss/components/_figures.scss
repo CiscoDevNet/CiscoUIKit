@@ -1,0 +1,164 @@
+//
+// Figure
+//
+// The figure pattern consists of an image and a caption which describes the image<br><br>
+// Since 1.0.0
+//
+// Styleguide Components.Figure
+//
+
+
+//
+// Layout
+//
+// <blockquote>Note that at the smallest breakpoint all figures use the vertical layout</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <p class="text-center"><b>Vertical (default)</b></p>
+//         <figure class="figure">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</div>
+//             </figcaption>
+//             <img src="public/img/article-photo-1.jpg">
+//         </figure>
+//     </div>
+//     <div class="col-md-6">
+//         <p class="text-center"><b>Horizontal</b></p>
+//         <figure class="figure figure--horizontal">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</div>
+//             </figcaption>
+//             <img src="public/img/article-photo-2.jpg">
+//         </figure>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Figure.Layout
+//
+
+
+//
+// Padding
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <p class="text-center"><b>Compressed</b></p>
+//         <figure class="figure figure--bordered figure--compressed">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida.</div>
+//             </figcaption>
+//             <img src="public/img/article-photo-1.jpg">
+//         </figure>
+//     </div>
+//     <div class="col-md-4">
+//         <p class="text-center"><b>Regular (default)</b></p>
+//         <figure class="figure figure--bordered figure--regular">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida.</div>
+//             </figcaption>
+//             <img src="public/img/article-photo-1.jpg">
+//         </figure>
+//     </div>
+//     <div class="col-md-4">
+//         <p class="text-center"><b>Loose</b></p>
+//         <figure class="figure figure--bordered figure--loose">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida.</div>
+//             </figcaption>
+//             <img src="public/img/article-photo-1.jpg">
+//         </figure>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Components.Figure.Padding
+//
+
+
+//
+// Highlight
+//
+// <blockquote>Add a `figure--highlight` class to highlight to your caption</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <figure class="figure figure--highlight">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</div>
+//             </figcaption>
+//             <img src="public/img/article-photo-3.jpg">
+//         </figure>
+//     </div>
+//     <div class="col-md-6">
+//         <figure class="figure figure--horizontal figure--highlight">
+//             <figcaption>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</div>
+//             </figcaption>
+//             <img src="public/img/article-photo-1.jpg">
+//         </figure>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Components.Figure.Highlight
+//
+
+@mixin figure-spacing($spacing: $base-spacing-regular) {
+    margin: 0;
+    padding: $spacing;
+
+    figcaption + img,
+    img + figcaption {
+        margin-top: $spacing;
+    }
+}
+
+.figure {
+
+    @include figure-spacing();
+
+    &--bordered {
+        border: $base-border;
+    }
+
+    &--compressed {
+        @include figure-spacing($base-spacing-compressed);
+    }
+
+    &--regular {
+        @include figure-spacing($base-spacing-regular);
+    }
+
+    &--loose {
+        @include figure-spacing($base-spacing-loose);
+    }
+
+    &--horizontal {
+        @include break-at(small) {
+            > img,
+            figcaption {
+                @include col(1/2);
+            }
+        }
+
+        figcaption + img,
+        img + figcaption {
+            margin-top: 0;
+        }
+    }
+
+    &--highlight {
+        figcaption {
+            padding-left: $base-spacing-regular;
+            border-left: $base-figure-highlight-width solid $cisco-blue
+        }
+    }
+}

@@ -1,0 +1,273 @@
+//
+// Tab updated
+//
+// Since: 1.0.1
+//
+// Styleguide Components.Tab
+//
+
+
+//
+// Layout
+//
+// <blockquote>Add the class `active` on a tab to denote the current selection<br>Wrap your tabs in a `secondary-tabs` div to differentiate header tabs versus secondary tabs (bottom border is added for secondary tabs)</blockquote>
+//
+// Markup:
+// <div class="secondary-tabs">
+//     <ul class="tabs">
+//         <li class="tab active">
+//             <a>
+//                 <div class="tab__heading" title="Tab Title 1">Tab Title 1</div>
+//             </a>
+//         </li>
+//         <li class="tab">
+//             <a>
+//                 <div class="tab__heading" title="Tab Title 2">Tab Title 2</div>
+//             </a>
+//         </li>
+//         <li class="tab">
+//             <a>
+//                 <div class="tab__heading" title="Tab Title 3">Tab Title 3</div>
+//             </a>
+//         </li>
+//     </ul>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Tab.Layout
+//
+
+
+//
+// Tall
+//
+// <blockquote>Add the class `nav-tabs--tall` or `tabs--tall` to render taller tabs<br>This only affects horizontal tabs but can be applied to either header tabs or secondary tabs</blockquote>
+//
+// Markup:
+// <div class="secondary-tabs">
+//     <ul class="tabs tabs--tall">
+//         <li class="tab active">
+//             <a>
+//                 <div class="tab__heading" title="Tall Tab 1">Tall Tab 1</div>
+//             </a>
+//         </li>
+//         <li class="tab">
+//             <a>
+//                 <div class="tab__heading" title="Tall Tab 2">Tall Tab 2</div>
+//             </a>
+//         </li>
+//         <li class="tab">
+//             <a>
+//                 <div class="tab__heading" title="Tall Tab 3">Tall Tab 3</div>
+//             </a>
+//         </li>
+//     </ul>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Tab.Tall
+//
+
+
+//
+// Direction
+//
+// <blockquote>Tabs can flow horizontal (default) or add the class `tabs--vertical` for vertical</blockquote>
+//
+// Markup:
+// <ul class="tabs tabs--vertical">
+//     <li class="tab active">
+//         <a>
+//             <div class="tab__heading" title="Tab Title 1">Tab Title 1</div>
+//         </a>
+//     </li>
+//     <li class="tab">
+//         <a>
+//             <div class="tab__heading" title="Tab Title 2">Tab Title 2</div>
+//         </a>
+//     </li>
+//     <li class="tab">
+//         <a>
+//             <div class="tab__heading" title="Tab Title 3">Tab Title 3</div>
+//         </a>
+//     </li>
+// </ul>
+//
+// Weight: 3
+//
+// Styleguide Components.Tab.Direction
+//
+
+ul.tabs,
+.nav-tabs {
+
+    @include list--unstyled;
+    display: block;
+    position: relative;
+    font-size: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    .header & {
+        display: block;
+
+        @include break-at(small) {
+            margin-top: 0;
+        }
+    }
+
+    > li {
+        display: inline-block;
+        font-size: $base-font-size;
+        vertical-align: bottom;
+        margin: $base-tab-margin;
+
+        &.active,
+        &:hover {
+            > a {
+                font-weight: normal;
+                box-shadow: 0 -5px 0 $base-accent-color inset;
+                color: $base-link-color;
+            }
+        }
+
+        > a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 0 10px 0;
+            color: $base-font-color;
+            line-height: 1;
+            text-align: center;
+
+            &:hover {
+                color: $base-link-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .tab__heading,
+    tab-heading,
+    .tab-heading {
+        display: block;
+        margin: 0;
+        padding: $base-tab-padding;
+
+        &:after {
+            display: block;
+            height: 0;
+            content: attr(title);
+            font-weight: bold;
+            visibility: hidden;
+        }
+    }
+
+    &--tall {
+        .tab__heading, tab-heading, .tab-heading {
+            padding: $base-tab-tall-padding;
+        }
+    }
+
+    &.tabs--vertical {
+        box-shadow: none;
+        > li {
+            display: block;
+            font-size: $base-font-size;
+            vertical-align: unset;
+            margin: 0;
+
+            + li {
+                margin: ($base-spacing * 0.25) 0;
+            }
+
+            > a {
+                display: flex;
+                align-items: center;
+                padding: 0;
+                height: $base-tab-vertical-height;
+                &.tab__heading {
+                    margin: 0 ($base-spacing * 0.25);
+                }
+            }
+
+            &.active {
+                > a {
+                    box-shadow: 0 none;
+                    background-color: $base-accent-color;
+                    color: $white;
+                }
+                &:hover {
+                    > a {
+                        color: $white;
+                    }
+                }
+            }
+
+            &:hover {
+                > a {
+                    box-shadow: .3125rem 0 $base-accent-color inset;
+                }
+            }
+        }
+
+        // Add right-hand border modifier to vertical tabs
+        &.tabs--border-right {
+            border: 0 none;
+            padding-right: 0;
+
+            @include break-at(small) {
+                border-right: $base-border;
+                padding-right: 1px;
+            }
+        }
+    }
+}
+
+.tab-icon {
+    margin: 0;
+}
+
+.tab-icon--status {
+    margin: 0 5px 0 -5px;
+}
+
+.tab-icon--close {
+    margin: 0 -5px 0 5px;
+    color: $base-muted-color;
+    padding: 0;
+
+    &:hover {
+        color: $danger;
+        opacity: 1;
+    }
+}
+
+.tab-content {
+    .header & {
+        display: none;
+    }
+}
+
+.tab-pane {
+    @include clearfix;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.secondary-tabs {
+    .tabs, .nav-tabs {
+        display: block;
+        box-shadow: 0 -1px 0 $base-border-color inset;
+    }
+
+    .tab-pane {
+        padding: $base-spacing 0;
+    }
+}

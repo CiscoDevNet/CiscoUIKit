@@ -1,0 +1,238 @@
+//
+// Alert
+//
+// An alert should be used to display important but conditional messages to the user<br><br>
+// Since: 1.0.0
+//
+// Styleguide Components.Alert
+//
+
+
+//
+// Composition
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <p><b>Default</b></p>
+//         <div class="alert composition">
+//             <div class="alert__icon">Icon</div>
+//             <div class="alert__message">Message</div>
+//             <div class="alert__close">Icon</div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <p><b>Variant:</b> 1</p>
+//         <div class="alert composition">
+//             <div class="alert__icon">Icon</div>
+//             <div class="alert__message">Message</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Alert.Composition
+//
+
+.alert.composition {
+    background: transparent;
+    border: 1px solid $light-gray-3;
+    box-shadow: none;
+
+    * {
+        background: $light-gray-3;
+        color: $base-font-color;
+        font-size: $small-font-size;
+        font-weight: $base-font-weight;
+        padding: $base-spacing * 0.5;
+        margin: 2px;
+        pointer-events: none;
+        opacity: 1;
+    }
+}
+
+
+//
+// Color
+//
+// <blockquote>Use the approved status colors and icons below to denote message severity</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="alert">
+//             <div class="alert__icon icon-info-circle"></div>
+//             <div class="alert__message">Information (default) <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//         <div class="alert alert--success">
+//             <div class="alert__icon icon-check"></div>
+//             <div class="alert__message">Success <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="alert alert--warning">
+//             <div class="alert__icon icon-exclamation-triangle"></div>
+//             <div class="alert__message">Warning <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//         <div class="alert alert--danger">
+//             <div class="alert__icon icon-error"></div>
+//             <div class="alert__message">Danger <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Alert.Color
+//
+
+
+//
+// Alternate Background
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="alert alert--info-alt">
+//             <div class="alert__icon icon-info-circle"></div>
+//             <div class="alert__message">Information (default) <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//         <div class="alert alert--success-alt">
+//             <div class="alert__icon icon-check"></div>
+//             <div class="alert__message">Success <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="alert alert--warning-alt">
+//             <div class="alert__icon icon-exclamation-triangle"></div>
+//             <div class="alert__message">Warning <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//         <div class="alert alert--danger-alt">
+//             <div class="alert__icon icon-error"></div>
+//             <div class="alert__message">Danger <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Components.Alert.Alt
+//
+
+
+//
+// Alternate Background #2
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="alert alert--info-alt2">
+//             <div class="alert__icon icon-info-circle"></div>
+//             <div class="alert__message">Information (default) <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//         <div class="alert alert--success-alt2">
+//             <div class="alert__icon icon-check"></div>
+//             <div class="alert__message">Success <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="alert alert--warning-alt2">
+//             <div class="alert__icon icon-exclamation-triangle"></div>
+//             <div class="alert__message">Warning <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//         <div class="alert alert--danger-alt2">
+//             <div class="alert__icon icon-error"></div>
+//             <div class="alert__message">Danger <a>Link</a></div>
+//             <div class="alert__close icon-close"></div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Components.Alert.Alt2
+//
+
+
+//
+// Example
+//
+// Markup:
+// <div class="alert alert--warning-alt">
+//     <div class="alert__icon icon-exclamation-triangle"></div>
+//     <div class="alert__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel velit lectus. Nulla a mi porta ex consequat lacinia non vel augue. In sit amet hendrerit turpis. Nulla sed egestas turpis. Nam non lectus eget dui blandit iaculis non eget erat. Praesent eros metus, porta sed commodo porta, blandit quis massa. Morbi sed dolor justo. Pellentesque lacinia elit urna, cursus pretium sem malesuada ac.<br><br><a href="http://www.lipsum.com/">Lorem Ipsum Generator</a></div>
+//     <div class="alert__close icon-close"></div>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Components.Alert.Example
+//
+
+.alert {
+
+    @include panel(
+        $background: $base-alert-default-background,
+        $color: $base-alert-default-color,
+        $border-color: $base-alert-default-border-color,
+        $link-color: $base-alert-default-link-color
+    );
+    @include panel-padding();
+
+    // Generate the alert colors from the global variables
+    @each $alert-obj in $alert-colors {
+        &--#{map-get($alert-obj, name)} {
+            @include panel(map-get($alert-obj, params)...);
+
+            .alert__icon {
+                @if map-has-nested-keys($alert-obj, 'params', 'icon-color') {
+                    color: map-deep-get($alert-obj, 'params', 'icon-color');
+                }
+            }
+        }
+    }
+
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin: $base-alert-margin;
+
+    &__icon,
+    &__close {
+        align-self: flex-start;
+        font-size: $base-alert-icon-size;
+    }
+
+    &__message {
+        @include flex-fluid;
+        @include text-break-word;
+
+        font-weight: normal;
+        margin: 0 $base-spacing-regular;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        opacity: $base-alert-close-icon-opacity;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

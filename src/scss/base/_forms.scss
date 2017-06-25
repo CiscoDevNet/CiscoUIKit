@@ -1,0 +1,195 @@
+form {
+    margin-bottom: $base-spacing;
+
+    &:last-child,
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+fieldset {
+    margin: 0 0 $base-spacing 0;
+    padding: 0;
+    border: 0;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+legend,
+.legend {
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &--toggle {
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            color: $base-accent-color;
+        }
+    }
+}
+
+.form-group {
+    @include clearfix;
+
+    margin-right: 0;
+    @include break-at(small) {
+        margin-right: $base-spacing * 0.5;
+    }
+
+    position: relative;
+    margin-bottom: $base-spacing * 0.5;
+    box-shadow: 0 -1px 0 0 $base-form-border-color inset;
+    line-height: $base-line-height;
+
+    &--noseparator {
+        box-shadow: none;
+    }
+
+    &--helper {
+	box-shadow: 0 0 0 0 $base-form-border-color inset;
+        .help-block {
+	    margin-top: 5px;
+	}
+    }
+
+    label,
+    select {
+        line-height: $base-line-height;
+    }
+
+    select {
+        padding: 6px $base-spacing 6px 0;
+    }
+
+    label {
+        padding: 6px 10px 6px 0;
+        float: left;
+        transition: color 0.2s ease;
+
+        &:first-of-type {
+            color: $base-form-label-color;
+            order: 2;
+
+            &[for] {
+                cursor: pointer;
+                user-select: none;
+
+                &:hover {
+                    color: $base-font-color;
+                }
+            }
+        }
+    }
+
+    input {
+        position: relative;
+        padding: 6px 0;
+
+        &::-ms-clear {
+            display: none; // Hide clear field button in IE
+        }
+        // allow selecting text in disabled inputs:
+        &[disabled] {
+            pointer-events: auto;
+        }
+    }
+
+    textarea {
+        padding: 6px 0;
+    }
+
+    .select:after {
+        top: 6px;
+    }
+}
+
+.msd-elastic {
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.help-block {
+    display: block;
+    color: $base-muted-color;
+    margin-top: -5px;
+    font-weight: 300;
+
+    &--normal  { text-transform: unset; }
+    &--lower   { text-transform: lowercase; }
+    &--capital { text-transform: capitalize; }
+
+    span + span {
+        vertical-align: middle;
+        margin-left: $base-spacing * 0.15;
+    }
+}
+
+.form-group__dropdown {
+    input {
+        padding-right: (($base-spacing * 0.25) * 2) + 14px;
+    }
+}
+
+.form-group--noseparator {
+    box-shadow: none;
+}
+
+.form-group--typeahead {
+    position: relative;
+
+    .dropdown-menu {
+        position: absolute;
+        z-index: 1100;
+    }
+}
+
+.form-dropdown__select {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    right: $base-spacing * 0.25;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    z-index: 1;
+
+    &:focus {
+        ~ label {
+            color: $base-font-color;
+
+            &::after {
+                bottom: -4px;
+                height: 5px;
+                background: $base-accent-color;
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        ~ .form-dropdown__chevron {
+            &::after {
+                color: $base-font-color;
+            }
+        }
+    }
+}
+
+.form-dropdown__chevron {
+    &::after {
+        @include icon-chevron-down;
+        color: $base-disabled-color;
+        font-size: $small-font-size;
+        position: absolute;
+        margin-top: 1px;
+        right: $base-spacing * 0.25;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.2s ease;
+    }
+}

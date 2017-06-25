@@ -1,0 +1,132 @@
+//
+// Typography
+//
+// We use CiscoSans as primary.
+// CiscoSans includes ExtraLight, ExtraLightOblique, Light, LightOblique, and Regular.
+// The font stack in order is CiscoSans, Arial, Sans-Serif
+//
+// Styleguide Base.Typography
+//
+
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/CiscoSans/CiscoSansTTExtraLight.eot');
+  src: url('../fonts/CiscoSans/CiscoSansTTExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CiscoSans/CiscoSansTTExtraLight.woff2') format('woff2'),
+       url('../fonts/CiscoSans/CiscoSansTTExtraLight.woff') format('woff'),
+       url('../fonts/CiscoSans/CiscoSansTTExtraLight.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: oblique;
+  font-weight: 100;
+  src: url('../fonts/CiscoSans/CiscoSansTTExtraLightOblique.eot');
+  src: url('../fonts/CiscoSans/CiscoSansTTExtraLightOblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CiscoSans/CiscoSansTTExtraLightOblique.woff2') format('woff2'),
+       url('../fonts/CiscoSans/CiscoSansTTExtraLightOblique.woff') format('woff'),
+       url('../fonts/CiscoSans/CiscoSansTTExtraLightOblique.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/CiscoSans/CiscoSansTTLight.eot');
+  src: url('../fonts/CiscoSans/CiscoSansTTLight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CiscoSans/CiscoSansTTLight.woff2') format('woff2'),
+       url('../fonts/CiscoSans/CiscoSansTTLight.woff') format('woff'),
+       url('../fonts/CiscoSans/CiscoSansTTLight.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: oblique;
+  font-weight: 300;
+  src: url('../fonts/CiscoSans/CiscoSansTTLightOblique.eot');
+  src: url('../fonts/CiscoSans/CiscoSansTTLightOblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CiscoSans/CiscoSansTTLightOblique.woff2') format('woff2'),
+       url('../fonts/CiscoSans/CiscoSansTTLightOblique.woff') format('woff'),
+       url('../fonts/CiscoSans/CiscoSansTTLightOblique.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/CiscoSans/CiscoSansTTRegular.eot');
+  src: url('../fonts/CiscoSans/CiscoSansTTRegular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CiscoSans/CiscoSansTTRegular.woff2') format('woff2'),
+       url('../fonts/CiscoSans/CiscoSansTTRegular.woff') format('woff'),
+       url('../fonts/CiscoSans/CiscoSansTTRegular.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+$h1-font-weight: 100 !default;
+$h2-font-weight: 100 !default;
+$h3-font-weight: 200 !default;
+$h4-font-weight: 200 !default;
+$h5-font-weight: 200 !default;
+$h6-font-weight: 300 !default;
+
+@mixin set-heading-size($size) {
+    $h1-font-size: $size * 2.4 !default;
+    $h2-font-size: $size * 2 !default;
+    $h3-font-size: $size * 1.8 !default;
+    $h4-font-size: $size * 1.6 !default;
+    $h5-font-size: $size * 1.4 !default;
+    $h6-font-size: $size * 1.2 !default;
+
+    $headings:  (h1, $h1-font-size, $h1-font-weight),
+                (h2, $h2-font-size, $h2-font-weight),
+                (h3, $h3-font-size, $h3-font-weight),
+                (h4, $h4-font-size, $h4-font-weight),
+                (h5, $h5-font-size, $h5-font-weight),
+                (h6, $h6-font-size, $h6-font-weight);
+
+    @each $heading, $heading-size, $heading-weight in $headings {
+        #{$heading}, .#{$heading} {
+            font-size: $heading-size;
+            font-weight: $heading-weight;
+
+            > small, > .small {
+                font-size: $heading-size * 0.8;
+            }
+        }
+    }
+}
+
+@include set-heading-size($xsmall-font-size);
+
+@include break-at(small)  { @include set-heading-size($small-font-size); }
+@include break-at(medium) { @include set-heading-size($medium-font-size); }
+@include break-at(large)  { @include set-heading-size($large-font-size); }
+
+html {
+    &.cui {
+        position: relative;
+        height: 100%;
+        box-sizing: border-box;
+        color: $base-font-color;
+        font-family: $base-font-family;
+        font-size: $html-font-size;
+        line-height: $base-line-height;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        body {
+            font-weight: $base-font-weight;
+            font-size: $base-font-size;
+            position: relative;
+            min-width: $min-page-width;
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+}

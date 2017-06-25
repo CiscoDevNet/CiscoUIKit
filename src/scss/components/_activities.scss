@@ -1,0 +1,290 @@
+//
+// Activity updated
+//
+// Activities and activity streams are used to show time-ordered activity in context (a document or issue, a project, a product, or a group of products). Each activity entry is timestamped, and usually has an actor, an action, and a subject or object of the action.<br><br>
+// Since: 1.0.0
+//
+// Styleguide Components.Activity
+//
+
+
+//
+// Composition
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <p><b>Default</b></p>
+//         <div class="activity composition">
+//             <div class="thumbnail">Thumb</div>
+//             <div class="activity__body">
+//                 <div class="activity__title">Title</div>
+//                 <div class="activity__description">Description</div>
+//                 <div class="activity__timestamp">Timestamp</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <p><b>Variant:</b> 1</p>
+//         <div class="activity composition">
+//             <div class="activity__body">
+//                 <div class="activity__title">Title</div>
+//                 <div class="activity__description">Description</div>
+//                 <div class="activity__timestamp activity__timestamp--bottom">Timestamp</div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="row">
+//     <div class="col-md-6">
+//         <p><b>Variant:</b> 2</p>
+//         <div class="activity composition">
+//             <div class="thumbnail">Thumb</div>
+//             <div class="activity__body">
+//                 <div class="activity__title">Title</div>
+//                 <div class="activity__timestamp">Timestamp</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <p><b>Variant:</b> 3</p>
+//         <div class="activity composition">
+//             <div class="activity__body">
+//                 <div class="activity__title">Title</div>
+//                 <div class="activity__timestamp">Timestamp</div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Activity.Composition
+//
+
+.activity.composition {
+    background: transparent;
+    border: 1px solid $light-gray-3;
+
+    div.thumbnail,
+    div.activity__body div {
+        background: $light-gray-3;
+        color: $base-font-color;
+        font-size: $small-font-size;
+        font-weight: $base-font-weight;
+        padding: $base-spacing * 0.5;
+        margin: 2px;
+        pointer-events: none;
+        line-height: $base-spacing;
+    }
+}
+
+
+//
+// Examples
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="activity activity--bordered">
+//             <img class="thumb" src="public/img/user-photo-thumb-2.png">
+//             <div class="activity__body">
+//                 <div class="activity__title"><a>Mary Major</a> Cisco Small & Medium Business Switches</div>
+//                 <div class="activity__description">
+//                     <div>Announcing the next-generation Cisco SMB switches with the best combination of affordability and advanced network features, security, and energy-saving capabilities.</div><br>
+//                     <img src="public/img/smb-switches.jpg">
+//                     <div><a>Learn More <span class="icon-right-arrow-outline"></span></a></div>
+//                 </div>
+//                 <div class="activity__timestamp">1 month ago</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="activity activity--bordered">
+//             <div class="activity__body">
+//                 <div class="activity__title"><a>Cisco Digital Network Architecture</a></div>
+//                 <div class="activity__description">
+//                     <p>This open and extensible, software-driven network architecture is designed to rapidly deliver services that enable IT to innovate faster, and reduce costs.</p>
+//                     <button class="base-margin-top base-margin-bottom btn btn--secondary">Watch Now</button>
+//                 </div>
+//                 <div class="activity__timestamp activity__timestamp--bottom">Mar 2, 2016</div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="row"><br>
+//     <div class="col-md-6">
+//         <a class="activity activity--bordered">
+//             <img class="thumb" src="public/img/user-photo-thumb-1.png">
+//             <div class="activity__body">
+//                 <div class="activity__description">
+//                     <div>Switchport access and trunk on Layer 3 switch problems</div>
+//                     <div class="section">
+//                         <pre class="panel panel--bordered panel--ltgray panel--loose">
+//router eigrp cisco
+//!
+//address-family ipv4 unicast autonomous-system 10
+//!
+//topology base
+//exit-af-topology
+//exit-address-family
+//                         </pre>
+//                     </div>
+//                 </div>
+//                 <div class="activity__timestamp activity__timestamp--bottom">Posted: Jun 6, 2016 / Last reply: 2 minutes ago</div>
+//             </div>
+//         </a>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="activity activity--bordered">
+//             <div class="activity__body">
+//                 <div class="activity__title"><a>Cisco Digital Network Architecture</a></div>
+//                 <div class="activity__timestamp">Mar 2, 2016</div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Activity.Examples
+//
+
+.thumb + .activity__body {
+    margin-left: $base-spacing * 0.5;
+}
+
+.activity {
+    display: flex;
+    @include panel();
+    @include panel-padding();
+    font-weight: unset;
+
+    &__title + &__description {
+        margin: ($base-spacing * 0.25) 0;
+    }
+
+    &__body {
+        color: $base-font-color;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        overflow: hidden;
+    }
+
+    &__title {
+        @include text-ellipsis;
+        order: 1;
+        flex: 2;
+        margin-right: $base-spacing * 0.5;
+    }
+
+    &__timestamp {
+        order: 2;
+        text-align: left;
+        font-size: $small-font-size;
+
+        @include break-at(small) {
+            text-align: right;
+        }
+
+        &--bottom {
+            order: 4;
+            text-align: left;
+            margin-top: $base-spacing * 0.5;
+        }
+    }
+
+    &__description {
+        order: 3;
+        width: 100%;
+    }
+
+    &__timestamp,
+    &__title {
+        color: $base-muted-color;
+    }
+
+    &--bordered {
+        border: $base-border;
+    }
+}
+
+//
+// List
+//
+// <blockquote>Wrap your activities in a list collection to build an activity stream</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <ul class="list list--aligntop">
+//             <li>
+//                 <div class="activity activity--bordered">
+//                     <img class="thumb thumb--square thumb--huge" src="public/img/martial.jpg">
+//                     <div class="activity__body">
+//                         <a class="activity__title">The Martial Art of Transitioning from the Industrial Era</a>
+//                         <div class="activity__description">Focusing on harmony will help your organization thrive in the digital economy.<p class="text-uppercase text-small">Tags: <a>Disruption & Transformation</a>,<a>The Boardroom</a></p></div>
+//                         <div class="activity__timestamp">3 weeks ago</div>
+//                     </div>
+//                 </div>
+//             </li>
+//             <li>
+//                 <div class="activity activity--bordered">
+//                     <img class="thumb thumb--square thumb--huge" src="public/img/banking.jpg">
+//                     <div class="activity__body">
+//                         <a class="activity__title">Banking on Digital</a>
+//                         <div class="activity__description">Traditional bank branches haven't changed much over the years. See how one CEO has moved from paper and long lines to true digital disruption.<p class="text-uppercase text-small">Tags: <a>Agility & Speed</a>,<a>Disruption & Transformation</a>,<a>Security</a>,<a>Technology & Business Alignment</a></p></div>
+//                         <div class="activity__timestamp">2 months ago</div>
+//                     </div>
+//                 </div>
+//             </li>
+//             <li>
+//                 <div class="activity activity--bordered">
+//                     <img class="thumb thumb--square thumb--huge" src="public/img/cybersecurity.jpg">
+//                     <div class="activity__body">
+//                         <a class="activity__title">Cybersecurity as a Growth Advantage</a>
+//                         <div class="activity__description">In an era of unparalleled disruption, companies need to begin viewing cybersecurity differently—beyond its traditional “defensive” role. Those that do will have a competitive advantage. These Secure Digitizers are strongly committed to growth through digital business models and offerings, with cybersecurity as a critical foundation. Learn how they are leading way in today’s digital economy.<p class="text-uppercase text-small">Tags: <a>Agility & Speed</a>,<a>Disruption & Transformation</a>,<a>Security</a></p></div>
+//                         <div class="activity__timestamp">7 months ago</div>
+//                     </div>
+//                 </div>
+//             </li>
+//         </ul>
+//     </div>
+//     <div class="col-md-6">
+//         <ul class="list">
+//             <li>
+//                 <a class="activity activity--bordered">
+//                     <img class="thumb" src="public/img/user-photo-thumb-1.png">
+//                     <div class="activity__body">
+//                         <div class="activity__description">Switchport access and trunk on Layer 3 switch problems</div>
+//                         <div class="activity__timestamp activity__timestamp--bottom">Posted: Jun 6, 2016 / Last reply: 2 minutes ago</div>
+//                     </div>
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="activity activity--bordered">
+//                     <img class="thumb" src="public/img/user-photo-thumb-2.png">
+//                     <div class="activity__body">
+//                         <div class="activity__description">Problem with PBR and InterVLAN routing</div>
+//                         <div class="activity__timestamp activity__timestamp--bottom">Posted: Jun 2, 2016 / Last reply: 5 minutes ago</div>
+//                     </div>
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="activity activity--bordered">
+//                     <img class="thumb" src="public/img/user-photo-thumb-3.png">
+//                     <div class="activity__body">
+//                         <div class="activity__description">Nexus, vPC, FEX, VRRP, ICMP Redirects</div>
+//                         <div class="activity__timestamp activity__timestamp--bottom">Posted: May 28, 2016 / Last reply: 8 minutes ago</div>
+//                     </div>
+//                 </a>
+//             </li>
+//         </ul>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Components.Activity.List
+//

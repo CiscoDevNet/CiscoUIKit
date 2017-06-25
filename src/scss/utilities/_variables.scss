@@ -1,0 +1,1057 @@
+// =============================================================================
+// Atlantic UI Kit
+// Variables
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Namespace
+
+$namespace: cui;
+
+
+// -----------------------------------------------------------------------------
+// Base: Scaffolding
+
+$mobile-menu-width: 280px;
+$max-page-width: 1440px !default;
+$min-page-width: 320px !default;
+$max-columns: 12;
+
+
+// -----------------------------------------------------------------------------
+// Base: Typography
+
+$base-font-family: 'CiscoSans', 'Arial', sans-serif !default;
+$monospace-font-family: Monaco, Inconsolata, Consolas, 'Courier New', Courier, 'Lucida Console', monospace !default;
+$header-font-family: $base-font-family !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Breakpoints
+
+$breakpoints: (
+  'xsmall'  : ( min-width: 479px ),
+  'small'   : ( min-width: 767px ),
+  'medium'  : ( min-width: 992px ),
+  'large'   : ( min-width: 1200px )
+);
+
+@mixin break-at($name) {
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// Base: Font
+
+// Uncomment once we move to base 10 on the pxtorem plugin
+// 1rem = 10px (see https://snook.ca/archives/html_and_css/font-size-with-rem)
+// $html-font-size: 62.5% !default;
+$html-font-size: 16px !default; // This is our current setting 1rem = 16px
+$base-font-size: 14px !default;
+$base-font-weight: 400 !default;
+
+// These font sizes are used to generate the scalable header sizes
+$xsmall-font-size: 10px !default;
+$small-font-size: 12px !default;
+$medium-font-size: 14px !default;
+$large-font-size: 16px !default;
+
+// Extra font sizes
+$tiny-font-size: 8px !default;
+$xlarge-font-size: 24px !default;
+$huge-font-size: 40px !default;
+$goliath-font-size: 3.5rem !default;
+$compressed-font-size: $small-font-size !default;
+
+// Icon font sizes
+$xsmall-icon-font-size: 10px !default;
+$small-icon-font-size: 12px !default;
+$default-icon-font-size: $base-font-size !default;
+$medium-icon-font-size: 16px !default;
+$large-icon-font-size: 18px !default;
+$xlarge-icon-font-size: 24px !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Other Sizes
+
+$base-line-height: 1.5 !default;
+$base-border-radius: 2px !default;
+$base-spacing: 21px !default;
+$base-z-index: 0 !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Spacing
+
+$base-spacing-compressed: $base-spacing * 0.25 !default;
+$base-spacing-regular: $base-spacing * 0.5 !default;
+$base-spacing-loose: $base-spacing !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Colors
+
+$blue: #004676 !default;
+$light-blue: #007fc5 !default;
+$green: #00bb00 !default;
+$red: #e74c3c !default;
+$orange: #ff7518 !default;
+$yellow: #efb73e !default;
+$dark-gray: #555 !default;
+$gray: #888 !default;
+$light-gray: #e9e9e9 !default;
+$off-white: #f9f9f9 !default;
+$off-white-alt: #f6f6f6 !default;
+
+$cisco-blue: #049fd9 !default;
+$cisco-blue2: #045071 !default;
+$cisco-green: #abc233 !default;
+$med-blue: #34adde !default;
+$white: #ffffff !default;
+$black: #1a1a1a !default;
+$dark-blue: #2b5592 !default;
+$dark-gray-1: #39393b !default;
+$dark-gray-2: #58585b !default;
+$dark-gray-3: #626469 !default;
+$dark-gray-4: #7f7f86 !default;
+$med-gray-2: #9e9ea2 !default;
+$med-gray-3: #b0b0b2 !default;
+$med-gray-4: #b6b9bb !default;
+$light-gray-2: #c6c7ca !default;
+$light-gray-3: #dfdfdf !default;
+$light-gray-4: #f5f5f6 !default;
+$light-gray-5: #f2f2f2 !default;
+$pale-gray-1: #e8ebf1 !default;
+$pale-gray-2: #f3f6f9 !default;
+
+$status-blue: #64bbe3 !default;
+$status-turq: #14a792 !default;
+$status-green: #6cc04a !default;
+$status-red: #cf2030 !default;
+$status-orange: #ff7300 !default;
+$status-yellow: #ffcc00 !default;
+
+$default: $gray !default;
+$primary: $cisco-green !default;
+$secondary: $cisco-blue !default;
+$info: $status-blue !default;
+$success: $status-green !default;
+$danger: $status-red !default;
+$warning: $status-orange !default;
+$warning-alt: $status-yellow !default;
+
+$base-colors: (
+  default : $default,
+  primary : $primary,
+  secondary : $secondary,
+  info : $info,
+  success : $success,
+  danger: $danger,
+  warning : $warning,
+  warning-alt : $warning-alt
+);
+
+$base-hover-color: rgba(0,0,0,0.15) !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Background Colors
+
+$base-background-color: $light-gray-5 !default;
+$alt-background-color: $white !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Text Colors
+
+$header-font-color: $dark-gray-2 !default;
+$base-font-color: $dark-gray-2 !default;
+$base-muted-color: $med-gray-2 !default;
+$base-disabled-color: $light-gray-2 !default;
+$base-accent-color: $cisco-blue !default;
+
+$base-link-color: $base-accent-color !default;
+$hover-link-color: $base-accent-color !default;
+$base-link-color-invert: $white !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Outline
+
+$base-outline: 1px dotted $base-accent-color;
+
+
+// -----------------------------------------------------------------------------
+// Base: Breadcrumbs
+
+$breadcrumb-color: $base-font-color !default;
+$breadcrumb-padding: 0 2px 0 6px !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Buttons
+
+$base-button-color: $med-gray-2 !default;
+$base-button-border-radius: 2rem !default;
+$base-button-background: $med-gray-2 !default;
+$base-button-padding: 0 35px !default;
+$base-button-font-size: 14px !default;
+$base-button-line-height: 11px !default;
+$base-button-background-active: $dark-gray-2 !default;
+$base-button-background-hover: $cisco-blue !default;
+$base-button-background-disabled: $light-gray-3 !default;
+$base-button-color-active: $white !default;
+$base-button-color-hover: $white !default;
+$base-button-color-disabled: $light-gray-2 !default;
+$base-button-fixed-width: 150px !default;
+$base-button-min-width: 150px !default;
+$base-button-max-width: 300px !default;
+$base-button-margin: 20px !default;
+$base-button-height: 40px !default;
+
+$small-button-padding: 0 20px !default;
+$small-button-font-size: 12px !default;
+$small-button-line-height: 12px !default;
+$small-button-min-width: auto !default;
+$small-button-max-width: 200px !default;
+$small-button-margin: 10px !default;
+$small-button-height: 30px !default;
+
+$large-button-padding: 0 75px !default;
+$large-button-font-size: $base-font-size !default;
+$large-button-line-height: $base-button-line-height !default;
+$large-button-max-width: $base-button-max-width !default;
+$large-button-margin: $base-button-margin !default;
+$large-button-height: $base-button-height !default;
+
+$tertiary-button-padding: 0 20px !default;
+$tertiary-button-font-size: $base-font-size !default;
+$tertiary-button-line-height: $base-button-line-height !default;
+$tertiary-button-height: $base-button-height !default;
+
+$button-default-background: $med-gray-2 !default;
+$button-default-color: $dark-gray-2 !default;
+$button-default-background-hover: #7F7F86 !default;
+$button-default-color-hover: $white !default;
+
+$button-alt-background: $med-gray-2 !default;
+$button-alt-color: $white !default;
+$button-alt-background-hover: $cisco-blue !default;
+$button-alt-color-hover: $white !default;
+
+$button-primary-background: $cisco-blue !default;
+$button-primary-color: $white !default;
+$button-primary-background-hover: #036E97 !default;
+$button-primary-color-hover: $white !default;
+
+$button-primary-alt-background: transparent !default;
+$button-primary-alt-color: $cisco-blue !default;
+$button-primary-alt-background-hover: $cisco-blue !default;
+$button-primary-alt-color-hover: $white !default;
+$button-primary-alt-background-disabled: transparent !default;
+$button-primary-alt-border: $cisco-blue !default;
+
+$button-cta-background: $cisco-green !default;
+$button-cta-color: $dark-gray-1 !default;
+$button-cta-background-hover: #8AA019 !default;
+$button-cta-color-hover: $white !default;
+
+$button-cta-alt-background: transparent !default;
+$button-cta-alt-color: $cisco-green !default;
+$button-cta-alt-background-hover: $cisco-green !default;
+$button-cta-alt-color-hover: $white !default;
+$button-cta-alt-background-disabled: transparent !default;
+$button-cta-alt-border: $cisco-green !default;
+
+$button-danger-background: $danger !default;
+$button-danger-color: $white !default;
+$button-danger-background-hover: #A4101E !default;
+$button-danger-color-hover: $white !default;
+
+$button-success-background: $success !default;
+$button-success-color: $white !default;
+$button-success-background-hover: #50AA2A !default;
+$button-success-color-hover: $white !default;
+
+$button-ghost-background: transparent !default;
+$button-ghost-color: $white !default;
+$button-ghost-background-hover: $base-accent-color !default;
+$button-ghost-color-hover: $white !default;
+$button-ghost-background-disabled: transparent !default;
+$button-ghost-border: $white !default;
+
+$button-icon-size: 30px !default;
+$button-icon-font-size: 16px !default;
+$button-icon-color: $white !default;
+$button-icon-color-disabled: $white !default;
+$button-icon-subtext-color: $med-gray-2 !default;
+$button-icon-subtext-margin: 3px !default;
+$button-icon-subtext-font-size: $small-font-size !default;
+$button-icon-large-size: 40px !default;
+$button-icon-large-font-size: 18px !default;
+$button-icon-huge-size: 60px !default;
+$button-icon-huge-font-size: 24px !default;
+
+$button-plain-padding: 14px 20px 15px 20px !default;
+$button-plain-color: $dark-gray-3 !default;
+$button-plain-color-active: $dark-gray-2 !default;
+$button-plain-color-hover: $cisco-blue !default;
+$button-plain-color-disabled: $light-gray-3 !default;
+$button-plain-background: transparent !default;
+$button-plain-background-active: transparent !default;
+$button-plain-background-hover: transparent !default;
+$button-plain-background-disabled: transparent !default;
+
+$button-tertiary-padding: 14px 20px 15px 20px !default;
+$button-tertiary-color: $dark-gray-3 !default;
+$button-tertiary-color-active: $dark-gray-2 !default;
+$button-tertiary-color-hover: $cisco-blue !default;
+$button-tertiary-color-disabled: $light-gray-3 !default;
+$button-tertiary-background: transparent !default;
+$button-tertiary-background-active: transparent !default;
+$button-tertiary-background-hover: transparent !default;
+$button-tertiary-background-disabled: transparent !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: AUI Buttons
+
+$aui-button-color: $white !default;
+$aui-button-border-radius: 30px !default;
+$aui-button-border-size: 1px !default;
+$aui-button-border-selected: $dark-gray-4 !default;
+$aui-button-background: $dark-gray-4 !default;
+$aui-button-padding: 0 35px !default;
+$aui-button-font-size: 16px !default;
+$aui-button-font-weight: normal !default;
+$aui-button-line-height: 16px !default;
+$aui-button-background-active: $dark-gray-3 !default;
+$aui-button-background-hover: $dark-gray-3 !default;
+$aui-button-background-disabled: $light-gray-3 !default;
+$aui-button-background-selected: $white !default;
+$aui-button-color-active: $white !default;
+$aui-button-color-hover: $white !default;
+$aui-button-color-disabled: $light-gray-2 !default;
+$aui-button-color-selected: $dark-gray-3 !default;
+$aui-button-min-width: 150px !default;
+$aui-button-max-width: 300px !default;
+$aui-button-margin: $base-spacing * 0.5 !default;
+$aui-button-height: 40px !default;
+
+$aui-button-spacing: 0 !default;
+$aui-button-skinny-spacing: ($base-spacing * 0.25) !default;
+$aui-button-regular-spacing: ($base-spacing * 0.5) !default;
+$aui-button-relaxed-spacing: $base-spacing !default;
+$aui-button-wide-spacing: ($base-spacing * 1.25) !default;
+
+$aui-small-button-padding: 0 20px !default;
+$aui-small-button-font-size: 14px !default;
+$aui-small-button-line-height: 14px !default;
+$aui-small-button-min-width: 100px !default;
+$aui-small-button-max-width: 200px !default;
+$aui-small-button-margin: $base-spacing * 0.25 !default;
+$aui-small-button-height: 30px !default;
+
+$aui-button-icon-height: $aui-button-height;
+$aui-button-icon-width: $aui-button-height !default;
+$aui-button-icon-font-size: 16px !default;
+$aui-small-button-icon-height: $aui-small-button-height !default;
+$aui-small-button-icon-width: $aui-small-button-height !default;
+$aui-small-button-icon-font-size: 14px !default;
+$aui-large-button-icon-height: 60px !default;
+$aui-large-button-icon-width: 60px !default;
+$aui-large-button-icon-font-size: 24px !default;
+
+$aui-primary-button-color: $white !default;
+$aui-primary-button-color-hover: $white !default;
+$aui-primary-button-color-selected: $cisco-blue !default;
+
+$aui-primary-button-background: $cisco-blue !default;
+$aui-primary-button-background-hover: #047fad !default;
+$aui-primary-button-background-selected: transparent !default;
+$aui-primary-button-border-selected: $cisco-blue !default;
+
+$aui-primary-ghost-button-color: $cisco-blue !default;
+$aui-primary-ghost-button-color-hover: $white !default;
+$aui-primary-ghost-button-background: transparent !default;
+$aui-primary-ghost-button-background-hover: $cisco-blue !default;
+$aui-primary-ghost-button-border: $cisco-blue !default;
+$aui-primary-ghost-button-border-selected: $cisco-blue !default;
+
+$aui-secondary-button-color: $dark-gray-1 !default;
+$aui-secondary-button-color-hover: $white !default;
+$aui-secondary-button-background: $cisco-green !default;
+$aui-secondary-button-background-hover: #889B28 !default;
+
+$aui-negative-button-color: $button-danger-color !default;
+$aui-negative-button-color-hover: $button-danger-color-hover !default;
+$aui-negative-button-background: $button-danger-background !default;
+$aui-negative-button-background-hover: $button-danger-background-hover !default;
+
+$aui-success-button-color: $white !default;
+$aui-success-button-color-hover: $white !default;
+$aui-success-button-background: $success !default;
+$aui-success-button-background-hover: #50AA2A !default;
+
+$aui-white-button-color: $dark-gray-2 !default;
+$aui-white-button-color-hover: $dark-gray-2 !default;
+$aui-white-button-background: $white !default;
+$aui-white-button-background-hover: #e8e8f1 !default;
+
+$aui-white-ghost-button-color: $white !default;
+$aui-white-ghost-button-color-hover: $dark-gray-2 !default;
+$aui-white-ghost-button-background: transparent !default;
+$aui-white-ghost-button-background-hover: $white !default;
+$aui-white-ghost-button-border: $white !default;
+
+$aui-gray-ghost-button-color: $dark-gray-3 !default;
+$aui-gray-ghost-button-color-hover: $white !default;
+$aui-gray-ghost-button-background: transparent !default;
+$aui-gray-ghost-button-background-hover: $dark-gray-3 !default;
+$aui-gray-ghost-button-border: $dark-gray-3 !default;
+
+$base-btn-margin: -1px !default;
+$base-btn-compressed-margin: ($base-spacing * 0.25) !default;
+$base-btn-regular-margin: ($base-spacing * 0.5) !default;
+$base-btn-loose-margin: $base-spacing !default;
+
+$button-colors:
+    (
+        'name': 'primary',
+        'params': (
+            'background': $aui-primary-button-background,
+            'background-hover': $aui-primary-button-background-hover,
+            'background-selected': $aui-primary-button-background-selected,
+            'border-selected': $aui-primary-button-border-selected,
+            'color': $aui-primary-button-color,
+            'color-hover': $aui-primary-button-color-hover,
+            'color-selected': $aui-primary-button-color-selected
+        )
+    ),(
+        'name': 'primary-ghost',
+        'params': (
+            'background': $aui-primary-ghost-button-background,
+            'background-hover': $aui-primary-ghost-button-background-hover,
+            'background-selected': $aui-primary-button-background,
+            'border': $aui-primary-ghost-button-border,
+            'border-selected': $aui-primary-ghost-button-border-selected,
+            'color': $aui-primary-ghost-button-color,
+            'color-hover': $aui-primary-ghost-button-color-hover,
+            'color-selected': $aui-primary-button-color
+        )
+    ),(
+        'name': 'secondary',
+        'params': (
+            'background': $aui-secondary-button-background,
+            'background-hover': $aui-secondary-button-background-hover,
+            'background-selected': $white,
+            'color': $aui-secondary-button-color,
+            'color-hover': $aui-secondary-button-color-hover,
+            'color-selected': $cisco-green
+        )
+    ),(
+        'name': 'negative',
+        'params': (
+            'background': $aui-negative-button-background,
+            'background-hover': $aui-negative-button-background-hover,
+            'color': $aui-negative-button-color,
+            'color-hover': $aui-negative-button-color-hover
+        )
+    ),(
+        'name': 'success',
+        'params': (
+            'background': $aui-success-button-background,
+            'background-hover': $aui-success-button-background-hover,
+            'color': $aui-success-button-color,
+            'color-hover': $aui-success-button-color-hover
+        )
+    ),(
+        'name': 'white',
+        'params': (
+            'background': $aui-white-button-background,
+            'background-hover': $aui-white-button-background-hover,
+            'color': $aui-white-button-color,
+            'color-hover': $aui-white-button-color-hover
+        )
+    ),(
+        'name': 'white-ghost',
+        'params': (
+            'background': $aui-white-ghost-button-background,
+            'background-hover': $aui-white-ghost-button-background-hover,
+            'border': $aui-white-ghost-button-border,
+            'color': $aui-white-ghost-button-color,
+            'color-hover': $aui-white-ghost-button-color-hover
+        )
+    ),(
+        'name': 'gray-ghost',
+        'params': (
+            'background': $aui-gray-ghost-button-background,
+            'background-hover': $aui-gray-ghost-button-background-hover,
+            'background-selected': $dark-gray-3,
+            'border': $aui-gray-ghost-button-border,
+            'color': $aui-gray-ghost-button-color,
+            'color-hover': $aui-gray-ghost-button-color-hover,
+            'color-selected': $white
+        )
+    );
+
+
+// -----------------------------------------------------------------------------
+// Base: Borders
+
+$base-border-color: $light-gray-3 !default;
+$base-border-color-alt: $white !default;
+$base-border: 1px solid $base-border-color !default;
+$base-border-alt: 1px solid $base-border-color-alt !default;
+$base-box-shadow: 0 1px 3px rgba(0,0,0,0.15) !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Alerts
+
+$base-alert-default-background: $cisco-blue !default;
+$base-alert-default-color: $white !default;
+$base-alert-default-border-color: transparent !default;
+$base-alert-default-link-color: $white !default;
+
+$base-alert-margin: 0 0 $base-spacing 0 !default;
+$base-alert-icon-size: 18px !default;
+$base-alert-border-left-width: 5px !default;
+$base-alert-close-icon-opacity: 0.75 !default;
+
+$alert-colors:
+    (
+        'name': 'info',
+        'params': (
+            'background': $cisco-blue,
+            'color': $white,
+            'border-color': transparent,
+            'icon-color': $white,
+            'link-color': $white
+        )
+    ),(
+        'name': 'info-alt',
+        'params': (
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $cisco-blue,
+            'border-left-width': $base-alert-border-left-width,
+            'icon-color': $cisco-blue,
+            'link-color': $base-link-color
+        )
+    ),(
+        'name': 'info-alt2',
+        'params': (
+            'background': rgba($cisco-blue, .15),
+            'color': $cisco-blue,
+            'border-color': rgba($cisco-blue, .25),
+            'icon-color': $cisco-blue,
+            'link-color': $cisco-blue
+        )
+    ),(
+        'name': 'success',
+        'params': (
+            'background': $success,
+            'color': $white,
+            'border-color': transparent,
+            'icon-color': $white,
+            'link-color': $white
+        )
+    ),(
+        'name': 'success-alt',
+        'params': (
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $success,
+            'border-left-width': $base-alert-border-left-width,
+            'icon-color': $success,
+            'link-color': $base-link-color
+        )
+    ),(
+        'name': 'success-alt2',
+        'params': (
+            'background': rgba($success, .15),
+            'color': $success,
+            'border-color': rgba($success, .25),
+            'icon-color': $success,
+            'link-color': $success
+        )
+    ),(
+        'name': 'warning',
+        'params': (
+            'background': $warning,
+            'color': $white,
+            'border-color': transparent,
+            'icon-color': $white,
+            'link-color': $white
+        )
+    ),(
+        'name': 'warning-alt',
+        'params': (
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $warning,
+            'border-left-width': $base-alert-border-left-width,
+            'icon-color': $warning,
+            'link-color': $base-link-color
+        )
+    ),(
+        'name': 'warning-alt2',
+        'params': (
+            'background': rgba($warning, .15),
+            'color': $warning,
+            'border-color': rgba($warning, .25),
+            'icon-color': $warning,
+            'link-color': $warning
+        )
+    ),(
+        'name': 'danger',
+        'params': (
+            'background': $danger,
+            'color': $white,
+            'border-color': transparent,
+            'icon-color': $white,
+            'link-color': $white
+        )
+    ),(
+        'name': 'danger-alt',
+        'params': (
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $danger,
+            'border-left-width': $base-alert-border-left-width,
+            'icon-color': $danger,
+            'link-color': $base-link-color
+        )
+    ),(
+        'name': 'danger-alt2',
+        'params': (
+            'background': rgba($danger, .15),
+            'color': $danger,
+            'border-color': rgba($danger, .25),
+            'icon-color': $danger,
+            'link-color': $danger
+        )
+    );
+
+
+// -----------------------------------------------------------------------------
+// Component: Labels
+
+$base-label-color: $white !default;
+$base-label-color-dark: $dark-gray-2 !default;
+$base-label-color-darker: $dark-gray-1 !default;
+$base-label-font-size: $small-font-size !default;
+$base-label-circle-size: 24px !default;
+$base-label-height: 24px !default;
+$base-label-padding: 0 ($base-spacing * 0.5) !default;
+$base-label-background: $base-muted-color !default;
+$base-label-border-radius: $base-border-radius !default;
+$base-label-border: $base-border !default;
+$base-label-box-shadow: $base-box-shadow !default;
+
+$base-label-large-font-size: $base-font-size !default;
+$base-label-large-height: 30px !default;
+$base-label-large-padding: 0 ($base-spacing * 0.75) !default;
+
+$base-label-blue-background: $cisco-blue !default;
+$base-label-ltgray-background: $light-gray-5 !default;
+$base-label-mdgray-background: $light-gray-3 !default;
+$base-label-dkgray-background: $dark-gray-2 !default;
+$base-label-dkblue-background: $dark-blue !default;
+
+$label-sizes:   ("tiny", 15px, 9px, 0 6px),
+                ("small", 20px, $xsmall-font-size, 0 10px),
+                ("medium", $base-label-height, $base-label-font-size, $base-label-padding),
+                ("large", $base-label-large-height, $base-label-large-font-size, $base-label-large-padding);
+
+$label-colors:  ("info", $base-label-color, $info),
+                ("success", $base-label-color, $success),
+                ("warning", $base-label-color, $warning),
+                ("warning-alt", $base-label-color-darker, $status-yellow),
+                ("danger", $base-label-color, $danger),
+                ("blue", $base-label-color, $base-label-blue-background),
+                ("ltgray", $base-label-color-darker, $base-label-ltgray-background),
+                ("mdgray", $base-label-color-darker, $base-label-mdgray-background),
+                ("dkgray", $base-label-color, $base-label-dkgray-background),
+                ("dkblue", $base-label-color, $base-label-dkblue-background),
+                ("white", $base-label-color-dark, $white),
+                ("ghost", $base-label-color, transparent, 1px solid $white);
+
+$label-circles: ("tiny", 18px, 11px),
+                ("small", 24px, 12px),
+                ("medium", 36px, 16px),
+                ("large", 48px, 24px),
+                ("xlarge", 60px, 32px),
+                ("huge", 72px, 36px),
+                ("goliath", 96px, 40px);
+
+
+// -----------------------------------------------------------------------------
+// Base: Description Lists
+
+$base-dl-label-font-weight: normal !default;
+$base-dl-label-right-spacing: $base-spacing !default;
+$base-dl-label-bottom-spacing: $base-spacing * 0.5 !default;
+$base-dl-value-color: $dark-gray-4 !default;
+$base-dl-label-width-xsmall: 80px !default;
+$base-dl-label-width-small: 120px !default;
+$base-dl-label-width-medium: 240px !default;
+$base-dl-label-width-large: 360px !default;
+$base-dl-label-width-xlarge: 480px !default;
+$base-dl-sizes: (
+    xsmall : $base-dl-label-width-xsmall,
+    small : $base-dl-label-width-small,
+    medium : $base-dl-label-width-medium,
+    large : $base-dl-label-width-large,
+    xlarge : $base-dl-label-width-xlarge
+);
+
+
+// -----------------------------------------------------------------------------
+// Base: Figures
+
+$base-figure-font-weight: 200 !default;
+$base-figure-font-size: 18px !default;
+$base-figure-highlight-color: $cisco-green !default;
+$base-figure-highlight-width: 4px !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Forms
+
+$base-form-label-color: #676767 !default;
+$base-form-border-color: $light-gray-3 !default;
+
+$base-form-checkbox-font-size: $base-font-size !default;
+$base-form-checkbox-font-weight: normal !default;
+
+$base-form-select-chevron-color: $med-gray-2 !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Panels
+
+$base-panel-color: $base-font-color !default;
+$base-panel-background: $white !default;
+$base-panel-margin: 1px 0 !default;
+$base-panel-hover-tint: 15 !default;
+$base-panel-padding: $base-spacing * 0.5 !default;
+$base-panel-section-padding: ($base-spacing * 0.25) 0 !default;
+$base-panel-box-shadow: $base-box-shadow !default;
+
+$base-panel-blue-color: $white !default;
+$base-panel-blue-background: $cisco-blue !default;
+$base-panel-ltgray-color: $dark-gray-2 !default;
+$base-panel-ltgray-background: $light-gray-5 !default;
+$base-panel-mdgray-color: $dark-gray-2 !default;
+$base-panel-mdgray-background: $light-gray-3 !default;
+$base-panel-dkgray-color: $white !default;
+$base-panel-dkgray-background: $dark-gray-2 !default;
+$base-panel-dkblue-color: $white !default;
+$base-panel-dkblue-background: $dark-blue !default;
+
+$panel-colors:
+    (
+        name: 'blue',
+        params: (
+            background: $base-panel-blue-background,
+            color: $base-panel-blue-color,
+            link-color: $white
+        )
+    ),(
+        name: 'ltgray',
+        params: (
+            background: $base-panel-ltgray-background,
+            color: $base-panel-ltgray-color
+        )
+    ),(
+        name: 'mdgray',
+        params: (
+            background: $base-panel-mdgray-background,
+            color: $base-panel-mdgray-color
+        )
+    ),(
+        name: 'dkgray',
+        params: (
+            background: $base-panel-dkgray-background,
+            color: $base-panel-dkgray-color,
+            link-color: $white
+        )
+    ),(
+        name: 'dkblue',
+        params: (
+            background: $base-panel-dkblue-background,
+            color: $base-panel-dkblue-color,
+            link-color: $white
+        )
+    ),(
+        name: 'info',
+        params: (
+            background: $info,
+            color: $white,
+            link-color: $white
+        )
+    ),(
+        name: 'success',
+        params: (
+            background: $success,
+            color: $white,
+            link-color: $white
+        )
+    ),(
+        name: 'warning',
+        params: (
+            background: $warning,
+            color: $white,
+            link-color: $white
+        )
+    ),(
+        name: 'danger',
+        params: (
+            background: $danger,
+            color: $white,
+            link-color: $white
+        )
+    );
+
+$base-panel-compressed-padding: ($base-spacing * 0.25) !default;
+$base-panel-regular-padding: ($base-spacing * 0.5) !default;
+$base-panel-loose-padding: $base-spacing !default;
+
+$base-panel-compressed-margin: ($base-spacing * 0.25) 0 !default;
+$base-panel-regular-margin: ($base-spacing * 0.5) 0 !default;
+$base-panel-loose-margin: $base-spacing 0 !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Tables
+
+$base-table-striping-odd-background-color: $white !default;
+$base-table-striping-even-background-color: $base-background-color !default;
+$base-table-cell-padding: ($base-spacing * 0.25) ($base-spacing * 0.5) !default;
+$base-table-border: 1px solid $base-border-color !default;
+$base-table-header-separator: 1px solid $base-border-color !default;
+
+$base-table-active-row-border-width: 4px !default;
+$base-table-active-row-border-color: $base-accent-color !default;
+
+$base-table-compressed-padding: ($base-spacing * 0.15) ($base-spacing * 0.25) !default;
+$base-table-compressed-font-size: $small-font-size !default;
+
+$base-table-loose-padding: ($base-spacing * 0.5) $base-spacing !default;
+$base-table-loose-font-size: $base-font-size !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Thumbnails
+
+$small-thumbnail-size: 32px !default;
+$medium-thumbnail-size: 48px !default;
+$large-thumbnail-size: 64px !default;
+$xlarge-thumbnail-size: 96px !default;
+$huge-thumbnail-size: 128px !default;
+$goliath-thumbnail-size: 256px !default;
+$base-thumbnail-size: $medium-thumbnail-size !default;
+$base-thumbnail-border: 2px solid $white !default;
+
+$default-thumbnail-size: $medium-thumbnail-size !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Switches
+
+$base-switch-size: 30px !default;
+$base-switch-icon-size: 12px !default;
+$base-switch-border-radius: 30px !default;
+
+$base-switch-size-small: 20px !default;
+$base-switch-icon-size-small: 10px !default;
+
+$base-switch-label-color-inactive: $dark-gray-2 !default;
+$base-switch-label-color-active: $base-accent-color !default;
+
+$base-switch-icon-color-inactive: $light-gray-2 !default;
+$base-switch-icon-color-active: $base-accent-color !default;
+$base-switch-icon-color-hover: $white !default;
+
+$base-switch-background-inactive: $light-gray-3 !default;
+$base-switch-background-active: $base-accent-color !default;
+$base-switch-background-hover: $base-accent-color !default;
+
+$base-switch-knob-background-inactive: $light-gray-2 !default;
+$base-switch-knob-background-active: $white !default;
+$base-switch-knob-background-hover: $white !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Modals
+
+$base-modal-background: $white !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Tooltips
+
+$base-tooltip-background: rgba(0,0,0,0.9) !default;
+$base-tooltip-color: $white !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Popovers
+
+$popover-background: rgba(0,0,0,0.8);
+
+
+// -----------------------------------------------------------------------------
+// Component: Backdrops / Overlays
+
+$base-backdrop-background: $pale-gray-1 !default;
+$base-backdrop-opacity: 0.85 !default;
+$base-overlay-background: rgba(0,0,0,0.5) !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Steps
+
+$base-step-line-width: 1px !default;
+$base-step-inactive-color: $light-gray-2 !default;
+$base-step-font-size: 18px !default;
+$base-step-icon-size: 48px !default;
+$base-step-halo-size: 10px !default;
+$base-step-halo-color: $base-background-color !default;
+$base-step-halo-alt-color: $white !default;
+$small-step_icon-size: 32px !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Lists
+
+$base-list-item-spacing: $base-spacing * 0.5 !default;
+$base-list-item-border: 1px solid $light-gray !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Gauges
+
+$base-gauge-size: 120px !default;
+$base-gauge-font-size: 28px !default;
+$base-gauge-font-weight: 100 !default;
+$base-gauge-font-color: $dark-gray-2 !default;
+$base-gauge-circle-width: 16 !default;
+$base-gauge-circle-color: $light-gray-3 !default;
+
+$small-gauge-size: 60px !default;
+$small-gauge-font-size: 18px !default;
+$small-gauge-font-weight: 200 !default;
+
+$medium-gauge-size: $base-gauge-size !default;
+$medium-gauge-font-size: $base-gauge-font-size !default;
+$medium-gauge-font-weight: $base-gauge-font-weight !default;
+
+$large-gauge-size: 160px !default;
+$large-gauge-font-size: 68px !default;
+$large-gauge-font-weight: 100 !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Scoreboards
+
+$scoreboard-title-font-size: 36px !default;
+$scoreboard-title-font-size-large: 48px !default;
+$scoreboard-title-font-weight: 100 !default;
+$scoreboard-subtitle-font-size: 14px !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Tabs
+
+$base-tab-font-size: 12px !default;
+$base-tab-padding: 3px $base-spacing !default;
+$base-tab-tall-padding: ($base-spacing * 0.5) $base-spacing !default;
+$base-tab-margin: 0 10px 0 0 !default;
+$base-tab-vertical-height: 40px !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Toast
+
+$toast-max-width: 300px !default;
+$toast-icon-size: $base-font-size * 1.5 !default;
+$toast-border-width: $base-spacing * 0.25 !default;
+$toast-border-opacity: 0.1 !default;
+$toast-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25) !default;
+
+
+// -----------------------------------------------------------------------------
+// Layout: Footer
+
+$footer-background-color: $pale-gray-1 !default;
+$footer-line-height: 1 !default;
+$footer-font-color: $dark-gray-2 !default;
+$footer-link-color: $med-gray-2 !default;
+
+
+// -----------------------------------------------------------------------------
+// Layout: Header
+
+$header-zindex: 1030 !default;
+$header-height-tall: 130px !default;
+$header-height-large: 110px !default;
+$header-height-small: 56px !default;
+$header-background-color: $white !default;
+$header-line-height: 1.2 !default;
+$header-hamburger-color: $white !default;
+$header-hamburger-background: $dark-gray-3 !default;
+$header-hamburger-background-active: $cisco-blue !default;
+$header-hamburger-background-hover: $cisco-blue !default;
+$header-hamburger-color-active: $white !default;
+$header-logo-size: 35px !default;
+$header-logo-size-small: 30px !default;
+$header-logo-margin: 0 30px 0 0 !default;
+$header-logo-margin-small: 0 20px 0 0 !default;
+$header-title-size-large: 24px !default;
+$header-title-size-small: 24px !default;
+$header-breadcrumbs-margin: 20px 0 18px 0 !default;
+$header-breadcrumbs-font-size: $small-font-size !default;
+$header-toolbar-margin: 0 ($base-spacing * 0.25) 0 0 !default;
+$header-toolbar-color: $white !default;
+$header-toolbar-background: $med-gray-2 !default;
+$header-toolbar-background-hover: $cisco-blue !default;
+$header-toolbar-color-hover: $white !default;
+$header-utilities-margin: 0 15px 0 0 !default;
+$header-utilities-font-size: 16px !default;
+$header-utilities-color: $light-gray-2 !default;
+$header-utilities-background: transparent !default;
+$header-utilities-background-active: transparent !default;
+$header-utilities-background-hover: transparent !default;
+$header-utilities-background-disabled: transparent !default;
+$header-utilities-color-active: $dark-gray-2 !default;
+$header-utilities-color-hover: $cisco-blue !default;
+$header-utilities-color-disabled: $light-gray-3 !default;
+
+
+// -----------------------------------------------------------------------------
+// Layout: Sidebar
+
+$sidebar-zindex: 1031 !default;
+$sidebar-color: $white !default;
+$sidebar-background: $cisco-blue !default;
+$sidebar-menu-width: $mobile-menu-width !default;
+$sidebar-item-height: 40px !default;
+$sidebar-item-background-selected: $med-blue !default;
+$sidebar-item-border-selected: 5px 0 0 $white inset !default;
+$sidebar-item-border: 1px solid $status-blue !default;
+$sidebar-item-border-shadow: 0 1px 0 $status-blue inset !default;
+$sidebar-title-font-size: 24px !default;

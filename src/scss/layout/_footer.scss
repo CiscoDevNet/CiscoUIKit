@@ -1,0 +1,68 @@
+//
+// Footer
+//
+// Since: 1.0.0
+//
+// Styleguide Layout.Footer
+//
+
+
+//
+// Example
+//
+// Markup:
+// <footer class="footer">
+//     <div class="row">
+//         <div class="col-xs-8 col-sm-6 text-center">
+//             <div class="flex-inline text-left">
+//                 <ul class="list base-margin-left base-margin-right">
+//                     <li><a class="link" href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+//                     <li><a class="link" href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+//                     <li><a class="link" href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+//                     <li><a class="link" href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms & Conditions</a></li>
+//                 </ul>
+//                 <ul class="list base-margin-left">
+//                     <li><a class="link" href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+//                     <li><a class="link" href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+//                     <li><a class="link" href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+//                 </ul>
+//             </div>
+//         </div>
+//         <div class="col-xs-4 col-sm-6 text-center">
+//             <div class="flex-inline">
+//                 <a href="http://www.cisco.com" target="_blank">
+//                     <span class="icon-cisco icon-medium"></span>
+//                 </a>
+//                 <div class="base-margin-left text-left hidden-xs">
+//                     <div>Copyright &copy; 2017 Cisco Systems Inc.</div>
+//                     <div>All rights reserved.</div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </footer>
+//
+// Styleguide Layout.Footer.Example
+//
+
+.footer {
+    padding: ($base-spacing * 2) 0;
+
+    background-color: $base-background-color;
+    border-top: 1px solid $base-border-color;
+    a {
+        color: $base-font-color;
+        font-weight: 300;
+    }
+}
+@media screen and (max-width: 767px) {
+    .footer {
+        font-size: $small-font-size;
+    }
+}
+@media screen and (max-width: 478px) {
+    .footer,
+    .feature-banner {
+        font-size: $small-font-size;
+    }
+}

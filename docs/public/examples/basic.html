@@ -1,0 +1,176 @@
+<!doctype html>
+<html class="cui" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic Example</title>
+        <link rel="stylesheet" href="css/cui-basic.min.css">
+    </head>
+    <body>
+        <div class="content-fluid">
+            <main>
+                <div class="content">
+                    <div class="container">
+                        <h1 class="base-margin-bottom">Basic Example</h1>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p>Checkboxes</p>
+                                <hr>
+                                <form>
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked name="checkbox1">
+                                        <span class="checkbox__input"></span>
+                                        <span class="checkbox__label">Selected</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox2">
+                                        <span class="checkbox__input"></span>
+                                        <span class="checkbox__label">Enabled</span>
+                                    </label>
+                                    <label class="checkbox disabled">
+                                        <input type="checkbox" checked name="checkbox3">
+                                        <span class="checkbox__input"></span>
+                                        <span class="checkbox__label">Disabled Selected</span>
+                                    </label>
+                                    <label class="checkbox" disabled>
+                                        <input type="checkbox" name="checkbox4">
+                                        <span class="checkbox__input"></span>
+                                        <span class="checkbox__label">Disabled</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Radios</p>
+                                <hr>
+                                <form>
+                                    <label class="radio">
+                                        <input type="radio" checked name="radio1">
+                                        <span class="radio__input"></span>
+                                        <span class="radio__label">Selected</span>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio2">
+                                        <span class="radio__input"></span>
+                                        <span class="radio__label">Enabled</span>
+                                    </label>
+                                    <label class="radio disabled">
+                                        <input type="radio" checked name="radio3">
+                                        <span class="radio__input"></span>
+                                        <span class="radio__label">Disabled Selected</span>
+                                    </label>
+                                    <label class="radio" disabled>
+                                        <input type="radio" name="radio4">
+                                        <span class="radio__input"></span>
+                                        <span class="radio__label">Disabled</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Switches</p>
+                                <hr>
+                                <form>
+                                    <label class="switch-icon">
+                                        <input type="checkbox" name="switchicon1">
+                                        <span class="switch__input">
+                                            <span class="icon-grid-view"></span>
+                                            <span class="icon-list-view"></span>
+                                        </span>
+                                    </label>
+                                    <label class="switch-icon">
+                                        <input type="checkbox" checked name="switchicon2">
+                                        <span class="switch__input">
+                                            <span class="icon-clock"></span>
+                                            <span class="icon-star"></span>
+                                        </span>
+                                    </label>
+                                    <label class="switch-icon">
+                                        <input type="checkbox" checked name="switchicon3">
+                                        <span class="switch__label">Time</span>
+                                        <span class="switch__input">
+                                            <span class="icon-clock"></span>
+                                            <span class="icon-star"></span>
+                                        </span>
+                                        <span class="switch__label">Favorites</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="col-md-3">
+                                <p>Input Types</p>
+                                <hr>
+                                <form>
+                                    <div class="form-group">
+                                        <div class="form-group__text">
+                                            <input id="email1" type="email">
+                                            <label for="email1">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group__text">
+                                            <input id="number1" type="number">
+                                            <label for="number1">Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group__text">
+                                            <input id="password1" type="password">
+                                            <label for="password1">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group__text">
+                                            <input id="tel1" type="tel">
+                                            <label for="tel1">Telephone</label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Labels</p>
+                                <hr>
+                                <ul class="list list--inline base-margin-bottom">
+                                    <li>
+                                        <span class="label label--success">
+                                            <span>success</span>
+                                            <span class="icon-close"></span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="label label--warning">
+                                            <span>warning</span>
+                                            <span class="icon-close"></span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="label label--danger">
+                                            <span>danger</span>
+                                            <span class="icon-close"></span>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul class="list list--inline">
+                                    <li>
+                                        <span class="label label--success label--large">
+                                            <span>success</span>
+                                            <span class="icon-close"></span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="label label--warning label--large">
+                                            <span>warning</span>
+                                            <span class="icon-close"></span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="label label--danger label--large">
+                                            <span>danger</span>
+                                            <span class="icon-close"></span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

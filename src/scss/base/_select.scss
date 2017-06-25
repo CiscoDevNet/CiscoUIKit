@@ -1,0 +1,155 @@
+//
+// Select updated
+//
+// Since: 1.0.0
+//
+// Styleguide Base.Select
+//
+
+
+//
+// Examples
+//
+// <blockquote>Add the attribute or class `disabled` to the select element to denote a disabled field.<br>Add the attribute or class `readonly` to the select element to denote a read-only field</blockquote>
+//
+// Markup:
+// <form>
+//     <div class="row">
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text select">
+//                     <select name="select1">
+//                         <option value="0" selected>Select an Option</option>
+//                         <option value="option1">Option 1</option>
+//                         <option value="option2">Option 2</option>
+//                         <option value="option3">Option 3</option>
+//                     </select>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text select">
+//                     <select name="select2">
+//                         <option value="0" selected>Select an Option</option>
+//                         <option value="option1">Option 1</option>
+//                         <option value="option2">Option 2</option>
+//                         <option value="option3">Option 3</option>
+//                     </select>
+//                     <label for="select2">With Label</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text select">
+//                     <select multiple name="select3">
+//                         <option value="0" selected>Select Options</option>
+//                         <option value="option1">Option 1</option>
+//                         <option value="option2">Option 2</option>
+//                         <option value="option3">Option 3</option>
+//                     </select>
+//                     <label for="select3">Multi-Select</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text select">
+//                     <select disabled name="select4">
+//                         <option value="0" selected>Select an Option</option>
+//                         <option value="option1">Option 1</option>
+//                         <option value="option2">Option 2</option>
+//                         <option value="option3">Option 3</option>
+//                     </select>
+//                     <label for="select4">Disabled</label>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </form>
+//
+// Styleguide Base.Select.Examples
+//
+
+.select {
+    display: flex;
+    position: relative;
+    transition: all 0.2s ease;
+
+    &:after {
+        @include icon-dropdown;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        color: $base-form-select-chevron-color;
+        pointer-events: none;
+        text-align: center;
+        transition: all 0.2s ease;
+    }
+
+    &:hover,
+    &:focus {
+        color: $base-accent-color;
+        z-index: 1;
+
+        &:after {
+            color: $base-accent-color;
+        }
+
+        ~ label {
+            color: $base-font-color;
+        }
+    }
+
+    ~ label {
+        color: $base-muted-color;
+    }
+
+    label:first-of-type {
+        order: 0;
+    }
+
+    select {
+        order: 0;
+        position: relative;
+        flex: 1;
+        width: 100%;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        user-select: none;
+        appearance: none;
+
+        &[multiple] {
+            overflow-y: auto;
+            margin-top: 1px;
+
+            option:not(:checked) {
+                color: $base-font-color;
+            }
+        }
+
+        &.disabled,
+        &[disabled] {
+            @include disabled;
+
+            ~ label {
+                @include disabled;
+            }
+        }
+
+        &.readonly,
+        &[readonly] {
+            @include readonly;
+
+            ~ label {
+                @include readonly;
+            }
+        }
+
+        &::-ms-expand {
+            display:none; // Hide select arrow in IE
+        }
+    }
+}

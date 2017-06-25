@@ -1,0 +1,156 @@
+//
+// Angular Modals
+//
+// **Note**: This component requires the Angular UI Modal module (https://angular-ui.github.io/bootstrap/#/modal)
+//
+// <div ng-controller="modalDemo">
+//     <a class="button button--primary" ng-click="openModal()">Open Modal</a>
+// </div>
+//
+//
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  pointer-events: none;
+  z-index: 1050;
+
+  .modal-open & {
+    pointer-events: auto;
+  }
+
+  &.fade {
+    .modal-dialog {
+      opacity: 0;
+      transform: scale3d(1.05, 1.05, 1);
+    }
+  }
+  
+  &.in {
+    .modal-dialog {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  padding: $base-spacing * 0.5;
+  transition: opacity 0.3s ease,
+              transform 0.3s ease;
+  z-index: 1;
+
+  @include break-at(small) {
+    padding: $base-spacing;
+    width: 700px;
+  }
+
+  &.modal-lg {
+    @include break-at(medium) {
+      width: 930px;
+    }
+    @include break-at(large) {
+      width: 1130px;
+    }
+  }
+}
+
+.modal-content {
+  @include panel($background: $base-modal-background);
+  padding: $base-spacing $base-spacing * 0.5;
+
+  @include break-at(small) {
+    padding: $base-spacing $base-spacing * 2;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  @include panel-section;
+  padding: 0;
+}
+
+.modal-body, 
+.modal-footer {
+  margin-top: $base-spacing;
+}
+
+.modal-header {
+  .close {
+    @extend %link;
+    background: transparent;
+    position: absolute;
+    top: -21px;
+    right: -10px;
+    z-index: 1;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include break-at(small) {
+      top: -21px;
+      right: -33px;
+    }
+
+    > span {
+      font-size: 24px;
+    }
+  }
+}
+
+.modal-footer {
+  text-align: center;
+
+  .button {
+    margin: 0;
+    max-width: 125px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include break-at(small) {
+      margin: 0 $base-spacing 0 0;
+    }
+
+    @include break-at(small) {
+      max-width: $base-button-max-width;
+    }
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $base-backdrop-background;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1040;
+
+  &.in {
+    opacity: $base-backdrop-opacity;
+  }
+}

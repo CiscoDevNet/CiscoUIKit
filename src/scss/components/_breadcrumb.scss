@@ -1,0 +1,41 @@
+//
+// Breadcrumb
+//
+// Since 1.0.0<br><br>
+//
+// Styleguide Components.Breadcrumb
+//
+
+
+//
+// Example
+//
+// Markup:
+// <ul class="breadcrumb">
+//     <li><a>Previous Page</a></li>
+//     <li><a>Previous Page</a></li>
+//     <li><span>Current Page</span></li>
+// </ul>
+//
+// Styleguide Components.Breadcrumb.Example
+//
+
+.breadcrumb {
+
+    @include clearfix;
+    @include list--unstyled;
+
+    > li {
+        float: left;
+
+        &.active {
+            color: $breadcrumb-color;
+        }
+
+        + li:before {
+            padding: $breadcrumb-padding;
+            color: $breadcrumb-color;
+            content: '/\00a0';
+        }
+    }
+}

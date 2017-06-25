@@ -1,0 +1,552 @@
+//
+// Input updated
+//
+// Since 1.0.0
+//
+// Styleguide Base.Input
+//
+
+//
+// States
+//
+// <blockquote>Use javascript to add/remove the class modifiers to/from the input tag in each form-group element. <br><br>Supported class modifiers include:<br>
+//            `input--dirty` Input field is dirty (has been touched) <br>
+//            `input--valid` Input field is valid (this is the default state) <br>
+//          `input--invalid` Input field is invalid <br>
+// `input--invalid-required` Input field is invalid because it is required <br>
+// </blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <form>
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="text1" type="text">
+//                     <label for="text1">Text</label>
+//                 </div>
+//             </div>
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="text3" type="text" disabled>
+//                     <label for="text3">Text (disabled)</label>
+//                 </div>
+//             </div>
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="text2" type="text" required>
+//                     <label for="text2">Text (required)</label>
+//                     <div class="required-block">
+//                         <span class="icon-asterisk"></span>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="text4" type="text" class="input--dirty input--valid" value="Lorem Ipsum" required>
+//                     <label for="text4">Text (required, dirty, valid)</label>
+//                     <div class="required-block">
+//                         <span class="icon-asterisk" title="This is a required field"></span>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="form-group form-group--helper">
+//                 <div class="form-group__text">
+//                     <input id="text5" type="text" class="input--dirty input--invalid-required" value="" required>
+//                     <label for="text5">Text (required, dirty, invalid-required)</label>
+//                     <div class="required-block">
+//                         <span class="icon-asterisk" title="This is a required field"></span>
+//                     </div>
+//                 </div>
+//             <div class="help-block text-warning">
+//                 <span class="icon-exclamation-circle"></span>
+//                 <span>This is a required field</span>
+//             </div>
+//             </div>
+//             <div class="form-group form-group--helper">
+//                 <div class="form-group__text">
+//                     <input id="text6" type="text" class="input--dirty input--invalid" value="&#^$&(%$" required>
+//                     <label for="text6">Text (required, dirty, invalid)</label>
+//                     <div class="required-block">
+//                         <span class="icon-asterisk" title="This is a required field"></span>
+//                     </div>
+//                 </div>
+//             <div class="help-block text-danger">
+//                 <span class="icon-error"></span>
+//                 <span>Special characters not allowed</span>
+//             </div>
+//             </div>
+//         </form>
+//     </div>
+// </div>
+//
+// Styleguide Base.Input.States
+//
+
+
+//
+// Types
+//
+// Markup:
+// <form>
+//     <div class="row">
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="email1" type="email">
+//                     <label for="email1">Email</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="number1" type="number">
+//                     <label for="number1">Number</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="password1" type="password">
+//                     <label for="password1">Password</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="tel1" type="tel">
+//                     <label for="tel1">Telephone</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="url1" type="url">
+//                     <label for="url1">URL</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="date1" type="date">
+//                     <label for="date1">Date</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="month1" type="month">
+//                     <label for="month1">Month</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="time1" type="time">
+//                     <label for="time1">Time</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="week1" type="week">
+//                     <label for="week1">Week</label>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </form>
+//
+// Styleguide Base.Input.Types
+//
+
+
+//
+// Text Area
+//
+// <blockquote>You will need to use javascript to dynamically grow/shrink the textarea. Something similar to the <a href="https://github.com/janjarfalk/jquery-elastic" target="_blank">jQuery Elastic plugin</a> or <a href="https://github.com/monospaced/angular-elastic" target="_blank">Angular Elastic directive</a><br>Add the attribute or class `disabled` to the input element to denote a disabled field.<br>Add the attribute or class `readonly` to the input element to denote a read-only field</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <form>
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <textarea id="textarea1" rows="1"></textarea>
+//                     <label for="textarea1">Textarea</label>
+//                 </div>
+//             </div>
+//         </form>
+//     </div>
+//     <div class="col-md-6">
+//         <form>
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <textarea id="textarea2" rows="1" readonly></textarea>
+//                     <label for="textarea2">Textarea (readonly)</label>
+//                 </div>
+//             </div>
+//         </form>
+//     </div>
+// </div>
+//
+// Styleguide Base.Input.Text Areas
+//
+
+
+//
+// Search
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <form>
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="search" type="search">
+//                     <label for="search">Search Devices</label>
+//                     <button type="button" class="link">
+//                         <span class="icon-search"></span>
+//                     </button>
+//                 </div>
+//             </div>
+//         </form>
+//     </div>
+// </div>
+//
+// Styleguide Base.Input.Search
+//
+
+textarea.textarea {
+    resize: none;
+    width: 100%;
+    border: 1px solid $base-border-color;
+    padding: ($base-spacing * 0.25) ($base-spacing * 0.5);
+
+    &--alt {
+        background-color: $alt-background-color;
+    }
+}
+
+.form-group__text,
+.form-group__text.select {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    input[type="password"] {
+        font: small-caption;
+        font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+        flex: 1;
+        flex-shrink: 0;
+        order: 3;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        transition: color 0.2s ease;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        ~ label {
+            margin-bottom: -10px;
+            @include break-at(small) {
+                margin-bottom: 0;
+            }
+            font-style: italic;
+            &::after {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                content: '';
+                background: $base-border-color;
+                transition: all 0.2s ease;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            ~ label {
+                color: $base-font-color;
+            }
+        }
+
+        &:focus {
+            color: $base-accent-color;
+            outline: none;
+
+            ~ label {
+                font-style: normal;
+                &::after {
+                    bottom: -3px;
+                    height: 4px;
+                    background: $base-accent-color;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+
+        &.disabled,
+        &[disabled] {
+            @include disabled;
+
+            ~ label {
+                @include disabled;
+            }
+        }
+
+        &.readonly,
+        &[readonly] {
+            @include readonly;
+
+            ~ label {
+                @include readonly;
+            }
+        }
+
+        &.input--dirty.input--valid,
+        &.ng-dirty.ng-valid {
+            ~ label {
+                font-style: normal;
+            }
+        }
+
+        &.input--dirty.input--invalid,
+        &.ng-dirty.ng-invalid,
+        &.ng-touched.ng-invalid {
+            ~ label {
+                &::after {
+                    background-color: $danger;
+                }
+            }
+            ~ .required-block {
+                color: $danger;
+                transform: scale(1.25);
+                transition: transform .1s ease-in;
+                span[class^="icon-"] {
+                    display: none;
+                }
+                &::after {
+                    @include icon-error;
+                }
+            }
+        }
+
+        &.input--dirty.input--invalid-required,
+        &.ng-dirty.ng-invalid-required,
+        &.ng-touched.ng-invalid-required {
+            ~ label {
+                &::after {
+                    background: $base-border-color;
+                }
+            }
+            &:focus {
+                ~ label {
+                    &::after {
+                        background: $base-accent-color;
+                    }
+                }
+            }
+            ~ .required-block {
+                color: $warning;
+                transform: scale(1.25);
+                transition: transform .1s ease-in;
+                span[class^="icon-"] {
+                    display: none;
+                }
+                &::after {
+                    @include icon-exclamation-circle;
+                }
+            }
+        }
+    }
+
+    //
+    // This section fixes an issue in Firefox where a select dropdown in a modal
+    // dialog would not let the user select any options
+    //
+    select {
+        order: 0;
+        ~ label {
+            order: -1;
+        }
+        ~ .required-block {
+            order: 0;
+        }
+    }
+
+    textarea {
+        resize: none;
+        overflow-x: hidden; // Prevent initial additional line from appearing (Firefox)
+        min-height: 2rem;   // Prevent tiny height in IE when textarea is empty
+    }
+
+    .required-block {
+        display: flex;
+        position: absolute;
+        right: $base-spacing;
+        top: $base-spacing;
+
+        @include break-at(small) {
+            position: relative;
+            right: 0;
+            top: 0;
+        }
+
+        align-items: center;
+        justify-content: center;
+        order: 100;
+        color: $base-muted-color;
+        font-size: .75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        transform: scale(0.5);
+        width: 24px;
+        transition: transform .1s ease-in;
+        margin-right: -28px;
+        line-height: 1.2rem;
+    }
+
+    .action-block {
+        display: flex;
+        order: 99;
+
+        a {
+            span[class^="icon-"] {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .link {
+        display: flex;
+        order: 3;
+    }
+
+    .link {
+        order: 10;
+        align-self: center;
+        margin-left: $base-spacing * 0.25;
+    }
+
+    .spin {
+        order: 1;
+        align-self: center;
+        height: 100%;
+        margin-right: $base-spacing * 0.25;
+    }
+
+    .tags {
+        @include flex-fluid;
+        order: 4;
+
+        .button {
+            margin: 0 ($base-spacing * 0.25);
+            vertical-align: baseline;
+        }
+    }
+}
+
+.form-group__text.select {
+    &:after {
+        right: 0;
+    }
+}
+
+// Input Groups
+
+.input-group {
+    display: block;
+    font-size: 13px;
+
+    .select__icon {
+        position: absolute;
+        top: -1px;
+        left: $base-spacing * 0.5;
+        color: $base-disabled-color;
+        font-size: 10px;
+
+        ~ select {
+            padding-left: 30px;
+        }
+    }
+
+    > .input-group__prefix {
+        margin-right: -1px;
+    }
+
+    > .input-group__suffix {
+        margin-left: -1px;
+    }
+
+    > .input-group__prefix,
+    > .input-group__suffix,
+    > .input-group__select {
+        display: inline-block;
+        position: relative;
+        height: 30px; // Firefox doesn't honor line-height in select menus, so we use px to set the height instead
+        box-shadow: 0 0 0 1px $base-border-color inset;
+        line-height: 30px;
+        vertical-align: middle;
+
+        select {
+            padding-right: 30px;
+        }
+
+        &:not(:first-child) {
+            select {
+                padding-left: $base-spacing * 0.5;
+            }
+        }
+
+        &:first-child {
+            border-top-left-radius: $base-button-border-radius;
+            border-bottom-left-radius: $base-button-border-radius;
+
+            .button,
+            .select {
+                border-top-left-radius: $base-button-border-radius;
+                border-bottom-left-radius: $base-button-border-radius;
+            }
+        }
+
+        &:last-child {
+            border-top-right-radius: $base-button-border-radius;
+            border-bottom-right-radius: $base-button-border-radius;
+
+            .button,
+            .select {
+                border-top-right-radius: $base-button-border-radius;
+                border-bottom-right-radius: $base-button-border-radius;
+            }
+        }
+
+        .button,
+        .link,
+        .select {
+            display: inline-block;
+            border-radius: 0;
+        }
+
+        .button,
+        .link {
+            padding-right: $base-spacing * 0.5;
+            padding-left: $base-spacing * 0.5;
+        }
+    }
+}

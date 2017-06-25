@@ -1,0 +1,100 @@
+//
+// Angular Popovers
+//
+// **Note**: This component uses Angular UI (https://angular-ui.github.io/bootstrap/#/popover)
+//
+// Markup:
+// <a class="button" popover="This is a popover." popover-animation="false">Top</a>
+// <a class="button" popover="This is a popover." popover-placement="right" popover-animation="false">Right</a>
+// <a class="button" popover="This is a popover." popover-placement="bottom" popover-animation="false">Bottom</a>
+// <a class="button" popover="This is a popover." popover-placement="left" popover-animation="false">Left</a>
+//
+//
+
+$popover-arrow-size: $base-spacing * 0.5;
+$popover-color: #fff;
+
+.popover {
+  display: none;
+  position: absolute;
+  max-width: 400px;
+  top: 0;
+  left: 0;
+  background-color: $popover-background;
+  color: $popover-color;
+  z-index: 1010;
+  // override terminal font / whitespace settings
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  white-space: normal;
+  word-break: normal;
+
+  & .arrow {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: $base-spacing * 0.5 solid transparent;
+    content: '';
+  }
+
+  a,
+  a:hover {
+    color: $popover-color;
+    text-decoration: underline;
+  }
+}
+
+.popover {
+  &.top .arrow {
+    top: auto !important;
+    bottom: 0;
+    left: 50%;
+    border-top-color: $popover-background;
+    border-bottom-width: 0;
+    transform: translate(-50%, 100%);
+  }
+
+  &.right .arrow {
+    top: 50%;
+    border-right-color: $popover-background;
+    border-left-width: 0;
+    transform: translate(-100%, -50%);
+  }
+
+  &.bottom .arrow {
+    top: 0 !important;
+    left: 50%;
+    border-top-width: 0;
+    border-bottom-color: $popover-background;
+    transform: translate(-50%, -100%);
+  }
+
+  &.left .arrow {
+    top: 50%;
+    right: 0;
+    border-right-width: 0;
+    border-left-color: $popover-background;
+    transform: translate(100%, -50%);
+  }
+}
+
+.popover-header {
+  position: relative;
+  padding: $base-spacing * 0.5;
+  padding-bottom: $base-spacing * 0.25;
+  
+  .close {
+    padding: $base-spacing * 0.125;
+    z-index: 1;
+  }
+}
+
+.popover-content {
+  max-height: 185px;
+  padding: $base-spacing * 0.5;
+  padding-top: $base-spacing * 0.25;
+  overflow-y: auto;
+  width: 100%;
+}

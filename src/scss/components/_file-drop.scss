@@ -1,0 +1,68 @@
+//
+// File Upload
+//
+// Markup:
+// <input type="file" class="hide">
+// <div class="file-drop">
+//    <div class="file-drop__icon">
+//        <span class="icon-upload"></span>
+//    </div>
+//    <span>Drag and drop your file here, or <span class="text-info">browse</span> to upload.</span>
+// </div>
+//
+
+.file-drop {
+ 	margin-bottom: $base-spacing;
+	padding: $base-spacing;
+	border: 1px dashed $base-border-color;
+	cursor: pointer;
+	text-align: center;
+
+	&__container {
+	  	.file-icon {
+	  		font-size: 20px;
+	  	}
+
+	    .file-body {
+	      	text-align: left;
+	      	margin-left: $base-spacing * 0.5;
+	    }
+	}
+
+    &__card {
+        margin-bottom: $base-spacing * 0.5;
+    }
+
+	&:hover {
+		border-color: $base-accent-color;
+		.file-drop__icon {
+			color: $base-accent-color;
+		}
+	}
+
+	&:active,
+	&:focus {
+		border: 1px solid $base-accent-color
+	}
+
+	&__icon {
+    	color: $base-muted-color;
+		font-size: 2rem;
+	}
+
+	&__filecnt {
+		text-align: left;
+		color: $base-muted-color;
+		margin-top: $base-spacing;
+	}
+
+    & .icon-close {
+        opacity: 0.5;
+        position: absolute;
+        top: $base-spacing * 0.25;
+        right: $base-spacing * 0.5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

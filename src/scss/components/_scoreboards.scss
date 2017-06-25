@@ -1,0 +1,127 @@
+//
+// Scoreboard
+//
+// A scoreboard is a panel that contains a value and a title/description. It is primarily used to convey summarized information on a dashboard.<br><br>
+// Since 1.0.0
+//
+// Styleguide Components.Scoreboard
+//
+
+
+//
+// Composition
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <p><b>Default</b></p>
+//         <div class="scoreboard composition">
+//             <div class="scoreboard__title">Title</div>
+//             <div class="scoreboard__subtitle">Subtitle</div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <p><b>Variant:</b> 1</p>
+//         <div class="scoreboard composition">
+//             <div class="scoreboard__title">Title</div>
+//             <hr class="text-muted">
+//             <div class="scoreboard__subtitle">Subtitle</div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <p><b>Variant:</b> 2</p>
+//         <div class="scoreboard composition">
+//             <div class="scoreboard__title">Title</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Scoreboard.Composition
+//
+
+.scoreboard.composition {
+    background: transparent;
+    border: 1px solid $light-gray-3;
+
+    div.scoreboard__title,
+    div.scoreboard__subtitle {
+        background: $light-gray-3;
+        color: $base-font-color;
+        font-size: $small-font-size;
+        font-weight: $base-font-weight;
+        padding: $base-spacing * 0.5;
+        margin: 2px;
+        pointer-events: none;
+        opacity: 1;
+    }
+}
+
+
+//
+// Padding
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <p>Compressed</p>
+//         <div class="scoreboard scoreboard--compressed">
+//             <div class="scoreboard__title">245</div>
+//             <hr class="text-muted">
+//             <div class="scoreboard__subtitle">Total Devices</div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <p>Regular</p>
+//         <div class="scoreboard scoreboard--regular">
+//             <div class="scoreboard__title">245</div>
+//             <hr class="text-muted">
+//             <div class="scoreboard__subtitle">Total Devices</div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <p>Loose</p>
+//         <div class="scoreboard scoreboard--loose">
+//             <div class="scoreboard__title">245</div>
+//             <hr class="text-muted">
+//             <div class="scoreboard__subtitle">Total Devices</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Scoreboard.Padding
+//
+
+.scoreboard {
+
+    @include panel($border-color: $base-border-color);
+    @include panel-padding();
+
+    text-align: center;
+
+    &__title {
+        font-size: $scoreboard-title-font-size;
+        font-weight: $scoreboard-title-font-weight;
+    }
+
+    &__subtitle {
+        @include text-ellipsis;
+        font-size: $scoreboard-subtitle-font-size;
+        color: $base-muted-color;
+    }
+
+    &--compressed {
+        @include panel-padding($padding: $base-panel-compressed-padding);
+    }
+
+    &--regular {
+        @include panel-padding($padding: $base-panel-regular-padding);
+    }
+
+    &--loose {
+        @include panel-padding($padding: $base-panel-loose-padding);
+    }
+}

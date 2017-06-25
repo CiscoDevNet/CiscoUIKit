@@ -1,0 +1,292 @@
+//
+// Step
+//
+// Since 1.0.0
+//
+// Styleguide Components.Step
+//
+
+
+//
+// States
+//
+// Markup:
+// <div class="ui-steps">
+//     <div class="ui-step visited">
+//         <div class="step__icon">1</div>
+//         <div class="step__label">Visited</div>
+//     </div>
+//     <div class="ui-step active">
+//         <div class="step__icon">2</div>
+//         <div class="step__label">Active</div>
+//     </div>
+//     <div class="ui-step">
+//         <div class="step__icon">3</div>
+//         <div class="step__label">Next</div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Step.States
+//
+
+
+//
+// Alternate Background
+//
+// Markup:
+// <div class="ui-steps">
+//     <div class="ui-step ui-step--alt visited">
+//         <div class="step__icon">1</div>
+//         <div class="step__label">Visited</div>
+//     </div>
+//     <div class="ui-step ui-step--alt active">
+//         <div class="step__icon">2</div>
+//         <div class="step__label">Active</div>
+//     </div>
+//     <div class="ui-step ui-step--alt">
+//         <div class="step__icon">3</div>
+//         <div class="step__label">Next</div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Step.Alternate Background
+//
+
+
+//
+// Vertical
+//
+// Markup:
+// <div class="ui-steps ui-steps--vertical">
+//     <div class="ui-step visited">
+//         <div class="step__icon">1</div>
+//         <div class="step__label">Step #1 Visited</div>
+//     </div>
+//     <div class="ui-step active">
+//         <div class="step__icon">2</div>
+//         <div class="step__label">Step #2 Active<br>Lorem ipsum dolor sit amet, id optio quisque urna diam dignissim sed, eu aliquet nunc molestie. Nec congue neque, vel dolor sed amet, laboris phasellus lacinia vestibulum mi diam pede, vitae ullam ligula. Accumsan mattis sociis rutrum sed molestie, quisque et tortor. Orci nec diam morbi nec, ut nam nunc suspendisse quis diam vulputate. Nec sapien. Ultricies aliquam sed curabitur id proin, ullamcorper arcu mi rerum sodales congue, consequat tellus hendrerit leo ultrices massa, morbi faucibus lacus ut etiam accumsan.</div>
+//     </div>
+//     <div class="ui-step">
+//         <div class="step__icon">3</div>
+//         <div class="step__label">Step #3 Next</div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Components.Step.Vertical
+//
+
+
+//
+// Small
+//
+// Markup:
+// <span class="step__icon step__icon--small">1</span>
+// <span class="step__icon step__icon--small step__icon--info">2</span>
+// <span class="step__icon step__icon--small step__icon--success">3</span>
+// <span class="step__icon step__icon--small step__icon--warning">4</span>
+// <span class="step__icon step__icon--small step__icon--danger">5</span>
+//
+// Weight: 4
+//
+// Styleguide Components.Step.Small
+//
+
+
+//
+// Large
+//
+// Markup:
+// <span class="step__icon">1</span>
+// <span class="step__icon step__icon--info">2</span>
+// <span class="step__icon step__icon--success">3</span>
+// <span class="step__icon step__icon--warning">4</span>
+// <span class="step__icon step__icon--danger">5</span>
+//
+// Weight: 5
+//
+// Styleguide Components.Step.Large
+//
+
+@mixin step-color(
+$background:   $base-background-color,
+$color:        $base-step-inactive-color,
+$border-color: "",
+$line-width:   $base-step-line-width)
+{
+    background: $background;
+    color: $color;
+
+    @if $border-color != "" {
+        box-shadow: inset 0 0 0 $line-width $border-color;
+    }
+    @else {
+        box-shadow: inset 0 0 0 $line-width $background;
+    }
+}
+
+.ui-steps {
+    @include list--unstyled;
+    display: flex;
+    align-items: top;
+    justify-content: space-around;
+    max-width: 900px; // Will need to be removed in instances of 4+ steps
+    margin: 0 auto $base-spacing auto;
+    padding: $base-spacing 0;
+    text-align: center;
+
+    &--vertical {
+        display: inline;
+        text-align: left;
+        .ui-step {
+            display: flex;
+            margin-bottom: $base-spacing;
+
+            .step__icon {
+                flex: 1;
+                max-width: $base-step-icon-size;
+            }
+
+            .step__label {
+                flex: 2;
+                padding-left: $base-spacing;
+                color: $base-font-color;
+            }
+
+            &:after {
+                height: $base-spacing;
+                content: '';
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    &--small {
+        .ui-step {
+            .step__icon {
+                width: $small-step-icon-size;
+                min-width: $small-step-icon-size;
+                max-width: $small-step-icon-size;
+                height: $small-step-icon-size;
+                line-height: $small-step-icon-size;
+                font-size: $base-font-size;
+            }
+        }
+    }
+
+    &--cta {
+        .ui-step {
+            &.visited,
+            &.active {
+                .step__icon {
+                    @include step-color($background: $cisco-green, $color: $white, $border-color: $cisco-green);
+                }
+            }
+        }
+    }
+}
+
+.ui-step {
+    position: relative;
+    flex: 1;
+    color: $base-step-inactive-color;
+
+    .step__icon {
+        margin: 0 auto ($base-spacing * 0.5) auto;
+    }
+
+    &.active {
+        color: $base-accent-color;
+        .step__icon {
+            @include step-color($background: $base-accent-color, $color: $white, $border-color: $base-border-color);
+            box-shadow: none;
+        }
+    }
+
+    &.visited {
+        color: $base-accent-color;
+        .step__icon {
+            @include step-color($border-color: $base-accent-color, $color: $base-accent-color);
+        }
+        &.ui-step--alt {
+            .step__icon {
+                background: $alt-background-color;
+            }
+        }
+    }
+
+    &.active,
+    &.visited {
+        &:before {
+            background: $base-accent-color;
+        }
+    }
+
+    &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: $base-step-line-width;
+        left: -50%;
+        top: 25px;
+        background: $base-step-inactive-color;
+    }
+
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+
+    &--alt {
+        .step__icon {
+            background: $alt-background-color;
+        }
+    }
+}
+
+.step__icon {
+    position: relative;
+    display: inline-block;
+    width: $base-step-icon-size;
+    min-width: $small-step-icon-size;
+    height: $base-step-icon-size;
+    line-height: $base-step-icon-size;
+    font-size: $base-step-font-size;
+    font-family: $base-font-family;
+    border-radius: 50%;
+    z-index: 1;
+    vertical-align: middle;
+    text-align: center;
+
+    @include step-color($border-color: $base-step-inactive-color);
+
+    &--small {
+        width: $small-step-icon-size;
+        height: $small-step-icon-size;
+        line-height: $small-step-icon-size;
+        font-size: $base-font-size;
+    }
+
+    &--info     { @include step-color($background: $base-accent-color, $color: $white); }
+    &--success  { @include step-color($background: $success, $color: $white); }
+    &--warning  { @include step-color($background: $warning, $color: $white); }
+    &--danger   { @include step-color($background: $danger, $color: $white); }
+    &--ghost    { @include step-color($background: transparent, $border-color: transparent); }
+
+    &--halo     { box-shadow: 0 0 0 $base-step-halo-size $base-step-halo-color; }
+    &--halo-alt { box-shadow: 0 0 0 $base-step-halo-size $base-step-halo-alt-color; }
+
+    > span {
+        vertical-align: middle;
+    }
+}

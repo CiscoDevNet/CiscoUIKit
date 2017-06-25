@@ -1,0 +1,289 @@
+//
+// Badge
+//
+// A badge is similar to a label except it has a fixed width and height. Width is fixed and overflow is hidden so make sure to limit the number of characters.<br><br>
+// Since: 1.0.3
+//
+// Styleguide Components.Badge
+//
+
+
+//
+// Color / Background
+//
+// Markup:
+// <div class="section">
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small">7</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--blue">7</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--ltgray">7</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--dkgray">7</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--dkblue">7</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--success">7</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--warning">7</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--danger">7</span>
+//         </span>
+//     </a>
+//     <a class="link">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--ghost badge--bordered-alt">7</span>
+//         </span>
+//     </a>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Badge.Color
+//
+
+
+//
+// Examples
+//
+// <blockquote>Badges should be used on Thumbnail and Icon patterns only</blockquote>
+//
+// Markup:
+// <a class="activity">
+//     <span class="badge-wrapper">
+//         <img class="thumb" src="public/img/user-photo-thumb-1.png">
+//         <span class="badge badge--danger badge--bordered-alt">7</span>
+//     </span>
+//     <div class="activity__body half-margin-left">
+//         <div class="activity__description">Switchport access and trunk on Layer 3 switch problems</div>
+//         <div class="activity__timestamp activity__timestamp--bottom">Posted: Jun 6, 2016 / Last reply: 2 minutes ago</div>
+//     </div>
+// </a>
+// <div class="section">
+//     <span class="badge-wrapper base-margin-right">
+//         <img class="thumb thumb--small thumb--bordered" src="public/img/user-photo-thumb-1.png">
+//         <span class="badge badge--tiny badge--danger badge--bordered-alt">3</span>
+//     </span>
+//     <span class="badge-wrapper base-margin-right">
+//         <img class="thumb thumb--medium thumb--bordered" src="public/img/user-photo-thumb-1.png">
+//         <span class="badge badge--small badge--danger badge--bordered-alt">3</span>
+//     </span>
+//     <span class="badge-wrapper base-margin-right">
+//         <img class="thumb thumb--large thumb--bordered" src="public/img/user-photo-thumb-1.png">
+//         <span class="badge badge--medium badge--danger badge--bordered-alt">3</span>
+//     </span>
+//     <span class="badge-wrapper">
+//         <img class="thumb thumb--xlarge thumb--bordered" src="public/img/user-photo-thumb-1.png">
+//         <span class="badge badge--large badge--danger badge--bordered-alt">3</span>
+//     </span>
+// </div>
+// <div class="section">
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-mail icon-medium"></span>
+//             <span class="badge badge--tiny badge--dkblue badge--bordered-alt">9+</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-mail icon-medium"></span>
+//             <span class="badge badge--small badge--dkblue badge--bordered-alt">9+</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-mail icon-medium"></span>
+//             <span class="badge badge--medium badge--dkblue badge--bordered-alt">9+</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-mail icon-medium"></span>
+//             <span class="badge badge--large badge--dkblue badge--bordered-alt">9+</span>
+//         </span>
+//     </a>
+// </div>
+// <div class="section">
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--tiny badge--warning badge--bordered-alt">14</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--warning badge--bordered-alt">14</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--medium badge--warning badge--bordered-alt">14</span>
+//         </span>
+//     </a>
+//     <a class="link">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--large badge--warning badge--bordered-alt">14</span>
+//         </span>
+//     </a>
+// </div>
+// <div class="section">
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-large"></span>
+//             <span class="badge badge--medium badge--success badge--bordered-alt">3</span>
+//         </span>
+//     </a>
+//     <a class="link base-margin-right">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-medium"></span>
+//             <span class="badge badge--small badge--success badge--bordered-alt">3</span>
+//         </span>
+//     </a>
+//     <a class="link">
+//         <span class="badge-wrapper">
+//             <span class="icon-alert icon-small"></span>
+//             <span class="badge badge--tiny badge--success badge--bordered-alt">3</span>
+//         </span>
+//     </a>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Badge.Examples
+//
+
+$default-badge-size: 20px;
+$default-badge-font-size: 11px;
+
+$icon-sizes:    ("small", 27px),
+                ("medium", 42px),
+                ("large", 84px);
+
+$thumb-sizes:   ("small", $small-thumbnail-size),
+                ("medium", $medium-thumbnail-size),
+                ("large", $large-thumbnail-size),
+                ("xlarge", $xlarge-thumbnail-size),
+                ("huge", $huge-thumbnail-size),
+                ("goliath", $goliath-thumbnail-size);
+
+$badge-sizes:   ("tiny", 16px, 9px),
+                ("small", $default-badge-size, $default-badge-font-size),
+                ("medium", 24px, 13px),
+                ("large", 28px, 14px);
+
+$badge-colors:  ("blue", $base-label-blue-background),
+                ("info", $base-label-blue-background),
+                ("ltgray", $base-label-ltgray-background),
+                ("mdgray", $base-label-mdgray-background),
+                ("dkgray", $base-label-dkgray-background),
+                ("dkblue", $base-label-dkblue-background),
+                ("success", $success),
+                ("warning", $warning),
+                ("danger", $danger),
+                ("ghost", transparent);
+
+.badge-wrapper {
+
+    position: relative;
+    display: inline-block;
+
+    .badge {
+
+        position: absolute;
+        display: inline-flex;
+        border-radius: $base-button-border-radius;
+        font-weight: normal;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 10;
+
+        // Defaults
+        @include label-color();
+        @include label-size($height: $default-badge-size, $width: $default-badge-size, $font-size: $default-badge-font-size, $padding: 0);
+
+        @each $badge-color, $badge-background in $badge-colors {
+            &--#{$badge-color} {
+                @include label-color($background: $badge-background);
+            }
+        }
+
+        @each $badge-name, $badge-size, $badge-font-size in $badge-sizes {
+            &--#{$badge-name} {
+                @include label-size($height: $badge-size, $width: $badge-size, $font-size: $badge-font-size, $padding: 0);
+            }
+        }
+
+        &--bordered {
+            border: $base-border;
+        }
+        &--bordered-alt {
+            border: $base-border-alt;
+        }
+    }
+
+    // Icons with badges
+    span[class^="icon-"] + .badge {
+        top: ($default-icon-font-size / 2) - ($default-badge-size / 2);
+        right: -($default-icon-font-size / 2);
+    }
+
+    @each $icon-name, $icon-size in $icon-sizes {
+        @each $badge-name, $badge-size in $badge-sizes {
+            span[class^="icon-"].icon-#{$icon-name} + .badge.badge--#{$badge-name} {
+                top: ($icon-size / 2) - ($badge-size / 2);
+                right: -($badge-size / 2);
+            }
+        }
+    }
+
+    // Thumbnails with badges
+    .thumb + .badge {
+        top: ($default-thumbnail-size / 2) - ($default-badge-size / 2);
+        right: -($default-badge-size / 2);
+    }
+
+    @each $thumb-name, $thumb-size in $thumb-sizes {
+        @each $badge-name, $badge-size in $badge-sizes {
+            .thumb.thumb--#{$thumb-name} + .badge.badge--#{$badge-name} {
+                top: ($thumb-size / 2) - ($badge-size / 2);
+                right: -($badge-size / 2);
+            }
+        }
+    }
+}

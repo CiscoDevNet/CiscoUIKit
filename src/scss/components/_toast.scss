@@ -1,0 +1,259 @@
+//
+// Toast
+//
+// Toast popups for transient messaging. We make no recommendation on toast placement although lower right corner is the most common.<br><br>
+// Since 1.0.1
+//
+// Styleguide Components.Toast
+//
+
+
+//
+// Composition
+//
+// <blockquote>Note that the toast message should be limited to avoid having display issues. Toast also have a maximum width</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <p><b>Default</b></p>
+//         <div class="toast composition">
+//             <div class="toast__icon">Icon</div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Title</div>
+//                 <div class="toast__message">Message</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <p><b>Variant:</b> 1</p>
+//         <div class="toast composition">
+//             <div class="toast__body">
+//                 <div class="toast__title">Title</div>
+//                 <div class="toast__message">Message</div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Toast.Composition
+//
+
+.toast.composition {
+    background: transparent;
+    border: 1px solid $light-gray-3;
+
+    div.toast__body {
+        width: 100%;
+    }
+
+    div.toast__icon,
+    div.toast__title,
+    div.toast__message {
+        background: $light-gray-3;
+        color: $base-font-color;
+        font-size: $small-font-size;
+        font-weight: $base-font-weight;
+        padding: $base-spacing * 0.5;
+        margin: 2px;
+        pointer-events: none;
+        opacity: 1;
+    }
+}
+
+
+//
+// Padding
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <p>Compressed</p>
+//         <div class="toast toast--compressed">
+//             <div class="toast__icon text-info icon-info-circle"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Title</div>
+//                 <div class="toast__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <p>Regular (default)</p>
+//         <div class="toast toast--regular">
+//             <div class="toast__icon text-info icon-info-circle"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Title</div>
+//                 <div class="toast__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <p>Loose</p>
+//         <div class="toast toast--loose">
+//             <div class="toast__icon text-info icon-info-circle"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Title</div>
+//                 <div class="toast__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Toast.Padding
+//
+
+
+//
+// Spacing
+//
+// <blockquote>See pattern <a href="section-style-guide.html#style-guide-base-lists">@Lists</a> for how to manage toast spacing</blockquote>
+//
+// Weight: 3
+//
+// Styleguide Components.Toast.Spacing
+//
+
+
+//
+// Severity
+//
+// <blockquote>Use the approved status colors and icons below to denote toast severity</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="toast">
+//             <div class="toast__icon text-success icon-check"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Success</div>
+//                 <div class="toast__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="toast">
+//             <div class="toast__icon text-info icon-info-circle"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Information</div>
+//                 <div class="toast__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="toast">
+//             <div class="toast__icon text-warning icon-warning"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Warning</div>
+//                 <div class="toast__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="toast">
+//             <div class="toast__icon text-danger icon-error"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Danger</div>
+//                 <div class="toast__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Components.Toast.Severity
+//
+
+
+//
+// Examples
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="toast">
+//             <div class="toast__icon text-success icon-check"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Upload Complete</div>
+//                 <div class="toast__message">Successfully uploaded file <span class="text-muted">cfg_449021_cat.pkg</span> 297kb</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="toast">
+//             <div class="toast__icon text-danger icon-error"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Operation Failed</div>
+//                 <div class="toast__message">Failed to add device <i>SJ-33998-Lab4-Rack1</i> to inventory. Maximum device limit reached. <br><br> Click <a href="http://www.cisco.com" target="_blank">here</a> for more details</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="toast">
+//             <div class="toast__body">
+//                 <div class="toast__title">No Icon</div>
+//                 <div class="toast__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="toast">
+//             <div class="toast__icon text-muted icon-alert"></div>
+//             <div class="toast__body">
+//                 <div class="toast__title">Long Message Truncated</div>
+//                 <div class="toast__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt purus mauris. Nam massa sem, ullamcorper vitae leo sit amet, elementum elementum magna. Maecenas lacinia sollicitudin turpis, eu pulvinar justo blandit id. Etiam nulla quam, viverra nec metus ...</div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Components.Toast.Examples
+//
+
+.toast {
+
+    @include panel();
+    @include panel-padding();
+
+    display: flex;
+    align-items: flex-start;
+    max-width: $toast-max-width;
+    border: $toast-border-width solid rgba(0, 0, 0, $toast-border-opacity);
+    box-shadow: $toast-box-shadow;
+
+    &__icon {
+        min-width: $base-spacing;
+        font-size: $toast-icon-size;
+        line-height: $toast-icon-size;
+    }
+
+    &__title {
+        font-weight: bold;
+    }
+
+    &--compressed {
+        @include panel-padding($base-panel-compressed-padding);
+    }
+
+    &--regular {
+        @include panel-padding($base-panel-regular-padding);
+    }
+
+    &--loose {
+        @include panel-padding($base-panel-loose-padding);
+    }
+}
+
+.toast + .toast {
+    margin-top: $base-panel-regular-padding;
+}
+
+.toast__icon + .toast__body {
+    margin-left: $base-panel-regular-padding;
+}

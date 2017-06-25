@@ -1,0 +1,234 @@
+//
+// Label updated
+//
+// Labels can be used for classification of content<br><br>
+// Since 1.0.0
+//
+// Styleguide Base.Label
+//
+
+
+//
+// Size
+//
+// Markup:
+// <span class="label label--tiny">tiny</span>
+// <span class="label label--small">small</span>
+// <span class="label">default</span>
+// <span class="label label--large">large</span>
+//
+// Weight: 1
+//
+// Styleguide Base.Label.Size
+//
+
+
+//
+// Color
+//
+// Markup:
+// <div class="panel panel--compressed panel--bordered">
+//     <span class="label label--info">info</span>
+//     <span class="label label--success">success</span>
+//     <span class="label label--warning">warning</span>
+//     <span class="label label--warning-alt">warning-alt</span>
+//     <span class="label label--danger">danger</span>
+//     <span class="label">default</span>
+//     <span class="label label--blue">blue</span>
+//     <span class="label label--mdgray">medium gray</span>
+//     <span class="label label--dkgray">dark gray</span>
+//     <span class="label label--dkblue">dark blue</span>
+// </div>
+// <div class="panel panel--dkgray panel--compressed base-margin-top">
+//     <span class="label label--ltgray">light gray</span>
+//     <span class="label label--white">white</span>
+//     <span class="label label--ghost">ghost</span>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Base.Label.Color
+//
+
+
+//
+// Raised
+//
+// Markup:
+// <span class="label label--info label--raised">
+//     <span>info</span>
+// </span>
+// <span class="label label--success label--raised">
+//     <span>success</span>
+// </span>
+// <span class="label label--warning label--raised">
+//     <span>warning</span>
+// </span>
+// <span class="label label--danger label--raised">
+//     <span>danger</span>
+// </span>
+//
+// Weight: 3
+//
+// Styleguide Base.Label.Raised
+//
+
+
+//
+// Removable
+//
+// Markup:
+// <span class="label label--info">
+//     <span>info</span>
+//     <span class="icon-close"></span>
+// </span>
+// <span class="label label--success">
+//     <span>success</span>
+//     <span class="icon-close"></span>
+// </span>
+// <span class="label label--warning">
+//     <span>warning</span>
+//     <span class="icon-close"></span>
+// </span>
+// <span class="label label--danger">
+//     <span>danger</span>
+//     <span class="icon-close"></span>
+// </span>
+//
+// Weight: 4
+//
+// Styleguide Base.Label.Removable
+//
+
+
+//
+// Bordered
+//
+// Markup:
+// <div class="panel panel--dkgray panel--compressed base-margin-top">
+//     <span class="label label--bordered">bordered</span>
+//     <span class="label label--blue label--bordered">bordered</span>
+//     <span class="label label--success label--bordered label--bordered-white">bordered (white)</span>
+//     <span class="label label--danger label--bordered label--bordered-white">bordered (white)</span>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Base.Label.Bordered
+//
+
+
+//
+// Circle
+//
+// Markup:
+// <div>
+//     <span class="label label--circle">1</span>
+//     <span class="label label--circle label--blue">2</span>
+//     <span class="label label--circle label--ltgray">3</span>
+//     <span class="label label--circle label--mdgray">4</span>
+//     <span class="label label--circle label--dkgray">5</span>
+//     <span class="label label--circle label--dkblue">6</span>
+//     <span class="label label--circle label--success">7</span>
+//     <span class="label label--circle label--warning">8</span>
+//     <span class="label label--circle label--danger">9</span>
+// </div>
+// <div>
+//     <span class="label label--circle label--small label--success">
+//         <span class="icon-check"></span>
+//     </span>
+//     <span class="label label--circle label--medium label--success">
+//         <span class="icon-check"></span>
+//     </span>
+//     <span class="label label--circle label--large label--success">
+//         <span class="icon-check"></span>
+//     </span>
+//     <span class="label label--circle label--xlarge label--success">
+//         <span class="icon-check"></span>
+//     </span>
+//     <span class="label label--circle label--huge label--success">
+//         <span class="icon-check"></span>
+//     </span>
+//     <span class="label label--circle label--goliath label--success">
+//         <span class="icon-check"></span>
+//     </span>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Base.Label.Circle
+//
+
+.label + .label {
+    margin-left: $base-spacing * 0.25;
+}
+
+.label {
+
+    display: inline-flex;
+    align-items: center;
+    border: 0 none;
+    border-radius: $base-label-border-radius;
+    -webkit-font-smoothing: auto;
+
+    @include label-size();
+    @include label-color();
+
+    @each $label-name, $label-color, $label-background, $label-border in $label-colors {
+        &--#{$label-name} {
+            @include label-color($background: $label-background, $color: $label-color, $border: $label-border);
+        }
+    }
+
+    @each $label-name, $label-size, $label-font-size, $label-padding in $label-sizes {
+        &--#{$label-name} {
+            @include label-size($height: $label-size, $font-size: $label-font-size, $padding: $label-padding);
+        }
+    }
+
+    &--circle {
+        overflow: hidden;
+        justify-content: center;
+        vertical-align: middle;
+        border-radius: 100%;
+        @include label-size($height: $base-label-height, $width: $base-label-height, $padding: 0);
+    }
+    @each $circle-label-name, $circle-label-size, $circle-label-font-size in $label-circles {
+        &--circle.label--#{$circle-label-name} {
+            @include label-size($height: $circle-label-size, $width: $circle-label-size, $font-size: $circle-label-font-size, $padding: 0);
+        }
+    }
+
+    &--bordered {
+        border: $base-label-border;
+
+        &-white {
+            border-color: $white;
+        }
+    }
+
+    &--raised {
+        box-shadow: $base-label-box-shadow;
+    }
+
+    .icon-close {
+        margin-left: $base-spacing * 0.25;
+        cursor: pointer;
+        opacity: 0.75;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.label-group {
+    .label + .label {
+        margin-left: 0;
+    }
+    .label {
+        margin-bottom: $base-spacing * 0.25;
+        margin-right: $base-spacing * 0.25;
+    }
+}

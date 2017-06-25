@@ -1,0 +1,515 @@
+//
+// Helpers
+//
+// Styleguide Utilities.Helpers
+//
+
+
+//
+// Readonly
+//
+// To readonly any element, you can add a `readonly` attribute or the class `.readonly`
+//
+// Markup:
+// <textarea rows="4" style="width:100%;resize:none" class="readonly">Readonly text area</textarea>
+//
+// Styleguide Utilities.Helpers.Readonly
+//
+
+.readonly {
+    @include readonly;
+}
+
+
+//
+// Disabled
+//
+// To disable any element, you can add a `disabled` attribute or the class `.disabled`
+//
+// Markup:
+// <button class="btn btn--small" disabled>Disabled via Attribute</button>
+// <button class="btn btn--small disabled">Disabled via Class</button>
+//
+// Styleguide Utilities.Helpers.Disabled
+//
+
+*[disabled],
+.disabled {
+    @include disabled;
+}
+
+
+//
+// Clearfix
+//
+// To apply a clearfix to a block element containing floated elements, you can add the class `.clearfix` on the element in the markup
+//
+// Styleguide Utilities.Helpers.Clearfix
+//
+
+.clearfix {
+    @include clearfix;
+}
+
+
+//
+// Absolute Center
+//
+// To horizontally and vertically center an element inside of another element, you can add the class `.absolute-center` on the element in the markup
+//
+// Markup:
+// <div class="panel panel--blue" style="height:200px;">
+//     <h1 class="absolute-center text-uppercase">centered</h1>
+// </div>
+//
+// Styleguide Utilities.Helpers.Absolute Center
+//
+
+.absolute-center {
+    @include absolute-center;
+}
+
+
+//
+// Float Left
+//
+// Use the class `pull-left` to float any element left
+//
+// Markup:
+// <div class="clearfix">
+//     <div class="pull-left">pull-left</div>
+// </div>
+//
+// Styleguide Utilities.Helpers.Float Left
+//
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-center {
+    float: center !important;
+}
+
+
+//
+// Float Right
+//
+// Use the class `pull-right` to float any element right
+//
+// Markup:
+// <div class="clearfix">
+//     <div class="pull-right">pull-right</div>
+// </div>
+//
+// Styleguide Utilities.Helpers.Float Right
+//
+
+.pull-right {
+    float: right !important;
+}
+
+
+// Flex Helpers
+
+.flex {
+    @include flex;
+}
+.flex-inline {
+    display: inline-flex;
+}
+.flex-center {
+    @include flex-center;
+}
+.flex-center-vertical {
+    @include flex-center-vertical;
+}
+.flex-center-horizontal {
+    @include flex-center-horizontal;
+}
+.flex-fluid {
+    @include flex-fluid;
+}
+.flex-fill {
+    flex: 1 0 auto;
+}
+.flex-inline-center-horizontal {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-inline-center-vertical {
+    display: inline-flex;
+    justify-content: center;
+}
+.flex-align-end {
+    align-items: flex-end !important;
+}
+.flex-align-start {
+    align-items: flex-start !important;
+}
+.flex--compressed > * {
+    flex-basis: $base-spacing-compressed;
+}
+.flex--regular > * {
+    flex-basis: $base-spacing-regular;
+}
+.flex--loose > * {
+    flex-basis: $base-spacing * 2;
+}
+.flex-right {
+    justify-content: flex-end;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+//
+// Text Helpers
+//
+// Markup:
+// <div class="text-left">text-left</div>
+// <div class="text-center">text-center</div>
+// <div class="text-right">text-right</div>
+// <div class="text-bold">text-bold</div>
+// <div class="text-muted">text-muted</div>
+// <div class="text-normal">text-normal</div>
+// <div class="text-ghost">text-ghost</div>
+// <div class="text-light">text-light</div>
+// <div class="text-muted">text-muted</div>
+// <div class="text-lowercase">text-lowercase</div>
+// <div class="text-uppercase">text-uppercase</div>
+// <div class="text-capitalize">text-capitalize</div>
+// <div class="text-tiny">text-tiny</div>
+// <div class="text-xsmall">text-xsmall</div>
+// <div class="text-small">text-small</div>
+// <div class="text-medium">text-medium</div>
+// <div class="text-large">text-large</div>
+// <div class="text-huge">text-huge</div>
+// <div class="text-italic">text-italic</div>
+// <div class="text-monospace">text-monospace</div>
+// <div style="width:200px" class="text-ellipsis">text-ellipsis This is an ellipsed string.</div>
+// <div class="text-noselect">text-noselect Try and select me</div>
+// <div class="text-break">text-break ThisIsReallyLongTextWithoutWhiteSpaceSoItWillOverrideContainersAndOtherSuchHtmlItemsBecauseOfNoLogicalBreakPointsBeingBuiltIn</div>
+//
+// Styleguide Utilities.Helpers.Text Helpers
+//
+
+.text-left {
+    text-align: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-bold {
+    font-weight: bold !important;
+}
+.text-muted {
+    color: $base-muted-color !important;
+}
+.text-normal {
+    font-weight: normal !important;
+}
+.text-light {
+    font-weight: 200 !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-justify {
+    text-align: justify !important;
+}
+.text-nowrap {
+    white-space: nowrap !important;
+}
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+.text-tiny {
+    font-size: $tiny-font-size !important;
+}
+.text-xsmall {
+    font-size: $xsmall-font-size !important;
+}
+.text-small {
+    font-size: $small-font-size !important;
+}
+.text-medium {
+    font-size: $medium-font-size !important;
+}
+.text-large {
+    font-size: $large-font-size !important;
+}
+.text-xlarge {
+    font-size: $xlarge-font-size !important;
+}
+.text-huge {
+    font-size: $huge-font-size !important;
+}
+.text-goliath {
+    font-size: $goliath-font-size !important;
+}
+.text-italic {
+    font-style: italic !important;
+}
+.text-ghost {
+    color: $white !important;
+}
+.text-transparent-qtr {
+    opacity: .25;
+}
+.monospace,
+.text-monospace {
+    @include text-monospace;
+}
+.text-ellipsis {
+    @include text-ellipsis;
+}
+.text-noellipsis {
+    @include text-noellipsis;
+}
+.text-noselect {
+    @include text-noselect;
+}
+.text-break {
+    @include text-break;
+}
+.text-marquee {
+    font-size: 2rem;
+
+    @include break-at(small) {
+        font-size: 2.5rem;
+    }
+    @include break-at(medium) {
+        font-size: 3rem;
+    }
+}
+
+
+
+//
+// Text Colors
+//
+// Markup:
+// <div class="text-primary">text-primary</div>
+// <div class="text-secondary">text-secondary</div>
+// <div class="text-default">text-default</div>
+// <div class="text-cta">text-cta</div>
+// <div class="text-info">text-info</div>
+// <div class="text-success">text-success</div>
+// <div class="text-danger">text-danger</div>
+// <div class="text-warning">text-warning</div>
+//
+// Styleguide Utilities.Helpers.Text Colors
+//
+
+.text-primary, .text--primary           { color: $primary !important; }
+.text-secondary, .text--secondary       { color: $secondary !important; }
+.text-default, .text--default           { color: $base-font-color !important; }
+.text-cta, .text--cta                   { color: $cisco-green !important; }
+.text-info, .text--info                 { color: $info !important; }
+.text-success, .text--success           { color: $success !important; }
+.text-danger, .text--danger             { color: $danger !important; }
+.text-warning, .text--warning           { color: $warning !important; }
+.text-warning-alt, .text--warning-alt   { color: $warning-alt !important; }
+.text-default-color                     { color: $dark-gray-2 !important; }
+.text-blue                              { color: $cisco-blue; }
+.text-dkgray-1                          { color: $dark-gray-1; }
+.text-dkgray-4                          { color: $dark-gray-4; }
+
+
+// Icon Helpers
+
+.icon-huge {
+    &:before {
+        line-height: 84px;
+        font-size: 84px;
+    }
+}
+.icon-large {
+    &:before {
+        line-height: 56px;
+        font-size: 56px;
+    }
+}
+.icon-medium-large {
+    &:before {
+        line-height: 36px;
+        font-size: 36px;
+    }
+}
+.icon-medium {
+    &:before {
+        line-height: 28px;
+        font-size: 28px;
+    }
+}
+.icon-medium-small {
+    &:before {
+        line-height: 24px;
+        font-size: 24px;
+    }
+}
+.icon-small {
+    &:before {
+        line-height: 18px;
+        font-size: 18px;
+    }
+}
+.icon-tiny {
+    &:before {
+        line-height: 10px;
+        font-size: 10px;
+    }
+}
+
+// Nudges
+
+.inline-qtr-spacing {
+    > *+* {
+        margin-left: $base-spacing * 0.25;
+    }
+}
+
+.qtr-margin-top      { margin-top: $base-spacing * 0.25 !important; }
+.qtr-margin-right    { margin-right: $base-spacing * 0.25 !important; }
+.qtr-margin-bottom   { margin-bottom: $base-spacing * 0.25 !important; }
+.qtr-margin-left     { margin-left: $base-spacing * 0.25 !important; }
+
+.half-margin-top     { margin-top: $base-spacing * 0.5 !important; }
+.half-margin-right   { margin-right: $base-spacing * 0.5 !important; }
+.half-margin-bottom  { margin-bottom: $base-spacing * 0.5 !important; }
+.half-margin-left    { margin-left: $base-spacing * 0.5 !important; }
+
+.base-margin-top     { margin-top: $base-spacing !important; }
+.base-margin-right   { margin-right: $base-spacing !important; }
+.base-margin-bottom  { margin-bottom: $base-spacing !important; }
+.base-margin-left    { margin-left: $base-spacing !important; }
+
+.dbl-margin-top      { margin-top: $base-spacing * 2 !important; }
+.dbl-margin-right    { margin-right: $base-spacing * 2 !important; }
+.dbl-margin-bottom   { margin-bottom: $base-spacing * 2 !important; }
+.dbl-margin-left     { margin-left: $base-spacing * 2 !important; }
+
+.qtr-padding-top     { padding-top: $base-spacing * 0.25 !important; }
+.qtr-padding-right   { padding-right: $base-spacing * 0.25 !important; }
+.qtr-padding-bottom  { padding-bottom: $base-spacing * 0.25 !important; }
+.qtr-padding-left    { padding-left: $base-spacing * 0.25 !important; }
+
+.half-padding-top    { padding-top: $base-spacing * 0.5 !important; }
+.half-padding-right  { padding-right: $base-spacing * 0.5 !important; }
+.half-padding-bottom { padding-bottom: $base-spacing * 0.5 !important; }
+.half-padding-left   { padding-left: $base-spacing * 0.5 !important; }
+
+.base-padding-top    { padding-top: $base-spacing !important; }
+.base-padding-right  { padding-right: $base-spacing !important; }
+.base-padding-bottom { padding-bottom: $base-spacing !important; }
+.base-padding-left   { padding-left: $base-spacing !important; }
+
+.dbl-padding-top     { padding-top: $base-spacing * 2 !important; }
+.dbl-padding-right   { padding-right: $base-spacing * 2 !important; }
+.dbl-padding-bottom  { padding-bottom: $base-spacing * 2 !important; }
+.dbl-padding-left    { padding-left: $base-spacing * 2 !important; }
+
+
+// Hide on iOS Devices
+.is-ios-device {
+    .hide-on-ios {
+        display: none !important;
+    }
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.v-separator {
+
+    border-right: 1px solid $base-border-color;
+    margin: ($base-spacing * 0.25) ($base-spacing * 0.50) ($base-spacing * 0.25) 0;
+    padding-left: $base-spacing * 0.5;
+    display: inline-flex;
+    vertical-align: middle;
+    height: $base-spacing * 0.75;
+
+    &--small { height: $base-spacing * 0.5; }
+    &--large { height: $base-spacing; }
+    &--huge  { height: $base-spacing * 2; }
+}
+
+// Add percentage of white to a color
+@function tint($color, $percent){
+    @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent){
+    @return mix(black, $color, $percent);
+}
+
+// Rotate element 180 degrees
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.user-entered-data {
+    white-space: pre-line;
+}
+
+.small {
+    font-size: $small-font-size;
+}
+
+@media (max-width: 767px) {
+    .center-xs {
+        text-align: center !important;
+    }
+    .pull-right-xs {
+        float: right !important;
+    }
+    .pull-left-xs {
+        float: left !important;
+    }
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+// Add disabled mouse / touch pointer
+.disable-pointer {
+    pointer-events: none;
+}

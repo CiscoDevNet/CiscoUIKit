@@ -1,0 +1,37 @@
+.styleguide {
+
+    .content .sidebar {
+        position: relative;
+        transform: none;
+        overflow: hidden;
+    }
+
+    .panel.depth-3 {
+        border-top: $base-border;
+    }
+
+    pre {
+        margin: 0;
+        line-height: 1.1;
+        overflow: auto;
+        white-space: pre;
+
+        code {
+            border: 0px;
+            padding: 0px;
+            margin: 0px;
+            border-radius: 0px;
+            font-size: $small-font-size;
+        }
+
+        .comment {
+            color: $black;
+        }
+    }
+
+    pre, code {
+        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        color: $black;
+        padding: $base-spacing * 0.25;
+    }
+}

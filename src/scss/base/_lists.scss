@@ -1,0 +1,199 @@
+//
+// List
+//
+// Lists are a fundamental collection pattern that can be used as a container for other components<br><br>
+// Since: 1.0.0
+//
+// Styleguide Base.List
+//
+
+
+//
+// Spacing / Vertical
+//
+// <blockquote>Spacing between elements in a list can be specified using the modifiers shown below. This is useful when you need to manage spacing (margins) between your components</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <p>Spacing (default)</p>
+//         <ul class="list">
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//         </ul>
+//     </div>
+//     <div class="col-md-3">
+//         <p>Compressed</p>
+//         <ul class="list list--compressed">
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//         </ul>
+//     </div>
+//     <div class="col-md-3">
+//         <p>Regular</p>
+//         <ul class="list list--regular">
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//         </ul>
+//     </div>
+//     <div class="col-md-3">
+//         <p>Loose</p>
+//         <ul class="list list--loose">
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//             <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//         </ul>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Base.List.SpacingVertical
+//
+
+
+//
+// Spacing / Horizontal
+//
+// <blockquote>By default, lists are vertically-stacked. Add the class modifier `list--inline` to render list elements as an inline list</blockquote>
+//
+// Markup:
+// <p>Spacing (default)</p>
+// <ul class="list list--inline">
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+// </ul>
+// <br>
+// <p>Compressed</p>
+// <ul class="list list--inline list--compressed">
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+// </ul>
+// <br>
+// <p>Regular</p>
+// <ul class="list list--inline list--regular">
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+// </ul>
+// <br>
+// <p>Loose</p>
+// <ul class="list list--inline list--loose">
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+//     <li><div class="panel panel--bordered"><img src="public/img/short-paragraph.png"></div></li>
+// </ul>
+//
+// Weight: 2
+//
+// Styleguide Base.List.SpacingHorizontal
+//
+
+
+//
+// Highlighting
+//
+// <blockquote>Add the class modifier `list--highlight` to add a hover effect to each element in the list</blockquote>
+//
+// Markup:
+// <ul class="list list--highlight">
+//     <li><div class="panel panel--bordered"><h5>One</h5></div></li>
+//     <li><div class="panel panel--bordered"><h5>Two</h5></div></li>
+//     <li><div class="panel panel--bordered"><h5>Three</h5></div></li>
+// </ul>
+//
+// Weight: 3
+//
+// Styleguide Base.List.Highlighting
+//
+
+ul.list {
+	list-style: none;
+    padding: 0;
+	margin: 0;
+
+	li {
+		display: block;
+	}
+
+	li + li {
+		margin: -1px 0 0 0; // Elements in list are joined by default
+	}
+
+	&--inline {
+		@include break-at(small) {
+			display: inline-flex;
+			flex-wrap: wrap;
+
+			li + li {
+				margin: 0 0 0 -1px;
+			}
+
+			&.list--divider {
+				li + li:before {
+					@include vertical-divider;
+				}
+			}
+
+			&.list--compressed {
+				li + li {
+					margin: 0 0 0 $base-spacing-compressed;
+				}
+			}
+
+			&.list--regular {
+				li + li {
+					margin: 0 0 0 $base-spacing-regular;
+				}
+			}
+
+			&.list--loose {
+				li + li {
+					margin: 0 0 0 $base-spacing-loose;
+				}
+			}
+		}
+	}
+
+	&--highlight {
+		> li:hover > * {
+			cursor: pointer;
+			background-color: $base-hover-color;
+		}
+	}
+
+	&--aligntop {
+		li {
+			:first-child {
+				align-items: flex-start;
+			}
+		}
+	}
+
+	&--fillbg {
+		background-color: $white;
+	}
+
+    &--compressed {
+    	li + li {
+    		margin-top: $base-spacing-compressed;
+    	}
+    }
+
+    &--regular {
+    	li + li {
+    		margin-top: $base-spacing-regular;
+    	}
+    }
+
+    &--loose {
+    	li + li {
+    		margin-top: $base-spacing-loose;
+    	}
+    }
+}

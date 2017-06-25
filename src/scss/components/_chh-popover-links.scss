@@ -1,0 +1,37 @@
+//
+// CHH Link
+//
+// **Note**: This component requires Angular UI (https://angular-ui.github.io/bootstrap/#/tooltip)
+//
+// Markup:
+//  <span
+//      class="chh-link--info popover-toggle enabled"
+//      data-trigger="manual"
+//      data-toggle="popover"
+//      data-popover-type="CHH"
+//      data-original-title="Popover title content"
+//      data-content="Popover content"
+//      data-container="body">Link content</span>
+//
+
+@mixin chh-link($color) {
+    color: $color;
+
+    &:hover {
+        color: shade($color, 10%);
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.chh-link--danger.chh-link--enabled {
+    @include chh-link($danger);
+}
+
+.chh-link--info.chh-link--enabled {
+    @include chh-link($info);
+}
+
+.chh-link--warning.chh-link--enabled {
+    @include chh-link($warning);
+}

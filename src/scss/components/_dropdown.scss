@@ -1,0 +1,224 @@
+//
+// Angular Components
+//
+// For some components which require more than just markup and styling we have wrapped them into Angular directives.
+//
+//
+
+//
+// Angular Drawers
+//
+// **Note**: This component requires the Apollo Drawers module <br><br>
+//
+// Attribute Options: <br>
+//     `allow-mult-expanded` Specify true to allow multiple open drawers. Default is false <br><br>
+//
+// Markup:
+// <ap-drawers allow-mult-expanded="true">
+//     <ap-drawer-header>
+//         <ap-drawer-label>
+//             <h3>Drawers Title</h3>
+//         </ap-drawer-label>
+//     </ap-drawer-header>
+//     <ap-drawer>
+//         <ap-drawer-label>
+//             <div>Drawer #1</div>
+//         </ap-drawer-label>
+//         <ap-drawer-content>
+//             <figure class="figure figure--horizontal figure--highlight">
+//                 <figcaption>
+//                     <strong>Drawer #1 Figure Caption</strong>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</p>
+//                 </figcaption>
+//                 <img src="public/img/article-photo-1.jpg">
+//             </figure>
+//         </ap-drawer-content>
+//     </ap-drawer>
+//     <ap-drawer>
+//         <ap-drawer-label>
+//             <div>Drawer #2</div>
+//         </ap-drawer-label>
+//         <ap-drawer-content>
+//             <figure class="figure figure--horizontal figure--highlight">
+//                 <figcaption>
+//                     <strong>Drawer #2 Figure Caption</strong>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</p>
+//                 </figcaption>
+//                 <img src="public/img/article-photo-2.jpg">
+//             </figure>
+//         </ap-drawer-content>
+//     </ap-drawer>
+//     <ap-drawer>
+//         <ap-drawer-label>
+//             <div>Drawer #3</div>
+//         </ap-drawer-label>
+//         <ap-drawer-content>
+//             <figure class="figure figure--horizontal figure--highlight">
+//                 <figcaption>
+//                     <strong>Drawer #3 Figure Caption</strong>
+//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</p>
+//                 </figcaption>
+//                 <img src="public/img/article-photo-3.jpg">
+//             </figure>
+//         </ap-drawer-content>
+//     </ap-drawer>
+// </ap-drawers>
+//
+//
+
+//
+// Angular Dropdowns
+//
+// **Note**: This component requires the Angular UI Dropdown module (https://angular-ui.github.io/bootstrap/#/dropdown)
+//
+// Markup:
+// <div class="dropdown" dropdown>
+//     <a dropdown-toggle class="dropdown-toggle button button--primary">Dropdown Toggle</a>
+//     <div class="dropdown-container">
+//         <ul class="dropdown-nav">
+//             <li><a>Action 1</a></li>
+//             <li><a>Action 2</a></li>
+//             <li><a>Action 3</a></li>
+//         </ul>
+//     </div>
+// </div>
+//
+//
+
+.dropdown {
+    position: relative;
+    user-select: none;
+}
+
+.dropdown--right {
+    .dropdown-container {
+        right: 0px;
+        left: auto;
+    }
+
+    .dropdown-nav {
+        &:before {
+            right: 5px;
+            left: auto;
+        }
+    }
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+
+    &--simple {
+        &:after {
+            display: none;
+        }
+    }
+
+    &:after {
+        @include icon-chevron-down;
+        margin-left: $base-spacing * 0.125;
+        font-size: 100%;
+    }
+
+    &.btn {
+        min-width: unset; // Fixes extra wide bulk select dropdown issue in Safari
+    }
+}
+
+.dropdown-container {
+    position: absolute;
+    width: 180px;
+    left: 0px;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 1;
+    pointer-events: none;
+    transform: translateY(-5px);
+    transition: transform 0.1s cubic-bezier(.25,1.25,.75,1.25);
+    opacity: 0;
+    z-index: 10;
+
+    .open & {
+        pointer-events: all;
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: $white;
+        border-top: 4px solid $base-accent-color;
+        margin-top: $base-spacing * 0.25;
+        padding-top: 0;
+    }
+}
+
+.dropdown-nav,
+.dropdown-menu {
+    @include clearfix;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: $white;
+    border-radius: 2px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+
+    // Add divider to dropdown nav
+    > .dropdown-nav-divider {
+        border-bottom: $base-border;
+    }
+
+    >li {
+        display: block;
+
+        &:first-child {
+            > a {
+                border-top-right-radius: 2px;
+                border-top-left-radius: 2px;
+            }
+        }
+
+        &:last-child {
+            > a {
+                border-bottom: 0;
+                border-bottom-right-radius: 2px;
+                border-bottom-left-radius: 2px;
+            }
+        }
+    }
+
+    a {
+        @include text-ellipsis;
+        color: shade(#f5f5f5, 50);
+        display: block;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 10px;
+        text-shadow: none;
+    }
+
+    li.active a,
+    a:hover {
+        background: shade(#f5f5f5, 3);
+        color: shade(#f5f5f5, 60);
+        text-decoration: none;
+    }
+
+    label {
+        display: block;
+        margin: 0;
+        padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+        color: #ccc;
+        border-top: $base-border;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.dropdown-scroll {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.dropdown-search {
+    width: 160px;
+    margin: 10px;
+}

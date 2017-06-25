@@ -1,0 +1,77 @@
+//
+// Rating
+//
+// Since: 1.0.0
+//
+// Styleguide Components.Rating
+//
+
+
+//
+// Example
+//
+// <blockquote>Add the class `active` to each `rating__star` that applies to the user's selection (e.g. 1-4 if the user clicks the fourth star). <br>Note that is important that the `rating__star` elements are in reverse order in the markup, due to way they are styled in the CSS</blockquote>
+//
+// Markup:
+// <div class="rating">
+//     <div class="rating__stars">
+//         <div class="rating__star" title="5 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="4 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="3 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="2 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="1 Star">
+//             <span class="icon-star"></span>
+//         </div>
+//     </div>
+// </div>
+//
+// Styleguide Components.Rating.Example
+//
+
+.rating {
+  @include clearfix;
+  margin: 0 auto 10px auto;
+  font-size: 0;
+  text-align: center;
+
+  &.rated {
+    pointer-events: none;
+  }
+}
+
+.rating__stars {
+  display: inline-block;
+}
+
+.rating__star {
+  float: right;
+  margin-right: 30px;
+  color: $base-disabled-color;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  transition: color 0.2s ease;
+
+  &:first-child {
+    margin-right: 0;
+  }
+
+  &.active,
+  &:hover,
+  &:hover ~ .rating__star, {
+    color: $base-accent-color;
+    text-decoration: none;
+  }
+
+  &.active {
+    animation: bounce 1s linear;
+  }
+}

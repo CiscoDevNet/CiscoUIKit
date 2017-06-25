@@ -1,0 +1,337 @@
+//
+// Switch
+//
+// A simple binary toggle<br><br>
+// Since: 1.0.0
+//
+// Styleguide Base.Switch
+//
+
+
+//
+// States
+//
+// Markup:
+// <form>
+//     <label class="switch">
+//         <input type="checkbox" checked name="switch1">
+//         <span class="switch__input"></span>
+//         <span class="switch__label">On</span>
+//     </label>
+//     <label class="switch">
+//         <input type="checkbox" name="switch2">
+//         <span class="switch__input"></span>
+//         <span class="switch__label">Off</span>
+//     </label>
+//     <label class="switch disabled">
+//         <input type="checkbox" checked name="switch3">
+//         <span class="switch__input"></span>
+//         <span class="switch__label">Disabled On</span>
+//     </label>
+//     <label class="switch" disabled>
+//         <input type="checkbox" name="switch4">
+//         <span class="switch__input"></span>
+//         <span class="switch__label">Disabled Off</span>
+//     </label>
+// </form>
+//
+// Weight: 1
+//
+// Styleguide Base.Switch.States
+//
+
+
+//
+// Size
+//
+// Markup:
+// <form>
+//     <label class="switch switch--small">
+//         <input type="checkbox" checked name="switch5">
+//         <span class="switch__label">Small</span>
+//         <span class="switch__input"></span>
+//     </label>
+//     <label class="switch">
+//         <input type="checkbox" checked name="switch6">
+//         <span class="switch__input"></span>
+//         <span class="switch__label">Default</span>
+//     </label>
+// </form>
+//
+// Weight: 2
+//
+// Styleguide Base.Switch.Size
+//
+
+
+//
+// Labels
+//
+// <blockquote>Labels can be left or right of the switch</blockquote>
+//
+// Markup:
+// <form>
+//     <label class="switch">
+//         <input type="checkbox" checked name="switch5">
+//         <span class="switch__label">Left</span>
+//         <span class="switch__input"></span>
+//     </label>
+//     <label class="switch">
+//         <input type="checkbox" checked name="switch6">
+//         <span class="switch__input"></span>
+//         <span class="switch__label">Right</span>
+//     </label>
+// </form>
+//
+// Weight: 3
+//
+// Styleguide Base.Switch.Labels
+//
+
+
+//
+// Icons
+//
+// <blockquote>Switches can contain icons</blockquote>
+//
+// Markup:
+// <form>
+//     <label class="switch-icon">
+//         <input type="checkbox" name="switchicon1">
+//         <span class="switch__input">
+//             <span class="icon-grid-view"></span>
+//             <span class="icon-list-view"></span>
+//         </span>
+//     </label>
+//     <label class="switch-icon">
+//         <input type="checkbox" checked name="switchicon2">
+//         <span class="switch__input">
+//             <span class="icon-clock"></span>
+//             <span class="icon-star"></span>
+//         </span>
+//     </label>
+//     <label class="switch-icon">
+//         <input type="checkbox" checked name="switchicon3">
+//         <span class="switch__label">Time</span>
+//         <span class="switch__input">
+//             <span class="icon-clock"></span>
+//             <span class="icon-star"></span>
+//         </span>
+//         <span class="switch__label">Favorites</span>
+//     </label>
+// </form>
+//
+// Weight: 4
+//
+// Styleguide Base.Switch.Icons
+//
+
+
+//
+// Form Group
+//
+// <blockquote>Wrap your switch elements in a `form-group` to align with other form elements</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <form>
+//             <div class="form-group">
+//                 <label class="switch">
+//                     <input type="checkbox" checked name="switch7">
+//                     <span class="switch__input"></span>
+//                     <span class="switch__label">Lorem</span>
+//                 </label>
+//             </div>
+//             <div class="form-group">
+//                 <label class="switch">
+//                     <input type="checkbox" checked name="switch8">
+//                     <span class="switch__input"></span>
+//                     <span class="switch__label">Ipsum</span>
+//                 </label>
+//             </div>
+//             <div class="form-group">
+//                 <label class="switch">
+//                     <input type="checkbox" name="switch9">
+//                     <span class="switch__input"></span>
+//                     <span class="switch__label">Dolor</span>
+//                 </label>
+//             </div>
+//         </form>
+//     </div>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Base.Switch.Form Group
+//
+
+.switch + .switch,
+.switch-icon + .switch-icon {
+    margin-top: $base-spacing;
+}
+
+.form-group {
+    .switch + .switch,
+    .switch-icon + .switch-icon {
+        margin-top: 0;
+    }
+}
+
+
+.switch.disabled input,
+.switch[disabled] input {
+    display: none;
+}
+
+.switch-icon,
+.switch--icon, // For backwards compatibility
+.switch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .switch__input {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $base-switch-size;
+        height: $base-switch-size;
+        background: $base-switch-background-inactive;
+        border-radius: $base-switch-border-radius;
+
+        &:after {
+            display: block;
+            position: absolute;
+            width: $base-switch-size;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: $base-switch-border-radius;
+            content: '';
+            cursor: pointer;
+        }
+    }
+
+    .switch__label + .switch__input,
+    .switch__input + .switch__label {
+        margin-left: $base-spacing * 0.5;
+    }
+
+    input {
+        @include hidden-input;
+        ~ .switch__input {
+            width: $base-switch-size * 2;
+            transition: background 0.4s ease-out;
+            box-shadow: inset 0 0 1px rgba(0,0,0,0.1);
+
+            &:after {
+                background: $base-switch-knob-background-inactive;
+                transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1.2);
+                box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            }
+
+            span[class^="icon-"] {
+                z-index: 1;
+                flex: 1;
+                text-align: center;
+                font-size: $base-switch-icon-size;
+                color: $base-switch-icon-color-active;
+            }
+
+            span[class^="icon-"]:first-of-type {
+                color: $base-switch-icon-color-active;
+            }
+
+            span[class^="icon-"]:last-of-type {
+                color: $base-switch-icon-color-inactive;
+                &:hover {
+                    color: $base-switch-icon-color-hover;
+                }
+            }
+        }
+
+        &:focus {
+            ~ .switch__input {
+                outline: $base-outline;
+                outline-offset: 2px;
+            }
+        }
+
+        &:checked {
+            ~ .switch__label {
+                color: $base-switch-label-color-active;
+            }
+
+            ~ .switch__input {
+                background: $base-switch-background-active;
+                box-shadow: inset 0 0 1px rgba(0,0,0,0.1);
+
+                &:after {
+                    background: $base-switch-knob-background-active;
+                    border: 1px solid $base-accent-color;
+                    transform: translateX(100%);
+                    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+                }
+
+                span[class^="icon-"]:first-of-type {
+                    color: $base-switch-icon-color-inactive;
+                    &:hover {
+                        color: $base-switch-icon-color-hover;
+                    }
+                }
+
+                span[class^="icon-"]:last-of-type {
+                    color: $base-switch-icon-color-active;
+                }
+            }
+        }
+    }
+
+    &--small {
+        .switch__input {
+            height: $base-switch-size-small;
+            &:after {
+                width: $base-switch-size-small;
+            }
+        }
+
+        input {
+            ~ .switch__input {
+                width: $base-switch-size-small * 2;
+            }
+        }
+    }
+}
+
+.switch--icon, // For backwards compatibility
+.switch-icon {
+    input {
+        ~ .switch__label:first-of-type {
+            color: $base-switch-label-color-active;
+        }
+
+        ~ .switch__label:last-of-type {
+            color: $base-switch-label-color-inactive;
+        }
+
+        ~ .switch__input {
+            background: $base-switch-background-active;
+            &:after {
+                background: $base-switch-knob-background-active;
+                border: 1px solid $base-switch-background-active;
+            }
+        }
+
+        &:checked {
+            ~ .switch__label:first-of-type {
+                color: $base-switch-label-color-inactive;
+            }
+
+            ~ .switch__label:last-of-type {
+                color: $base-switch-label-color-active;
+            }
+        }
+    }
+}

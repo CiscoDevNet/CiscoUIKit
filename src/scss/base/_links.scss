@@ -1,0 +1,88 @@
+//
+// Link
+//
+// Since 1.0.0
+//
+// Styleguide Base.Link
+//
+
+
+//
+// Color
+//
+// Markup:
+// <div><a>Default</a></div>
+// <div><a class="link">Muted</a></div>
+// <div><a class="link link--ghost">Ghost</a></div>
+//
+// Weight: 1
+//
+// Styleguide Base.Link.Color
+//
+
+
+//
+// Inline
+//
+// Markup:
+// <ul class="list list--inline list--divider">
+//     <li><a class="link" href="#">Contacts</a></li>
+//     <li><a class="link" href="#">Feedback</a></li>
+//     <li><a class="link" href="#">Site Map</a></li>
+//     <li><a class="link" href="#">Terms & Conditions</a></li>
+//     <li><a class="link" href="#">Privacy Statement</a></li>
+//     <li><a class="link" href="#">Cookie Policy</a></li>
+//     <li><a class="link" href="#">Trademarks</a></li>
+// </ul>
+//
+// Weight: 2
+//
+// Styleguide Base.Link.Inline
+//
+
+
+//
+// Icons
+//
+// Markup:
+// <ul class="list list--inline list--loose">
+//     <li><a class="link"><span class="icon-tools"></span></a>
+//     <li><a class="link"><span class="icon-bell"></span></a>
+//     <li><a class="link"><span class="icon-bookmark"></span></a>
+//     <li><a class="link"><span class="icon-cog"></span></a>
+//     <li><a class="link"><span class="icon-refresh"></span></a>
+// </ul>
+//
+// Weight: 3
+//
+// Styleguide Base.Link.Icons
+//
+
+a,
+.link {
+    @extend %link;
+    color: $base-link-color;
+    background: transparent;
+    text-decoration: none;
+    border-radius: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $hover-link-color;
+        text-decoration: none;
+    }
+    &.link--ghost {
+        color: $white;
+        opacity: 0.75;
+    }
+    &.link--ghost {
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.link {
+    color: $base-muted-color;
+}

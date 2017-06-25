@@ -1,0 +1,745 @@
+//
+// Table
+//
+// Since: 1.0.0
+//
+// Styleguide Base.Table
+//
+
+
+//
+// Borders
+//
+// <blockquote>Add the class `table--bordered` to add borders to your cells, rows and table</blockquote>
+//
+// Markup:
+// <div class="responsive-table">
+//     <p>No Borders (default)</p>
+//     <table class="table">
+//         <thead>
+//             <tr>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 2, Column 1</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+// <div class="responsive-table">
+//     <p>With Borders</p>
+//     <table class="table table--bordered">
+//         <thead>
+//             <tr>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 2, Column 1</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Base.Table.Borders
+//
+
+
+//
+// Striping
+//
+// <blockquote>By default all rows are striped for better visibility. Add the class `table--nostripes` to remove row striping</blockquote>
+//
+// Markup:
+// <div class="responsive-table">
+//     <p>With Striping (default)</p>
+//     <table class="table table--bordered">
+//         <thead>
+//             <tr>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 2, Column 1</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+// <div class="responsive-table">
+//     <p>No Striping</p>
+//     <table class="table table--bordered table--nostripes">
+//         <thead>
+//             <tr>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 2, Column 1</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Base.Table.Striping
+//
+
+
+//
+// Selection
+//
+// <blockquote>Add the class `active` to a row to indicate selected state</blockquote>
+//
+// Markup:
+// <div class="responsive-table">
+//     <table class="table table--bordered">
+//         <thead>
+//             <tr>
+//                 <th>
+//                     <label class="checkbox">
+//                         <input type="checkbox"/>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </th>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>
+//                     <label class="checkbox">
+//                         <input type="checkbox"/>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </td>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr class="active">
+//                 <td>
+//                     <label class="checkbox">
+//                         <input type="checkbox" checked>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </td>
+//                 <td>ACTIVE</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>
+//                     <label class="checkbox">
+//                         <input type="checkbox"/>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </td>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Base.Table.Selection
+//
+
+
+//
+// Highlighting
+//
+// <blockquote>Add the class `table--highlight` to add a row hover effect. You can also add the class `sortable` to a column header to indicate active sort</blockquote>
+//
+// Markup:
+// <div class="responsive-table">
+//     <table class="table table--bordered table--highlight">
+//         <thead>
+//             <tr>
+//                 <th>
+//                     <label class="checkbox">
+//                         <input type="checkbox"/>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </th>
+//                 <th class="sortable">Header 1 <span class="sort-indicator icon-chevron-down"></span></th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>
+//                     <label class="checkbox">
+//                         <input type="checkbox"/>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </td>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr class="active">
+//                 <td>
+//                     <label class="checkbox">
+//                         <input type="checkbox" checked>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </td>
+//                 <td>ACTIVE</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>
+//                     <label class="checkbox">
+//                         <input type="checkbox"/>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </td>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Base.Table.Highlighting
+//
+
+
+//
+// Hover
+//
+// <blockquote>Add the class `table--hover` to add a simple row hover effect.</blockquote>
+//
+// Markup:
+// <div class="responsive-table">
+//     <table class="table table--bordered table--hover">
+//         <thead>
+//             <tr>
+//                 <th>
+//                     <label class="checkbox">
+//                         <input type="checkbox"/>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </th>
+//                 <th class="sortable">Header 1 <span class="sort-indicator icon-chevron-down"></span></th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>
+//                     <label class="checkbox">
+//                         <input type="checkbox"/>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </td>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr class="active">
+//                 <td>
+//                     <label class="checkbox">
+//                         <input type="checkbox" checked>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </td>
+//                 <td>ACTIVE</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>
+//                     <label class="checkbox">
+//                         <input type="checkbox"/>
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                 </td>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Base.Table.Hover
+//
+
+
+//
+// Wrapped Text
+//
+// <blockquote>Add the class `table--wrap` to wrap text in the cells. By default, text is not wrapped</blockquote>
+//
+// Markup:
+// <div class="responsive-table">
+//     <table class="table table--bordered table--wrap">
+//         <thead>
+//             <tr>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis. Curabitur sagittis velit at elit efficitur, nec facilisis augue vehicula. Nulla semper est at tincidunt blandit</td>
+//             </tr>
+//             <tr>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis. Curabitur sagittis velit at elit efficitur, nec facilisis augue vehicula. Nulla semper est at tincidunt blandit</td>
+//             </tr>
+//             <tr>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis. Curabitur sagittis velit at elit efficitur, nec facilisis augue vehicula. Nulla semper est at tincidunt blandit</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Base.Table.Wrap
+//
+
+
+//
+// Padding
+//
+// Markup:
+// <div class="responsive-table">
+//     <p>Compressed</p>
+//     <table class="table table--bordered table--compressed">
+//         <thead>
+//             <tr>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 2, Column 1</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+// <div class="responsive-table">
+//     <p>Regular (default)</p>
+//     <table class="table table--bordered">
+//         <thead>
+//             <tr>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 2, Column 1</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+// <div class="responsive-table">
+//     <p>Loose</p>
+//     <table class="table table--bordered table--loose">
+//         <thead>
+//             <tr>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Row 1, Column 1</td>
+//                 <td>Row 1, Column 2</td>
+//                 <td>Row 1, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 2, Column 1</td>
+//                 <td>Row 2, Column 2</td>
+//                 <td>Row 2, Column 3</td>
+//             </tr>
+//             <tr>
+//                 <td>Row 3, Column 1</td>
+//                 <td>Row 3, Column 2</td>
+//                 <td>Row 3, Column 3</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 7
+//
+// Styleguide Base.Table.Padding
+//
+
+@mixin col-spotlight(
+	$column,
+	$color: $base-accent-color,
+	$opacity: .15,
+	$border-width: 1px,
+	$border-radius: 1px)
+{
+
+  > thead > tr > th:nth-child(#{$column}),
+  > tbody > tr > td:nth-child(#{$column}) {
+    background: rgba($color, $opacity);
+    border-left: $border-width solid $color;
+    border-right: $border-width solid $color;
+  }
+
+  > thead > tr > th:nth-child(#{$column}) {
+    border-top: $border-width solid $color;
+  }
+
+  > tbody > tr:last-child > td:nth-child(#{$column}) {
+    border-bottom: $border-width solid $color;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  > thead > tr:first-child > th:nth-child(#{$column}) {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+}
+
+@mixin row-cell-spotlight(
+	$color: $base-accent-color,
+	$opacity: .15,
+	$border-width: 1px,
+	$border-radius: 1px)
+{
+	background: rgba($color, $opacity);
+	border-left: $border-width solid $color;
+	border-right: $border-width solid $color;
+}
+
+@mixin row-active {
+	border-left: $base-table-active-row-border-width solid $base-table-active-row-border-color;
+}
+
+.responsive-table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.table {
+	font-feature-settings: "kern", "liga", "tnum";
+  	width: 100%;
+
+	> tbody > tr:nth-child(odd) {
+		background-color: $base-table-striping-odd-background-color;
+	}
+
+	> tbody > tr:nth-child(even) {
+		background-color: $base-table-striping-even-background-color;
+	}
+
+	> tbody > tr.active td:first-child {
+		@include row-active;
+	}
+
+	// Table wells
+	> tbody > tr.well td {
+	    padding: 0;
+	    border-top: 0 none;
+	}
+	> tbody > tr.well td:first-child {
+	    border-left: 0 none;
+	}
+
+	th {
+		position: relative;
+		text-align: left;
+		&:after {
+			position: absolute;
+			display: block;
+			content: '';
+			width: 1px;
+			height: 50%;
+			right: 0;
+			top: 50%;
+			background: $base-border-color;
+			transform: translateY(-50%);
+    	}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	tr, td, th {
+		@include text-ellipsis;
+		padding: $base-table-cell-padding;
+		vertical-align: middle;
+
+		&:first-child {
+			width: 1px; // Auto size first column
+		}
+	}
+
+	tr td:first-child,
+	tr th:first-child {
+		border-left: $base-table-active-row-border-width solid transparent;
+
+		label.checkbox {
+			margin: 0;
+		}
+	}
+
+	&--bordered {
+		border: $base-table-border;
+		th {
+			border-right: $base-table-header-separator;
+			&:after {
+				visibility: hidden;
+			}
+			&:last-child {
+				border-right: 0 none;
+			}
+		}
+		td {
+			border-top: $base-table-border;
+			border-right: $base-table-border;
+
+  			&:last-child {
+  				border-right: 0 none;
+  			}
+  		}
+	}
+
+	&--wrap {
+		tr, td, th {
+			white-space: normal;
+		}
+		td {
+			vertical-align: top;
+		}
+	}
+
+	&--nowrap--col--1 {
+		td:nth-child(1),th:nth-child(1) {
+			white-space: nowrap;
+		}
+	}
+
+	&--nostripes {
+		> tbody > tr:nth-child(odd),
+		> tbody > tr:nth-child(even) {
+			background: transparent;
+		}
+	}
+
+	&--compressed {
+		th {
+			&:after {
+				display: none;
+			}
+		}
+
+		tr, td, th {
+			padding: $base-table-compressed-padding;
+			font-size: $base-table-compressed-font-size;
+		}
+	}
+
+	&--loose {
+		th {
+			&:after {
+				display: none;
+			}
+		}
+
+		tr, td, th {
+			padding: $base-table-loose-padding;
+			font-size: $base-table-loose-font-size;
+		}
+	}
+
+	&--highlight {
+		> tbody > tr:hover {
+			cursor: pointer;
+		}
+		> tbody > tr:hover td:first-child {
+			@include row-active;
+		}
+	}
+
+	&--nohighlight {
+		> tbody > tr:hover td:first-child {
+			border-left-color: transparent;
+		}
+	}
+
+	&--hover {
+		> tbody > tr:hover {
+			background-color: $base-hover-color;
+		}
+	}
+
+	@each $label, $color in $base-colors {
+		> tbody > tr.#{$label},
+		> tbody > tr > td.#{$label},th.#{$label} {
+			@include row-cell-spotlight($color: $color);
+		}
+	}
+
+	@for $idx from 1 through 4 {
+		&--spotlight-#{$idx} {
+			@include col-spotlight($column: $idx);
+		}
+		@each $label, $color in $base-colors {
+			&--spotlight-#{$idx}.table--spotlight-#{$idx}-#{$label} {
+				@include col-spotlight($column: $idx, $color: $color);
+			}
+		}
+	}
+}
+
+.sortable {
+	cursor: pointer;
+	&:hover, &.sorted {
+		color: $base-accent-color;
+	}
+}
+
+.sort-indicator {
+	margin-left: $base-spacing * 0.25;
+	font-size: $small-font-size;
+	vertical-align: middle;
+}
+
+
+.fixed-header {
+	position: relative;
+	width: 100%;
+	padding: 36px 0 0;
+
+	.responsive-table {
+		width: 100%;
+
+		thead {
+			tr {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+//
+// Menus
+//
+
+.menu {
+  line-height: 1; 
+}
+
+.menu-item {
+  background: $white;
+  border-bottom: $base-border;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.menu-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $base-spacing * 0.5;
+
+  &--toggle {
+    cursor: pointer;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+}
+
+.menu-item__toggle {
+  padding: $base-spacing * 0.25;
+}
+
+.menu-item__title {
+  @include text-ellipsis;
+}
+
+.menu-item__subtitle {
+  @include text-ellipsis;
+}
+
+.menu-item__body {
+  padding: $base-spacing * 0.5;
+  background: $light-gray-5;
+  border-top: $base-border;
+}
+
+// Second Level Menu Styles
+.menu .menu {
+  margin: -($base-spacing * 0.5);
+
+  .menu-item {
+    margin: 0;
+    border-bottom: $base-border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .menu-item__header,
+  .menu-item__body {
+    padding-left: $base-spacing * 2;
+  }
+}

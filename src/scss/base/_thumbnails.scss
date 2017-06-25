@@ -1,0 +1,139 @@
+//
+// Thumbnail
+//
+// Convert any image into a thumbnail<br><br>
+// Since 1.0.0
+//
+// Styleguide Base.Thumbnail
+//
+
+
+//
+// Size
+//
+// Markup:
+// <img class="thumb thumb--small" src="public/img/article-photo-3.jpg">
+// <img class="thumb thumb--medium" src="public/img/article-photo-3.jpg">
+// <img class="thumb thumb--large" src="public/img/article-photo-3.jpg">
+// <img class="thumb thumb--xlarge" src="public/img/article-photo-3.jpg">
+// <img class="thumb thumb--huge" src="public/img/article-photo-3.jpg">
+// <img class="thumb thumb--goliath" src="public/img/article-photo-3.jpg">
+//
+// Weight: 1
+//
+// Styleguide Base.Thumbnail.Size
+//
+
+
+//
+// Shape
+//
+// Markup:
+// <img class="thumb thumb--huge" src="public/img/article-photo-1.jpg">
+// <img class="thumb thumb--huge thumb--square" src="public/img/article-photo-2.jpg">
+//
+// Weight: 2
+//
+// Styleguide Base.Thumbnail.Shape
+//
+
+
+//
+// Bordered
+//
+// Markup:
+// <img class="thumb thumb--huge thumb--bordered" src="public/img/user-photo-thumb-1.png">
+// <img class="thumb thumb--huge thumb--bordered" src="public/img/user-photo-thumb-2.png">
+// <img class="thumb thumb--huge thumb--bordered" src="public/img/user-photo-thumb-3.png">
+//
+// Weight: 3
+//
+// Styleguide Base.Thumbnail.Bordered
+//
+
+
+//
+// Reflected
+//
+// Markup:
+// <img class="thumb thumb--huge thumb--reflected" src="public/img/user-photo-thumb-1.png">
+// <img class="thumb thumb--huge thumb--reflected" src="public/img/user-photo-thumb-2.png">
+// <img class="thumb thumb--huge thumb--reflected" src="public/img/user-photo-thumb-3.png">
+//
+// Weight: 4
+//
+// Styleguide Base.Thumbnail.Reflected
+//
+
+.thumb {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: $base-thumbnail-size;
+    height: $base-thumbnail-size;
+    border-radius: 100%;
+    flex-shrink: 0;
+
+    &--bordered {
+        border: $base-thumbnail-border;
+    }
+
+    &--reflected {
+        -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom,
+            from(transparent), color-stop(70%, transparent) ,
+            to(rgba(250, 250, 250, 0.2)));
+    }
+
+    &--square {
+        border-radius: 3px;
+    }
+
+    &--small {
+        width: $small-thumbnail-size;
+        height: $small-thumbnail-size;
+    }
+
+    &--medium {
+        width: $medium-thumbnail-size;
+        height: $medium-thumbnail-size;
+    }
+
+    &--large {
+        width: $large-thumbnail-size;
+        height: $large-thumbnail-size;
+    }
+
+    &--xlarge {
+        width: $xlarge-thumbnail-size;
+        height: $xlarge-thumbnail-size;
+    }
+
+    &--huge {
+        width: $huge-thumbnail-size;
+        height: $huge-thumbnail-size;
+    }
+
+    &--goliath {
+        width: $goliath-thumbnail-size;
+        height: $goliath-thumbnail-size;
+    }
+
+    &--portrait { // @deprecated
+        img {
+            top: 60%;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    img { // @deprecated. Don't use a separate thumb wrapper. Add thumb class directly to your images
+        z-index: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        width: auto;
+        transform: translate(-50%,-50%);
+    }
+}

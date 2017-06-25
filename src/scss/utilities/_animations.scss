@@ -1,0 +1,67 @@
+//
+// Animations
+//
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes bounce {
+    0%, 20%, 40%, 60%, 80%, 100% { transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+    0%   { transform: scale3d(.3, .3, .3); }
+    20%  { transform: scale3d(1.1, 1.1, 1.1); }
+    40%  { transform: scale3d(.9, .9, .9); }
+    60%  { transform: scale3d(1.03, 1.03, 1.03); }
+    80%  { transform: scale3d(.97, .97, .97); }
+    100% { transform: scale3d(1, 1, 1); }
+}
+
+@keyframes pop {
+    0%   { transform: scale3d(0.9, 0.9, 0.9); }
+    33%  { transform: scale3d(1.05, 1.05, 1.05); }
+    66%  { transform: scale3d(0.95, 0.95, 0.95); }
+    100% { transform: scale3d(1, 1, 1); }
+}
+
+@keyframes pulse {
+    0%, 80%, 100% { transform: scale3d(0, 0, 0); }
+    40% { transform: scale3d(1, 1, 1); }
+}
+
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.spin {
+    animation: spin 2s infinite linear;
+}
+
+.fade-in-pop {
+    animation: pop 1.5s 1 linear, fade-in 1.5s 1 linear;
+}
+
+.fade-in-and-out {
+    transition: opacity .15s ease-in-out;
+}
+
+// Animated rotate
+.rotate-right {
+    transition: transform .2s ease-in-out;
+    transform: rotate(90deg);
+}
+.rotate-left {
+    transition: transform .2s ease-in-out;
+    transform: rotate(270deg);
+}
+
+// Animation delays
+.animation-delay-1 { animation-delay: 1s; }
+.animation-delay-2 { animation-delay: 2s; }
+.animation-delay-3 { animation-delay: 3s; }

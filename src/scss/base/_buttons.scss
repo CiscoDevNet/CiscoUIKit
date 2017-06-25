@@ -1,0 +1,409 @@
+//
+// Button updated
+//
+// Since 1.0.0
+// sketch
+//
+// Styleguide Base.Button
+//
+
+
+//
+// Size
+//
+// Markup:
+// <button class="btn btn--small">Small</button>
+// <button class="btn btn--small btn--wide">Small (wide)</button>
+// <button class="btn">Default</button>
+// <button class="btn btn--wide">Default (wide)</button>
+//
+// Weight: 1
+//
+// Styleguide Base.Button.Size
+//
+
+
+//
+// Color
+//
+// Markup:
+// <button class="btn">Default</button>
+// <button class="btn btn--primary">Primary</button>
+// <button class="btn btn--secondary">Secondary</button>
+// <button class="btn btn--white">White</button>
+// <button class="btn btn--negative">Negative</button>
+// <button class="btn btn--success">Success</button>
+//
+// Weight: 2
+//
+// Styleguide Base.Button.Color
+//
+
+
+//
+// Disabled
+//
+// <blockquote>Add a `disabled` attribute or `disabled` class to any button to disable it</blockquote>
+//
+// Markup:
+// <button class="btn disabled">Disabled</button>
+//
+// Weight: 3
+//
+// Styleguide Base.Button.Disabled
+//
+
+
+//
+// Allowed Backgrounds
+//
+// <blockquote>Use this guide to determine which buttons can be used on which backgrounds</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4 panel text-center">
+//        <h3>White BG</h3><br>
+//        <div><button class="btn">Default</button></div><br>
+//        <div><button class="btn btn--primary">Primary</button></div><br>
+//        <div><button class="btn btn--primary-ghost">Primary Ghost</button></div><br>
+//        <div><button class="btn btn--secondary">Secondary</button></div><br>
+//        <div><button class="btn btn--negative">Negative</button></div><br>
+//        <div><button class="btn btn--success">Success</button></div><br>
+//        <div><button class="btn btn--gray-ghost">Gray Ghost</button></div><br>
+//     </div>
+//     <div class="col-md-4 panel panel--ltgray text-center">
+//        <h3>Light Gray BG</h3><br>
+//        <div><button class="btn">Default</button></div><br>
+//        <div><button class="btn btn--primary">Primary</button></div><br>
+//        <div><button class="btn btn--primary-ghost">Primary Ghost</button></div><br>
+//        <div><button class="btn btn--secondary">Secondary</button></div><br>
+//        <div><button class="btn btn--negative">Negative</button></div><br>
+//        <div><button class="btn btn--success">Success</button></div><br>
+//        <div><button class="btn btn--gray-ghost">Gray Ghost</button></div><br>
+//     </div>
+//     <div class="col-md-4 panel panel--mdgray text-center">
+//        <h3>Medium Gray BG</h3><br>
+//        <div><button class="btn">Default</button></div><br>
+//        <div><button class="btn btn--primary">Primary</button></div><br>
+//        <div><button class="btn btn--primary-ghost">Primary Ghost</button></div><br>
+//        <div><button class="btn btn--secondary">Secondary</button></div><br>
+//        <div><button class="btn btn--negative">Negative</button></div><br>
+//        <div><button class="btn btn--success">Success</button></div><br>
+//        <div><button class="btn btn--gray-ghost">Gray Ghost</button></div><br>
+//     </div>
+//     <div class="col-md-4 panel panel--dkgray text-center">
+//        <h3>Dark Gray BG</h3><br>
+//        <div><button class="btn btn--primary">Primary</button></div><br>
+//        <div><button class="btn btn--secondary">Secondary</button></div><br>
+//        <div><button class="btn btn--white">White</button></div><br>
+//        <div><button class="btn btn--white-ghost">White Ghost</button></div><br>
+//        <div><button class="btn btn--success">Success</button></div><br>
+//     </div>
+//     <div class="col-md-4 panel panel--blue text-center">
+//        <h3>Blue BG</h3><br>
+//        <div><button class="btn btn--white">White</button></div><br>
+//        <div><button class="btn btn--white-ghost">White Ghost</button></div><br>
+//     </div>
+//     <div class="col-md-4 panel panel--dkblue text-center">
+//        <h3>Dark Blue BG</h3><br>
+//        <div><button class="btn btn--white">White</button></div><br>
+//        <div><button class="btn btn--white-ghost">White Ghost</button></div><br>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Base.Button.Backgrounds
+//
+
+
+//
+// Icons
+//
+// <blockquote>A button with only an icon</blockquote>
+//
+// Markup:
+// <div>
+//     <button class="btn btn--icon btn--small">
+//         <span class="icon-tools"></span>
+//     </button>
+//     <button class="btn btn--icon btn--small btn--primary">
+//         <span class="icon-bookmark"></span>
+//     </button>
+//     <button class="btn btn--icon btn--small btn--secondary">
+//         <span class="icon-refresh"></span>
+//     </button>
+//     <button class="btn btn--icon btn--small btn--white">
+//         <span class="icon-user"></span>
+//     </button>
+//     <button class="btn btn--icon btn--small btn--negative">
+//         <span class="icon-power"></span>
+//     </button>
+//     <button class="btn btn--icon btn--small btn--success">
+//         <span class="icon-check"></span>
+//     </button>
+//     <a class="btn btn--icon btn--small btn--white-ghost">
+//         <span class="icon-like"></span>
+//     </a>
+//     <a class="btn btn--icon btn--small btn--gray-ghost">
+//         <span class="icon-like"></span>
+//     </a>
+// </div>
+// <br>
+// <div>
+//     <button class="btn btn--icon">
+//         <span class="icon-tools"></span>
+//     </button>
+//     <button class="btn btn--icon btn--primary">
+//         <span class="icon-bookmark"></span>
+//     </button>
+//     <button class="btn btn--icon btn--secondary">
+//         <span class="icon-refresh"></span>
+//     </button>
+//     <button class="btn btn--icon btn--white">
+//         <span class="icon-user"></span>
+//     </button>
+//     <button class="btn btn--icon btn--negative">
+//         <span class="icon-power"></span>
+//     </button>
+//     <button class="btn btn--icon btn--success">
+//         <span class="icon-check"></span>
+//     </button>
+//     <a class="btn btn--icon btn--white-ghost">
+//         <span class="icon-like"></span>
+//     </a>
+//     <a class="btn btn--icon btn--gray-ghost">
+//         <span class="icon-like"></span>
+//     </a>
+// </div>
+// <br>
+// <div>
+//     <button class="btn btn--icon btn--large">
+//         <span class="icon-tools"></span>
+//     </button>
+//     <button class="btn btn--icon btn--large btn--primary">
+//         <span class="icon-bookmark"></span>
+//     </button>
+//     <button class="btn btn--icon btn--large btn--secondary">
+//         <span class="icon-refresh"></span>
+//     </button>
+//     <button class="btn btn--icon btn--large btn--white">
+//         <span class="icon-user"></span>
+//     </button>
+//     <button class="btn btn--icon btn--large btn--negative">
+//         <span class="icon-power"></span>
+//     </button>
+//     <button class="btn btn--icon btn--large btn--success">
+//         <span class="icon-check"></span>
+//     </button>
+//     <a class="btn btn--icon btn--large btn--white-ghost">
+//         <span class="icon-like"></span>
+//     </a>
+//     <a class="btn btn--icon btn--large btn--gray-ghost">
+//         <span class="icon-like"></span>
+//     </a>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Base.Button.Icon
+//
+
+a.btn,
+a.btn.btn--icon,
+a.btn.btn--icon.btn--small {
+    // Fixes issue where anchors used as button elements not properly aligned
+    // However, button elements themselves cannot be flex containers which means
+    // normal buttons have to use inline-block versus inline-flex :-(
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn + .btn {
+    margin-left: $aui-button-margin;
+}
+
+.btn.small + .btn.small {
+    margin-left: $aui-small-button-margin;
+}
+
+.btn {
+
+    // Default button size / color
+    @include btn-size();
+    @include btn-color(
+        $background-selected: $aui-button-background-selected,
+        $border-selected: $aui-button-border-selected,
+        $color-selected: $aui-button-color-selected
+    );
+
+    &--small {
+        @include btn-size(
+            $padding: $aui-small-button-padding,
+            $font-size: $aui-small-button-font-size,
+            $line-height: $aui-small-button-line-height,
+            $min-width: $aui-small-button-min-width,
+            $max-width: $aui-small-button-max-width,
+            $height: $aui-small-button-height
+        );
+    }
+    &--wide {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        max-width: $aui-button-max-width;
+    }
+
+    // Generate the button colors from the global variables
+    @each $button-obj in $button-colors {
+        &--#{map-get($button-obj, name)} {
+            @include btn-color(map-get($button-obj, params)...);
+        }
+    }
+
+    &.btn--icon {
+        overflow: visible; // To allow for subtext
+        position: relative;
+        @include btn-size(
+            $height: $aui-button-icon-height,
+            $min-width: $aui-button-icon-width,
+            $max-width: $aui-button-icon-width,
+            $font-size: $aui-button-icon-font-size,
+            $padding: 0
+        );
+
+        > span[class^="icon-"] {
+            font-size: $aui-button-icon-font-size;
+        }
+
+        &.btn--small {
+            @include btn-size(
+                $height: $aui-small-button-icon-height,
+                $min-width: $aui-small-button-icon-width,
+                $max-width: $aui-small-button-icon-width,
+                $font-size: $aui-small-button-icon-font-size,
+                $padding: 0
+            );
+            > span[class^="icon-"] {
+                font-size: $aui-small-button-icon-font-size;
+            }
+            overflow: visible;
+        }
+        &.btn--large {
+            @include btn-size(
+                $height: $aui-large-button-icon-height,
+                $min-width: $aui-large-button-icon-width,
+                $max-width: $aui-large-button-icon-width,
+                $font-size: $aui-large-button-icon-font-size,
+                $padding: 0
+            );
+            > span[class^="icon-"] {
+                font-size: $aui-large-button-icon-font-size;
+            }
+            overflow: visible;
+        }
+
+        .btn__subtext {
+            color: $med-gray-2;
+            font-size: $xsmall-font-size;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -($large-icon-font-size - $base-step-line-width);
+        }
+    }
+}
+
+
+//
+// Groups
+//
+// <blockquote>Wrap buttons in a `btn-group` container to create segmented button controls. Add the class `selected` to indicate selection.</blockquote>
+//
+// Markup:
+// <div class="btn-group">
+//     <button class="btn btn--small">One</button>
+//     <button class="btn btn--small">Two</button>
+//     <button class="btn btn--small selected">Three</button>
+// </div>
+// <br><br>
+// <div class="btn-group">
+//     <button class="btn btn--small btn--gray-ghost">
+//         <span class="icon-edit"></span>
+//     </button>
+//     <button class="btn btn--small btn--gray-ghost selected">
+//         <span class="icon-transcript"></span>
+//     </button>
+//     <button class="btn btn--small btn--gray-ghost">
+//         <span class="icon-text-size"></span>
+//     </button>
+//     <button class="btn btn--small btn--gray-ghost">
+//         <span class="icon-zoom-in"></span>
+//     </button>
+//     <button class="btn btn--small btn--gray-ghost">
+//         <span class="icon-zoom-out"></span>
+//     </button>
+// </div>
+// <br><br>
+// <div class="btn-group">
+//     <button class="btn btn--primary">Choice A</button>
+//     <button class="btn btn--primary selected">Choice B</button>
+//     <button class="btn btn--primary">Choice C</button>
+// </div>
+// <br><br>
+// <div class="btn-group">
+//     <button class="btn btn--primary-ghost">Fix Problem</button>
+//     <button class="btn btn--primary-ghost">Ask Question</button>
+//     <button class="btn btn--primary-ghost selected">Return Hardware</button>
+// </div>
+//
+// Weight: 10
+//
+// Styleguide Base.Button.Groups
+//
+
+.btns,
+.btn-group {
+
+    @include btn-margin($margin: $base-btn-margin);
+    position: relative;
+    display: inline-flex;
+
+    &.btn + .btn {
+        border-right: 0 none;
+    }
+
+    > .btn {
+        min-width: 0;
+        padding-right: $base-spacing * 0.5;
+        padding-left: $base-spacing * 0.5;
+        border-radius: 0;
+        border-right: $base-border;
+
+        &[class$="-ghost"],
+        &[class*="-ghost "] { // Ghost buttons look strange with thick border
+            border-right: 0 none;
+        }
+
+        &:first-child {
+            padding-left: $base-spacing * 0.75;
+            border-top-left-radius: $base-button-border-radius;
+            border-bottom-left-radius: $base-button-border-radius;
+        }
+
+        &:last-child {
+            padding-right: $base-spacing * 0.75;
+            border-top-right-radius: $base-button-border-radius;
+            border-bottom-right-radius: $base-button-border-radius;
+            border-right: 0 none;
+        }
+
+        &.selected {
+            transition: all ease 0.25s;
+        }
+    }
+
+    &--compressed { @include btn-margin($margin: $base-btn-compressed-margin); }
+    &--regular    { @include btn-margin($margin: $base-btn-regular-margin); }
+    &--loose      { @include btn-margin($margin: $base-btn-loose-margin); }
+}

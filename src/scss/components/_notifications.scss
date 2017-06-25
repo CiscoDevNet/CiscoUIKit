@@ -1,0 +1,233 @@
+//
+// Notifications
+//
+// The notifications component is used do display information in a list format.
+//
+// Markup:
+// <div class="notifications">
+//     <div class="notification">
+//         <div class="notification__icon">
+//             <span class="icon-check"></span>
+//         </div>
+//         <div class="notification__body">
+//             <span>This is a notification</span>
+//         </div>
+//         <div class="notification__timestamp">
+//             <span>2 Minutes Ago</span>
+//         </div>
+//     </div>
+//     <div class="notification">
+//         <div class="notification__icon">
+//             <span class="icon-check"></span>
+//         </div>
+//         <div class="notification__body">
+//             <span>This is a another notification</span>
+//         </div>
+//         <div class="notification__timestamp">
+//             <span>2 Minutes Ago</span>
+//         </div>
+//     </div>
+//     <div class="notification">
+//         <div class="notification__icon">
+//             <span class="icon-check"></span>
+//         </div>
+//         <div class="notification__body">
+//             <span>This is a notification with a much longer title than the previous two. The notification text will be truncated if it does not all fit on one line.</span>
+//         </div>
+//         <div class="notification__timestamp">
+//             <span>2 Minutes Ago</span>
+//         </div>
+//     </div>
+// </div>
+//
+
+$notification-padding: $base-spacing * 0.25;
+
+.notification {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: $base-border;
+  color: $base-font-color;
+
+  &:first-child {
+    border-top: $base-border;
+  }
+
+  &:hover {   
+    color: $base-font-color;
+    text-decoration: none;
+
+    .notification__actions {
+      display: flex;
+    }
+  }
+}
+
+.notification__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: $notification-padding;
+  color: $base-muted-color;
+}
+
+.notification__body {
+  @include flex-fluid;
+  @include text-ellipsis;
+  padding: $notification-padding;
+
+  a {
+    color: $base-font-color;
+
+    &:hover {
+      color: $base-accent-color;
+      text-decoration: none;
+    }
+  }
+
+  br {
+    display: none;
+  }
+
+  ul, li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+}
+
+.notification__timestamp {
+  padding: $notification-padding;
+  color: $base-muted-color;
+}
+
+// Notification Actions
+//
+// Notification actions allow the user to perform individual actions on each item.
+//
+// Markup:
+// <div class="notifications">
+//     <div class="notification">
+//         <div class="notification__icon">
+//             <span class="icon-check"></span>
+//         </div>
+//         <div class="notification__body">
+//             <span>This is a notification</span>
+//         </div>
+//         <div class="notification__timestamp">
+//             <span>2 Minutes Ago</span>
+//         </div>
+//         <div class="notification__actions">
+//             <a class="link"><span class="icon-trash"></span></a>
+//         </div>
+//     </div>
+//     <div class="notification">
+//         <div class="notification__icon">
+//             <span class="icon-check"></span>
+//         </div>
+//         <div class="notification__body">
+//             <span>This is a another notification</span>
+//         </div>
+//         <div class="notification__timestamp">
+//             <span>2 Minutes Ago</span>
+//         </div>
+//         <div class="notification__actions">
+//             <a class="link"><span class="icon-trash"></span></a>
+//         </div>
+//     </div>
+//     <div class="notification">
+//         <div class="notification__icon">
+//             <span class="icon-check"></span>
+//         </div>
+//         <div class="notification__body">
+//             <span>This is a notification with a much longer title than the previous two. The notification text will be truncated if it does not all fit on one line.</span>
+//         </div>
+//         <div class="notification__timestamp">
+//             <span>2 Minutes Ago</span>
+//         </div>
+//         <div class="notification__actions">
+//             <a class="link"><span class="icon-trash"></span></a>
+//         </div>
+//     </div>
+// </div>
+//
+
+// Notification Actions (on Hover)
+//
+// Notifiaction actions can be hidden (and shown on hover) by adding the class `.notifications--hide-actions` to the parent container.
+//
+// Markup:
+// <div class="notifications notifications--hide-actions">
+//     <div class="notification">
+//         <div class="notification__icon">
+//             <span class="icon-check"></span>
+//         </div>
+//         <div class="notification__body">
+//             <span>This is a notification</span>
+//         </div>
+//         <div class="notification__timestamp">
+//             <span>2 Minutes Ago</span>
+//         </div>
+//         <div class="notification__actions">
+//             <a class="link"><span class="icon-trash"></span></a>
+//         </div>
+//     </div>
+//     <div class="notification">
+//         <div class="notification__icon">
+//             <span class="icon-check"></span>
+//         </div>
+//         <div class="notification__body">
+//             <span>This is a another notification</span>
+//         </div>
+//         <div class="notification__timestamp">
+//             <span>2 Minutes Ago</span>
+//         </div>
+//         <div class="notification__actions">
+//             <a class="link"><span class="icon-trash"></span></a>
+//         </div>
+//     </div>
+//     <div class="notification">
+//         <div class="notification__icon">
+//             <span class="icon-check"></span>
+//         </div>
+//         <div class="notification__body">
+//             <span>This is a notification with a much longer title than the previous two. The notification text will be truncated if it does not all fit on one line.</span>
+//         </div>
+//         <div class="notification__timestamp">
+//             <span>2 Minutes Ago</span>
+//         </div>
+//         <div class="notification__actions">
+//             <a class="link"><span class="icon-trash"></span></a>
+//         </div>
+//     </div>
+// </div>
+//
+
+.notification__actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  .notifications--hide-actions & {
+    display: none;
+  }
+}
+
+.empty-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: $base-spacing * 2;
+  color: $base-disabled-color;
+  text-align: center;
+}
+
+.empty-feed__icon {
+  font-size: 80px;
+  line-height: $header-line-height;
+  opacity: 0.5;
+}

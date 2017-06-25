@@ -1,0 +1,504 @@
+//
+// Header updated
+//
+// Since: 1.0.0
+//
+// Styleguide Layout.Header
+//
+
+
+//
+// Default
+//
+// Markup:
+// <div class="panel panel--ltgray panel--compressed IGNORE">
+// <header class="header">
+//     <div class="header-bar container">
+//         <a class="btn btn--small btn--icon toggle-menu">
+//             <span class="icon-list-menu"></span>
+//         </a>
+//         <a class="header-bar__logo">
+//             <span class="icon-cisco"></span>
+//         </a>
+//         <div class="header-bar__main">
+//             <div class="header-breadcrumbs">
+//                 <ul class="breadcrumb">
+//                     <li><a>Operate</a></li>
+//                     <li><a>Devices</a></li>
+//                     <li><span>Discovery</span></li>
+//                 </ul>
+//             </div>
+//             <div class="header-heading">
+//                 <h1 class="page-title">Wide Array Extended Network Dashboard</h1>
+//             </div>
+//         </div>
+//         <div class="header-toolbar">
+//             <a class="btn btn--small btn--icon">
+//                 <span class="icon-search"></span>
+//             </a>
+//             <a class="btn btn--small btn--icon">
+//                 <span class="icon-alert"></span>
+//             </a>
+//             <a class="btn btn--small btn--icon">
+//                 <span class="icon-cog"></span>
+//             </a>
+//         </div>
+//     </div>
+// </header>
+// </div IGNORE>
+//
+// Weight: 1
+//
+// Styleguide Layout.Header.Default
+//
+
+
+//
+// Minimum
+//
+// Markup:
+// <div class="panel panel--ltgray panel--compressed IGNORE">
+// <header class="header">
+//     <div class="header-bar container">
+//         <a class="btn btn--small btn--icon toggle-menu">
+//             <span class="icon-list-menu"></span>
+//         </a>
+//         <a class="header-bar__logo">
+//             <span class="icon-cisco"></span>
+//         </a>
+//         <div class="header-bar__main">
+//             <div class="header-heading">
+//                 <h1 class="page-title">Product Name</h1>
+//             </div>
+//         </div>
+//         <div class="header-toolbar">
+//             <a class="btn btn--small btn--icon">
+//                 <span class="icon-search"></span>
+//             </a>
+//             <a class="btn btn--small btn--icon">
+//                 <span class="icon-cog"></span>
+//             </a>
+//         </div>
+//     </div>
+// </header>
+// </div IGNORE>
+//
+// Weight: 2
+//
+// Styleguide Layout.Header.Minimum
+//
+
+
+//
+// Compressed
+//
+// Markup:
+// <div class="panel panel--ltgray panel--compressed IGNORE">
+// <header class="header header--compressed">
+//     <div class="header-bar container">
+//         <a class="header-bar__logo">
+//             <span class="icon-cisco"></span>
+//         </a>
+//         <div class="header-bar__main">
+//             <div class="header-heading">
+//                 <h1 class="page-title">Devices</h1>
+//             </div>
+//         </div>
+//         <div class="header-toolbar">
+//             <a class="btn btn--small btn--icon">
+//                 <span class="icon-search"></span>
+//             </a>
+//             <a class="btn btn--small btn--icon">
+//                 <span class="icon-tools"></span>
+//             </a>
+//             <a class="btn btn--small btn--icon btn--negative">
+//                 <span class="icon-close"></span>
+//             </a>
+//         </div>
+//     </div>
+// </header>
+// </div IGNORE>
+//
+// Weight: 3
+//
+// Styleguide Layout.Header.Compressed
+//
+
+
+//
+// Everything
+//
+// <blockquote>We recommend that you add the class `header--tall` when using all of the header elements</blockquote>
+//
+// Markup:
+// <div class="panel panel--ltgray panel--compressed IGNORE">
+// <header class="header header--tall">
+//     <div class="header-bar container">
+//         <a class="btn btn--small btn--icon toggle-menu">
+//             <span class="icon-list-menu"></span>
+//         </a>
+//         <a class="header-bar__logo">
+//             <span class="icon-cisco"></span>
+//         </a>
+//         <div class="header-bar__main">
+//             <div class="header-breadcrumbs">
+//                 <ul class="breadcrumb">
+//                     <li><a>Operate</a></li>
+//                     <li><a>Devices</a></li>
+//                     <li><span>Discovery</span></li>
+//                 </ul>
+//             </div>
+//             <div class="header-heading">
+//                 <h1 class="page-title">Wide Array Extended Network Dashboard</h1>
+//                 <div class="header-utilities">
+//                     <a class="link">
+//                         <span class="icon-home"></span>
+//                     </a>
+//                     <a class="link">
+//                         <span class="icon-star"></span>
+//                     </a>
+//                     <a class="link">
+//                         <span class="icon-refresh"></span>
+//                     </a>
+//                     <a class="link">
+//                         <span class="icon-info-circle"></span>
+//                     </a>
+//                 </div>
+//             </div>
+//             <div class="header-menus">
+//                 <ul class="nav nav-tabs nav-tabs--tall">
+//                     <li class="tab active">
+//                         <a><div class="tab__heading" title="Tab 1">Tab 1</div></a>
+//                     </li>
+//                     <li class="tab">
+//                         <a><div class="tab__heading" title="Tab 2">Tab 2</div></a>
+//                     </li>
+//                     <li class="tab">
+//                         <a><div class="tab__heading" title="Tab 3">Tab 3</div></a>
+//                     </li>
+//                 </ul>
+//             </div>
+//         </div>
+//         <div class="header-toolbar">
+//             <a class="avatar">John Doe</a>
+//             <button class="btn btn--small btn--icon">
+//                 <span class="icon-search"></span>
+//             </button>
+//             <button class="btn btn--small btn--icon btn--negative">
+//                 <span class="icon-alert"></span>
+//                 <span class="btn__subtext">999+</span>
+//             </button>
+//             <button class="btn btn--small btn--icon btn--dkblue">
+//                 <span class="icon-mail"></span>
+//                 <span class="btn__subtext">34</span>
+//             </button>
+//             <button class="btn btn--small btn--icon">
+//                 <span class="icon-cog"></span>
+//             </button>
+//         </div>
+//     </div>
+// </header>
+// </div IGNORE>
+//
+// Weight: 4
+//
+// Styleguide Layout.Header.Everything
+//
+
+.header {
+    flex-shrink: 0;
+    background: $header-background-color;
+    border-bottom: 1px solid $base-border-color;
+    z-index: $header-zindex;
+    overflow: visible; // To accommodate dropdowns
+
+    > div:last-child:empty {
+        display: none;
+    }
+
+    &-bar {
+        @include flex-center-vertical;
+        max-width: none;
+        height: $header-height-small;
+
+        @include break-at(small) {
+            height: $header-height-large;
+        }
+
+        .btn.toggle-menu {
+            z-index: 1031;
+            > span {
+                font-weight: bold;
+            }
+
+            @include button-color(
+                $background: $header-hamburger-background,
+                $color: $header-hamburger-color,
+                $background-active: $header-hamburger-background-active,
+                $background-hover: $header-hamburger-background-hover,
+                $color-active: $header-hamburger-color-active
+            );
+        }
+
+        &__logo {
+            display: none;
+
+            @include break-at(small) {
+                display: block;
+                margin: $header-logo-margin;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            span.icon-cisco {
+                display: block;
+                color: $base-accent-color;
+                font-size: $header-logo-size;
+                line-height: 1;
+            }
+
+            img {
+                display: block;
+                width: auto;
+                height: $header-logo-size;
+            }
+        }
+
+        &__main {
+            flex: 1;
+            align-self: stretch;
+            margin-right: 24px;
+            position: relative;
+
+            @include break-at(small) {
+                position: relative;
+            }
+        }
+    }
+
+    &--compressed {
+        .header-bar {
+            @include break-at(small) {
+                height: $header-height-small;
+            }
+        }
+
+        .header-bar__logo {
+            span.icon-cisco {
+                font-size: $header-logo-size-small;
+            }
+
+            @include break-at(small) {
+                margin: $header-logo-margin-small;
+            }
+        }
+    }
+
+    &--tall {
+        .header-bar {
+            @include break-at(small) {
+                height: $header-height-tall;
+            }
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// Container for the optional breadcrumbs, page title, and optional menus
+
+.header-heading {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+
+    .page-title {
+        @include text-ellipsis;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: $header-title-size-small;
+        font-weight: $h2-font-weight;
+        line-height: 1;
+
+        @include break-at(small) {
+            margin-top: 3px;
+            margin-left: 0;
+            font-size: $header-title-size-large;
+            max-width: inherit;
+        }
+    }
+
+    .link {
+        padding: 7.5px;
+
+        > span {
+            font-size: 16px;
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// Optional breadcrumbs located above the page title
+
+.header-breadcrumbs {
+    display: none;
+
+    @include break-at(small) {
+        margin: $header-breadcrumbs-margin;
+        font-size: $header-breadcrumbs-font-size;
+        display: block;
+        position: absolute;
+        top: 0;
+        line-height: 1;
+        z-index: 1;
+    }
+}
+
+.breadcrumb-bar {
+    display: block;
+    margin-top: $base-spacing * 0.5;
+    @include break-at(small) {
+        display: none;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// Optional utilities toolbar to the right of the page title
+
+.header-utilities {
+    display: none;
+
+    @include break-at(small) {
+        display: flex;
+        flex: 1;
+    }
+
+    > * {
+        margin: $header-utilities-margin;
+
+        &:first-child {
+            margin-left: 20px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .button {
+        @include button-color(
+        $color: $header-utilities-color,
+        $color-active: $header-utilities-color-active,
+        $color-hover: $header-utilities-color-hover,
+        $color-disabled: $header-utilities-color-disabled,
+        $background: $header-utilities-background,
+        $background-active: $header-utilities-background-active,
+        $background-hover: $header-utilities-background-hover,
+        $background-disabled: $header-utilities-background-disabled
+        );
+        font-size: $header-utilities-font-size;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// Optional tabbed navigation menus
+
+.header-menus {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .nav.nav-tabs {
+        display: none;
+
+        @include break-at(small) {
+            display: block;
+            overflow-x: auto;
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// Top-right toolbar containing buttons global to the page / application
+
+.header-toolbar {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    *+* {
+        margin-left: $base-spacing * 0.5;
+    }
+
+    // hide dropdown toggle caret if dropdown toggle is a header-toolbar button
+    & > .dropdown .dropdown-toggle:after {
+        content: normal;
+    }
+
+    .avatar {
+        margin-right: $base-spacing * 0.5;
+    }
+
+    @include break-at(small) {
+        @include flex-center-vertical;
+    }
+
+    .button {
+        @include button-color(
+        $background: $header-toolbar-background,
+        $color: $header-toolbar-color,
+        $background-hover: $header-toolbar-background-hover,
+        $color-hover: $header-toolbar-color-hover
+        );
+
+        &.button--info {
+            @include button-color(
+            $background: $info,
+            $color: $header-toolbar-color,
+            $background-hover: $header-toolbar-background-hover,
+            $color-hover: $header-toolbar-color-hover
+            );
+        }
+
+        &.button--warning {
+            @include button-color(
+            $background: $warning,
+            $color: $header-toolbar-color,
+            $background-hover: $header-toolbar-background-hover,
+            $color-hover: $header-toolbar-color-hover
+            );
+        }
+
+        &.button--danger {
+            @include button-color(
+            $background: $danger,
+            $color: $header-toolbar-color,
+            $background-hover: $header-toolbar-background-hover,
+            $color-hover: $header-toolbar-color-hover
+            );
+        }
+    }
+}
+
+.standalone .header-buttons {
+    @include flex-center-vertical;
+}
+
+.secondary-nav {
+    span[class^="icon-"] {
+        font-size: 20px;
+    }
+}

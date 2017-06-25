@@ -1,0 +1,37 @@
+{
+    "name": "Cisco-UI",
+    "private": true,
+    "version": "1.0.4",
+    "description": "Cisco UI Kit",
+    "author": "Kevin Broich - Cisco Systems, Inc.",
+    "homepage": "https://www.cisco.com",
+    "license": "2017 Cisco Systems, Inc. All rights reserved. Terms and Conditions: http://cisco.com/en/US/swassets/sw293/sitewide_important_notices.html",
+    "devDependencies": {
+        "gulp-autoprefixer": "*",
+        "gulp-bower": "*",
+        "gulp-bower-files": "*",
+        "gulp-filter": "*",
+        "gulp-header": "^1.8.8",
+        "gulp-htmlhint": "*",
+        "gulp-htmlmin": "*",
+        "gulp-iconfont": "*",
+        "gulp-iconfont-css": "*",
+        "gulp-if": "*",
+        "gulp-jade": "^1.1.0",
+        "gulp-minify-css": "*",
+        "gulp-minify-html": "*",
+        "gulp-pxtorem": "*",
+        "gulp-rename": "*",
+        "gulp-replace": "*",
+        "gulp-rimraf": "^0.2.1",
+        "gulp-sass": "*",
+        "gulp-using": "*",
+        "gulp-util": "*",
+        "kss": "^2.4.0",
+        "node-sass": "^4.4.0",
+        "run-sequence": "^1.2.2"
+    },
+    "dependencies": {
+        "pagedown": "*"
+    }
+}
