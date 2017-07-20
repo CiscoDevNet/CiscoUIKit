@@ -1,0 +1,3 @@
+{
+    "text":"<b>IMPORTANT</b><br>The source code repository location for this UI kit is moving from <a href='http://gitlab.cisco.com' target='_blank'>gitlab.cisco.com</a> to <a href='http://gitlab-sjc.cisco.com' target='_blank'>gitlab-sjc.cisco.com</a>. Please update your bookmarks and your configuration files if you are pulling this kit in via Bower or NPM."
+}

@@ -1,0 +1,34 @@
+/*
+ * Note: This file contains only the IE-specific overrides for UI kit elements
+ *       Once IE goes away this file will go with it
+ */
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+
+    // Fix IE11 container at smallest breakpoint no cards displayed
+    .smart-content__main {
+        flex: 1 1 auto;
+    }
+
+    // Fix IE11 inline flex layout issues for checkbox / radio
+    .checkbox .checkbox__label,
+    .checkbox .radio__label,
+    .radio .checkbox__label,
+    .radio .radio__label {
+        flex: 1 1 auto;
+    }
+    // Fix IE11 issue where figcaption text is centered versus left-justified
+    .figure figcaption {
+        text-align: left;
+    }
+
+    // Overriding line height for page title to fix IE issue (AP-4540 #11)
+    .header-heading .page-title {
+        line-height: $base-line-height;
+    }
+
+    // Fix IE11 issue where inset box-shadow is too faint
+    .btn.btn--icon.btn--primary-ghost {
+        box-shadow: none;
+        border: 1px solid $cisco-blue;
+    }
+}

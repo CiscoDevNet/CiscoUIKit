@@ -72,6 +72,7 @@ legend,
         transition: color 0.2s ease;
 
         &:first-of-type {
+            @include text-ellipsis;
             color: $base-form-label-color;
             order: 2;
 
@@ -117,7 +118,7 @@ legend,
     display: block;
     color: $base-muted-color;
     margin-top: -5px;
-    font-weight: 300;
+    font-weight: normal;
 
     &--normal  { text-transform: unset; }
     &--lower   { text-transform: lowercase; }

@@ -37,6 +37,118 @@
 
 
 //
+// Color
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="sidebar">
+//             <div class="sidebar__header">
+//                 <div class="sidebar__header-title">Default</div>
+//             </div>
+//             <ul>
+//                 <li class="sidebar__item"><a>Dashboard</a></li>
+//                 <li class="sidebar__item"><a>Monitor</a></li>
+//                 <li class="sidebar__drawer">
+//                     <a>Configuration</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Open Device Configuration</a></li>
+//                         <li class="sidebar__item"><a>Configuration Guides</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Inventory</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Routers</a></li>
+//                         <li class="sidebar__item"><a>Switches</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Services</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Network Services</a></li>
+//                         <li class="sidebar__item"><a>Mobility Services</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__item"><a>Reports</a></li>
+//             </ul>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="sidebar sidebar--dkgray">
+//             <div class="sidebar__header">
+//                 <div class="sidebar__header-title">Dark Gray</div>
+//             </div>
+//             <ul>
+//                 <li class="sidebar__item"><a>Dashboard</a></li>
+//                 <li class="sidebar__item"><a>Monitor</a></li>
+//                 <li class="sidebar__drawer">
+//                     <a>Configuration</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Open Device Configuration</a></li>
+//                         <li class="sidebar__item"><a>Configuration Guides</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Inventory</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Routers</a></li>
+//                         <li class="sidebar__item"><a>Switches</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Services</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Network Services</a></li>
+//                         <li class="sidebar__item"><a>Mobility Services</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__item"><a>Reports</a></li>
+//             </ul>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="sidebar sidebar--indigo">
+//             <div class="sidebar__header">
+//                 <div class="sidebar__header-title">Indigo</div>
+//             </div>
+//             <ul>
+//                 <li class="sidebar__item"><a>Dashboard</a></li>
+//                 <li class="sidebar__item"><a>Monitor</a></li>
+//                 <li class="sidebar__drawer">
+//                     <a>Configuration</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Open Device Configuration</a></li>
+//                         <li class="sidebar__item"><a>Configuration Guides</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Inventory</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Routers</a></li>
+//                         <li class="sidebar__item"><a>Switches</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Services</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Network Services</a></li>
+//                         <li class="sidebar__item"><a>Mobility Services</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__item"><a>Reports</a></li>
+//             </ul>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Layout.Sidebar.Color
+//
+
+
+//
 // Toolbar
 //
 // <blockquote>A sidebar can contain a `sidebar__toolbar` with a list of buttons</blockquote>
@@ -64,7 +176,7 @@
 //     </ul>
 // </div>
 //
-// Weight: 2
+// Weight: 3
 //
 // Styleguide Layout.Sidebar.Toolbar
 //
@@ -118,7 +230,7 @@
 //     </ul>
 // </div>
 //
-// Weight: 3
+// Weight: 4
 //
 // Styleguide Layout.Sidebar.Drawers
 //
@@ -232,7 +344,7 @@
 //     </ul>
 // </div>
 //
-// Weight: 4
+// Weight: 5
 //
 // Styleguide Layout.Sidebar.Example
 //
@@ -305,8 +417,6 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     -webkit-overflow-scrolling: touch; // Enable momentum scrolling on touch devices
     width: $sidebar-menu-width;
     height: 100%;
-    background: $sidebar-background;
-    color: $sidebar-color;
     z-index: $sidebar-zindex;
 
     visibility: visible;
@@ -316,6 +426,17 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     @include break-at(small) {
         visibility: visible;
         transform: translate3d(0,0,0);
+    }
+
+    @include sidebar-color();
+
+    @each $panel-obj in $panel-colors {
+        &--#{map-get($panel-obj, name)} {
+            @include sidebar-color(
+                $background: map-deep-get($panel-obj, 'params', 'background'),
+                $embellish: map-deep-get($panel-obj, 'params', 'embellish')
+            );
+        }
     }
 
     &--hidden {
@@ -333,7 +454,6 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
         &.sidebar__item--selected a,
         &.selected a,
         a:hover {
-            background: $sidebar-item-background-selected;
             box-shadow: $sidebar-item-border-selected;
             text-decoration: none;
             color: unset;
@@ -354,8 +474,6 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
         @include clearfix;
 
         > li {
-            box-shadow: $sidebar-item-border-shadow;
-
             &.sidebar__drawer,
             &.sidebar-drawer {
                 &:hover {

@@ -130,6 +130,6 @@
     }
 }
 
-section + section {
-    margin-top: $base-spacing;
+.section + .section {
+    padding-top: 0;
 }

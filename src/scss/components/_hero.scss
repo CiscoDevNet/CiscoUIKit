@@ -1,5 +1,5 @@
 //
-// Hero
+// Hero updated
 //
 // Since: 1.0.0
 //
@@ -51,6 +51,15 @@
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Dark Blue</h1>
+//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <div class="hero hero--indigo">
+//     <div class="container">
+//         <div class="hero__content">
+//             <h1>Indigo</h1>
 //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 //         </div>
 //     </div>
@@ -248,7 +257,7 @@
 //
 // Markup:
 // <div class="hero hero--loose hero--split">
-//     <div class="hero__content hero--blue">
+//     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>left</sup></h1>
 //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -259,7 +268,7 @@
 // <br>
 // <div class="hero hero--loose hero--split">
 //     <div class="hero__marquee hero--background-2"></div>
-//     <div class="hero__content hero--dkblue">
+//     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>right</sup></h1>
 //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -268,7 +277,7 @@
 // </div>
 // <br>
 // <div class="hero hero--loose hero--split hero--split-25">
-//     <div class="hero__content hero--blue">
+//     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>25%</sup></h1>
 //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -278,7 +287,7 @@
 // </div>
 // <br>
 // <div class="hero hero--loose hero--split hero--split-33">
-//     <div class="hero__content hero--blue">
+//     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>33%</sup></h1>
 //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -288,7 +297,7 @@
 // </div>
 // <br>
 // <div class="hero hero--loose hero--split hero--split-66">
-//     <div class="hero__content hero--blue">
+//     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>66%</sup></h1>
 //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -298,7 +307,7 @@
 // </div>
 // <br>
 // <div class="hero hero--loose hero--split hero--split-75">
-//     <div class="hero__content hero--blue">
+//     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>75%</sup></h1>
 //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -382,7 +391,8 @@ $hero-solids:
     (ltgray, $base-panel-ltgray-color, $base-panel-ltgray-background),
     (mdgray, $base-panel-mdgray-color, $base-panel-mdgray-background),
     (dkgray, $base-panel-dkgray-color, $base-panel-dkgray-background),
-    (dkblue, $base-panel-dkblue-color, $base-panel-dkblue-background);
+    (dkblue, $base-panel-dkblue-color, $base-panel-dkblue-background),
+    (indigo, $base-panel-indigo-color, $base-panel-indigo-background);
 
 $hero-backgrounds:  (1, '../img/hero-bg-1.jpg'),
 (2, '../img/hero-bg-2.jpg'),
@@ -407,6 +417,7 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
     background: url('../img/splash-default.jpg');
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 
     // Adds a gradient to the hero background
     &:after,
@@ -528,7 +539,8 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
 
         .hero__content,
         .hero__marquee {
-            flex: 1;
+            width: 50%;
+            flex: 1 1 auto;
         }
 
         &:after {
@@ -536,9 +548,9 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
         }
     }
 
-    &--split-25 { .hero__marquee { flex: 3; }}
-    &--split-33 { .hero__marquee { flex: 2; }}
-    &--split-50 { .hero__content { flex: 1; }}
-    &--split-66 { .hero__content { flex: 2; }}
-    &--split-75 { .hero__content { flex: 3; }}
+    &--split-25 { .hero__content { width: 25%; } .hero__marquee { width: 75%; }}
+    &--split-33 { .hero__content { width: 33%; } .hero__marquee { width: 66%; }}
+    &--split-50 { .hero__content { width: 50%; } .hero__marquee { width: 50%; }}
+    &--split-66 { .hero__content { width: 66%; } .hero__marquee { width: 33%; }}
+    &--split-75 { .hero__content { width: 75%; } .hero__marquee { width: 25%; }}
 }

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html class="cui" lang="en" id="styleguide">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cisco UI Kit</title>
+
+        <link rel="stylesheet" href="public/css/animate.css">
+        <link rel="stylesheet" href="assets/css/cui-styleguide.min.css">
+        <link rel="stylesheet" href="public/css/featherlight.min.css">
+        <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="public/js/styleguide.js"></script>
+        <script src="public/js/jquery-scrollto.js"></script>
+        <script src="public/js/clipboard.js"></script>
+        <script src="public/js/featherlight.min.js"></script>
+        <script src="public/js/Markdown.Converter.js"></script>
+    </head>
+    <body class="styleguide">
+        <div class="content-fluid">
+            <nav id="styleguideSidebar" class="sidebar">
+                <div class="sidebar__header">
+                    <div class="sidebar__header-title">Cisco UI</div>
+                </div>
+                <ul id="rootSidebar" data-kss-ref="styleguide.homepage">
+                    <li class="sidebar__item" id="section-gettingStarted">
+                        <a onclick="doNav('./index.html')">Getting Started</a>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>Resources</a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://bx.cisco.com/cbx-portal/" target="_blank">Cisco Brand Exchange</a></li>
+                            <li class="sidebar__item"><a href="https://cisco.jiveon.com/groups/atlantic/pages/about" target="_blank">Jive Home Page</a></li>
+                            <li class="sidebar__item"><a href="https://cisco.jiveon.com/docs/DOC-1575948" target="_blank">Jive FAQ</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">Angular 1.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">Angular 4.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">React Components</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>For Designers</a>
+                        <ul>
+                            <li class="sidebar__item"><a href="public/documents/sketch/CiscoUI-Icons.sketch" download="public/documents/sketch/CiscoUI-Icons.sketch">Icons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip" download="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip">SketchPalette Plugin</a></li>
+                            <li class="sidebar__item"><a href="https://github.com/andrewfiorillo/sketch-palettes" target="_blank">SketchPalette Plugin Instructions</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>Older Versions</a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.4-official/" target="_blank">Version 1.0.4</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.3-official/" target="_blank">Version 1.0.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.2-official/" target="_blank">Version 1.0.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.1-official/" target="_blank">Version 1.0.1</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.0-official/" target="_blank">Version 1.0.0</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>Examples</a>
+                        <ul>
+                            <li class="sidebar__item">
+                                <a href="assets/basic.html" target="_blank">Basic</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/standard.html" target="_blank">Standard</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/dashboard.html" target="_blank">Dashboard</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/stickyfooter.html" target="_blank">Sticky Footer</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="rootDrawer" class="sidebar__drawer">
+                        <a>Pattern Library</a>
+                        <ul>
+                            <li class="sidebar__drawer" id="section-base">
+                                <a>Base</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-base-typography">
+                                        <a onclick="doNav('section-base.html#base-typography')">Typography  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-grid">
+                                        <a onclick="doNav('section-base.html#base-grid')">Grid System  <span class="label label--tiny label--success label--bordered qtr-margin-left">new</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-button">
+                                        <a onclick="doNav('section-base.html#base-button')">Button</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-checkbox">
+                                        <a onclick="doNav('section-base.html#base-checkbox')">Checkbox</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-color">
+                                        <a onclick="doNav('section-base.html#base-color')">Color</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-icons">
+                                        <a onclick="doNav('section-base.html#base-icons')">Icons</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-input">
+                                        <a onclick="doNav('section-base.html#base-input')">Input  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-label">
+                                        <a onclick="doNav('section-base.html#base-label')">Label  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-link">
+                                        <a onclick="doNav('section-base.html#base-link')">Link</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-list">
+                                        <a onclick="doNav('section-base.html#base-list')">List</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-panel">
+                                        <a onclick="doNav('section-base.html#base-panel')">Panel  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-radio">
+                                        <a onclick="doNav('section-base.html#base-radio')">Radio</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-section">
+                                        <a onclick="doNav('section-base.html#base-section')">Section</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-select">
+                                        <a onclick="doNav('section-base.html#base-select')">Select</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-switch">
+                                        <a onclick="doNav('section-base.html#base-switch')">Switch</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-table">
+                                        <a onclick="doNav('section-base.html#base-table')">Table  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-thumbnail">
+                                        <a onclick="doNav('section-base.html#base-thumbnail')">Thumbnail  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar__drawer" id="section-components">
+                                <a>Components</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-components-activity">
+                                        <a onclick="doNav('section-components.html#components-activity')">Activity</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-alert">
+                                        <a onclick="doNav('section-components.html#components-alert')">Alert</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-badge">
+                                        <a onclick="doNav('section-components.html#components-badge')">Badge</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-breadcrumb">
+                                        <a onclick="doNav('section-components.html#components-breadcrumb')">Breadcrumb</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-figure">
+                                        <a onclick="doNav('section-components.html#components-figure')">Figure</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-gauge">
+                                        <a onclick="doNav('section-components.html#components-gauge')">Gauge</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-hero">
+                                        <a onclick="doNav('section-components.html#components-hero')">Hero  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-loader">
+                                        <a onclick="doNav('section-components.html#components-loader')">Loader</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-rating">
+                                        <a onclick="doNav('section-components.html#components-rating')">Rating</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-scoreboard">
+                                        <a onclick="doNav('section-components.html#components-scoreboard')">Scoreboard  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-step">
+                                        <a onclick="doNav('section-components.html#components-step')">Step</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-tab">
+                                        <a onclick="doNav('section-components.html#components-tab')">Tab</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-toast">
+                                        <a onclick="doNav('section-components.html#components-toast')">Toast</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar__drawer" id="section-layout">
+                                <a>Layout</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-layout-footer">
+                                        <a onclick="doNav('section-layout.html#layout-footer')">Footer  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-layout-header">
+                                        <a onclick="doNav('section-layout.html#layout-header')">Header</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-layout-sidebar">
+                                        <a onclick="doNav('section-layout.html#layout-sidebar')">Sidebar  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar__drawer" id="section-utilities">
+                                <a>Utilities</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-utilities-helpers">
+                                        <a onclick="doNav('section-utilities.html#utilities-helpers')">Helpers</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <header id="styleguideHeader" class="header header--compressed">
+                    <div class="header-bar container">
+                        <a class="btn btn--small btn--icon toggle-menu">
+                            <span class="icon-list-menu"></span>
+                        </a>
+                        <a class="header-bar__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <div class="header-bar__main">
+                            <div class="header-heading">
+                                <h1 class="page-title">Cisco UI Kit</h1>
+                            </div>
+                        </div>
+                        <div class="header-toolbar">
+                            <a class="btn btn--small btn--icon" href="mailto:atlantic-ui-styleguide@external.cisco.com?Subject=Feedback" title="Submit Feedback">
+                                <span class="icon-feedback"></span>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <div class="content"> <div class="hero hero--indigo">
+    <div class="hero__content">
+        <div class="container center-xs">
+            <div class="row">
+                <div class="col-md-4 col-xl-2">
+                    <img style="max-height:150px" src="public/img/CiscoUIMainLogo-2.png">
+                </div>
+                <div class="col-md-8 col-xl-10">
+                    <div class="flex-fluid">
+                        <h1>Cisco user interface kit <sup class="text-large hidden-xs">1.0.5</sup></h1>
+                        <p class="text-large">A web-based implementation of the UI design language</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div id="broadcast" class="alert hide">
+            <div class="alert__icon icon-info-circle"></div>
+            <div id="broadcast-msg" class="alert__message"></div>
+        </div>
+        <div class="secondary-tabs">
+            <ul class="tabs tabs--tall">
+                <li id="tab-intro" class="tab active">
+                    <a><div class="tab-heading" title="Intro">Intro</div></a>
+                </li>
+                <li id="tab-download" class="tab">
+                    <a><div class="tab-heading" title="Download">Download</div></a>
+                </li>
+                <li id="tab-changelog" class="tab">
+                    <a><div class="tab-heading" title="Change Log">Change Log</div></a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab-intro-content" class="tab-pane active">
+                    <div class="panel panel--loose panel--bordered">
+                        <div class="row">
+                            <div class="col-md-8 text-large">
+                                <h1 class="text-huge text-blue base-margin-bottom">Build Amazing Apps!</h1>
+                                <p>The Cisco UI kit is designed to be the modern, lightweight presentation layer you need to quickly skin your components with the latest from Cisco Brand.  The kit comes bundled with over 30 common patterns which can be used as building blocks with which you can construct your application.</p>
+                                <p>Using <a target="_blank" href="https://facebook.github.io/react/">React</a> or <a target="_blank" href="https://angularjs.org/">Angular</a>? Great! This kit is javascript-agnostic so use whatever javascript tooling that works for you and your team.</p>
+                                <p>The kit itself is internal open source so anyone can contribute. We welcome both designers and developers and believe that this kit is an important collaboration keystone between those two groups.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel--bordered animated fadeInRight dbl-margin-bottom">
+                                    <img src="public/img/ui-kit-collage.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="panel panel--loose panel--bordered">
+                            <h1 class="text-huge text-center base-margin-bottom">What&#39;s New</h1>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="public/img/resourceHeroes.png">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul class="base-margin-top text-large">
+                                        <li>New core color <label class="label label--small label--indigo">INDIGO</label> You can find it in <a href="section-components.html#components-hero">Hero</a>, <a href="section-base.html#base-panel">Panel</a>, <a href="section-layout.html#layout-sidebar">Sidebar</a> and <a href="section-base.html#base-label">Label</a> patterns.</li>
+                                        <li>Migration from Bootstrap 3 Grid to Bootstrap 4 Grid. This change will be transparent to your applications although you will have additional capabilities going forward. Click <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">here</a> for more details on the new Flexbox-based grid and modifiers.</li>
+                                        <li>New Breakpoints! With our move to Bootstrap 4 Grid we are adopting their 5 grid tier breakpoint system. Click <a href="section-base.html#base-grid">here</a> for details.</li>
+                                        <li>Revamped <a href="section-layout.html#layout-footer">Footer</a> pattern with several variations.</li>
+                                        <li>Added fixed table support to the <a href="section-base.html#base-table">Table</a> pattern.</li>
+                                        <li>Added raised modifier to the <a href="section-base.html#base-thumbnail">Thumbnail</a> pattern.</li>
+                                        <li>Added copy to code clipboard
+                                        <li>Removed unnecessary font files (48 -&gt; 14) and converted the font-face mappings to only use woff/woff2 font formats.</li>
+                                        <li>Lots of bug fixes. See the change log for details.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="panel panel--loose panel--bordered">
+                            <h1 class="text-huge text-center base-margin-bottom">Resources</h1>
+                            <div class="row">
+                                <div class="col-md-8 offset-md-2">
+                                    <div class="row text-center">
+                                        <div class="col-md-6">
+                                            <dl class="text-large">
+                                                <dt>UI Kit Documentation Home Page</dt>
+                                                <dd><a target="_blank" href="http://cisco-ui.cisco.com">UI Kit Docs</a></dd>
+                                                <dt>UI Kit Open Source Code Repository</dt>
+                                                <dd><a target="_blank" href="http://gitlab.cisco.com/cisco-ui/pattern-library">Pattern Library</a></dd>
+                                                <dt>Cisco Brand Exchange</dt>
+                                                <dd><a target="_blank" href="http://bx.cisco.com/cbx-portal/">Brand Exchange Home</a></dd>
+                                                <dt>Cisco Brand Digital Standards</dt>
+                                                <dd><a target="_blank" href="https://cisco.jiveon.com/groups/atlantic/pages/about">Digital Standards Home</a></dd>
+                                            </dl>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <dl class="text-large">
+                                                <dt>UI Kit Frequently Asked Questions</dt>
+                                                <dd><a target="_blank" href="https://cisco.jiveon.com/docs/DOC-1575948">FAQ</a></dd>
+                                                <dt>Request UI Kit Developer Access</dt>
+                                                <dd><a target="_blank" href="mailto:kbroich@cisco.com?Subject=Request%20To%20Contribute">Developer Mailer</a></dd>
+                                                <dt>Request UI Kit Support</dt>
+                                                <dd><a target="_blank" href="mailto:atlantic-ui-styleguide@external.cisco.com?Subject=Support">Support Mailer</a></dd>
+                                                <dt>Submit Sketch or Illustrator Templates</dt>
+                                                <dd><a target="_blank" href="mailto:atlantic-ui-styleguide@external.cisco.com?Subject=Contribute%20Templates">Template Mailer</a></dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="panel panel--loose panel--bordered">
+                            <h1 class="text-huge text-center base-margin-bottom">Browser Support</h1>
+                            <div class="row">
+                                <div class="col-md-8 offset-md-2">
+                                    <div class="row">
+                                        <div class="col-md-4 center-xs">
+                                            <img src="public/img/browserSupport.png">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="flex-fluid text-left center-xs">
+                                                <h6 class="section">The Cisco UI Kit is geared for modern browsers only. Minimum browser versions include:</h6>
+                                                <div class="label-group base-margin-bottom">
+                                                    <span class="label label--blue">Chrome 43</span>
+                                                    <span class="label label--blue">Edge 12</span>
+                                                    <span class="label label--blue">Firefox 41</span>
+                                                    <span class="label label--blue">Internet Explorer 11</span>
+                                                    <span class="label label--blue">Opera 33</span>
+                                                    <span class="label label--blue">Safari 10</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="panel panel--loose panel--bordered">
+                            <div class="hero hero--loose">
+                                <div class="hero__content" style="background:url(public/img/networkintuitive.gif); background-size:cover; min-height:800px">
+                                    <div class="row">
+                                        <div class="col-md-6 offset-md-1">
+                                            <div class="base-margin">
+                                                <h1 class="text-huge base-margin-bottom">Coming Soon</h1>
+                                                <div class="text-large">
+                                                    <p>Angular web components. We have developers busy working on building out a set of reusable Angular 1.x and Angular 4.x components which follow the Cisco UI kit spec. You can access their Git code repositories <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">here</a> and <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">here</a>.</p>
+                                                    <p>Angular sandbox. In addition to the Angular web components we are also planning on making the Angular Sandbox available. This sandbox came from the Apollo team (thanks!) and will provide working component examples with documentation - very cool.</p>
+                                                    <p>React web components. Another team has been busy building out a set of React components for the UI kit. You can find the Git code <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">here</a>.</p>
+                                                    <p>Once the new digital web standards are available from Cisco Brand we will get busy working on version 2.0 of the UI kit which will look a lot more like the cisco.com home page. Stay tuned - we will announce once we get our grubby little hands on the spec.</p>
+                                                </div>
+                                                <blockquote class="dbl-margin-top blockquote--blue">
+                                                    <h1 class="text-blue">Cisco UI Kit<br>Development Team</h1>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-download-content" class="tab-pane">
+                    <section>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="panel panel--loose panel--bordered animated fadeInUp text-large" style="height:400px">
+                                    <div class="flex">
+                                        <h1 class="flex-fluid">Basic</h1>
+                                        <a class="btn btn--primary-ghost" target="_blank" href="dist/cui-1.0.5-official-basic.zip">Download</a>
+                                    </div>
+                                    <h6 class="subheading half-margin-top base-margin-bottom">Includes font files plus:</h6>
+                                    <ul class="list" style="column-count:2">
+                                        <li><a href="section-base.html#base-button">Button</a></li>
+                                        <li><a href="section-base.html#base-checkbox">Checkbox</a></li>
+                                        <li><a href="section-base.html#base-form">Form</a></li>
+                                        <li><a href="section-base.html#base-icons">Icons</a></li>
+                                        <li><a href="section-base.html#base-label">Label</a></li>
+                                        <li><a href="section-base.html#base-link">Link</a></li>
+                                        <li><a href="section-base.html#base-list">List</a></li>
+                                        <li><a href="section-base.html#base-panel">Panel</a></li>
+                                        <li><a href="section-base.html#base-section">Section</a></li>
+                                        <li><a href="section-base.html#base-select">Select</a></li>
+                                        <li><a href="section-base.html#base-switch">Switch</a></li>
+                                        <li><a href="section-base.html#base-table">Table</a></li>
+                                        <li><a href="section-base.html#base-thumbnail">Thumbnail</a></li>
+                                        <li><a href="section-base.html#base-typography">Typography</a></li>
+                                        <li><a href="section-utilities.html#utilities-helpers">Utilities</a></li>
+                                        <li>&nbsp;</li>
+                                        <li><a target="_blank" href="https://v4-alpha.getbootstrap.com/layout/grid/">Bootstrap Grid</a></li>
+                                        <li><a target="_blank" href="https://necolas.github.io/normalize.css/">Normalize (reset)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="panel panel--blue panel--bordered panel--loose animated text-large fadeInUp animation-delay-250" style="height:400px">
+                                    <div class="flex">
+                                        <h1 class="flex-fluid">Standard</h1>
+                                        <a class="btn btn--white-ghost" target="_blank" href="dist/cui-1.0.5-official-standard.zip">Download</a>
+                                    </div>
+                                    <h6 class="half-margin-top base-margin-bottom">Includes everything in Basic plus:</h6>
+                                    <ul class="list" style="column-count:2">
+                                        <li><a href="section-components.html#components-activity">Activity</a></li>
+                                        <li><a href="section-components.html#components-alert">Alert</a></li>
+                                        <li><a href="section-components.html#components-badge">Badge</a></li>
+                                        <li><a href="section-components.html#components-breadcrumb">Breadcrumb</a></li>
+                                        <li><a href="section-components.html#components-figure">Figure</a></li>
+                                        <li><a href="section-components.html#components-footer">Footer</a></li>
+                                        <li><a href="section-components.html#components-gauge">Gauge</a></li>
+                                        <li><a href="section-components.html#components-header">Header</a></li>
+                                        <li><a href="section-components.html#components-hero">Hero</a></li>
+                                        <li><a href="section-components.html#components-loader">Loader</a></li>
+                                        <li><a href="section-components.html#components-rating">Rating</a></li>
+                                        <li><a href="section-components.html#components-scoreboard">Scoreboard</a></li>
+                                        <li><a href="section-components.html#components-sidebar">Sidebar</a></li>
+                                        <li><a href="section-components.html#components-step">Step</a></li>
+                                        <li><a href="section-components.html#components-tab">Tab</a></li>
+                                        <li><a href="section-components.html#components-toast">Toast</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="panel panel--loose panel--bordered panel--dkgray animated text-large fadeInUp animation-delay-500" style="height:400px">
+                                    <div class="flex">
+                                        <h1 class="flex-fluid">Source</h1>
+                                        <a class="btn btn--white-ghost" target="_blank" href="dist/cui-1.0.5-official-source.zip">Download</a>
+                                    </div>
+                                    <h6 class="half-margin-top half-margin-bottom">Includes SASS source, font files, and raw icons</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="tab-changelog-content" class="tab-pane animated fadeIn">
+                    <section id="changelog-content"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+            </main>
+        </div>
+    </body>
+</html>

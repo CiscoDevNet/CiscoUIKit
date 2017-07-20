@@ -250,9 +250,7 @@
     color: $base-font-color;
     cursor: pointer;
     font-size: 0;
-    user-select: none;
     transition: all 0.1s linear;
-    //margin: ($base-spacing * 0.25) ($base-spacing * 0.5) 0 0;
 
     &.checkbox--inline {
         display: inline-block;

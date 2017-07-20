@@ -11,9 +11,9 @@
         <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
 
         <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
-        <script src="public/js/rainbow.min.js"></script>
         <script src="public/js/styleguide.js"></script>
         <script src="public/js/jquery-scrollto.js"></script>
+        <script src="public/js/clipboard.js"></script>
         <script src="public/js/featherlight.min.js"></script>
         <script src="public/js/Markdown.Converter.js"></script>
     </head>
@@ -33,6 +33,9 @@
                             <li class="sidebar__item"><a href="http://bx.cisco.com/cbx-portal/" target="_blank">Cisco Brand Exchange</a></li>
                             <li class="sidebar__item"><a href="https://cisco.jiveon.com/groups/atlantic/pages/about" target="_blank">Jive Home Page</a></li>
                             <li class="sidebar__item"><a href="https://cisco.jiveon.com/docs/DOC-1575948" target="_blank">Jive FAQ</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">Angular 1.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">Angular 4.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">React Components</a></li>
                         </ul>
                     </li>
                     <li class="sidebar__drawer">
@@ -46,6 +49,7 @@
                     <li class="sidebar__drawer">
                         <a>Older Versions</a>
                         <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.4-official/" target="_blank">Version 1.0.4</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.3-official/" target="_blank">Version 1.0.3</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.2-official/" target="_blank">Version 1.0.2</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.1-official/" target="_blank">Version 1.0.1</a></li>
@@ -63,6 +67,9 @@
                             </li>
                             <li class="sidebar__item">
                                 <a href="assets/dashboard.html" target="_blank">Dashboard</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/stickyfooter.html" target="_blank">Sticky Footer</a>
                             </li>
                         </ul>
                     </li>
@@ -88,7 +95,7 @@
                 </ul>
             </nav>
             <main>
-                <header id="styleguideHeader" class="header">
+                <header id="styleguideHeader" class="header header--compressed">
                     <div class="header-bar container">
                         <a class="btn btn--small btn--icon toggle-menu">
                             <span class="icon-list-menu"></span>
@@ -99,7 +106,7 @@
                         <div class="header-bar__main">
                             <div class="header-heading">
                                 {{#if homepage}}
-                                <h1 class="page-title">Cisco UI</h1>
+                                <h1 class="page-title">Cisco UI Kit</h1>
                                 {{else}}
                                 <h1 class="page-title">
                                     {{#eachSection rootName}}
@@ -119,7 +126,7 @@
                     </div>
                 </header>
                 {{#if homepage}}
-                <div class="content content-background--alt">{{{homepage}}}</div>
+                <div class="content">{{{homepage}}}</div>
                 {{else}}
                 <div class="content">
 
@@ -130,14 +137,14 @@
 
                         {{#ifDepth 1}}
                         <div id="{{referenceURI}}">
-                            <a class="link pull-right invisible" href="#{{referenceURI}}">
+                            <a class="link invisible" href="#{{referenceURI}}">
                                 <span class="icon-link"></span>
                             </a>
                         </div>
                         {{/ifDepth}}
 
                         {{#ifDepth 2}}
-                        <div class="panel panel--loose panel--dkgray depth-2" id="{{referenceURI}}">
+                        <div class="panel panel--loose panel--indigo depth-2" id="{{referenceURI}}">
                             <h1>{{checkTags header}}</h1>
                         {{/ifDepth}}
 
@@ -175,14 +182,15 @@
                                 {{/eachModifier}}
                             </div>
                             <div class="base-margin-top">
-                                <a class="markup-toggle link">
-                                    <span class="markup-label">View Source </span>
-                                    <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
-                                </a>
-                                <div class="markup-code panel panel--ltgray panel--bordered hidden qtr-margin-top">
-                                    <pre class="text-small">
-                                        <code data-language="html">{{removeIgnore markup}}</code>
-                                    </pre>
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">{{removeIgnore markup}}</code></pre>
                                 </div>
                             </div>
                             {{/if}}

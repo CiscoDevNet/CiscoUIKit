@@ -58,7 +58,7 @@ $breakpoints: (
 // $html-font-size: 62.5% !default;
 $html-font-size: 16px !default; // This is our current setting 1rem = 16px
 $base-font-size: 14px !default;
-$base-font-weight: 400 !default;
+$base-font-weight: 300 !default;
 
 // These font sizes are used to generate the scalable header sizes
 $xsmall-font-size: 10px !default;
@@ -69,7 +69,7 @@ $large-font-size: 16px !default;
 // Extra font sizes
 $tiny-font-size: 8px !default;
 $xlarge-font-size: 24px !default;
-$huge-font-size: 40px !default;
+$huge-font-size: 3rem !default;
 $goliath-font-size: 3.5rem !default;
 $compressed-font-size: $small-font-size !default;
 
@@ -87,7 +87,7 @@ $xlarge-icon-font-size: 24px !default;
 
 $base-line-height: 1.5 !default;
 $base-border-radius: 2px !default;
-$base-spacing: 21px !default;
+$base-spacing: 20px !default; // Note: Use even #s otherwise icons get clipped
 $base-z-index: 0 !default;
 
 
@@ -121,6 +121,7 @@ $med-blue: #34adde !default;
 $white: #ffffff !default;
 $black: #1a1a1a !default;
 $dark-blue: #2b5592 !default;
+$indigo: #005073 !default;
 $dark-gray-1: #39393b !default;
 $dark-gray-2: #58585b !default;
 $dark-gray-3: #626469 !default;
@@ -162,7 +163,7 @@ $base-colors: (
   warning-alt : $warning-alt
 );
 
-$base-hover-color: rgba(0,0,0,0.15) !default;
+$base-hover-color: rgba(0,0,0,0.10) !default;
 
 
 // -----------------------------------------------------------------------------
@@ -514,7 +515,8 @@ $base-border-color: $light-gray-3 !default;
 $base-border-color-alt: $white !default;
 $base-border: 1px solid $base-border-color !default;
 $base-border-alt: 1px solid $base-border-color-alt !default;
-$base-box-shadow: 0 1px 3px rgba(0,0,0,0.15) !default;
+$base-box-shadow: 0 10px 20px rgba(0,0,0,.15), 0 10px 12px rgba(0,0,0,.25) !default;
+$base-box-shadow-small: 0 0 5px 1px rgba(0,0,0,0.25) !default;
 
 
 // -----------------------------------------------------------------------------
@@ -670,6 +672,7 @@ $base-label-ltgray-background: $light-gray-5 !default;
 $base-label-mdgray-background: $light-gray-3 !default;
 $base-label-dkgray-background: $dark-gray-2 !default;
 $base-label-dkblue-background: $dark-blue !default;
+$base-label-indigo-background: $indigo !default;
 
 $label-sizes:   ("tiny", 15px, 9px, 0 6px),
                 ("small", 20px, $xsmall-font-size, 0 10px),
@@ -686,6 +689,7 @@ $label-colors:  ("info", $base-label-color, $info),
                 ("mdgray", $base-label-color-darker, $base-label-mdgray-background),
                 ("dkgray", $base-label-color, $base-label-dkgray-background),
                 ("dkblue", $base-label-color, $base-label-dkblue-background),
+                ("indigo", $base-label-color, $base-label-indigo-background),
                 ("white", $base-label-color-dark, $white),
                 ("ghost", $base-label-color, transparent, 1px solid $white);
 
@@ -746,7 +750,8 @@ $base-form-select-chevron-color: $med-gray-2 !default;
 $base-panel-color: $base-font-color !default;
 $base-panel-background: $white !default;
 $base-panel-margin: 1px 0 !default;
-$base-panel-hover-tint: 15 !default;
+$base-panel-hover-lighten: 10 !default;
+$base-panel-hover-darken: 10 !default;
 $base-panel-padding: $base-spacing * 0.5 !default;
 $base-panel-section-padding: ($base-spacing * 0.25) 0 !default;
 $base-panel-box-shadow: $base-box-shadow !default;
@@ -761,6 +766,8 @@ $base-panel-dkgray-color: $white !default;
 $base-panel-dkgray-background: $dark-gray-2 !default;
 $base-panel-dkblue-color: $white !default;
 $base-panel-dkblue-background: $dark-blue !default;
+$base-panel-indigo-color: $white !default;
+$base-panel-indigo-background: $indigo !default;
 
 $panel-colors:
     (
@@ -768,25 +775,29 @@ $panel-colors:
         params: (
             background: $base-panel-blue-background,
             color: $base-panel-blue-color,
+            embellish: 'lighten',
             link-color: $white
         )
     ),(
         name: 'ltgray',
         params: (
             background: $base-panel-ltgray-background,
-            color: $base-panel-ltgray-color
+            color: $base-panel-ltgray-color,
+            embellish: 'darken'
         )
     ),(
         name: 'mdgray',
         params: (
             background: $base-panel-mdgray-background,
-            color: $base-panel-mdgray-color
+            color: $base-panel-mdgray-color,
+            embellish: 'lighten'
         )
     ),(
         name: 'dkgray',
         params: (
             background: $base-panel-dkgray-background,
             color: $base-panel-dkgray-color,
+            embellish: 'lighten',
             link-color: $white
         )
     ),(
@@ -794,6 +805,15 @@ $panel-colors:
         params: (
             background: $base-panel-dkblue-background,
             color: $base-panel-dkblue-color,
+            embellish: 'lighten',
+            link-color: $white
+        )
+    ),(
+        name: 'indigo',
+        params: (
+            background: $base-panel-indigo-background,
+            color: $base-panel-indigo-color,
+            embellish: 'lighten',
             link-color: $white
         )
     ),(
@@ -801,6 +821,7 @@ $panel-colors:
         params: (
             background: $info,
             color: $white,
+            embellish: 'darken',
             link-color: $white
         )
     ),(
@@ -808,6 +829,7 @@ $panel-colors:
         params: (
             background: $success,
             color: $white,
+            embellish: 'lighten',
             link-color: $white
         )
     ),(
@@ -815,6 +837,7 @@ $panel-colors:
         params: (
             background: $warning,
             color: $white,
+            embellish: 'lighten',
             link-color: $white
         )
     ),(
@@ -822,6 +845,7 @@ $panel-colors:
         params: (
             background: $danger,
             color: $white,
+            embellish: 'lighten',
             link-color: $white
         )
     );
@@ -864,7 +888,7 @@ $xlarge-thumbnail-size: 96px !default;
 $huge-thumbnail-size: 128px !default;
 $goliath-thumbnail-size: 256px !default;
 $base-thumbnail-size: $medium-thumbnail-size !default;
-$base-thumbnail-border: 2px solid $white !default;
+$base-thumbnail-border: 2px solid $base-border-color !default;
 
 $default-thumbnail-size: $medium-thumbnail-size !default;
 
@@ -991,16 +1015,19 @@ $toast-max-width: 300px !default;
 $toast-icon-size: $base-font-size * 1.5 !default;
 $toast-border-width: $base-spacing * 0.25 !default;
 $toast-border-opacity: 0.1 !default;
-$toast-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25) !default;
+$toast-box-shadow: $base-box-shadow-small !default;
 
 
 // -----------------------------------------------------------------------------
 // Layout: Footer
 
-$footer-background-color: $pale-gray-1 !default;
-$footer-line-height: 1 !default;
-$footer-font-color: $dark-gray-2 !default;
-$footer-link-color: $med-gray-2 !default;
+$footer-background-color: $base-background-color !default;
+$footer-line-height: 1 !default; // Deprecated in 1.0.5
+$footer-font-color: $dark-gray-2 !default; // Deprecated in 1.0.5
+$footer-link-color: $med-gray-2 !default; // Deprecated in 1.0.5
+$footer-spacing-compressed: ($base-spacing * 0.5) 0 !default;
+$footer-spacing-regular: $base-spacing 0 !default;
+$footer-spacing-loose: ($base-spacing * 2) 0 !default;
 
 
 // -----------------------------------------------------------------------------
@@ -1048,10 +1075,31 @@ $header-utilities-color-disabled: $light-gray-3 !default;
 $sidebar-zindex: 1031 !default;
 $sidebar-color: $white !default;
 $sidebar-background: $cisco-blue !default;
+$sidebar-background-dkgray: $dark-gray-2 !default;
+$sidebar-background-indigo: $indigo $default;
 $sidebar-menu-width: $mobile-menu-width !default;
+$sidebar-divider-color: rgba($white, .25) !default;
+$sidebar-hover-lighten: 10 !default;
+$sidebar-hover-darken: 10 !default;
 $sidebar-item-height: 40px !default;
 $sidebar-item-background-selected: $med-blue !default;
 $sidebar-item-border-selected: 5px 0 0 $white inset !default;
 $sidebar-item-border: 1px solid $status-blue !default;
-$sidebar-item-border-shadow: 0 1px 0 $status-blue inset !default;
+$sidebar-item-border-shadow: $status-blue !default;
 $sidebar-title-font-size: 24px !default;
+$sidebar-colors:
+    (
+        name: 'dkgray',
+        params: (
+            background: $sidebar-background-dkgray,
+            color: $sidebar-color,
+            embellish: 'lighten'
+        )
+    ),(
+        name: 'indigo',
+        params: (
+            background: $sidebar-background-indigo,
+            color: $sidebar-color,
+            embellish: 'lighten'
+        )
+    );

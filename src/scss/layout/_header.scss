@@ -1,5 +1,5 @@
 //
-// Header updated
+// Header
 //
 // Since: 1.0.0
 //
@@ -218,7 +218,6 @@
 
     &-bar {
         @include flex-center-vertical;
-        max-width: none;
         height: $header-height-small;
 
         @include break-at(small) {

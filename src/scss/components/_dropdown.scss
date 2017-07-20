@@ -137,8 +137,11 @@
     transition: transform 0.1s cubic-bezier(.25,1.25,.75,1.25);
     opacity: 0;
     z-index: 10;
+}
 
-    .open & {
+.open .dropdown,
+.dropdown.open {
+    .dropdown-container {
         pointer-events: all;
         transform: translateY(0px);
         opacity: 1;
@@ -146,6 +149,10 @@
         border-top: 4px solid $base-accent-color;
         margin-top: $base-spacing * 0.25;
         padding-top: 0;
+        z-index: 10;
+        width: auto;
+        max-width: 320px;
+        min-width: 100px;
     }
 }
 
@@ -186,9 +193,9 @@
 
     a {
         @include text-ellipsis;
-        color: shade(#f5f5f5, 50);
+        color: $base-muted-color;
         display: block;
-        font-size: 11px;
+        font-size: $small-font-size;
         font-weight: 500;
         padding: 10px;
         text-shadow: none;
@@ -196,8 +203,8 @@
 
     li.active a,
     a:hover {
-        background: shade(#f5f5f5, 3);
-        color: shade(#f5f5f5, 60);
+        background: $base-accent-color;
+        color: $white;
         text-decoration: none;
     }
 

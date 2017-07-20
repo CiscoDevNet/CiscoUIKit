@@ -34,4 +34,31 @@
         color: $black;
         padding: $base-spacing * 0.25;
     }
+
+    .mobile {
+        height: 775px;
+        background-image: url(../../public/img/responsive-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+
+        iframe {
+            width: 320px;
+            height: 570px;
+            top: 100px;
+            overflow-y: hidden;
+            background-color: $white;
+            border-color: $black;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .tablet iframe {
+
+    }
+    .laptop iframe {
+
+    }
 }

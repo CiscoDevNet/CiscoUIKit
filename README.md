@@ -37,7 +37,7 @@ Before you can build the UI Kit you will need to install a few tools.
 $ npm install --global gulp-cli
 ```
 
-#### 4.1 There are (2) ways to get the source. Create a folder and clone the UI Kit source from Github like this:
+#### 4.1 There are several ways to get the source. Create a folder and clone the UI Kit source from Github like this:
 ```sh
 $ mkdir aui
 $ cd aui
@@ -49,7 +49,17 @@ NOTE: You will want to work on a feature branch (not master!). To create a featu
 $ git checkout -b foo origin/master
 ```
 
-#### 4.2 OR you can fetch the UI Kit source from Github via Bower dynamically like this:
+#### 4.2 Or you can fetch the UI Kit source from Git via NPM dynamically like this:
+in your package.json file add this line to the dependencies section:
+``` 
+"cisco-ui": "git+http://gitlab.cisco.com/cisco-ui/pattern-library.git#v1.0.4-official"
+```
+or from your command-line run:
+```
+npm install git+http://gitlab.cisco.com/cisco-ui/pattern-library.git#v1.0.4-official --save
+```
+
+#### 4.3 Or you can fetch the UI Kit source from Git via Bower dynamically like this:
 in your bower.json file add this line to the dependencies section:
 ``` 
 "cisco-ui": "http://gitlab.cisco.com/cisco-ui/pattern-library.git#v1.0.4-official"

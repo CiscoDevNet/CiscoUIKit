@@ -45,7 +45,7 @@ var cfg = {
     * Default Task
     */
     gulp.task('default', ['clean'], function() {
-        run(['pkg:views', 'pkg:docs', 'compile:fonts', 'pkg:images', 'pkg:bower', 'pkg:changelog'], 'replace:version', 'pkg:examples');
+        run(['pkg:views', 'pkg:docs', 'compile:fonts', 'pkg:images', 'pkg:bower', 'pkg:changelog', 'pkg:broadcast'], 'replace:version', 'pkg:examples');
     });
 
     /*
@@ -221,6 +221,14 @@ var cfg = {
     */
     gulp.task('pkg:changelog', function() {
         gulp.src('./changelog.md')
+        .pipe(gulp.dest(cfg.targetDir + '/docs'));
+    });
+
+    /*
+    * Task: pkg:broadcast
+    */
+    gulp.task('pkg:broadcast', function() {
+        gulp.src('./broadcast.json')
         .pipe(gulp.dest(cfg.targetDir + '/docs'));
     });
 

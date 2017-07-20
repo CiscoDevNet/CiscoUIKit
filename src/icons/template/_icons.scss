@@ -55,8 +55,8 @@
 //
 // Markup:
 // <div class="base-margin-top row"><% _.each(glyphs, function(glyph) { %>
-//   <div class="col-xs-6 col-sm-4 col-md-3" title="icon-<%= glyph.fileName %>">
-//     <div class="panel panel--bordered qtr-margin-bottom">
+//   <div class="col-xs-6 col-sm-4 col-md-3 qtr-margin-bottom" title="icon-<%= glyph.fileName %>">
+//     <div class="panel panel--bordered">
 //         <div class="flex-center-vertical">
 //             <div class="flex-center" style="width:48px;height:48px">
 //                 <span class="icon-<%= glyph.fileName %> icon-medium"></span>

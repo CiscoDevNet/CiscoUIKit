@@ -1,5 +1,5 @@
 //
-// Button updated
+// Button
 //
 // Since 1.0.0
 // sketch
@@ -12,10 +12,12 @@
 // Size
 //
 // Markup:
-// <button class="btn btn--small">Small</button>
-// <button class="btn btn--small btn--wide">Small (wide)</button>
-// <button class="btn">Default</button>
-// <button class="btn btn--wide">Default (wide)</button>
+// <ul class="list list--inline list--loose">
+//     <li><button class="btn btn--small">Small</button></li>
+//     <li><button class="btn btn--small btn--wide">Small (wide)</button></li>
+//     <li><button class="btn">Default</button></li>
+//     <li><button class="btn btn--wide">Default (wide)</button></li>
+// </ul>
 //
 // Weight: 1
 //
@@ -27,12 +29,14 @@
 // Color
 //
 // Markup:
-// <button class="btn">Default</button>
-// <button class="btn btn--primary">Primary</button>
-// <button class="btn btn--secondary">Secondary</button>
-// <button class="btn btn--white">White</button>
-// <button class="btn btn--negative">Negative</button>
-// <button class="btn btn--success">Success</button>
+// <ul class="list list--inline list--loose">
+//     <li><button class="btn">Default</button></li>
+//     <li><button class="btn btn--primary">Primary</button></li>
+//     <li><button class="btn btn--secondary">Secondary</button></li>
+//     <li><button class="btn btn--white">White</button></li>
+//     <li><button class="btn btn--negative">Negative</button></li>
+//     <li><button class="btn btn--success">Success</button></li>
+// </ul>
 //
 // Weight: 2
 //
@@ -109,6 +113,11 @@
 //        <div><button class="btn btn--white">White</button></div><br>
 //        <div><button class="btn btn--white-ghost">White Ghost</button></div><br>
 //     </div>
+//     <div class="col-md-4 panel panel--indigo text-center">
+//        <h3>Indigo BG</h3><br>
+//        <div><button class="btn btn--white">White</button></div><br>
+//        <div><button class="btn btn--white-ghost">White Ghost</button></div><br>
+//     </div>
 // </div>
 //
 // Weight: 4
@@ -123,86 +132,39 @@
 // <blockquote>A button with only an icon</blockquote>
 //
 // Markup:
-// <div>
-//     <button class="btn btn--icon btn--small">
-//         <span class="icon-tools"></span>
-//     </button>
-//     <button class="btn btn--icon btn--small btn--primary">
-//         <span class="icon-bookmark"></span>
-//     </button>
-//     <button class="btn btn--icon btn--small btn--secondary">
-//         <span class="icon-refresh"></span>
-//     </button>
-//     <button class="btn btn--icon btn--small btn--white">
-//         <span class="icon-user"></span>
-//     </button>
-//     <button class="btn btn--icon btn--small btn--negative">
-//         <span class="icon-power"></span>
-//     </button>
-//     <button class="btn btn--icon btn--small btn--success">
-//         <span class="icon-check"></span>
-//     </button>
-//     <a class="btn btn--icon btn--small btn--white-ghost">
-//         <span class="icon-like"></span>
-//     </a>
-//     <a class="btn btn--icon btn--small btn--gray-ghost">
-//         <span class="icon-like"></span>
-//     </a>
-// </div>
-// <br>
-// <div>
-//     <button class="btn btn--icon">
-//         <span class="icon-tools"></span>
-//     </button>
-//     <button class="btn btn--icon btn--primary">
-//         <span class="icon-bookmark"></span>
-//     </button>
-//     <button class="btn btn--icon btn--secondary">
-//         <span class="icon-refresh"></span>
-//     </button>
-//     <button class="btn btn--icon btn--white">
-//         <span class="icon-user"></span>
-//     </button>
-//     <button class="btn btn--icon btn--negative">
-//         <span class="icon-power"></span>
-//     </button>
-//     <button class="btn btn--icon btn--success">
-//         <span class="icon-check"></span>
-//     </button>
-//     <a class="btn btn--icon btn--white-ghost">
-//         <span class="icon-like"></span>
-//     </a>
-//     <a class="btn btn--icon btn--gray-ghost">
-//         <span class="icon-like"></span>
-//     </a>
-// </div>
-// <br>
-// <div>
-//     <button class="btn btn--icon btn--large">
-//         <span class="icon-tools"></span>
-//     </button>
-//     <button class="btn btn--icon btn--large btn--primary">
-//         <span class="icon-bookmark"></span>
-//     </button>
-//     <button class="btn btn--icon btn--large btn--secondary">
-//         <span class="icon-refresh"></span>
-//     </button>
-//     <button class="btn btn--icon btn--large btn--white">
-//         <span class="icon-user"></span>
-//     </button>
-//     <button class="btn btn--icon btn--large btn--negative">
-//         <span class="icon-power"></span>
-//     </button>
-//     <button class="btn btn--icon btn--large btn--success">
-//         <span class="icon-check"></span>
-//     </button>
-//     <a class="btn btn--icon btn--large btn--white-ghost">
-//         <span class="icon-like"></span>
-//     </a>
-//     <a class="btn btn--icon btn--large btn--gray-ghost">
-//         <span class="icon-like"></span>
-//     </a>
-// </div>
+// <p class="text-large">Small Button Icons</p>
+// <ul class="list list--inline list--loose base-margin-bottom">
+//     <li><button class="btn btn--icon btn--small"><span class="icon-tools"></span></button></li>
+//     <li><button class="btn btn--icon btn--small btn--primary"><span class="icon-bookmark"></span></button></li>
+//     <li><button class="btn btn--icon btn--small btn--secondary"><span class="icon-refresh"></span></button></li>
+//     <li><button class="btn btn--icon btn--small btn--white"><span class="icon-user"></span></button></li>
+//     <li><button class="btn btn--icon btn--small btn--negative"><span class="icon-power"></span></button></li>
+//     <li><button class="btn btn--icon btn--small btn--success"><span class="icon-check"></span></button></li>
+//     <li><a class="btn btn--icon btn--small btn--white-ghost"><span class="icon-like"></span></a></li>
+//     <li><a class="btn btn--icon btn--small btn--gray-ghost"><span class="icon-like"></span></a></li>
+// </ul>
+// <p class="text-large">Default Button Icons</p>
+// <ul class="list list--inline list--loose base-margin-bottom">
+//     <li><button class="btn btn--icon"><span class="icon-tools"></span></button></li>
+//     <li><button class="btn btn--icon btn--primary"><span class="icon-bookmark"></span></button></li>
+//     <li><button class="btn btn--icon btn--secondary"><span class="icon-refresh"></span></button></li>
+//     <li><button class="btn btn--icon btn--white"><span class="icon-user"></span></button></li>
+//     <li><button class="btn btn--icon btn--negative"><span class="icon-power"></span></button></li>
+//     <li><button class="btn btn--icon btn--success"><span class="icon-check"></span></button></li>
+//     <li><a class="btn btn--icon btn--white-ghost"><span class="icon-like"></span></a></li>
+//     <li><a class="btn btn--icon btn--gray-ghost"><span class="icon-like"></span></a></li>
+// </ul>
+// <p class="text-large">Large Button Icons</p>
+// <ul class="list list--inline list--loose base-margin-bottom">
+//     <li><button class="btn btn--icon btn--large"><span class="icon-tools"></span></button></li>
+//     <li><button class="btn btn--icon btn--large btn--primary"><span class="icon-bookmark"></span></button></li>
+//     <li><button class="btn btn--icon btn--large btn--secondary"><span class="icon-refresh"></span></button></li>
+//     <li><button class="btn btn--icon btn--large btn--white"><span class="icon-user"></span></button></li>
+//     <li><button class="btn btn--icon btn--large btn--negative"><span class="icon-power"></span></button></li>
+//     <li><button class="btn btn--icon btn--large btn--success"><span class="icon-check"></span></button></li>
+//     <li><a class="btn btn--icon btn--large btn--white-ghost"><span class="icon-like"></span></a></li>
+//     <li><a class="btn btn--icon btn--large btn--gray-ghost"><span class="icon-like"></span></a></li>
+// </ul>
 //
 // Weight: 5
 //
@@ -288,6 +250,10 @@ a.btn.btn--icon.btn--small {
                 font-size: $aui-small-button-icon-font-size;
             }
             overflow: visible;
+
+            .btn__subtext {
+                top: $aui-small-button-icon-height + ($base-spacing * 0.25);
+            }
         }
         &.btn--large {
             @include btn-size(
@@ -301,6 +267,9 @@ a.btn.btn--icon.btn--small {
                 font-size: $aui-large-button-icon-font-size;
             }
             overflow: visible;
+            .btn__subtext {
+                top: $aui-large-button-icon-height + ($base-spacing * 0.25);
+            }
         }
 
         .btn__subtext {
@@ -309,7 +278,9 @@ a.btn.btn--icon.btn--small {
             position: absolute;
             left: 0;
             right: 0;
-            bottom: -($large-icon-font-size - $base-step-line-width);
+            bottom: 0;
+            top: $aui-button-icon-height + ($base-spacing * 0.25);
+            margin: 0;
         }
     }
 }

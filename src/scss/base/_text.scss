@@ -59,7 +59,7 @@
 //                     </div>
 //                 </div>
 //             <div class="help-block text-warning">
-//                 <span class="icon-exclamation-circle"></span>
+//                 <span class="icon-exclamation-triangle"></span>
 //                 <span>This is a required field</span>
 //             </div>
 //             </div>
@@ -247,6 +247,13 @@ textarea.textarea {
         font-size: 14px;
     }
 
+    input[type="search"] { // Search icon should always be on the left
+        ~.link {
+            order: 1;
+            margin-left: 0;
+        }
+    }
+
     input,
     select,
     textarea {
@@ -261,10 +268,6 @@ textarea.textarea {
         -webkit-appearance: none;
 
         ~ label {
-            margin-bottom: -10px;
-            @include break-at(small) {
-                margin-bottom: 0;
-            }
             font-style: italic;
             &::after {
                 position: absolute;
@@ -329,49 +332,17 @@ textarea.textarea {
         &.input--dirty.input--invalid,
         &.ng-dirty.ng-invalid,
         &.ng-touched.ng-invalid {
-            ~ label {
-                &::after {
-                    background-color: $danger;
-                }
-            }
-            ~ .required-block {
-                color: $danger;
-                transform: scale(1.25);
-                transition: transform .1s ease-in;
-                span[class^="icon-"] {
-                    display: none;
-                }
-                &::after {
-                    @include icon-error;
-                }
+            ~ label:after {
+                background: $danger;
             }
         }
 
         &.input--dirty.input--invalid-required,
         &.ng-dirty.ng-invalid-required,
         &.ng-touched.ng-invalid-required {
-            ~ label {
-                &::after {
-                    background: $base-border-color;
-                }
-            }
-            &:focus {
-                ~ label {
-                    &::after {
-                        background: $base-accent-color;
-                    }
-                }
-            }
-            ~ .required-block {
-                color: $warning;
-                transform: scale(1.25);
-                transition: transform .1s ease-in;
-                span[class^="icon-"] {
-                    display: none;
-                }
-                &::after {
-                    @include icon-exclamation-circle;
-                }
+            ~ label:after,
+            &:focus ~ label:after {
+                background: $warning;
             }
         }
     }
@@ -397,15 +368,13 @@ textarea.textarea {
     }
 
     .required-block {
-        display: flex;
-        position: absolute;
-        right: $base-spacing;
-        top: $base-spacing;
+        display: none;
+        position: relative;
+        right: 0;
+        top: 0;
 
         @include break-at(small) {
-            position: relative;
-            right: 0;
-            top: 0;
+            display: flex;
         }
 
         align-items: center;

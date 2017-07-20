@@ -127,17 +127,10 @@ ul.list {
 
 	&--inline {
 		@include break-at(small) {
-			display: inline-flex;
-			flex-wrap: wrap;
-
-			li + li {
-				margin: 0 0 0 -1px;
-			}
+			@include list--inline;
 
 			&.list--divider {
-				li + li:before {
-					@include vertical-divider;
-				}
+				@include list-divider;
 			}
 
 			&.list--compressed {

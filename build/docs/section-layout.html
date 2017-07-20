@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html class="cui" lang="en" id="styleguide">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cisco UI Kit</title>
+
+        <link rel="stylesheet" href="public/css/animate.css">
+        <link rel="stylesheet" href="assets/css/cui-styleguide.min.css">
+        <link rel="stylesheet" href="public/css/featherlight.min.css">
+        <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="public/js/styleguide.js"></script>
+        <script src="public/js/jquery-scrollto.js"></script>
+        <script src="public/js/clipboard.js"></script>
+        <script src="public/js/featherlight.min.js"></script>
+        <script src="public/js/Markdown.Converter.js"></script>
+    </head>
+    <body class="styleguide">
+        <div class="content-fluid">
+            <nav id="styleguideSidebar" class="sidebar">
+                <div class="sidebar__header">
+                    <div class="sidebar__header-title">Cisco UI</div>
+                </div>
+                <ul id="rootSidebar" data-kss-ref="Layout">
+                    <li class="sidebar__item" id="section-gettingStarted">
+                        <a onclick="doNav('./index.html')">Getting Started</a>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>Resources</a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://bx.cisco.com/cbx-portal/" target="_blank">Cisco Brand Exchange</a></li>
+                            <li class="sidebar__item"><a href="https://cisco.jiveon.com/groups/atlantic/pages/about" target="_blank">Jive Home Page</a></li>
+                            <li class="sidebar__item"><a href="https://cisco.jiveon.com/docs/DOC-1575948" target="_blank">Jive FAQ</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">Angular 1.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">Angular 4.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">React Components</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>For Designers</a>
+                        <ul>
+                            <li class="sidebar__item"><a href="public/documents/sketch/CiscoUI-Icons.sketch" download="public/documents/sketch/CiscoUI-Icons.sketch">Icons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip" download="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip">SketchPalette Plugin</a></li>
+                            <li class="sidebar__item"><a href="https://github.com/andrewfiorillo/sketch-palettes" target="_blank">SketchPalette Plugin Instructions</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>Older Versions</a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.4-official/" target="_blank">Version 1.0.4</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.3-official/" target="_blank">Version 1.0.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.2-official/" target="_blank">Version 1.0.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.1-official/" target="_blank">Version 1.0.1</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.0-official/" target="_blank">Version 1.0.0</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>Examples</a>
+                        <ul>
+                            <li class="sidebar__item">
+                                <a href="assets/basic.html" target="_blank">Basic</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/standard.html" target="_blank">Standard</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/dashboard.html" target="_blank">Dashboard</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/stickyfooter.html" target="_blank">Sticky Footer</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="rootDrawer" class="sidebar__drawer">
+                        <a>Pattern Library</a>
+                        <ul>
+                            <li class="sidebar__drawer" id="section-base">
+                                <a>Base</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-base-typography">
+                                        <a onclick="doNav('section-base.html#base-typography')">Typography  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-grid">
+                                        <a onclick="doNav('section-base.html#base-grid')">Grid System  <span class="label label--tiny label--success label--bordered qtr-margin-left">new</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-button">
+                                        <a onclick="doNav('section-base.html#base-button')">Button</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-checkbox">
+                                        <a onclick="doNav('section-base.html#base-checkbox')">Checkbox</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-color">
+                                        <a onclick="doNav('section-base.html#base-color')">Color</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-icons">
+                                        <a onclick="doNav('section-base.html#base-icons')">Icons</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-input">
+                                        <a onclick="doNav('section-base.html#base-input')">Input  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-label">
+                                        <a onclick="doNav('section-base.html#base-label')">Label  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-link">
+                                        <a onclick="doNav('section-base.html#base-link')">Link</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-list">
+                                        <a onclick="doNav('section-base.html#base-list')">List</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-panel">
+                                        <a onclick="doNav('section-base.html#base-panel')">Panel  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-radio">
+                                        <a onclick="doNav('section-base.html#base-radio')">Radio</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-section">
+                                        <a onclick="doNav('section-base.html#base-section')">Section</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-select">
+                                        <a onclick="doNav('section-base.html#base-select')">Select</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-switch">
+                                        <a onclick="doNav('section-base.html#base-switch')">Switch</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-table">
+                                        <a onclick="doNav('section-base.html#base-table')">Table  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-thumbnail">
+                                        <a onclick="doNav('section-base.html#base-thumbnail')">Thumbnail  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar__drawer" id="section-components">
+                                <a>Components</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-components-activity">
+                                        <a onclick="doNav('section-components.html#components-activity')">Activity</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-alert">
+                                        <a onclick="doNav('section-components.html#components-alert')">Alert</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-badge">
+                                        <a onclick="doNav('section-components.html#components-badge')">Badge</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-breadcrumb">
+                                        <a onclick="doNav('section-components.html#components-breadcrumb')">Breadcrumb</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-figure">
+                                        <a onclick="doNav('section-components.html#components-figure')">Figure</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-gauge">
+                                        <a onclick="doNav('section-components.html#components-gauge')">Gauge</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-hero">
+                                        <a onclick="doNav('section-components.html#components-hero')">Hero  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-loader">
+                                        <a onclick="doNav('section-components.html#components-loader')">Loader</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-rating">
+                                        <a onclick="doNav('section-components.html#components-rating')">Rating</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-scoreboard">
+                                        <a onclick="doNav('section-components.html#components-scoreboard')">Scoreboard  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-step">
+                                        <a onclick="doNav('section-components.html#components-step')">Step</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-tab">
+                                        <a onclick="doNav('section-components.html#components-tab')">Tab</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-toast">
+                                        <a onclick="doNav('section-components.html#components-toast')">Toast</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar__drawer" id="section-layout">
+                                <a>Layout</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-layout-footer">
+                                        <a onclick="doNav('section-layout.html#layout-footer')">Footer  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-layout-header">
+                                        <a onclick="doNav('section-layout.html#layout-header')">Header</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-layout-sidebar">
+                                        <a onclick="doNav('section-layout.html#layout-sidebar')">Sidebar  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar__drawer" id="section-utilities">
+                                <a>Utilities</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-utilities-helpers">
+                                        <a onclick="doNav('section-utilities.html#utilities-helpers')">Helpers</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <header id="styleguideHeader" class="header header--compressed">
+                    <div class="header-bar container">
+                        <a class="btn btn--small btn--icon toggle-menu">
+                            <span class="icon-list-menu"></span>
+                        </a>
+                        <a class="header-bar__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <div class="header-bar__main">
+                            <div class="header-heading">
+                                <h1 class="page-title">
+                                            Cisco UI Layout
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="header-toolbar">
+                            <a class="btn btn--small btn--icon" href="mailto:atlantic-ui-styleguide@external.cisco.com?Subject=Feedback" title="Submit Feedback">
+                                <span class="icon-feedback"></span>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <div class="content">
+
+                    <a name="top" class="invisible">&nbsp;</a>
+                    <div class="container">
+
+
+                        <div id="layout">
+                            <a class="link invisible" href="#layout">
+                                <span class="icon-link"></span>
+                            </a>
+                        </div>
+
+
+
+
+
+                            
+                            
+
+
+                        <div class="panel panel--loose panel--indigo depth-2" id="layout-footer">
+                            <h1>Footer  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></h1>
+
+
+
+                            <div><p>The footer markup has been updated in this release. The old markup will still work in this release but is deprecated and will be removed in the next release. Please add the class &#39;footer--new&#39; and update your markup to utilize the updated footer pattern.<br><br>
+Since: 1.0.0</p>
+</div>
+
+                            </div>
+                            
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">footer</span>
+                                <span class="text-normal">Default</span>
+                            </h4>
+
+
+
+                            <div>
+                                <footer class="footer footer--new">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+    <div class="footer__legal">
+        <div class="footer__logo">
+            <a href="http://www.cisco.com" target="_blank">
+                <span class="icon-cisco"></span>
+            </a>
+        </div>
+        <div class="footer__copyright">
+            <div>Copyright &copy; 2017 Cisco Systems Inc.</div>
+            <div>All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;footer class=&quot;footer footer--new&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/terms_condition.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/trademark.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;footer__legal&quot;&gt;
+        &lt;div class=&quot;footer__logo&quot;&gt;
+            &lt;a href=&quot;http://www.cisco.com&quot; target=&quot;_blank&quot;&gt;
+                &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;footer__copyright&quot;&gt;
+            &lt;div&gt;Copyright &amp;copy; 2017 Cisco Systems Inc.&lt;/div&gt;
+            &lt;div&gt;All rights reserved.&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">footer</span>
+                                <span class="text-normal">Basic</span>
+                            </h4>
+
+
+                            <div><blockquote>The links in this footer are the minimum required by Cisco legal</blockquote></div>
+
+                            <div>
+                                <footer class="footer footer--new footer--basic">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+</footer>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;footer class=&quot;footer footer--new footer--basic&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/terms_condition.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/trademark.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">footer</span>
+                                <span class="text-normal">Padding</span>
+                            </h4>
+
+
+
+                            <div>
+                                <p>COMPRESSED</p>
+<footer class="footer footer--new footer--basic footer--compressed">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+</footer>
+<p>DEFAULT</p>
+<footer class="footer footer--new footer--basic">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+</footer>
+<p>LOOSE</p>
+<footer class="footer footer--new footer--basic footer--loose">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+</footer>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;p&gt;COMPRESSED&lt;/p&gt;
+&lt;footer class=&quot;footer footer--new footer--basic footer--compressed&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/terms_condition.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/trademark.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;p&gt;DEFAULT&lt;/p&gt;
+&lt;footer class=&quot;footer footer--new footer--basic&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/terms_condition.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/trademark.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;p&gt;LOOSE&lt;/p&gt;
+&lt;footer class=&quot;footer footer--new footer--basic footer--loose&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/terms_condition.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/web/siteassets/legal/trademark.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+                        <div class="panel panel--loose panel--indigo depth-2" id="layout-header">
+                            <h1>Header</h1>
+
+
+
+                            <div><p>Since: 1.0.0</p>
+</div>
+
+                            </div>
+                            
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">header</span>
+                                <span class="text-normal">Default</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="panel panel--ltgray panel--compressed IGNORE">
+<header class="header">
+    <div class="header-bar container">
+        <a class="btn btn--small btn--icon toggle-menu">
+            <span class="icon-list-menu"></span>
+        </a>
+        <a class="header-bar__logo">
+            <span class="icon-cisco"></span>
+        </a>
+        <div class="header-bar__main">
+            <div class="header-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li><a>Operate</a></li>
+                    <li><a>Devices</a></li>
+                    <li><span>Discovery</span></li>
+                </ul>
+            </div>
+            <div class="header-heading">
+                <h1 class="page-title">Wide Array Extended Network Dashboard</h1>
+            </div>
+        </div>
+        <div class="header-toolbar">
+            <a class="btn btn--small btn--icon">
+                <span class="icon-search"></span>
+            </a>
+            <a class="btn btn--small btn--icon">
+                <span class="icon-alert"></span>
+            </a>
+            <a class="btn btn--small btn--icon">
+                <span class="icon-cog"></span>
+            </a>
+        </div>
+    </div>
+</header>
+</div IGNORE>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">
+&lt;header class=&quot;header&quot;&gt;
+    &lt;div class=&quot;header-bar container&quot;&gt;
+        &lt;a class=&quot;btn btn--small btn--icon toggle-menu&quot;&gt;
+            &lt;span class=&quot;icon-list-menu&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;header-bar__logo&quot;&gt;
+            &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;header-bar__main&quot;&gt;
+            &lt;div class=&quot;header-breadcrumbs&quot;&gt;
+                &lt;ul class=&quot;breadcrumb&quot;&gt;
+                    &lt;li&gt;&lt;a&gt;Operate&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a&gt;Devices&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span&gt;Discovery&lt;/span&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;header-heading&quot;&gt;
+                &lt;h1 class=&quot;page-title&quot;&gt;Wide Array Extended Network Dashboard&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;header-toolbar&quot;&gt;
+            &lt;a class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-alert&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">header</span>
+                                <span class="text-normal">Minimum</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="panel panel--ltgray panel--compressed IGNORE">
+<header class="header">
+    <div class="header-bar container">
+        <a class="btn btn--small btn--icon toggle-menu">
+            <span class="icon-list-menu"></span>
+        </a>
+        <a class="header-bar__logo">
+            <span class="icon-cisco"></span>
+        </a>
+        <div class="header-bar__main">
+            <div class="header-heading">
+                <h1 class="page-title">Product Name</h1>
+            </div>
+        </div>
+        <div class="header-toolbar">
+            <a class="btn btn--small btn--icon">
+                <span class="icon-search"></span>
+            </a>
+            <a class="btn btn--small btn--icon">
+                <span class="icon-cog"></span>
+            </a>
+        </div>
+    </div>
+</header>
+</div IGNORE>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">
+&lt;header class=&quot;header&quot;&gt;
+    &lt;div class=&quot;header-bar container&quot;&gt;
+        &lt;a class=&quot;btn btn--small btn--icon toggle-menu&quot;&gt;
+            &lt;span class=&quot;icon-list-menu&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;header-bar__logo&quot;&gt;
+            &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;header-bar__main&quot;&gt;
+            &lt;div class=&quot;header-heading&quot;&gt;
+                &lt;h1 class=&quot;page-title&quot;&gt;Product Name&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;header-toolbar&quot;&gt;
+            &lt;a class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">header</span>
+                                <span class="text-normal">Compressed</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="panel panel--ltgray panel--compressed IGNORE">
+<header class="header header--compressed">
+    <div class="header-bar container">
+        <a class="header-bar__logo">
+            <span class="icon-cisco"></span>
+        </a>
+        <div class="header-bar__main">
+            <div class="header-heading">
+                <h1 class="page-title">Devices</h1>
+            </div>
+        </div>
+        <div class="header-toolbar">
+            <a class="btn btn--small btn--icon">
+                <span class="icon-search"></span>
+            </a>
+            <a class="btn btn--small btn--icon">
+                <span class="icon-tools"></span>
+            </a>
+            <a class="btn btn--small btn--icon btn--negative">
+                <span class="icon-close"></span>
+            </a>
+        </div>
+    </div>
+</header>
+</div IGNORE>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">
+&lt;header class=&quot;header header--compressed&quot;&gt;
+    &lt;div class=&quot;header-bar container&quot;&gt;
+        &lt;a class=&quot;header-bar__logo&quot;&gt;
+            &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;header-bar__main&quot;&gt;
+            &lt;div class=&quot;header-heading&quot;&gt;
+                &lt;h1 class=&quot;page-title&quot;&gt;Devices&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;header-toolbar&quot;&gt;
+            &lt;a class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-tools&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;btn btn--small btn--icon btn--negative&quot;&gt;
+                &lt;span class=&quot;icon-close&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">header</span>
+                                <span class="text-normal">Everything</span>
+                            </h4>
+
+
+                            <div><blockquote>We recommend that you add the class <code>header--tall</code> when using all of the header elements</blockquote></div>
+
+                            <div>
+                                <div class="panel panel--ltgray panel--compressed IGNORE">
+<header class="header header--tall">
+    <div class="header-bar container">
+        <a class="btn btn--small btn--icon toggle-menu">
+            <span class="icon-list-menu"></span>
+        </a>
+        <a class="header-bar__logo">
+            <span class="icon-cisco"></span>
+        </a>
+        <div class="header-bar__main">
+            <div class="header-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li><a>Operate</a></li>
+                    <li><a>Devices</a></li>
+                    <li><span>Discovery</span></li>
+                </ul>
+            </div>
+            <div class="header-heading">
+                <h1 class="page-title">Wide Array Extended Network Dashboard</h1>
+                <div class="header-utilities">
+                    <a class="link">
+                        <span class="icon-home"></span>
+                    </a>
+                    <a class="link">
+                        <span class="icon-star"></span>
+                    </a>
+                    <a class="link">
+                        <span class="icon-refresh"></span>
+                    </a>
+                    <a class="link">
+                        <span class="icon-info-circle"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-menus">
+                <ul class="nav nav-tabs nav-tabs--tall">
+                    <li class="tab active">
+                        <a><div class="tab__heading" title="Tab 1">Tab 1</div></a>
+                    </li>
+                    <li class="tab">
+                        <a><div class="tab__heading" title="Tab 2">Tab 2</div></a>
+                    </li>
+                    <li class="tab">
+                        <a><div class="tab__heading" title="Tab 3">Tab 3</div></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-toolbar">
+            <a class="avatar">John Doe</a>
+            <button class="btn btn--small btn--icon">
+                <span class="icon-search"></span>
+            </button>
+            <button class="btn btn--small btn--icon btn--negative">
+                <span class="icon-alert"></span>
+                <span class="btn__subtext">999+</span>
+            </button>
+            <button class="btn btn--small btn--icon btn--dkblue">
+                <span class="icon-mail"></span>
+                <span class="btn__subtext">34</span>
+            </button>
+            <button class="btn btn--small btn--icon">
+                <span class="icon-cog"></span>
+            </button>
+        </div>
+    </div>
+</header>
+</div IGNORE>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">
+&lt;header class=&quot;header header--tall&quot;&gt;
+    &lt;div class=&quot;header-bar container&quot;&gt;
+        &lt;a class=&quot;btn btn--small btn--icon toggle-menu&quot;&gt;
+            &lt;span class=&quot;icon-list-menu&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;header-bar__logo&quot;&gt;
+            &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;header-bar__main&quot;&gt;
+            &lt;div class=&quot;header-breadcrumbs&quot;&gt;
+                &lt;ul class=&quot;breadcrumb&quot;&gt;
+                    &lt;li&gt;&lt;a&gt;Operate&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a&gt;Devices&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span&gt;Discovery&lt;/span&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;header-heading&quot;&gt;
+                &lt;h1 class=&quot;page-title&quot;&gt;Wide Array Extended Network Dashboard&lt;/h1&gt;
+                &lt;div class=&quot;header-utilities&quot;&gt;
+                    &lt;a class=&quot;link&quot;&gt;
+                        &lt;span class=&quot;icon-home&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;link&quot;&gt;
+                        &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;link&quot;&gt;
+                        &lt;span class=&quot;icon-refresh&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;a class=&quot;link&quot;&gt;
+                        &lt;span class=&quot;icon-info-circle&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;header-menus&quot;&gt;
+                &lt;ul class=&quot;nav nav-tabs nav-tabs--tall&quot;&gt;
+                    &lt;li class=&quot;tab active&quot;&gt;
+                        &lt;a&gt;&lt;div class=&quot;tab__heading&quot; title=&quot;Tab 1&quot;&gt;Tab 1&lt;/div&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;tab&quot;&gt;
+                        &lt;a&gt;&lt;div class=&quot;tab__heading&quot; title=&quot;Tab 2&quot;&gt;Tab 2&lt;/div&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;tab&quot;&gt;
+                        &lt;a&gt;&lt;div class=&quot;tab__heading&quot; title=&quot;Tab 3&quot;&gt;Tab 3&lt;/div&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;header-toolbar&quot;&gt;
+            &lt;a class=&quot;avatar&quot;&gt;John Doe&lt;/a&gt;
+            &lt;button class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--small btn--icon btn--negative&quot;&gt;
+                &lt;span class=&quot;icon-alert&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;btn__subtext&quot;&gt;999+&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--small btn--icon btn--dkblue&quot;&gt;
+                &lt;span class=&quot;icon-mail&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;btn__subtext&quot;&gt;34&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+                        <div class="panel panel--loose panel--indigo depth-2" id="layout-sidebar">
+                            <h1>Sidebar  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></h1>
+
+
+
+                            <div><p>Note: 3 Levels is the maximum depth we recommend and support<br></p>
+<p>Since: 1.0.0</p>
+</div>
+
+                            </div>
+                            
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">sidebar</span>
+                                <span class="text-normal">Simple</span>
+                            </h4>
+
+
+                            <div><blockquote>A simple sidebar consists of a <code>sidebar__header</code> and a list of <code>sidebar__item</code><br>Add the class <code>sidebar__item--selected</code> to denote the item state is selected</blockquote></div>
+
+                            <div>
+                                <div class="sidebar">
+    <div class="sidebar__header">
+        <div class="sidebar__header-title">John Smith</div>
+    </div>
+    <ul>
+        <li class="sidebar__item"><a>Conversations</a></li>
+        <li class="sidebar__item"><a>Favorite Conversations</a></li>
+        <li class="sidebar__item"><a>Contacts</a></li>
+        <li class="sidebar__item"><a>Favorite Contacts</a></li>
+        <li class="sidebar__item"><a>Settings</a></li>
+        <li class="sidebar__item"><a>Feedback</a></li>
+        <li class="sidebar__item"><a>Unlink Device</a></li>
+    </ul>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;sidebar&quot;&gt;
+    &lt;div class=&quot;sidebar__header&quot;&gt;
+        &lt;div class=&quot;sidebar__header-title&quot;&gt;John Smith&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Conversations&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Favorite Conversations&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Favorite Contacts&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Settings&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Unlink Device&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">sidebar</span>
+                                <span class="text-normal">Color</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="row">
+    <div class="col-md-4">
+        <div class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Default</div>
+            </div>
+            <ul>
+                <li class="sidebar__item"><a>Dashboard</a></li>
+                <li class="sidebar__item"><a>Monitor</a></li>
+                <li class="sidebar__drawer">
+                    <a>Configuration</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                        <li class="sidebar__item"><a>Configuration Guides</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Inventory</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Routers</a></li>
+                        <li class="sidebar__item"><a>Switches</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Services</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Network Services</a></li>
+                        <li class="sidebar__item"><a>Mobility Services</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item"><a>Reports</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="sidebar sidebar--dkgray">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Dark Gray</div>
+            </div>
+            <ul>
+                <li class="sidebar__item"><a>Dashboard</a></li>
+                <li class="sidebar__item"><a>Monitor</a></li>
+                <li class="sidebar__drawer">
+                    <a>Configuration</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                        <li class="sidebar__item"><a>Configuration Guides</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Inventory</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Routers</a></li>
+                        <li class="sidebar__item"><a>Switches</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Services</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Network Services</a></li>
+                        <li class="sidebar__item"><a>Mobility Services</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item"><a>Reports</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="sidebar sidebar--indigo">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Indigo</div>
+            </div>
+            <ul>
+                <li class="sidebar__item"><a>Dashboard</a></li>
+                <li class="sidebar__item"><a>Monitor</a></li>
+                <li class="sidebar__drawer">
+                    <a>Configuration</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                        <li class="sidebar__item"><a>Configuration Guides</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Inventory</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Routers</a></li>
+                        <li class="sidebar__item"><a>Switches</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Services</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Network Services</a></li>
+                        <li class="sidebar__item"><a>Mobility Services</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item"><a>Reports</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;div class=&quot;sidebar&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Default&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Configuration&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Inventory&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Services&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;div class=&quot;sidebar sidebar--dkgray&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Dark Gray&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Configuration&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Inventory&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Services&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;div class=&quot;sidebar sidebar--indigo&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Indigo&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Configuration&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Inventory&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Services&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">sidebar</span>
+                                <span class="text-normal">Toolbar</span>
+                            </h4>
+
+
+                            <div><blockquote>A sidebar can contain a <code>sidebar__toolbar</code> with a list of buttons</blockquote></div>
+
+                            <div>
+                                <div class="sidebar">
+    <div class="sidebar__header">
+        <div class="sidebar__header-title">Cisco Prime</div>
+        <div class="sidebar__header-toolbar">
+            <button class="btn btn--icon btn--primary">
+                <span class="icon-feedback"></span>
+            </button>
+            <button class="btn btn--icon btn--primary">
+                <span class="icon-star"></span>
+            </button>
+            <button class="btn btn--icon btn--primary">
+                <span class="icon-search"></span>
+            </button>
+        </div>
+    </div>
+    <ul>
+        <li class="sidebar__item"><a>Dashboard</a></li>
+        <li class="sidebar__item"><a>Monitor</a></li>
+        <li class="sidebar__item"><a>Configuration</a></li>
+    </ul>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;sidebar&quot;&gt;
+    &lt;div class=&quot;sidebar__header&quot;&gt;
+        &lt;div class=&quot;sidebar__header-title&quot;&gt;Cisco Prime&lt;/div&gt;
+        &lt;div class=&quot;sidebar__header-toolbar&quot;&gt;
+            &lt;button class=&quot;btn btn--icon btn--primary&quot;&gt;
+                &lt;span class=&quot;icon-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--icon btn--primary&quot;&gt;
+                &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--icon btn--primary&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">sidebar</span>
+                                <span class="text-normal">Drawers</span>
+                            </h4>
+
+
+                            <div><blockquote>A sidebar can contain a <code>sidebar__drawer</code> which can contain sidebar items or other drawers<br>Add the class <code>sidebar__drawer--opened</code> to denote the state as opened</blockquote></div>
+
+                            <div>
+                                <div class="sidebar">
+    <div class="sidebar__header">
+        <div class="sidebar__header-title">Cisco Prime</div>
+        <div class="sidebar__header-toolbar">
+            <button class="btn btn--icon btn--primary">
+                <span class="icon-feedback"></span>
+            </button>
+            <button class="btn btn--icon btn--primary">
+                <span class="icon-star"></span>
+            </button>
+            <button class="btn btn--icon btn--primary">
+                <span class="icon-search"></span>
+            </button>
+        </div>
+    </div>
+    <ul>
+        <li class="sidebar__item"><a>Dashboard</a></li>
+        <li class="sidebar__item"><a>Monitor</a></li>
+        <li class="sidebar__drawer">
+            <a>Configuration</a>
+            <ul>
+                <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                <li class="sidebar__item"><a>Configuration Guides</a></li>
+            </ul>
+        </li>
+        <li class="sidebar__drawer">
+            <a>Inventory</a>
+            <ul>
+                <li class="sidebar__item"><a>Routers</a></li>
+                <li class="sidebar__item"><a>Switches</a></li>
+            </ul>
+        </li>
+        <li class="sidebar__drawer">
+            <a>Services</a>
+            <ul>
+                <li class="sidebar__item"><a>Network Services</a></li>
+                <li class="sidebar__item"><a>Mobility Services</a></li>
+            </ul>
+        </li>
+        <li class="sidebar__item"><a>Reports</a></li>
+    </ul>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;sidebar&quot;&gt;
+    &lt;div class=&quot;sidebar__header&quot;&gt;
+        &lt;div class=&quot;sidebar__header-title&quot;&gt;Cisco Prime&lt;/div&gt;
+        &lt;div class=&quot;sidebar__header-toolbar&quot;&gt;
+            &lt;button class=&quot;btn btn--icon btn--primary&quot;&gt;
+                &lt;span class=&quot;icon-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--icon btn--primary&quot;&gt;
+                &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--icon btn--primary&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sidebar__drawer&quot;&gt;
+            &lt;a&gt;Configuration&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__drawer&quot;&gt;
+            &lt;a&gt;Inventory&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__drawer&quot;&gt;
+            &lt;a&gt;Services&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">sidebar</span>
+                                <span class="text-normal">Example</span>
+                            </h4>
+
+
+                            <div><blockquote>A sidebar item can contain an action which is right justified. <br>Add the class <code>sidebar__item-action</code> to a sidebar item to align the action properly<br>Add the class <code>sidebar--hidden</code> to hide the sidebar completely<br></blockquote></div>
+
+                            <div>
+                                <div class="sidebar">
+    <div class="sidebar__header">
+        <div class="sidebar__header-title">CLI Analyzer</div>
+    </div>
+    <ul class="sidebar__drawer">
+        <li class="sidebar__item">
+            <a>
+                <span class="icon-devices"></span>
+                <span class="qtr-margin-left">Dashboard</span>
+            </a>
+        </li>
+        <li class="sidebar__item sidebar__item--selected">
+            <a>
+                <span class="icon-plus"></span>
+                <span class="qtr-margin-left">New Session</span>
+            </a>
+        </li>
+        <li class="sidebar__item">
+            <a>
+                <span class="icon-diagnostics"></span>
+                <span class="qtr-margin-left">File Analysis</span>
+            </a>
+        </li>
+        <li class="sidebar__item">
+            <a>
+                <span class="icon-cog"></span>
+                <span class="qtr-margin-left">Settings</span>
+            </a>
+        </li>
+    </ul>
+    <ul>
+        <li class="sidebar__drawer sidebar__drawer--opened">
+            <a>Current Sessions</a>
+            <ul>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-circle text-success"></span>
+                        <span class="qtr-margin-left">172.18.194.56</span>
+                        <div class="sidebar__item-action">
+                            <span class="icon-close"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-circle text-danger"></span>
+                        <span class="qtr-margin-left">svn-sj-2960</span>
+                        <div class="sidebar__item-action">
+                            <span class="icon-close"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-circle text-success"></span>
+                        <span class="qtr-margin-left">172.18.194.59</span>
+                        <div class="sidebar__item-action">
+                            <span class="icon-close"></span>
+                        </div>
+                    </a>
+                </li>
+           </ul>
+        </li>
+    </ul>
+    <ul>
+        <li class="sidebar__drawer sidebar__drawer--opened">
+            <a>Recent Sessions</a>
+            <ul>
+                <li class="sidebar__item">
+                    <a>172.18.194.56</a>
+                </li>
+                <li class="sidebar__item">
+                    <a>svn-sj-2960</a>
+                </li>
+                <li class="sidebar__item">
+                    <a>172.18.194.59</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li class="sidebar__item">
+            <a>
+                <span class="icon-contact"></span>
+                <span class="qtr-margin-left">Logged in as kbroich</span>
+            </a>
+        </li>
+        <li class="sidebar__item">
+            <a>
+                <span class="icon-feedback"></span>
+                <span class="qtr-margin-left">Feedback</span>
+            </a>
+        </li>
+        <li class="sidebar__item">
+            <a>
+                <span class="icon-help"></span>
+                <span class="qtr-margin-left">Help</span>
+            </a>
+        </li>
+    </ul>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;sidebar&quot;&gt;
+    &lt;div class=&quot;sidebar__header&quot;&gt;
+        &lt;div class=&quot;sidebar__header-title&quot;&gt;CLI Analyzer&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;sidebar__drawer&quot;&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a&gt;
+                &lt;span class=&quot;icon-devices&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;qtr-margin-left&quot;&gt;Dashboard&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item sidebar__item--selected&quot;&gt;
+            &lt;a&gt;
+                &lt;span class=&quot;icon-plus&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;qtr-margin-left&quot;&gt;New Session&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a&gt;
+                &lt;span class=&quot;icon-diagnostics&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;qtr-margin-left&quot;&gt;File Analysis&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a&gt;
+                &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;qtr-margin-left&quot;&gt;Settings&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;sidebar__drawer sidebar__drawer--opened&quot;&gt;
+            &lt;a&gt;Current Sessions&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-circle text-success&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;qtr-margin-left&quot;&gt;172.18.194.56&lt;/span&gt;
+                        &lt;div class=&quot;sidebar__item-action&quot;&gt;
+                            &lt;span class=&quot;icon-close&quot;&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-circle text-danger&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;qtr-margin-left&quot;&gt;svn-sj-2960&lt;/span&gt;
+                        &lt;div class=&quot;sidebar__item-action&quot;&gt;
+                            &lt;span class=&quot;icon-close&quot;&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-circle text-success&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;qtr-margin-left&quot;&gt;172.18.194.59&lt;/span&gt;
+                        &lt;div class=&quot;sidebar__item-action&quot;&gt;
+                            &lt;span class=&quot;icon-close&quot;&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+           &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;sidebar__drawer sidebar__drawer--opened&quot;&gt;
+            &lt;a&gt;Recent Sessions&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;172.18.194.56&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;svn-sj-2960&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;172.18.194.59&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a&gt;
+                &lt;span class=&quot;icon-contact&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;qtr-margin-left&quot;&gt;Logged in as kbroich&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a&gt;
+                &lt;span class=&quot;icon-feedback&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;qtr-margin-left&quot;&gt;Feedback&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sidebar__item&quot;&gt;
+            &lt;a&gt;
+                &lt;span class=&quot;icon-help&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;qtr-margin-left&quot;&gt;Help&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

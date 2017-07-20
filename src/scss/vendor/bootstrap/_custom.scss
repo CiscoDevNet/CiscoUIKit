@@ -1,0 +1,13 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$small-font-size: 12px;
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 992px,
+  xl: 1440px
+);

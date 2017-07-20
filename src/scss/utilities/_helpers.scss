@@ -324,9 +324,10 @@
 .text-warning, .text--warning           { color: $warning !important; }
 .text-warning-alt, .text--warning-alt   { color: $warning-alt !important; }
 .text-default-color                     { color: $dark-gray-2 !important; }
-.text-blue                              { color: $cisco-blue; }
-.text-dkgray-1                          { color: $dark-gray-1; }
-.text-dkgray-4                          { color: $dark-gray-4; }
+.text-blue                              { color: $cisco-blue !important; }
+.text-dkgray-1                          { color: $dark-gray-1 !important; }
+.text-dkgray-4                          { color: $dark-gray-4 !important; }
+.text-indigo, .text--indigo             { color: $indigo !important; }
 
 
 // Icon Helpers
@@ -382,41 +383,61 @@
     }
 }
 
+.no-margin           { margin: 0; }
+.no-margin-top       { margin-top: 0; }
+.no-margin-right     { margin-right: 0; }
+.no-margin-bottom    { margin-bottom: 0; }
+.no-margin-left      { margin-left: 0; }
+
+.qtr-margin          { margin: $base-spacing * 0.25 !important; }
 .qtr-margin-top      { margin-top: $base-spacing * 0.25 !important; }
 .qtr-margin-right    { margin-right: $base-spacing * 0.25 !important; }
 .qtr-margin-bottom   { margin-bottom: $base-spacing * 0.25 !important; }
 .qtr-margin-left     { margin-left: $base-spacing * 0.25 !important; }
 
+.half-margin         { margin: $base-spacing * 0.5 !important; }
 .half-margin-top     { margin-top: $base-spacing * 0.5 !important; }
 .half-margin-right   { margin-right: $base-spacing * 0.5 !important; }
 .half-margin-bottom  { margin-bottom: $base-spacing * 0.5 !important; }
 .half-margin-left    { margin-left: $base-spacing * 0.5 !important; }
 
+.base-margin         { margin: $base-spacing !important; }
 .base-margin-top     { margin-top: $base-spacing !important; }
 .base-margin-right   { margin-right: $base-spacing !important; }
 .base-margin-bottom  { margin-bottom: $base-spacing !important; }
 .base-margin-left    { margin-left: $base-spacing !important; }
 
+.dbl-margin          { margin: $base-spacing * 2 !important; }
 .dbl-margin-top      { margin-top: $base-spacing * 2 !important; }
 .dbl-margin-right    { margin-right: $base-spacing * 2 !important; }
 .dbl-margin-bottom   { margin-bottom: $base-spacing * 2 !important; }
 .dbl-margin-left     { margin-left: $base-spacing * 2 !important; }
 
+.no-padding          { padding: 0; }
+.no-padding-top      { padding-top: 0; }
+.no-padding-right    { padding-right: 0; }
+.no-padding-bottom   { padding-bottom: 0; }
+.no-padding-left     { padding-left: 0; }
+
+.qtr-padding         { padding: $base-spacing * 0.25 !important; }
 .qtr-padding-top     { padding-top: $base-spacing * 0.25 !important; }
 .qtr-padding-right   { padding-right: $base-spacing * 0.25 !important; }
 .qtr-padding-bottom  { padding-bottom: $base-spacing * 0.25 !important; }
 .qtr-padding-left    { padding-left: $base-spacing * 0.25 !important; }
 
+.half-padding        { padding: $base-spacing * 0.5 !important; }
 .half-padding-top    { padding-top: $base-spacing * 0.5 !important; }
 .half-padding-right  { padding-right: $base-spacing * 0.5 !important; }
 .half-padding-bottom { padding-bottom: $base-spacing * 0.5 !important; }
 .half-padding-left   { padding-left: $base-spacing * 0.5 !important; }
 
+.base-padding        { padding: $base-spacing !important; }
 .base-padding-top    { padding-top: $base-spacing !important; }
 .base-padding-right  { padding-right: $base-spacing !important; }
 .base-padding-bottom { padding-bottom: $base-spacing !important; }
 .base-padding-left   { padding-left: $base-spacing !important; }
 
+.dbl-padding         { padding: $base-spacing * 2 !important; }
 .dbl-padding-top     { padding-top: $base-spacing * 2 !important; }
 .dbl-padding-right   { padding-right: $base-spacing * 2 !important; }
 .dbl-padding-bottom  { padding-bottom: $base-spacing * 2 !important; }
@@ -497,6 +518,9 @@
     .pull-left-xs {
         float: left !important;
     }
+    .visible-inline-xs {
+        display: inline-block !important;
+    }
 }
 
 .row.no-gutters {
@@ -512,4 +536,57 @@
 // Add disabled mouse / touch pointer
 .disable-pointer {
     pointer-events: none;
+}
+
+//
+// For backwards compatibility we include the old hidden-{breakpoint} and
+// visible-{breakpoint} visibility classes
+// NOTE: These are deprecated in 1.0.5 and you should use the new Bootstrap 4
+//       hidden-{breakpoint}-{up|down} visibility helper classes instead
+//
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-md {
+        display: none !important;
+    }
+}
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none !important;
+    }
+}
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+    display: none !important;
+}
+@media (max-width: 767px) {
+    .visible-xs {
+        display: block !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .visible-sm {
+        display: block !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .visible-md {
+        display: block !important;
+    }
+}
+@media (min-width: 1200px) {
+    .visible-lg {
+        display: block !important;
+    }
 }

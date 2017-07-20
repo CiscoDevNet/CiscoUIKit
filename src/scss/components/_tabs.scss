@@ -1,5 +1,5 @@
 //
-// Tab updated
+// Tab
 //
 // Since: 1.0.1
 //
@@ -110,6 +110,7 @@ ul.tabs,
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+    padding: 0;
 
     .header & {
         display: block;
@@ -269,5 +270,10 @@ ul.tabs,
 
     .tab-pane {
         padding: $base-spacing 0;
-    }
+    }    
+}
+
+// Fix for text cutoff on mobile menu. Need to exclude tabs from the list
+ul.tabs.list li+li {
+    margin: 0;
 }

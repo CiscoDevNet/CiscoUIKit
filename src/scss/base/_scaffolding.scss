@@ -2,9 +2,57 @@
 // Scaffolding
 //
 
+//
+// Grid System new
+//
+// We have adopted the Bootstrap 4 Grid system which has 5 grid tiers and is Flexbox-based<br>
+// You can view more details on the grid <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">here</a>
+//
+// Weight: -1
+//
+// Styleguide Base.Grid
+//
+
+//
+// Breakpoints
+//
+// Markup:
+// <div class="responsive-table">
+//     <table class="table table--bordered table--compressed">
+//         <thead>
+//             <tr>
+//                 <th>&nbsp;</th>
+//                 <th>Extra Small (<576px)</th>
+//                 <th>Small (>=576px)</th>
+//                 <th>Medium (>=768px)</th>
+//                 <th>Large (>=992px)</th>
+//                 <th>Extra Large (>=1200px)</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Class prefix</td>
+//                 <td>.col-</td>
+//                 <td>.col-sm-</td>
+//                 <td>.col-md-</td>
+//                 <td>.col-lg-</td>
+//                 <td>.col-xl-</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Base.Grid.Breakpoints
+//
+
 
 //
 // Headings
+//
+// By default the UI kit supports auto-scaling of header (h1-h6) font sizes. This means that at smaller breakpoints you do not have to add any special media queries to scale down header sizes as it is handled automatically.<br><br>
+// Specify the CSS class modifier `cui--fixed-headers` at the top-level to change to using fixed header (h1-h6) font sizes.
 //
 // Markup:
 // <h1>h1. Example Heading</h1>
@@ -15,15 +63,17 @@
 // <h6>h6. Example Heading</h6>
 // <br><br>
 // <div class="responsive-table">
-//     <table class="table table--bordered">
+//     <table class="table table--bordered table--compressed">
 //         <thead>
 //             <tr>
 //                 <th>Heading</th>
 //                 <th>Weight</th>
 //                 <th>Source</th>
-//                 <th>Size / Mobile (<768px)</th>
-//                 <th>Size / Tablet (768px-992px)</th>
-//                 <th>Size / Desktop (>992px)</th>
+//                 <th>Extra Small (<576px)</th>
+//                 <th>Small (>=576px)</th>
+//                 <th>Medium (>=768px)</th>
+//                 <th>Large (>=992px)</th>
+//                 <th>Extra Large (>=1200px)</th>
 //             </tr>
 //         </thead>
 //         <tbody>
@@ -31,55 +81,67 @@
 //                 <td>h1</td>
 //                 <td>100</td>
 //                 <td>CiscoSansExtraLight</td>
-//                 <td>30px</td>
-//                 <td>32.5px</td>
-//                 <td>35px</td>
+//                 <td>28.8px</td>
+//                 <td>28.8px</td>
+//                 <td>33.6px</td>
+//                 <td>38.4px</td>
+//                 <td>38.4px</td>
 //             </tr>
 //             <tr>
 //                 <td>h2</td>
 //                 <td>100</td>
 //                 <td>CiscoSansExtraLight</td>
 //                 <td>24px</td>
-//                 <td>26px</td>
+//                 <td>24px</td>
 //                 <td>28px</td>
+//                 <td>32px</td>
+//                 <td>32px</td>
 //             </tr>
 //             <tr>
 //                 <td>h3</td>
 //                 <td>200</td>
 //                 <td>CiscoSansLight</td>
-//                 <td>21px</td>
-//                 <td>22.75px</td>
-//                 <td>24.5px</td>
+//                 <td>21.6px</td>
+//                 <td>21.6px</td>
+//                 <td>25.2px</td>
+//                 <td>28.8px</td>
+//                 <td>28.8px</td>
 //             </tr>
 //             <tr>
 //                 <td>h4</td>
 //                 <td>200</td>
 //                 <td>CiscoSansLight</td>
-//                 <td>18px</td>
-//                 <td>19.5px</td>
-//                 <td>21px</td>
+//                 <td>19.2px</td>
+//                 <td>19.2px</td>
+//                 <td>22.4px</td>
+//                 <td>25.6px</td>
+//                 <td>25.6px</td>
 //             </tr>
 //             <tr>
 //                 <td>h5</td>
 //                 <td>200</td>
 //                 <td>CiscoSansLight</td>
-//                 <td>15px</td>
-//                 <td>16.25px</td>
-//                 <td>17.5px</td>
+//                 <td>16.8px</td>
+//                 <td>16.8px</td>
+//                 <td>19.6px</td>
+//                 <td>22.4px</td>
+//                 <td>22.4px</td>
 //             </tr>
 //             <tr>
 //                 <td>h6</td>
 //                 <td>300</td>
-//                 <td>CiscoSansRegular</td>
-//                 <td>12px</td>
-//                 <td>13px</td>
-//                 <td>14px</td>
+//                 <td>CiscoSans</td>
+//                 <td>14.4px</td>
+//                 <td>14.4px</td>
+//                 <td>16.8px</td>
+//                 <td>19.2px</td>
+//                 <td>19.2px</td>
 //             </tr>
 //         </tbody>
 //     </table>
 // </div>
 //
-// Weight: 1
+// Weight: 2
 //
 // Styleguide Base.Typography.Headings
 //
@@ -105,7 +167,7 @@ h1, h2, h3, h4, h5, h6,
 // <h1>Regular Heading</h1>
 // <h2 class="subheading">Subheading</h2>
 //
-// Weight: 2
+// Weight: 3
 //
 // Styleguide Base.Typography.Subheadings
 //
@@ -122,7 +184,7 @@ h1, h2, h3, h4, h5, h6,
 // <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
 // <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
 //
-// Weight: 3
+// Weight: 4
 //
 // Styleguide Base.Typography.Paragraphs
 //
@@ -152,7 +214,7 @@ p {
 //     <li>Mauris consequat metus at magna tincidunt faucibus.</li>
 // </ol>
 //
-// Weight: 4
+// Weight: 5
 //
 // Styleguide Base.Typography.Ordered List
 //
@@ -178,7 +240,7 @@ p {
 //     <li>Mauris consequat metus at magna tincidunt faucibus.</li>
 // </ul>
 //
-// Weight: 5
+// Weight: 6
 //
 // Styleguide Base.Typography.Unordered List
 //
@@ -204,14 +266,13 @@ p {
 //     <li>Mauris consequat metus at magna tincidunt faucibus.</li>
 // </ul>
 //
-// Weight: 6
+// Weight: 7
 //
 // Styleguide Base.Typography.Unstyled List
 //
 
 ul, ol {
     margin: 0;
-    font-weight: 300;
     padding: 0 0 0 $base-spacing;
 
     &.list--unstyled {
@@ -231,10 +292,10 @@ hr {
     margin: ($base-spacing * 0.5) 0;
 }
 
+hr.hr--qtr,
 hr.divider-qtr {
     width: 25%;
-    margin: auto auto $base-spacing * 3;
-    padding-top: $base-spacing * 3;
+    margin: auto;
 }
 
 hr.divider--skinny {
@@ -242,9 +303,19 @@ hr.divider--skinny {
     padding-top: $base-spacing * 1.25;
 }
 
-img, picture {
+img,
+picture {
     margin: 0;
+    border: 0;
     max-width: 100%;
+}
+
+img.img {
+    &--fluid {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -265,7 +336,7 @@ img, picture {
 //     <cite>Mark Twain</cite>
 // </blockquote>
 //
-// Weight: 7
+// Weight: 8
 //
 // Styleguide Base.Typography.Citations
 //
@@ -367,7 +438,6 @@ cite {
     @include clearfix;
     box-sizing: border-box;
     position: relative;
-    max-width: $max-page-width;
     margin: 0 auto;
     padding-right: $base-spacing * 0.5;
     padding-left: $base-spacing * 0.5;
@@ -386,6 +456,14 @@ pre {
     margin: 0;
 }
 
+input,
+select,
+textarea,
+button {
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+}
+
 .content-fluid {
 
     display: flex;
@@ -393,7 +471,7 @@ pre {
     width: 100%;
     height: 100%;
 
-    nav.sidebar ~ main {
+    .sidebar ~ main {
         transform: translate3d($sidebar-menu-width,0,0);
         transition: transform 0.25s;
 
@@ -403,7 +481,7 @@ pre {
             transition: margin 0.25s;
         }
     }
-    nav.sidebar.sidebar--hidden ~ main {
+    .sidebar.sidebar--hidden ~ main {
         margin-left: unset;
         transform: translate3d(0,0,0);
         transition: all 0.25s

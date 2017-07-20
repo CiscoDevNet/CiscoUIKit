@@ -38,6 +38,7 @@
 //     <span class="label label--mdgray">medium gray</span>
 //     <span class="label label--dkgray">dark gray</span>
 //     <span class="label label--dkblue">dark blue</span>
+//     <span class="label label--indigo">indigo</span>
 // </div>
 // <div class="panel panel--dkgray panel--compressed base-margin-top">
 //     <span class="label label--ltgray">light gray</span>
@@ -129,9 +130,10 @@
 //     <span class="label label--circle label--mdgray">4</span>
 //     <span class="label label--circle label--dkgray">5</span>
 //     <span class="label label--circle label--dkblue">6</span>
-//     <span class="label label--circle label--success">7</span>
-//     <span class="label label--circle label--warning">8</span>
-//     <span class="label label--circle label--danger">9</span>
+//     <span class="label label--circle label--indigo">7</span>
+//     <span class="label label--circle label--success">8</span>
+//     <span class="label label--circle label--warning">9</span>
+//     <span class="label label--circle label--danger">0</span>
 // </div>
 // <div>
 //     <span class="label label--circle label--small label--success">
@@ -208,7 +210,7 @@
     }
 
     &--raised {
-        box-shadow: $base-label-box-shadow;
+        box-shadow: $base-box-shadow;
     }
 
     .icon-close {

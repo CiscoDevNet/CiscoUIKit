@@ -21,23 +21,23 @@
   pointer-events: none;
   z-index: 1050;
 
-  .modal-open & {
-    pointer-events: auto;
-  }
-
   &.fade {
     .modal-dialog {
       opacity: 0;
       transform: scale3d(1.05, 1.05, 1);
     }
   }
-  
+
   &.in {
     .modal-dialog {
       opacity: 1;
       transform: scale3d(1, 1, 1);
     }
   }
+}
+
+.modal-open .modal {
+    pointer-events: auto;
 }
 
 .modal-dialog {
@@ -87,7 +87,7 @@
   padding: 0;
 }
 
-.modal-body, 
+.modal-body,
 .modal-footer {
   margin-top: $base-spacing;
 }

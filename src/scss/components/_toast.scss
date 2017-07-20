@@ -110,7 +110,7 @@
 //
 // Spacing
 //
-// <blockquote>See pattern <a href="section-style-guide.html#style-guide-base-lists">@Lists</a> for how to manage toast spacing</blockquote>
+// <blockquote>See pattern <a href="section-base.html#base-list">@List</a> for how to manage toast spacing</blockquote>
 //
 // Weight: 3
 //
@@ -225,7 +225,7 @@
     align-items: flex-start;
     max-width: $toast-max-width;
     border: $toast-border-width solid rgba(0, 0, 0, $toast-border-opacity);
-    box-shadow: $toast-box-shadow;
+    box-shadow: $base-box-shadow-small;
 
     &__icon {
         min-width: $base-spacing;

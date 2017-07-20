@@ -25,7 +25,7 @@
 // Disabled
 
 @mixin disabled {
-    opacity: 0.5;
+    opacity: 0.75;
     cursor: not-allowed;
     pointer-events: none;
     z-index: 0;
@@ -104,13 +104,27 @@
     flex-wrap: wrap;
 
     li {
-        padding-right: $base-spacing * 0.75;
-
         &:last-child {
             padding-right: 0;
         }
     }
+
+    li + li {
+        margin: 0 0 0 -1px;
+    }
 }
+
+// For inline lists only
+@mixin list-divider {
+    li:after {
+        @include vertical-divider;
+    }
+    li:last-child:after {
+        content: '';
+        margin: 0;
+    }
+}
+
 
 
 // -----------------------------------------------------------------------------
@@ -124,7 +138,8 @@
     $border-left-width: "",
     $link-color:        "",
     $link-decoration:   "",
-    $icon-color:        "")
+    $icon-color:        "",
+    $embellish:         "")
 {
     color: $color;
     position: relative;
@@ -152,6 +167,23 @@
 
     @if $border-left-width != "" {
         border-left-width: $border-left-width;
+    }
+}
+
+@mixin panel-hover(
+    $link-color:        '',
+    $background:        $base-panel-background,
+    $embellish:         'lighten')
+{
+    @if $embellish == "lighten" {
+        background-color: lighten($background, $base-panel-hover-lighten);
+    }
+    @else {
+        background-color: darken($background, $base-panel-hover-darken);
+    }
+
+    @if $link-color != "" {
+        color: $link-color;
     }
 }
 
@@ -306,22 +338,52 @@
     border-#{$location}: $thickness solid $color;
 }
 
-@mixin vertical-divider($margin: 0 ($base-spacing * 0.5) 0 ($base-spacing * 0.25)) {
-  content: '';
-  border-left: 1px solid $base-border-color;
-  margin: $margin;
-  padding: 0;
+@mixin vertical-divider($margin: 0 $base-spacing * 0.25) {
+    color: $base-muted-color;
+    content: '|';
+    margin: $margin;
+    padding: 0;
 }
 
 .divider--vertical {
-  > :after {
-    @include vertical-divider;
-  }
+    > :after {
+        @include vertical-divider;
+    }
 }
 
 
 // -----------------------------------------------------------------------------
-// Heroes
+// Sidebar
+
+@mixin sidebar-color(
+    $background: $sidebar-background,
+    $color: $sidebar-color,
+    $embellish: 'lighten')
+{
+    background: $background;
+    color: $color;
+
+    li {
+        &.sidebar__item--selected a,
+        &.selected a,
+        a:hover {
+            @if $embellish == "lighten" {
+                background-color: desaturate(lighten($background, $sidebar-hover-lighten), 10);
+            }
+            @else {
+                background-color: darken($background, $sidebar-hover-darken);
+            }
+        }
+    }
+
+    > ul > li {
+        box-shadow: 0 1px 0 $sidebar-divider-color inset; // divider lines
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// Hero
 
 @mixin hero-color($background: $base-button-background, $color: $white) {
   background-image: none;
@@ -333,15 +395,55 @@
   }
 }
 
+@mixin set-heading-size($size) {
+    $h1-font-size: $size * 2.4 !default;
+    $h2-font-size: $size * 2 !default;
+    $h3-font-size: $size * 1.8 !default;
+    $h4-font-size: $size * 1.6 !default;
+    $h5-font-size: $size * 1.4 !default;
+    $h6-font-size: $size * 1.2 !default;
+
+    $headings:  (h1, $h1-font-size, $h1-font-weight),
+                (h2, $h2-font-size, $h2-font-weight),
+                (h3, $h3-font-size, $h3-font-weight),
+                (h4, $h4-font-size, $h4-font-weight),
+                (h5, $h5-font-size, $h5-font-weight),
+                (h6, $h6-font-size, $h6-font-weight);
+
+    @each $heading, $heading-size, $heading-weight in $headings {
+        #{$heading}, .#{$heading} {
+            font-size: $heading-size;
+            font-weight: $heading-weight;
+
+            > small, > .small {
+                font-size: $heading-size * 0.8;
+            }
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// Scaled Headers (default)
+
+@mixin scaled-headers() {
+    @include media-breakpoint-between(xs,sm) { @include set-heading-size($small-font-size); }
+    @include media-breakpoint-between(sm,md) { @include set-heading-size($small-font-size); }
+    @include media-breakpoint-between(md,lg) { @include set-heading-size($medium-font-size); }
+    @include media-breakpoint-between(lg,xl) { @include set-heading-size($large-font-size); }
+    @include media-breakpoint-up(xl) { @include set-heading-size($large-font-size); }
+}
+
 
 // -----------------------------------------------------------------------------
 // Fixed Headers. Allow apps to have fixed header sizes (versus scaling)
 
 @mixin fixed-headers($font-size: $medium-font-size) {
-    @include set-heading-size($font-size);
-    @include break-at(small)  { @include set-heading-size($font-size); }
-    @include break-at(medium) { @include set-heading-size($font-size); }
-    @include break-at(large)  { @include set-heading-size($font-size); }
+    @include media-breakpoint-between(xs,sm) { @include set-heading-size($font-size); }
+    @include media-breakpoint-between(sm,md) { @include set-heading-size($font-size); }
+    @include media-breakpoint-between(md,lg) { @include set-heading-size($font-size); }
+    @include media-breakpoint-between(lg,xl) { @include set-heading-size($font-size); }
+    @include media-breakpoint-up(xl)         { @include set-heading-size($font-size); }
 }
 
 
@@ -400,6 +502,15 @@
   font-weight: $aui-button-font-weight;
   cursor: pointer;
   -webkit-font-smoothing: inherit;
+}
+
+@mixin link-plain {
+    @extend %link;
+    color: $base-font-color;
+
+    &:hover {
+        color: $base-accent-color;
+    }
 }
 
 @mixin btn-size(

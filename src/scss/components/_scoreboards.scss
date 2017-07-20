@@ -1,5 +1,5 @@
 //
-// Scoreboard
+// Scoreboard updated
 //
 // A scoreboard is a panel that contains a value and a title/description. It is primarily used to convey summarized information on a dashboard.<br><br>
 // Since 1.0.0
@@ -60,6 +60,43 @@
 
 
 //
+// Size
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <p>Default</p>
+//         <div class="scoreboard">
+//             <div class="scoreboard__title">245</div>
+//             <hr class="text-muted">
+//             <div class="scoreboard__subtitle">Total Devices</div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <p>Large</p>
+//         <div class="scoreboard scoreboard--large">
+//             <div class="scoreboard__title">245</div>
+//             <hr class="text-muted">
+//             <div class="scoreboard__subtitle">Total Devices</div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <p>Huge</p>
+//         <div class="scoreboard scoreboard--huge">
+//             <div class="scoreboard__title">245</div>
+//             <hr class="text-muted">
+//             <div class="scoreboard__subtitle">Total Devices</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Scoreboard.Size
+//
+
+
+//
 // Padding
 //
 // Markup:
@@ -90,9 +127,48 @@
 //     </div>
 // </div>
 //
-// Weight: 2
+// Weight: 3
 //
 // Styleguide Components.Scoreboard.Padding
+//
+
+
+//
+// Raised
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="scoreboard scoreboard--raised">
+//             <div class="scoreboard__title">245</div>
+//             <hr class="text-muted">
+//             <div class="scoreboard__subtitle">Total Devices</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Components.Scoreboard.Raised
+//
+
+
+//
+// Inline
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="scoreboard scoreboard--inline scoreboard--huge">
+//             <div class="scoreboard__title">245</div>
+//             <div class="scoreboard__subtitle">Total Devices</div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Components.Scoreboard.Inline
 //
 
 .scoreboard {
@@ -111,17 +187,41 @@
         @include text-ellipsis;
         font-size: $scoreboard-subtitle-font-size;
         color: $base-muted-color;
+        line-height: $scoreboard-title-font-size;
     }
 
-    &--compressed {
-        @include panel-padding($padding: $base-panel-compressed-padding);
+    &--large {
+        .scoreboard__title {
+            font-size: 3rem;
+        }
+        .scoreboard__subtitle {
+            font-size: 1.2rem;
+            line-height: 3rem;
+        }
     }
 
-    &--regular {
-        @include panel-padding($padding: $base-panel-regular-padding);
+    &--huge {
+        .scoreboard__title {
+            font-size: 4rem;
+        }
+        .scoreboard__subtitle {
+            font-size: 1.2rem;
+            line-height: 4rem;
+        }
     }
 
-    &--loose {
-        @include panel-padding($padding: $base-panel-loose-padding);
+    &--compressed   { @include panel-padding($padding: $base-panel-compressed-padding); }
+    &--regular      { @include panel-padding($padding: $base-panel-regular-padding); }
+    &--loose        { @include panel-padding($padding: $base-panel-loose-padding); }
+
+    &--raised {
+        box-shadow: $base-box-shadow;
+    }
+
+    &--inline {
+        display: flex;
+        .scoreboard__title {
+            margin-right: $base-spacing * 0.5;
+        }
     }
 }

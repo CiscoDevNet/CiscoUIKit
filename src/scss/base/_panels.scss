@@ -23,16 +23,19 @@
 //         <div class="panel panel--ltgray">
 //             <h6>Light Gray</h6>
 //         </div>
-//     </div>
-//     <div class="col-md-6 panel-group panel-group--compressed">
 //         <div class="panel panel--mdgray">
 //             <h6>Medium Gray</h6>
 //         </div>
+//     </div>
+//     <div class="col-md-6 panel-group panel-group--compressed">
 //         <div class="panel panel--dkgray">
 //             <h6>Dark Gray</h6>
 //         </div>
 //         <div class="panel panel--dkblue">
 //             <h6>Dark Blue</h6>
+//         </div>
+//         <div class="panel panel--indigo">
+//             <h6>Indigo</h6>
 //         </div>
 //     </div>
 // </div>
@@ -78,17 +81,17 @@
 // Markup:
 // <div class="row">
 //     <div class="col-md-4">
-//         <div class="panel panel--blue panel--compressed">
+//         <div class="panel panel--blue panel--compressed panel--bordered">
 //             <h6>Compressed</h6>
 //         </div>
 //     </div>
 //     <div class="col-md-4">
-//         <div class="panel panel--blue panel--regular">
+//         <div class="panel panel--blue panel--regular panel--bordered">
 //             <h6>Regular (default)</h6>
 //         </div>
 //     </div>
 //     <div class="col-md-4">
-//         <div class="panel panel--blue panel--loose">
+//         <div class="panel panel--blue panel--loose panel--bordered">
 //             <h6>Loose</h6>
 //         </div>
 //     </div>
@@ -103,7 +106,7 @@
 //
 // Spacing
 //
-// <blockquote>See pattern <a href="section-style-guide.html#style-guide-base-list">@List</a> for how to manage panel spacing</blockquote>
+// <blockquote>See pattern <a href="section-base.html#base-list">@List</a> for how to manage panel spacing</blockquote>
 //
 // Weight: 3
 //
@@ -208,6 +211,11 @@
 //         </a>
 //     </div>
 //     <div class="col-md-2">
+//         <a class="panel panel--indigo">
+//             <h6>indigo</h6>
+//         </a>
+//     </div>
+//     <div class="col-md-2">
 //         <a class="panel panel--info">
 //             <h6>info</h6>
 //         </a>
@@ -280,7 +288,7 @@
 // <div class="panel panel--bordered">
 //     <div class="row">
 //         <div class="col-md-6">
-//             <img src="public/img/section-1.jpg">
+//             <img class="img img--fluid" src="public/img/section-1.jpg">
 //         </div>
 //         <div class="col-md-6">
 //             <div class="panel panel--loose">
@@ -295,29 +303,66 @@
 // <div class="panel">
 //     <div class="row">
 //         <div class="col-md-4">
-//             <div class="panel panel--ltgray panel--loose">
-//                 <img src="public/img/section-2-1.jpg">
-//                 <h2>Value-added resellers</h2>
+//             <div class="panel panel--ltgray panel--loose panel--raised panel--fluid">
+//                 <img class="img img--fluid" src="public/img/section-2-1.jpg">
+//                 <h2 class="base-margin-top">Value-added resellers</h2>
 //                 <p>Sell and support products, services, and solutions for your customers.</p>
 //                 <a href="https://www.cisco.com" target="_blank">Channel Partner Program</a>
 //             </div>
 //         </div>
 //         <div class="col-md-4">
-//             <div class="panel panel--loose panel--bordered">
-//                 <img src="public/img/section-2-2.jpg">
-//                 <h2>Providers</h2>
+//             <div class="panel panel--loose panel--raised panel--fluid">
+//                 <img class="img img--fluid" src="public/img/section-2-2.jpg">
+//                 <h2 class="base-margin-top">Providers</h2>
 //                 <p>Build and deliver managed and cloud services.</p>
 //                 <a href="https://www.cisco.com" target="_blank">Cloud and Managed Services Program</a>
 //             </div>
 //         </div>
 //         <div class="col-md-4">
-//             <div class="panel panel--ltgray panel--loose">
-//                 <img src="public/img/section-2-3.jpg">
-//                 <h2>Consultants</h2>
+//             <div class="panel panel--ltgray panel--loose panel--raised panel--fluid">
+//                 <img class="img img--fluid" src="public/img/section-2-3.jpg">
+//                 <h2 class="base-margin-top">Consultants</h2>
 //                 <p>Use your expertise to define business outcomes and deliver results.</p>
 //                 <a href="https://www.cisco.com" target="_blank">Become a Consultant</a>
 //             </div>
 //         </div>
+//     </div>
+// </div>
+// <br>
+// <div class="panel panel--compressed panel--indigo">
+//     <div class="text-center">
+//         <ul class="list list--loose list--inline">
+//             <li>
+//                 <a class="base-padding">
+//                     <span class="icon-home icon-medium"></span>
+//                     <div>Home</div>
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="base-padding">
+//                     <span class="icon-alarm icon-medium"></span>
+//                     <div>Alarms</div>
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="base-padding">
+//                     <span class="icon-analysis icon-medium"></span>
+//                     <div>Analysis</div>
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="base-padding">
+//                     <span class="icon-devices icon-medium"></span>
+//                     <div>Devices</div>
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="base-padding">
+//                     <span class="icon-bookmark icon-medium"></span>
+//                     <div>Bookmarks</div>
+//                 </a>
+//             </li>
+//         </ul>
 //     </div>
 // </div>
 //
@@ -340,6 +385,7 @@
     position: relative;
     margin: 0;
     border: 0 none;
+    height: auto;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
     &__header {
@@ -395,11 +441,12 @@
 
     &--transparency {
         z-index: 1;
-        color: white;
+        color: $white;
         background-color: rgba($white, .25);
 
         &:hover {
-            background-color: rgba($white, 0.15);
+            color: $white;
+            background-color: rgba($white, .15);
         }
 
         &.panel--blue {
@@ -411,7 +458,7 @@
         &.panel--warning {
             background-color: rgba($warning, .50);
             &:hover {
-                background-color: rgba($warning, .25);
+                background-color: rgba($warning, .75);
             }
         }
 
@@ -423,23 +470,23 @@
     &--well {
         box-shadow: inset 0 5px 10px -5px rgba(0,0,0,0.25);
     }
+
+    &--fluid {
+        height: 100%;
+    }
 }
 
 a.panel {
     cursor: pointer;
-
-    &:hover,
-    &:active {
-        color: $base-font-color;
-        background-color: tint($white, $base-panel-hover-tint);
-    }
-
     @each $panel-obj in $panel-colors {
-        &--#{map-get($panel-obj, name)}:hover {
-            background-color: tint(map-deep-get($panel-obj, 'params', 'background'), $base-panel-hover-tint);
-            @if map-has-nested-keys($panel-obj, 'params', 'color') {
-                color: map-deep-get($panel-obj, 'params', 'color');
-            }
+        &--#{map-get($panel-obj, name)}:hover,
+        &--#{map-get($panel-obj, name)}:focus,
+        &--#{map-get($panel-obj, name)}:active {
+            @include panel-hover(
+                $link-color: map-deep-get($panel-obj, 'params', 'link-color'),
+                $background: map-deep-get($panel-obj, 'params', 'background'),
+                $embellish: map-deep-get($panel-obj, 'params', 'embellish')
+            );
         }
     }
 }

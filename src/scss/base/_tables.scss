@@ -1,5 +1,5 @@
 //
-// Table
+// Table updated
 //
 // Since: 1.0.0
 //
@@ -345,6 +345,47 @@
 
 
 //
+// Fixed
+//
+// <blockquote>Add the class `table--fixed` to change the table layout to fixed. A fixed table layout renders quicker than non-fixed but column widths are not determined by the data. By default tables are NOT fixed</blockquote>
+//
+// Markup:
+// <div class="responsive-table">
+//     <table class="table table--bordered table--fixed">
+//         <thead>
+//             <tr>
+//                 <th>Header 1</th>
+//                 <th>Header 2</th>
+//                 <th>Header 3</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis. Curabitur sagittis velit at elit efficitur, nec facilisis augue vehicula. Nulla semper est at tincidunt blandit</td>
+//             </tr>
+//             <tr>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis. Curabitur sagittis velit at elit efficitur, nec facilisis augue vehicula. Nulla semper est at tincidunt blandit</td>
+//             </tr>
+//             <tr>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis.</td>
+//                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mattis dui. Phasellus at sagittis nulla. Cras fermentum eu ligula vitae posuere. Nullam ut elit vel quam finibus mattis. Curabitur sagittis velit at elit efficitur, nec facilisis augue vehicula. Nulla semper est at tincidunt blandit</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Base.Table.Fixed
+//
+
+
+//
 // Wrapped Text
 //
 // <blockquote>Add the class `table--wrap` to wrap text in the cells. By default, text is not wrapped</blockquote>
@@ -379,7 +420,7 @@
 //     </table>
 // </div>
 //
-// Weight: 6
+// Weight: 7
 //
 // Styleguide Base.Table.Wrap
 //
@@ -477,7 +518,7 @@
 //     </table>
 // </div>
 //
-// Weight: 7
+// Weight: 8
 //
 // Styleguide Base.Table.Padding
 //
@@ -535,8 +576,10 @@
 }
 
 .table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
 	font-feature-settings: "kern", "liga", "tnum";
-  	width: 100%;
 
 	> tbody > tr:nth-child(odd) {
 		background-color: $base-table-striping-odd-background-color;
@@ -555,7 +598,9 @@
 	    padding: 0;
 	    border-top: 0 none;
 	}
-	> tbody > tr.well td:first-child {
+	> tbody > tr.well td:first-child,
+	> tbody > tr.well:hover td:first-child,
+	.table--highlight > tbody > tr.well:hover td:first-child {
 	    border-left: 0 none;
 	}
 
@@ -587,7 +632,12 @@
 		vertical-align: middle;
 
 		&:first-child {
-			width: 1px; // Auto size first column
+			width: 1px; // Auto size first column. This is used for tables with
+						// a selection checkbox in the first column. Setting the
+						// width to 1px will ensure that the content fits in a
+						// "snug" manner so as to not waste horizontal space
+						// For fixed tables we set this to "auto" otherwise your
+						// content gets clipped (KJB)
 		}
 	}
 
@@ -619,6 +669,9 @@
   				border-right: 0 none;
   			}
   		}
+		&-inner {
+			border: 0 none;
+		}
 	}
 
 	&--wrap {
@@ -653,6 +706,16 @@
 		tr, td, th {
 			padding: $base-table-compressed-padding;
 			font-size: $base-table-compressed-font-size;
+		}
+	}
+
+	&--fixed {
+		table-layout: fixed;
+		tr, td, th {
+			&:first-child {
+				width: auto; // Set this to auto ONLY for fixed tables otherwise
+							 // the content of the first column gets clipped
+			}
 		}
 	}
 

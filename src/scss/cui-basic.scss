@@ -1,5 +1,7 @@
-@import "vendor/normalize";
-@import "vendor/bootstrap-grid";
+@import 'vendor/bootstrap/custom.scss';
+@import 'vendor/bootstrap/variables.scss';
+@import 'vendor/bootstrap/mixins.scss';
+@import 'vendor/bootstrap/grid.scss';
 @import "vendor/jeet-grid";
 
 @import "utilities/variables";
@@ -11,6 +13,7 @@
 html.cui {
     @import "utilities/helpers";
     @import "utilities/animations";
+
     @import "base/buttons";
     @import "base/checkboxes";
     @import "base/colors";
@@ -28,4 +31,6 @@ html.cui {
     @import "base/tables";
     @import "base/text";
     @import "base/thumbnails";
+
+    @import "overrides/ie";
 }

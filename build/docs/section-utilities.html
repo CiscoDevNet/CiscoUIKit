@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html class="cui" lang="en" id="styleguide">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cisco UI Kit</title>
+
+        <link rel="stylesheet" href="public/css/animate.css">
+        <link rel="stylesheet" href="assets/css/cui-styleguide.min.css">
+        <link rel="stylesheet" href="public/css/featherlight.min.css">
+        <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="public/js/styleguide.js"></script>
+        <script src="public/js/jquery-scrollto.js"></script>
+        <script src="public/js/clipboard.js"></script>
+        <script src="public/js/featherlight.min.js"></script>
+        <script src="public/js/Markdown.Converter.js"></script>
+    </head>
+    <body class="styleguide">
+        <div class="content-fluid">
+            <nav id="styleguideSidebar" class="sidebar">
+                <div class="sidebar__header">
+                    <div class="sidebar__header-title">Cisco UI</div>
+                </div>
+                <ul id="rootSidebar" data-kss-ref="Utilities">
+                    <li class="sidebar__item" id="section-gettingStarted">
+                        <a onclick="doNav('./index.html')">Getting Started</a>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>Resources</a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://bx.cisco.com/cbx-portal/" target="_blank">Cisco Brand Exchange</a></li>
+                            <li class="sidebar__item"><a href="https://cisco.jiveon.com/groups/atlantic/pages/about" target="_blank">Jive Home Page</a></li>
+                            <li class="sidebar__item"><a href="https://cisco.jiveon.com/docs/DOC-1575948" target="_blank">Jive FAQ</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">Angular 1.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">Angular 4.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">React Components</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>For Designers</a>
+                        <ul>
+                            <li class="sidebar__item"><a href="public/documents/sketch/CiscoUI-Icons.sketch" download="public/documents/sketch/CiscoUI-Icons.sketch">Icons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip" download="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip">SketchPalette Plugin</a></li>
+                            <li class="sidebar__item"><a href="https://github.com/andrewfiorillo/sketch-palettes" target="_blank">SketchPalette Plugin Instructions</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>Older Versions</a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.4-official/" target="_blank">Version 1.0.4</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.3-official/" target="_blank">Version 1.0.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.2-official/" target="_blank">Version 1.0.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.1-official/" target="_blank">Version 1.0.1</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.0-official/" target="_blank">Version 1.0.0</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a>Examples</a>
+                        <ul>
+                            <li class="sidebar__item">
+                                <a href="assets/basic.html" target="_blank">Basic</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/standard.html" target="_blank">Standard</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/dashboard.html" target="_blank">Dashboard</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/stickyfooter.html" target="_blank">Sticky Footer</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="rootDrawer" class="sidebar__drawer">
+                        <a>Pattern Library</a>
+                        <ul>
+                            <li class="sidebar__drawer" id="section-base">
+                                <a>Base</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-base-typography">
+                                        <a onclick="doNav('section-base.html#base-typography')">Typography  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-grid">
+                                        <a onclick="doNav('section-base.html#base-grid')">Grid System  <span class="label label--tiny label--success label--bordered qtr-margin-left">new</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-button">
+                                        <a onclick="doNav('section-base.html#base-button')">Button</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-checkbox">
+                                        <a onclick="doNav('section-base.html#base-checkbox')">Checkbox</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-color">
+                                        <a onclick="doNav('section-base.html#base-color')">Color</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-icons">
+                                        <a onclick="doNav('section-base.html#base-icons')">Icons</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-input">
+                                        <a onclick="doNav('section-base.html#base-input')">Input  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-label">
+                                        <a onclick="doNav('section-base.html#base-label')">Label  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-link">
+                                        <a onclick="doNav('section-base.html#base-link')">Link</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-list">
+                                        <a onclick="doNav('section-base.html#base-list')">List</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-panel">
+                                        <a onclick="doNav('section-base.html#base-panel')">Panel  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-radio">
+                                        <a onclick="doNav('section-base.html#base-radio')">Radio</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-section">
+                                        <a onclick="doNav('section-base.html#base-section')">Section</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-select">
+                                        <a onclick="doNav('section-base.html#base-select')">Select</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-switch">
+                                        <a onclick="doNav('section-base.html#base-switch')">Switch</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-table">
+                                        <a onclick="doNav('section-base.html#base-table')">Table  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-thumbnail">
+                                        <a onclick="doNav('section-base.html#base-thumbnail')">Thumbnail  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar__drawer" id="section-components">
+                                <a>Components</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-components-activity">
+                                        <a onclick="doNav('section-components.html#components-activity')">Activity</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-alert">
+                                        <a onclick="doNav('section-components.html#components-alert')">Alert</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-badge">
+                                        <a onclick="doNav('section-components.html#components-badge')">Badge</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-breadcrumb">
+                                        <a onclick="doNav('section-components.html#components-breadcrumb')">Breadcrumb</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-figure">
+                                        <a onclick="doNav('section-components.html#components-figure')">Figure</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-gauge">
+                                        <a onclick="doNav('section-components.html#components-gauge')">Gauge</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-hero">
+                                        <a onclick="doNav('section-components.html#components-hero')">Hero  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-loader">
+                                        <a onclick="doNav('section-components.html#components-loader')">Loader</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-rating">
+                                        <a onclick="doNav('section-components.html#components-rating')">Rating</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-scoreboard">
+                                        <a onclick="doNav('section-components.html#components-scoreboard')">Scoreboard  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-step">
+                                        <a onclick="doNav('section-components.html#components-step')">Step</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-tab">
+                                        <a onclick="doNav('section-components.html#components-tab')">Tab</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-toast">
+                                        <a onclick="doNav('section-components.html#components-toast')">Toast</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar__drawer" id="section-layout">
+                                <a>Layout</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-layout-footer">
+                                        <a onclick="doNav('section-layout.html#layout-footer')">Footer  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-layout-header">
+                                        <a onclick="doNav('section-layout.html#layout-header')">Header</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-layout-sidebar">
+                                        <a onclick="doNav('section-layout.html#layout-sidebar')">Sidebar  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar__drawer" id="section-utilities">
+                                <a>Utilities</a>
+                                <ul>
+                                    <li class="sidebar__item depth-2" id="section-utilities-helpers">
+                                        <a onclick="doNav('section-utilities.html#utilities-helpers')">Helpers</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <header id="styleguideHeader" class="header header--compressed">
+                    <div class="header-bar container">
+                        <a class="btn btn--small btn--icon toggle-menu">
+                            <span class="icon-list-menu"></span>
+                        </a>
+                        <a class="header-bar__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <div class="header-bar__main">
+                            <div class="header-heading">
+                                <h1 class="page-title">
+                                            Cisco UI Utilities
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="header-toolbar">
+                            <a class="btn btn--small btn--icon" href="mailto:atlantic-ui-styleguide@external.cisco.com?Subject=Feedback" title="Submit Feedback">
+                                <span class="icon-feedback"></span>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <div class="content">
+
+                    <a name="top" class="invisible">&nbsp;</a>
+                    <div class="container">
+
+
+                        <div id="utilities">
+                            <a class="link invisible" href="#utilities">
+                                <span class="icon-link"></span>
+                            </a>
+                        </div>
+
+
+
+
+
+                            
+                            
+
+
+                        <div class="panel panel--loose panel--indigo depth-2" id="utilities-helpers">
+                            <h1>Helpers</h1>
+
+
+
+
+                            </div>
+                            
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">helpers</span>
+                                <span class="text-normal">Absolute Center</span>
+                            </h4>
+
+
+                            <div><p>To horizontally and vertically center an element inside of another element, you can add the class <code>.absolute-center</code> on the element in the markup</p>
+</div>
+
+                            <div>
+                                <div class="panel panel--blue" style="height:200px;">
+    <h1 class="absolute-center text-uppercase">centered</h1>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;panel panel--blue&quot; style=&quot;height:200px;&quot;&gt;
+    &lt;h1 class=&quot;absolute-center text-uppercase&quot;&gt;centered&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">helpers</span>
+                                <span class="text-normal">Clearfix</span>
+                            </h4>
+
+
+                            <div><p>To apply a clearfix to a block element containing floated elements, you can add the class <code>.clearfix</code> on the element in the markup</p>
+</div>
+
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">helpers</span>
+                                <span class="text-normal">Disabled</span>
+                            </h4>
+
+
+                            <div><p>To disable any element, you can add a <code>disabled</code> attribute or the class <code>.disabled</code></p>
+</div>
+
+                            <div>
+                                <button class="btn btn--small" disabled>Disabled via Attribute</button>
+<button class="btn btn--small disabled">Disabled via Class</button>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;button class=&quot;btn btn--small&quot; disabled&gt;Disabled via Attribute&lt;/button&gt;
+&lt;button class=&quot;btn btn--small disabled&quot;&gt;Disabled via Class&lt;/button&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">helpers</span>
+                                <span class="text-normal">Float Left</span>
+                            </h4>
+
+
+                            <div><p>Use the class <code>pull-left</code> to float any element left</p>
+</div>
+
+                            <div>
+                                <div class="clearfix">
+    <div class="pull-left">pull-left</div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;clearfix&quot;&gt;
+    &lt;div class=&quot;pull-left&quot;&gt;pull-left&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">helpers</span>
+                                <span class="text-normal">Float Right</span>
+                            </h4>
+
+
+                            <div><p>Use the class <code>pull-right</code> to float any element right</p>
+</div>
+
+                            <div>
+                                <div class="clearfix">
+    <div class="pull-right">pull-right</div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;clearfix&quot;&gt;
+    &lt;div class=&quot;pull-right&quot;&gt;pull-right&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">helpers</span>
+                                <span class="text-normal">Readonly</span>
+                            </h4>
+
+
+                            <div><p>To readonly any element, you can add a <code>readonly</code> attribute or the class <code>.readonly</code></p>
+</div>
+
+                            <div>
+                                <textarea rows="4" style="width:100%;resize:none" class="readonly">Readonly text area</textarea>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;textarea rows=&quot;4&quot; style=&quot;width:100%;resize:none&quot; class=&quot;readonly&quot;&gt;Readonly text area&lt;/textarea&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">helpers</span>
+                                <span class="text-normal">Text Colors</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="text-primary">text-primary</div>
+<div class="text-secondary">text-secondary</div>
+<div class="text-default">text-default</div>
+<div class="text-cta">text-cta</div>
+<div class="text-info">text-info</div>
+<div class="text-success">text-success</div>
+<div class="text-danger">text-danger</div>
+<div class="text-warning">text-warning</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;text-primary&quot;&gt;text-primary&lt;/div&gt;
+&lt;div class=&quot;text-secondary&quot;&gt;text-secondary&lt;/div&gt;
+&lt;div class=&quot;text-default&quot;&gt;text-default&lt;/div&gt;
+&lt;div class=&quot;text-cta&quot;&gt;text-cta&lt;/div&gt;
+&lt;div class=&quot;text-info&quot;&gt;text-info&lt;/div&gt;
+&lt;div class=&quot;text-success&quot;&gt;text-success&lt;/div&gt;
+&lt;div class=&quot;text-danger&quot;&gt;text-danger&lt;/div&gt;
+&lt;div class=&quot;text-warning&quot;&gt;text-warning&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">helpers</span>
+                                <span class="text-normal">Text Helpers</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="text-left">text-left</div>
+<div class="text-center">text-center</div>
+<div class="text-right">text-right</div>
+<div class="text-bold">text-bold</div>
+<div class="text-muted">text-muted</div>
+<div class="text-normal">text-normal</div>
+<div class="text-ghost">text-ghost</div>
+<div class="text-light">text-light</div>
+<div class="text-muted">text-muted</div>
+<div class="text-lowercase">text-lowercase</div>
+<div class="text-uppercase">text-uppercase</div>
+<div class="text-capitalize">text-capitalize</div>
+<div class="text-tiny">text-tiny</div>
+<div class="text-xsmall">text-xsmall</div>
+<div class="text-small">text-small</div>
+<div class="text-medium">text-medium</div>
+<div class="text-large">text-large</div>
+<div class="text-huge">text-huge</div>
+<div class="text-italic">text-italic</div>
+<div class="text-monospace">text-monospace</div>
+<div style="width:200px" class="text-ellipsis">text-ellipsis This is an ellipsed string.</div>
+<div class="text-noselect">text-noselect Try and select me</div>
+<div class="text-break">text-break ThisIsReallyLongTextWithoutWhiteSpaceSoItWillOverrideContainersAndOtherSuchHtmlItemsBecauseOfNoLogicalBreakPointsBeingBuiltIn</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;text-left&quot;&gt;text-left&lt;/div&gt;
+&lt;div class=&quot;text-center&quot;&gt;text-center&lt;/div&gt;
+&lt;div class=&quot;text-right&quot;&gt;text-right&lt;/div&gt;
+&lt;div class=&quot;text-bold&quot;&gt;text-bold&lt;/div&gt;
+&lt;div class=&quot;text-muted&quot;&gt;text-muted&lt;/div&gt;
+&lt;div class=&quot;text-normal&quot;&gt;text-normal&lt;/div&gt;
+&lt;div class=&quot;text-ghost&quot;&gt;text-ghost&lt;/div&gt;
+&lt;div class=&quot;text-light&quot;&gt;text-light&lt;/div&gt;
+&lt;div class=&quot;text-muted&quot;&gt;text-muted&lt;/div&gt;
+&lt;div class=&quot;text-lowercase&quot;&gt;text-lowercase&lt;/div&gt;
+&lt;div class=&quot;text-uppercase&quot;&gt;text-uppercase&lt;/div&gt;
+&lt;div class=&quot;text-capitalize&quot;&gt;text-capitalize&lt;/div&gt;
+&lt;div class=&quot;text-tiny&quot;&gt;text-tiny&lt;/div&gt;
+&lt;div class=&quot;text-xsmall&quot;&gt;text-xsmall&lt;/div&gt;
+&lt;div class=&quot;text-small&quot;&gt;text-small&lt;/div&gt;
+&lt;div class=&quot;text-medium&quot;&gt;text-medium&lt;/div&gt;
+&lt;div class=&quot;text-large&quot;&gt;text-large&lt;/div&gt;
+&lt;div class=&quot;text-huge&quot;&gt;text-huge&lt;/div&gt;
+&lt;div class=&quot;text-italic&quot;&gt;text-italic&lt;/div&gt;
+&lt;div class=&quot;text-monospace&quot;&gt;text-monospace&lt;/div&gt;
+&lt;div style=&quot;width:200px&quot; class=&quot;text-ellipsis&quot;&gt;text-ellipsis This is an ellipsed string.&lt;/div&gt;
+&lt;div class=&quot;text-noselect&quot;&gt;text-noselect Try and select me&lt;/div&gt;
+&lt;div class=&quot;text-break&quot;&gt;text-break ThisIsReallyLongTextWithoutWhiteSpaceSoItWillOverrideContainersAndOtherSuchHtmlItemsBecauseOfNoLogicalBreakPointsBeingBuiltIn&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

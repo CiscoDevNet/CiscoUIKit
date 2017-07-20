@@ -27,6 +27,8 @@
 //     <div class="swatch swatch-core--palegray1"></div>
 //     <div class="swatch swatch-core--ciscoblue"></div>
 //     <div class="swatch swatch-core--statusblue"></div>
+//     <div class="swatch swatch-core--darkblue"></div>
+//     <div class="swatch swatch-core--indigo"></div>
 //     <div class="swatch swatch-core--sagegreen"></div>
 // </div>
 // <div class="section">
@@ -72,10 +74,12 @@
     &.swatch-core--darkgray1      { @include swatch-fill($dark-gray-1, $white, $dark-gray-1, "Dark Gray 1"); }
     &.swatch-core--darkgray2      { @include swatch-fill($dark-gray-2, $white, $dark-gray-2, "Dark Gray 2"); }
     &.swatch-core--medgray2       { @include swatch-fill($med-gray-2, $white, $med-gray-2, "Medium Gray 2"); }
-    &.swatch-core--white          { @include swatch-fill($white, $black, $base-border-color, "Core White 1"); }
+    &.swatch-core--white          { @include swatch-fill($white, $black, $base-border-color, "Cisco Core White"); }
     &.swatch-core--palegray1      { @include swatch-fill($pale-gray-1, $black, $base-border-color, "Pale Gray 1"); }
     &.swatch-core--ciscoblue      { @include swatch-fill($cisco-blue, $white, $cisco-blue, "Cisco Blue"); }
     &.swatch-core--statusblue     { @include swatch-fill($status-blue, $black, $status-blue, "Status Blue"); }
+    &.swatch-core--darkblue       { @include swatch-fill($dark-blue, $white, $dark-blue, "Dark Blue"); }
+    &.swatch-core--indigo         { @include swatch-fill($indigo, $white, $indigo, "Cisco Indigo"); }
     &.swatch-core--sagegreen      { @include swatch-fill($cisco-green, $black, $cisco-green, "Sage Green"); }
 
     &.swatch-supp--darkgray3      { @include swatch-fill($dark-gray-3, $white, $dark-gray-3, "Dark Gray 3"); }
