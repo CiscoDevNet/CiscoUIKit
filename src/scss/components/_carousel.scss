@@ -1,0 +1,136 @@
+//
+// Carousel
+//
+// This pattern really covers just the carousel controls. The content of each carousel item is up to you.
+// Since: 1.1.0
+//
+// Styleguide Components.Carousel
+//
+
+
+//
+// Blue Controls
+//
+// Markup:
+// <div class="carousel">
+//     <div class="hero hero--split hero--split-75 hero--nogradient hero--bordered">
+//         <div class="hero__content hero--blue">
+//             <div class="container">
+//                 <h2>Edge Routers</h2>
+//                 <p>Grow density and resiliency with programmability for a scalable network edge.</p>
+//                 <button class="btn btn--white-ghost qtr-margin-top">Learn More</button>
+//             </div>
+//         </div>
+//         <div class="hero__marquee">
+//             <img class="img img--fluid" src="public/img/routers-edge.png">
+//         </div>
+//     </div>
+//     <div class="base-margin-top">
+//         <div class="carousel__controls">
+//             <a class="back disabled">
+//                 <span class="icon-chevron-left"></span>
+//             </a>
+//             <a class="dot selected"><span class="icon-circle"></span></a>
+//             <a class="dot"><span class="icon-circle"></span></a>
+//             <a class="dot"><span class="icon-circle"></span></a>
+//             <a class="next">
+//                 <span class="icon-chevron-right"></span>
+//             </a>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Carousel.Blue Controls
+//
+
+
+//
+// Indigo Controls
+//
+// Markup:
+// <div class="carousel carousel--indigo">
+//     <div class="hero hero--split hero--split-75 hero--nogradient hero--bordered">
+//         <div class="hero__marquee">
+//             <img class="img img--fluid" src="public/img/catalyst-9400series.jpg">
+//         </div>
+//         <div class="hero__content hero--indigo">
+//             <div class="container">
+//                 <h2>Catalyst 9400 Series Switches</h2>
+//                 <p>Cisco's leading modular-access switches for enterprise. Supports up to 9tbps.</p>
+//                 <button class="btn btn--white-ghost qtr-margin-top">Learn More</button>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="base-margin-top">
+//         <div class="carousel__controls">
+//             <a class="back disabled">
+//                 <span class="icon-chevron-left"></span>
+//             </a>
+//             <a class="dot selected"><span class="icon-circle"></span></a>
+//             <a class="dot"><span class="icon-circle"></span></a>
+//             <a class="dot"><span class="icon-circle"></span></a>
+//             <a class="next">
+//                 <span class="icon-chevron-right"></span>
+//             </a>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Carousel.Indigo Controls
+//
+
+.carousel {
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-top: $base-spacing;
+
+        .back,
+        .next {
+            color: $base-accent-color;
+        }
+
+        .back {
+            margin-right: $base-spacing * 0.5;
+        }
+
+        .next {
+            margin-left: $base-spacing * 0.5;
+        }
+
+        .back.disabled,
+        .next.disabled {
+            color: $base-muted-color;
+        }
+
+        .dot {
+            margin: 0 5px;
+            font-size: 20px;
+            color: $light-gray-2;
+            transition: color .5s;
+
+            &:hover,
+            &.selected > span {
+                color: $base-accent-color;
+            }
+        }
+    }
+
+    &--indigo {
+        .carousel__controls {
+            .back,
+            .next,
+            .dot:hover,
+            .dot.selected > span {
+                color: $indigo;
+            }
+        }
+    }
+}

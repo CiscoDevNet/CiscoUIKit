@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="locale" content="US">
+        <meta name="language" content="en">
+        <meta name="country" content="US">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CDC Entitled Example</title>
+        <link rel="stylesheet" href="css/cui-standard.min.css">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="//www.cisco.com/favicon.ico">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="///www.cisco.com/favicon.ico">
+
+        <!-- Search Component -->
+        <script src="https://www.cisco.com/etc/designs/cdc/fw/lib/webcomponents/custom-elements-es5-adapter.js" type="text/javascript"></script>
+        <script src="https://www.cisco.com/etc/designs/cdc/fw/lib/webcomponents/webcomponents-loader.js" type="text/javascript"></script>
+        <link href="https://www.cisco.com/etc/designs/cdc/fw/lib/polymer/polymer-element.html" rel="import">
+        <link href="https://www.cisco.com/c/en/us/web-component/cdc-search.html" rel="import">
+
+    </head>
+    <body class="cui template--cdc">
+        <header class="header header--regular">
+            <div class="header-bar container">
+                <a class="header-bar__logo" href="https://www.cisco.com">
+                    <span class="icon-cisco"></span>
+                </a>
+                <div class="header-bar__main">
+                    <div class="header-heading">
+                        <a class="btn btn--small btn--icon toggle-menu">
+                            <span class="icon-list-menu"></span>
+                        </a>
+                        <ul class="list list--inline list--loose">
+                            <li><a class="text-default half-margin-right" href="https://www.cisco.com/c/en/us/products/index.html">Products &amp; Services</a></li>
+                            <li><a class="text-default half-margin-right" href="https://www.cisco.com/c/en/us/support/index.html">Support</a></li>
+                            <li><a class="text-default half-margin-right" href="https://www.cisco.com/c/en/us/buy.html">How to Buy</a></li>
+                            <li><a class="text-default half-margin-right" href="https://www.cisco.com/c/en/us/training-events.html">Training &amp; Events</a></li>
+                            <li><a class="text-default half-margin-right" href="https://www.cisco.com/c/en/us/partners.html">Partners</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-toolbar">
+                    <a class="avatar" href="https://www.cisco.com/c/en/us/about/account.html">John Doe</a>
+                    <button class="btn btn--small btn--icon" onclick="toggleSearch()">
+                        <span class="icon-search"></span>
+                    </button>
+                    <a class="btn btn--small btn--icon" href="https://www.cisco.com/autho/logout.html?ReturnUrl=https://www.cisco.com/web/fw/lo/logout.html">
+                        <span class="icon-sign-out"></span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="search-overlay">
+                <cdc-search id="search-component" has-type-ahead has-close-button has-voice-search></cdc-search>
+            </div>
+            <div class="absolute-center text-center">
+                <h1>Entitled Template</h1>
+                <a class="btn btn--primary-ghost base-margin-top" target="_blank" href="cdc-entitled.html" download="cdc-entitled.html">Download</a>
+            </div>
+        </main>
+        <footer tabindex="-1">
+            <div class="container">
+                <ul class="list list--inline list--divider">
+                    <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+                    <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/about/help.html" target="_blank">Help</a></li>
+                    <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+                    <li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms &amp; Conditions</a></li>
+                    <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+                    <li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+                    <li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script>
+            trackEvent = {
+                event: function(eventObj) {
+                    // Add your metrics here
+                }
+            };
+            function toggleSearch() {
+                var sc = document.getElementById('search-component');
+                if (sc.hasAttribute('is-search-open')) {
+                    sc.removeAttribute('is-search-open');
+                } else {
+                    sc.setAttribute('is-search-open','');
+                }
+            }
+        </script>
+    </body>
+</html>

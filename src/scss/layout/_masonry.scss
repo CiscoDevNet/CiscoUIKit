@@ -1,0 +1,281 @@
+//
+// Masonry new
+//
+// Since: 1.2.0
+//
+//
+
+
+//
+// Columns
+//
+// <blockquote>You can specify the number of columns you want your layout to contain at the widest breakpoint.</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="form-group">
+//             <div class="form-group__text select">
+//                 <select id="masonry-columns-dropdown">
+//                     <option value="2">Two</option>
+//                     <option value="3">Three</option>
+//                     <option value="4" selected>Four</option>
+//                     <option value="5">Five</option>
+//                 </select>
+//                 <label>No. of Columns</label>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <div id="masonry-columns-example" class="masonry">
+//     <div class="panel panel--blue">
+//         <div style="height:100px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:400px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:200px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:350px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:250px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:150px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:275px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:375px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:125px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:275px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:100px"></div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+//
+
+
+//
+// Gaps
+//
+// <blockquote>You can specify the gap spacing between the tiles in the masonry layout.</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="form-group">
+//             <div class="form-group__text select">
+//                 <select id="masonry-gaps-dropdown">
+//                     <option value="qtr">Quarter Spacing</option>
+//                     <option value="half">Half Spacing</option>
+//                     <option value="base" selected>Base Spacing</option>
+//                     <option value="dbl">Double Spacing</option>
+//                 </select>
+//                 <label>Gap Spacing</label>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <div id="masonry-gaps-example" class="masonry">
+//     <div class="panel panel--blue">
+//         <div style="height:100px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:400px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:200px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:350px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:250px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:150px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:275px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:375px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:125px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:275px"></div>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div style="height:100px"></div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+//
+
+
+//
+// Example
+//
+// Markup:
+// <div class="masonry masonry--gap-dbl">
+//     <div class="panel panel--bordered">
+//         <div class="text-center">
+//             <img src="public/img/wireless-1.jpg">
+//         </div>
+//         <div class="section">
+//             <p>It's a new world. Bring Wi-Fi into the digital age with <b>Cisco DNA</b>. Introducing an entirely new era of networking. <br><br>THE NETWORK. <span class="text-blue">INTUITIVE.</span></p>
+//         </div>
+//     </div>
+//     <div class="panel panel--blue panel--loose">
+//         <div class="text-center">
+//             <div class="section">
+//                 <h2>WAN Aggregation</h2>
+//             </div>
+//             <img src="public/img/wan-aggregation.png">
+//         </div>
+//         <div class="section">
+//             <p>Get a high-density, small-form-factor MPLS aggregation router for metro aggregation and MPLS-enabled data center networks. The Network Convergence System 5000 Series is designed to economically scale large enterprise, over-the-top (OTT), and service provider data center networking architectures.</p>
+//         </div>
+//     </div>
+//     <div class="panel panel--success">
+//         <div class="text-center">
+//             <img src="public/img/routers-edge.png">
+//         </div>
+//         <p>Gain the resiliency of a digital business. Offer a superior user experience and security and compliance on demand. ASR 1000 Series Aggregation Services Routers can transform your service provider or enterprise network edge for the digital era.</p>
+//     </div>
+//     <div class="panel panel--warning">
+//         <div class="text-center">
+//             <img src="public/img/wireless-lan-controllers.png">
+//             <h3>Wireless LAN Controllers</h3>
+//         </div>
+//         <p>Get your network digital-ready with our intelligent controllers. They’ll help scale a small, midsize, or large enterprise network.</p>
+//     </div>
+//     <div class="panel panel--indigo">
+//         <div class="text-center">
+//             <img src="public/img/routers-service-provider.png">
+//             <h3>5500 Series Routers</h3>
+//         </div>
+//         <p>The Network Convergence System (NCS) 5500 Series offers industry-leading density of routed 100 GE ports for high-scale WAN aggregation. It is designed to efficiently scale between data centers and large enterprise, web, and service provider WAN and aggregation networks.</p>
+//     </div>
+//     <div class="panel panel--bordered">
+//         <div class="text-center">
+//             <img src="public/img/spark-1.jpg">
+//             <div class="section">
+//                 <h2>Collaboration</h2>
+//             </div>
+//         </div>
+//         <p>Working together, people can achieve extraordinary things. Empower collaboration and innovation, everywhere.</p>
+//     </div>
+//     <div class="panel panel--dkgray">
+//         <div class="text-center">
+//             <img src="public/img/wireless-indoor-access-points.png">
+//             <br>
+//             <h3>Indoor Access Points</h3>
+//         </div>
+//         <p>Go beyond 802.11ac. Get the highest-performing access points with Cisco innovations.</p>
+//     </div>
+//     <div class="panel panel--blue">
+//         <div class="text-center">
+//             <img src="public/img/wireless-outdoor-access-points.png">
+//             <br>
+//             <h3>Outdoor Access Points</h3>
+//         </div>
+//         <p>Extend connectivity beyond the building and deliver access to people, applications, and network resources.</p>
+//     </div>
+//     <div class="panel panel--mdgray">
+//         <div class="text-center">
+//             <img src="public/img/routers-800series.png">
+//             <h3>800 Series ISR</h3>
+//         </div>
+//         <p>Cisco 800 Series Industrial Integrated Services Routers offer highly secure connectivity across 4G LTE wireless networks. The 800 Series routers are powered by Cisco IOS, delivering simple management, resilient communications, and durable security. All 800 Series routers offer integrated 4G LTE wireless WAN connectivity. The 829 router also provides highly secure wireless LAN connectivity.</p>
+//     </div>
+//     <div class="panel panel--bordered">
+//         <div class="text-center">
+//             <img src="public/img/switches-catalyst.png">
+//         </div>
+//         <p>These modular access switches are built for security, Internet of Things (IoT), and the cloud. They deliver state-of-the-art high availability, support up to 8 Tbps, and form one of the building blocks for SD-Access, Cisco’s leading enterprise architecture.</p>
+//     </div>
+//     <div class="panel panel--success">
+//         <div class="text-center">
+//             <img src="public/img/wireless-access-point-1600series.png">
+//         </div>
+//         <p>For the next generation of enterprise Wi-Fi solutions, the future is here. Stay ahead of the game by deploying a Cisco infrastructure that supports the latest in 802.11ac standard and provides mobile devices with industry-leading bandwidth. Customers and employees can now take advantage of faster wireless speeds for an overall better experience.</p>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+//
+
+$base-masonry-cols: 4 !default;
+$base-masonry-gap: $base-spacing !default;
+
+@mixin masonry-column($columns: $base-masonry-cols) {
+    column-count: $columns;
+
+    @include media-breakpoint-down(lg) {
+        column-count: max(1,($columns - 1));
+    }
+    @include media-breakpoint-down(md) {
+        column-count: max(1,($columns - 2));
+    }
+    @include media-breakpoint-down(sm) {
+        column-count: max(1,($columns - 3));
+    }
+    @include media-breakpoint-down(xs) {
+        column-count: 1;
+    }
+}
+
+@mixin masonry-gap($gap: $base-masonry-gap) {
+    $col-gap: $gap * 0.5;
+    column-gap: $col-gap;
+
+    > div {
+        margin: 0 0 ($col-gap - 5);
+    }
+}
+
+.masonry {
+    display: block;
+    box-sizing: border-box;
+
+    @include masonry-column();
+    @include masonry-gap();
+
+    > div {
+        break-inside: avoid;
+        display: inline-block;
+        width: 100%;
+    }
+
+    &--cols-2   { @include masonry-column($columns: 2); }
+    &--cols-3   { @include masonry-column($columns: 3); }
+    &--cols-4   { @include masonry-column($columns: 4); }
+    &--cols-5   { @include masonry-column($columns: 5); }
+
+    &--gap-none { @include masonry-gap($gap: 0); }
+    &--gap-qtr  { @include masonry-gap($gap: $base-spacing * 0.25); }
+    &--gap-half { @include masonry-gap($gap: $base-spacing * 0.5); }
+    &--gap-base { @include masonry-gap($gap: $base-spacing); }
+    &--gap-dbl  { @include masonry-gap($gap: $base-spacing * 2); }
+}

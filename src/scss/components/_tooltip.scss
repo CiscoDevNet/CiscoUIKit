@@ -1,0 +1,41 @@
+//
+// Tooltip
+//
+// Basic tooltips. Tooltips identify an element when they are activated. They may contain brief helper text about its function. For example, they may contain text information about actionable icons<br><b>Note:</b> Does not currently support inline HTML as this is a CSS-only based tooltip.<br><br>
+// Since 1.1.0
+//
+// Styleguide Components.Tooltip
+//
+
+
+//
+// Position
+//
+// Markup:
+// <span class="label label--large label--blue" data-balloon="top" data-balloon-pos="up">Position: Top</span>
+// <span class="label label--large label--blue" data-balloon="right" data-balloon-pos="right">Position: Right</span>
+// <span class="label label--large label--blue" data-balloon="bottom" data-balloon-pos="down">Position: Bottom</span>
+// <span class="label label--large label--blue" data-balloon="left" data-balloon-pos="left">Position: Left</span>
+//
+// Weight: 1
+//
+// Styleguide Components.Tooltip.Position
+//
+
+
+//
+// Size
+//
+// <blockquote>By default, tooltips are limited to single line. However, for larger text you can specify the size of the tooltip container.<br><b>Note:</b> Using extra wide tooltips can overflow off-screen on smaller form factors. Make sure to test and use the appropriate-sized tooltip container.</blockquote>
+//
+// Markup:
+// <span class="label label--large label--blue" data-balloon="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. " data-balloon-pos="up" data-balloon-length="small">Small</span>
+// <span class="label label--large label--blue" data-balloon="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. Curabitur porta molestie velit, sodales cursus nulla interdum at. Nulla accumsan maximus sem quis pretium. In quis commodo erat. " data-balloon-pos="up" data-balloon-length="medium">Medium</span>
+// <span class="label label--large label--blue" data-balloon="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. Curabitur porta molestie velit, sodales cursus nulla interdum at. Nulla accumsan maximus sem quis pretium. In quis commodo erat. " data-balloon-pos="up" data-balloon-length="large">Large</span>
+// <span class="label label--large label--blue" data-balloon="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. Curabitur porta molestie velit, sodales cursus nulla interdum at. Nulla accumsan maximus sem quis pretium. In quis commodo erat. " data-balloon-pos="up" data-balloon-length="xlarge">XLarge</span>
+// <span class="label label--large label--blue" data-balloon="This will fit the text to the width of the element" data-balloon-pos="up" data-balloon-length="fit">Fitted</span>
+//
+// Weight: 2
+//
+// Styleguide Components.Tooltip.Size
+//

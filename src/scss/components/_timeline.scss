@@ -1,0 +1,339 @@
+//
+// Timeline
+//
+// Simple vertical timeline pattern.<br><br>
+// Since 1.1.0
+//
+// Styleguide Components.Timeline
+//
+
+
+//
+// Color
+//
+// Markup:
+// <div class="timeline">
+//     <div class="timeline__list">
+//         <div class="timeline__item">
+//             <div class="timeline__icon"></div>
+//             <div class="timeline__time">6 hours ago</div>
+//             <div class="timeline__content">
+//                 <div class="text-bold">Default</div>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+//                 <div>Software Upgrade Recommended</div>
+//                 <a>link</a>
+//             </div>
+//         </div>
+//         <div class="timeline__item">
+//             <div class="timeline__icon timeline--success"></div>
+//             <div class="timeline__time">Feb 3, 2017</div>
+//             <div class="timeline__content">
+//                 <div class="text-bold text-success">Success</div>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+//                 <a>link</a>
+//             </div>
+//         </div>
+//         <div class="timeline__item">
+//             <div class="timeline__icon timeline--info"></div>
+//             <div class="timeline__time">2 years ago</div>
+//             <div class="timeline__content">
+//                 <div class="text-bold text-blue">Info</div>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+//                 <a>link</a>
+//             </div>
+//         </div>
+//         <div class="timeline__item">
+//             <div class="timeline__icon timeline--warning"></div>
+//             <div class="timeline__time">10/22/2017 03:16:00</div>
+//             <div class="timeline__content">
+//                 <div class="text-bold text-warning">Warning</div>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+//                 <a>link</a>
+//             </div>
+//         </div>
+//         <div class="timeline__item">
+//             <div class="timeline__icon timeline--danger"></div>
+//             <div class="timeline__time">2 months ago</div>
+//             <div class="timeline__content">
+//                 <div class="text-bold text-danger">Danger</div>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+//                 <a>link</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Timeline.Color
+//
+
+
+//
+// Alignment
+//
+// <blockquote>You can align your timeline items top (default) or centered</blockquote>
+//
+// Markup:
+// <div class="timeline">
+//     <div class="timeline__list">
+//         <div class="timeline__item">
+//             <div class="timeline__icon"></div>
+//             <div class="timeline__time">6 hours ago</div>
+//             <div class="timeline__content">
+//                 <div class="text-bold">Alignment: Top (default)</div>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+//                 <div>Software Upgrade Recommended</div>
+//                 <a>link</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <div class="timeline timeline--centered">
+//     <div class="timeline__list">
+//         <div class="timeline__item">
+//             <div class="timeline__icon"></div>
+//             <div class="timeline__time">6 hours ago</div>
+//             <div class="timeline__content">
+//                 <div class="text-bold">Alignment: Centered</div>
+//                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+//                 <div>Software Upgrade Recommended</div>
+//                 <a>link</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Timeline.Alignment
+//
+
+
+//
+// Display
+//
+// <blockquote>By default the timeline items are displayed as inline elements. You can force the items to be full width block-level elements by specifying the `timeline--block modifier`</blockquote>
+//
+// Markup:
+// <div class="timeline">
+//     <div class="timeline__list">
+//         <div class="timeline__item">
+//             <div class="timeline__icon"></div>
+//             <div class="timeline__time">6 hours ago</div>
+//             <div class="timeline__content">
+//                 <div class="panel panel--bordered">
+//                     <div class="text-bold">Display: Inline (default)</div>
+//                     <div>Software Upgrade Recommended</div>
+//                     <a>link</a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <div class="timeline timeline--block">
+//     <div class="timeline__list">
+//         <div class="timeline__item">
+//             <div class="timeline__icon"></div>
+//             <div class="timeline__time">6 hours ago</div>
+//             <div class="timeline__content">
+//                 <div class="panel panel--bordered">
+//                     <div class="text-bold">Display: Block</div>
+//                     <div>Software Upgrade Recommended</div>
+//                     <a>link</a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Components.Timeline.Display
+//
+
+
+//
+// Animation
+//
+// <blockquote>Specify the class `timeline--animation` modifier to add a hover animation to each timeline item</blockquote>
+//
+// Markup:
+// <div class="timeline timeline--animation">
+//     <div class="timeline__list">
+//         <div class="timeline__item">
+//             <div class="timeline__icon timeline--info"></div>
+//             <div class="timeline__time">3-4 October 2017</div>
+//             <div class="timeline__content">
+//                 <div class="row">
+//                     <div class="col-lg-3">
+//                         <img src="public/img/banking.jpg">
+//                     </div>
+//                     <div class="col-lg-9">
+//                         <h2 class="text-blue base-margin-bottom">Network Visualization & SDN Asia 2017</h2>
+//                         <p>Transformation through innovation for Network 2020</p>
+//                         <div>TechXLR8 Asia is the place to keep pace with the technologies enabling and shaping your connected future. Over three days you will meet business partners that will shape your company's strategy for years to come. The five co-located events as part of TechXLR8 Asia are 5G Asia, IoT Asia, the AI Summit, Network Virtualization & SDN Asia and Project Kairos.</div>
+//                         <p class="text-bold">TechXLR8 Asia kicked off with a press launch at the SGInnovate Innovation Campus in Singapore.</p>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="timeline__item">
+//             <div class="timeline__icon timeline--success"></div>
+//             <div class="timeline__time">just now</div>
+//             <div class="timeline__content">
+//                 <div class="row">
+//                     <div class="col-lg-9">
+//                         <h2>The Time is Now</h2>
+//                         <div class="divider divider--compressed divider--thick divider--accent-blue"></div>
+//                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+//                     </div>
+//                     <div class="col-lg-3">
+//                         <img src="public/img/section-2-3.jpg">
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Components.Timeline.Animation
+//
+
+.timeline {
+    position: relative;
+
+    &__item {
+        display: inline-flex;
+        align-items: flex-start;
+        position: relative;
+        margin: $base-spacing auto;
+        padding: $base-spacing * 0.5;
+        width: 100%;
+
+        &:hover,
+        &:focus,
+        &:active {
+            cursor: default;
+            background-color: $base-background-color;
+            transition: background-color .5s;
+        }
+    }
+
+    &--centered {
+        .timeline__item {
+            align-items: center;
+        }
+    }
+
+    &--block {
+        .timeline__content {
+            width: 100%;
+        }
+    }
+
+    &__icon {
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 139px;
+        z-index: 2;
+        border: 5px solid $base-background-color;
+        background-color: $base-font-color;
+    }
+
+    &__time {
+        float: left;
+        width: 125px;
+        min-width: 125px;
+        text-align: right;
+        font-style: italic;
+        padding-right: $base-spacing * 0.5;
+    }
+
+    &__content {
+        margin-left: 50px;
+    }
+
+    &:after {
+        background-color: $base-background-color;
+        content: ' ';
+        position: absolute;
+        display: block;
+        width: 2px;
+        top: 0;
+        left: 150px;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__time {
+            font-size: $small-font-size;
+        }
+    }
+}
+
+.timeline__icon.timeline--success   { background-color: $success; }
+.timeline__icon.timeline--info      { background-color: $base-accent-color; }
+.timeline__icon.timeline--warning   { background-color: $warning; }
+.timeline__icon.timeline--danger    { background-color: $danger; }
+
+.timeline.timeline--animation {
+    .timeline__item {
+        &:hover,
+        &:focus,
+        &:active {
+            cursor: default;
+            background-color: $base-background-color;
+            transition: background-color .5s;
+
+            .timeline__icon {
+                animation: pulseShadow 2s infinite;
+            }
+            .timeline__icon.timeline--info {
+                animation: pulseShadowInfo 2s infinite;
+            }
+            .timeline__icon.timeline--success {
+                animation: pulseShadowSuccess 2s infinite;
+            }
+            .timeline__icon.timeline--warning {
+                animation: pulseShadowWarning 2s infinite;
+            }
+            .timeline__icon.timeline--danger {
+                animation: pulseShadowDanger 2s infinite;
+            }
+        }
+    }
+}
+
+@keyframes pulseShadow {
+      0% { box-shadow: 0 0 0 0 rgba($base-font-color, 0.5); }
+     70% { box-shadow: 0 0 0 10px rgba($base-font-color, 0); }
+    100% { box-shadow: 0 0 0 0 rgba($base-font-color, 0); }
+}
+@keyframes pulseShadowInfo {
+      0% { box-shadow: 0 0 0 0 rgba($base-accent-color, 0.5); }
+     70% { box-shadow: 0 0 0 10px rgba($base-accent-color, 0); }
+    100% { box-shadow: 0 0 0 0 rgba($base-accent-color, 0); }
+}
+@keyframes pulseShadowSuccess {
+      0% { box-shadow: 0 0 0 0 rgba($success, 0.5); }
+     70% { box-shadow: 0 0 0 10px rgba($success, 0); }
+    100% { box-shadow: 0 0 0 0 rgba($success, 0); }
+}
+@keyframes pulseShadowWarning {
+      0% { box-shadow: 0 0 0 0 rgba($warning, 0.5); }
+     70% { box-shadow: 0 0 0 10px rgba($warning, 0); }
+    100% { box-shadow: 0 0 0 0 rgba($warning, 0); }
+}
+@keyframes pulseShadowDanger {
+      0% { box-shadow: 0 0 0 0 rgba($danger, 0.5); }
+     70% { box-shadow: 0 0 0 10px rgba($danger, 0); }
+    100% { box-shadow: 0 0 0 0 rgba($danger, 0); }
+}

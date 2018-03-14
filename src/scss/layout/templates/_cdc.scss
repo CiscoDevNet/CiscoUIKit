@@ -1,0 +1,113 @@
+.cui.template--cdc {
+    background-color: $base-background-color;
+    overflow-y: auto;
+
+    .container {
+        min-width: 0;
+        max-width: 1440px;
+        width: auto;
+    }
+
+    header,
+    main,
+    footer {
+        display: block;
+        max-width: 1600px;
+        margin: 0 auto;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.12);
+    }
+
+    header,
+    main {
+        background-color: $white;
+    }
+
+    header {
+        box-sizing: border-box;
+        min-height: 50px;
+        padding: 0;
+        height: auto;
+
+        .header-bar {
+            width: auto;
+        }
+
+        .toggle-menu {
+            visibility: hidden;
+            width: 0;
+            min-width: 0;
+            margin: 0;
+        }
+
+        @include media-breakpoint-down(md) {
+            height: 50px;
+
+            .header-bar,
+            &.header--regular .header-bar {
+                height: 50px;
+            }
+
+            .header-bar__main {
+                order: 1;
+                flex: 1;
+                margin: 0;
+
+                ul.list {
+                    display: none;
+                }
+
+                .toggle-menu {
+                    min-width: 30px;
+                    width: 30px;
+                    visibility: visible;
+                }
+            }
+            .header-bar__logo {
+                display: block;
+                order: 2;
+                flex: 1;
+                text-align: center;
+
+                .icon-cisco {
+                    font-size: 24px;
+                }
+            }
+            .header-toolbar {
+                display: block;
+                order: 3;
+                flex: 1;
+                justify-content: flex-end;
+                text-align: right;
+                .avatar {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    main {
+        min-height: 600px;
+        position: relative;
+        &:after {
+            content: '';
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);
+            position: absolute;
+            top: -5px;
+            height: 5px;
+            left: 0;
+            right: 0;
+            bottom: auto;
+        }
+    }
+
+    footer {
+        background-color: $med-gray-5;
+        width: auto;
+        overflow: hidden;
+        padding: $base-spacing 0;
+
+        a {
+            color: $white;
+        }
+    }
+}

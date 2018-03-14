@@ -1,0 +1,5 @@
+build/**
+.DS_STORE
+node_modules/**
+src/scss/base/_icon-font.scss
+package-lock.json
