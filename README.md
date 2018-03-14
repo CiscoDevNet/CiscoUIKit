@@ -2,7 +2,7 @@
      <img src="docs/public/img/Collage.png" width="100%">
 </center>
 
-# Cisco UI kit (formerly Atlantic-UI Kit)
+# Cisco UI kit
 
 The Cisco UI kit and pattern library is a style guide governing HTML markup at the presentation layer. It contains no javascript components. Instead, it focuses on HTML and CSS and leaves the choice of javascript toolkit up to the individual development teams.
 
@@ -10,17 +10,7 @@ This library is a collaboration between Cisco Brand and Cisco Engineering
 
 ## Copyright and License
 
-Code and documentation copyright 2017 Cisco Systems.
-
-## Links
-
-[Latest UI kit](http://cisco-ui.cisco.com/)
-
-[Digital Identity Home](https://cisco.jiveon.com/groups/atlantic/pages/about)
-
-## Have an Issue or an Idea?
-
-Send email with your issue, question or enhancement to our [mailer](mailto:atlantic-ui-styleguide@external.cisco.com)
+Code and documentation copyright 2018 Cisco Systems.
 
 ---
 
