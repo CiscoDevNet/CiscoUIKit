@@ -1,5 +1,5 @@
 //
-// Hero updated
+// Hero
 //
 // Since: 1.0.0
 //
@@ -394,11 +394,11 @@ $hero-solids:
     (dkblue, $base-panel-dkblue-color, $base-panel-dkblue-background),
     (indigo, $base-panel-indigo-color, $base-panel-indigo-background);
 
-$hero-backgrounds:  (1, '../img/hero-bg-1.jpg'),
-(2, '../img/hero-bg-2.jpg'),
-(3, '../img/hero-bg-3.jpg'),
-(4, '../img/hero-bg-4.jpg'),
-(5, '../img/hero-bg-5.jpg');
+$hero-backgrounds:  (1, '#{$cui-resource-path}/img/hero-bg-1.jpg'),
+(2, '#{$cui-resource-path}/img/hero-bg-2.jpg'),
+(3, '#{$cui-resource-path}/img/hero-bg-3.jpg'),
+(4, '#{$cui-resource-path}/img/hero-bg-4.jpg'),
+(5, '#{$cui-resource-path}/img/hero-bg-5.jpg');
 
 $hero-filters:  ("blue", "solid", rgba($cisco-blue, .25)),
 ("dkgray", "solid", rgba($dark-gray-2, .5)),
@@ -414,7 +414,7 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
 .hero {
     color: $white;
     position: relative;
-    background: url('../img/splash-default.jpg');
+    background: url('#{$cui-resource-path}/img/splash-default.jpg');
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -438,9 +438,9 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
 
     &__title {
         font-size: $hero-title-font-size-mobile;
-        @include break-at(small)  { font-size: $hero-title-font-size-small; }
-        @include break-at(medium) { font-size: $hero-title-font-size-medium; }
-        @include break-at(large)  { font-size: $hero-title-font-size-large; }
+        @include media-breakpoint-up(md)  { font-size: $hero-title-font-size-small; }
+        @include media-breakpoint-up(lg) { font-size: $hero-title-font-size-medium; }
+        @include media-breakpoint-up(xl)  { font-size: $hero-title-font-size-large; }
     }
 
     // Generate hero solid backgrounds
@@ -501,6 +501,10 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
         }
     }
 
+    &--bordered {
+        border: $base-border;
+    }
+
     &__content {
         position: relative;
         @include panel-padding($padding: $hero-spacing-regular);
@@ -516,7 +520,7 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
         position: relative;
         margin-bottom: $base-spacing;
 
-        @include break-at(large) {
+        @include media-breakpoint-up(lg) {
             margin-bottom: $base-spacing * 2;
         }
 
@@ -541,6 +545,9 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
         .hero__marquee {
             width: 50%;
             flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         &:after {
@@ -553,4 +560,13 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
     &--split-50 { .hero__content { width: 50%; } .hero__marquee { width: 50%; }}
     &--split-66 { .hero__content { width: 66%; } .hero__marquee { width: 33%; }}
     &--split-75 { .hero__content { width: 75%; } .hero__marquee { width: 25%; }}
+
+    @include media-breakpoint-down(sm) {
+        flex-wrap: wrap;
+
+        .hero__content,
+        .hero__marquee {
+            width: 100%;
+        }
+    }
 }

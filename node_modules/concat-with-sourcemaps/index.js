@@ -62,11 +62,11 @@ Concat.prototype.add = function(filePath, content, sourceMap) {
               line: _this.lineOffset + mapping.generatedLine,
               column: (mapping.generatedLine === 1 ? _this.columnOffset : 0) + mapping.generatedColumn
             },
-            original: {
+            original: mapping.originalLine == null ? null : {
               line: mapping.originalLine,
               column: mapping.originalColumn
             },
-            source: mapping.source,
+            source: mapping.originalLine != null ? mapping.source : null,
             name: mapping.name
           });
         }

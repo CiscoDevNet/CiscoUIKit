@@ -21,8 +21,10 @@ function env(environment) {
       env.merge(environment, env.parse(window.name));
     }
 
-    try { env.merge(environment, env.parse(window.localStorage.env || window.localStorage.debug)); }
-    catch (e) {}
+    if (window.localStorage) {
+      try { env.merge(environment, env.parse(window.localStorage.env || window.localStorage.debug)); }
+      catch (e) {}
+    }
 
     if (
          'object' === typeof window.location

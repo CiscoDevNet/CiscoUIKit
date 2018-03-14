@@ -1,7 +1,10 @@
 /* global process */
 var bower = require('bower');
 var fs = require('fs');
-var gutil = require('gulp-util');
+var Vinyl = require('vinyl');
+var PluginError = require('plugin-error');
+var colors = require('ansi-colors');
+var fancyLog = require('fancy-log');
 var path = require('path');
 var through = require('through2');
 var walk = require('walk');
@@ -32,11 +35,11 @@ var log = {
     },
     error: function (s) {
         if (this.verbosity > 0) {
-            log.output(gutil.colors.red(s));
+            log.output(colors.red(s));
         }
     },
     output: function (s) {
-        gutil.log(s);
+        fancyLog.info(s);
     }
 };
 
@@ -66,7 +69,7 @@ function gulpBower(opts, cmdArguments) {
 
     bowerCommand.apply(bower.commands, cmdArguments)
         .on('log', function (result) {
-            log.info(['bower', gutil.colors.cyan(result.id), result.message].join(' '));
+            log.info(['bower', colors.cyan(result.id), result.message].join(' '));
         })
         .on('prompt', function (prompts, callback) {
             if (enablePrompt === true) {
@@ -75,11 +78,11 @@ function gulpBower(opts, cmdArguments) {
                 var error = 'Can\'t resolve suitable dependency version.';
                 log.error(error);
                 log.error('Set option { interactive: true } to select.');
-                throw new gutil.PluginError(PLUGIN_NAME, error);
+                throw new PluginError(PLUGIN_NAME, error);
             }
         })
         .on('error', function (error) {
-            stream.emit('error', new gutil.PluginError(PLUGIN_NAME, error));
+            stream.emit('error', new PluginError(PLUGIN_NAME, error));
             stream.emit('end');
         })
         .on('end', function () {
@@ -196,7 +199,7 @@ function getBowerCommand(cmd) {
 
     // try to give a good error description to the user when a bad command was passed
     if (bowerCommand === undefined) {
-        throw new gutil.PluginError(PLUGIN_NAME, 'The command \'' + cmd + '\' is not available in the bower commands');
+        throw new PluginError(PLUGIN_NAME, 'The command \'' + cmd + '\' is not available in the bower commands');
     }
 
     return bowerCommand;
@@ -213,7 +216,7 @@ function writeStreamToFs(opts, stream) {
     var walker = walk.walk(baseDir);
 
     walker.on('errors', function (root, stats, next) {
-        stream.emit('error', new gutil.PluginError(PLUGIN_NAME, stats.error));
+        stream.emit('error', new PluginError(PLUGIN_NAME, stats.error));
         next();
     });
     walker.on('directory', function (root, stats, next) {
@@ -225,9 +228,9 @@ function writeStreamToFs(opts, stream) {
 
         fs.readFile(filePath, function (error, data) {
             if (error) {
-                stream.emit('error', new gutil.PluginError(PLUGIN_NAME, error));
+                stream.emit('error', new PluginError(PLUGIN_NAME, error));
             } else {
-                stream.write(new gutil.File({
+                stream.write(new Vinyl({
                     path: path.relative(baseDir, filePath),
                     contents: data
                 }));

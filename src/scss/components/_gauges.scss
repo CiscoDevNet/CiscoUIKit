@@ -92,6 +92,20 @@
 //         <div class="gauge__percentage">25</div>
 //     </div>
 // </div>
+// <div class="gauge gauge--alt gauge--small gauge--blue" data-percentage="25">
+//     <div class="gauge__circle">
+//         <div class="mask full">
+//             <div class="fill"></div>
+//         </div>
+//         <div class="mask half">
+//             <div class="fill"></div>
+//             <div class="fill fix"></div>
+//         </div>
+//     </div>
+//     <div class="gauge__inset">
+//         <div class="gauge__percentage">25</div>
+//     </div>
+// </div>
 // <div class="gauge gauge--alt gauge--small gauge--success" data-percentage="25">
 //     <div class="gauge__circle">
 //         <div class="mask full">
@@ -385,6 +399,7 @@
 
   &--primary     { @include gauge-circle-color($primary); }
   &--default     { @include gauge-circle-color($default); }
+  &--blue        { @include gauge-circle-color($cisco-blue); }
   &--success     { @include gauge-circle-color($success); }
   &--danger      { @include gauge-circle-color($danger); }
   &--warning     { @include gauge-circle-color($warning); }

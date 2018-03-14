@@ -1,156 +1,226 @@
 //
-// Angular Modals
+// Modal
 //
-// **Note**: This component requires the Angular UI Modal module (https://angular-ui.github.io/bootstrap/#/modal)
+// Basic modals<br><br>
+// Since 1.2.0
 //
-// <div ng-controller="modalDemo">
-//     <a class="button button--primary" ng-click="openModal()">Open Modal</a>
+// Styleguide Components.Modal
+//
+
+
+//
+// Backdrop
+//
+// <blockquote>A background overlay is required for modals. Add this markup to your page. <b>NOTE:</b> Only add this element once and toggle it's display when showing / hiding your modals</blockquote>
+//
+// Markup:
+// <div class="modal-backdrop hide"></div>
+//
+// Weight: 1
+//
+// Styleguide Components.Modal.Backdrop
+//
+
+
+//
+// Feedback Example
+//
+// Markup:
+// <button class="btn" id="modal-feedback-open">Open Feedback</button>
+// <br>
+// <div class="modal hide" id="modal-feedback">
+//     <div class="modal__dialog">
+//         <div class="modal__content">
+//             <a class="modal__close"><span class="icon-close"></span></a>
+//             <div class="modal__header">
+//                 <h1 class="modal__title">Feedback</h1>
+//                 <p>Tell us what you think...</p>
+//             </div>
+//             <div class="modal__body">
+//                 <div class="rating rating--large rating--alt">
+//                     <div class="rating__stars">
+//                        <div class="rating__star" title="5 Stars">
+//                            <span class="icon-star"></span>
+//                        </div>
+//                        <div class="rating__star" title="4 Stars">
+//                            <span class="icon-star"></span>
+//                        </div>
+//                        <div class="rating__star" title="3 Stars">
+//                            <span class="icon-star"></span>
+//                        </div>
+//                        <div class="rating__star" title="2 Stars">
+//                            <span class="icon-star"></span>
+//                        </div>
+//                        <div class="rating__star" title="1 Star">
+//                            <span class="icon-star"></span>
+//                        </div>
+//                    </div>
+//                </div>
+//                <br>
+//                <form>
+//                    <textarea class="textarea textarea--well" placeholder="Comments" rows="3"></textarea>
+//                </form>
+//             </div>
+//             <div class="modal__footer">
+//                 <button class="btn" id="modal-feedback-close">Cancel</button>
+//                 <button class="btn btn--secondary">Submit</button>
+//             </div>
+//         </div>
+//     </div>
 // </div>
 //
+// Weight: 2
+//
+// Styleguide Components.Modal.Feedback Example
 //
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  pointer-events: none;
-  z-index: 1050;
 
-  &.fade {
-    .modal-dialog {
-      opacity: 0;
-      transform: scale3d(1.05, 1.05, 1);
-    }
-  }
-
-  &.in {
-    .modal-dialog {
-      opacity: 1;
-      transform: scale3d(1, 1, 1);
-    }
-  }
-}
-
-.modal-open .modal {
-    pointer-events: auto;
-}
-
-.modal-dialog {
-  position: relative;
-  margin: auto;
-  padding: $base-spacing * 0.5;
-  transition: opacity 0.3s ease,
-              transform 0.3s ease;
-  z-index: 1;
-
-  @include break-at(small) {
-    padding: $base-spacing;
-    width: 700px;
-  }
-
-  &.modal-lg {
-    @include break-at(medium) {
-      width: 930px;
-    }
-    @include break-at(large) {
-      width: 1130px;
-    }
-  }
-}
-
-.modal-content {
-  @include panel($background: $base-modal-background);
-  padding: $base-spacing $base-spacing * 0.5;
-
-  @include break-at(small) {
-    padding: $base-spacing $base-spacing * 2;
-  }
-
-  > *:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.modal-title {
-  text-align: center;
-}
-
-.modal-header,
-.modal-body,
-.modal-footer {
-  @include panel-section;
-  padding: 0;
-}
-
-.modal-body,
-.modal-footer {
-  margin-top: $base-spacing;
-}
-
-.modal-header {
-  .close {
-    @extend %link;
-    background: transparent;
-    position: absolute;
-    top: -21px;
-    right: -10px;
-    z-index: 1;
-    opacity: 0.5;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    @include break-at(small) {
-      top: -21px;
-      right: -33px;
-    }
-
-    > span {
-      font-size: 24px;
-    }
-  }
-}
-
-.modal-footer {
-  text-align: center;
-
-  .button {
-    margin: 0;
-    max-width: 125px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    @include break-at(small) {
-      margin: 0 $base-spacing 0 0;
-    }
-
-    @include break-at(small) {
-      max-width: $base-button-max-width;
-    }
-  }
-}
+//
+// Login Example (with animation)
+//
+// Markup:
+// <button class="btn" id="modal-login-open">Open Login</button>
+// <br>
+// <div class="modal modal--animated hide" id="modal-login">
+//     <div class="modal__dialog">
+//         <div class="modal__content">
+//             <a class="modal__close"><span class="icon-close"></span></a>
+//             <div class="modal__header">
+//                 <div class="icon-cisco text-blue text-huge"></div>
+//                 <br>
+//                 <h1 class="modal__title">Product Name</h1>
+//                 <p>Version 1.0</p>
+//             </div>
+//             <div class="modal__body">
+//                <form>
+//                    <div class="form-group">
+//                        <div class="form-group__text">
+//                            <input type="text" required>
+//                            <label>User ID</label>
+//                            <div class="required-block">
+//                                <span class="icon-asterisk"></span>
+//                            </div>
+//                        </div>
+//                    </div>
+//                    <div class="form-group">
+//                        <div class="form-group__text">
+//                            <input type="password" required>
+//                            <label>Password</label>
+//                            <div class="required-block">
+//                                <span class="icon-asterisk"></span>
+//                            </div>
+//                        </div>
+//                    </div>
+//                </form>
+//             </div>
+//             <div class="modal__footer">
+//                 <button class="btn btn--secondary">Log In</button>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Components.Modal.Login Example
+//
 
 .modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: $base-backdrop-background;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 1040;
-
-  &.in {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $base-backdrop-background;
     opacity: $base-backdrop-opacity;
-  }
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: $base-backdrop-zindex;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: none;
+    z-index: $base-modal-zindex;
+    pointer-events: auto;
+
+    &--animated {
+        animation: blowup .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards, fade-in .25s 1 linear;
+    }
+
+    &.show {
+        .modal__dialog,
+        .modal-dialog {
+            opacity: 1;
+        }
+    }
+    &.fade {
+        .modal__dialog,
+        .modal-dialog {
+            transform: scale3d(1,1,1);
+        }
+    }
+    .modal__dialog,
+    .modal-dialog {
+        width: 100%;
+        max-width: $base-modal-maxwidth;
+        margin: auto;
+        padding: $base-spacing;
+
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+        }
+    }
+    .modal__content,
+    .modal-content {
+        position: relative;
+        display: block;
+        text-align: center;
+        padding: ($base-spacing * 3) ($base-spacing * 2);
+        background-color: $white;
+        color: $base-font-color;
+        border-radius: $base-border-radius;
+        border: 0 none;
+        box-shadow: 0 10px 24px -6px rgba(0,0,0,0.25);
+
+        @include media-breakpoint-down(sm) {
+            padding: $base-spacing;
+        }
+
+        .modal__close {
+            font-size: $base-modal-close-size;
+            line-height: $base-modal-close-size;
+            position: absolute;
+            right: $base-spacing;
+            top: $base-spacing;
+            color: $base-muted-color;
+
+            &:hover {
+                color: $base-link-color;
+            }
+        }
+
+        .modal__header {
+            margin-bottom: $base-spacing * 1.5;
+
+            .modal__title {
+                font-size: $base-modal-title-size;
+                font-weight: $base-modal-title-weight;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 32px;
+                }
+            }
+        }
+        .modal__footer {
+            margin-top: $base-spacing * 2;
+        }
+    }
 }

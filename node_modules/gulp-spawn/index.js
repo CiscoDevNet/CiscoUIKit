@@ -35,7 +35,7 @@ function gulpSpawn(options) {
 		}
 
 		// spawn program
-		var program = cp.spawn(options.cmd, options.args);
+		var program = cp.spawn(options.cmd, options.args, options.opts);
 
 		// listen to stderr and emit errors if any
 		var errBuffer = new Buffer(0);

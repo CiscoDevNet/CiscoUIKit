@@ -8,11 +8,83 @@
 
 
 //
-// Example
-//
-// <blockquote>Add the class `active` to each `rating__star` that applies to the user's selection (e.g. 1-4 if the user clicks the fourth star). <br>Note that is important that the `rating__star` elements are in reverse order in the markup, due to way they are styled in the CSS</blockquote>
+// Color
 //
 // Markup:
+// <h6>Default</h6>
+// <div class="rating">
+//     <div class="rating__stars">
+//         <div class="rating__star" title="4.5 Stars">
+//             <span class="icon-star-half"></span>
+//         </div>
+//         <div class="rating__star" title="4 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="3 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="2 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="1 Star">
+//             <span class="icon-star"></span>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <h6>Alternate</h6>
+// <div class="rating rating--alt">
+//     <div class="rating__stars">
+//         <div class="rating__star" title="4 Stars">
+//             <span class="icon-star-empty"></span>
+//         </div>
+//         <div class="rating__star" title="4 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="3 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="2 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="1 Star">
+//             <span class="icon-star"></span>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Rating.Color
+//
+
+
+//
+// Size
+//
+// Markup:
+// <h6>Small</h6>
+// <div class="rating rating--small">
+//     <div class="rating__stars">
+//         <div class="rating__star" title="5 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="4 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="3 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="2 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="1 Star">
+//             <span class="icon-star"></span>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <h6>Medium (default)</h6>
 // <div class="rating">
 //     <div class="rating__stars">
 //         <div class="rating__star" title="5 Stars">
@@ -32,46 +104,93 @@
 //         </div>
 //     </div>
 // </div>
+// <br>
+// <h6>Large</h6>
+// <div class="rating rating--large">
+//     <div class="rating__stars">
+//         <div class="rating__star" title="5 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="4 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="3 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="2 Stars">
+//             <span class="icon-star"></span>
+//         </div>
+//         <div class="rating__star" title="1 Star">
+//             <span class="icon-star"></span>
+//         </div>
+//     </div>
+// </div>
 //
-// Styleguide Components.Rating.Example
+// Weight: 2
+//
+// Styleguide Components.Rating.Size
 //
 
 .rating {
-  @include clearfix;
-  margin: 0 auto 10px auto;
-  font-size: 0;
-  text-align: center;
+    @include clearfix;
+    margin: 0;
+    font-size: 0;
+    text-align: center;
 
-  &.rated {
-    pointer-events: none;
-  }
+    &.rated {
+        pointer-events: none;
+    }
+
+    &--alt {
+        .rating__star {
+            &.active,
+            &:hover,
+            &:hover ~ .rating__star, {
+                color: $yellow;
+            }
+        }
+    }
+
+    &--small {
+        .rating__star {
+            font-size: $base-rating-font-size-small;
+            margin-right: $base-rating-margin-small;
+        }
+    }
+
+    &--large {
+        .rating__star {
+            font-size: $base-rating-font-size-large;
+            margin-right: $base-rating-margin-large;
+        }
+    }
 }
 
 .rating__stars {
-  display: inline-block;
+    display: inline-block;
 }
 
 .rating__star {
-  float: right;
-  margin-right: 30px;
-  color: $base-disabled-color;
-  cursor: pointer;
-  font-size: 24px;
-  line-height: 1;
-  transition: color 0.2s ease;
+    float: right;
+    margin-right: $base-rating-margin;
+    color: $base-disabled-color;
+    cursor: pointer;
+    font-size: $base-rating-font-size;
+    line-height: 1;
+    transition: color 0.2s ease;
 
-  &:first-child {
-    margin-right: 0;
-  }
+    &:first-child {
+        margin-right: 0;
+    }
 
-  &.active,
-  &:hover,
-  &:hover ~ .rating__star, {
-    color: $base-accent-color;
-    text-decoration: none;
-  }
+    &.active,
+    &:hover,
+    &:hover ~ .rating__star, {
+        color: $base-accent-color;
+        text-decoration: none;
+    }
 
-  &.active {
-    animation: bounce 1s linear;
-  }
+    &.active {
+        animation: bounce 1s linear;
+    }
 }

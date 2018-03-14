@@ -244,7 +244,7 @@
 .radio {
     @include text-ellipsis;
     position: relative;
-    display: inline-flex;
+    display: inline-block;
     white-space: normal;
     align-items: center;
     color: $base-font-color;

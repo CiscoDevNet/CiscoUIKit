@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="cui" lang="en" id="styleguide">
+<html lang="en" id="styleguide">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
         <script src="public/js/featherlight.min.js"></script>
         <script src="public/js/Markdown.Converter.js"></script>
     </head>
-    <body class="styleguide">
+    <body class="cui styleguide">
         <div class="content-fluid">
             <nav id="styleguideSidebar" class="sidebar">
                 <div class="sidebar__header">
@@ -49,6 +49,9 @@
                     <li class="sidebar__drawer">
                         <a>Older Versions</a>
                         <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.0-official/" target="_blank">Version 1.2.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.1.0-official/" target="_blank">Version 1.1.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.5-official/" target="_blank">Version 1.0.5</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.4-official/" target="_blank">Version 1.0.4</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.3-official/" target="_blank">Version 1.0.3</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.2-official/" target="_blank">Version 1.0.2</a></li>
@@ -71,6 +74,15 @@
                             <li class="sidebar__item">
                                 <a href="assets/stickyfooter.html" target="_blank">Sticky Footer</a>
                             </li>
+                            <li class="sidebar__item">
+                                <a href="assets/cdc-guest.html" target="_blank">CDC Guest Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/cdc-entitled.html" target="_blank">CDC Entitled Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/cdc-employee.html" target="_blank">CDC Employee Template</a>
+                            </li>
                         </ul>
                     </li>
                     <li id="rootDrawer" class="sidebar__drawer">
@@ -83,7 +95,7 @@
                                         <a onclick="doNav('section-base.html#base-typography')">Typography  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-grid">
-                                        <a onclick="doNav('section-base.html#base-grid')">Grid System  <span class="label label--tiny label--success label--bordered qtr-margin-left">new</span></a>
+                                        <a onclick="doNav('section-base.html#base-grid')">Grid System</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-button">
                                         <a onclick="doNav('section-base.html#base-button')">Button</a>
@@ -94,14 +106,20 @@
                                     <li class="sidebar__item depth-2" id="section-base-color">
                                         <a onclick="doNav('section-base.html#base-color')">Color</a>
                                     </li>
+                                    <li class="sidebar__item depth-2" id="section-base-description-list">
+                                        <a onclick="doNav('section-base.html#base-description-list')">Description List</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-divider">
+                                        <a onclick="doNav('section-base.html#base-divider')">Divider</a>
+                                    </li>
                                     <li class="sidebar__item depth-2" id="section-base-icons">
                                         <a onclick="doNav('section-base.html#base-icons')">Icons</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-input">
-                                        <a onclick="doNav('section-base.html#base-input')">Input  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-base.html#base-input')">Input</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-label">
-                                        <a onclick="doNav('section-base.html#base-label')">Label  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-base.html#base-label')">Label</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-link">
                                         <a onclick="doNav('section-base.html#base-link')">Link</a>
@@ -110,7 +128,7 @@
                                         <a onclick="doNav('section-base.html#base-list')">List</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-panel">
-                                        <a onclick="doNav('section-base.html#base-panel')">Panel  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-base.html#base-panel')">Panel</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-radio">
                                         <a onclick="doNav('section-base.html#base-radio')">Radio</a>
@@ -128,7 +146,7 @@
                                         <a onclick="doNav('section-base.html#base-table')">Table  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-thumbnail">
-                                        <a onclick="doNav('section-base.html#base-thumbnail')">Thumbnail  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-base.html#base-thumbnail')">Thumbnail</a>
                                     </li>
                                 </ul>
                             </li>
@@ -147,6 +165,12 @@
                                     <li class="sidebar__item depth-2" id="section-components-breadcrumb">
                                         <a onclick="doNav('section-components.html#components-breadcrumb')">Breadcrumb</a>
                                     </li>
+                                    <li class="sidebar__item depth-2" id="section-components-carousel">
+                                        <a onclick="doNav('section-components.html#components-carousel')">Carousel</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-dropdown">
+                                        <a onclick="doNav('section-components.html#components-dropdown')">Dropdown</a>
+                                    </li>
                                     <li class="sidebar__item depth-2" id="section-components-figure">
                                         <a onclick="doNav('section-components.html#components-figure')">Figure</a>
                                     </li>
@@ -154,25 +178,34 @@
                                         <a onclick="doNav('section-components.html#components-gauge')">Gauge</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-hero">
-                                        <a onclick="doNav('section-components.html#components-hero')">Hero  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-components.html#components-hero')">Hero</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-loader">
                                         <a onclick="doNav('section-components.html#components-loader')">Loader</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-modal">
+                                        <a onclick="doNav('section-components.html#components-modal')">Modal</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-rating">
                                         <a onclick="doNav('section-components.html#components-rating')">Rating</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-scoreboard">
-                                        <a onclick="doNav('section-components.html#components-scoreboard')">Scoreboard  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-components.html#components-scoreboard')">Scoreboard</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-step">
                                         <a onclick="doNav('section-components.html#components-step')">Step</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-tab">
-                                        <a onclick="doNav('section-components.html#components-tab')">Tab</a>
+                                        <a onclick="doNav('section-components.html#components-tab')">Tab  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-timeline">
+                                        <a onclick="doNav('section-components.html#components-timeline')">Timeline</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-toast">
                                         <a onclick="doNav('section-components.html#components-toast')">Toast</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-tooltip">
+                                        <a onclick="doNav('section-components.html#components-tooltip')">Tooltip</a>
                                     </li>
                                 </ul>
                             </li>
@@ -180,7 +213,7 @@
                                 <a>Layout</a>
                                 <ul>
                                     <li class="sidebar__item depth-2" id="section-layout-footer">
-                                        <a onclick="doNav('section-layout.html#layout-footer')">Footer  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-layout.html#layout-footer')">Footer</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-layout-header">
                                         <a onclick="doNav('section-layout.html#layout-header')">Header</a>
@@ -267,9 +300,33 @@
 </div>
 
                             <div>
-                                <div class="panel panel--blue" style="height:200px;">
-    <h1 class="absolute-center text-uppercase">centered</h1>
-</div>
+                                <div class="row" IGNORED>
+    <div class="col-md-6" IGNORED>
+        <div class="panel panel--blue panel--bordered" style="height:200px;">
+            <h1 class="absolute-center text-uppercase">centered</h1>
+        </div>
+    </div IGNORED>
+    <div class="col-md-6" IGNORED>
+        <div class="panel panel--blue panel--bordered" style="height:200px;">
+            <h1 class="absolute-center absolute-center--top text-uppercase">top</h1>
+        </div>
+    </div IGNORED>
+    <div class="col-md-6" IGNORED>
+        <div class="panel panel--blue panel--bordered" style="height:200px;">
+            <h1 class="absolute-center absolute-center--right text-uppercase">right</h1>
+        </div>
+    </div IGNORED>
+    <div class="col-md-6" IGNORED>
+        <div class="panel panel--blue panel--bordered" style="height:200px;">
+            <h1 class="absolute-center absolute-center--bottom text-uppercase">bottom</h1>
+        </div>
+    </div IGNORED>
+    <div class="col-md-6" IGNORED>
+        <div class="panel panel--blue panel--bordered" style="height:200px;">
+            <h1 class="absolute-center absolute-center--left text-uppercase">left</h1>
+        </div>
+    </div IGNORED>
+</div IGNORED>
                             </div>
                             <div class="base-margin-top">
                                 <div class="flex">
@@ -280,9 +337,33 @@
                                     <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
                                 </div>
                                 <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
-                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;panel panel--blue&quot; style=&quot;height:200px;&quot;&gt;
-    &lt;h1 class=&quot;absolute-center text-uppercase&quot;&gt;centered&lt;/h1&gt;
-&lt;/div&gt;</code></pre>
+                                    <pre><code class="code-raw" data-language="html">
+
+        &lt;div class=&quot;panel panel--blue panel--bordered&quot; style=&quot;height:200px;&quot;&gt;
+            &lt;h1 class=&quot;absolute-center text-uppercase&quot;&gt;centered&lt;/h1&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class=&quot;panel panel--blue panel--bordered&quot; style=&quot;height:200px;&quot;&gt;
+            &lt;h1 class=&quot;absolute-center absolute-center--top text-uppercase&quot;&gt;top&lt;/h1&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class=&quot;panel panel--blue panel--bordered&quot; style=&quot;height:200px;&quot;&gt;
+            &lt;h1 class=&quot;absolute-center absolute-center--right text-uppercase&quot;&gt;right&lt;/h1&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class=&quot;panel panel--blue panel--bordered&quot; style=&quot;height:200px;&quot;&gt;
+            &lt;h1 class=&quot;absolute-center absolute-center--bottom text-uppercase&quot;&gt;bottom&lt;/h1&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class=&quot;panel panel--blue panel--bordered&quot; style=&quot;height:200px;&quot;&gt;
+            &lt;h1 class=&quot;absolute-center absolute-center--left text-uppercase&quot;&gt;left&lt;/h1&gt;
+        &lt;/div&gt;
+
+</code></pre>
                                 </div>
                             </div>
                             

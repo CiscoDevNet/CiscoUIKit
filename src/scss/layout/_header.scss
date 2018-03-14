@@ -166,7 +166,7 @@
 //                 </div>
 //             </div>
 //             <div class="header-menus">
-//                 <ul class="nav nav-tabs nav-tabs--tall">
+//                 <ul class="nav nav-tabs">
 //                     <li class="tab active">
 //                         <a><div class="tab__heading" title="Tab 1">Tab 1</div></a>
 //                     </li>
@@ -220,7 +220,7 @@
         @include flex-center-vertical;
         height: $header-height-small;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(xs) {
             height: $header-height-large;
         }
 
@@ -242,7 +242,7 @@
         &__logo {
             display: none;
 
-            @include break-at(small) {
+            @include media-breakpoint-up(xs) {
                 display: block;
                 margin: $header-logo-margin;
             }
@@ -271,7 +271,7 @@
             margin-right: 24px;
             position: relative;
 
-            @include break-at(small) {
+            @include media-breakpoint-up(xs) {
                 position: relative;
             }
         }
@@ -279,7 +279,7 @@
 
     &--compressed {
         .header-bar {
-            @include break-at(small) {
+            @include media-breakpoint-up(xs) {
                 height: $header-height-small;
             }
         }
@@ -289,15 +289,23 @@
                 font-size: $header-logo-size-small;
             }
 
-            @include break-at(small) {
+            @include media-breakpoint-up(xs) {
                 margin: $header-logo-margin-small;
+            }
+        }
+    }
+
+    &--regular {
+        .header-bar {
+            @include media-breakpoint-up(xs) {
+                height: $header-height-regular;
             }
         }
     }
 
     &--tall {
         .header-bar {
-            @include break-at(small) {
+            @include media-breakpoint-up(xs) {
                 height: $header-height-tall;
             }
         }
@@ -326,7 +334,7 @@
         font-weight: $h2-font-weight;
         line-height: 1;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(xs) {
             margin-top: 3px;
             margin-left: 0;
             font-size: $header-title-size-large;
@@ -350,7 +358,7 @@
 .header-breadcrumbs {
     display: none;
 
-    @include break-at(small) {
+    @include media-breakpoint-up(xs) {
         margin: $header-breadcrumbs-margin;
         font-size: $header-breadcrumbs-font-size;
         display: block;
@@ -364,7 +372,7 @@
 .breadcrumb-bar {
     display: block;
     margin-top: $base-spacing * 0.5;
-    @include break-at(small) {
+    @include media-breakpoint-up(xs) {
         display: none;
     }
 }
@@ -376,7 +384,7 @@
 .header-utilities {
     display: none;
 
-    @include break-at(small) {
+    @include media-breakpoint-up(xs) {
         display: flex;
         flex: 1;
     }
@@ -422,7 +430,7 @@
     .nav.nav-tabs {
         display: none;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(xs) {
             display: block;
             overflow-x: auto;
         }
@@ -438,10 +446,6 @@
     align-items: center;
     justify-content: center;
 
-    *+* {
-        margin-left: $base-spacing * 0.5;
-    }
-
     // hide dropdown toggle caret if dropdown toggle is a header-toolbar button
     & > .dropdown .dropdown-toggle:after {
         content: normal;
@@ -451,7 +455,7 @@
         margin-right: $base-spacing * 0.5;
     }
 
-    @include break-at(small) {
+    @include media-breakpoint-up(xs) {
         @include flex-center-vertical;
     }
 

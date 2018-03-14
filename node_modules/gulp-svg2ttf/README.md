@@ -57,6 +57,12 @@ Default value: Fontello ad or SVG Font copyright metadata.
 
 Allows to set to your copyright informations.
 
+#### options.version
+Type: `String`
+Default value: `undefined` (results in version `1.0`)
+
+Allows to set the version number of the font. Needs to be in the format `Version <NUM>.<NUM>` (the `Version` prefix is optional).
+
 ### Note
 
 You may look after a full Gulp web font workflow, see

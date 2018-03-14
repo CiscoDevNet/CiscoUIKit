@@ -65,11 +65,11 @@ $(document).ready(function() {
     });
 
     // Wire the tabs
-    $('main .tab-heading').parent().parent().click(function() {
+    $('main li.tab').click(function() {
         $(this).siblings().removeClass('active');
-        $(this).parent().siblings().find('.tab-pane').removeClass('active');
+        $(this).parent().parent().find('.tab-pane').removeClass('active');
         $(this).addClass('active');
-        $(this).parent().next().find('#'+this.id + '-content').addClass('active');
+        $(this).parent().parent().find('#'+this.id + '-content').addClass('active');
     });
 
     // Check for anchor link in the URL
@@ -84,11 +84,54 @@ $(document).ready(function() {
         $('#section-gettingStarted').addClass('sidebar__item--selected');
     }
 
+    // Wire the dropdown examples
+    $('main .dropdown .btn').click(function(e) {
+        e.stopPropagation();
+        $(this).parent().toggleClass('active');
+    });
+    // Close dropdowns on clicks outside the dropdowns
+    $(document).click(function() {
+        $('main .dropdown').removeClass('active');
+    });
+
+    // Wire the modal examples
+    $('main #modal-feedback-open').click(function() {
+        $('.modal-backdrop').removeClass('hide');
+        $('#modal-feedback').removeClass('hide');
+    });
+    $('main #modal-feedback-close').click(function() {
+        $('.modal-backdrop').addClass('hide');
+        $('#modal-feedback').addClass('hide');
+    });
+    $('main #modal-login-open').click(function() {
+        $('.modal-backdrop').removeClass('hide');
+        $('#modal-login').removeClass('hide');
+    });
+
+    $('.modal__close').click(function() {
+        $('.modal-backdrop').addClass('hide');
+        $('.modal').addClass('hide');
+    });
+
+    // Wire the masonry layout dropdowns
+    $('main #masonry-columns-dropdown').change(function() {
+        $('main #masonry-columns-example').removeClass();
+        $('main #masonry-columns-example').addClass('masonry masonry--cols-' + this.value);
+    });
+    $('main #masonry-gaps-dropdown').change(function() {
+        $('main #masonry-gaps-example').removeClass();
+        $('main #masonry-gaps-example').addClass('masonry masonry--gap-' + this.value);
+    });
+
+    // Wire the selectable tables
+    $('main .table.table--selectable tbody > tr').click(function() {
+        $(this).toggleClass('active');
+    });
+
     // Load the changelog
     $.get('changelog.md', function(markdownContent) {
         var converter = new Markdown.Converter();
-        var htmlContent = converter.makeHtml(markdownContent);
-        $("#changelog-content").html(htmlContent);
+        $("#changelog-content").html(converter.makeHtml(markdownContent));
     });
 
     // Load the broadcast file (if it exists)

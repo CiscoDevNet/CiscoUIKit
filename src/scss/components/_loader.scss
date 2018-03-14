@@ -1,94 +1,95 @@
 //
 // Loader
 //
-// Since: 1.0.4
+// Since: 1.0.4 updated
 //
 // Styleguide Components.Loader
 //
 
 
 //
-// Examples
+// Spinner
 //
 // Markup:
-// <div class="panel panel--bordered IGNORE">
-// <div>
-//     <div class="loading-dots loading-dots--muted">
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//     </div>
-// </div>
-// </div IGNORE>
-// <br>
-// <div class="panel panel--bordered IGNORE">
-// <div>
-//     <h4 class="text-center">Loader with Text</h4>
-//     <div class="loading-dots loading-dots--muted">
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//     </div>
-// </div>
+// <div class="row" IGNORE>
+//     <div class="col-md-3" IGNORE>
+//         <div class="panel panel--bordered" IGNORE>
+//             <h4 class="text-center half-margin-bottom">Default</h4 IGNORE>
+//             <div class="loading-spinner flex-center">
+//                 <div class="wrapper">
+//                     <div class="wheel"></div>
+//                 </div>
+//             </div>
+//         </div IGNORE>
+//     </div IGNORE>
+//     <div class="col-md-3" IGNORE>
+//         <div class="panel panel--bordered" IGNORE>
+//             <h4 class="text-center half-margin-bottom">Indigo</h4 IGNORE>
+//             <div class="loading-spinner loading-spinner--indigo flex-center">
+//                 <div class="wrapper">
+//                     <div class="wheel"></div>
+//                 </div>
+//             </div>
+//         </div IGNORE>
+//     </div IGNORE>
 // </div IGNORE>
 //
 // Weight: 1
 //
-// Styleguide Components.Loader.Examples
+// Styleguide Components.Loader.Spinner
 //
 
 
 //
-// Color
+// Dots
 //
 // Markup:
-// <div class="panel panel--dkgray IGNORE">
-// <div>
-//     <h4 class="text-center">White</h4>
-//     <div class="loading-dots">
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//     </div>
-// </div>
-// </div IGNORE>
-// <br>
-// <div class="panel panel--bordered IGNORE">
-// <div>
-//     <h4 class="text-center">Muted</h4>
-//     <div class="loading-dots loading-dots--muted">
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//     </div>
-// </div>
-// </div IGNORE>
-// <br>
-// <div class="panel panel--bordered IGNORE">
-// <div>
-//     <h4 class="text-center">Success</h4>
-//     <div class="loading-dots loading-dots--success">
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//     </div>
-// </div>
-// </div IGNORE>
-// <br>
-// <div class="panel panel--bordered IGNORE">
-// <div>
-//     <h4 class="text-center">Info</h4>
-//     <div class="loading-dots loading-dots--info">
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//     </div>
-// </div>
+// <div class="row" IGNORE>
+//     <div class="col-md-3" IGNORE>
+//         <div class="panel panel--dkgray" IGNORE>
+//             <h4 class="text-center">Default</h4 IGNORE>
+//             <div class="loading-dots">
+//                 <span></span>
+//                 <span></span>
+//                 <span></span>
+//             </div>
+//         </div IGNORE>
+//     </div IGNORE>
+//     <div class="col-md-3" IGNORE>
+//         <div class="panel panel--bordered" IGNORE>
+//             <h4 class="text-center">Muted</h4 IGNORE>
+//             <div class="loading-dots loading-dots--muted">
+//                 <span></span>
+//                 <span></span>
+//                 <span></span>
+//             </div>
+//         </div IGNORE>
+//     </div IGNORE>
+//     <div class="col-md-3" IGNORE>
+//         <div class="panel panel--bordered" IGNORE>
+//             <h4 class="text-center">Success</h4 IGNORE>
+//             <div class="loading-dots loading-dots--success">
+//                 <span></span>
+//                 <span></span>
+//                 <span></span>
+//             </div>
+//         </div IGNORE>
+//     </div IGNORE>
+//     <div class="col-md-3" IGNORE>
+//         <div class="panel panel--bordered" IGNORE>
+//             <h4 class="text-center">Info</h4 IGNORE>
+//             <div class="loading-dots loading-dots--info">
+//                 <span></span>
+//                 <span></span>
+//                 <span></span>
+//             </div>
+//         </div IGNORE>
+//     </div IGNORE>
 // </div IGNORE>
 //
 // Weight: 2
 //
-// Styleguide Components.Loader.Color
+// Styleguide Components.Loader.Dots
 //
 
 .loader {
@@ -105,7 +106,7 @@
         span.icon-cisco {
             padding: $base-spacing * 0.5;
             color: $base-disabled-color;
-            font-size: 4rem;
+            font-size: 48px;
             line-height: 1;
         }
     }
@@ -116,6 +117,34 @@
         z-index: 1060;
     }
 }
+
+.loading-spinner {
+    .wrapper {
+        .wheel {
+            position: relative;
+            visibility: visible;
+            width: 64px;
+            height: 64px;
+            border-radius: 100%;
+            border: 2px solid $base-border-color;
+            border-left-color: $base-accent-color;
+            animation: load 1.1s infinite linear;
+        }
+    }
+
+    &--indigo {
+        .wrapper {
+            .wheel {
+                border-left-color: $indigo;
+            }
+        }
+    }
+}
+@keyframes load {
+    0%   { transform: rotate(7deg); }
+    100% { transform: rotate(360deg); }
+}
+
 
 .loading-dots {
     padding: $base-spacing * 0.5;
@@ -141,8 +170,8 @@
 
     > span {
         display: inline-block;
-        width: 18px;
-        height: 18px;
+        width: 12px;
+        height: 12px;
         margin: 0 2px;
         background: $white;
         border-radius: 50%;
@@ -166,7 +195,7 @@
         bottom: $base-spacing;
         left: $base-spacing * 0.5;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(md) {
             top: $base-spacing * 1.5;
             right: $base-spacing;
             bottom: $base-spacing * 1.5;

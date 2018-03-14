@@ -1,25 +1,28 @@
 //
-// Dividers
+// Divider
 //
-// Horizontal divider. Also supports centered circle labels<br>
-// Since: 1.0.3
+// Since: 1.1.0
 //
+// Styleguide Base.Divider
 //
 
 
 //
-// Types
+// Thickness
 //
 // Markup:
 // <div class="section">
-//     <p>SIMPLE</p>
+//     <h6>Default</h6>
 //     <div class="divider"></div>
-//     <p>THICK</p>
+//     <h6>Thick</h6>
 //     <div class="divider divider--thick"></div>
+//     <h6>Thicker</h6>
+//     <div class="divider divider--thicker"></div>
 // </div>
 //
 // Weight: 1
 //
+// Styleguide Base.Divider.Thickness
 //
 
 
@@ -56,42 +59,99 @@
 //
 // Weight: 2
 //
+// Styleguide Base.Divider.Spacing
 //
 
 
 //
-// With Circle Labels
+// Accent
 //
 // Markup:
-// <div class="section">
-//     <div class="divider divider--loose">
-//         <span class="label label--medium label--circle label--warning">
-//             <span class="icon-alarm"></span>
-//         </span>
+// <div class="divider divider--accent-blue"></div>
+// <div class="divider divider--thick divider--accent-blue"></div>
+// <div class="divider divider--thicker divider--accent-blue"></div>
+//
+// Weight: 3
+//
+// Styleguide Base.Divider.Accent
+//
+
+
+//
+// Accent Color
+//
+// Markup:
+// <div class="divider divider--thick divider--accent-blue"></div>
+// <div class="divider divider--thick divider--accent-indigo"></div>
+// <div class="divider divider--thick divider--accent-success"></div>
+//
+// Weight: 4
+//
+// Styleguide Base.Divider.Accent Color
+//
+
+
+//
+// Examples
+//
+// Markup:
+// <div class="panel">
+//     <h2>Cisco Aironet 1540 Series</h2>
+//     <div class="divider divider--accent-success"></div>
+//     <div class="row">
+//         <div class="col-lg-3">
+//             <img src="public/img/wireless-1.jpg">
+//         </div>
+//         <div class="col-lg-9">
+//             <h4> Cisco WAP571E Premium Dual Radio Outdoor Access Point</h4>
+//             <p>Don't let outdoor challenges inhibit your wireless connectivity. The Cisco WAP571E access point is purpose-built to meet the demands of your outdoor spaces. It offers a rugged housing (IP66 rated), and works even in rain, snow, and extreme high and low temperatures.</p>
+//             <div class="section">
+//                 <button class="btn btn--secondary">Learn More</button>
+//             </div>
+//         </div>
 //     </div>
-//     <div class="divider divider--loose divider--alt">
-//         <span class="label label--large label--circle label--danger">
-//             <span class="icon-error"></span>
-//         </span>
-//     </div>
-//     <div class="divider divider--loose divider--thick">
-//         <span class="label label--xlarge label--circle label--success">
-//             <span class="icon-check"></span>
-//         </span>
+// </div>
+// <br>
+// <div class="panel panel--loose panel--dkgray">
+//     <h2>THE NETWORK. <span class="text-blue">INTUITIVE.</span></h2>
+//     <div class="divider divider--thicker divider--accent-blue"></div>
+//     <h6>Powered by intent. Informed by context. Growing more intuitive every day.</h6>
+//     <div class="section">
+//         <button class="btn btn--primary">Watch Video</button>
+//         <button class="btn btn--white-ghost">Get Resources</button>
 //     </div>
 // </div>
 //
+// Weight: 5
+//
+// Styleguide Base.Divider.Examples
+//
 
 .divider {
-    @include divider-horizontal-spacing();
-    @include divider-horizontal();
 
+    position: relative;
     text-align: center;
 
-    &--thick {
-        @include divider-horizontal($thickness: $base-spacing * 0.5);
-    }
+    @include divider-horizontal();
+    @include divider-horizontal-spacing();
 
+    @each $divider-name, $divider-height in $divider-sizes {
+        &--#{$divider-name} {
+            @include divider-horizontal($thickness: $divider-height);
+        }
+    };
+
+    @each $accent-name, $accent-color in $divider-accent-colors {
+        &--accent-#{$accent-name} {
+            @include divider-accent($background: $accent-color);
+        }
+    };
+
+    &--compressed       { @include divider-horizontal-spacing($base-spacing-compressed); }
+    &--regular          { @include divider-horizontal-spacing($base-spacing-regular); }
+    &--loose            { @include divider-horizontal-spacing($base-spacing-loose); }
+
+    // Circle labels DEPRECATED in 1.0.6
     .label {
         &--circle {
             top: -($base-label-circle-size);
@@ -117,8 +177,14 @@
             }
         }
     }
+}
 
-    &--compressed   { @include divider-horizontal-spacing($base-spacing-compressed); }
-    &--regular      { @include divider-horizontal-spacing($base-spacing-regular); }
-    &--loose        { @include divider-horizontal-spacing($base-spacing-loose); }
+// Accent size adjustment
+@each $divider-name, $divider-height in $divider-sizes {
+    @each $accent-name, $accent-color in $divider-accent-colors {
+        .divider--#{$divider-name}.divider--accent-#{$accent-name}:before {
+            top: -($divider-height);
+            height: $divider-height;
+        }
+    }
 }

@@ -132,39 +132,41 @@
 // <blockquote>A button with only an icon</blockquote>
 //
 // Markup:
-// <p class="text-large">Small Button Icons</p>
-// <ul class="list list--inline list--loose base-margin-bottom">
-//     <li><button class="btn btn--icon btn--small"><span class="icon-tools"></span></button></li>
-//     <li><button class="btn btn--icon btn--small btn--primary"><span class="icon-bookmark"></span></button></li>
-//     <li><button class="btn btn--icon btn--small btn--secondary"><span class="icon-refresh"></span></button></li>
-//     <li><button class="btn btn--icon btn--small btn--white"><span class="icon-user"></span></button></li>
-//     <li><button class="btn btn--icon btn--small btn--negative"><span class="icon-power"></span></button></li>
-//     <li><button class="btn btn--icon btn--small btn--success"><span class="icon-check"></span></button></li>
-//     <li><a class="btn btn--icon btn--small btn--white-ghost"><span class="icon-like"></span></a></li>
-//     <li><a class="btn btn--icon btn--small btn--gray-ghost"><span class="icon-like"></span></a></li>
-// </ul>
-// <p class="text-large">Default Button Icons</p>
-// <ul class="list list--inline list--loose base-margin-bottom">
-//     <li><button class="btn btn--icon"><span class="icon-tools"></span></button></li>
-//     <li><button class="btn btn--icon btn--primary"><span class="icon-bookmark"></span></button></li>
-//     <li><button class="btn btn--icon btn--secondary"><span class="icon-refresh"></span></button></li>
-//     <li><button class="btn btn--icon btn--white"><span class="icon-user"></span></button></li>
-//     <li><button class="btn btn--icon btn--negative"><span class="icon-power"></span></button></li>
-//     <li><button class="btn btn--icon btn--success"><span class="icon-check"></span></button></li>
-//     <li><a class="btn btn--icon btn--white-ghost"><span class="icon-like"></span></a></li>
-//     <li><a class="btn btn--icon btn--gray-ghost"><span class="icon-like"></span></a></li>
-// </ul>
-// <p class="text-large">Large Button Icons</p>
-// <ul class="list list--inline list--loose base-margin-bottom">
-//     <li><button class="btn btn--icon btn--large"><span class="icon-tools"></span></button></li>
-//     <li><button class="btn btn--icon btn--large btn--primary"><span class="icon-bookmark"></span></button></li>
-//     <li><button class="btn btn--icon btn--large btn--secondary"><span class="icon-refresh"></span></button></li>
-//     <li><button class="btn btn--icon btn--large btn--white"><span class="icon-user"></span></button></li>
-//     <li><button class="btn btn--icon btn--large btn--negative"><span class="icon-power"></span></button></li>
-//     <li><button class="btn btn--icon btn--large btn--success"><span class="icon-check"></span></button></li>
-//     <li><a class="btn btn--icon btn--large btn--white-ghost"><span class="icon-like"></span></a></li>
-//     <li><a class="btn btn--icon btn--large btn--gray-ghost"><span class="icon-like"></span></a></li>
-// </ul>
+// <h6>Small Button Icons</h6>
+// <div class="base-margin-top">
+//     <button class="btn btn--icon btn--small"><span class="icon-tools"></span></button>
+//     <button class="btn btn--icon btn--small btn--primary"><span class="icon-bookmark"></span></button>
+//     <button class="btn btn--icon btn--small btn--secondary"><span class="icon-refresh"></span></button>
+//     <button class="btn btn--icon btn--small btn--white"><span class="icon-user"></span></button>
+//     <button class="btn btn--icon btn--small btn--negative"><span class="icon-power"></span></button>
+//     <button class="btn btn--icon btn--small btn--success"><span class="icon-check"></span></button>
+//     <a class="btn btn--icon btn--small btn--white-ghost"><span class="icon-like"></span></a>
+//     <a class="btn btn--icon btn--small btn--gray-ghost"><span class="icon-like"></span></a>
+// </div>
+// <br>
+// <h6>Default Button Icons</h6>
+// <div class="base-margin-top">
+//     <button class="btn btn--icon"><span class="icon-tools"></span></button>
+//     <button class="btn btn--icon btn--primary"><span class="icon-bookmark"></span></button>
+//     <button class="btn btn--icon btn--secondary"><span class="icon-refresh"></span></button>
+//     <button class="btn btn--icon btn--white"><span class="icon-user"></span></button>
+//     <button class="btn btn--icon btn--negative"><span class="icon-power"></span></button>
+//     <button class="btn btn--icon btn--success"><span class="icon-check"></span></button>
+//     <a class="btn btn--icon btn--white-ghost"><span class="icon-like"></span></a>
+//     <a class="btn btn--icon btn--gray-ghost"><span class="icon-like"></span></a>
+// </div>
+// <br>
+// <h6>Large Button Icons</h6>
+// <div class="base-margin-top">
+//     <button class="btn btn--icon btn--large"><span class="icon-tools"></span></button>
+//     <button class="btn btn--icon btn--large btn--primary"><span class="icon-bookmark"></span></button>
+//     <button class="btn btn--icon btn--large btn--secondary"><span class="icon-refresh"></span></button>
+//     <button class="btn btn--icon btn--large btn--white"><span class="icon-user"></span></button>
+//     <button class="btn btn--icon btn--large btn--negative"><span class="icon-power"></span></button>
+//     <button class="btn btn--icon btn--large btn--success"><span class="icon-check"></span></button>
+//     <a class="btn btn--icon btn--large btn--white-ghost"><span class="icon-like"></span></a>
+//     <a class="btn btn--icon btn--large btn--gray-ghost"><span class="icon-like"></span></a>
+// </div>
 //
 // Weight: 5
 //
@@ -211,8 +213,8 @@ a.btn.btn--icon.btn--small {
         );
     }
     &--wide {
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding-left: $base-spacing * 3;
+        padding-right: $base-spacing * 3;
         max-width: $aui-button-max-width;
     }
 
@@ -293,12 +295,6 @@ a.btn.btn--icon.btn--small {
 //
 // Markup:
 // <div class="btn-group">
-//     <button class="btn btn--small">One</button>
-//     <button class="btn btn--small">Two</button>
-//     <button class="btn btn--small selected">Three</button>
-// </div>
-// <br><br>
-// <div class="btn-group">
 //     <button class="btn btn--small btn--gray-ghost">
 //         <span class="icon-edit"></span>
 //     </button>
@@ -314,12 +310,6 @@ a.btn.btn--icon.btn--small {
 //     <button class="btn btn--small btn--gray-ghost">
 //         <span class="icon-zoom-out"></span>
 //     </button>
-// </div>
-// <br><br>
-// <div class="btn-group">
-//     <button class="btn btn--primary">Choice A</button>
-//     <button class="btn btn--primary selected">Choice B</button>
-//     <button class="btn btn--primary">Choice C</button>
 // </div>
 // <br><br>
 // <div class="btn-group">
@@ -349,11 +339,13 @@ a.btn.btn--icon.btn--small {
         padding-right: $base-spacing * 0.5;
         padding-left: $base-spacing * 0.5;
         border-radius: 0;
-        border-right: $base-border;
+        border: 1px solid $base-button-background;
+        box-shadow: none;
 
-        &[class$="-ghost"],
-        &[class*="-ghost "] { // Ghost buttons look strange with thick border
-            border-right: 0 none;
+        @each $button-obj in $button-colors {
+            &--#{map-get($button-obj, name)} {
+                border: 1px solid map-get(map-get($button-obj, params), 'group-border-color');
+            }
         }
 
         &:first-child {
@@ -366,7 +358,6 @@ a.btn.btn--icon.btn--small {
             padding-right: $base-spacing * 0.75;
             border-top-right-radius: $base-button-border-radius;
             border-bottom-right-radius: $base-button-border-radius;
-            border-right: 0 none;
         }
 
         &.selected {

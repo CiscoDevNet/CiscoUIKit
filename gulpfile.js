@@ -1,6 +1,5 @@
 var autoprefixer = require('gulp-autoprefixer');
 var bower = require('gulp-bower');
-var exec = require('child_process').exec;
 var filter = require('gulp-filter');
 var fs = require('fs');
 var gulp = require('gulp');
@@ -41,12 +40,22 @@ var cfg = {
         ' '].join('\n')
     };
 
+
     /*
-    * Default Task
+    * Pre-Build Task
     */
-    gulp.task('default', ['clean'], function() {
-        run(['pkg:views', 'pkg:docs', 'compile:fonts', 'pkg:images', 'pkg:bower', 'pkg:changelog', 'pkg:broadcast'], 'replace:version', 'pkg:examples');
+    gulp.task('pre', ['clean'], function() {
+        run(['pkg:views', 'pkg:docs']);
     });
+
+
+    /*
+    * Build Task
+    */
+    gulp.task('default', function() {
+        run(['compile:fonts', 'pkg:images', 'pkg:bower', 'pkg:changelog', 'pkg:broadcast'], 'replace:version', 'pkg:examples');
+    });
+
 
     /*
     * Distribution Task
@@ -118,7 +127,7 @@ var cfg = {
     gulp.task('compile:sass', function() {
         return gulp.src(cfg.sourceDir + '/scss/**/*.scss')
         .pipe(sass({ cache: false }))
-        .pipe(pxtorem())
+        .pipe(pxtorem({ rootValue: 10 }))
         .pipe(autoprefixer())
         .pipe(header(cfg.banner))
         .pipe(gulp.dest(cfg.targetDir + '/css'))
@@ -129,22 +138,6 @@ var cfg = {
         .pipe(gulp.dest(cfg.targetDir + '/docs/assets/css'));
     });
 
-    /*
-    * Task: gen:docs
-    */
-    gulp.task('gen:docs', function(done) {
-        var kssCmd = './node_modules/kss/bin/kss-node ' + cfg.sourceDir + '/scss ' +
-        cfg.targetDir + '/docs --template ' + './docs --helpers ' + cfg.sourceDir +
-        '/kss/helpers --nav-depth 5 --css ' + cfg.sourceDir + '/scss/styles.scss';
-
-        util.log("kssCmd: " + kssCmd);
-        exec(kssCmd, function(err, stdout, stderr) {
-            util.log(stdout + stderr);
-            if (!err) {
-                done();
-            }
-        });
-    });
 
     /*
     * Task: pkg:bower
@@ -177,7 +170,7 @@ var cfg = {
     * Task: pkg:docs
     */
     gulp.task('pkg:docs', function(done) {
-        run('iconfont', 'compile:fonts', 'compile:sass', 'gen:docs', done);
+        run('iconfont', 'compile:fonts', 'compile:sass', done);
     });
 
     /*

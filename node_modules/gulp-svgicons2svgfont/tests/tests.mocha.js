@@ -1,132 +1,136 @@
-/* eslint max-nested-callbacks:[1] */
+/* eslint max-nested-callbacks:0, security/detect-non-literal-fs-filename:0 */
 
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
-var gulp = require('gulp');
-var gutil = require('gulp-util');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
 
-var rimraf = require('rimraf');
-var mkdirp = require('mkdirp');
+const rimraf = require('rimraf');
+const mkdirp = require('mkdirp');
 
-var assert = require('assert');
-var streamtest = require('streamtest');
-var neatequal = require('neatequal');
+const assert = require('assert');
+const streamtest = require('streamtest');
+const neatequal = require('neatequal');
 
-var svgicons2svgfont = require('../src/index');
-var defaultMetadataProvider = require('svgicons2svgfont/src/metadata');
+const svgicons2svgfont = require('../src/index');
+const defaultMetadataProvider = require('svgicons2svgfont/src/metadata');
 
-describe('gulp-svgicons2svgfont', function() {
+describe('gulp-svgicons2svgfont', () => {
 
-  beforeEach(function(done) {
+  beforeEach((done) => {
     mkdirp(path.join(__dirname, 'results'), done);
   });
 
-  afterEach(function(done) {
+  afterEach((done) => {
     rimraf(path.join(__dirname, 'results'), done);
   });
 
-  streamtest.versions.forEach(function(version) {
-    describe('for ' + version + ' streams', function() {
+  streamtest.versions.forEach((version) => {
+    describe(`for ${version} streams`, () => {
 
-      describe('must emit an error', function() {
+      describe('must emit an error', () => {
 
-        it('when a glyph is bad', function(done) {
+        it('when a glyph is bad', (done) => {
           streamtest[version].fromObjects([new gutil.File({
             path: 'bibabelula.svg',
             contents: streamtest.v2.fromChunks(['oh', 'yeah']),
           })])
-          .pipe(svgicons2svgfont({
-            fontName: 'unprefixedicons',
-          })
-          .on('error', function(err) {
-            assert.equal(
-              err.message,
-              'Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: o'
-            );
-          }).pipe(streamtest.v2.toObjects(function(err) {
-            if(err) {
-              return done(err);
-            }
-            done();
-          })));
+            .pipe(svgicons2svgfont({
+              fontName: 'unprefixedicons',
+            })
+              .on('error', (err) => {
+                assert.equal(
+                  err.message,
+                  'Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: o'
+                );
+              }).pipe(streamtest.v2.toObjects((err) => {
+                if(err) {
+                  done(err);
+                  return;
+                }
+                done();
+              })));
         });
 
       });
 
-      describe('with null contents', function() {
+      describe('with null contents', () => {
 
-        it('should let null files pass through', function(done) {
-          var file = new gutil.File({
+        it('should let null files pass through', (done) => {
+          const file = new gutil.File({
             path: 'bibabelula.svg',
             contents: null,
           });
 
           streamtest[version].fromObjects([file])
+            .pipe(svgicons2svgfont({
+              fontName: 'cleanicons',
+            }))
+            .pipe(streamtest.v2.toObjects((err, files) => {
+              if(err) {
+                done(err);
+                return;
+              }
+              assert.equal(files[0].path, 'bibabelula.svg');
+              assert.equal(files[0].contents, null);
+              assert.equal(files.length, 1);
+              done();
+            }));
+        });
+
+      });
+
+      it('should let non-svg files pass through (prependUnicode)', (done) => {
+        const file = new gutil.File({
+          path: 'bibabelula.foo',
+          contents: streamtest.v2.fromChunks(['oh', 'yeah']),
+        });
+
+        streamtest[version].fromObjects([file])
           .pipe(svgicons2svgfont({
-            fontName: 'cleanicons',
+            fontName: 'unprefixedicons',
+            startUnicode: 0xE001,
+            prependUnicode: true,
           }))
-          .pipe(streamtest.v2.toObjects(function(err, files) {
+          .pipe(streamtest.v2.toObjects((err, files) => {
             if(err) {
-              return done(err);
+              done(err);
+              return;
             }
-            assert.equal(files[0].path, 'bibabelula.svg');
-            assert.equal(files[0].contents, null);
+            assert.equal(files[0].path, 'bibabelula.foo');
             assert.equal(files.length, 1);
             done();
           }));
-        });
-
       });
 
-      it('should let non-svg files pass through (prependUnicode)', function(done) {
-        var file = new gutil.File({
+      it('should let non-svg files pass through', (done) => {
+        const file = new gutil.File({
           path: 'bibabelula.foo',
           contents: streamtest.v2.fromChunks(['oh', 'yeah']),
         });
 
         streamtest[version].fromObjects([file])
-        .pipe(svgicons2svgfont({
-          fontName: 'unprefixedicons',
-          startUnicode: 0xE001,
-          prependUnicode: true,
-        }))
-        .pipe(streamtest.v2.toObjects(function(err, files) {
-          if(err) {
-            return done(err);
-          }
-          assert.equal(files[0].path, 'bibabelula.foo');
-          assert.equal(files.length, 1);
-          done();
-        }));
+          .pipe(svgicons2svgfont({
+            fontName: 'unprefixedicons',
+            startUnicode: 0xE001,
+          }))
+          .pipe(streamtest.v2.toObjects((err, files) => {
+            if(err) {
+              done(err);
+              return;
+            }
+            assert.equal(files[0].path, 'bibabelula.foo');
+            assert.equal(files.length, 1);
+            done();
+          }));
       });
 
-      it('should let non-svg files pass through', function(done) {
-        var file = new gutil.File({
-          path: 'bibabelula.foo',
-          contents: streamtest.v2.fromChunks(['oh', 'yeah']),
-        });
+      describe('in stream mode', () => {
 
-        streamtest[version].fromObjects([file])
-        .pipe(svgicons2svgfont({
-          fontName: 'unprefixedicons',
-          startUnicode: 0xE001,
-        }))
-        .pipe(streamtest.v2.toObjects(function(err, files) {
-          if(err) {
-            return done(err);
-          }
-          assert.equal(files[0].path, 'bibabelula.foo');
-          assert.equal(files.length, 1);
-          done();
-        }));
-      });
-
-      describe('in stream mode', function() {
-
-        it('should work with cleanicons', function(done) {
+        it('should work with cleanicons', (done) => {
           gulp.src(
             path.join(__dirname, 'fixtures', 'cleanicons', '*.svg'),
             { buffer: false }
@@ -135,15 +139,17 @@ describe('gulp-svgicons2svgfont', function() {
               fontName: 'cleanicons',
               startUnicode: 0xE001,
             }))
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isStream(), true);
-              files[0].pipe(streamtest.v2.toText(function(err2, text) {
+              files[0].pipe(streamtest.v2.toText((err2, text) => {
                 if(err2) {
-                  return done(err2);
+                  done(err2);
+                  return;
                 }
                 assert.equal(
                   text,
@@ -157,7 +163,7 @@ describe('gulp-svgicons2svgfont', function() {
             }));
         });
 
-        it('should work with the metadataProvider option', function(done) {
+        it('should work with the metadataProvider option', (done) => {
           gulp.src(
             path.join(__dirname, 'fixtures', 'cleanicons', '*.svg'),
             { buffer: false }
@@ -168,15 +174,17 @@ describe('gulp-svgicons2svgfont', function() {
                 startUnicode: 0xE001,
               }),
             }))
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isStream(), true);
-              files[0].pipe(streamtest.v2.toText(function(err2, text) {
+              files[0].pipe(streamtest.v2.toText((err2, text) => {
                 if(err2) {
-                  return done(err2);
+                  done(err2);
+                  return;
                 }
                 assert.equal(
                   text,
@@ -190,7 +198,7 @@ describe('gulp-svgicons2svgfont', function() {
             }));
         });
 
-        it('should work with prefixedicons', function(done) {
+        it('should work with prefixedicons', (done) => {
           gulp.src(
             path.join(__dirname, 'fixtures', 'prefixedicons', '*.svg'),
             { buffer: false }
@@ -199,15 +207,17 @@ describe('gulp-svgicons2svgfont', function() {
               fontName: 'prefixedicons',
               startUnicode: 0xE001,
             }))
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isStream(), true);
-              files[0].pipe(streamtest.v2.toText(function(err2, text) {
+              files[0].pipe(streamtest.v2.toText((err2, text) => {
                 if(err2) {
-                  return done(err2);
+                  done(err2);
+                  return;
                 }
                 assert.equal(
                   text,
@@ -221,7 +231,7 @@ describe('gulp-svgicons2svgfont', function() {
             }));
         });
 
-        it('should work with originalicons', function(done) {
+        it('should work with originalicons', (done) => {
           gulp.src(
             path.join(__dirname, 'fixtures', 'originalicons', '*.svg'),
             { buffer: false }
@@ -229,15 +239,17 @@ describe('gulp-svgicons2svgfont', function() {
             .pipe(svgicons2svgfont({
               fontName: 'originalicons',
             }))
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isStream(), true);
-              files[0].pipe(streamtest.v2.toText(function(err2, text) {
+              files[0].pipe(streamtest.v2.toText((err2, text) => {
                 if(err2) {
-                  return done(err2);
+                  done(err2);
+                  return;
                 }
                 assert.equal(
                   text,
@@ -251,16 +263,16 @@ describe('gulp-svgicons2svgfont', function() {
             }));
         });
 
-        describe('', function() {
+        describe('', () => {
 
-          beforeEach(function(done) {
+          beforeEach((done) => {
             gulp.src(path.join(__dirname, 'fixtures', 'unprefixedicons', '*.svg'))
               .pipe(gulp.dest(path.join(__dirname, 'results', 'unprefixedicons')))
               .on('error', done)
               .on('end', done);
           });
 
-          it('should work with unprefixed icons and the prependUnicode option', function(done) {
+          it('should work with unprefixed icons and the prependUnicode option', (done) => {
             gulp.src(
               path.join(__dirname, 'results', 'unprefixedicons', '*.svg'),
               { buffer: false }
@@ -269,15 +281,17 @@ describe('gulp-svgicons2svgfont', function() {
                 fontName: 'unprefixedicons',
                 prependUnicode: true,
               }))
-              .pipe(streamtest.v2.toObjects(function(err, files) {
+              .pipe(streamtest.v2.toObjects((err, files) => {
                 if(err) {
-                  return done(err);
+                  done(err);
+                  return;
                 }
                 assert.equal(files.length, 1);
                 assert.equal(files[0].isStream(), true);
-                files[0].pipe(streamtest.v2.toText(function(err2, text) {
+                files[0].pipe(streamtest.v2.toText((err2, text) => {
                   if(err2) {
-                    return done(err2);
+                    done(err2);
+                    return;
                   }
                   assert.equal(
                     text,
@@ -342,16 +356,16 @@ describe('gulp-svgicons2svgfont', function() {
 
         });
 
-        describe('', function() {
+        describe('', () => {
 
-          beforeEach(function(done) {
+          beforeEach((done) => {
             gulp.src(path.join(__dirname, 'fixtures', 'unicons', '*.svg'))
               .pipe(gulp.dest(path.join(__dirname, 'results', 'unicons')))
               .on('error', done)
               .on('end', done);
           });
 
-          it('should work with mixed icons and the prependUnicode option', function(done) {
+          it('should work with mixed icons and the prependUnicode option', (done) => {
             gulp.src(
               path.join(__dirname, 'results', 'unicons', '*.svg'),
               { buffer: false }
@@ -360,15 +374,17 @@ describe('gulp-svgicons2svgfont', function() {
                 fontName: 'unicons',
                 prependUnicode: true,
               })).on('error', done)
-              .pipe(streamtest.v2.toObjects(function(err, files) {
+              .pipe(streamtest.v2.toObjects((err, files) => {
                 if(err) {
-                  return done(err);
+                  done(err);
+                  return;
                 }
                 assert.equal(files.length, 1);
                 assert.equal(files[0].isStream(), true);
-                files[0].pipe(streamtest.v2.toText(function(err2, text) {
+                files[0].pipe(streamtest.v2.toText((err2, text) => {
                   if(err2) {
-                    return done(err2);
+                    done(err2);
+                    return;
                   }
                   assert.equal(
                     text,
@@ -408,8 +424,8 @@ describe('gulp-svgicons2svgfont', function() {
 
         });
 
-        it('should emit an event with the codepoint mapping', function(done) {
-          var codepoints;
+        it('should emit an event with the codepoint mapping', (done) => {
+          let codepoints;
 
           gulp.src(
             path.join(__dirname, 'fixtures', 'cleanicons', '*.svg'),
@@ -419,18 +435,20 @@ describe('gulp-svgicons2svgfont', function() {
               fontName: 'cleanicons',
               startUnicode: 0xE001,
             }))
-            .on('glyphs', function(_codepoints_) {
+            .on('glyphs', (_codepoints_) => {
               codepoints = _codepoints_;
             })
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isStream(), true);
-              files[0].pipe(streamtest.v2.toText(function(err2, text) {
+              files[0].pipe(streamtest.v2.toText((err2, text) => {
                 if(err2) {
-                  return done(err2);
+                  done(err2);
+                  return;
                 }
                 assert(codepoints);
                 neatequal(
@@ -452,7 +470,7 @@ describe('gulp-svgicons2svgfont', function() {
             }));
         });
 
-        it('should support filename change', function(done) {
+        it('should support filename change', (done) => {
           gulp.src(
             path.join(__dirname, 'fixtures', 'cleanicons', '*.svg'),
             { buffer: false }
@@ -462,22 +480,23 @@ describe('gulp-svgicons2svgfont', function() {
               fileName: 'newName',
               startUnicode: 0xE001,
             }))
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isStream(), true);
-              assert.equal(fs.exists(__dirname, 'fixtures', 'cleanicons', 'newName.svg'));
+              assert(fs.statSync(__dirname, 'fixtures', 'cleanicons', 'newName.svg'));
               done();
             }));
         });
 
       });
 
-      describe('in buffer mode', function() {
+      describe('in buffer mode', () => {
 
-        it('should work with cleanicons', function(done) {
+        it('should work with cleanicons', (done) => {
           gulp.src(
             path.join(__dirname, 'fixtures', 'cleanicons', '*.svg'),
             { buffer: true }
@@ -486,9 +505,10 @@ describe('gulp-svgicons2svgfont', function() {
               fontName: 'cleanicons',
               startUnicode: 0xE001,
             }))
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isBuffer(), true);
@@ -500,7 +520,7 @@ describe('gulp-svgicons2svgfont', function() {
             }));
         });
 
-        it('should work with prefixedicons', function(done) {
+        it('should work with prefixedicons', (done) => {
           gulp.src(
             path.join(__dirname, 'fixtures', 'prefixedicons', '*.svg'),
             { buffer: true }
@@ -509,9 +529,10 @@ describe('gulp-svgicons2svgfont', function() {
               fontName: 'prefixedicons',
               startUnicode: 0xE001,
             }))
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isBuffer(), true);
@@ -523,7 +544,7 @@ describe('gulp-svgicons2svgfont', function() {
             }));
         });
 
-        it('should work with originalicons', function(done) {
+        it('should work with originalicons', (done) => {
           gulp.src(
             path.join(__dirname, 'fixtures', 'originalicons', '*.svg'),
             { buffer: true }
@@ -531,9 +552,10 @@ describe('gulp-svgicons2svgfont', function() {
             .pipe(svgicons2svgfont({
               fontName: 'originalicons',
             }))
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isBuffer(), true);
@@ -545,7 +567,7 @@ describe('gulp-svgicons2svgfont', function() {
             }));
         });
 
-        it('should support filename change', function(done) {
+        it('should support filename change', (done) => {
           gulp.src(
             path.join(__dirname, 'fixtures', 'cleanicons', '*.svg'),
             { buffer: true }
@@ -555,13 +577,14 @@ describe('gulp-svgicons2svgfont', function() {
               fileName: 'newName',
               startUnicode: 0xE001,
             }))
-            .pipe(streamtest.v2.toObjects(function(err, files) {
+            .pipe(streamtest.v2.toObjects((err, files) => {
               if(err) {
-                return done(err);
+                done(err);
+                return;
               }
               assert.equal(files.length, 1);
               assert.equal(files[0].isBuffer(), true);
-              assert.equal(fs.exists(__dirname, 'fixtures', 'cleanicons', 'newName.svg'));
+              assert(fs.statSync(__dirname, 'fixtures', 'cleanicons', 'newName.svg'));
               done();
             }));
         });
@@ -572,16 +595,16 @@ describe('gulp-svgicons2svgfont', function() {
   });
 
 
-  describe('must throw error', function() {
+  describe('must throw error', () => {
 
-    it('when no fontname is given', function() {
-      assert.throws(function() {
+    it('when no fontname is given', () => {
+      assert.throws(() => {
         svgicons2svgfont();
       });
     });
 
-    it('when using old options', function() {
-      assert.throws(function() {
+    it('when using old options', () => {
+      assert.throws(() => {
         svgicons2svgfont({
           appendUnicode: true,
         });

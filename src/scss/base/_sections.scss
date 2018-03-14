@@ -79,7 +79,7 @@
     @for $idx from 1 through $max-columns { // Deprecated
         &--#{$idx}col {
             > div {
-                @include break-at(small) {
+                @include media-breakpoint-up(md) {
                     @include col(1/$idx, $cycle: $idx, $gutter: 1);
                 }
             }
@@ -110,7 +110,7 @@
         font-size: $base-font-size;
         font-weight: 200;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(md) {
             font-size: $base-font-size * 1.5;
         }
     }

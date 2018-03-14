@@ -8,7 +8,7 @@ var sinon = require('sinon');
 var sinonChai = require('sinon-chai');
 
 var inquirer = require('inquirer');
-var gutil = require('gulp-util');
+var fancyLog = require('fancy-log');
 var fs = require('fs');
 
 var fsUtil = require('./fileSystemUtils');
@@ -29,14 +29,14 @@ describe('gulp-bower', function () {
             });
         });
 
-        // stub gutil.log to suppress output in test results
-        consoleStub = sinon.stub(gutil, 'log', function (val) {
+        // stub fancyLog to suppress output in test results
+        consoleStub = sinon.stub(fancyLog, 'info', function (val) {
             consoleOutput += val + '\n';
         });
     });
 
     afterEach(function () {
-        gutil.log.restore();
+        fancyLog.info.restore();
     });
 
     it('should emit error when dependency version can\'t be resolved', function (done) {

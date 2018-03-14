@@ -4,7 +4,6 @@
 // We use CiscoSans as primary<br>
 // CiscoSans includes ExtraLight, ExtraLightOblique, Light, LightOblique, Regular, and Bold.
 // The font stack in order is CiscoSans, Arial, Sans-Serif<br>
-// Font formats supported include woff and woff2. (woff is needed to support IE 11)
 //
 // Weight: -2
 //
@@ -15,90 +14,108 @@
   font-family: 'CiscoSans';
   font-style: normal;
   font-weight: 100;
-  src: url('../fonts/CiscoSans/CiscoSansTTExtraLight.woff2') format('woff2'),
-       url('../fonts/CiscoSans/CiscoSansTTExtraLight.woff') format('woff');
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTExtraLight.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTExtraLight.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
 @font-face {
   font-family: 'CiscoSans';
   font-style: oblique;
   font-weight: 100;
-  src: url('../fonts/CiscoSans/CiscoSansTTExtraLightOblique.woff2') format('woff2'),
-       url('../fonts/CiscoSans/CiscoSansTTExtraLightOblique.woff') format('woff');
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTExtraLightOblique.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTExtraLightOblique.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
 @font-face {
   font-family: 'CiscoSans';
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/CiscoSans/CiscoSansTTLight.woff2') format('woff2'),
-       url('../fonts/CiscoSans/CiscoSansTTLight.woff') format('woff');
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTLight.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTLight.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
 @font-face {
   font-family: 'CiscoSans';
   font-style: oblique;
   font-weight: 300;
-  src: url('../fonts/CiscoSans/CiscoSansTTLightOblique.woff2') format('woff2'),
-       url('../fonts/CiscoSans/CiscoSansTTLightOblique.woff') format('woff');
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTLightOblique.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTLightOblique.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
 @font-face {
   font-family: 'CiscoSans';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/CiscoSans/CiscoSansTTRegular.woff2') format('woff2'),
-       url('../fonts/CiscoSans/CiscoSansTTRegular.woff') format('woff');
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTRegular.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTRegular.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
 @font-face {
   font-family: 'CiscoSans';
   font-style: bold;
   font-weight: 700;
-  src: url('../fonts/CiscoSans/CiscoSansTTBold.woff2') format('woff2'),
-       url('../fonts/CiscoSans/CiscoSansTTBold.woff') format('woff');
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTBold.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTBold.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-$h1-font-weight: 100 !default;
-$h2-font-weight: 100 !default;
-$h3-font-weight: 200 !default;
-$h4-font-weight: 200 !default;
-$h5-font-weight: 200 !default;
-$h6-font-weight: 300 !default;
-
-html {
-    &.cui {
-        position: relative;
-        height: 100%;
-        box-sizing: border-box;
-        color: $base-font-color;
-        font-family: $base-font-family;
-        font-size: $html-font-size;
-        line-height: $base-line-height;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-
-        // By default we auto scaled header (h1-h6) font sizes
-        @include scaled-headers();
-
-        &--fixed-headers {
-            @include fixed-headers($font-size: $medium-font-size);
-        }
-
-        body {
-            font-weight: $base-font-weight;
-            font-size: $base-font-size;
-            position: relative;
-            min-width: $min-page-width;
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-        }
-    }
+html,
+html.cui {
+    position: relative;
+    height: 100%;
+    font-size: $html-font-size;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+body,
+body.cui {
+    // By default we auto scale header (h1-h6) font sizes
+    @include scaled-headers();
+
+    &--fixed-headers {
+        @include fixed-headers($font-size: $medium-font-size);
+    }
+
+    color: $base-font-color;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+    font-weight: $base-font-weight;
+    font-size: $base-font-size;
+    position: relative;
+    min-width: $min-page-width;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+//
+// Filenames and URLs
+//
+// Add the class `text-darkgreen` for filenames and URLs (which are not rendered as links)
+//
+// Markup:
+// <div class="section">
+//     <h6>Filenames</h6>
+//     <hr>
+//     <div>
+//         <div>AnyConnect Pre-Deployment Package (Linux 64-bit)</div>
+//         <div class="text-darkgreen text-normal">anyconnect-linux64-4.5.02033-predeploy-k9.tar.gz</div>
+//     </div>
+// </div>
+// <div class="section">
+//     <h6>URLs</h6>
+//     <hr>
+//     <div>
+//         <a href="https://www.cisco.com/c/en/us/support/security/asa-5500-series-next-generation-firewalls/tsd-products-support-series-home.html">Security - Cisco ASA 5500-X Series Firewalls</a>
+//         <div>06 Aug 2016 - Find software and support documentation to design, install and upgrade, configure, and troubleshoot Cisco ASA 5500 Series Adaptive Security Appliances.</div>
+//         <div class="text-darkgreen text-normal">https://www.cisco.com/c/en/us/support/security/asa-5500-series-next-generation-firewalls/tsd-products-support-series-home.html</div>
+//     </div>
+// </div>
+//
+// Weight: 10
+//
+// Styleguide Base.Typography.Filenames
+//

@@ -1,6 +1,6 @@
 /*! 
- * Cisco-UI - Cisco UI Kit
- * @version 1.0.5-official
+ * cisco-ui - Cisco UI Kit
+ * @version 1.2.2-official
  * @home https://www.cisco.com
  * @license 2017 Cisco Systems, Inc. All rights reserved. Terms and Conditions: http://cisco.com/en/US/swassets/sw293/sitewide_important_notices.html
  */
@@ -35,8 +35,7 @@ figure {
   margin: 1em 40px; }
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible; }
 
@@ -152,8 +151,7 @@ fieldset {
   padding: 0.35em 0.625em 0.75em; }
 
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -169,8 +167,7 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0; }
 
 [type="number"]::-webkit-inner-spin-button,
@@ -206,14 +203,12 @@ template {
   display: none; }
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
+  box-sizing: inherit; }
 
 @-ms-viewport {
   width: device-width; }
@@ -311,8 +306,7 @@ label,
 select,
 summary,
 textarea {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation; }
+  touch-action: manipulation; }
 
 table {
   border-collapse: collapse;

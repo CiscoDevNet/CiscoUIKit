@@ -1,4 +1,6 @@
-exports = module.exports = SemVer;
+// export the class if we are in a Node-like system.
+if (typeof module === 'object' && module.exports === exports)
+  exports = module.exports = SemVer;
 
 // The debug function is excluded entirely from the minified version.
 /* nomin */ var debug;
@@ -314,9 +316,9 @@ function SemVer(version, loose) {
   else
     this.prerelease = m[4].split('.').map(function(id) {
       if (/^[0-9]+$/.test(id)) {
-        var num = +id;
+        var num = +id
         if (num >= 0 && num < MAX_SAFE_INTEGER)
-          return num;
+          return num
       }
       return id;
     });
@@ -330,6 +332,10 @@ SemVer.prototype.format = function() {
   if (this.prerelease.length)
     this.version += '-' + this.prerelease.join('.');
   return this.version;
+};
+
+SemVer.prototype.inspect = function() {
+  return '<SemVer "' + this + '">';
 };
 
 SemVer.prototype.toString = function() {
@@ -477,7 +483,6 @@ SemVer.prototype.inc = function(release, identifier) {
       throw new Error('invalid increment argument: ' + release);
   }
   this.format();
-  this.raw = this.version;
   return this;
 };
 
@@ -688,6 +693,10 @@ Comparator.prototype.parse = function(comp) {
     this.semver = new SemVer(m[2], this.loose);
 };
 
+Comparator.prototype.inspect = function() {
+  return '<SemVer Comparator "' + this + '">';
+};
+
 Comparator.prototype.toString = function() {
   return this.value;
 };
@@ -730,6 +739,10 @@ function Range(range, loose) {
 
   this.format();
 }
+
+Range.prototype.inspect = function() {
+  return '<SemVer Range "' + this.range + '">';
+};
 
 Range.prototype.format = function() {
   this.range = this.set.map(function(comps) {
@@ -836,7 +849,7 @@ function replaceTilde(comp, loose) {
     else if (isX(m))
       ret = '>=' + M + '.0.0 <' + (+M + 1) + '.0.0';
     else if (isX(p))
-      // ~1.2 == >=1.2.0 <1.3.0
+      // ~1.2 == >=1.2.0- <1.3.0-
       ret = '>=' + M + '.' + m + '.0 <' + M + '.' + (+m + 1) + '.0';
     else if (pr) {
       debug('replaceTilde pr', pr);
@@ -966,11 +979,11 @@ function replaceXRange(comp, loose) {
       } else if (gtlt === '<=') {
         // <=0.7.x is actually <0.8.0, since any 0.7.x should
         // pass.  Similarly, <=7.x is actually <8.0.0, etc.
-        gtlt = '<';
+        gtlt = '<'
         if (xm)
-          M = +M + 1;
+          M = +M + 1
         else
-          m = +m + 1;
+          m = +m + 1
       }
 
       ret = gtlt + M + '.' + m + '.' + p;
@@ -1094,15 +1107,6 @@ function maxSatisfying(versions, range, loose) {
   })[0] || null;
 }
 
-exports.minSatisfying = minSatisfying;
-function minSatisfying(versions, range, loose) {
-  return versions.filter(function(version) {
-    return satisfies(version, range, loose);
-  }).sort(function(a, b) {
-    return compare(a, b, loose);
-  })[0] || null;
-}
-
 exports.validRange = validRange;
 function validRange(range, loose) {
   try {
@@ -1196,8 +1200,6 @@ function outside(version, range, hilo, loose) {
   return true;
 }
 
-exports.prerelease = prerelease;
-function prerelease(version, loose) {
-  var parsed = parse(version, loose);
-  return (parsed && parsed.prerelease.length) ? parsed.prerelease : null;
-}
+// Use the define() function if we're in AMD land
+if (typeof define === 'function' && define.amd)
+  define(exports);

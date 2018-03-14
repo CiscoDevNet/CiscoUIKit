@@ -126,7 +126,7 @@ ul.list {
 	}
 
 	&--inline {
-		@include break-at(small) {
+		@include media-breakpoint-up(md) {
 			@include list--inline;
 
 			&.list--divider {

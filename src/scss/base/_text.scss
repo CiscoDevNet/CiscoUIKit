@@ -1,5 +1,5 @@
 //
-// Input updated
+// Input
 //
 // Since 1.0.0
 //
@@ -196,6 +196,16 @@
 //             </div>
 //         </form>
 //     </div>
+//     <div class="col-md-6 base-margin-top">
+//         <form>
+//             <textarea class="textarea" rows="5" placeholder="standard textarea"></textarea>
+//         </form>
+//     </div>
+//     <div class="col-md-6 base-margin-top">
+//         <form>
+//             <textarea class="textarea textarea--well" rows="5" placeholder="standard textarea with well"></textarea>
+//         </form>
+//     </div>
 // </div>
 //
 // Styleguide Base.Input.Text Areas
@@ -228,11 +238,20 @@
 textarea.textarea {
     resize: none;
     width: 100%;
-    border: 1px solid $base-border-color;
-    padding: ($base-spacing * 0.25) ($base-spacing * 0.5);
+    border: $base-border;
+    padding: $base-spacing * 0.5;
+    color: $base-font-color;
+    font-weight: $base-font-weight;
+
+    &::placeholder {
+        font-style: italic;
+    }
 
     &--alt {
         background-color: $alt-background-color;
+    }
+    &--well {
+        box-shadow: inset 0 5px 10px -5px rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -261,6 +280,7 @@ textarea.textarea {
         flex-shrink: 0;
         order: 3;
         background: transparent;
+        color: $base-font-color;
         border: 0;
         box-shadow: none;
         transition: color 0.2s ease;
@@ -364,7 +384,7 @@ textarea.textarea {
     textarea {
         resize: none;
         overflow-x: hidden; // Prevent initial additional line from appearing (Firefox)
-        min-height: 2rem;   // Prevent tiny height in IE when textarea is empty
+        min-height: $base-spacing * 2;   // Prevent tiny height in IE when textarea is empty
     }
 
     .required-block {
@@ -373,7 +393,7 @@ textarea.textarea {
         right: 0;
         top: 0;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(md) {
             display: flex;
         }
 
@@ -381,14 +401,13 @@ textarea.textarea {
         justify-content: center;
         order: 100;
         color: $base-muted-color;
-        font-size: .75rem;
+        font-size: $small-font-size;
         font-weight: bold;
         text-transform: uppercase;
         transform: scale(0.5);
         width: 24px;
         transition: transform .1s ease-in;
         margin-right: -28px;
-        line-height: 1.2rem;
     }
 
     .action-block {

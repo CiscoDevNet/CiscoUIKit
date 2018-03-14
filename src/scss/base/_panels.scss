@@ -1,5 +1,5 @@
 //
-// Panel updated
+// Panel
 //
 // A panel is a fundamental general purpose container.<br><br>
 // Since: 1.0.0
@@ -15,7 +15,7 @@
 // <div class="row">
 //     <div class="col-md-6 panel-group panel-group--compressed">
 //         <div class="panel panel--bordered">
-//             <h6>Default</h6>
+//             <h6>Default (white background)</h6>
 //         </div>
 //         <div class="panel panel--blue">
 //             <h6>Blue</h6>
@@ -37,6 +37,9 @@
 //         <div class="panel panel--indigo">
 //             <h6>Indigo</h6>
 //         </div>
+//         <div class="panel panel--gray-ghost">
+//             <h6>Gray Ghost (transparent background)</h6>
+//         </div>
 //     </div>
 // </div>
 //
@@ -51,18 +54,17 @@
 //
 // Markup:
 // <div class="row">
-//     <div class="col-md-6 panel-group panel-group--compressed">
-//         <div class="panel panel--info">
-//             <h6>Informational</h6>
-//         </div>
+//     <div class="col-md-4">
 //         <div class="panel panel--success">
 //             <h6>Success</h6>
 //         </div>
 //     </div>
-//     <div class="col-md-6 panel-group panel-group--compressed">
+//     <div class="col-md-4">
 //         <div class="panel panel--warning">
 //             <h6>Warning</h6>
 //         </div>
+//     </div>
+//     <div class="col-md-4">
 //         <div class="panel panel--danger">
 //             <h6>Danger</h6>
 //         </div>
@@ -119,14 +121,24 @@
 //
 // Markup:
 // <div class="row">
-//     <div class="col-md-6">
+//     <div class="col-md-3">
 //         <div class="panel panel--blue">
 //             <h6>Flat (default)</h6>
 //         </div>
 //     </div>
-//     <div class="col-md-6">
+//     <div class="col-md-3">
 //         <div class="panel panel--raised">
-//             <h6>Raised</h6>
+//             <h6>Raised (small)</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="panel panel--raised-medium">
+//             <h6>Raised (medium)</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="panel panel--raised-large">
+//             <h6>Raised (large)</h6>
 //         </div>
 //     </div>
 // </div>
@@ -145,6 +157,29 @@
 //     <div class="col-md-6">
 //         <div class="panel panel--bordered">
 //             <h6>Bordered</h6>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="panel panel--bordered-top">
+//             <h6>Bordered Top</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="panel panel--bordered-right">
+//             <h6>Bordered Right</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="panel panel--bordered-bottom">
+//             <h6>Bordered Bottom</h6>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="panel panel--bordered-left">
+//             <h6>Bordered Left</h6>
 //         </div>
 //     </div>
 // </div>
@@ -216,8 +251,8 @@
 //         </a>
 //     </div>
 //     <div class="col-md-2">
-//         <a class="panel panel--info">
-//             <h6>info</h6>
+//         <a class="panel panel--gray-ghost">
+//             <h6>gray-ghost</h6>
 //         </a>
 //     </div>
 //     <div class="col-md-2">
@@ -292,7 +327,7 @@
 //         </div>
 //         <div class="col-md-6">
 //             <div class="panel panel--loose">
-//                 <h2><a href="https://wwww.cisco.com" target="_blank">Know the now: Cisco Tetration Analytics</a></h2>
+//                 <h2><a href="https://www.cisco.com" target="_blank">Know the now: Cisco Tetration Analytics</a></h2>
 //                 <p>Pervasive visibility across everything in your data center in real-time. Radically simplify cloud migration, SDN, and zero-trust security.</p>
 //                 <a href="https://www.cisco.com" target="_blank">Find out how <span class="icon-right-arrow-outline"></span></a>
 //             </div>
@@ -407,9 +442,9 @@
         }
     }
 
-    &--raised {
-        box-shadow: $base-panel-box-shadow;
-    }
+    &--raised           { box-shadow: $base-box-shadow; }
+    &--raised-medium    { box-shadow: $base-box-shadow-medium; }
+    &--raised-large     { box-shadow: $base-box-shadow-large; }
 
     &--skinny,
     &--compressed {
@@ -425,9 +460,11 @@
         @include panel-padding($padding: $base-panel-loose-padding);
     }
 
-    &--bordered {
-        border: $base-border;
-    }
+    &--bordered         { border: $base-border; }
+    &--bordered-top     { border-top: $base-border; }
+    &--bordered-right   { border-right: $base-border; }
+    &--bordered-bottom  { border-bottom: $base-border; }
+    &--bordered-left    { border-left: $base-border; }
 
     &--hover {
         &:hover {

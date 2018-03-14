@@ -184,7 +184,7 @@
         text-align: left;
         font-size: $small-font-size;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(md) {
             text-align: right;
         }
 

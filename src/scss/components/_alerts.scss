@@ -9,54 +9,9 @@
 
 
 //
-// Composition
-//
-// Markup:
-// <div class="row">
-//     <div class="col-md-6">
-//         <p><b>Default</b></p>
-//         <div class="alert composition">
-//             <div class="alert__icon">Icon</div>
-//             <div class="alert__message">Message</div>
-//             <div class="alert__close">Icon</div>
-//         </div>
-//     </div>
-//     <div class="col-md-6">
-//         <p><b>Variant:</b> 1</p>
-//         <div class="alert composition">
-//             <div class="alert__icon">Icon</div>
-//             <div class="alert__message">Message</div>
-//         </div>
-//     </div>
-// </div>
-//
-// Weight: 1
-//
-// Styleguide Components.Alert.Composition
-//
-
-.alert.composition {
-    background: transparent;
-    border: 1px solid $light-gray-3;
-    box-shadow: none;
-
-    * {
-        background: $light-gray-3;
-        color: $base-font-color;
-        font-size: $small-font-size;
-        font-weight: $base-font-weight;
-        padding: $base-spacing * 0.5;
-        margin: 2px;
-        pointer-events: none;
-        opacity: 1;
-    }
-}
-
-
-//
 // Color
 //
-// <blockquote>Use the approved status colors and icons below to denote message severity</blockquote>
+// <blockquote>Use the approved status colors and icons below to denote message severity<br>NOTE: Starting in 1.0.6 all variations of the Alert pattern have been deprecated. Going forward there will only be one supported pattern.</blockquote>
 //
 // Markup:
 // <div class="row">
@@ -93,80 +48,6 @@
 
 
 //
-// Alternate Background
-//
-// Markup:
-// <div class="row">
-//     <div class="col-md-6">
-//         <div class="alert alert--info-alt">
-//             <div class="alert__icon icon-info-circle"></div>
-//             <div class="alert__message">Information (default) <a>Link</a></div>
-//             <div class="alert__close icon-close"></div>
-//         </div>
-//         <div class="alert alert--success-alt">
-//             <div class="alert__icon icon-check"></div>
-//             <div class="alert__message">Success <a>Link</a></div>
-//             <div class="alert__close icon-close"></div>
-//         </div>
-//     </div>
-//     <div class="col-md-6">
-//         <div class="alert alert--warning-alt">
-//             <div class="alert__icon icon-exclamation-triangle"></div>
-//             <div class="alert__message">Warning <a>Link</a></div>
-//             <div class="alert__close icon-close"></div>
-//         </div>
-//         <div class="alert alert--danger-alt">
-//             <div class="alert__icon icon-error"></div>
-//             <div class="alert__message">Danger <a>Link</a></div>
-//             <div class="alert__close icon-close"></div>
-//         </div>
-//     </div>
-// </div>
-//
-// Weight: 3
-//
-// Styleguide Components.Alert.Alt
-//
-
-
-//
-// Alternate Background #2
-//
-// Markup:
-// <div class="row">
-//     <div class="col-md-6">
-//         <div class="alert alert--info-alt2">
-//             <div class="alert__icon icon-info-circle"></div>
-//             <div class="alert__message">Information (default) <a>Link</a></div>
-//             <div class="alert__close icon-close"></div>
-//         </div>
-//         <div class="alert alert--success-alt2">
-//             <div class="alert__icon icon-check"></div>
-//             <div class="alert__message">Success <a>Link</a></div>
-//             <div class="alert__close icon-close"></div>
-//         </div>
-//     </div>
-//     <div class="col-md-6">
-//         <div class="alert alert--warning-alt2">
-//             <div class="alert__icon icon-exclamation-triangle"></div>
-//             <div class="alert__message">Warning <a>Link</a></div>
-//             <div class="alert__close icon-close"></div>
-//         </div>
-//         <div class="alert alert--danger-alt2">
-//             <div class="alert__icon icon-error"></div>
-//             <div class="alert__message">Danger <a>Link</a></div>
-//             <div class="alert__close icon-close"></div>
-//         </div>
-//     </div>
-// </div>
-//
-// Weight: 4
-//
-// Styleguide Components.Alert.Alt2
-//
-
-
-//
 // Example
 //
 // Markup:
@@ -187,6 +68,8 @@
         $background: $base-alert-default-background,
         $color: $base-alert-default-color,
         $border-color: $base-alert-default-border-color,
+        $border-left-width: $base-alert-default-border-left-width,
+        $icon-color: $base-alert-default-icon-color,
         $link-color: $base-alert-default-link-color
     );
     @include panel-padding();
@@ -209,10 +92,15 @@
     width: 100%;
     margin: $base-alert-margin;
 
+    &__icon {
+        color: $base-alert-default-icon-color;
+    }
+
     &__icon,
     &__close {
         align-self: flex-start;
         font-size: $base-alert-icon-size;
+        line-height: $base-alert-icon-size;
     }
 
     &__message {
@@ -220,10 +108,12 @@
         @include text-break-word;
 
         font-weight: normal;
-        margin: 0 $base-spacing-regular;
+        margin: $base-alert-message-margin;
 
-        a {
-            text-decoration: underline;
+        a:hover,
+        a:active,
+        a:focus {
+            color: $hover-link-color;
         }
     }
 
@@ -233,6 +123,7 @@
 
         &:hover {
             opacity: 1;
+            color: $base-accent-color;
         }
     }
 }

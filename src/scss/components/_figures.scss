@@ -142,7 +142,7 @@
     }
 
     &--horizontal {
-        @include break-at(small) {
+        @include media-breakpoint-up(md) {
             > img,
             figcaption {
                 @include col(1/2);

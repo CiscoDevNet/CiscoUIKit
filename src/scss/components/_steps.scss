@@ -91,6 +91,7 @@
 // <span class="step__icon step__icon--small step__icon--success">3</span>
 // <span class="step__icon step__icon--small step__icon--warning">4</span>
 // <span class="step__icon step__icon--small step__icon--danger">5</span>
+// <span class="step__icon step__icon--small step__icon--gray-ghost">6</span>
 //
 // Weight: 4
 //
@@ -107,10 +108,28 @@
 // <span class="step__icon step__icon--success">3</span>
 // <span class="step__icon step__icon--warning">4</span>
 // <span class="step__icon step__icon--danger">5</span>
+// <span class="step__icon step__icon--gray-ghost">6</span>
 //
 // Weight: 5
 //
 // Styleguide Components.Step.Large
+//
+
+
+//
+// Icons
+//
+// Markup:
+// <span class="step__icon step__icon--small step__icon--success">
+//     <span class="icon-check"></span>
+// </span>
+// <span class="step__icon step__icon--small step__icon--danger">
+//     <span class="icon-close"></span>
+// </span>
+//
+// Weight: 6
+//
+// Styleguide Components.Step.Icons
 //
 
 @mixin step-color(
@@ -277,14 +296,15 @@ $line-width:   $base-step-line-width)
         font-size: $base-font-size;
     }
 
-    &--info     { @include step-color($background: $base-accent-color, $color: $white); }
-    &--success  { @include step-color($background: $success, $color: $white); }
-    &--warning  { @include step-color($background: $warning, $color: $white); }
-    &--danger   { @include step-color($background: $danger, $color: $white); }
-    &--ghost    { @include step-color($background: transparent, $border-color: transparent); }
+    &--info         { @include step-color($background: $base-accent-color, $color: $white); }
+    &--success      { @include step-color($background: $success, $color: $white); }
+    &--warning      { @include step-color($background: $warning, $color: $white); }
+    &--danger       { @include step-color($background: $danger, $color: $white); }
+    &--ghost        { @include step-color($background: transparent, $border-color: transparent); }
+    &--gray-ghost   { @include step-color($background: transparent, $border-color: $light-gray-2); }
 
-    &--halo     { box-shadow: 0 0 0 $base-step-halo-size $base-step-halo-color; }
-    &--halo-alt { box-shadow: 0 0 0 $base-step-halo-size $base-step-halo-alt-color; }
+    &--halo         { box-shadow: 0 0 0 $base-step-halo-size $base-step-halo-color; }
+    &--halo-alt     { box-shadow: 0 0 0 $base-step-halo-size $base-step-halo-alt-color; }
 
     > span {
         vertical-align: middle;

@@ -1,5 +1,5 @@
 //
-// Footer updated
+// Footer
 //
 // The footer markup has been updated in this release. The old markup will still work in this release but is deprecated and will be removed in the next release. Please add the class 'footer--new' and update your markup to utilize the updated footer pattern.<br><br>
 // Since: 1.0.0
@@ -130,7 +130,7 @@
 //
 .footer {
     padding: ($base-spacing * 2) 0;
-    background-color: $base-background-color;
+    background-color: $footer-background-color;
     border-top: 1px solid $base-border-color;
     a {
         color: $base-font-color;
@@ -177,9 +177,6 @@
                 li {
                     a {
                         @include link-plain;
-                        &:hover {
-                            text-decoration: underline;
-                        }
                     }
                 }
             }
@@ -224,15 +221,24 @@
     .footer.footer--new {
         font-size: $small-font-size;
     }
+    .footer.footer--new.footer--basic {
+        .footer__links {
+            column-count: 2;
+        }
+    }
 }
 
-@include media-breakpoint-down(sm) {
-    .footer.footer--new {
+@include media-breakpoint-down(xs) {
+    .footer.footer--new:not(.footer--basic) {
         padding: $footer-spacing-compressed;
         .footer__links {
             ul.list {
                 column-count: 1;
             }
+        }
+
+        .footer__copyright {
+            display: none;
         }
 
         .footer__legal {

@@ -152,54 +152,30 @@
 //
 // Selection
 //
-// <blockquote>Add the class `active` to a row to indicate selected state</blockquote>
+// <blockquote>Add the class `table--selectable` to enable row selection. Add the class `active` to the selected row.</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
-//     <table class="table table--bordered">
+//     <table class="table table--bordered table--loose table--selectable">
 //         <thead>
 //             <tr>
-//                 <th>
-//                     <label class="checkbox">
-//                         <input type="checkbox"/>
-//                         <span class="checkbox__input"></span>
-//                     </label>
-//                 </th>
-//                 <th>Header 1</th>
+//                 <th class="sortable">Header 1 <span class="sort-indicator icon-chevron-down"></span></th>
 //                 <th>Header 2</th>
 //                 <th>Header 3</th>
 //             </tr>
 //         </thead>
 //         <tbody>
 //             <tr>
-//                 <td>
-//                     <label class="checkbox">
-//                         <input type="checkbox"/>
-//                         <span class="checkbox__input"></span>
-//                     </label>
-//                 </td>
 //                 <td>Row 1, Column 1</td>
 //                 <td>Row 1, Column 2</td>
 //                 <td>Row 1, Column 3</td>
 //             </tr>
 //             <tr class="active">
-//                 <td>
-//                     <label class="checkbox">
-//                         <input type="checkbox" checked>
-//                         <span class="checkbox__input"></span>
-//                     </label>
-//                 </td>
 //                 <td>ACTIVE</td>
 //                 <td>Row 2, Column 2</td>
 //                 <td>Row 2, Column 3</td>
 //             </tr>
 //             <tr>
-//                 <td>
-//                     <label class="checkbox">
-//                         <input type="checkbox"/>
-//                         <span class="checkbox__input"></span>
-//                     </label>
-//                 </td>
 //                 <td>Row 3, Column 1</td>
 //                 <td>Row 3, Column 2</td>
 //                 <td>Row 3, Column 3</td>
@@ -247,14 +223,14 @@
 //                 <td>Row 1, Column 2</td>
 //                 <td>Row 1, Column 3</td>
 //             </tr>
-//             <tr class="active">
+//             <tr>
 //                 <td>
 //                     <label class="checkbox">
-//                         <input type="checkbox" checked>
+//                         <input type="checkbox">
 //                         <span class="checkbox__input"></span>
 //                     </label>
 //                 </td>
-//                 <td>ACTIVE</td>
+//                 <td>Row 2, Column 1</td>
 //                 <td>Row 2, Column 2</td>
 //                 <td>Row 2, Column 3</td>
 //             </tr>
@@ -312,14 +288,14 @@
 //                 <td>Row 1, Column 2</td>
 //                 <td>Row 1, Column 3</td>
 //             </tr>
-//             <tr class="active">
+//             <tr>
 //                 <td>
 //                     <label class="checkbox">
-//                         <input type="checkbox" checked>
+//                         <input type="checkbox">
 //                         <span class="checkbox__input"></span>
 //                     </label>
 //                 </td>
-//                 <td>ACTIVE</td>
+//                 <td>Row 2, Column 1</td>
 //                 <td>Row 2, Column 2</td>
 //                 <td>Row 2, Column 3</td>
 //             </tr>
@@ -626,6 +602,10 @@
 		}
 	}
 
+	tr, td {
+		font-weight: normal;
+	}
+
 	tr, td, th {
 		@include text-ellipsis;
 		padding: $base-table-cell-padding;
@@ -647,6 +627,7 @@
 
 		label.checkbox {
 			margin: 0;
+			vertical-align: middle;
 		}
 	}
 
@@ -666,7 +647,7 @@
 			border-right: $base-table-border;
 
   			&:last-child {
-  				border-right: 0 none;
+  				border-right: 1px solid transparent;
   			}
   		}
 		&-inner {
@@ -677,6 +658,7 @@
 	&--wrap {
 		tr, td, th {
 			white-space: normal;
+			overflow: visible;
 		}
 		td {
 			vertical-align: top;
@@ -750,6 +732,53 @@
 	&--hover {
 		> tbody > tr:hover {
 			background-color: $base-hover-color;
+		}
+	}
+
+	&--selectable {
+
+	    > thead > th:first-child,
+		> tbody > tr > td:first-child {
+	        border-left: $base-table-active-row-border-width solid transparent;
+	        text-align: center;
+	    }
+
+		> tbody {
+			> tr {
+				> td {
+					border-bottom: 1px solid transparent;
+				}
+				&:hover,
+				td:hover {
+					cursor: pointer;
+				}
+				&.active {
+					background: rgba($base-accent-color, 0.2);
+
+			        > td {
+			            border-top-color: $base-accent-color;
+			            border-bottom-color: $base-accent-color;
+
+			            &:not(:first-child):not(:last-child) {
+			                border-left-color: transparent;
+			                border-right-color: transparent;
+			            }
+
+			            &:first-child {
+			                border-right-color: transparent;
+			            }
+
+			            &:last-child {
+			                border-right: 1px solid $base-accent-color
+			            }
+			        }
+				}
+			}
+			tr.active + tr.active {
+				> td {
+					border-top: 1px solid transparent;
+				}
+			}
 		}
 	}
 

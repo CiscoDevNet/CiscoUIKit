@@ -225,7 +225,7 @@
     align-items: flex-start;
     max-width: $toast-max-width;
     border: $toast-border-width solid rgba(0, 0, 0, $toast-border-opacity);
-    box-shadow: $base-box-shadow-small;
+    box-shadow: $toast-box-shadow;
 
     &__icon {
         min-width: $base-spacing;

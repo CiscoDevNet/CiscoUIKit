@@ -1,7 +1,9 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a, d) {
-	var called = 0, fn = t(function () { ++called; });
+	var called = 0, fn = t(function () {
+ ++called;
+});
 
 	fn();
 	fn();
@@ -10,7 +12,9 @@ module.exports = function (t, a, d) {
 		a(called, 1);
 
 		called = 0;
-		fn = t(function () { ++called; }, 50);
+		fn = t(function () {
+ ++called;
+}, 50);
 		fn();
 		fn();
 		fn();

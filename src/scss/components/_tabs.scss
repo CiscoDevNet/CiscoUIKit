@@ -1,5 +1,5 @@
 //
-// Tab
+// Tab updated
 //
 // Since: 1.0.1
 //
@@ -100,6 +100,128 @@
 // Styleguide Components.Tab.Direction
 //
 
+
+//
+// Example
+//
+// Markup:
+// <div class="secondary-tabs">
+//     <ul class="tabs">
+//         <li id="tab-routers" class="tab active">
+//             <a>
+//                 <div class="tab__heading" title="Routers">Routers</div>
+//             </a>
+//         </li>
+//         <li id="tab-switches" class="tab">
+//             <a>
+//                 <div class="tab__heading" title="Switches">Switches</div>
+//             </a>
+//         </li>
+//         <li id="tab-wireless" class="tab">
+//             <a>
+//                 <div class="tab__heading" title="Wireless">Wireless</div>
+//             </a>
+//         </li>
+//     </ul>
+//     <div class="tab-content">
+//         <div id="tab-routers-content" class="tab-pane active">
+//             <div class="section text-center">
+//                 <h1>Routers for networks of all types and sizes<h1>
+//                 <h6 class="base-margin-top">Find secure, digital-ready routers for any application, anywhere.</h6>
+//             </div>
+//             <div class="section">
+//                 <div class="row">
+//                     <div class="col-md-4">
+//                         <img src="public/img/branch-routers.png">
+//                         <h4>Branch</h4>
+//                         <p>Gain highly secure connectivity, machine learning, and cloud-managed security.</p>
+//                         <ul>
+//                             <li><a>ISR 800 Series</a></li>
+//                             <li><a>ISR 1000 Series</a></li>
+//                             <li><a>ISR 4000 Series</a></li>
+//                             <li><a>Meraki MX</a></li>
+//                         </ul>
+//                     </div>
+//                     <div class="col-md-4">
+//                         <img src="public/img/wan-routers.png">
+//                         <h4>WAN Aggregation</h4>
+//                         <p>Get performance and security for WAN, Internet, and M2M interconnectivity.</p>
+//                         <ul>
+//                             <li><a>NCS 5000 Series</a></li>
+//                             <li><a>NCS 5500 Series</a></li>
+//                             <li><a>ASR 1000 Series</a></li>
+//                         </ul>
+//                     </div>
+//                     <div class="col-md-4">
+//                         <img src="public/img/edge-routers.png">
+//                         <h4>Edge</h4>
+//                         <p>Grow density and resiliency with programmability for a scalable network edge.</p>
+//                         <ul>
+//                             <li><a>ASR 1000 Series</a></li>
+//                             <li><a>ASR 9000 Series</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div id="tab-switches-content" class="tab-pane">
+//             <div class="section text-center">
+//                 <h1>Switching for a changing world<h1>
+//                 <h6 class="base-margin-top">Our Catalyst 9000 switches constantly adapt to help you solve new challenges. Their integrated security helps you address ever-changing threats. They simplify management of your evolving mobility, Internet-of-Things (IoT), and cloud requirements. Introducing an entirely new era of networking. The Network. Intuitive.</h6>
+//             </div>
+//             <div class="section">
+//                 <div class="row">
+//                     <div class="col-md-4">
+//                         <img src="public/img/9300-switches.png">
+//                         <h4>Catalyst 9300 Series</h4>
+//                         <p>The Catalyst 9300 Series is our top fixed-access enterprise network switch series, stacking to 480 Gbps.</p>
+//                         <a>Explore the 9300</a>
+//                     </div>
+//                     <div class="col-md-4">
+//                         <img src="public/img/9400-switches.jpg">
+//                         <h4>Catalyst 9400 Series</h4>
+//                         <p>Cisco’s leading modular-access switches for enterprise, the Catalyst 9400 Series supports up to 9 Tbps.</p>
+//                         <a>Explore the 9400</a>
+//                     </div>
+//                     <div class="col-md-4">
+//                         <img src="public/img/edge-routers.png">
+//                         <h4>Catalyst 9500 Series</h4>
+//                         <p>The Catalyst 9500 Series is the industry’s first fixed-core 40-Gbps switch for the enterprise.</p>
+//                         <a>Explore the 9500</a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div id="tab-wireless-content" class="tab-pane">
+//             <div class="section text-center">
+//                 <h1>See what's possible with our products<h1>
+//                 <h6 class="base-margin-top">Provide enterprise-level, highly secure wireless access for businesses of any size, and easily manage your network.</h6>
+//             </div>
+//             <div class="section">
+//                 <div class="row">
+//                     <div class="col-md-4 text-center">
+//                         <img src="public/img/indoor-accesspoints-wireless.png">
+//                         <h4><a>Indoor Access Points</a></h4>
+//                     </div>
+//                     <div class="col-md-4 text-center">
+//                         <img src="public/img/outdoor-accesspoints-wireless.png">
+//                         <h4><a>Outdoor Access Points</a></h4>
+//                     </div>
+//                     <div class="col-md-4 text-center">
+//                         <img src="public/img/lan-wireless.png">
+//                         <h4><a>Wireless LAN Controllers</a></h4>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Components.Tab.Example
+//
+
 ul.tabs,
 .nav-tabs {
 
@@ -115,7 +237,7 @@ ul.tabs,
     .header & {
         display: block;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(md) {
             margin-top: 0;
         }
     }
@@ -143,6 +265,7 @@ ul.tabs,
             color: $base-font-color;
             line-height: 1;
             text-align: center;
+            user-select: none;
 
             &:hover {
                 color: $base-link-color;
@@ -188,7 +311,7 @@ ul.tabs,
             > a {
                 display: flex;
                 align-items: center;
-                padding: 0;
+                padding: 0 0 0 ($base-spacing * 0.5);
                 height: $base-tab-vertical-height;
                 &.tab__heading {
                     margin: 0 ($base-spacing * 0.25);
@@ -210,7 +333,7 @@ ul.tabs,
 
             &:hover {
                 > a {
-                    box-shadow: .3125rem 0 $base-accent-color inset;
+                    box-shadow: ($base-spacing * 0.25) 0 $base-accent-color inset;
                 }
             }
         }
@@ -220,7 +343,7 @@ ul.tabs,
             border: 0 none;
             padding-right: 0;
 
-            @include break-at(small) {
+            @include media-breakpoint-up(md) {
                 border-right: $base-border;
                 padding-right: 1px;
             }
@@ -259,6 +382,7 @@ ul.tabs,
 
     &.active {
         display: block;
+        animation: fade-in .5s;
     }
 }
 
@@ -270,7 +394,7 @@ ul.tabs,
 
     .tab-pane {
         padding: $base-spacing 0;
-    }    
+    }
 }
 
 // Fix for text cutoff on mobile menu. Need to exclude tabs from the list

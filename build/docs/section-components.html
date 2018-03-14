@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="cui" lang="en" id="styleguide">
+<html lang="en" id="styleguide">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
         <script src="public/js/featherlight.min.js"></script>
         <script src="public/js/Markdown.Converter.js"></script>
     </head>
-    <body class="styleguide">
+    <body class="cui styleguide">
         <div class="content-fluid">
             <nav id="styleguideSidebar" class="sidebar">
                 <div class="sidebar__header">
@@ -49,6 +49,9 @@
                     <li class="sidebar__drawer">
                         <a>Older Versions</a>
                         <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.0-official/" target="_blank">Version 1.2.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.1.0-official/" target="_blank">Version 1.1.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.5-official/" target="_blank">Version 1.0.5</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.4-official/" target="_blank">Version 1.0.4</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.3-official/" target="_blank">Version 1.0.3</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.2-official/" target="_blank">Version 1.0.2</a></li>
@@ -71,6 +74,15 @@
                             <li class="sidebar__item">
                                 <a href="assets/stickyfooter.html" target="_blank">Sticky Footer</a>
                             </li>
+                            <li class="sidebar__item">
+                                <a href="assets/cdc-guest.html" target="_blank">CDC Guest Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/cdc-entitled.html" target="_blank">CDC Entitled Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/cdc-employee.html" target="_blank">CDC Employee Template</a>
+                            </li>
                         </ul>
                     </li>
                     <li id="rootDrawer" class="sidebar__drawer">
@@ -83,7 +95,7 @@
                                         <a onclick="doNav('section-base.html#base-typography')">Typography  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-grid">
-                                        <a onclick="doNav('section-base.html#base-grid')">Grid System  <span class="label label--tiny label--success label--bordered qtr-margin-left">new</span></a>
+                                        <a onclick="doNav('section-base.html#base-grid')">Grid System</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-button">
                                         <a onclick="doNav('section-base.html#base-button')">Button</a>
@@ -94,14 +106,20 @@
                                     <li class="sidebar__item depth-2" id="section-base-color">
                                         <a onclick="doNav('section-base.html#base-color')">Color</a>
                                     </li>
+                                    <li class="sidebar__item depth-2" id="section-base-description-list">
+                                        <a onclick="doNav('section-base.html#base-description-list')">Description List</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-base-divider">
+                                        <a onclick="doNav('section-base.html#base-divider')">Divider</a>
+                                    </li>
                                     <li class="sidebar__item depth-2" id="section-base-icons">
                                         <a onclick="doNav('section-base.html#base-icons')">Icons</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-input">
-                                        <a onclick="doNav('section-base.html#base-input')">Input  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-base.html#base-input')">Input</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-label">
-                                        <a onclick="doNav('section-base.html#base-label')">Label  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-base.html#base-label')">Label</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-link">
                                         <a onclick="doNav('section-base.html#base-link')">Link</a>
@@ -110,7 +128,7 @@
                                         <a onclick="doNav('section-base.html#base-list')">List</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-panel">
-                                        <a onclick="doNav('section-base.html#base-panel')">Panel  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-base.html#base-panel')">Panel</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-radio">
                                         <a onclick="doNav('section-base.html#base-radio')">Radio</a>
@@ -128,7 +146,7 @@
                                         <a onclick="doNav('section-base.html#base-table')">Table  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-base-thumbnail">
-                                        <a onclick="doNav('section-base.html#base-thumbnail')">Thumbnail  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-base.html#base-thumbnail')">Thumbnail</a>
                                     </li>
                                 </ul>
                             </li>
@@ -147,6 +165,12 @@
                                     <li class="sidebar__item depth-2" id="section-components-breadcrumb">
                                         <a onclick="doNav('section-components.html#components-breadcrumb')">Breadcrumb</a>
                                     </li>
+                                    <li class="sidebar__item depth-2" id="section-components-carousel">
+                                        <a onclick="doNav('section-components.html#components-carousel')">Carousel</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-dropdown">
+                                        <a onclick="doNav('section-components.html#components-dropdown')">Dropdown</a>
+                                    </li>
                                     <li class="sidebar__item depth-2" id="section-components-figure">
                                         <a onclick="doNav('section-components.html#components-figure')">Figure</a>
                                     </li>
@@ -154,25 +178,34 @@
                                         <a onclick="doNav('section-components.html#components-gauge')">Gauge</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-hero">
-                                        <a onclick="doNav('section-components.html#components-hero')">Hero  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-components.html#components-hero')">Hero</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-loader">
                                         <a onclick="doNav('section-components.html#components-loader')">Loader</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-modal">
+                                        <a onclick="doNav('section-components.html#components-modal')">Modal</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-rating">
                                         <a onclick="doNav('section-components.html#components-rating')">Rating</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-scoreboard">
-                                        <a onclick="doNav('section-components.html#components-scoreboard')">Scoreboard  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-components.html#components-scoreboard')">Scoreboard</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-step">
                                         <a onclick="doNav('section-components.html#components-step')">Step</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-tab">
-                                        <a onclick="doNav('section-components.html#components-tab')">Tab</a>
+                                        <a onclick="doNav('section-components.html#components-tab')">Tab  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-timeline">
+                                        <a onclick="doNav('section-components.html#components-timeline')">Timeline</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-components-toast">
                                         <a onclick="doNav('section-components.html#components-toast')">Toast</a>
+                                    </li>
+                                    <li class="sidebar__item depth-2" id="section-components-tooltip">
+                                        <a onclick="doNav('section-components.html#components-tooltip')">Tooltip</a>
                                     </li>
                                 </ul>
                             </li>
@@ -180,7 +213,7 @@
                                 <a>Layout</a>
                                 <ul>
                                     <li class="sidebar__item depth-2" id="section-layout-footer">
-                                        <a onclick="doNav('section-layout.html#layout-footer')">Footer  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></a>
+                                        <a onclick="doNav('section-layout.html#layout-footer')">Footer</a>
                                     </li>
                                     <li class="sidebar__item depth-2" id="section-layout-header">
                                         <a onclick="doNav('section-layout.html#layout-header')">Header</a>
@@ -696,71 +729,11 @@ Since: 1.0.0</p>
                         <div class="panel panel--loose depth-3">
                             <h4 class="base-margin-bottom">
                                 <span class="subheading text-capitalize">alert</span>
-                                <span class="text-normal">Composition</span>
-                            </h4>
-
-
-
-                            <div>
-                                <div class="row">
-    <div class="col-md-6">
-        <p><b>Default</b></p>
-        <div class="alert composition">
-            <div class="alert__icon">Icon</div>
-            <div class="alert__message">Message</div>
-            <div class="alert__close">Icon</div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <p><b>Variant:</b> 1</p>
-        <div class="alert composition">
-            <div class="alert__icon">Icon</div>
-            <div class="alert__message">Message</div>
-        </div>
-    </div>
-</div>
-                            </div>
-                            <div class="base-margin-top">
-                                <div class="flex">
-                                    <a class="markup-toggle link">
-                                        <span class="markup-label">View Source </span>
-                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
-                                    </a>
-                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
-                                </div>
-                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
-                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-md-6&quot;&gt;
-        &lt;p&gt;&lt;b&gt;Default&lt;/b&gt;&lt;/p&gt;
-        &lt;div class=&quot;alert composition&quot;&gt;
-            &lt;div class=&quot;alert__icon&quot;&gt;Icon&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Message&lt;/div&gt;
-            &lt;div class=&quot;alert__close&quot;&gt;Icon&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;col-md-6&quot;&gt;
-        &lt;p&gt;&lt;b&gt;Variant:&lt;/b&gt; 1&lt;/p&gt;
-        &lt;div class=&quot;alert composition&quot;&gt;
-            &lt;div class=&quot;alert__icon&quot;&gt;Icon&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Message&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                                </div>
-                            </div>
-                            
-                            </div>
-
-
-
-                        <div class="panel panel--loose depth-3">
-                            <h4 class="base-margin-bottom">
-                                <span class="subheading text-capitalize">alert</span>
                                 <span class="text-normal">Color</span>
                             </h4>
 
 
-                            <div><blockquote>Use the approved status colors and icons below to denote message severity</blockquote></div>
+                            <div><blockquote>Use the approved status colors and icons below to denote message severity<br>NOTE: Starting in 1.0.6 all variations of the Alert pattern have been deprecated. Going forward there will only be one supported pattern.</blockquote></div>
 
                             <div>
                                 <div class="row">
@@ -819,162 +792,6 @@ Since: 1.0.0</p>
             &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;alert alert--danger&quot;&gt;
-            &lt;div class=&quot;alert__icon icon-error&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Danger &lt;a&gt;Link&lt;/a&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                                </div>
-                            </div>
-                            
-                            </div>
-
-
-
-                        <div class="panel panel--loose depth-3">
-                            <h4 class="base-margin-bottom">
-                                <span class="subheading text-capitalize">alert</span>
-                                <span class="text-normal">Alternate Background</span>
-                            </h4>
-
-
-
-                            <div>
-                                <div class="row">
-    <div class="col-md-6">
-        <div class="alert alert--info-alt">
-            <div class="alert__icon icon-info-circle"></div>
-            <div class="alert__message">Information (default) <a>Link</a></div>
-            <div class="alert__close icon-close"></div>
-        </div>
-        <div class="alert alert--success-alt">
-            <div class="alert__icon icon-check"></div>
-            <div class="alert__message">Success <a>Link</a></div>
-            <div class="alert__close icon-close"></div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="alert alert--warning-alt">
-            <div class="alert__icon icon-exclamation-triangle"></div>
-            <div class="alert__message">Warning <a>Link</a></div>
-            <div class="alert__close icon-close"></div>
-        </div>
-        <div class="alert alert--danger-alt">
-            <div class="alert__icon icon-error"></div>
-            <div class="alert__message">Danger <a>Link</a></div>
-            <div class="alert__close icon-close"></div>
-        </div>
-    </div>
-</div>
-                            </div>
-                            <div class="base-margin-top">
-                                <div class="flex">
-                                    <a class="markup-toggle link">
-                                        <span class="markup-label">View Source </span>
-                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
-                                    </a>
-                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
-                                </div>
-                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
-                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-md-6&quot;&gt;
-        &lt;div class=&quot;alert alert--info-alt&quot;&gt;
-            &lt;div class=&quot;alert__icon icon-info-circle&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Information (default) &lt;a&gt;Link&lt;/a&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;alert alert--success-alt&quot;&gt;
-            &lt;div class=&quot;alert__icon icon-check&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Success &lt;a&gt;Link&lt;/a&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;col-md-6&quot;&gt;
-        &lt;div class=&quot;alert alert--warning-alt&quot;&gt;
-            &lt;div class=&quot;alert__icon icon-exclamation-triangle&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Warning &lt;a&gt;Link&lt;/a&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;alert alert--danger-alt&quot;&gt;
-            &lt;div class=&quot;alert__icon icon-error&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Danger &lt;a&gt;Link&lt;/a&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                                </div>
-                            </div>
-                            
-                            </div>
-
-
-
-                        <div class="panel panel--loose depth-3">
-                            <h4 class="base-margin-bottom">
-                                <span class="subheading text-capitalize">alert</span>
-                                <span class="text-normal">Alternate Background #2</span>
-                            </h4>
-
-
-
-                            <div>
-                                <div class="row">
-    <div class="col-md-6">
-        <div class="alert alert--info-alt2">
-            <div class="alert__icon icon-info-circle"></div>
-            <div class="alert__message">Information (default) <a>Link</a></div>
-            <div class="alert__close icon-close"></div>
-        </div>
-        <div class="alert alert--success-alt2">
-            <div class="alert__icon icon-check"></div>
-            <div class="alert__message">Success <a>Link</a></div>
-            <div class="alert__close icon-close"></div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="alert alert--warning-alt2">
-            <div class="alert__icon icon-exclamation-triangle"></div>
-            <div class="alert__message">Warning <a>Link</a></div>
-            <div class="alert__close icon-close"></div>
-        </div>
-        <div class="alert alert--danger-alt2">
-            <div class="alert__icon icon-error"></div>
-            <div class="alert__message">Danger <a>Link</a></div>
-            <div class="alert__close icon-close"></div>
-        </div>
-    </div>
-</div>
-                            </div>
-                            <div class="base-margin-top">
-                                <div class="flex">
-                                    <a class="markup-toggle link">
-                                        <span class="markup-label">View Source </span>
-                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
-                                    </a>
-                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
-                                </div>
-                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
-                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-md-6&quot;&gt;
-        &lt;div class=&quot;alert alert--info-alt2&quot;&gt;
-            &lt;div class=&quot;alert__icon icon-info-circle&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Information (default) &lt;a&gt;Link&lt;/a&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;alert alert--success-alt2&quot;&gt;
-            &lt;div class=&quot;alert__icon icon-check&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Success &lt;a&gt;Link&lt;/a&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;col-md-6&quot;&gt;
-        &lt;div class=&quot;alert alert--warning-alt2&quot;&gt;
-            &lt;div class=&quot;alert__icon icon-exclamation-triangle&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__message&quot;&gt;Warning &lt;a&gt;Link&lt;/a&gt;&lt;/div&gt;
-            &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;alert alert--danger-alt2&quot;&gt;
             &lt;div class=&quot;alert__icon icon-error&quot;&gt;&lt;/div&gt;
             &lt;div class=&quot;alert__message&quot;&gt;Danger &lt;a&gt;Link&lt;/a&gt;&lt;/div&gt;
             &lt;div class=&quot;alert__close icon-close&quot;&gt;&lt;/div&gt;
@@ -1449,6 +1266,459 @@ Since: 1.0.3</p>
                             </div>
 
 
+                        <div class="panel panel--loose panel--indigo depth-2" id="components-carousel">
+                            <h1>Carousel</h1>
+
+
+
+                            <div><p>This pattern really covers just the carousel controls. The content of each carousel item is up to you.
+Since: 1.1.0</p>
+</div>
+
+                            </div>
+                            
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">carousel</span>
+                                <span class="text-normal">Blue Controls</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="carousel">
+    <div class="hero hero--split hero--split-75 hero--nogradient hero--bordered">
+        <div class="hero__content hero--blue">
+            <div class="container">
+                <h2>Edge Routers</h2>
+                <p>Grow density and resiliency with programmability for a scalable network edge.</p>
+                <button class="btn btn--white-ghost qtr-margin-top">Learn More</button>
+            </div>
+        </div>
+        <div class="hero__marquee">
+            <img class="img img--fluid" src="public/img/routers-edge.png">
+        </div>
+    </div>
+    <div class="base-margin-top">
+        <div class="carousel__controls">
+            <a class="back disabled">
+                <span class="icon-chevron-left"></span>
+            </a>
+            <a class="dot selected"><span class="icon-circle"></span></a>
+            <a class="dot"><span class="icon-circle"></span></a>
+            <a class="dot"><span class="icon-circle"></span></a>
+            <a class="next">
+                <span class="icon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;carousel&quot;&gt;
+    &lt;div class=&quot;hero hero--split hero--split-75 hero--nogradient hero--bordered&quot;&gt;
+        &lt;div class=&quot;hero__content hero--blue&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;h2&gt;Edge Routers&lt;/h2&gt;
+                &lt;p&gt;Grow density and resiliency with programmability for a scalable network edge.&lt;/p&gt;
+                &lt;button class=&quot;btn btn--white-ghost qtr-margin-top&quot;&gt;Learn More&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;hero__marquee&quot;&gt;
+            &lt;img class=&quot;img img--fluid&quot; src=&quot;public/img/routers-edge.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;base-margin-top&quot;&gt;
+        &lt;div class=&quot;carousel__controls&quot;&gt;
+            &lt;a class=&quot;back disabled&quot;&gt;
+                &lt;span class=&quot;icon-chevron-left&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;dot selected&quot;&gt;&lt;span class=&quot;icon-circle&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;a class=&quot;dot&quot;&gt;&lt;span class=&quot;icon-circle&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;a class=&quot;dot&quot;&gt;&lt;span class=&quot;icon-circle&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;a class=&quot;next&quot;&gt;
+                &lt;span class=&quot;icon-chevron-right&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">carousel</span>
+                                <span class="text-normal">Indigo Controls</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="carousel carousel--indigo">
+    <div class="hero hero--split hero--split-75 hero--nogradient hero--bordered">
+        <div class="hero__marquee">
+            <img class="img img--fluid" src="public/img/catalyst-9400series.jpg">
+        </div>
+        <div class="hero__content hero--indigo">
+            <div class="container">
+                <h2>Catalyst 9400 Series Switches</h2>
+                <p>Cisco's leading modular-access switches for enterprise. Supports up to 9tbps.</p>
+                <button class="btn btn--white-ghost qtr-margin-top">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <div class="base-margin-top">
+        <div class="carousel__controls">
+            <a class="back disabled">
+                <span class="icon-chevron-left"></span>
+            </a>
+            <a class="dot selected"><span class="icon-circle"></span></a>
+            <a class="dot"><span class="icon-circle"></span></a>
+            <a class="dot"><span class="icon-circle"></span></a>
+            <a class="next">
+                <span class="icon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;carousel carousel--indigo&quot;&gt;
+    &lt;div class=&quot;hero hero--split hero--split-75 hero--nogradient hero--bordered&quot;&gt;
+        &lt;div class=&quot;hero__marquee&quot;&gt;
+            &lt;img class=&quot;img img--fluid&quot; src=&quot;public/img/catalyst-9400series.jpg&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;hero__content hero--indigo&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;h2&gt;Catalyst 9400 Series Switches&lt;/h2&gt;
+                &lt;p&gt;Cisco&#x27;s leading modular-access switches for enterprise. Supports up to 9tbps.&lt;/p&gt;
+                &lt;button class=&quot;btn btn--white-ghost qtr-margin-top&quot;&gt;Learn More&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;base-margin-top&quot;&gt;
+        &lt;div class=&quot;carousel__controls&quot;&gt;
+            &lt;a class=&quot;back disabled&quot;&gt;
+                &lt;span class=&quot;icon-chevron-left&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;dot selected&quot;&gt;&lt;span class=&quot;icon-circle&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;a class=&quot;dot&quot;&gt;&lt;span class=&quot;icon-circle&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;a class=&quot;dot&quot;&gt;&lt;span class=&quot;icon-circle&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;a class=&quot;next&quot;&gt;
+                &lt;span class=&quot;icon-chevron-right&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+                        <div class="panel panel--loose panel--indigo depth-2" id="components-dropdown">
+                            <h1>Dropdown</h1>
+
+
+
+                            <div><p>Simple dropdown menu.<br><br>
+Since 1.2.0</p>
+</div>
+
+                            </div>
+                            
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">dropdown</span>
+                                <span class="text-normal">Examples</span>
+                            </h4>
+
+
+                            <div><blockquote>Add class <code>btn--dropdown</code> to your button to add a toggle and class <code>active</code> to display the menu.</blockquote></div>
+
+                            <div>
+                                <div class="dropdown">
+    <button class="btn btn--dropdown">Dropdown</button>
+    <div class="dropdown__menu">
+        <a>Action One</a>
+        <a>Action Two</a>
+        <a>Action Three</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="btn btn--primary btn--dropdown">Dropdown</button>
+    <div class="dropdown__menu">
+        <a>Action One</a>
+        <a>Action Two</a>
+        <a>Action Three</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="btn btn--primary-ghost btn--dropdown">Dropdown</button>
+    <div class="dropdown__menu">
+        <a>Action One</a>
+        <a>Action Two</a>
+        <a>Action Three</a>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;btn btn--dropdown&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;div class=&quot;dropdown__menu&quot;&gt;
+        &lt;a&gt;Action One&lt;/a&gt;
+        &lt;a&gt;Action Two&lt;/a&gt;
+        &lt;a&gt;Action Three&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;btn btn--primary btn--dropdown&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;div class=&quot;dropdown__menu&quot;&gt;
+        &lt;a&gt;Action One&lt;/a&gt;
+        &lt;a&gt;Action Two&lt;/a&gt;
+        &lt;a&gt;Action Three&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;btn btn--primary-ghost btn--dropdown&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;div class=&quot;dropdown__menu&quot;&gt;
+        &lt;a&gt;Action One&lt;/a&gt;
+        &lt;a&gt;Action Two&lt;/a&gt;
+        &lt;a&gt;Action Three&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">dropdown</span>
+                                <span class="text-normal">Direction</span>
+                            </h4>
+
+
+                            <div><blockquote>Your dropdown menu can open right (default) or left.</blockquote></div>
+
+                            <div>
+                                <div class="dropdown">
+    <button class="btn btn--primary btn--dropdown">Open Right</button>
+    <div class="dropdown__menu">
+        <a>Action One</a>
+        <a>Action Two</a>
+        <a>Action Three</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="btn btn--primary btn--dropdown">Open Left</button>
+    <div class="dropdown__menu dropdown__menu--openleft">
+        <a>Action One</a></li>
+        <a>Action Two</a>
+        <a>Action Three</a>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;btn btn--primary btn--dropdown&quot;&gt;Open Right&lt;/button&gt;
+    &lt;div class=&quot;dropdown__menu&quot;&gt;
+        &lt;a&gt;Action One&lt;/a&gt;
+        &lt;a&gt;Action Two&lt;/a&gt;
+        &lt;a&gt;Action Three&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;btn btn--primary btn--dropdown&quot;&gt;Open Left&lt;/button&gt;
+    &lt;div class=&quot;dropdown__menu dropdown__menu--openleft&quot;&gt;
+        &lt;a&gt;Action One&lt;/a&gt;&lt;/li&gt;
+        &lt;a&gt;Action Two&lt;/a&gt;
+        &lt;a&gt;Action Three&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">dropdown</span>
+                                <span class="text-normal">Selection</span>
+                            </h4>
+
+
+                            <div><blockquote>Add the class <code>selected</code> to a menu item to denote selection.</blockquote></div>
+
+                            <div>
+                                <div class="dropdown">
+    <button class="btn btn--primary btn--dropdown">Action One</button>
+    <div class="dropdown__menu">
+        <a class="selected">Action One</a>
+        <a>Action Two</a>
+        <a>Action Three</a>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;btn btn--primary btn--dropdown&quot;&gt;Action One&lt;/button&gt;
+    &lt;div class=&quot;dropdown__menu&quot;&gt;
+        &lt;a class=&quot;selected&quot;&gt;Action One&lt;/a&gt;
+        &lt;a&gt;Action Two&lt;/a&gt;
+        &lt;a&gt;Action Three&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">dropdown</span>
+                                <span class="text-normal">Divider</span>
+                            </h4>
+
+
+                            <div><blockquote>Add a divider to group menu items.</blockquote></div>
+
+                            <div>
+                                <div class="dropdown">
+    <button class="btn btn--primary btn--dropdown">Divider</button>
+    <div class="dropdown__menu">
+        <a>Action One</a>
+        <a>Action Two</a>
+        <div class="dropdown__divider"></div>
+        <a>Action Three</a>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;btn btn--primary btn--dropdown&quot;&gt;Divider&lt;/button&gt;
+    &lt;div class=&quot;dropdown__menu&quot;&gt;
+        &lt;a&gt;Action One&lt;/a&gt;
+        &lt;a&gt;Action Two&lt;/a&gt;
+        &lt;div class=&quot;dropdown__divider&quot;&gt;&lt;/div&gt;
+        &lt;a&gt;Action Three&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">dropdown</span>
+                                <span class="text-normal">Animation</span>
+                            </h4>
+
+
+                            <div><blockquote>Add the class <code>dropdown--animated</code> to add a subtle animation to your dropdown.</blockquote></div>
+
+                            <div>
+                                <div class="dropdown dropdown--animated">
+    <button class="btn btn--primary btn--dropdown">Animated</button>
+    <div class="dropdown__menu">
+        <a>Action One</a>
+        <a>Action Two</a>
+        <div class="dropdown__divider"></div>
+        <a>Action Three</a>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;dropdown dropdown--animated&quot;&gt;
+    &lt;button class=&quot;btn btn--primary btn--dropdown&quot;&gt;Animated&lt;/button&gt;
+    &lt;div class=&quot;dropdown__menu&quot;&gt;
+        &lt;a&gt;Action One&lt;/a&gt;
+        &lt;a&gt;Action Two&lt;/a&gt;
+        &lt;div class=&quot;dropdown__divider&quot;&gt;&lt;/div&gt;
+        &lt;a&gt;Action Three&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
                         <div class="panel panel--loose panel--indigo depth-2" id="components-figure">
                             <h1>Figure</h1>
 
@@ -1836,6 +2106,20 @@ Since 1.0.0</p>
         <div class="gauge__percentage">25</div>
     </div>
 </div>
+<div class="gauge gauge--alt gauge--small gauge--blue" data-percentage="25">
+    <div class="gauge__circle">
+        <div class="mask full">
+            <div class="fill"></div>
+        </div>
+        <div class="mask half">
+            <div class="fill"></div>
+            <div class="fill fix"></div>
+        </div>
+    </div>
+    <div class="gauge__inset">
+        <div class="gauge__percentage">25</div>
+    </div>
+</div>
 <div class="gauge gauge--alt gauge--small gauge--success" data-percentage="25">
     <div class="gauge__circle">
         <div class="mask full">
@@ -1931,6 +2215,20 @@ Since 1.0.0</p>
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;gauge gauge--alt gauge--small gauge--primary&quot; data-percentage=&quot;25&quot;&gt;
+    &lt;div class=&quot;gauge__circle&quot;&gt;
+        &lt;div class=&quot;mask full&quot;&gt;
+            &lt;div class=&quot;fill&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;mask half&quot;&gt;
+            &lt;div class=&quot;fill&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;fill fix&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gauge__inset&quot;&gt;
+        &lt;div class=&quot;gauge__percentage&quot;&gt;25&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gauge gauge--alt gauge--small gauge--blue&quot; data-percentage=&quot;25&quot;&gt;
     &lt;div class=&quot;gauge__circle&quot;&gt;
         &lt;div class=&quot;mask full&quot;&gt;
             &lt;div class=&quot;fill&quot;&gt;&lt;/div&gt;
@@ -2265,7 +2563,7 @@ Since 1.0.0</p>
 
 
                         <div class="panel panel--loose panel--indigo depth-2" id="components-hero">
-                            <h1>Hero  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></h1>
+                            <h1>Hero</h1>
 
 
 
@@ -2996,7 +3294,7 @@ Since 1.0.0</p>
 
 
 
-                            <div><p>Since: 1.0.4</p>
+                            <div><p>Since: 1.0.4 updated</p>
 </div>
 
                             </div>
@@ -3007,31 +3305,33 @@ Since 1.0.0</p>
                         <div class="panel panel--loose depth-3">
                             <h4 class="base-margin-bottom">
                                 <span class="subheading text-capitalize">loader</span>
-                                <span class="text-normal">Examples</span>
+                                <span class="text-normal">Spinner</span>
                             </h4>
 
 
 
                             <div>
-                                <div class="panel panel--bordered IGNORE">
-<div>
-    <div class="loading-dots loading-dots--muted">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
-</div IGNORE>
-<br>
-<div class="panel panel--bordered IGNORE">
-<div>
-    <h4 class="text-center">Loader with Text</h4>
-    <div class="loading-dots loading-dots--muted">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
+                                <div class="row" IGNORE>
+    <div class="col-md-3" IGNORE>
+        <div class="panel panel--bordered" IGNORE>
+            <h4 class="text-center half-margin-bottom">Default</h4 IGNORE>
+            <div class="loading-spinner flex-center">
+                <div class="wrapper">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </div IGNORE>
+    </div IGNORE>
+    <div class="col-md-3" IGNORE>
+        <div class="panel panel--bordered" IGNORE>
+            <h4 class="text-center half-margin-bottom">Indigo</h4 IGNORE>
+            <div class="loading-spinner loading-spinner--indigo flex-center">
+                <div class="wrapper">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </div IGNORE>
+    </div IGNORE>
 </div IGNORE>
                             </div>
                             <div class="base-margin-top">
@@ -3044,24 +3344,26 @@ Since 1.0.0</p>
                                 </div>
                                 <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
                                     <pre><code class="code-raw" data-language="html">
-&lt;div&gt;
-    &lt;div class=&quot;loading-dots loading-dots--muted&quot;&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
 
-&lt;br&gt;
 
-&lt;div&gt;
-    &lt;h4 class=&quot;text-center&quot;&gt;Loader with Text&lt;/h4&gt;
-    &lt;div class=&quot;loading-dots loading-dots--muted&quot;&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+
+            &lt;div class=&quot;loading-spinner flex-center&quot;&gt;
+                &lt;div class=&quot;wrapper&quot;&gt;
+                    &lt;div class=&quot;wheel&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+
+
+
+
+            &lt;div class=&quot;loading-spinner loading-spinner--indigo flex-center&quot;&gt;
+                &lt;div class=&quot;wrapper&quot;&gt;
+                    &lt;div class=&quot;wheel&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+
 </code></pre>
                                 </div>
                             </div>
@@ -3073,54 +3375,53 @@ Since 1.0.0</p>
                         <div class="panel panel--loose depth-3">
                             <h4 class="base-margin-bottom">
                                 <span class="subheading text-capitalize">loader</span>
-                                <span class="text-normal">Color</span>
+                                <span class="text-normal">Dots</span>
                             </h4>
 
 
 
                             <div>
-                                <div class="panel panel--dkgray IGNORE">
-<div>
-    <h4 class="text-center">White</h4>
-    <div class="loading-dots">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
-</div IGNORE>
-<br>
-<div class="panel panel--bordered IGNORE">
-<div>
-    <h4 class="text-center">Muted</h4>
-    <div class="loading-dots loading-dots--muted">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
-</div IGNORE>
-<br>
-<div class="panel panel--bordered IGNORE">
-<div>
-    <h4 class="text-center">Success</h4>
-    <div class="loading-dots loading-dots--success">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
-</div IGNORE>
-<br>
-<div class="panel panel--bordered IGNORE">
-<div>
-    <h4 class="text-center">Info</h4>
-    <div class="loading-dots loading-dots--info">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
+                                <div class="row" IGNORE>
+    <div class="col-md-3" IGNORE>
+        <div class="panel panel--dkgray" IGNORE>
+            <h4 class="text-center">Default</h4 IGNORE>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div IGNORE>
+    </div IGNORE>
+    <div class="col-md-3" IGNORE>
+        <div class="panel panel--bordered" IGNORE>
+            <h4 class="text-center">Muted</h4 IGNORE>
+            <div class="loading-dots loading-dots--muted">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div IGNORE>
+    </div IGNORE>
+    <div class="col-md-3" IGNORE>
+        <div class="panel panel--bordered" IGNORE>
+            <h4 class="text-center">Success</h4 IGNORE>
+            <div class="loading-dots loading-dots--success">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div IGNORE>
+    </div IGNORE>
+    <div class="col-md-3" IGNORE>
+        <div class="panel panel--bordered" IGNORE>
+            <h4 class="text-center">Info</h4 IGNORE>
+            <div class="loading-dots loading-dots--info">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div IGNORE>
+    </div IGNORE>
 </div IGNORE>
                             </div>
                             <div class="base-margin-top">
@@ -3133,48 +3434,305 @@ Since 1.0.0</p>
                                 </div>
                                 <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
                                     <pre><code class="code-raw" data-language="html">
-&lt;div&gt;
-    &lt;h4 class=&quot;text-center&quot;&gt;White&lt;/h4&gt;
-    &lt;div class=&quot;loading-dots&quot;&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
 
-&lt;br&gt;
 
-&lt;div&gt;
-    &lt;h4 class=&quot;text-center&quot;&gt;Muted&lt;/h4&gt;
-    &lt;div class=&quot;loading-dots loading-dots--muted&quot;&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
 
-&lt;br&gt;
+            &lt;div class=&quot;loading-dots&quot;&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/div&gt;
 
-&lt;div&gt;
-    &lt;h4 class=&quot;text-center&quot;&gt;Success&lt;/h4&gt;
-    &lt;div class=&quot;loading-dots loading-dots--success&quot;&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
 
-&lt;br&gt;
 
-&lt;div&gt;
-    &lt;h4 class=&quot;text-center&quot;&gt;Info&lt;/h4&gt;
-    &lt;div class=&quot;loading-dots loading-dots--info&quot;&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-        &lt;span&gt;&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+
+
+            &lt;div class=&quot;loading-dots loading-dots--muted&quot;&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+
+
+
+
+            &lt;div class=&quot;loading-dots loading-dots--success&quot;&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+
+
+
+
+            &lt;div class=&quot;loading-dots loading-dots--info&quot;&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+
 </code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+                        <div class="panel panel--loose panel--indigo depth-2" id="components-modal">
+                            <h1>Modal</h1>
+
+
+
+                            <div><p>Basic modals<br><br>
+Since 1.2.0</p>
+</div>
+
+                            </div>
+                            
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">modal</span>
+                                <span class="text-normal">Backdrop</span>
+                            </h4>
+
+
+                            <div><blockquote>A background overlay is required for modals. Add this markup to your page. <b>NOTE:</b> Only add this element once and toggle it&#39;s display when showing / hiding your modals</blockquote></div>
+
+                            <div>
+                                <div class="modal-backdrop hide"></div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;modal-backdrop hide&quot;&gt;&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">modal</span>
+                                <span class="text-normal">Feedback Example</span>
+                            </h4>
+
+
+
+                            <div>
+                                <button class="btn" id="modal-feedback-open">Open Feedback</button>
+<br>
+<div class="modal hide" id="modal-feedback">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <a class="modal__close"><span class="icon-close"></span></a>
+            <div class="modal__header">
+                <h1 class="modal__title">Feedback</h1>
+                <p>Tell us what you think...</p>
+            </div>
+            <div class="modal__body">
+                <div class="rating rating--large rating--alt">
+                    <div class="rating__stars">
+                       <div class="rating__star" title="5 Stars">
+                           <span class="icon-star"></span>
+                       </div>
+                       <div class="rating__star" title="4 Stars">
+                           <span class="icon-star"></span>
+                       </div>
+                       <div class="rating__star" title="3 Stars">
+                           <span class="icon-star"></span>
+                       </div>
+                       <div class="rating__star" title="2 Stars">
+                           <span class="icon-star"></span>
+                       </div>
+                       <div class="rating__star" title="1 Star">
+                           <span class="icon-star"></span>
+                       </div>
+                   </div>
+               </div>
+               <br>
+               <form>
+                   <textarea class="textarea textarea--well" placeholder="Comments" rows="3"></textarea>
+               </form>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" id="modal-feedback-close">Cancel</button>
+                <button class="btn btn--secondary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;button class=&quot;btn&quot; id=&quot;modal-feedback-open&quot;&gt;Open Feedback&lt;/button&gt;
+&lt;br&gt;
+&lt;div class=&quot;modal hide&quot; id=&quot;modal-feedback&quot;&gt;
+    &lt;div class=&quot;modal__dialog&quot;&gt;
+        &lt;div class=&quot;modal__content&quot;&gt;
+            &lt;a class=&quot;modal__close&quot;&gt;&lt;span class=&quot;icon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;div class=&quot;modal__header&quot;&gt;
+                &lt;h1 class=&quot;modal__title&quot;&gt;Feedback&lt;/h1&gt;
+                &lt;p&gt;Tell us what you think...&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal__body&quot;&gt;
+                &lt;div class=&quot;rating rating--large rating--alt&quot;&gt;
+                    &lt;div class=&quot;rating__stars&quot;&gt;
+                       &lt;div class=&quot;rating__star&quot; title=&quot;5 Stars&quot;&gt;
+                           &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+                       &lt;/div&gt;
+                       &lt;div class=&quot;rating__star&quot; title=&quot;4 Stars&quot;&gt;
+                           &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+                       &lt;/div&gt;
+                       &lt;div class=&quot;rating__star&quot; title=&quot;3 Stars&quot;&gt;
+                           &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+                       &lt;/div&gt;
+                       &lt;div class=&quot;rating__star&quot; title=&quot;2 Stars&quot;&gt;
+                           &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+                       &lt;/div&gt;
+                       &lt;div class=&quot;rating__star&quot; title=&quot;1 Star&quot;&gt;
+                           &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+                       &lt;/div&gt;
+                   &lt;/div&gt;
+               &lt;/div&gt;
+               &lt;br&gt;
+               &lt;form&gt;
+                   &lt;textarea class=&quot;textarea textarea--well&quot; placeholder=&quot;Comments&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;
+               &lt;/form&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal__footer&quot;&gt;
+                &lt;button class=&quot;btn&quot; id=&quot;modal-feedback-close&quot;&gt;Cancel&lt;/button&gt;
+                &lt;button class=&quot;btn btn--secondary&quot;&gt;Submit&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">modal</span>
+                                <span class="text-normal">Login Example (with animation)</span>
+                            </h4>
+
+
+
+                            <div>
+                                <button class="btn" id="modal-login-open">Open Login</button>
+<br>
+<div class="modal modal--animated hide" id="modal-login">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <a class="modal__close"><span class="icon-close"></span></a>
+            <div class="modal__header">
+                <div class="icon-cisco text-blue text-huge"></div>
+                <br>
+                <h1 class="modal__title">Product Name</h1>
+                <p>Version 1.0</p>
+            </div>
+            <div class="modal__body">
+               <form>
+                   <div class="form-group">
+                       <div class="form-group__text">
+                           <input type="text" required>
+                           <label>User ID</label>
+                           <div class="required-block">
+                               <span class="icon-asterisk"></span>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="form-group">
+                       <div class="form-group__text">
+                           <input type="password" required>
+                           <label>Password</label>
+                           <div class="required-block">
+                               <span class="icon-asterisk"></span>
+                           </div>
+                       </div>
+                   </div>
+               </form>
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn--secondary">Log In</button>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;button class=&quot;btn&quot; id=&quot;modal-login-open&quot;&gt;Open Login&lt;/button&gt;
+&lt;br&gt;
+&lt;div class=&quot;modal modal--animated hide&quot; id=&quot;modal-login&quot;&gt;
+    &lt;div class=&quot;modal__dialog&quot;&gt;
+        &lt;div class=&quot;modal__content&quot;&gt;
+            &lt;a class=&quot;modal__close&quot;&gt;&lt;span class=&quot;icon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;div class=&quot;modal__header&quot;&gt;
+                &lt;div class=&quot;icon-cisco text-blue text-huge&quot;&gt;&lt;/div&gt;
+                &lt;br&gt;
+                &lt;h1 class=&quot;modal__title&quot;&gt;Product Name&lt;/h1&gt;
+                &lt;p&gt;Version 1.0&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal__body&quot;&gt;
+               &lt;form&gt;
+                   &lt;div class=&quot;form-group&quot;&gt;
+                       &lt;div class=&quot;form-group__text&quot;&gt;
+                           &lt;input type=&quot;text&quot; required&gt;
+                           &lt;label&gt;User ID&lt;/label&gt;
+                           &lt;div class=&quot;required-block&quot;&gt;
+                               &lt;span class=&quot;icon-asterisk&quot;&gt;&lt;/span&gt;
+                           &lt;/div&gt;
+                       &lt;/div&gt;
+                   &lt;/div&gt;
+                   &lt;div class=&quot;form-group&quot;&gt;
+                       &lt;div class=&quot;form-group__text&quot;&gt;
+                           &lt;input type=&quot;password&quot; required&gt;
+                           &lt;label&gt;Password&lt;/label&gt;
+                           &lt;div class=&quot;required-block&quot;&gt;
+                               &lt;span class=&quot;icon-asterisk&quot;&gt;&lt;/span&gt;
+                           &lt;/div&gt;
+                       &lt;/div&gt;
+                   &lt;/div&gt;
+               &lt;/form&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal__footer&quot;&gt;
+                &lt;button class=&quot;btn btn--secondary&quot;&gt;Log In&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                                 </div>
                             </div>
                             
@@ -3197,14 +3755,164 @@ Since 1.0.0</p>
                         <div class="panel panel--loose depth-3">
                             <h4 class="base-margin-bottom">
                                 <span class="subheading text-capitalize">rating</span>
-                                <span class="text-normal">Example</span>
+                                <span class="text-normal">Color</span>
                             </h4>
 
 
-                            <div><blockquote>Add the class <code>active</code> to each <code>rating__star</code> that applies to the user&#39;s selection (e.g. 1-4 if the user clicks the fourth star). <br>Note that is important that the <code>rating__star</code> elements are in reverse order in the markup, due to way they are styled in the CSS</blockquote></div>
 
                             <div>
-                                <div class="rating">
+                                <h6>Default</h6>
+<div class="rating">
+    <div class="rating__stars">
+        <div class="rating__star" title="4.5 Stars">
+            <span class="icon-star-half"></span>
+        </div>
+        <div class="rating__star" title="4 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="3 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="2 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="1 Star">
+            <span class="icon-star"></span>
+        </div>
+    </div>
+</div>
+<br>
+<h6>Alternate</h6>
+<div class="rating rating--alt">
+    <div class="rating__stars">
+        <div class="rating__star" title="4 Stars">
+            <span class="icon-star-empty"></span>
+        </div>
+        <div class="rating__star" title="4 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="3 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="2 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="1 Star">
+            <span class="icon-star"></span>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;h6&gt;Default&lt;/h6&gt;
+&lt;div class=&quot;rating&quot;&gt;
+    &lt;div class=&quot;rating__stars&quot;&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;4.5 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star-half&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;4 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;3 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;2 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;1 Star&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;h6&gt;Alternate&lt;/h6&gt;
+&lt;div class=&quot;rating rating--alt&quot;&gt;
+    &lt;div class=&quot;rating__stars&quot;&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;4 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star-empty&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;4 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;3 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;2 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;1 Star&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">rating</span>
+                                <span class="text-normal">Size</span>
+                            </h4>
+
+
+
+                            <div>
+                                <h6>Small</h6>
+<div class="rating rating--small">
+    <div class="rating__stars">
+        <div class="rating__star" title="5 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="4 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="3 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="2 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="1 Star">
+            <span class="icon-star"></span>
+        </div>
+    </div>
+</div>
+<br>
+<h6>Medium (default)</h6>
+<div class="rating">
+    <div class="rating__stars">
+        <div class="rating__star" title="5 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="4 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="3 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="2 Stars">
+            <span class="icon-star"></span>
+        </div>
+        <div class="rating__star" title="1 Star">
+            <span class="icon-star"></span>
+        </div>
+    </div>
+</div>
+<br>
+<h6>Large</h6>
+<div class="rating rating--large">
     <div class="rating__stars">
         <div class="rating__star" title="5 Stars">
             <span class="icon-star"></span>
@@ -3233,7 +3941,50 @@ Since 1.0.0</p>
                                     <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
                                 </div>
                                 <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
-                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;rating&quot;&gt;
+                                    <pre><code class="code-raw" data-language="html">&lt;h6&gt;Small&lt;/h6&gt;
+&lt;div class=&quot;rating rating--small&quot;&gt;
+    &lt;div class=&quot;rating__stars&quot;&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;5 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;4 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;3 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;2 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;1 Star&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;h6&gt;Medium (default)&lt;/h6&gt;
+&lt;div class=&quot;rating&quot;&gt;
+    &lt;div class=&quot;rating__stars&quot;&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;5 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;4 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;3 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;2 Stars&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rating__star&quot; title=&quot;1 Star&quot;&gt;
+            &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;h6&gt;Large&lt;/h6&gt;
+&lt;div class=&quot;rating rating--large&quot;&gt;
     &lt;div class=&quot;rating__stars&quot;&gt;
         &lt;div class=&quot;rating__star&quot; title=&quot;5 Stars&quot;&gt;
             &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
@@ -3259,7 +4010,7 @@ Since 1.0.0</p>
 
 
                         <div class="panel panel--loose panel--indigo depth-2" id="components-scoreboard">
-                            <h1>Scoreboard  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></h1>
+                            <h1>Scoreboard</h1>
 
 
 
@@ -3774,6 +4525,7 @@ Since 1.0.0</p>
 <span class="step__icon step__icon--small step__icon--success">3</span>
 <span class="step__icon step__icon--small step__icon--warning">4</span>
 <span class="step__icon step__icon--small step__icon--danger">5</span>
+<span class="step__icon step__icon--small step__icon--gray-ghost">6</span>
                             </div>
                             <div class="base-margin-top">
                                 <div class="flex">
@@ -3788,7 +4540,8 @@ Since 1.0.0</p>
 &lt;span class=&quot;step__icon step__icon--small step__icon--info&quot;&gt;2&lt;/span&gt;
 &lt;span class=&quot;step__icon step__icon--small step__icon--success&quot;&gt;3&lt;/span&gt;
 &lt;span class=&quot;step__icon step__icon--small step__icon--warning&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;step__icon step__icon--small step__icon--danger&quot;&gt;5&lt;/span&gt;</code></pre>
+&lt;span class=&quot;step__icon step__icon--small step__icon--danger&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;step__icon step__icon--small step__icon--gray-ghost&quot;&gt;6&lt;/span&gt;</code></pre>
                                 </div>
                             </div>
                             
@@ -3810,6 +4563,7 @@ Since 1.0.0</p>
 <span class="step__icon step__icon--success">3</span>
 <span class="step__icon step__icon--warning">4</span>
 <span class="step__icon step__icon--danger">5</span>
+<span class="step__icon step__icon--gray-ghost">6</span>
                             </div>
                             <div class="base-margin-top">
                                 <div class="flex">
@@ -3824,7 +4578,46 @@ Since 1.0.0</p>
 &lt;span class=&quot;step__icon step__icon--info&quot;&gt;2&lt;/span&gt;
 &lt;span class=&quot;step__icon step__icon--success&quot;&gt;3&lt;/span&gt;
 &lt;span class=&quot;step__icon step__icon--warning&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;step__icon step__icon--danger&quot;&gt;5&lt;/span&gt;</code></pre>
+&lt;span class=&quot;step__icon step__icon--danger&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;step__icon step__icon--gray-ghost&quot;&gt;6&lt;/span&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">step</span>
+                                <span class="text-normal">Icons</span>
+                            </h4>
+
+
+
+                            <div>
+                                <span class="step__icon step__icon--small step__icon--success">
+    <span class="icon-check"></span>
+</span>
+<span class="step__icon step__icon--small step__icon--danger">
+    <span class="icon-close"></span>
+</span>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;span class=&quot;step__icon step__icon--small step__icon--success&quot;&gt;
+    &lt;span class=&quot;icon-check&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&quot;step__icon step__icon--small step__icon--danger&quot;&gt;
+    &lt;span class=&quot;icon-close&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;</code></pre>
                                 </div>
                             </div>
                             
@@ -3832,7 +4625,7 @@ Since 1.0.0</p>
 
 
                         <div class="panel panel--loose panel--indigo depth-2" id="components-tab">
-                            <h1>Tab</h1>
+                            <h1>Tab  <span class="label label--tiny label--ghost qtr-margin-left">updated</span></h1>
 
 
 
@@ -4028,6 +4821,668 @@ Since 1.0.0</p>
         &lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">tab</span>
+                                <span class="text-normal">Example</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="secondary-tabs">
+    <ul class="tabs">
+        <li id="tab-routers" class="tab active">
+            <a>
+                <div class="tab__heading" title="Routers">Routers</div>
+            </a>
+        </li>
+        <li id="tab-switches" class="tab">
+            <a>
+                <div class="tab__heading" title="Switches">Switches</div>
+            </a>
+        </li>
+        <li id="tab-wireless" class="tab">
+            <a>
+                <div class="tab__heading" title="Wireless">Wireless</div>
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab-routers-content" class="tab-pane active">
+            <div class="section text-center">
+                <h1>Routers for networks of all types and sizes<h1>
+                <h6 class="base-margin-top">Find secure, digital-ready routers for any application, anywhere.</h6>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="public/img/branch-routers.png">
+                        <h4>Branch</h4>
+                        <p>Gain highly secure connectivity, machine learning, and cloud-managed security.</p>
+                        <ul>
+                            <li><a>ISR 800 Series</a></li>
+                            <li><a>ISR 1000 Series</a></li>
+                            <li><a>ISR 4000 Series</a></li>
+                            <li><a>Meraki MX</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="public/img/wan-routers.png">
+                        <h4>WAN Aggregation</h4>
+                        <p>Get performance and security for WAN, Internet, and M2M interconnectivity.</p>
+                        <ul>
+                            <li><a>NCS 5000 Series</a></li>
+                            <li><a>NCS 5500 Series</a></li>
+                            <li><a>ASR 1000 Series</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="public/img/edge-routers.png">
+                        <h4>Edge</h4>
+                        <p>Grow density and resiliency with programmability for a scalable network edge.</p>
+                        <ul>
+                            <li><a>ASR 1000 Series</a></li>
+                            <li><a>ASR 9000 Series</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab-switches-content" class="tab-pane">
+            <div class="section text-center">
+                <h1>Switching for a changing world<h1>
+                <h6 class="base-margin-top">Our Catalyst 9000 switches constantly adapt to help you solve new challenges. Their integrated security helps you address ever-changing threats. They simplify management of your evolving mobility, Internet-of-Things (IoT), and cloud requirements. Introducing an entirely new era of networking. The Network. Intuitive.</h6>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="public/img/9300-switches.png">
+                        <h4>Catalyst 9300 Series</h4>
+                        <p>The Catalyst 9300 Series is our top fixed-access enterprise network switch series, stacking to 480 Gbps.</p>
+                        <a>Explore the 9300</a>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="public/img/9400-switches.jpg">
+                        <h4>Catalyst 9400 Series</h4>
+                        <p>Cisco’s leading modular-access switches for enterprise, the Catalyst 9400 Series supports up to 9 Tbps.</p>
+                        <a>Explore the 9400</a>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="public/img/edge-routers.png">
+                        <h4>Catalyst 9500 Series</h4>
+                        <p>The Catalyst 9500 Series is the industry’s first fixed-core 40-Gbps switch for the enterprise.</p>
+                        <a>Explore the 9500</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab-wireless-content" class="tab-pane">
+            <div class="section text-center">
+                <h1>See what's possible with our products<h1>
+                <h6 class="base-margin-top">Provide enterprise-level, highly secure wireless access for businesses of any size, and easily manage your network.</h6>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="public/img/indoor-accesspoints-wireless.png">
+                        <h4><a>Indoor Access Points</a></h4>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="public/img/outdoor-accesspoints-wireless.png">
+                        <h4><a>Outdoor Access Points</a></h4>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="public/img/lan-wireless.png">
+                        <h4><a>Wireless LAN Controllers</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;secondary-tabs&quot;&gt;
+    &lt;ul class=&quot;tabs&quot;&gt;
+        &lt;li id=&quot;tab-routers&quot; class=&quot;tab active&quot;&gt;
+            &lt;a&gt;
+                &lt;div class=&quot;tab__heading&quot; title=&quot;Routers&quot;&gt;Routers&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li id=&quot;tab-switches&quot; class=&quot;tab&quot;&gt;
+            &lt;a&gt;
+                &lt;div class=&quot;tab__heading&quot; title=&quot;Switches&quot;&gt;Switches&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li id=&quot;tab-wireless&quot; class=&quot;tab&quot;&gt;
+            &lt;a&gt;
+                &lt;div class=&quot;tab__heading&quot; title=&quot;Wireless&quot;&gt;Wireless&lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;div id=&quot;tab-routers-content&quot; class=&quot;tab-pane active&quot;&gt;
+            &lt;div class=&quot;section text-center&quot;&gt;
+                &lt;h1&gt;Routers for networks of all types and sizes&lt;h1&gt;
+                &lt;h6 class=&quot;base-margin-top&quot;&gt;Find secure, digital-ready routers for any application, anywhere.&lt;/h6&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;section&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;img src=&quot;public/img/branch-routers.png&quot;&gt;
+                        &lt;h4&gt;Branch&lt;/h4&gt;
+                        &lt;p&gt;Gain highly secure connectivity, machine learning, and cloud-managed security.&lt;/p&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;ISR 800 Series&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;ISR 1000 Series&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;ISR 4000 Series&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;Meraki MX&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;img src=&quot;public/img/wan-routers.png&quot;&gt;
+                        &lt;h4&gt;WAN Aggregation&lt;/h4&gt;
+                        &lt;p&gt;Get performance and security for WAN, Internet, and M2M interconnectivity.&lt;/p&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;NCS 5000 Series&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;NCS 5500 Series&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;ASR 1000 Series&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;img src=&quot;public/img/edge-routers.png&quot;&gt;
+                        &lt;h4&gt;Edge&lt;/h4&gt;
+                        &lt;p&gt;Grow density and resiliency with programmability for a scalable network edge.&lt;/p&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a&gt;ASR 1000 Series&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a&gt;ASR 9000 Series&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;tab-switches-content&quot; class=&quot;tab-pane&quot;&gt;
+            &lt;div class=&quot;section text-center&quot;&gt;
+                &lt;h1&gt;Switching for a changing world&lt;h1&gt;
+                &lt;h6 class=&quot;base-margin-top&quot;&gt;Our Catalyst 9000 switches constantly adapt to help you solve new challenges. Their integrated security helps you address ever-changing threats. They simplify management of your evolving mobility, Internet-of-Things (IoT), and cloud requirements. Introducing an entirely new era of networking. The Network. Intuitive.&lt;/h6&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;section&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;img src=&quot;public/img/9300-switches.png&quot;&gt;
+                        &lt;h4&gt;Catalyst 9300 Series&lt;/h4&gt;
+                        &lt;p&gt;The Catalyst 9300 Series is our top fixed-access enterprise network switch series, stacking to 480 Gbps.&lt;/p&gt;
+                        &lt;a&gt;Explore the 9300&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;img src=&quot;public/img/9400-switches.jpg&quot;&gt;
+                        &lt;h4&gt;Catalyst 9400 Series&lt;/h4&gt;
+                        &lt;p&gt;Cisco’s leading modular-access switches for enterprise, the Catalyst 9400 Series supports up to 9 Tbps.&lt;/p&gt;
+                        &lt;a&gt;Explore the 9400&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;img src=&quot;public/img/edge-routers.png&quot;&gt;
+                        &lt;h4&gt;Catalyst 9500 Series&lt;/h4&gt;
+                        &lt;p&gt;The Catalyst 9500 Series is the industry’s first fixed-core 40-Gbps switch for the enterprise.&lt;/p&gt;
+                        &lt;a&gt;Explore the 9500&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;tab-wireless-content&quot; class=&quot;tab-pane&quot;&gt;
+            &lt;div class=&quot;section text-center&quot;&gt;
+                &lt;h1&gt;See what&#x27;s possible with our products&lt;h1&gt;
+                &lt;h6 class=&quot;base-margin-top&quot;&gt;Provide enterprise-level, highly secure wireless access for businesses of any size, and easily manage your network.&lt;/h6&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;section&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-4 text-center&quot;&gt;
+                        &lt;img src=&quot;public/img/indoor-accesspoints-wireless.png&quot;&gt;
+                        &lt;h4&gt;&lt;a&gt;Indoor Access Points&lt;/a&gt;&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4 text-center&quot;&gt;
+                        &lt;img src=&quot;public/img/outdoor-accesspoints-wireless.png&quot;&gt;
+                        &lt;h4&gt;&lt;a&gt;Outdoor Access Points&lt;/a&gt;&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4 text-center&quot;&gt;
+                        &lt;img src=&quot;public/img/lan-wireless.png&quot;&gt;
+                        &lt;h4&gt;&lt;a&gt;Wireless LAN Controllers&lt;/a&gt;&lt;/h4&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+                        <div class="panel panel--loose panel--indigo depth-2" id="components-timeline">
+                            <h1>Timeline</h1>
+
+
+
+                            <div><p>Simple vertical timeline pattern.<br><br>
+Since 1.1.0</p>
+</div>
+
+                            </div>
+                            
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">timeline</span>
+                                <span class="text-normal">Color</span>
+                            </h4>
+
+
+
+                            <div>
+                                <div class="timeline">
+    <div class="timeline__list">
+        <div class="timeline__item">
+            <div class="timeline__icon"></div>
+            <div class="timeline__time">6 hours ago</div>
+            <div class="timeline__content">
+                <div class="text-bold">Default</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+                <div>Software Upgrade Recommended</div>
+                <a>link</a>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__icon timeline--success"></div>
+            <div class="timeline__time">Feb 3, 2017</div>
+            <div class="timeline__content">
+                <div class="text-bold text-success">Success</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+                <a>link</a>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__icon timeline--info"></div>
+            <div class="timeline__time">2 years ago</div>
+            <div class="timeline__content">
+                <div class="text-bold text-blue">Info</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+                <a>link</a>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__icon timeline--warning"></div>
+            <div class="timeline__time">10/22/2017 03:16:00</div>
+            <div class="timeline__content">
+                <div class="text-bold text-warning">Warning</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+                <a>link</a>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__icon timeline--danger"></div>
+            <div class="timeline__time">2 months ago</div>
+            <div class="timeline__content">
+                <div class="text-bold text-danger">Danger</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+                <a>link</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;timeline&quot;&gt;
+    &lt;div class=&quot;timeline__list&quot;&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;6 hours ago&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;text-bold&quot;&gt;Default&lt;/div&gt;
+                &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit&lt;/div&gt;
+                &lt;div&gt;Software Upgrade Recommended&lt;/div&gt;
+                &lt;a&gt;link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon timeline--success&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;Feb 3, 2017&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;text-bold text-success&quot;&gt;Success&lt;/div&gt;
+                &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit&lt;/div&gt;
+                &lt;a&gt;link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon timeline--info&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;2 years ago&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;text-bold text-blue&quot;&gt;Info&lt;/div&gt;
+                &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit&lt;/div&gt;
+                &lt;a&gt;link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon timeline--warning&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;10/22/2017 03:16:00&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;text-bold text-warning&quot;&gt;Warning&lt;/div&gt;
+                &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit&lt;/div&gt;
+                &lt;a&gt;link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon timeline--danger&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;2 months ago&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;text-bold text-danger&quot;&gt;Danger&lt;/div&gt;
+                &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit&lt;/div&gt;
+                &lt;a&gt;link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">timeline</span>
+                                <span class="text-normal">Alignment</span>
+                            </h4>
+
+
+                            <div><blockquote>You can align your timeline items top (default) or centered</blockquote></div>
+
+                            <div>
+                                <div class="timeline">
+    <div class="timeline__list">
+        <div class="timeline__item">
+            <div class="timeline__icon"></div>
+            <div class="timeline__time">6 hours ago</div>
+            <div class="timeline__content">
+                <div class="text-bold">Alignment: Top (default)</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+                <div>Software Upgrade Recommended</div>
+                <a>link</a>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="timeline timeline--centered">
+    <div class="timeline__list">
+        <div class="timeline__item">
+            <div class="timeline__icon"></div>
+            <div class="timeline__time">6 hours ago</div>
+            <div class="timeline__content">
+                <div class="text-bold">Alignment: Centered</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+                <div>Software Upgrade Recommended</div>
+                <a>link</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;timeline&quot;&gt;
+    &lt;div class=&quot;timeline__list&quot;&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;6 hours ago&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;text-bold&quot;&gt;Alignment: Top (default)&lt;/div&gt;
+                &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit&lt;/div&gt;
+                &lt;div&gt;Software Upgrade Recommended&lt;/div&gt;
+                &lt;a&gt;link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&quot;timeline timeline--centered&quot;&gt;
+    &lt;div class=&quot;timeline__list&quot;&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;6 hours ago&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;text-bold&quot;&gt;Alignment: Centered&lt;/div&gt;
+                &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit&lt;/div&gt;
+                &lt;div&gt;Software Upgrade Recommended&lt;/div&gt;
+                &lt;a&gt;link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">timeline</span>
+                                <span class="text-normal">Display</span>
+                            </h4>
+
+
+                            <div><blockquote>By default the timeline items are displayed as inline elements. You can force the items to be full width block-level elements by specifying the <code>timeline--block modifier</code></blockquote></div>
+
+                            <div>
+                                <div class="timeline">
+    <div class="timeline__list">
+        <div class="timeline__item">
+            <div class="timeline__icon"></div>
+            <div class="timeline__time">6 hours ago</div>
+            <div class="timeline__content">
+                <div class="panel panel--bordered">
+                    <div class="text-bold">Display: Inline (default)</div>
+                    <div>Software Upgrade Recommended</div>
+                    <a>link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="timeline timeline--block">
+    <div class="timeline__list">
+        <div class="timeline__item">
+            <div class="timeline__icon"></div>
+            <div class="timeline__time">6 hours ago</div>
+            <div class="timeline__content">
+                <div class="panel panel--bordered">
+                    <div class="text-bold">Display: Block</div>
+                    <div>Software Upgrade Recommended</div>
+                    <a>link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;timeline&quot;&gt;
+    &lt;div class=&quot;timeline__list&quot;&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;6 hours ago&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;panel panel--bordered&quot;&gt;
+                    &lt;div class=&quot;text-bold&quot;&gt;Display: Inline (default)&lt;/div&gt;
+                    &lt;div&gt;Software Upgrade Recommended&lt;/div&gt;
+                    &lt;a&gt;link&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&quot;timeline timeline--block&quot;&gt;
+    &lt;div class=&quot;timeline__list&quot;&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;6 hours ago&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;panel panel--bordered&quot;&gt;
+                    &lt;div class=&quot;text-bold&quot;&gt;Display: Block&lt;/div&gt;
+                    &lt;div&gt;Software Upgrade Recommended&lt;/div&gt;
+                    &lt;a&gt;link&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">timeline</span>
+                                <span class="text-normal">Animation</span>
+                            </h4>
+
+
+                            <div><blockquote>Specify the class <code>timeline--animation</code> modifier to add a hover animation to each timeline item</blockquote></div>
+
+                            <div>
+                                <div class="timeline timeline--animation">
+    <div class="timeline__list">
+        <div class="timeline__item">
+            <div class="timeline__icon timeline--info"></div>
+            <div class="timeline__time">3-4 October 2017</div>
+            <div class="timeline__content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="public/img/banking.jpg">
+                    </div>
+                    <div class="col-lg-9">
+                        <h2 class="text-blue base-margin-bottom">Network Visualization & SDN Asia 2017</h2>
+                        <p>Transformation through innovation for Network 2020</p>
+                        <div>TechXLR8 Asia is the place to keep pace with the technologies enabling and shaping your connected future. Over three days you will meet business partners that will shape your company's strategy for years to come. The five co-located events as part of TechXLR8 Asia are 5G Asia, IoT Asia, the AI Summit, Network Virtualization & SDN Asia and Project Kairos.</div>
+                        <p class="text-bold">TechXLR8 Asia kicked off with a press launch at the SGInnovate Innovation Campus in Singapore.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__icon timeline--success"></div>
+            <div class="timeline__time">just now</div>
+            <div class="timeline__content">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h2>The Time is Now</h2>
+                        <div class="divider divider--compressed divider--thick divider--accent-blue"></div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="public/img/section-2-3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;timeline timeline--animation&quot;&gt;
+    &lt;div class=&quot;timeline__list&quot;&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon timeline--info&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;3-4 October 2017&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-lg-3&quot;&gt;
+                        &lt;img src=&quot;public/img/banking.jpg&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-lg-9&quot;&gt;
+                        &lt;h2 class=&quot;text-blue base-margin-bottom&quot;&gt;Network Visualization &amp; SDN Asia 2017&lt;/h2&gt;
+                        &lt;p&gt;Transformation through innovation for Network 2020&lt;/p&gt;
+                        &lt;div&gt;TechXLR8 Asia is the place to keep pace with the technologies enabling and shaping your connected future. Over three days you will meet business partners that will shape your company&#x27;s strategy for years to come. The five co-located events as part of TechXLR8 Asia are 5G Asia, IoT Asia, the AI Summit, Network Virtualization &amp; SDN Asia and Project Kairos.&lt;/div&gt;
+                        &lt;p class=&quot;text-bold&quot;&gt;TechXLR8 Asia kicked off with a press launch at the SGInnovate Innovation Campus in Singapore.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;timeline__item&quot;&gt;
+            &lt;div class=&quot;timeline__icon timeline--success&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;timeline__time&quot;&gt;just now&lt;/div&gt;
+            &lt;div class=&quot;timeline__content&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-lg-9&quot;&gt;
+                        &lt;h2&gt;The Time is Now&lt;/h2&gt;
+                        &lt;div class=&quot;divider divider--compressed divider--thick divider--accent-blue&quot;&gt;&lt;/div&gt;
+                        &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-lg-3&quot;&gt;
+                        &lt;img src=&quot;public/img/section-2-3.jpg&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                                 </div>
                             </div>
                             
@@ -4417,6 +5872,90 @@ Since 1.0.1</p>
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+                        <div class="panel panel--loose panel--indigo depth-2" id="components-tooltip">
+                            <h1>Tooltip</h1>
+
+
+
+                            <div><p>Basic tooltips. Tooltips identify an element when they are activated. They may contain brief helper text about its function. For example, they may contain text information about actionable icons<br><b>Note:</b> Does not currently support inline HTML as this is a CSS-only based tooltip.<br><br>
+Since 1.1.0</p>
+</div>
+
+                            </div>
+                            
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">tooltip</span>
+                                <span class="text-normal">Position</span>
+                            </h4>
+
+
+
+                            <div>
+                                <span class="label label--large label--blue" data-balloon="top" data-balloon-pos="up">Position: Top</span>
+<span class="label label--large label--blue" data-balloon="right" data-balloon-pos="right">Position: Right</span>
+<span class="label label--large label--blue" data-balloon="bottom" data-balloon-pos="down">Position: Bottom</span>
+<span class="label label--large label--blue" data-balloon="left" data-balloon-pos="left">Position: Left</span>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;span class=&quot;label label--large label--blue&quot; data-balloon=&quot;top&quot; data-balloon-pos=&quot;up&quot;&gt;Position: Top&lt;/span&gt;
+&lt;span class=&quot;label label--large label--blue&quot; data-balloon=&quot;right&quot; data-balloon-pos=&quot;right&quot;&gt;Position: Right&lt;/span&gt;
+&lt;span class=&quot;label label--large label--blue&quot; data-balloon=&quot;bottom&quot; data-balloon-pos=&quot;down&quot;&gt;Position: Bottom&lt;/span&gt;
+&lt;span class=&quot;label label--large label--blue&quot; data-balloon=&quot;left&quot; data-balloon-pos=&quot;left&quot;&gt;Position: Left&lt;/span&gt;</code></pre>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+
+
+                        <div class="panel panel--loose depth-3">
+                            <h4 class="base-margin-bottom">
+                                <span class="subheading text-capitalize">tooltip</span>
+                                <span class="text-normal">Size</span>
+                            </h4>
+
+
+                            <div><blockquote>By default, tooltips are limited to single line. However, for larger text you can specify the size of the tooltip container.<br><b>Note:</b> Using extra wide tooltips can overflow off-screen on smaller form factors. Make sure to test and use the appropriate-sized tooltip container.</blockquote></div>
+
+                            <div>
+                                <span class="label label--large label--blue" data-balloon="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. " data-balloon-pos="up" data-balloon-length="small">Small</span>
+<span class="label label--large label--blue" data-balloon="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. Curabitur porta molestie velit, sodales cursus nulla interdum at. Nulla accumsan maximus sem quis pretium. In quis commodo erat. " data-balloon-pos="up" data-balloon-length="medium">Medium</span>
+<span class="label label--large label--blue" data-balloon="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. Curabitur porta molestie velit, sodales cursus nulla interdum at. Nulla accumsan maximus sem quis pretium. In quis commodo erat. " data-balloon-pos="up" data-balloon-length="large">Large</span>
+<span class="label label--large label--blue" data-balloon="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. Curabitur porta molestie velit, sodales cursus nulla interdum at. Nulla accumsan maximus sem quis pretium. In quis commodo erat. " data-balloon-pos="up" data-balloon-length="xlarge">XLarge</span>
+<span class="label label--large label--blue" data-balloon="This will fit the text to the width of the element" data-balloon-pos="up" data-balloon-length="fit">Fitted</span>
+                            </div>
+                            <div class="base-margin-top">
+                                <div class="flex">
+                                    <a class="markup-toggle link">
+                                        <span class="markup-label">View Source </span>
+                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
+                                    </a>
+                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
+                                </div>
+                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
+                                    <pre><code class="code-raw" data-language="html">&lt;span class=&quot;label label--large label--blue&quot; data-balloon=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. &quot; data-balloon-pos=&quot;up&quot; data-balloon-length=&quot;small&quot;&gt;Small&lt;/span&gt;
+&lt;span class=&quot;label label--large label--blue&quot; data-balloon=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. Curabitur porta molestie velit, sodales cursus nulla interdum at. Nulla accumsan maximus sem quis pretium. In quis commodo erat. &quot; data-balloon-pos=&quot;up&quot; data-balloon-length=&quot;medium&quot;&gt;Medium&lt;/span&gt;
+&lt;span class=&quot;label label--large label--blue&quot; data-balloon=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. Curabitur porta molestie velit, sodales cursus nulla interdum at. Nulla accumsan maximus sem quis pretium. In quis commodo erat. &quot; data-balloon-pos=&quot;up&quot; data-balloon-length=&quot;large&quot;&gt;Large&lt;/span&gt;
+&lt;span class=&quot;label label--large label--blue&quot; data-balloon=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl sed enim iaculis sollicitudin. Mauris elementum convallis pharetra. Sed ac leo sed sem gravida aliquam. Donec non posuere quam. Curabitur porta molestie velit, sodales cursus nulla interdum at. Nulla accumsan maximus sem quis pretium. In quis commodo erat. &quot; data-balloon-pos=&quot;up&quot; data-balloon-length=&quot;xlarge&quot;&gt;XLarge&lt;/span&gt;
+&lt;span class=&quot;label label--large label--blue&quot; data-balloon=&quot;This will fit the text to the width of the element&quot; data-balloon-pos=&quot;up&quot; data-balloon-length=&quot;fit&quot;&gt;Fitted&lt;/span&gt;</code></pre>
                                 </div>
                             </div>
                             

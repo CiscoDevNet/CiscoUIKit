@@ -37,7 +37,7 @@ legend,
     @include clearfix;
 
     margin-right: 0;
-    @include break-at(small) {
+    @include media-breakpoint-up(md) {
         margin-right: $base-spacing * 0.5;
     }
 
@@ -51,10 +51,10 @@ legend,
     }
 
     &--helper {
-	box-shadow: 0 0 0 0 $base-form-border-color inset;
+        box-shadow: 0 0 0 0 $base-form-border-color inset;
         .help-block {
-	    margin-top: 5px;
-	}
+            margin-top: 5px;
+        }
     }
 
     label,
@@ -68,6 +68,7 @@ legend,
 
     label {
         padding: 6px 10px 6px 0;
+        margin-bottom: 0;
         float: left;
         transition: color 0.2s ease;
 

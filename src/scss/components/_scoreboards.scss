@@ -1,5 +1,5 @@
 //
-// Scoreboard updated
+// Scoreboard
 //
 // A scoreboard is a panel that contains a value and a title/description. It is primarily used to convey summarized information on a dashboard.<br><br>
 // Since 1.0.0
@@ -192,21 +192,21 @@
 
     &--large {
         .scoreboard__title {
-            font-size: 3rem;
+            font-size: 48px;
         }
         .scoreboard__subtitle {
-            font-size: 1.2rem;
-            line-height: 3rem;
+            font-size: 18px;
+            line-height: 48px;
         }
     }
 
     &--huge {
         .scoreboard__title {
-            font-size: 4rem;
+            font-size: 64px;
         }
         .scoreboard__subtitle {
-            font-size: 1.2rem;
-            line-height: 4rem;
+            font-size: 18px;
+            line-height: 48px;
         }
     }
 

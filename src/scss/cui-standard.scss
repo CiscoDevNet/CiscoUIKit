@@ -1,10 +1,11 @@
 @import "cui-basic";
 
-html.cui {
+.cui {
     @import "components/activities";
     @import "components/alerts";
     @import "components/badges";
     @import "components/breadcrumb";
+    @import "components/carousel";
     @import "components/chh-popover-links";
     @import "components/description-list";
     @import "components/dropdown";
@@ -22,11 +23,16 @@ html.cui {
     @import "components/steps";
     @import "components/tabs";
     @import "components/toast";
+    @import "components/timeline";
+    @import "components/tooltip";
 
     @import "layout/features";
     @import "layout/header";
     @import "layout/footer";
+    @import "layout/masonry";
     @import "layout/sidebar";
-    
-    @import "overrides/ie";
+
+    @import "vendor/tooltip/balloon";
 }
+
+@import "layout/templates/cdc";

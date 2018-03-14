@@ -8,12 +8,12 @@
 
 @font-face {
   font-family: "<%= fontName %>";
-  src: url('../fonts/<%= fontName %>.eot');
-  src: url('../fonts/<%= fontName %>.eot?#iefix') format('eot'),
-       url('../fonts/<%= fontName %>.woff2') format('woff2'),
-       url('../fonts/<%= fontName %>.woff') format('woff'),
-       url('../fonts/<%= fontName %>.ttf') format('truetype'),
-       url('../fonts/<%= fontName %>.svg#<%= fontName %>') format('svg');
+  src: url('#{$cui-resource-path}/fonts/<%= fontName %>.eot');
+  src: url('#{$cui-resource-path}/fonts/<%= fontName %>.eot?#iefix') format('eot'),
+       url('#{$cui-resource-path}/fonts/<%= fontName %>.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/<%= fontName %>.woff') format('woff'),
+       url('#{$cui-resource-path}/fonts/<%= fontName %>.ttf') format('truetype'),
+       url('#{$cui-resource-path}/fonts/<%= fontName %>.svg#<%= fontName %>') format('svg');
 }
 
 %icon,
@@ -33,8 +33,8 @@
   -moz-osx-font-smoothing:grayscale;
 }
 
-.icon--medium { font-size: 2rem; }
-.icon--large { font-size: 3rem; }
+.icon--medium { font-size: 32px; }
+.icon--large  { font-size: 48px; }
 
 @function icon-char($filename) {
   $char: "";
@@ -55,15 +55,15 @@
 //
 // Markup:
 // <div class="base-margin-top row"><% _.each(glyphs, function(glyph) { %>
-//   <div class="col-xs-6 col-sm-4 col-md-3 qtr-margin-bottom" title="icon-<%= glyph.fileName %>">
-//     <div class="panel panel--bordered">
+//   <div class="col-xs-6 col-sm-4 col-md-3 qtr-margin-bottom">
+//     <div class="panel panel--bordered" href="#base-icons-icon-<%= glyph.fileName %>">
 //         <div class="flex-center-vertical">
-//             <div class="flex-center" style="width:48px;height:48px">
+//             <div class="flex-center" style="width:48px;height:48px" data-balloon="icon-<%= glyph.fileName %>" data-balloon-pos="up" data-balloon-length="medium">
 //                 <span class="icon-<%= glyph.fileName %> icon-medium"></span>
 //             </div>
 //             <div class="flex-fluid half-margin-left text-ellipsis">
 //                 <div class="text-ellipsis">icon-<%= glyph.fileName %></div>
-//                 <small class="text-lowercase text-muted"><%= glyph.codePoint %></small>
+//                 <small class="text-lowercase"><%= glyph.codePoint %></small>
 //             </div>
 //         </div>
 //     </div>

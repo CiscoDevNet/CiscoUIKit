@@ -43,26 +43,42 @@
 //         <div class="col-md-6">
 //             <div class="form-group">
 //                 <div class="form-group__text select">
-//                     <select multiple name="select3">
-//                         <option value="0" selected>Select Options</option>
+//                     <select name="select3" required>
+//                         <option value="0" selected>Select an Option</option>
 //                         <option value="option1">Option 1</option>
 //                         <option value="option2">Option 2</option>
 //                         <option value="option3">Option 3</option>
 //                     </select>
-//                     <label for="select3">Multi-Select</label>
+//                     <label for="select3">Required</label>
+//                     <div class="required-block">
+//                         <span class="icon-asterisk"></span>
+//                     </div>
 //                 </div>
 //             </div>
 //         </div>
 //         <div class="col-md-6">
 //             <div class="form-group">
 //                 <div class="form-group__text select">
-//                     <select disabled name="select4">
+//                     <select multiple name="select4">
+//                         <option value="0" selected>Select Options</option>
+//                         <option value="option1">Option 1</option>
+//                         <option value="option2">Option 2</option>
+//                         <option value="option3">Option 3</option>
+//                     </select>
+//                     <label for="select4">Multi-Select</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text select">
+//                     <select disabled name="select5">
 //                         <option value="0" selected>Select an Option</option>
 //                         <option value="option1">Option 1</option>
 //                         <option value="option2">Option 2</option>
 //                         <option value="option3">Option 3</option>
 //                     </select>
-//                     <label for="select4">Disabled</label>
+//                     <label for="select5">Disabled</label>
 //                 </div>
 //             </div>
 //         </div>

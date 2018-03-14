@@ -1,7 +1,7 @@
 /*********************************************************************
  * NAN - Native Abstractions for Node.js
  *
- * Copyright (c) 2017 NAN contributors:
+ * Copyright (c) 2018 NAN contributors:
  *   - Rod Vagg <https://github.com/rvagg>
  *   - Benjamin Byholm <https://github.com/kkoopa>
  *   - Trevor Norris <https://github.com/trevnorris>
@@ -13,7 +13,7 @@
  *
  * MIT License <https://github.com/nodejs/nan/blob/master/LICENSE.md>
  *
- * Version 2.6.2: current Node 7.9.0, Node 12: 0.12.18, Node 10: 0.10.48, iojs: 3.3.1
+ * Version 2.9.2: current Node 9.5.0, Node 12: 0.12.18, Node 10: 0.10.48, iojs: 3.3.1
  *
  * See https://github.com/nodejs/nan for the latest update to this file
  **********************************************************************************/
@@ -34,6 +34,8 @@
 #define NODE_5_0_MODULE_VERSION  47
 #define NODE_6_0_MODULE_VERSION  48
 #define NODE_7_0_MODULE_VERSION  51
+#define NODE_8_0_MODULE_VERSION  57
+#define NODE_9_0_MODULE_VERSION  59
 
 #ifdef _MSC_VER
 # define NAN_HAS_CPLUSPLUS_11 (_MSC_VER >= 1800)
@@ -53,13 +55,16 @@
 #include <cstring>
 #include <climits>
 #include <cstdlib>
+#include <utility>
 #if defined(_MSC_VER)
 # pragma warning( push )
 # pragma warning( disable : 4530 )
+# include <queue>
 # include <string>
 # include <vector>
 # pragma warning( pop )
 #else
+# include <queue>
 # include <string>
 # include <vector>
 #endif
@@ -1268,6 +1273,93 @@ class Utf8String {
 
 #endif  // NODE_MODULE_VERSION
 
+// === AsyncResource ===========================================================
+
+  class AsyncResource {
+   public:
+    AsyncResource(
+        v8::Local<v8::String> name
+      , v8::Local<v8::Object> resource = New<v8::Object>()) {
+#if NODE_MODULE_VERSION >= NODE_9_0_MODULE_VERSION
+      v8::Isolate* isolate = v8::Isolate::GetCurrent();
+
+      if (resource.IsEmpty()) {
+        resource = New<v8::Object>();
+      }
+
+      context = node::EmitAsyncInit(isolate, resource, name);
+#endif
+    }
+
+    AsyncResource(
+        const char* name
+      , v8::Local<v8::Object> resource = New<v8::Object>()) {
+#if NODE_MODULE_VERSION >= NODE_9_0_MODULE_VERSION
+      v8::Isolate* isolate = v8::Isolate::GetCurrent();
+
+      if (resource.IsEmpty()) {
+        resource = New<v8::Object>();
+      }
+
+      v8::Local<v8::String> name_string =
+          New<v8::String>(name).ToLocalChecked();
+      context = node::EmitAsyncInit(isolate, resource, name_string);
+#endif
+    }
+
+    ~AsyncResource() {
+#if NODE_MODULE_VERSION >= NODE_9_0_MODULE_VERSION
+      v8::Isolate* isolate = v8::Isolate::GetCurrent();
+      node::EmitAsyncDestroy(isolate, context);
+#endif
+    }
+
+    inline MaybeLocal<v8::Value> runInAsyncScope(
+        v8::Local<v8::Object> target
+      , v8::Local<v8::Function> func
+      , int argc
+      , v8::Local<v8::Value>* argv) {
+#if NODE_MODULE_VERSION < NODE_9_0_MODULE_VERSION
+      return MakeCallback(target, func, argc, argv);
+#else
+      return node::MakeCallback(
+          v8::Isolate::GetCurrent(), target, func, argc, argv, context);
+#endif
+    }
+
+    inline MaybeLocal<v8::Value> runInAsyncScope(
+        v8::Local<v8::Object> target
+      , v8::Local<v8::String> symbol
+      , int argc
+      , v8::Local<v8::Value>* argv) {
+#if NODE_MODULE_VERSION < NODE_9_0_MODULE_VERSION
+      return MakeCallback(target, symbol, argc, argv);
+#else
+      return node::MakeCallback(
+          v8::Isolate::GetCurrent(), target, symbol, argc, argv, context);
+#endif
+    }
+
+    inline MaybeLocal<v8::Value> runInAsyncScope(
+        v8::Local<v8::Object> target
+      , const char* method
+      , int argc
+      , v8::Local<v8::Value>* argv) {
+#if NODE_MODULE_VERSION < NODE_9_0_MODULE_VERSION
+      return MakeCallback(target, method, argc, argv);
+#else
+      return node::MakeCallback(
+          v8::Isolate::GetCurrent(), target, method, argc, argv, context);
+#endif
+    }
+
+   private:
+    NAN_DISALLOW_ASSIGN_COPY_MOVE(AsyncResource)
+#if NODE_MODULE_VERSION >= NODE_9_0_MODULE_VERSION
+    node::async_context context;
+#endif
+  };
+
 typedef void (*FreeCallback)(char *data, void *hint);
 
 typedef const FunctionCallbackInfo<v8::Value>& NAN_METHOD_ARGS_TYPE;
@@ -1390,17 +1482,45 @@ class Callback {
   inline
   v8::Local<v8::Function> operator*() const { return GetFunction(); }
 
-  inline v8::Local<v8::Value> operator()(
+  NAN_DEPRECATED inline v8::Local<v8::Value> operator()(
       v8::Local<v8::Object> target
     , int argc = 0
     , v8::Local<v8::Value> argv[] = 0) const {
-    return this->Call(target, argc, argv);
+#if NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION
+    v8::Isolate *isolate = v8::Isolate::GetCurrent();
+    return Call_(isolate, target, argc, argv);
+#else
+    return Call_(target, argc, argv);
+#endif
   }
 
-  inline v8::Local<v8::Value> operator()(
+  NAN_DEPRECATED inline v8::Local<v8::Value> operator()(
       int argc = 0
     , v8::Local<v8::Value> argv[] = 0) const {
-    return this->Call(argc, argv);
+#if NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION
+    v8::Isolate *isolate = v8::Isolate::GetCurrent();
+    v8::EscapableHandleScope scope(isolate);
+    return scope.Escape(
+        Call_(isolate, isolate->GetCurrentContext()->Global(), argc, argv));
+#else
+    v8::HandleScope scope;
+    return scope.Close(Call_(v8::Context::GetCurrent()->Global(), argc, argv));
+#endif
+  }
+
+  inline MaybeLocal<v8::Value> operator()(
+      AsyncResource* resource
+    , int argc = 0
+    , v8::Local<v8::Value> argv[] = 0) const {
+    return this->Call(argc, argv, resource);
+  }
+
+  inline MaybeLocal<v8::Value> operator()(
+      AsyncResource* resource
+    , v8::Local<v8::Object> target
+    , int argc = 0
+    , v8::Local<v8::Value> argv[] = 0) const {
+    return this->Call(target, argc, argv, resource);
   }
 
   // TODO(kkoopa): remove
@@ -1424,11 +1544,15 @@ class Callback {
     return handle_.IsEmpty();
   }
 
-  inline v8::Local<v8::Value>
+  // Deprecated: For async callbacks Use the versions that accept an
+  // AsyncResource. If this callback does not correspond to an async resource,
+  // that is, it is a synchronous function call on a non-empty JS stack, you
+  // should Nan::Call instead.
+  NAN_DEPRECATED inline v8::Local<v8::Value>
   Call(v8::Local<v8::Object> target
      , int argc
      , v8::Local<v8::Value> argv[]) const {
-#if (NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION)
+#if NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION
     v8::Isolate *isolate = v8::Isolate::GetCurrent();
     return Call_(isolate, target, argc, argv);
 #else
@@ -1436,9 +1560,45 @@ class Callback {
 #endif
   }
 
-  inline v8::Local<v8::Value>
+  // Deprecated: For async callbacks Use the versions that accept an
+  // AsyncResource. If this callback does not correspond to an async resource,
+  // that is, it is a synchronous function call on a non-empty JS stack, you
+  // should Nan::Call instead.
+  NAN_DEPRECATED inline v8::Local<v8::Value>
   Call(int argc, v8::Local<v8::Value> argv[]) const {
-#if (NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION)
+#if NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION
+    v8::Isolate *isolate = v8::Isolate::GetCurrent();
+    v8::EscapableHandleScope scope(isolate);
+    return scope.Escape(
+        Call_(isolate, isolate->GetCurrentContext()->Global(), argc, argv));
+#else
+    v8::HandleScope scope;
+    return scope.Close(Call_(v8::Context::GetCurrent()->Global(), argc, argv));
+#endif
+  }
+
+  inline MaybeLocal<v8::Value>
+  Call(v8::Local<v8::Object> target
+     , int argc
+     , v8::Local<v8::Value> argv[]
+     , AsyncResource* resource) const {
+#if NODE_MODULE_VERSION >= NODE_9_0_MODULE_VERSION
+    v8::Isolate* isolate = v8::Isolate::GetCurrent();
+    return Call_(isolate, target, argc, argv, resource);
+#elif NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION
+    v8::Isolate *isolate = v8::Isolate::GetCurrent();
+    return Call_(isolate, target, argc, argv);
+#else
+    return Call_(target, argc, argv);
+#endif
+  }
+
+  inline MaybeLocal<v8::Value>
+  Call(int argc, v8::Local<v8::Value> argv[], AsyncResource* resource) const {
+#if NODE_MODULE_VERSION >= NODE_9_0_MODULE_VERSION
+    v8::Isolate* isolate = v8::Isolate::GetCurrent();
+    return Call(isolate->GetCurrentContext()->Global(), argc, argv, resource);
+#elif NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION
     v8::Isolate *isolate = v8::Isolate::GetCurrent();
     v8::EscapableHandleScope scope(isolate);
     return scope.Escape(
@@ -1453,7 +1613,22 @@ class Callback {
   NAN_DISALLOW_ASSIGN_COPY_MOVE(Callback)
   Persistent<v8::Function> handle_;
 
-#if (NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION)
+#if NODE_MODULE_VERSION >= NODE_9_0_MODULE_VERSION
+  MaybeLocal<v8::Value> Call_(v8::Isolate *isolate
+                            , v8::Local<v8::Object> target
+                            , int argc
+                            , v8::Local<v8::Value> argv[]
+                            , AsyncResource* resource) const {
+    EscapableHandleScope scope;
+    v8::Local<v8::Function> func = New(handle_);
+    auto maybe = resource->runInAsyncScope(target, func, argc, argv);
+    v8::Local<v8::Value> local;
+    if (!maybe.ToLocal(&local)) return MaybeLocal<v8::Value>();
+    return scope.Escape(local);
+  }
+#endif
+
+#if NODE_MODULE_VERSION > NODE_0_10_MODULE_VERSION
   v8::Local<v8::Value> Call_(v8::Isolate *isolate
                            , v8::Local<v8::Object> target
                            , int argc
@@ -1496,15 +1671,25 @@ class Callback {
 #endif
 };
 
+inline MaybeLocal<v8::Value> Call(
+    const Nan::Callback& callback
+  , v8::Local<v8::Object> recv
+  , int argc
+  , v8::Local<v8::Value> argv[]) {
+  return Call(*callback, recv, argc, argv);
+}
+
 /* abstract */ class AsyncWorker {
  public:
-  explicit AsyncWorker(Callback *callback_)
+  explicit AsyncWorker(Callback *callback_,
+                       const char* resource_name = "nan:AsyncWorker")
       : callback(callback_), errmsg_(NULL) {
     request.data = this;
 
     HandleScope scope;
     v8::Local<v8::Object> obj = New<v8::Object>();
     persistentHandle.Reset(obj);
+    async_resource = new AsyncResource(resource_name, obj);
   }
 
   virtual ~AsyncWorker() {
@@ -1514,6 +1699,7 @@ class Callback {
       persistentHandle.Reset();
     delete callback;
     delete[] errmsg_;
+    delete async_resource;
   }
 
   virtual void WorkComplete() {
@@ -1573,11 +1759,12 @@ class Callback {
  protected:
   Persistent<v8::Object> persistentHandle;
   Callback *callback;
+  AsyncResource *async_resource;
 
   virtual void HandleOKCallback() {
     HandleScope scope;
 
-    callback->Call(0, NULL);
+    callback->Call(0, NULL, async_resource);
   }
 
   virtual void HandleErrorCallback() {
@@ -1586,7 +1773,7 @@ class Callback {
     v8::Local<v8::Value> argv[] = {
       v8::Exception::Error(New<v8::String>(ErrorMessage()).ToLocalChecked())
     };
-    callback->Call(1, argv);
+    callback->Call(1, argv, async_resource);
   }
 
   void SetErrorMessage(const char *msg) {
@@ -1606,20 +1793,97 @@ class Callback {
   char *errmsg_;
 };
 
-
-template<class T>
-/* abstract */ class AsyncProgressWorkerBase : public AsyncWorker {
+/* abstract */ class AsyncBareProgressWorkerBase : public AsyncWorker {
  public:
-  explicit AsyncProgressWorkerBase(Callback *callback_)
-      : AsyncWorker(callback_), asyncdata_(NULL), asyncsize_(0) {
-    async = new uv_async_t;
+  explicit AsyncBareProgressWorkerBase(
+      Callback *callback_,
+      const char* resource_name = "nan:AsyncBareProgressWorkerBase")
+      : AsyncWorker(callback_, resource_name) {
     uv_async_init(
         uv_default_loop()
-      , async
+      , &async
       , AsyncProgress_
     );
-    async->data = this;
+    async.data = this;
+  }
 
+  virtual ~AsyncBareProgressWorkerBase() {
+  }
+
+  virtual void WorkProgress() = 0;
+
+  virtual void Destroy() {
+      uv_close(reinterpret_cast<uv_handle_t*>(&async), AsyncClose_);
+  }
+
+ private:
+  inline static NAUV_WORK_CB(AsyncProgress_) {
+    AsyncBareProgressWorkerBase *worker =
+            static_cast<AsyncBareProgressWorkerBase*>(async->data);
+    worker->WorkProgress();
+  }
+
+  inline static void AsyncClose_(uv_handle_t* handle) {
+    AsyncBareProgressWorkerBase *worker =
+            static_cast<AsyncBareProgressWorkerBase*>(handle->data);
+    delete worker;
+  }
+
+ protected:
+  uv_async_t async;
+};
+
+template<class T>
+/* abstract */
+class AsyncBareProgressWorker : public AsyncBareProgressWorkerBase {
+ public:
+  explicit AsyncBareProgressWorker(
+      Callback *callback_,
+      const char* resource_name = "nan:AsyncBareProgressWorker")
+      : AsyncBareProgressWorkerBase(callback_, resource_name) {
+  }
+
+  virtual ~AsyncBareProgressWorker() {
+  }
+
+  class ExecutionProgress {
+    friend class AsyncBareProgressWorker;
+   public:
+    void Signal() const {
+      uv_async_send(&that_->async);
+    }
+
+    void Send(const T* data, size_t count) const {
+      that_->SendProgress_(data, count);
+    }
+
+   private:
+    explicit ExecutionProgress(AsyncBareProgressWorker *that) : that_(that) {}
+    NAN_DISALLOW_ASSIGN_COPY_MOVE(ExecutionProgress)
+    AsyncBareProgressWorker* const that_;
+  };
+
+  virtual void Execute(const ExecutionProgress& progress) = 0;
+  virtual void HandleProgressCallback(const T *data, size_t size) = 0;
+
+ private:
+  void Execute() /*final override*/ {
+    ExecutionProgress progress(this);
+    Execute(progress);
+  }
+
+  virtual void SendProgress_(const T *data, size_t count) = 0;
+};
+
+template<class T>
+/* abstract */
+class AsyncProgressWorkerBase : public AsyncBareProgressWorker<T> {
+ public:
+  explicit AsyncProgressWorkerBase(
+      Callback *callback_,
+      const char* resource_name = "nan:AsyncProgressWorkerBase")
+      : AsyncBareProgressWorker<T>(callback_, resource_name), asyncdata_(NULL),
+        asyncsize_(0) {
     uv_mutex_init(&async_lock);
   }
 
@@ -1637,73 +1901,30 @@ template<class T>
     uv_mutex_unlock(&async_lock);
 
     // Don't send progress events after we've already completed.
-    if (callback) {
-        HandleProgressCallback(data, size);
+    if (this->callback) {
+        this->HandleProgressCallback(data, size);
     }
     delete[] data;
   }
 
-  class ExecutionProgress {
-    friend class AsyncProgressWorkerBase;
-   public:
-    void Signal() const {
-        uv_async_send(that_->async);
-    }
-
-    void Send(const T* data, size_t size) const {
-        that_->SendProgress_(data, size);
-    }
-
-   private:
-    explicit ExecutionProgress(AsyncProgressWorkerBase *that) : that_(that) {}
-    NAN_DISALLOW_ASSIGN_COPY_MOVE(ExecutionProgress)
-    AsyncProgressWorkerBase* const that_;
-  };
-
-  virtual void Execute(const ExecutionProgress& progress) = 0;
-  virtual void HandleProgressCallback(const T *data, size_t size) = 0;
-
-  virtual void Destroy() {
-      uv_close(reinterpret_cast<uv_handle_t*>(async), AsyncClose_);
-  }
-
  private:
-  void Execute() /*final override*/ {
-      ExecutionProgress progress(this);
-      Execute(progress);
-  }
-
-  void SendProgress_(const T *data, size_t size) {
-    T *new_data = new T[size];
+  void SendProgress_(const T *data, size_t count) {
+    T *new_data = new T[count];
     {
       T *it = new_data;
-      std::copy(data, data + size, it);
+      std::copy(data, data + count, it);
     }
 
     uv_mutex_lock(&async_lock);
     T *old_data = asyncdata_;
     asyncdata_ = new_data;
-    asyncsize_ = size;
+    asyncsize_ = count;
     uv_mutex_unlock(&async_lock);
 
     delete[] old_data;
-    uv_async_send(async);
+    uv_async_send(&this->async);
   }
 
-  inline static NAUV_WORK_CB(AsyncProgress_) {
-    AsyncProgressWorkerBase *worker =
-            static_cast<AsyncProgressWorkerBase*>(async->data);
-    worker->WorkProgress();
-  }
-
-  inline static void AsyncClose_(uv_handle_t* handle) {
-    AsyncProgressWorkerBase *worker =
-            static_cast<AsyncProgressWorkerBase*>(handle->data);
-    delete reinterpret_cast<uv_async_t*>(handle);
-    delete worker;
-  }
-
-  uv_async_t *async;
   uv_mutex_t async_lock;
   T *asyncdata_;
   size_t asyncsize_;
@@ -1712,6 +1933,121 @@ template<class T>
 // This ensures compatibility to the previous un-templated AsyncProgressWorker
 // class definition.
 typedef AsyncProgressWorkerBase<char> AsyncProgressWorker;
+
+template<class T>
+/* abstract */
+class AsyncBareProgressQueueWorker : public AsyncBareProgressWorkerBase {
+ public:
+  explicit AsyncBareProgressQueueWorker(
+      Callback *callback_,
+      const char* resource_name = "nan:AsyncBareProgressQueueWorker")
+      : AsyncBareProgressWorkerBase(callback_, resource_name) {
+  }
+
+  virtual ~AsyncBareProgressQueueWorker() {
+  }
+
+  class ExecutionProgress {
+    friend class AsyncBareProgressQueueWorker;
+   public:
+    void Send(const T* data, size_t count) const {
+      that_->SendProgress_(data, count);
+    }
+
+   private:
+    explicit ExecutionProgress(AsyncBareProgressQueueWorker *that)
+        : that_(that) {}
+    NAN_DISALLOW_ASSIGN_COPY_MOVE(ExecutionProgress)
+    AsyncBareProgressQueueWorker* const that_;
+  };
+
+  virtual void Execute(const ExecutionProgress& progress) = 0;
+  virtual void HandleProgressCallback(const T *data, size_t size) = 0;
+
+ private:
+  void Execute() /*final override*/ {
+    ExecutionProgress progress(this);
+    Execute(progress);
+  }
+
+  virtual void SendProgress_(const T *data, size_t count) = 0;
+};
+
+template<class T>
+/* abstract */
+class AsyncProgressQueueWorker : public AsyncBareProgressQueueWorker<T> {
+ public:
+  explicit AsyncProgressQueueWorker(
+      Callback *callback_,
+      const char* resource_name = "nan:AsyncProgressQueueWorker")
+      : AsyncBareProgressQueueWorker<T>(callback_) {
+    uv_mutex_init(&async_lock);
+  }
+
+  virtual ~AsyncProgressQueueWorker() {
+    uv_mutex_lock(&async_lock);
+
+    while (!asyncdata_.empty()) {
+      std::pair<T*, size_t> &datapair = asyncdata_.front();
+      T *data = datapair.first;
+
+      asyncdata_.pop();
+
+      delete[] data;
+    }
+
+    uv_mutex_unlock(&async_lock);
+    uv_mutex_destroy(&async_lock);
+  }
+
+  void WorkComplete() {
+    WorkProgress();
+    AsyncWorker::WorkComplete();
+  }
+
+  void WorkProgress() {
+    uv_mutex_lock(&async_lock);
+
+    while (!asyncdata_.empty()) {
+      std::pair<T*, size_t> &datapair = asyncdata_.front();
+
+      T *data = datapair.first;
+      size_t size = datapair.second;
+
+      asyncdata_.pop();
+      uv_mutex_unlock(&async_lock);
+
+      // Don't send progress events after we've already completed.
+      if (this->callback) {
+          this->HandleProgressCallback(data, size);
+      }
+
+      delete[] data;
+
+      uv_mutex_lock(&async_lock);
+    }
+
+    uv_mutex_unlock(&async_lock);
+  }
+
+ private:
+  void SendProgress_(const T *data, size_t count) {
+    T *new_data = new T[count];
+    {
+      T *it = new_data;
+      std::copy(data, data + count, it);
+    }
+
+    uv_mutex_lock(&async_lock);
+    asyncdata_.push(std::pair<T*, size_t>(new_data, count));
+    uv_mutex_unlock(&async_lock);
+
+    uv_async_send(&this->async);
+  }
+
+  uv_mutex_t async_lock;
+  std::queue<std::pair<T*, size_t> > asyncdata_;
+};
 
 inline void AsyncExecute (uv_work_t* req) {
   AsyncWorker *worker = static_cast<AsyncWorker*>(req->data);

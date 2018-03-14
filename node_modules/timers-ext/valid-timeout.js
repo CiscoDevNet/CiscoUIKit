@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var toPosInt   = require('es5-ext/number/to-pos-integer')
-  , maxTimeout = require('./max-timeout');
+var toPosInt   = require("es5-ext/number/to-pos-integer")
+  , maxTimeout = require("./max-timeout");
 
 module.exports = function (value) {
 	value = toPosInt(value);

@@ -2,13 +2,18 @@
     <div class="hero__content">
         <div class="container center-xs">
             <div class="row">
-                <div class="col-md-4 col-xl-2">
-                    <img style="max-height:150px" src="public/img/CiscoUIMainLogo-2.png">
+                <div class="col-md-6 col-xl-3 flex-center">
+                    <img src="public/img/Collage.png">
                 </div>
-                <div class="col-md-8 col-xl-10">
+                <div class="col-md-6 col-xl-9">
                     <div class="flex-fluid">
-                        <h1>Cisco user interface kit <sup class="text-large hidden-xs">1.0.5</sup></h1>
-                        <p class="text-large">A web-based implementation of the UI design language</p>
+                        <h1>
+                            <span>Cisco user <span class="text-uppercase text-blue">interface</span> kit</span>
+                            <sup class="text-large hidden-xs">
+                                <span class="label label--ghost">1.2.2</span>
+                            </sup>
+                        </h1>
+                        <p class="text-large">A web-based implementation of the UI design language sponsored by Cisco Brand</p>
                     </div>
                 </div>
             </div>
@@ -24,7 +29,7 @@
         <div class="secondary-tabs">
             <ul class="tabs tabs--tall">
                 <li id="tab-intro" class="tab active">
-                    <a><div class="tab-heading" title="Intro">Intro</div></a>
+                    <a><div class="tab-heading" title="Intro">&nbsp;&nbsp;Intro&nbsp;&nbsp;</div></a>
                 </li>
                 <li id="tab-download" class="tab">
                     <a><div class="tab-heading" title="Download">Download</div></a>
@@ -44,7 +49,7 @@
                                 <p>The kit itself is internal open source so anyone can contribute. We welcome both designers and developers and believe that this kit is an important collaboration keystone between those two groups.</p>
                             </div>
                             <div class="col-md-4">
-                                <div class="panel panel--bordered animated fadeInRight dbl-margin-bottom">
+                                <div class="animated fadeInRight dbl-margin-bottom">
                                     <img src="public/img/ui-kit-collage.png">
                                 </div>
                             </div>
@@ -52,22 +57,54 @@
                     </div>
                     <div class="section">
                         <div class="panel panel--loose panel--bordered">
-                            <h1 class="text-huge text-center base-margin-bottom">What's New</h1>
                             <div class="row">
-                                <div class="col-md-4">
-                                    <img src="public/img/resourceHeroes.png">
+                                <div class="col-md-3">
+                                    <img src="public/img/new-logo.png">
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-9">
+                                    <h1 class="text-huge dbl-padding-top">What's New</h1>
                                     <ul class="base-margin-top text-large">
-                                        <li>New core color <label class="label label--small label--indigo">INDIGO</label> You can find it in <a href="section-components.html#components-hero">Hero</a>, <a href="section-base.html#base-panel">Panel</a>, <a href="section-layout.html#layout-sidebar">Sidebar</a> and <a href="section-base.html#base-label">Label</a> patterns.</li>
-                                        <li>Migration from Bootstrap 3 Grid to Bootstrap 4 Grid. This change will be transparent to your applications although you will have additional capabilities going forward. Click <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">here</a> for more details on the new Flexbox-based grid and modifiers.</li>
-                                        <li>New Breakpoints! With our move to Bootstrap 4 Grid we are adopting their 5 grid tier breakpoint system. Click <a href="section-base.html#base-grid">here</a> for details.</li>
-                                        <li>Revamped <a href="section-layout.html#layout-footer">Footer</a> pattern with several variations.</li>
-                                        <li>Added fixed table support to the <a href="section-base.html#base-table">Table</a> pattern.</li>
-                                        <li>Added raised modifier to the <a href="section-base.html#base-thumbnail">Thumbnail</a> pattern.</li>
-                                        <li>Added copy to code clipboard
-                                        <li>Removed unnecessary font files (48 -> 14) and converted the font-face mappings to only use woff/woff2 font formats.</li>
-                                        <li>Lots of bug fixes. See the change log for details.</li>
+
+                                        <li>
+                                            <span class="label label--success">New</span>
+                                            <a href="section-components.html#components-modal">Modal</a> Pattern
+                                        </li>
+                                        <li>
+                                            <span class="label label--success">New</span>
+                                            <a href="section-components.html#components-dropdown">Dropdown</a> Pattern
+                                        </li>
+
+                                        <li>Once again - lots of bug fixes. See the change log for details.</li>
+
+                                        <li>
+                                            <span>New icons:</span>
+                                            <div>
+                                                <span class="text-xlarge" data-balloon="icon-filter" data-balloon-pos="up">
+                                                    <span class="icon-clipboard"></span>
+                                                </span>
+                                                <span class="text-xlarge half-margin-left" data-balloon="icon-cpu-chip" data-balloon-pos="up">
+                                                    <span class="icon-link-broken"></span>
+                                                </span>
+                                                <span class="text-xlarge" data-balloon="icon-filter" data-balloon-pos="up">
+                                                    <span class="icon-filter"></span>
+                                                </span>
+                                                <span class="text-xlarge half-margin-left" data-balloon="icon-cpu-chip" data-balloon-pos="up">
+                                                    <span class="icon-cpu-chip"></span>
+                                                </span>
+                                                <span class="text-xlarge half-margin-left" data-balloon="icon-memory-ram" data-balloon-pos="up">
+                                                    <span class="icon-memory-ram"></span>
+                                                </span>
+                                                <span class="text-xlarge half-margin-left" data-balloon="icon-virtual-machine" data-balloon-pos="up">
+                                                    <span class="icon-virtual-machine"></span>
+                                                </span>
+                                                <span class="text-xlarge half-margin-left" data-balloon="icon-software-certified" data-balloon-pos="up">
+                                                    <span class="icon-software-certified"></span>
+                                                </span>
+                                                <span class="text-xlarge half-margin-left" data-balloon="icon-software-suggested" data-balloon-pos="up">
+                                                    <span class="icon-software-suggested"></span>
+                                                </span>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -121,12 +158,12 @@
                                             <div class="flex-fluid text-left center-xs">
                                                 <h6 class="section">The Cisco UI Kit is geared for modern browsers only. Minimum browser versions include:</h6>
                                                 <div class="label-group base-margin-bottom">
-                                                    <span class="label label--blue">Chrome 43</span>
-                                                    <span class="label label--blue">Edge 12</span>
-                                                    <span class="label label--blue">Firefox 41</span>
-                                                    <span class="label label--blue">Internet Explorer 11</span>
-                                                    <span class="label label--blue">Opera 33</span>
-                                                    <span class="label label--blue">Safari 10</span>
+                                                    <span class="label label--raised label--blue">Chrome 43</span>
+                                                    <span class="label label--raised label--blue">Edge 12</span>
+                                                    <span class="label label--raised label--blue">Firefox 41</span>
+                                                    <span class="label label--raised label--blue">Internet Explorer 11</span>
+                                                    <span class="label label--raised label--blue">Opera 33</span>
+                                                    <span class="label label--raised label--blue">Safari 10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -144,9 +181,9 @@
                                             <div class="base-margin">
                                                 <h1 class="text-huge base-margin-bottom">Coming Soon</h1>
                                                 <div class="text-large">
-                                                    <p>Angular web components. We have developers busy working on building out a set of reusable Angular 1.x and Angular 4.x components which follow the Cisco UI kit spec. You can access their Git code repositories <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">here</a> and <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">here</a>.</p>
+                                                    <p>Angular web components. We have developers busy working on building out a set of reusable Angular 1.x and Angular 4.x components which follow the Cisco UI kit spec. You can access their code via the Git repositories <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">here</a> and <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">here</a>.</p>
                                                     <p>Angular sandbox. In addition to the Angular web components we are also planning on making the Angular Sandbox available. This sandbox came from the Apollo team (thanks!) and will provide working component examples with documentation - very cool.</p>
-                                                    <p>React web components. Another team has been busy building out a set of React components for the UI kit. You can find the Git code <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">here</a>.</p>
+                                                    <p>React web components. Another team has been busy building out a set of React components for the UI kit. You can find the code in Git <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">here</a>.</p>
                                                     <p>Once the new digital web standards are available from Cisco Brand we will get busy working on version 2.0 of the UI kit which will look a lot more like the cisco.com home page. Stay tuned - we will announce once we get our grubby little hands on the spec.</p>
                                                 </div>
                                                 <blockquote class="dbl-margin-top blockquote--blue">
@@ -162,12 +199,31 @@
                 </div>
                 <div id="tab-download-content" class="tab-pane">
                     <section>
+                    <!--
+                        <div class="section">
+                            <h3>Available via CDN</h3>
+                            <hr>
+                        </div>
+                        <div class="panel panel--loose">
+                            <p>All asset files now available via the Cisco.com CDN. You can access the latest version or older versions by including the main css file in the head element of your page:</p>
+<span class="label label--indigo">Latest</span><xmp><link rel="stylesheet" type="text/css" href="https://www.cisco.com/web/fw/cisco-ui/latest/dist/css/cui-standard.min.css">
+</xmp>
+<span class="label label--indigo">Older Versions</span><xmp><link rel="stylesheet" type="text/css" href="https://www.cisco.com/web/fw/cisco-ui/1.0.5/dist/css/cui-standard.min.css"></xmp>
+<xmp><link rel="stylesheet" type="text/css" ref="https://www.cisco.com/web/fw/cisco-ui/1.0.4/dist/css/cui-standard.min.css"></xmp>
+<xmp><link rel="stylesheet" type="text/css" href="https://www.cisco.com/web/fw/cisco-ui/1.0.3/dist/css/cui-standard.min.css"></xmp>
+<br>
+                        </div>
+                        <div class="section">
+                            <h3>Or Download one of these Packages:</h3>
+                            <hr>
+                        </div>
+                        -->
                         <div class="row">
-                            <div class="col-lg-4">
-                                <div class="panel panel--loose panel--bordered animated fadeInUp text-large" style="height:400px">
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="panel panel--loose text-large" style="height:400px">
                                     <div class="flex">
-                                        <h1 class="flex-fluid">Basic</h1>
-                                        <a class="btn btn--primary-ghost" target="_blank" href="dist/cui-{{VERSION}}-basic.zip">Download</a>
+                                        <h3 class="flex-fluid">Basic</h3>
+                                        <a class="btn btn--small btn--primary-ghost" target="_blank" href="dist/cui-{{VERSION}}-basic.zip">Download</a>
                                     </div>
                                     <h6 class="subheading half-margin-top base-margin-bottom">Includes font files plus:</h6>
                                     <ul class="list" style="column-count:2">
@@ -192,11 +248,11 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="panel panel--blue panel--bordered panel--loose animated text-large fadeInUp animation-delay-250" style="height:400px">
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="panel panel--blue panel--loose text-large" style="height:400px">
                                     <div class="flex">
-                                        <h1 class="flex-fluid">Standard</h1>
-                                        <a class="btn btn--white-ghost" target="_blank" href="dist/cui-{{VERSION}}-standard.zip">Download</a>
+                                        <h3 class="flex-fluid">Standard</h3>
+                                        <a class="btn btn--small btn--white-ghost" target="_blank" href="dist/cui-{{VERSION}}-standard.zip">Download</a>
                                     </div>
                                     <h6 class="half-margin-top base-margin-bottom">Includes everything in Basic plus:</h6>
                                     <ul class="list" style="column-count:2">
@@ -204,26 +260,30 @@
                                         <li><a href="section-components.html#components-alert">Alert</a></li>
                                         <li><a href="section-components.html#components-badge">Badge</a></li>
                                         <li><a href="section-components.html#components-breadcrumb">Breadcrumb</a></li>
+                                        <li><a href="section-components.html#components-carousel">Carousel</a></li>
+                                        <li><a href="section-components.html#components-dropdown">Dropdown</a></li>
                                         <li><a href="section-components.html#components-figure">Figure</a></li>
                                         <li><a href="section-components.html#components-footer">Footer</a></li>
                                         <li><a href="section-components.html#components-gauge">Gauge</a></li>
                                         <li><a href="section-components.html#components-header">Header</a></li>
                                         <li><a href="section-components.html#components-hero">Hero</a></li>
                                         <li><a href="section-components.html#components-loader">Loader</a></li>
+                                        <li><a href="section-components.html#components-modal">Modal</a></li>
                                         <li><a href="section-components.html#components-rating">Rating</a></li>
                                         <li><a href="section-components.html#components-scoreboard">Scoreboard</a></li>
                                         <li><a href="section-components.html#components-sidebar">Sidebar</a></li>
                                         <li><a href="section-components.html#components-step">Step</a></li>
                                         <li><a href="section-components.html#components-tab">Tab</a></li>
                                         <li><a href="section-components.html#components-toast">Toast</a></li>
+                                        <li><a href="section-components.html#components-tooltip">Tooltip</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="panel panel--loose panel--bordered panel--dkgray animated text-large fadeInUp animation-delay-500" style="height:400px">
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="panel panel--loose panel--dkgray text-large" style="height:400px">
                                     <div class="flex">
-                                        <h1 class="flex-fluid">Source</h1>
-                                        <a class="btn btn--white-ghost" target="_blank" href="dist/cui-{{VERSION}}-source.zip">Download</a>
+                                        <h3 class="flex-fluid">Source</h3>
+                                        <a class="btn btn--small btn--white-ghost" target="_blank" href="dist/cui-{{VERSION}}-source.zip">Download</a>
                                     </div>
                                     <h6 class="half-margin-top half-margin-bottom">Includes SASS source, font files, and raw icons</h6>
                                 </div>

@@ -1,231 +1,258 @@
 //
-// Angular Components
+// Dropdown
 //
-// For some components which require more than just markup and styling we have wrapped them into Angular directives.
+// Simple dropdown menu.<br><br>
+// Since 1.2.0
 //
-//
-
-//
-// Angular Drawers
-//
-// **Note**: This component requires the Apollo Drawers module <br><br>
-//
-// Attribute Options: <br>
-//     `allow-mult-expanded` Specify true to allow multiple open drawers. Default is false <br><br>
-//
-// Markup:
-// <ap-drawers allow-mult-expanded="true">
-//     <ap-drawer-header>
-//         <ap-drawer-label>
-//             <h3>Drawers Title</h3>
-//         </ap-drawer-label>
-//     </ap-drawer-header>
-//     <ap-drawer>
-//         <ap-drawer-label>
-//             <div>Drawer #1</div>
-//         </ap-drawer-label>
-//         <ap-drawer-content>
-//             <figure class="figure figure--horizontal figure--highlight">
-//                 <figcaption>
-//                     <strong>Drawer #1 Figure Caption</strong>
-//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</p>
-//                 </figcaption>
-//                 <img src="public/img/article-photo-1.jpg">
-//             </figure>
-//         </ap-drawer-content>
-//     </ap-drawer>
-//     <ap-drawer>
-//         <ap-drawer-label>
-//             <div>Drawer #2</div>
-//         </ap-drawer-label>
-//         <ap-drawer-content>
-//             <figure class="figure figure--horizontal figure--highlight">
-//                 <figcaption>
-//                     <strong>Drawer #2 Figure Caption</strong>
-//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</p>
-//                 </figcaption>
-//                 <img src="public/img/article-photo-2.jpg">
-//             </figure>
-//         </ap-drawer-content>
-//     </ap-drawer>
-//     <ap-drawer>
-//         <ap-drawer-label>
-//             <div>Drawer #3</div>
-//         </ap-drawer-label>
-//         <ap-drawer-content>
-//             <figure class="figure figure--horizontal figure--highlight">
-//                 <figcaption>
-//                     <strong>Drawer #3 Figure Caption</strong>
-//                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eget eros ut rutrum. Proin dignissim neque ac porta sagittis. Aliquam eu sem metus. Fusce nibh diam, faucibus eget pretium vitae, pretium ut eros. Fusce tempus quis orci at gravida. Donec ac lectus faucibus sem volutpat dictum sed id libero. Vestibulum id augue eu eros auctor hendrerit non tincidunt est.</p>
-//                 </figcaption>
-//                 <img src="public/img/article-photo-3.jpg">
-//             </figure>
-//         </ap-drawer-content>
-//     </ap-drawer>
-// </ap-drawers>
-//
+// Styleguide Components.Dropdown
 //
 
+
 //
-// Angular Dropdowns
+// Examples
 //
-// **Note**: This component requires the Angular UI Dropdown module (https://angular-ui.github.io/bootstrap/#/dropdown)
+// <blockquote>Add class `btn--dropdown` to your button to add a toggle and class `active` to display the menu.</blockquote>
 //
 // Markup:
-// <div class="dropdown" dropdown>
-//     <a dropdown-toggle class="dropdown-toggle button button--primary">Dropdown Toggle</a>
-//     <div class="dropdown-container">
-//         <ul class="dropdown-nav">
-//             <li><a>Action 1</a></li>
-//             <li><a>Action 2</a></li>
-//             <li><a>Action 3</a></li>
-//         </ul>
+// <div class="dropdown">
+//     <button class="btn btn--dropdown">Dropdown</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+// <div class="dropdown">
+//     <button class="btn btn--primary btn--dropdown">Dropdown</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+// <div class="dropdown">
+//     <button class="btn btn--primary-ghost btn--dropdown">Dropdown</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
 //     </div>
 // </div>
 //
+// Weight: 1
+//
+// Styleguide Components.Dropdown.Examples
+//
+
+
+//
+// Direction
+//
+// <blockquote>Your dropdown menu can open right (default) or left.</blockquote>
+//
+// Markup:
+// <div class="dropdown">
+//     <button class="btn btn--primary btn--dropdown">Open Right</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+// <div class="dropdown">
+//     <button class="btn btn--primary btn--dropdown">Open Left</button>
+//     <div class="dropdown__menu dropdown__menu--openleft">
+//         <a>Action One</a></li>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Dropdown.Direction
+//
+
+
+//
+// Selection
+//
+// <blockquote>Add the class `selected` to a menu item to denote selection.</blockquote>
+//
+// Markup:
+// <div class="dropdown">
+//     <button class="btn btn--primary btn--dropdown">Action One</button>
+//     <div class="dropdown__menu">
+//         <a class="selected">Action One</a>
+//         <a>Action Two</a>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Components.Dropdown.Selection
+//
+
+
+//
+// Divider
+//
+// <blockquote>Add a divider to group menu items.</blockquote>
+//
+// Markup:
+// <div class="dropdown">
+//     <button class="btn btn--primary btn--dropdown">Divider</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <div class="dropdown__divider"></div>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Components.Dropdown.Divider
+//
+
+
+//
+// Animation
+//
+// <blockquote>Add the class `dropdown--animated` to add a subtle animation to your dropdown.</blockquote>
+//
+// Markup:
+// <div class="dropdown dropdown--animated">
+//     <button class="btn btn--primary btn--dropdown">Animated</button>
+//     <div class="dropdown__menu">
+//         <a>Action One</a>
+//         <a>Action Two</a>
+//         <div class="dropdown__divider"></div>
+//         <a>Action Three</a>
+//     </div>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Components.Dropdown.Animation
 //
 
 .dropdown {
+    display: inline-block;
     position: relative;
-    user-select: none;
-}
 
-.dropdown--right {
-    .dropdown-container {
-        right: 0px;
-        left: auto;
-    }
-
-    .dropdown-nav {
-        &:before {
-            right: 5px;
-            left: auto;
+    &.active {
+        .dropdown__menu {
+            visibility: visible;
+            opacity: 1;
+            z-index: $base-dropdown-zindex;
+        }
+        .btn.btn--dropdown {
+            &:after {
+                transform: rotate(180deg);
+            }
         }
     }
-}
 
-.dropdown-toggle {
-    cursor: pointer;
+    &--animated {
+        .btn.btn--dropdown {
+            &:after {
+                transition: transform 0.1s ease-in;
+            }
+        }
+    }
+    &--animated.active {
+        .btn.btn--dropdown {
+            &:after {
+                transition: transform 0.1s ease-in-out;
+            }
+        }
+    }
 
-    &--simple {
+    .btn.btn--dropdown {
+        padding: 0 ($base-spacing * 0.5);
+
+        > span {
+            margin-right: $base-spacing * 0.25;
+        }
         &:after {
-            display: none;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: $base-spacing * 0.5;
+            content: "";
+            vertical-align: middle;
+            border-top-width: 6px;
+            border-top-style: solid;
+            border-top-color: initial;
+            border-right: 6px solid transparent;
+            border-left: 6px solid transparent;
+            border-bottom-width: 0;
+            transform: rotate(0);
         }
     }
 
-    &:after {
-        @include icon-chevron-down;
-        margin-left: $base-spacing * 0.125;
-        font-size: 100%;
+    &__divider {
+        height: 1px;
+        overflow: hidden;
+        background-color: $base-border-color;
     }
 
-    &.btn {
-        min-width: unset; // Fixes extra wide bulk select dropdown issue in Safari
-    }
-}
-
-.dropdown-container {
-    position: absolute;
-    width: 180px;
-    left: 0px;
-    margin: 0;
-    padding-top: 10px;
-    font-size: 12px;
-    line-height: 1;
-    pointer-events: none;
-    transform: translateY(-5px);
-    transition: transform 0.1s cubic-bezier(.25,1.25,.75,1.25);
-    opacity: 0;
-    z-index: 10;
-}
-
-.open .dropdown,
-.dropdown.open {
-    .dropdown-container {
-        pointer-events: all;
-        transform: translateY(0px);
-        opacity: 1;
-        background-color: $white;
-        border-top: 4px solid $base-accent-color;
-        margin-top: $base-spacing * 0.25;
-        padding-top: 0;
-        z-index: 10;
-        width: auto;
-        max-width: 320px;
-        min-width: 100px;
-    }
-}
-
-.dropdown-nav,
-.dropdown-menu {
-    @include clearfix;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background: $white;
-    border-radius: 2px;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-
-    // Add divider to dropdown nav
-    > .dropdown-nav-divider {
-        border-bottom: $base-border;
-    }
-
-    >li {
-        display: block;
-
-        &:first-child {
-            > a {
-                border-top-right-radius: 2px;
-                border-top-left-radius: 2px;
-            }
-        }
-
-        &:last-child {
-            > a {
-                border-bottom: 0;
-                border-bottom-right-radius: 2px;
-                border-bottom-left-radius: 2px;
-            }
-        }
-    }
-
-    a {
-        @include text-ellipsis;
-        color: $base-muted-color;
-        display: block;
-        font-size: $small-font-size;
-        font-weight: 500;
-        padding: 10px;
-        text-shadow: none;
-    }
-
-    li.active a,
-    a:hover {
-        background: $base-accent-color;
-        color: $white;
-        text-decoration: none;
-    }
-
-    label {
-        display: block;
+    &__menu {
+        @include list--unstyled;
         margin: 0;
-        padding: 0.75rem 0.75rem 0.5rem 0.75rem;
-        color: #ccc;
-        border-top: $base-border;
-        font-size: 10px;
-        font-weight: 500;
-        text-transform: uppercase;
+        padding: 0;
+    	position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 100%;
+        left: 0; // Open right
+        margin-top: 3px;
+    	z-index: -1;
+        min-width: $base-dropdown-menu-minwidth;
+        max-width: $base-dropdown-menu-maxwidth;
+    	background-color: $white;
+    	text-align: left;
+        border-top: $base-dropdown-menu-accent;
+        border-radius: 0 0 2px 2px;
+    	box-shadow: $base-box-shadow;
+
+        &--openleft {
+            left: unset;
+            right: 0; // Open left
+        }
+
+    	a {
+            height: $base-dropdown-menu-item-height;
+            line-height: $base-dropdown-menu-item-height;
+            display: inline-block;
+            vertical-align: middle;
+            color: $base-font-color;
+            padding: 0 40px 0 ($base-spacing * 0.5);
+            width: 100%;
+            position: relative;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: $base-dropdown-menu-maxwidth;
+            white-space: nowrap;
+
+            &.selected {
+                color: $base-accent-color;
+
+                &:after {
+                    @include icon-check;
+                    position: absolute;
+                    right: $base-spacing * 0.5;
+                    font-weight: bold;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                background: $base-dropdown-menu-hover;
+            }
+    	}
     }
-}
-
-.dropdown-scroll {
-    max-height: 400px;
-    overflow: auto;
-}
-
-.dropdown-search {
-    width: 160px;
-    margin: 10px;
 }

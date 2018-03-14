@@ -4,14 +4,14 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
 <g>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333439" cx="23.969" cy="7" r="3"/>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333439" cx="7" cy="7" r="3"/>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333439" cx="41" cy="7" r="3"/>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333439" cx="23.969" cy="24" r="3"/>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333439" cx="7" cy="24" r="3"/>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333439" cx="41" cy="24" r="3"/>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333439" cx="23.969" cy="41" r="3"/>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333439" cx="7" cy="41" r="3"/>
-	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333439" cx="41" cy="41" r="3"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd"  cx="23.969" cy="7" r="3"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd"  cx="7" cy="7" r="3"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd"  cx="41" cy="7" r="3"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd"  cx="23.969" cy="24" r="3"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd"  cx="7" cy="24" r="3"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd"  cx="41" cy="24" r="3"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd"  cx="23.969" cy="41" r="3"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd"  cx="7" cy="41" r="3"/>
+	<circle fill-rule="evenodd" clip-rule="evenodd"  cx="41" cy="41" r="3"/>
 </g>
 </svg>

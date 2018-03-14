@@ -34,6 +34,7 @@ gulp.src("./src/images/*.{jpg,png,gif}", { buffer: false })
 			"-"
 		],
 		// optional
+		opts: { cwd: "." },
 		filename: function(base, ext) {
 			return base + "-half" + ext;
 		}

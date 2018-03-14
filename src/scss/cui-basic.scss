@@ -1,7 +1,7 @@
-@import 'vendor/bootstrap/custom.scss';
-@import 'vendor/bootstrap/variables.scss';
-@import 'vendor/bootstrap/mixins.scss';
-@import 'vendor/bootstrap/grid.scss';
+@import "vendor/bootstrap/custom.scss";
+@import "vendor/bootstrap/variables.scss";
+@import "vendor/bootstrap/mixins.scss";
+@import "vendor/bootstrap/grid.scss";
 @import "vendor/jeet-grid";
 
 @import "utilities/variables";
@@ -10,7 +10,7 @@
 @import "base/typography";
 @import "base/cui-font";
 
-html.cui {
+.cui {
     @import "utilities/helpers";
     @import "utilities/animations";
 

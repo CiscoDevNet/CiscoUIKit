@@ -58,15 +58,44 @@
 // To horizontally and vertically center an element inside of another element, you can add the class `.absolute-center` on the element in the markup
 //
 // Markup:
-// <div class="panel panel--blue" style="height:200px;">
-//     <h1 class="absolute-center text-uppercase">centered</h1>
-// </div>
+// <div class="row" IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center text-uppercase">centered</h1>
+//         </div>
+//     </div IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center absolute-center--top text-uppercase">top</h1>
+//         </div>
+//     </div IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center absolute-center--right text-uppercase">right</h1>
+//         </div>
+//     </div IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center absolute-center--bottom text-uppercase">bottom</h1>
+//         </div>
+//     </div IGNORED>
+//     <div class="col-md-6" IGNORED>
+//         <div class="panel panel--blue panel--bordered" style="height:200px;">
+//             <h1 class="absolute-center absolute-center--left text-uppercase">left</h1>
+//         </div>
+//     </div IGNORED>
+// </div IGNORED>
 //
 // Styleguide Utilities.Helpers.Absolute Center
 //
 
 .absolute-center {
     @include absolute-center;
+
+    &--top      { top: 30% !important; }
+    &--right    { left: 70% !important; }
+    &--bottom   { top: 70% !important; }
+    &--left     { left: 30% !important; }
 }
 
 
@@ -286,13 +315,13 @@
     @include text-break;
 }
 .text-marquee {
-    font-size: 2rem;
+    font-size: 32px;
 
-    @include break-at(small) {
-        font-size: 2.5rem;
+    @include media-breakpoint-up(sm) {
+        font-size: 40px;
     }
-    @include break-at(medium) {
-        font-size: 3rem;
+    @include media-breakpoint-up(md) {
+        font-size: 48px;
     }
 }
 
@@ -325,6 +354,7 @@
 .text-warning-alt, .text--warning-alt   { color: $warning-alt !important; }
 .text-default-color                     { color: $dark-gray-2 !important; }
 .text-blue                              { color: $cisco-blue !important; }
+.text-darkgreen                         { color: $cisco-darkgreen !important; }
 .text-dkgray-1                          { color: $dark-gray-1 !important; }
 .text-dkgray-4                          { color: $dark-gray-4 !important; }
 .text-indigo, .text--indigo             { color: $indigo !important; }

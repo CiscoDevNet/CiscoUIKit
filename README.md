@@ -37,11 +37,13 @@ Before you can build the UI Kit you will need to install a few tools.
 $ npm install --global gulp-cli
 ```
 
+NOTE: If you are using Windows 10 make sure to grab gitbash [here](https://git-for-windows.github.io/)
+
 #### 4.1 There are several ways to get the source. Create a folder and clone the UI Kit source from Github like this:
 ```sh
-$ mkdir aui
-$ cd aui
-$ git clone http://gitlab.cisco.com/cisco-ui/pattern-library.git .
+$ mkdir cui
+$ cd cui
+$ git clone http@wwwin-gitlab-sjc.cisco.com:cisco-ui/pattern-library.git .
 ```
 
 NOTE: You will want to work on a feature branch (not master!). To create a feature branch called `foo` run this:
@@ -49,20 +51,26 @@ NOTE: You will want to work on a feature branch (not master!). To create a featu
 $ git checkout -b foo origin/master
 ```
 
-#### 4.2 Or you can fetch the UI Kit source from Git via NPM dynamically like this:
+#### 4.2 Or you can fetch the UI Kit source from Git via NPM like this:
 in your package.json file add this line to the dependencies section:
-``` 
-"cisco-ui": "git+http://gitlab.cisco.com/cisco-ui/pattern-library.git#v1.0.4-official"
+```
+"cisco-ui": "git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official"
 ```
 or from your command-line run:
 ```
-npm install git+http://gitlab.cisco.com/cisco-ui/pattern-library.git#v1.0.4-official --save
+npm install git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official --save
 ```
 
-#### 4.3 Or you can fetch the UI Kit source from Git via Bower dynamically like this:
+#### 4.3 Or you can fetch the UI Kit source from Git via Bower like this:
 in your bower.json file add this line to the dependencies section:
-``` 
-"cisco-ui": "http://gitlab.cisco.com/cisco-ui/pattern-library.git#v1.0.4-official"
+```
+"cisco-ui": "http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official"
+```
+
+#### 4.4 Or you can fetch the UI Kit source from Git via Yarn like this:
+From the command-line run:
+```
+yarn add git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official
 ```
 
 NOTE: We use a common naming syntax like this v.{version}-official
@@ -74,7 +82,7 @@ $ npm install
 
 #### 6. Build the UI Kit
 ```sh
-$ gulp
+$ npm run build
 ```
 
 #### 7. Open the UI Kit in your browser. In your browser of choice select File -> Open and choose build/docs/index.html

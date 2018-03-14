@@ -3,7 +3,7 @@
 //
 
 //
-// Grid System new
+// Grid System
 //
 // We have adopted the Bootstrap 4 Grid system which has 5 grid tiers and is Flexbox-based<br>
 // You can view more details on the grid <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">here</a>
@@ -400,12 +400,12 @@ cite {
         padding-top: $base-spacing * 0.5;
         padding-bottom: $base-spacing * 0.5;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(md) {
             padding-top: $base-spacing;
             padding-bottom: $base-spacing;
         }
 
-        @include break-at(large) {
+        @include media-breakpoint-up(lg) {
             padding-top: $base-spacing * 1.5;
             padding-bottom: $base-spacing * 1.5;
         }
@@ -430,7 +430,7 @@ cite {
 
     .footer {
         flex: none;
-        background-color: $light-gray;
+        background-color: $footer-background-color;
     }
 }
 
@@ -446,7 +446,7 @@ cite {
         max-width: none;
     }
 
-    @include break-at(small) {
+    @include media-breakpoint-up(md) {
         padding-right: $base-spacing;
         padding-left: $base-spacing;
     }
@@ -467,7 +467,8 @@ button {
 .content-fluid {
 
     display: flex;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     width: 100%;
     height: 100%;
 
@@ -475,14 +476,14 @@ button {
         transform: translate3d($sidebar-menu-width,0,0);
         transition: transform 0.25s;
 
-        @include break-at(small) {
+        @include media-breakpoint-up(md) {
             margin-left: $sidebar-menu-width;
             transform: translate3d(0,0,0);
             transition: margin 0.25s;
         }
     }
     .sidebar.sidebar--hidden ~ main {
-        margin-left: unset;
+        margin-left: auto;
         transform: translate3d(0,0,0);
         transition: all 0.25s
     }
@@ -505,7 +506,7 @@ button {
         .footer {
             flex: none;
             overflow: hidden;
-            background-color: $light-gray;
+            background-color: $footer-background-color;
         }
     }
 }

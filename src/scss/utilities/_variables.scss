@@ -9,7 +9,6 @@
 
 $namespace: cui;
 
-
 // -----------------------------------------------------------------------------
 // Base: Scaffolding
 
@@ -17,6 +16,7 @@ $mobile-menu-width: 280px;
 $max-page-width: 1440px !default;
 $min-page-width: 320px !default;
 $max-columns: 12;
+$cui-resource-path: ".." !default;
 
 
 // -----------------------------------------------------------------------------
@@ -26,17 +26,22 @@ $base-font-family: 'CiscoSans', 'Arial', sans-serif !default;
 $monospace-font-family: Monaco, Inconsolata, Consolas, 'Courier New', Courier, 'Lucida Console', monospace !default;
 $header-font-family: $base-font-family !default;
 
+$h1-font-weight: 100 !default;
+$h2-font-weight: 100 !default;
+$h3-font-weight: 200 !default;
+$h4-font-weight: 200 !default;
+$h5-font-weight: 200 !default;
+$h6-font-weight: 300 !default;
+
 
 // -----------------------------------------------------------------------------
 // Base: Breakpoints
-
 $breakpoints: (
   'xsmall'  : ( min-width: 479px ),
   'small'   : ( min-width: 767px ),
   'medium'  : ( min-width: 992px ),
   'large'   : ( min-width: 1200px )
 );
-
 @mixin break-at($name) {
     @if map-has-key($breakpoints, $name) {
         @media #{inspect(map-get($breakpoints, $name))} {
@@ -53,10 +58,8 @@ $breakpoints: (
 // -----------------------------------------------------------------------------
 // Base: Font
 
-// Uncomment once we move to base 10 on the pxtorem plugin
 // 1rem = 10px (see https://snook.ca/archives/html_and_css/font-size-with-rem)
-// $html-font-size: 62.5% !default;
-$html-font-size: 16px !default; // This is our current setting 1rem = 16px
+$html-font-size: 62.5% !default;
 $base-font-size: 14px !default;
 $base-font-weight: 300 !default;
 
@@ -69,8 +72,8 @@ $large-font-size: 16px !default;
 // Extra font sizes
 $tiny-font-size: 8px !default;
 $xlarge-font-size: 24px !default;
-$huge-font-size: 3rem !default;
-$goliath-font-size: 3.5rem !default;
+$huge-font-size: 48px !default;
+$goliath-font-size: 64px !default;
 $compressed-font-size: $small-font-size !default;
 
 // Icon font sizes
@@ -80,7 +83,6 @@ $default-icon-font-size: $base-font-size !default;
 $medium-icon-font-size: 16px !default;
 $large-icon-font-size: 18px !default;
 $xlarge-icon-font-size: 24px !default;
-
 
 // -----------------------------------------------------------------------------
 // Base: Other Sizes
@@ -94,9 +96,9 @@ $base-z-index: 0 !default;
 // -----------------------------------------------------------------------------
 // Base: Spacing
 
-$base-spacing-compressed: $base-spacing * 0.25 !default;
-$base-spacing-regular: $base-spacing * 0.5 !default;
-$base-spacing-loose: $base-spacing !default;
+$base-spacing-compressed: $base-spacing * 0.5 !default;
+$base-spacing-regular: $base-spacing !default;
+$base-spacing-loose: $base-spacing * 2 !default;
 
 
 // -----------------------------------------------------------------------------
@@ -114,9 +116,11 @@ $light-gray: #e9e9e9 !default;
 $off-white: #f9f9f9 !default;
 $off-white-alt: #f6f6f6 !default;
 
-$cisco-blue: #049fd9 !default;
-$cisco-blue2: #045071 !default;
+$cisco-blue: #049fd9 !default
+$cisco-blue2: #0377A1 !default; // New link color
+$cisco-blue3: #0E748E !default;
 $cisco-green: #abc233 !default;
+$cisco-darkgreen: #487B32 !default; // For filenames and non link URLs
 $med-blue: #34adde !default;
 $white: #ffffff !default;
 $black: #1a1a1a !default;
@@ -129,6 +133,7 @@ $dark-gray-4: #7f7f86 !default;
 $med-gray-2: #9e9ea2 !default;
 $med-gray-3: #b0b0b2 !default;
 $med-gray-4: #b6b9bb !default;
+$med-gray-5: #8e9299 !default; // CDC Footer background
 $light-gray-2: #c6c7ca !default;
 $light-gray-3: #dfdfdf !default;
 $light-gray-4: #f5f5f6 !default;
@@ -136,7 +141,7 @@ $light-gray-5: #f2f2f2 !default;
 $pale-gray-1: #e8ebf1 !default;
 $pale-gray-2: #f3f6f9 !default;
 
-$status-blue: #64bbe3 !default;
+$status-blue: #64bbe3 !default; // e2f7fb
 $status-turq: #14a792 !default;
 $status-green: #6cc04a !default;
 $status-red: #cf2030 !default;
@@ -182,8 +187,8 @@ $base-muted-color: $med-gray-2 !default;
 $base-disabled-color: $light-gray-2 !default;
 $base-accent-color: $cisco-blue !default;
 
-$base-link-color: $base-accent-color !default;
-$hover-link-color: $base-accent-color !default;
+$base-link-color: $cisco-blue2 !default;
+$hover-link-color: $cisco-blue !default;
 $base-link-color-invert: $white !default;
 
 
@@ -198,6 +203,27 @@ $base-outline: 1px dotted $base-accent-color;
 
 $breadcrumb-color: $base-font-color !default;
 $breadcrumb-padding: 0 2px 0 6px !default;
+
+
+// -----------------------------------------------------------------------------
+// Base: Dividers
+
+$base-divider-height: 1px !default;
+$base-divider-height-thick: 3px !default;
+$base-divider-height-thicker: 5px !default;
+$base-divider-height-thickest: 8px !default;
+
+$base-divider-accent-width: 5% !default;
+$base-divider-accent-min-width: $base-spacing * 2 !default;
+$base-divider-accent-background: $base-accent-color !default;
+
+$divider-sizes: ("thick", 3px),
+                ("thicker", 5px),
+                ("thickest", 8px);
+
+$divider-accent-colors: ("blue", $base-accent-color),
+                        ("indigo", $indigo),
+                        ("success", $success);
 
 
 // -----------------------------------------------------------------------------
@@ -437,7 +463,8 @@ $button-colors:
             'border-selected': $aui-primary-button-border-selected,
             'color': $aui-primary-button-color,
             'color-hover': $aui-primary-button-color-hover,
-            'color-selected': $aui-primary-button-color-selected
+            'color-selected': $aui-primary-button-color-selected,
+            'group-border-color': $aui-primary-button-background
         )
     ),(
         'name': 'primary-ghost',
@@ -447,9 +474,11 @@ $button-colors:
             'background-selected': $aui-primary-button-background,
             'border': $aui-primary-ghost-button-border,
             'border-selected': $aui-primary-ghost-button-border-selected,
+            'border-focus': $aui-primary-ghost-button-border,
             'color': $aui-primary-ghost-button-color,
             'color-hover': $aui-primary-ghost-button-color-hover,
-            'color-selected': $aui-primary-button-color
+            'color-selected': $aui-primary-button-color,
+            'group-border-color': $aui-primary-ghost-button-border
         )
     ),(
         'name': 'secondary',
@@ -459,7 +488,8 @@ $button-colors:
             'background-selected': $white,
             'color': $aui-secondary-button-color,
             'color-hover': $aui-secondary-button-color-hover,
-            'color-selected': $cisco-green
+            'color-selected': $cisco-green,
+            'group-border-color': $aui-secondary-button-background
         )
     ),(
         'name': 'negative',
@@ -467,7 +497,8 @@ $button-colors:
             'background': $aui-negative-button-background,
             'background-hover': $aui-negative-button-background-hover,
             'color': $aui-negative-button-color,
-            'color-hover': $aui-negative-button-color-hover
+            'color-hover': $aui-negative-button-color-hover,
+            'group-border-color': $aui-negative-button-background
         )
     ),(
         'name': 'success',
@@ -475,7 +506,8 @@ $button-colors:
             'background': $aui-success-button-background,
             'background-hover': $aui-success-button-background-hover,
             'color': $aui-success-button-color,
-            'color-hover': $aui-success-button-color-hover
+            'color-hover': $aui-success-button-color-hover,
+            'group-border-color': $aui-success-button-background
         )
     ),(
         'name': 'white',
@@ -483,7 +515,9 @@ $button-colors:
             'background': $aui-white-button-background,
             'background-hover': $aui-white-button-background-hover,
             'color': $aui-white-button-color,
-            'color-hover': $aui-white-button-color-hover
+            'border-focus': $dark-gray-3,
+            'color-hover': $aui-white-button-color-hover,
+            'group-border-color': $aui-white-button-background
         )
     ),(
         'name': 'white-ghost',
@@ -491,8 +525,10 @@ $button-colors:
             'background': $aui-white-ghost-button-background,
             'background-hover': $aui-white-ghost-button-background-hover,
             'border': $aui-white-ghost-button-border,
+            'border-focus': $light-gray-3,
             'color': $aui-white-ghost-button-color,
-            'color-hover': $aui-white-ghost-button-color-hover
+            'color-hover': $aui-white-ghost-button-color-hover,
+            'group-border-color': $aui-white-ghost-button-background
         )
     ),(
         'name': 'gray-ghost',
@@ -501,9 +537,11 @@ $button-colors:
             'background-hover': $aui-gray-ghost-button-background-hover,
             'background-selected': $dark-gray-3,
             'border': $aui-gray-ghost-button-border,
+            'border-focus': $aui-gray-ghost-button-border,
             'color': $aui-gray-ghost-button-color,
             'color-hover': $aui-gray-ghost-button-color-hover,
-            'color-selected': $white
+            'color-selected': $white,
+            'group-border-color': $aui-gray-ghost-button-border
         )
     );
 
@@ -515,35 +553,31 @@ $base-border-color: $light-gray-3 !default;
 $base-border-color-alt: $white !default;
 $base-border: 1px solid $base-border-color !default;
 $base-border-alt: 1px solid $base-border-color-alt !default;
-$base-box-shadow: 0 10px 20px rgba(0,0,0,.15), 0 10px 12px rgba(0,0,0,.25) !default;
-$base-box-shadow-small: 0 0 5px 1px rgba(0,0,0,0.25) !default;
+$base-box-shadow: 0 2px 5px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.15) !default;
+$base-box-shadow-small: $base-box-shadow !default;
+$base-box-shadow-medium: 0 5px 10px rgba(0,0,0,.15), 0 5px 6px rgba(0,0,0,.15) !default;
+$base-box-shadow-large: 0 10px 20px rgba(0,0,0,.15), 0 10px 12px rgba(0,0,0,.25) !default;
 
 
 // -----------------------------------------------------------------------------
 // Component: Alerts
 
-$base-alert-default-background: $cisco-blue !default;
-$base-alert-default-color: $white !default;
-$base-alert-default-border-color: transparent !default;
-$base-alert-default-link-color: $white !default;
-
-$base-alert-margin: 0 0 $base-spacing 0 !default;
-$base-alert-icon-size: 18px !default;
+$base-alert-margin: 0 0 ($base-spacing * 0.5) 0 !default;
+$base-alert-message-margin: 0 ($base-spacing * 0.5) !default;
+$base-alert-icon-size: 20px !default;
 $base-alert-border-left-width: 5px !default;
-$base-alert-close-icon-opacity: 0.75 !default;
+$base-alert-close-icon-opacity: 0.5 !default;
+
+$base-alert-default-background: transparent !default;
+$base-alert-default-color: $base-font-color !default;
+$base-alert-default-border-color: $cisco-blue !default;
+$base-alert-default-border-left-width: $base-alert-border-left-width !default;
+$base-alert-default-icon-color: $cisco-blue !default;
+$base-alert-default-link-color: $base-link-color !default;
 
 $alert-colors:
     (
         'name': 'info',
-        'params': (
-            'background': $cisco-blue,
-            'color': $white,
-            'border-color': transparent,
-            'icon-color': $white,
-            'link-color': $white
-        )
-    ),(
-        'name': 'info-alt',
         'params': (
             'background': transparent,
             'color': $base-font-color,
@@ -553,25 +587,27 @@ $alert-colors:
             'link-color': $base-link-color
         )
     ),(
-        'name': 'info-alt2',
+        'name': 'info-alt', // DEPRECATED. Will be removed post 1.0.6
         'params': (
-            'background': rgba($cisco-blue, .15),
-            'color': $cisco-blue,
-            'border-color': rgba($cisco-blue, .25),
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $cisco-blue,
+            'border-left-width': $base-alert-border-left-width,
             'icon-color': $cisco-blue,
-            'link-color': $cisco-blue
+            'link-color': $base-link-color
+        )
+    ),(
+        'name': 'info-alt2', // DEPRECATED. Will be removed post 1.0.6
+        'params': (
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $cisco-blue,
+            'border-left-width': $base-alert-border-left-width,
+            'icon-color': $cisco-blue,
+            'link-color': $base-link-color
         )
     ),(
         'name': 'success',
-        'params': (
-            'background': $success,
-            'color': $white,
-            'border-color': transparent,
-            'icon-color': $white,
-            'link-color': $white
-        )
-    ),(
-        'name': 'success-alt',
         'params': (
             'background': transparent,
             'color': $base-font-color,
@@ -581,25 +617,27 @@ $alert-colors:
             'link-color': $base-link-color
         )
     ),(
-        'name': 'success-alt2',
+        'name': 'success-alt', // DEPRECATED. Will be removed post 1.0.6
         'params': (
-            'background': rgba($success, .15),
-            'color': $success,
-            'border-color': rgba($success, .25),
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $success,
+            'border-left-width': $base-alert-border-left-width,
             'icon-color': $success,
-            'link-color': $success
+            'link-color': $base-link-color
+        )
+    ),(
+        'name': 'success-alt2', // DEPRECATED. Will be removed post 1.0.6
+        'params': (
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $success,
+            'border-left-width': $base-alert-border-left-width,
+            'icon-color': $success,
+            'link-color': $base-link-color
         )
     ),(
         'name': 'warning',
-        'params': (
-            'background': $warning,
-            'color': $white,
-            'border-color': transparent,
-            'icon-color': $white,
-            'link-color': $white
-        )
-    ),(
-        'name': 'warning-alt',
         'params': (
             'background': transparent,
             'color': $base-font-color,
@@ -609,25 +647,27 @@ $alert-colors:
             'link-color': $base-link-color
         )
     ),(
-        'name': 'warning-alt2',
+        'name': 'warning-alt', // DEPRECATED. Will be removed post 1.0.6
         'params': (
-            'background': rgba($warning, .15),
-            'color': $warning,
-            'border-color': rgba($warning, .25),
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $warning,
+            'border-left-width': $base-alert-border-left-width,
             'icon-color': $warning,
-            'link-color': $warning
+            'link-color': $base-link-color
+        )
+    ),(
+        'name': 'warning-alt2', // DEPRECATED. Will be removed post 1.0.6
+        'params': (
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $warning,
+            'border-left-width': $base-alert-border-left-width,
+            'icon-color': $warning,
+            'link-color': $base-link-color
         )
     ),(
         'name': 'danger',
-        'params': (
-            'background': $danger,
-            'color': $white,
-            'border-color': transparent,
-            'icon-color': $white,
-            'link-color': $white
-        )
-    ),(
-        'name': 'danger-alt',
         'params': (
             'background': transparent,
             'color': $base-font-color,
@@ -637,13 +677,24 @@ $alert-colors:
             'link-color': $base-link-color
         )
     ),(
-        'name': 'danger-alt2',
+        'name': 'danger-alt', // DEPRECATED. Will be removed post 1.0.6
         'params': (
-            'background': rgba($danger, .15),
-            'color': $danger,
-            'border-color': rgba($danger, .25),
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $danger,
+            'border-left-width': $base-alert-border-left-width,
             'icon-color': $danger,
-            'link-color': $danger
+            'link-color': $base-link-color
+        )
+    ),(
+        'name': 'danger-alt2', // DEPRECATED. Will be removed post 1.0.6
+        'params': (
+            'background': transparent,
+            'color': $base-font-color,
+            'border-color': $danger,
+            'border-left-width': $base-alert-border-left-width,
+            'icon-color': $danger,
+            'link-color': $base-link-color
         )
     );
 
@@ -754,7 +805,7 @@ $base-panel-hover-lighten: 10 !default;
 $base-panel-hover-darken: 10 !default;
 $base-panel-padding: $base-spacing * 0.5 !default;
 $base-panel-section-padding: ($base-spacing * 0.25) 0 !default;
-$base-panel-box-shadow: $base-box-shadow !default;
+$base-panel-box-shadow: $base-box-shadow-medium !default;
 
 $base-panel-blue-color: $white !default;
 $base-panel-blue-background: $cisco-blue !default;
@@ -817,10 +868,18 @@ $panel-colors:
             link-color: $white
         )
     ),(
+        name: 'gray-ghost',
+        params: (
+            border-color: $base-panel-ltgray-background,
+            background: transparent,
+            color: $base-font-color,
+            embellish: 'darken'
+        )
+    ),(
         name: 'info',
         params: (
             background: $info,
-            color: $white,
+            color: $base-font-color,
             embellish: 'darken',
             link-color: $white
         )
@@ -920,12 +979,6 @@ $base-switch-knob-background-hover: $white !default;
 
 
 // -----------------------------------------------------------------------------
-// Component: Modals
-
-$base-modal-background: $white !default;
-
-
-// -----------------------------------------------------------------------------
 // Component: Tooltips
 
 $base-tooltip-background: rgba(0,0,0,0.9) !default;
@@ -939,11 +992,31 @@ $popover-background: rgba(0,0,0,0.8);
 
 
 // -----------------------------------------------------------------------------
-// Component: Backdrops / Overlays
+// Component: Dropdowns
 
-$base-backdrop-background: $pale-gray-1 !default;
-$base-backdrop-opacity: 0.85 !default;
+$base-dropdown-zindex: 1032 !default;
+$base-dropdown-menu-minwidth: 200px !default;
+$base-dropdown-menu-maxwidth: 300px !default;
+$base-dropdown-menu-item-height: 40px !default;
+$base-dropdown-menu-hover: $light-gray-5 !default;
+$base-dropdown-menu-accent: 2px solid $base-accent-color !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Modals
+
+$base-backdrop-zindex: 1040 !default;
+$base-modal-zindex: 1050 !default;
+
+$base-backdrop-background: rgb(196,199,204) !default;
+$base-backdrop-opacity: 0.65 !default;
 $base-overlay-background: rgba(0,0,0,0.5) !default;
+
+$base-modal-background: $white !default;
+$base-modal-maxwidth: 700px !default;
+$base-modal-close-size: 34px !default;
+$base-modal-title-size: 48px !default;
+$base-modal-title-weight: 100 !default;
 
 
 // -----------------------------------------------------------------------------
@@ -957,6 +1030,19 @@ $base-step-halo-size: 10px !default;
 $base-step-halo-color: $base-background-color !default;
 $base-step-halo-alt-color: $white !default;
 $small-step_icon-size: 32px !default;
+
+
+// -----------------------------------------------------------------------------
+// Component: Rating
+
+$base-rating-font-size: 20px !default;
+$base-rating-margin: 8px !default;
+
+$base-rating-font-size-small: 12px !default;
+$base-rating-margin-small: $base-spacing * 0.25 !default;
+
+$base-rating-font-size-large: 30px !default;
+$base-rating-margin-large: $base-spacing !default;
 
 
 // -----------------------------------------------------------------------------
@@ -1002,9 +1088,9 @@ $scoreboard-subtitle-font-size: 14px !default;
 // Component: Tabs
 
 $base-tab-font-size: 12px !default;
-$base-tab-padding: 3px $base-spacing !default;
-$base-tab-tall-padding: ($base-spacing * 0.5) $base-spacing !default;
-$base-tab-margin: 0 10px 0 0 !default;
+$base-tab-padding: ($base-spacing * 0.5) 0 !default;
+$base-tab-tall-padding: $base-spacing 0 !default;
+$base-tab-margin: 0 ($base-spacing) 0 0 !default;
 $base-tab-vertical-height: 40px !default;
 
 
@@ -1015,7 +1101,7 @@ $toast-max-width: 300px !default;
 $toast-icon-size: $base-font-size * 1.5 !default;
 $toast-border-width: $base-spacing * 0.25 !default;
 $toast-border-opacity: 0.1 !default;
-$toast-box-shadow: $base-box-shadow-small !default;
+$toast-box-shadow: $base-box-shadow-medium !default;
 
 
 // -----------------------------------------------------------------------------
@@ -1036,6 +1122,7 @@ $footer-spacing-loose: ($base-spacing * 2) 0 !default;
 $header-zindex: 1030 !default;
 $header-height-tall: 130px !default;
 $header-height-large: 110px !default;
+$header-height-regular: 90px !default;
 $header-height-small: 56px !default;
 $header-background-color: $white !default;
 $header-line-height: 1.2 !default;
@@ -1074,32 +1161,52 @@ $header-utilities-color-disabled: $light-gray-3 !default;
 
 $sidebar-zindex: 1031 !default;
 $sidebar-color: $white !default;
+$sidebar-link-color: $white !default;
 $sidebar-background: $cisco-blue !default;
+$sidebar-background-ltgray: $light-gray-5 !default;
 $sidebar-background-dkgray: $dark-gray-2 !default;
-$sidebar-background-indigo: $indigo $default;
+$sidebar-background-indigo: $indigo !default;
+$sidebar-hover-color: $white !default;
 $sidebar-menu-width: $mobile-menu-width !default;
 $sidebar-divider-color: rgba($white, .25) !default;
 $sidebar-hover-lighten: 10 !default;
 $sidebar-hover-darken: 10 !default;
 $sidebar-item-height: 40px !default;
 $sidebar-item-background-selected: $med-blue !default;
+$sidebar-item-color-selected: $white !default;
 $sidebar-item-border-selected: 5px 0 0 $white inset !default;
 $sidebar-item-border: 1px solid $status-blue !default;
 $sidebar-item-border-shadow: $status-blue !default;
 $sidebar-title-font-size: 24px !default;
 $sidebar-colors:
     (
+        name: 'ltgray',
+        params: (
+            background: $sidebar-background-ltgray,
+            background-selected: darken($sidebar-background-ltgray, 10),
+            color: $base-font-color,
+            color-selected: $base-font-color,
+            divider-color: transparent,
+            link-color: $base-link-color
+        )
+    ),(
         name: 'dkgray',
         params: (
             background: $sidebar-background-dkgray,
+            background-selected: lighten($sidebar-background-dkgray, 10),
             color: $sidebar-color,
-            embellish: 'lighten'
+            color-selected: $sidebar-item-color-selected,
+            divider-color: $sidebar-divider-color,
+            link-color: $sidebar-link-color
         )
     ),(
         name: 'indigo',
         params: (
             background: $sidebar-background-indigo,
+            background-selected: lighten($sidebar-background-indigo, 10),
             color: $sidebar-color,
-            embellish: 'lighten'
+            color-selected: $sidebar-item-color-selected,
+            divider-color: $sidebar-divider-color,
+            link-color: $sidebar-link-color
         )
     );

@@ -1,3 +1,4 @@
+
 // -----------------------------------------------------------------------------
 // Absolute Center
 
@@ -306,27 +307,6 @@
     clip: rect(0 0 0 0);
 }
 
-
-// -----------------------------------------------------------------------------
-// Breakpoints
-
-@mixin break-at($name) {
-    // If the key exists in the map
-    @if map-has-key($breakpoints, $name) {
-        // Prints a media query based on the value
-        @media #{inspect(map-get($breakpoints, $name))} {
-            @content;
-        }
-    }
-
-    // If the key doesn't exist in the map
-    @else {
-        @warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. "
-            + "Please make sure it is defined in `$breakpoints` map.";
-    }
-}
-
-
 // -----------------------------------------------------------------------------
 // Dividers
 
@@ -334,8 +314,26 @@
     margin: $margin 0;
 }
 
-@mixin divider-horizontal($thickness: 1px, $color: $base-border-color, $location: top) {
+@mixin divider-horizontal($thickness: 1px, $color: $light-gray-5, $location: top) {
     border-#{$location}: $thickness solid $color;
+}
+
+@mixin divider-accent(
+    $background:    $base-divider-accent-background,
+    $height:        $base-divider-height,
+    $width:         $base-divider-accent-width,
+    $min-width:     $base-divider-accent-min-width
+) {
+    &:before {
+        position: absolute;
+        left: 0;
+        top: -($height);
+        width: $width;
+        min-width: $min-width;
+        height: $height;
+        background-color: $background;
+        content: '';
+    }
 }
 
 @mixin vertical-divider($margin: 0 $base-spacing * 0.25) {
@@ -356,28 +354,39 @@
 // Sidebar
 
 @mixin sidebar-color(
-    $background: $sidebar-background,
-    $color: $sidebar-color,
-    $embellish: 'lighten')
-{
+    $background:            $sidebar-background,
+    $background-selected:   $sidebar-item-background-selected,
+    $color:                 $sidebar-color,
+    $color-selected:        $sidebar-item-color-selected,
+    $divider-color:         $sidebar-divider-color,
+    $link-color:            $sidebar-link-color
+) {
     background: $background;
     color: $color;
+
+    a {
+        color: $link-color;
+    }
 
     li {
         &.sidebar__item--selected a,
         &.selected a,
         a:hover {
-            @if $embellish == "lighten" {
-                background-color: desaturate(lighten($background, $sidebar-hover-lighten), 10);
-            }
-            @else {
-                background-color: darken($background, $sidebar-hover-darken);
-            }
+            color: $color-selected;
+            background-color: $background-selected;
         }
     }
 
+    > ul li.sidebar__drawer > a:after {
+        color: $link-color; // Colorize chevrons
+    }
+
+    > ul li.sidebar__drawer:hover > a:after {
+        color: $color-selected; // Colorize chevrons on hover
+    }
+
     > ul > li {
-        box-shadow: 0 1px 0 $sidebar-divider-color inset; // divider lines
+        box-shadow: 0 1px 0 $divider-color inset; // divider lines
     }
 }
 
@@ -550,8 +559,10 @@
     $border:              "",
     $border-hover:        "",
     $border-focus:        "",
-    $border-selected:     "")
+    $border-selected:     "",
+    $group-border-color:  "")
 {
+    border: 1px solid transparent;
     background: $background;
     color: $color;
 
@@ -559,28 +570,29 @@
         box-shadow: inset 0 0 0 $aui-button-border-size $border;
     }
 
-    &:hover,
-    &:focus {
-        box-shadow: 0 0 0 0 transparent;
-        background-color: $background-hover;
-        color: $color-hover;
+    @if $border-focus == "" {
+        $border-focus: $background;
     }
 
     &:hover {
+        box-shadow: 0 0 0 0 transparent;
+        background-color: $background-hover;
+        color: $color-hover;
+
         @if $border-hover != "" {
             box-shadow: inset 0 0 0 $aui-button-border-size $border-hover;
         }
     }
 
     &:focus {
+        box-shadow: 0 0 1px 1px $border-focus;
+        border: 1px solid $white;
+
         @if $color-focus != "" {
             color: $color-focus;
         }
         @if $background-focus != "" {
             background-color: $background-focus;
-        }
-        @if $border-focus != "" {
-            box-shadow: inset 0 0 0 $aui-button-border-size $border-focus;
         }
     }
 
