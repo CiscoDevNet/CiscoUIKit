@@ -1,258 +1,379 @@
 //
 // Dropdown
 //
-// Simple dropdown menu.<br><br>
-// Since 1.2.0
+// Add a simple dropdown menu to existing buttons, icons, or links.
 //
 // Styleguide Components.Dropdown
 //
 
 
 //
-// Examples
-//
-// <blockquote>Add class `btn--dropdown` to your button to add a toggle and class `active` to display the menu.</blockquote>
+// Buttons
 //
 // Markup:
-// <div class="dropdown">
-//     <button class="btn btn--dropdown">Dropdown</button>
-//     <div class="dropdown__menu">
-//         <a>Action One</a>
-//         <a>Action Two</a>
-//         <a>Action Three</a>
+// <div class="row">
+//     <div class="col-md-4 text-center">
+//         <div class="subheader">Open Right (default)</div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="subheader">Open Left</div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="subheader">Centered</div>
 //     </div>
 // </div>
-// <div class="dropdown">
-//     <button class="btn btn--primary btn--dropdown">Dropdown</button>
-//     <div class="dropdown__menu">
-//         <a>Action One</a>
-//         <a>Action Two</a>
-//         <a>Action Three</a>
+// <div class="row">
+//     <div class="col-md-4 text-center">
+//         <div class="dropdown active">
+//             <button class="btn btn--small">button</button>
+//             <div class="dropdown__menu">
+//                 <a>Menu Action One</a>
+//                 <a>Menu Action Two</a>
+//                 <div class="dropdown__divider"></div>
+//                 <a class="selected">Menu Action Three</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="dropdown dropdown--left">
+//             <button class="btn btn--small">button</button>
+//             <div class="dropdown__menu">
+//                 <a>Menu Action One</a>
+//                 <a>Menu Action Two</a>
+//                 <div class="dropdown__divider"></div>
+//                 <a class="selected">Menu Action Three</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="dropdown dropdown--center">
+//             <button class="btn btn--small">button</button>
+//             <div class="dropdown__menu">
+//                 <a>Menu Action One</a>
+//                 <a>Menu Action Two</a>
+//                 <div class="dropdown__divider"></div>
+//                 <a class="selected">Menu Action Three</a>
+//             </div>
+//         </div>
 //     </div>
 // </div>
-// <div class="dropdown">
-//     <button class="btn btn--primary-ghost btn--dropdown">Dropdown</button>
-//     <div class="dropdown__menu">
-//         <a>Action One</a>
-//         <a>Action Two</a>
-//         <a>Action Three</a>
-//     </div>
-// </div>
+// <div class="dbl-padding-bottom"></div>
 //
 // Weight: 1
 //
-// Styleguide Components.Dropdown.Examples
+// Styleguide Components.Dropdown.Buttons
 //
 
 
 //
-// Direction
-//
-// <blockquote>Your dropdown menu can open right (default) or left.</blockquote>
+// Icons
 //
 // Markup:
-// <div class="dropdown">
-//     <button class="btn btn--primary btn--dropdown">Open Right</button>
-//     <div class="dropdown__menu">
-//         <a>Action One</a>
-//         <a>Action Two</a>
-//         <a>Action Three</a>
+// <div class="row">
+//     <div class="col-md-4 text-center">
+//         <div class="subheader">Open Right (default)</div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="subheader">Open Left</div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="subheader">Centered</div>
 //     </div>
 // </div>
-// <div class="dropdown">
-//     <button class="btn btn--primary btn--dropdown">Open Left</button>
-//     <div class="dropdown__menu dropdown__menu--openleft">
-//         <a>Action One</a></li>
-//         <a>Action Two</a>
-//         <a>Action Three</a>
+// <div class="row">
+//     <div class="col-md-4 text-center">
+//         <div class="dropdown active dropdown--tail">
+//             <span class="icon-more icon-medium"></span>
+//             <div class="dropdown__menu">
+//                 <a>Menu Action One</a>
+//                 <a>Menu Action Two</a>
+//                 <div class="dropdown__divider"></div>
+//                 <a class="selected">Menu Action Three</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="dropdown dropdown--tail dropdown--left">
+//             <span class="icon-more icon-medium"></span>
+//             <div class="dropdown__menu">
+//                 <a>Menu Action One</a>
+//                 <a>Menu Action Two</a>
+//                 <div class="dropdown__divider"></div>
+//                 <a class="selected">Menu Action Three</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="dropdown dropdown--tail dropdown--center">
+//             <span class="icon-more icon-medium"></span>
+//             <div class="dropdown__menu">
+//                 <a>Menu Action One</a>
+//                 <a>Menu Action Two</a>
+//                 <div class="dropdown__divider"></div>
+//                 <a class="selected">Menu Action Three</a>
+//             </div>
+//         </div>
 //     </div>
 // </div>
+// <div class="dbl-padding-bottom"></div>
 //
 // Weight: 2
 //
-// Styleguide Components.Dropdown.Direction
+// Styleguide Components.Dropdown.Icons
 //
 
 
 //
-// Selection
-//
-// <blockquote>Add the class `selected` to a menu item to denote selection.</blockquote>
+// Links
 //
 // Markup:
-// <div class="dropdown">
-//     <button class="btn btn--primary btn--dropdown">Action One</button>
-//     <div class="dropdown__menu">
-//         <a class="selected">Action One</a>
-//         <a>Action Two</a>
-//         <a>Action Three</a>
+// <div class="row">
+//     <div class="col-md-4 text-center">
+//         <div class="subheader">Open Right (default)</div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="subheader">Open Left</div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="subheader">Centered</div>
 //     </div>
 // </div>
+// <div class="row">
+//     <div class="col-md-4 text-center">
+//         <div class="dropdown active dropdown--tail">
+//             <a href="javascript:;">link</a>
+//             <div class="dropdown__menu">
+//                 <a>Menu Action One</a>
+//                 <a>Menu Action Two</a>
+//                 <div class="dropdown__divider"></div>
+//                 <a class="selected">Menu Action Three</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="dropdown dropdown--left dropdown--tail">
+//             <a href="javascript:;">link</a>
+//             <div class="dropdown__menu">
+//                 <a>Menu Action One</a>
+//                 <a>Menu Action Two</a>
+//                 <div class="dropdown__divider"></div>
+//                 <a class="selected">Menu Action Three</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4 text-center">
+//         <div class="dropdown dropdown--center dropdown--tail">
+//             <a href="javascript:;">link</a>
+//             <div class="dropdown__menu">
+//                 <a>Menu Action One</a>
+//                 <a>Menu Action Two</a>
+//                 <div class="dropdown__divider"></div>
+//                 <a class="selected">Menu Action Three</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="dbl-padding-bottom"></div>
 //
 // Weight: 3
 //
-// Styleguide Components.Dropdown.Selection
-//
-
-
-//
-// Divider
-//
-// <blockquote>Add a divider to group menu items.</blockquote>
-//
-// Markup:
-// <div class="dropdown">
-//     <button class="btn btn--primary btn--dropdown">Divider</button>
-//     <div class="dropdown__menu">
-//         <a>Action One</a>
-//         <a>Action Two</a>
-//         <div class="dropdown__divider"></div>
-//         <a>Action Three</a>
-//     </div>
-// </div>
-//
-// Weight: 4
-//
-// Styleguide Components.Dropdown.Divider
-//
-
-
-//
-// Animation
-//
-// <blockquote>Add the class `dropdown--animated` to add a subtle animation to your dropdown.</blockquote>
-//
-// Markup:
-// <div class="dropdown dropdown--animated">
-//     <button class="btn btn--primary btn--dropdown">Animated</button>
-//     <div class="dropdown__menu">
-//         <a>Action One</a>
-//         <a>Action Two</a>
-//         <div class="dropdown__divider"></div>
-//         <a>Action Three</a>
-//     </div>
-// </div>
-//
-// Weight: 5
-//
-// Styleguide Components.Dropdown.Animation
+// Styleguide Components.Dropdown.Links
 //
 
 .dropdown {
     display: inline-block;
     position: relative;
-
-    &.active {
-        .dropdown__menu {
-            visibility: visible;
-            opacity: 1;
-            z-index: $base-dropdown-zindex;
-        }
-        .btn.btn--dropdown {
-            &:after {
-                transform: rotate(180deg);
-            }
-        }
-    }
-
-    &--animated {
-        .btn.btn--dropdown {
-            &:after {
-                transition: transform 0.1s ease-in;
-            }
-        }
-    }
-    &--animated.active {
-        .btn.btn--dropdown {
-            &:after {
-                transition: transform 0.1s ease-in-out;
-            }
-        }
-    }
-
-    .btn.btn--dropdown {
-        padding: 0 ($base-spacing * 0.5);
-
-        > span {
-            margin-right: $base-spacing * 0.25;
-        }
-        &:after {
-            display: inline-block;
-            width: 0;
-            height: 0;
-            margin-left: $base-spacing * 0.5;
-            content: "";
-            vertical-align: middle;
-            border-top-width: 6px;
-            border-top-style: solid;
-            border-top-color: initial;
-            border-right: 6px solid transparent;
-            border-left: 6px solid transparent;
-            border-bottom-width: 0;
-            transform: rotate(0);
-        }
-    }
-
-    &__divider {
-        height: 1px;
-        overflow: hidden;
-        background-color: $base-border-color;
-    }
+    cursor: pointer;
+    outline: none;
 
     &__menu {
         @include list--unstyled;
-        margin: 0;
+        display: flex;
+        flex-direction: column;
         padding: 0;
-    	position: absolute;
-        visibility: hidden;
         opacity: 0;
-        top: 100%;
-        left: 0; // Open right
-        margin-top: 3px;
-    	z-index: -1;
-        min-width: $base-dropdown-menu-minwidth;
-        max-width: $base-dropdown-menu-maxwidth;
-    	background-color: $white;
+        background: $white;
+        border: $base-border;
+        border-radius: $base-border-radius;
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+        list-style: none;
+        position: absolute;
+        pointer-events: auto;
+        top: calc(100% + 10px);
+        width: auto;
+        min-width: 150px;
+        max-width: 600px;
+        transform: translateY(-2em);
     	text-align: left;
-        border-top: $base-dropdown-menu-accent;
-        border-radius: 0 0 2px 2px;
-    	box-shadow: $base-box-shadow;
+    	box-shadow: $base-dropdown-box-shadow;
+        font-weight: normal;
+        visibility: hidden;
 
-        &--openleft {
-            left: unset;
-            right: 0; // Open left
+        &__divider {
+            height: 1px;
+            overflow: hidden;
+            background-color: $base-border-color;
         }
 
-    	a {
+        a,
+        .dropdown__group-header {
             height: $base-dropdown-menu-item-height;
             line-height: $base-dropdown-menu-item-height;
-            display: inline-block;
-            vertical-align: middle;
-            color: $base-font-color;
+            display: inline-flex;
+            color: $base-font-color !important;
             padding: 0 40px 0 ($base-spacing * 0.5);
             width: 100%;
             position: relative;
-
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: $base-dropdown-menu-maxwidth;
             white-space: nowrap;
+        }
 
+        .dropdown__group-header {
+            pointer-events: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: $base-border;
+        }
+
+        a {
+            border-left: 4px solid transparent;
+
+            .checkbox {
+                margin-right: $base-spacing-half;
+            }
             &.selected {
-                color: $base-accent-color;
-
+                color: $base-dropdown-menu-selected-color !important;
+                background-color: $base-dropdown-menu-selected-background;
                 &:after {
                     @include icon-check;
                     position: absolute;
                     right: $base-spacing * 0.5;
                     font-weight: bold;
                 }
+                &:hover {
+                    color: $base-dropdown-menu-selected-color;
+                    background-color: $base-dropdown-menu-selected-background;
+                }
             }
-
+            &:focus {
+                outline: none;
+            }
             &:hover {
-                cursor: pointer;
-                background: $base-dropdown-menu-hover;
+                border-right-color: $base-accent-color;
+                color: $base-dropdown-menu-hover-color;
+                background-color: $base-dropdown-menu-hover-background;
+                text-decoration: none !important;
             }
-    	}
+        }
     }
+
+    &.active {
+        > span[class^="icon-"] {
+            color: $base-link-color;
+        }
+        .dropdown__menu {
+            opacity: 1;
+            visibility: visible;
+            z-index: $base-dropdown-zindex;
+            transform: translateY(0%);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            a {
+                z-index: $base-dropdown-zindex + 1;
+            }
+        }
+    }
+
+    &--tail {
+        .dropdown__menu:after {
+            content: '';
+            display: block;
+            width: $base-spacing-half;
+            height: $base-spacing-half;
+            margin: 0;
+            position: absolute;
+            transform: rotate(45deg);
+            left: $base-spacing-half;
+            right: auto;
+            top: -$base-spacing-qtr;
+            box-shadow: -1px -1px 0 0 $base-border-color;
+            background: $white;
+        }
+    }
+    &--left {
+        .dropdown__menu {
+            right: 0;
+        }
+        .dropdown__menu:after {
+            left: auto;
+            right: $base-spacing-half;
+        }
+    }
+    &--center {
+        .dropdown__menu {
+            left: 50%;
+        }
+        .dropdown__menu:after {
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+    &.active.dropdown--center {
+        .dropdown__menu {
+            transform: translate(-50%, 0%);
+        }
+    }
+}
+
+// Special handling for form group select
+.form-group {
+    &.dropdown {
+        .dropdown__menu {
+            width: 100%;
+            top: calc(100% - 1px);
+        }
+    }
+}
+
+// Add chevron to button and link dropdowns
+.dropdown {
+    &.active {
+        > a, > .btn {
+            &:after {
+                @include drawer-opened;
+            }
+        }
+    }
+    > a, > .btn {
+        &:after {
+            @include drawer-closed;
+            font-size: 80%;
+            display: inline-flex;
+            margin-left: $base-spacing-qtr;
+            color: inherit;
+            text-align: center;
+        }
+    }
+    > a {
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+        }
+    }
+}
+
+
+// Global Modifiers
+
+&.cui--animated .dropdown.active {
+    .dropdown__menu {
+        transition: opacity 0.3s;
+    }
+}
+&.cui--animated .dropdown > .btn:after,
+&.cui--animated .dropdown > a:after {
+    transition: transform 0.3s ease;
 }

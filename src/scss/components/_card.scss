@@ -1,0 +1,430 @@
+//
+// Card
+//
+// Styleguide Components.Card
+//
+
+
+//
+// Basic
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="card">
+//             <div class="card__header">
+//                 <h4 class="card__title">Card Title</h4>
+//                 <div class="card__subtitle">Card Subtitle</div>
+//             </div>
+//             <div class="card__body">Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in.</div>
+//             <div class="card__footer">
+//                 <a href="javascript:;">Link</a>
+//                 <a href="javascript:;" class="half-margin-left">Another Link</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="card card--centered">
+//             <div class="card__header">
+//                 <h4 class="card__title">Card Title</h4>
+//                 <div class="card__subtitle">Card Subtitle</div>
+//             </div>
+//             <div class="card__body">Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in.</div>
+//             <div class="card__footer">
+//                 <a href="javascript:;">Link</a>
+//                 <a href="javascript:;" class="half-margin-left">Another Link</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="card card--right">
+//             <div class="card__header">
+//                 <h4 class="card__title">Card Title</h4>
+//                 <div class="card__subtitle">Card Subtitle</div>
+//             </div>
+//             <div class="card__body">Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in.</div>
+//             <div class="card__footer">
+//                 <a href="javascript:;">Link</a>
+//                 <a href="javascript:;" class="half-margin-left">Another Link</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Card.Basic
+//
+
+
+//
+// Raised
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="card card--raised">
+//             <div class="card__header">
+//                 <h4 class="card__title">Card Title</h4>
+//                 <div class="card__subtitle">Card Subtitle</div>
+//             </div>
+//             <div class="card__body">Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in.</div>
+//             <div class="card__footer">
+//                 <a href="javascript:;">Link</a>
+//                 <a href="javascript:;" class="half-margin-left">Another Link</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Card.Raised
+//
+
+
+//
+// State
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="subheader">Hovered</div>
+//         <div class="card card--raised hover">
+//             <div class="card__header">
+//                 <h4 class="card__title">Card Title</h4>
+//                 <div class="card__subtitle">Card Subtitle</div>
+//             </div>
+//             <div class="card__body">Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in.</div>
+//             <div class="card__footer">
+//                 <a href="javascript:;">Link</a>
+//                 <a href="javascript:;" class="half-margin-left">Another Link</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="subheader">Selected</div>
+//         <div class="card card--raised selected">
+//             <div class="card__header">
+//                 <h4 class="card__title">Card Title</h4>
+//                 <div class="card__subtitle">Card Subtitle</div>
+//             </div>
+//             <div class="card__body">Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in.</div>
+//             <div class="card__footer">
+//                 <a href="javascript:;">Link</a>
+//                 <a href="javascript:;" class="half-margin-left">Another Link</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Components.Card.State
+//
+
+
+//
+// Examples
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6 col-xl-3">
+//         <div class="card">
+//             <div class="card__header">
+//                 <div class="text-center">
+//                     <img src="public/img/8841PhoneFront.jpg">
+//                 </div>
+//             </div>
+//             <div class="card__body no-margin">
+//                 <h4 class="display-4">IP Phone 8841</h4>
+//                 <div class="subtitle">Cost-effective and secure voice communications ideal for small to mid-sized businesses</div>
+//                 <div class="flex-center-vertical base-margin-top">
+//                     <div class="rating rating--alt">
+//                         <div class="rating__stars">
+//                             <div class="rating__star" title="5 Stars" tabindex="0">
+//                                 <span class="icon-star"></span>
+//                             </div>
+//                             <div class="rating__star active" title="4 Stars" tabindex="0">
+//                                 <span class="icon-star"></span>
+//                             </div>
+//                             <div class="rating__star active" title="3 Stars" tabindex="0">
+//                                 <span class="icon-star"></span>
+//                             </div>
+//                             <div class="rating__star active" title="2 Stars" tabindex="0">
+//                                 <span class="icon-star"></span>
+//                             </div>
+//                             <div class="rating__star active" title="1 Star" tabindex="0">
+//                                 <span class="icon-star"></span>
+//                             </div>
+//                         </div>
+//                     </div>
+//                     <span class="qtr-margin-left">(3)</span>
+//                 </div>
+//                 <div class="base-margin-top">
+//                     <div class="subtitle">Starting At:</div>
+//                     <h3 class="display-4">$349.00 (AUD)</h3>
+//                     <button class="btn btn--small btn--primary base-margin-top">Shop Now</button>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6 col-lg-5">
+//         <div class="card card--raised">
+//             <div class="card__header">
+//                 <img src="public/img/workspaces.png">
+//             </div>
+//             <div class="card__body">
+//                 <div class="flex-center-vertical">
+//                     <img class="thumb thumb--small" src="public/img/user-photo-thumb-1.png">
+//                     <div class="flex-fluid text-left half-margin-left">
+//                         <div class="text-bold">Mary Thompson</div>
+//                         <div>Account Executive</div>
+//                     </div>
+//                     <div>
+//                         <div class="rating rating--alt">
+//                             <div class="rating__stars">
+//                                 <div class="rating__star" title="4 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                                 <div class="rating__star active" title="3 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                                 <div class="rating__star active" title="2 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                                 <div class="rating__star active" title="1 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                                 <div class="rating__star active" title="4 Stars" tabindex="0">
+//                                     <span class="icon-star"></span>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6 col-lg-4">
+//         <div class="card">
+//             <div class="card__header">
+//                 <div class="flex">
+//                     <div class="flex-fluid half-margin-right">
+//                         <img src="public/img/phone-webex.png">
+//                     </div>
+//                     <div class="base-margin-top text-left base-margin-right">
+//                         <div class="display-4">Introducing</div>
+//                         <p>Cisco WebEx</p>
+//                         <div>
+//                             <img style="max-width:48px" src="public/img/webex-meetings-thumb.png">
+//                             <img style="max-width:48px" src="public/img/webex-teams-thumb.png">
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="card__footer">
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;" class="link">
+//                         <span class="icon-webex"></span>
+//                         <div class="subtext">Demo</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;" class="link">
+//                         <span class="icon-headset"></span>
+//                         <div class="subtext">Contact Us</div>
+//                     </a>
+//                 </div>
+//                 <div class="card__footer__item">
+//                     <a href="javascript:;" class="link">
+//                         <span class="icon-download"></span>
+//                         <div class="subtext">Download</div>
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="card card--raised base-margin-top">
+//     <div class="panel panel--loose">
+//         <div class="row">
+//             <div class="col-md-4">
+//                 <img src="public/img/8841PhoneFront.jpg">
+//             </div>
+//             <div class="col-md-8">
+//                 <h4 class="display-4">IP Phone 8841</h4>
+//                 <div class="subtitle">Business-class Communication</div>
+//                 <p class="subtitle">The 8841 IP Phone provides cost-effective and secure voice communications ideal for small to mid-sized businesses.</p>
+//                 <div>
+//                     <dl class="dl--inline-wrap">
+//                         <dt>Display Type</dt>
+//                         <dd>5-in. high resolution (800 x 480) widescreen VGA color display</dd>
+//                         <dt>Hardware</dt>
+//                         <dd>VoIP. Supports Gigabit Ethernet switch for your PC connection</dd>
+//                         <dt>Lines Supported</dt>
+//                         <dd>5 lines per phone</dd>
+//                         <dt>Power</dt>
+//                         <dd>Supports Cisco EnergyWise&tm; technology; phone is Energy Star-qualified</dt>
+//                     </dl>
+//                     <a class="base-margin-top" href="javascript:;">Additional specifications</a>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="row base-margin-top">
+//             <div class="col-md-4">
+//                 <div class="row">
+//                     <div class="col-md-4">
+//                         <div class="panel">
+//                             <img src="public/img/8841PhoneFeatures.jpg">
+//                         </div>
+//                     </div>
+//                     <div class="col-md-4">
+//                         <div class="panel">
+//                             <img src="public/img/8841PhoneRear.jpg">
+//                         </div>
+//                     </div>
+//                     <div class="col-md-4">
+//                         <div class="panel">
+//                             <img src="public/img/8841PhoneFront2.jpg">
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="col-md-8">
+//                 <div class="subtitle">Starting At:</div>
+//                 <div class="flex-center-vertical">
+//                     <h3 class="display-4 no-margin">$349.00 (AUD)</h3>
+//                     <button class="btn btn--primary base-margin-left">Shop Now</button>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 10
+//
+// Styleguide Components.Card.Examples
+//
+
+.card,
+a.card {
+    @include panel($border-color: $base-border-color);
+    @include panel-padding();
+
+    display: block;
+    border-radius: $base-border-radius;
+    min-height: $cui-grid-default-card-size;
+
+    &__body {
+        margin-top: $base-spacing;
+        margin-bottom: $base-spacing;
+    }
+
+    .card__title,
+    &__header .card__header__title {
+        margin-bottom: $base-spacing-qtr;
+    }
+    .card__subtitle,
+    &__header .card__header__subtitle {
+        color: $base-muted-color;
+    }
+
+    &__footer {
+        display: flex;
+
+        .card__footer__item {
+            flex: 1;
+            display: inline-flex;
+            flex-direction: column;
+            min-height: 30px;
+
+            a {
+                font-size: 20px;
+                margin: 0 $base-spacing-half;
+
+                .subtext {
+                    color: $base-font-color;
+                    font-size: 10px;
+                    white-space: nowrap;
+                    margin-top: 3px;
+                    text-transform: uppercase;
+                }
+
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration: none;
+
+                    .subtext {
+                        color: $hover-link-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &.card--raised {
+        box-shadow: $cui-card-box-shadow;
+    }
+    &.card--centered {
+        text-align: center;
+    }
+    &.card--right {
+        text-align: right;
+    }
+
+    @for $i from 1 through $cui-grid-default-cols {
+        &.card--row-#{$i} {
+            grid-row: span $i;
+        }
+    }
+
+    @for $i from 1 through $cui-grid-default-cols {
+        &.card--col-#{$i} {
+            grid-column: span $i;
+        }
+    }
+
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+            @for $i from 1 through $cui-grid-default-cols {
+                &.card--col#{$infix}-#{$i} {
+                    grid-column: span $i;
+                }
+            }
+        }
+    }
+
+    &.hover,
+    &.selected {
+        cursor: pointer;
+        border-color: $base-accent-color;
+    }
+
+    &.selected {
+        &:before {
+            background: $cui-card-selection-background;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+    }
+}
+
+.card__header + .card__footer {
+    border-top: 0 none;
+}
+
+
+// Global Modifiers
+
+&.cui--animated a.card.selected:before,
+&.cui--animated .card.selected:before {
+    animation: fade-in .15s 1 linear;
+}

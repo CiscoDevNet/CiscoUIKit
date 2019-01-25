@@ -1,66 +1,54 @@
 //
 // Hero
 //
-// Since: 1.0.0
-//
 // Styleguide Components.Hero
 //
-
 
 //
 // Color
 //
 // Markup:
-// <div class="hero hero--blue">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Blue</h1>
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+// <div class="row no-gutters">
+//     <div class="col-md-4">
+//         <div class="hero hero--ltgray">
+//             <span class="text-uppercase">Light Gray</span>
+//             <a href="javascript:;">link</a>
 //         </div>
 //     </div>
-// </div>
-// <br>
-// <div class="hero hero--ltgray">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Light Gray</h1>
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+//     <div class="col-md-4">
+//         <div class="hero hero--mdgray">
+//             <span class="text-uppercase">Medium Gray</span>
+//             <a href="javascript:;">link</a>
 //         </div>
 //     </div>
-// </div>
-// <br>
-// <div class="hero hero--mdgray">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Medium Gray</h1>
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+//     <div class="col-md-4">
+//         <div class="hero hero--dkgray">
+//             <span class="text-uppercase">Dark Gray</span>
+//             <a href="javascript:;">link</a>
 //         </div>
 //     </div>
-// </div>
-// <br>
-// <div class="hero hero--dkgray">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Dark Gray</h1>
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+//     <div class="col-md-4">
+//         <div class="hero hero--blue">
+//             <span class="text-uppercase">Blue</span>
+//             <a href="javascript:;">link</a>
 //         </div>
 //     </div>
-// </div>
-// <br>
-// <div class="hero hero--dkblue">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Dark Blue</h1>
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+//     <div class="col-md-4">
+//         <div class="hero hero--vibblue">
+//             <span class="text-uppercase">Vibrant Blue</span>
+//             <a href="javascript:;">link</a>
 //         </div>
 //     </div>
-// </div>
-// <br>
-// <div class="hero hero--indigo">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Indigo</h1>
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+//     <div class="col-md-4">
+//         <div class="hero hero--indigo">
+//             <span class="text-uppercase">Indigo</span>
+//             <a href="javascript:;">link</a>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="hero hero--success">
+//             <span class="text-uppercase">Success</span>
+//             <a href="javascript:;">link</a>
 //         </div>
 //     </div>
 // </div>
@@ -75,29 +63,32 @@
 // Padding
 //
 // Markup:
-// <div class="hero hero--blue hero--compressed">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Compressed</h1>
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="hero hero--blue hero--compressed">
+//             <div class="container">
+//                 <div class="hero__content">
+//                     <h3>Compressed</h3>
+//                 </div>
+//             </div>
 //         </div>
 //     </div>
-// </div>
-// <br>
-// <div class="hero hero--blue hero--regular">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Regular (default)</h1>
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+//     <div class="col-md-4">
+//         <div class="hero hero--blue">
+//             <div class="container">
+//                 <div class="hero__content">
+//                     <h3>Regular (default)</h3>
+//                 </div>
+//             </div>
 //         </div>
 //     </div>
-// </div>
-// <br>
-// <div class="hero hero--blue hero--loose">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Loose</h1>
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+//     <div class="col-md-4">
+//         <div class="hero hero--blue hero--loose">
+//             <div class="container">
+//                 <div class="hero__content">
+//                     <h3>Loose</h3>
+//                 </div>
+//             </div>
 //         </div>
 //     </div>
 // </div>
@@ -114,7 +105,7 @@
 // <blockquote>Use our collection of pre-defined hero background images</blockquote>
 //
 // Markup:
-// <div class="hero hero--loose">
+// <div class="hero">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Background Default</h1>
@@ -123,7 +114,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--background-1">
+// <div class="hero hero--background-1">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Background <sup>#1</sup></h1>
@@ -132,7 +123,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--background-2">
+// <div class="hero hero--background-2">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Background <sup>#2</sup></h1>
@@ -141,7 +132,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--background-3">
+// <div class="hero hero--background-3">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Background <sup>#3</sup></h1>
@@ -150,7 +141,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--background-4">
+// <div class="hero hero--background-4">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Background <sup>#4</sup></h1>
@@ -159,7 +150,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--background-5">
+// <div class="hero hero--background-5">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Background <sup>#5</sup></h1>
@@ -170,7 +161,6 @@
 //
 // Weight: 3
 //
-// Styleguide Components.Hero.Background
 //
 
 
@@ -180,7 +170,7 @@
 // <blockquote>All background images are centered by default. However, you can also position them 'top' or 'bottom'</blockquote>
 //
 // Markup:
-// <div class="hero hero--loose hero--background-1 hero--background-top">
+// <div class="hero hero--background-1 hero--background-top">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Background Position <sup>top</sup></h1>
@@ -189,7 +179,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--background-1 hero--background-bottom">
+// <div class="hero hero--background-1 hero--background-bottom">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Background Position <sup>bottom</sup></h1>
@@ -200,7 +190,6 @@
 //
 // Weight: 4
 //
-// Styleguide Components.Hero.Background Position
 //
 
 
@@ -210,7 +199,7 @@
 // <blockquote>Add colored filters to your background images</blockquote>
 //
 // Markup:
-// <div class="hero hero--loose hero--background-3 hero--filter-blue">
+// <div class="hero hero--background-3 hero--filter-blue">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Filter <sup>blue</sup></h1>
@@ -219,7 +208,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--background-3 hero--filter-dkgray">
+// <div class="hero hero--background-3 hero--filter-dkgray">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Filter <sup>dark gray</sup></h1>
@@ -228,7 +217,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--background-3 hero--filter-dkblue">
+// <div class="hero hero--background-3 hero--filter-dkblue">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Filter <sup>dark blue</sup></h1>
@@ -237,7 +226,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--background-3 hero--filter-smoke">
+// <div class="hero hero--background-3 hero--filter-smoke">
 //     <div class="container">
 //         <div class="hero__content">
 //             <h1>Filter <sup>smoke</sup></h1>
@@ -248,7 +237,6 @@
 //
 // Weight: 5
 //
-// Styleguide Components.Hero.Background Filters
 //
 
 
@@ -256,7 +244,7 @@
 // Split Hero
 //
 // Markup:
-// <div class="hero hero--loose hero--split">
+// <div class="hero hero--split">
 //     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>left</sup></h1>
@@ -266,7 +254,7 @@
 //     <div class="hero__marquee hero--background-3 hero--filter-blue"></div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--split">
+// <div class="hero hero--split">
 //     <div class="hero__marquee hero--background-2"></div>
 //     <div class="hero__content hero--indigo">
 //         <div class="container">
@@ -276,7 +264,7 @@
 //     </div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--split hero--split-25">
+// <div class="hero hero--split hero--split-25">
 //     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>25%</sup></h1>
@@ -286,7 +274,7 @@
 //     <div class="hero__marquee hero--background-3"></div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--split hero--split-33">
+// <div class="hero hero--split hero--split-33">
 //     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>33%</sup></h1>
@@ -296,7 +284,7 @@
 //     <div class="hero__marquee hero--background-3"></div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--split hero--split-66">
+// <div class="hero hero--split hero--split-66">
 //     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>66%</sup></h1>
@@ -306,7 +294,7 @@
 //     <div class="hero__marquee hero--background-3"></div>
 // </div>
 // <br>
-// <div class="hero hero--loose hero--split hero--split-75">
+// <div class="hero hero--split hero--split-75">
 //     <div class="hero__content hero--indigo">
 //         <div class="container">
 //             <h1>Split <sup>75%</sup></h1>
@@ -318,123 +306,12 @@
 //
 // Weight: 6
 //
-// Styleguide Components.Hero.Split
 //
 
-
-//
-// Toolbar
-//
-// Markup:
-// <div class="hero">
-//     <div class="container">
-//         <div class="hero__content">
-//             <h1>Hero with Toolbar</h1>
-//             <div class="row">
-//                 <p class="col-md-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet risus sodales iaculis congue. In consequat condimentum orci nec pellentesque.</p>
-//             </div>
-//         </div>
-//         <div class="hero__toolbar">
-//            <button class="btn btn--icon btn--white-ghost">
-//               <span class="icon-user"></span>
-//            </button>
-//            <button class="btn btn--icon btn--white-ghost">
-//               <span class="icon-plus"></span>
-//            </button>
-//            <button class="btn btn--icon btn--white-ghost">
-//               <span class="icon-trash"></span>
-//            </button>
-//            <button class="btn btn--secondary pull-right">Click Me</button>
-//         </div>
-//     </div>
-// </div>
-//
-// Weight: 7
-//
-// Styleguide Components.Hero.Toolbar
-//
-
-// Test for valid gradient direction
-@function is-direction($value) {
-    $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
-    $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
-    @return $is-keyword or $is-angle;
-}
-
-@mixin linear-gradient($direction, $color-stops) {
-    @if is-direction($direction) == false {
-        $color-stops: $direction, $color-stops;
-        $direction: 180deg;
-    }
-    $stops: ();
-    @each $stop in $color-stops {
-        $stops: append($stops, $stop, comma);
-    }
-    background: linear-gradient($direction, $stops);
-}
-
-$hero-spacing-compressed: ($base-spacing * .5) 0 ($base-spacing * .25);
-$hero-spacing-regular: ($base-spacing * 2) 0 ($base-spacing * 1.5);
-$hero-spacing-loose: ($base-spacing * 3) 0 ($base-spacing * 5);
-
-$hero-title-font-size-mobile: 28px;
-$hero-title-font-size-small: 32px;
-$hero-title-font-size-medium: 38px;
-$hero-title-font-size-large: 44px;
-
-$hero-gradient-default: (rgba($black, .75) 0%, rgba($black, .1) 50%);
-$hero-gradient-transparency: (rgba($black, .75) 50%, rgba($light-gray-2, .25) 100%);
-
-$hero-solids:
-    (blue, $base-panel-blue-color, $base-panel-blue-background),
-    (blue2, $base-panel-blue-color, $cisco-blue2),
-    (ltgray, $base-panel-ltgray-color, $base-panel-ltgray-background),
-    (mdgray, $base-panel-mdgray-color, $base-panel-mdgray-background),
-    (dkgray, $base-panel-dkgray-color, $base-panel-dkgray-background),
-    (dkblue, $base-panel-dkblue-color, $base-panel-dkblue-background),
-    (indigo, $base-panel-indigo-color, $base-panel-indigo-background);
-
-$hero-backgrounds:  (1, '#{$cui-resource-path}/img/hero-bg-1.jpg'),
-(2, '#{$cui-resource-path}/img/hero-bg-2.jpg'),
-(3, '#{$cui-resource-path}/img/hero-bg-3.jpg'),
-(4, '#{$cui-resource-path}/img/hero-bg-4.jpg'),
-(5, '#{$cui-resource-path}/img/hero-bg-5.jpg');
-
-$hero-filters:  ("blue", "solid", rgba($cisco-blue, .25)),
-("dkgray", "solid", rgba($dark-gray-2, .5)),
-("dkblue", "solid", rgba($dark-blue, .75)),
-("smoke", "linear", (rgba($black, .75) 50%, rgba($light-gray-2, .25) 100%));
-
-$hero-padding:  (skinny, $hero-spacing-compressed),
-(compressed, $hero-spacing-compressed),
-(regular, $hero-spacing-regular),
-(loose, $hero-spacing-loose);
-
-.apollo-hero, // Deprecated. Use .hero instead
 .hero {
     color: $white;
     position: relative;
-    background: url('#{$cui-resource-path}/img/splash-default.jpg');
-    background-position: center;
-    background-size: cover;
     overflow: hidden;
-
-    // Adds a gradient to the hero background
-    &:after,
-    .hero__marquee:after {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        content: '';
-        @include linear-gradient(to right, $hero-gradient-default);
-    }
-
-    // Gradients
-    // Dark, Darker, Darkest
-    // Light, Lighter, Lightest
-    // LTR, RTL, TTB, BTT, RAD
 
     &__title {
         font-size: $hero-title-font-size-mobile;
@@ -443,39 +320,13 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
         @include media-breakpoint-up(xl)  { font-size: $hero-title-font-size-large; }
     }
 
-    // Generate hero solid backgrounds
-    @each $solid-name, $solid-color, $solid-bg in $hero-solids {
-        &--#{$solid-name} {
-            &:after {
-                background: none; // No gradients or filters for solids
-            }
-            @include panel($color: #{$solid-color}, $background: #{$solid-bg});
-        }
-    }
+    // Generate hero solid backgrounds (use panels)
+    @include panel();
+    @include panel-padding();
 
-    // Generate hero background images
-    @each $bg-name, $bg-url in $hero-backgrounds {
-        &--background-#{$bg-name},
-        .hero__marquee.hero--background-#{$bg-name} {
-            background: url(#{$bg-url}) no-repeat center center;
-            background-size: cover;
-        }
-    }
-    &--background-top { background-position: top center; }
-    &--background-bottom { background-position: bottom center; }
-
-    // Generate hero filters
-    @each $filter-name, $filter-type, $filter in $hero-filters {
-        &--filter-#{$filter-name},
-        .hero__marquee.hero--filter-#{$filter-name} {
-            &:after {
-                @if ($filter-type == "solid") {
-                    background: #{$filter};
-                }
-                @if ($filter-type == "linear") {
-                    @include linear-gradient(to right, #{$filter});
-                }
-            }
+    @each $panel-obj in $panel-colors {
+        &--#{map-get($panel-obj, name)} {
+            @include panel(map-get($panel-obj, params)...);
         }
     }
 
@@ -488,19 +339,6 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
         }
     }
 
-    &--transparency {
-        &:after {
-            @include linear-gradient(to right, $hero-gradient-transparency);
-        }
-    }
-
-    &--nogradient {
-        &:after,
-        .hero__marquee:after {
-            background: 0 none;
-        }
-    }
-
     &--bordered {
         border: $base-border;
     }
@@ -509,10 +347,6 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
         position: relative;
         @include panel-padding($padding: $hero-spacing-regular);
         max-width: 100%;
-
-        h1,h2 {
-            font-weight: 200;
-        }
     }
 
     &__toolbar {
@@ -532,8 +366,7 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
         }
     }
 
-    &__content,
-    &__toolbar {
+    &__content, &__toolbar {
         z-index: 1;
     }
 
@@ -563,7 +396,6 @@ $hero-padding:  (skinny, $hero-spacing-compressed),
 
     @include media-breakpoint-down(sm) {
         flex-wrap: wrap;
-
         .hero__content,
         .hero__marquee {
             width: 100%;

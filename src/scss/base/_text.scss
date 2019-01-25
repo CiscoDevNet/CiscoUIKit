@@ -1,86 +1,36 @@
 //
 // Input
 //
-// Since 1.0.0
-//
-// Styleguide Base.Input
+// Styleguide Primitives.Input
 //
 
+
 //
-// States
-//
-// <blockquote>Use javascript to add/remove the class modifiers to/from the input tag in each form-group element. <br><br>Supported class modifiers include:<br>
-//            `input--dirty` Input field is dirty (has been touched) <br>
-//            `input--valid` Input field is valid (this is the default state) <br>
-//          `input--invalid` Input field is invalid <br>
-// `input--invalid-required` Input field is invalid because it is required <br>
-// </blockquote>
+// Size
 //
 // Markup:
 // <div class="row">
-//     <div class="col-md-6">
-//         <form>
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="text1" type="text">
-//                     <label for="text1">Text</label>
-//                 </div>
+//     <div class="col-md-3">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-size-default" type="text">
+//                 <label for="input-size-default">Default</label>
 //             </div>
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="text3" type="text" disabled>
-//                     <label for="text3">Text (disabled)</label>
-//                 </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group input--compressed">
+//             <div class="form-group__text">
+//                 <input id="input-size-compressed" type="text">
+//                 <label for="input-size-compressed">Compressed</label>
 //             </div>
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="text2" type="text" required>
-//                     <label for="text2">Text (required)</label>
-//                     <div class="required-block">
-//                         <span class="icon-asterisk"></span>
-//                     </div>
-//                 </div>
-//             </div>
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="text4" type="text" class="input--dirty input--valid" value="Lorem Ipsum" required>
-//                     <label for="text4">Text (required, dirty, valid)</label>
-//                     <div class="required-block">
-//                         <span class="icon-asterisk" title="This is a required field"></span>
-//                     </div>
-//                 </div>
-//             </div>
-//             <div class="form-group form-group--helper">
-//                 <div class="form-group__text">
-//                     <input id="text5" type="text" class="input--dirty input--invalid-required" value="" required>
-//                     <label for="text5">Text (required, dirty, invalid-required)</label>
-//                     <div class="required-block">
-//                         <span class="icon-asterisk" title="This is a required field"></span>
-//                     </div>
-//                 </div>
-//             <div class="help-block text-warning">
-//                 <span class="icon-exclamation-triangle"></span>
-//                 <span>This is a required field</span>
-//             </div>
-//             </div>
-//             <div class="form-group form-group--helper">
-//                 <div class="form-group__text">
-//                     <input id="text6" type="text" class="input--dirty input--invalid" value="&#^$&(%$" required>
-//                     <label for="text6">Text (required, dirty, invalid)</label>
-//                     <div class="required-block">
-//                         <span class="icon-asterisk" title="This is a required field"></span>
-//                     </div>
-//                 </div>
-//             <div class="help-block text-danger">
-//                 <span class="icon-error"></span>
-//                 <span>Special characters not allowed</span>
-//             </div>
-//             </div>
-//         </form>
+//         </div>
 //     </div>
 // </div>
 //
-// Styleguide Base.Input.States
+// Weight: 1
+//
+// Styleguide Primitives.Input.Size
 //
 
 
@@ -88,453 +38,1146 @@
 // Types
 //
 // Markup:
-// <form>
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group half-margin-bottom">
+//             <div class="form-group__text">
+//                 <input id="input-type-email" type="email" value="dadams@cisco.com">
+//                 <label for="input-type-email">Email</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group half-margin-bottom">
+//             <div class="form-group__text">
+//                 <input id="input-type-number" type="number" value="42">
+//                 <label for="input-type-number">Number</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group half-margin-bottom">
+//             <div class="form-group__text">
+//                 <input id="input-type-password" type="password" value="hitchhiker">
+//                 <label for="input-type-password">Password</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group half-margin-bottom">
+//             <div class="form-group__text">
+//                 <input id="input-type-telephone" type="tel" value="8675309">
+//                 <label for="input-type-telephone">Telephone</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group half-margin-bottom">
+//             <div class="form-group__text">
+//                 <input id="input-type-url" type="url" value="http://www.cisco.com">
+//                 <label for="input-type-url">URL</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group half-margin-bottom">
+//             <div class="form-group__text">
+//                 <input id="input-type-date" type="date">
+//                 <label for="input-type-date">Date</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group half-margin-bottom">
+//             <div class="form-group__text">
+//                 <input id="input-type-time" type="time">
+//                 <label for="input-type-time">Time</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group input--icon half-margin-bottom">
+//             <div class="form-group__text">
+//                 <input id="input-type-search" type="search" value="Douglas Adams">
+//                 <label for="input-type-search">Search</label>
+//                 <button type="button" class="link">
+//                     <span class="icon-search"></span>
+//                 </button>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group half-margin-bottom">
+//             <div class="form-group__text select">
+//                 <select id="input-type-select">
+//                     <option value="first">First Value</option>
+//                     <option value="second" selected="">Second Value</option>
+//                     <option value="third">Third Value</option>
+//                 </select>
+//                 <label for="input-type-select">Basic Select</label>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Primitives.Input.Types
+//
+
+
+//
+// States
+//
+// <blockquote>We are introducing a new form group modifier to style inputs in a more simplified and flexible manner. Use `form-group--error` to indicate validation failure.<br>In this release we no longer automatically add the asterisk ('*') for required fields. Use the example below to see how to manually denote a required field.</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-state-default" type="text">
+//                 <label for="input-state-default">Default</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-state-disabled" type="text" disabled>
+//                 <label for="input-state-disabled">Disabled</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-state-readonly" type="text" readonly>
+//                 <label for="input-state-readonly">Readonly</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-state-required" type="text" required>
+//                 <label for="input-state-required">
+//                     <span>Required</span>
+//                     <span title="this is a required field">*</span>
+//                 </label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-state-hover" class="hover" type="text" required>
+//                 <label for="input-state-hover">Hover</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-state-focus" class="focus" type="text" required>
+//                 <label for="input-state-focus">Focus</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group form-group--error">
+//             <div class="form-group__text">
+//                 <input id="input-state-error" type="text" value="(*#&$*(H*(H@#($*">
+//                 <label for="input-state-error">Error</label>
+//             </div>
+//             <div class="help-block text-danger" role="alert">
+//                 <span>Invalid or unknown string</span>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Primitives.Input.States
+//
+
+
+//
+// Icons
+//
+// <blockquote>Add an icon to any input field. See examples below.</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group label--floated input--icon">
+//             <div class="form-group__text">
+//                 <input type="search" required>
+//                 <label>Search Inventory</label>
+//                 <button type="button" class="link" tabindex="-1">
+//                     <span class="icon-search"></span>
+//                 </button>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group label--floated input--icon">
+//             <div class="form-group__text">
+//                 <input required>
+//                 <label>Enter Date</label>
+//                 <button type="button" class="link" tabindex="-1">
+//                     <span class="icon-month"></span>
+//                 </button>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group label--floated input--icon">
+//             <div class="form-group__text">
+//                 <input required></input>
+//                 <label>Add Tag</label>
+//                 <button type="button" class="link" tabindex="-1">
+//                     <span class="icon-tags"></span>
+//                 </button>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group form-group--error label--floated input--icon">
+//             <div class="form-group__text">
+//                 <input value="douglasadams@hhguide" required></input>
+//                 <label>Enter Email</label>
+//                 <button type="button" class="link">
+//                     <span class="icon-email"></span>
+//                 </button>
+//             </div>
+//             <div class="help-block text-danger" role="alert" tabindex="-1">
+//                 <span>Invalid email address</span>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group input--icon input--compressed">
+//             <div class="form-group__text">
+//                 <input type="search" required>
+//                 <label>Search Inventory</label>
+//                 <button type="button" class="link" tabindex="-1">
+//                     <span class="icon-search"></span>
+//                 </button>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group input--icon input--compressed">
+//             <div class="form-group__text">
+//                 <input required>
+//                 <label>Enter Date</label>
+//                 <button type="button" class="link" tabindex="-1">
+//                     <span class="icon-month"></span>
+//                 </button>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group input--icon input--compressed">
+//             <div class="form-group__text">
+//                 <input required></input>
+//                 <label>Add Tag</label>
+//                 <button type="button" class="link" tabindex="-1">
+//                     <span class="icon-tags"></span>
+//                 </button>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group form-group--error input--icon input--compressed">
+//             <div class="form-group__text">
+//                 <input value="douglasadams@hhguide" required></input>
+//                 <label>Enter Email</label>
+//                 <button type="button" class="link">
+//                     <span class="icon-email"></span>
+//                 </button>
+//             </div>
+//             <div class="help-block text-danger" role="alert" tabindex="-1">
+//                 <span>Invalid email address</span>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Primitives.Input.Icons
+//
+
+
+//
+// Label Layout
+//
+// <blockquote>Do not mix different label layouts in a single form.</blockquote>
+//
+// Markup:
+// <div class="section">
+//     <div class="subheader">Default</div>
 //     <div class="row">
-//         <div class="col-md-6">
+//         <div class="col-md-3">
 //             <div class="form-group">
 //                 <div class="form-group__text">
-//                     <input id="email1" type="email">
-//                     <label for="email1">Email</label>
+//                     <input id="input-layout-default" type="text">
+//                     <label for="input-layout-default">Input Label</label>
 //                 </div>
 //             </div>
 //         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
+//         <div class="col-md-3">
+//             <div class="form-group form-group--error">
 //                 <div class="form-group__text">
-//                     <input id="number1" type="number">
-//                     <label for="number1">Number</label>
+//                     <input id="input-layout-invalid" type="text">
+//                     <label for="input-layout-invalid">Input Label</label>
+//                 </div>
+//                 <div class="help-block text-danger" role="alert">
+//                     <span>This field contains an error</span>
 //                 </div>
 //             </div>
 //         </div>
-//         <div class="col-md-6">
+//         <div class="col-md-3">
 //             <div class="form-group">
 //                 <div class="form-group__text">
-//                     <input id="password1" type="password">
-//                     <label for="password1">Password</label>
+//                     <textarea id="input-layout-default-textarea" class="textarea" rows="5"></textarea>
+//                     <label for="input-layout-default-textarea">Textarea Label</label>
 //                 </div>
 //             </div>
 //         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
+//         <div class="col-md-3">
+//             <div class="form-group form-group--error">
 //                 <div class="form-group__text">
-//                     <input id="tel1" type="tel">
-//                     <label for="tel1">Telephone</label>
+//                     <textarea id="input-layout-default-invalid-textarea" class="textarea" rows="5"></textarea>
+//                     <label for="input-layout-default-invalid-textarea">Textarea Label</label>
 //                 </div>
-//             </div>
-//         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="url1" type="url">
-//                     <label for="url1">URL</label>
-//                 </div>
-//             </div>
-//         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="date1" type="date">
-//                     <label for="date1">Date</label>
-//                 </div>
-//             </div>
-//         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="month1" type="month">
-//                     <label for="month1">Month</label>
-//                 </div>
-//             </div>
-//         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="time1" type="time">
-//                     <label for="time1">Time</label>
-//                 </div>
-//             </div>
-//         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="week1" type="week">
-//                     <label for="week1">Week</label>
+//                 <div class="help-block text-danger" role="alert">
+//                     <span>This field contains an error</span>
 //                 </div>
 //             </div>
 //         </div>
 //     </div>
-// </form>
+// </div>
+// <div class="section">
+//     <div class="subheader">Floated</div>
+//     <div class="row">
+//         <div class="col-md-3">
+//             <div class="form-group label--floated">
+//                 <div class="form-group__text">
+//                     <input id="input-layout-floated" type="text" required>
+//                     <label for="input-layout-floated">Input Label</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-3">
+//             <div class="form-group form-group--error label--floated">
+//                 <div class="form-group__text">
+//                     <input id="input-layout-floated-invalid" type="text" required>
+//                     <label for="input-layout-floated-invalid">Input Label</label>
+//                 </div>
+//                 <div class="help-block text-danger" role="alert">
+//                     <span>This field contains an error</span>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-3">
+//             <div class="form-group label--floated">
+//                 <div class="form-group__text">
+//                     <textarea id="input-layout-floated-textarea" class="textarea" rows="5" required></textarea>
+//                     <label for="input-layout-floated-textarea">Textarea Label</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-3">
+//             <div class="form-group form-group--error label--floated">
+//                 <div class="form-group__text">
+//                     <textarea id="input-layout-floated-invalid-textarea" class="textarea" rows="5" required></textarea>
+//                     <label for="input-layout-floated-invalid-textarea">Textarea Label</label>
+//                 </div>
+//                 <div class="help-block text-danger" role="alert">
+//                     <span>This field contains an error</span>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="section">
+//     <div class="subheader">Inline</div>
+//     <div class="row">
+//         <div class="col-md-3">
+//             <div class="form-group label--inline">
+//                 <div class="form-group__text">
+//                     <input id="input-layout-inline" type="text">
+//                     <label for="input-layout-inline">Input Label</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-3">
+//             <div class="form-group form-group--error label--inline">
+//                 <div class="form-group__text">
+//                     <input id="input-layout-inline-invalid" type="text">
+//                     <label for="input-layout-inline-invalid">Input Label</label>
+//                 </div>
+//                 <div class="help-block text-danger" role="alert">
+//                     <span>This field contains an error</span>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-3">
+//             <div class="form-group label--inline">
+//                 <div class="form-group__text">
+//                     <textarea id="input-layout-inline-textarea" class="textarea" rows="5"></textarea>
+//                     <label for="input-layout-inline-textarea">Textarea Label</label>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-3">
+//             <div class="form-group form-group--error label--inline">
+//                 <div class="form-group__text">
+//                     <textarea id="input-layout-inline-invalid-textarea" class="textarea" rows="5"></textarea>
+//                     <label for="input-layout-inline-invalid-textarea">Textarea Label</label>
+//                 </div>
+//                 <div class="help-block text-danger" role="alert">
+//                     <span>This field contains an error</span>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
 //
-// Styleguide Base.Input.Types
+// Weight: 5
+//
+// Styleguide Primitives.Input.Layout
 //
 
 
 //
-// Text Area
+// Spacing
 //
-// <blockquote>You will need to use javascript to dynamically grow/shrink the textarea. Something similar to the <a href="https://github.com/janjarfalk/jquery-elastic" target="_blank">jQuery Elastic plugin</a> or <a href="https://github.com/monospaced/angular-elastic" target="_blank">Angular Elastic directive</a><br>Add the attribute or class `disabled` to the input element to denote a disabled field.<br>Add the attribute or class `readonly` to the input element to denote a read-only field</blockquote>
+// <blockquote>Wrap your input elements in a form-group to control spacing. This applies to both inline and stacked input elements.</blockquote>
 //
 // Markup:
 // <div class="row">
 //     <div class="col-md-6">
-//         <form>
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <textarea id="textarea1" rows="1"></textarea>
-//                     <label for="textarea1">Textarea</label>
-//                 </div>
+//         <div class="subheader">Inline Compressed</div>
+//         <div class="form-group form-group--inline form-group--compressed">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-compressed-one" type="text">
+//                 <label for="input-spacing-inline-compressed-one">One</label>
 //             </div>
-//         </form>
+//         </div>
+//         <div class="form-group form-group--inline form-group--compressed">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-compressed-two" type="text">
+//                 <label for="input-spacing-inline-compressed-two">Two</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--inline form-group--compressed">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-compressed-three" type="text">
+//                 <label for="input-spacing-inline-compressed-three">Three</label>
+//             </div>
+//         </div>
 //     </div>
 //     <div class="col-md-6">
-//         <form>
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <textarea id="textarea2" rows="1" readonly></textarea>
-//                     <label for="textarea2">Textarea (readonly)</label>
-//                 </div>
+//         <div class="subheader">Inline Regular (default)</div>
+//         <div class="form-group form-group--inline">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-default-one" type="text">
+//                 <label for="input-spacing-inline-default-one">One</label>
 //             </div>
-//         </form>
+//         </div>
+//         <div class="form-group form-group--inline">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-default-two" type="text">
+//                 <label for="input-spacing-inline-default-two">Two</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--inline">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-default-three" type="text">
+//                 <label for="input-spacing-inline-default-three">Three</label>
+//             </div>
+//         </div>
 //     </div>
 //     <div class="col-md-6 base-margin-top">
-//         <form>
-//             <textarea class="textarea" rows="5" placeholder="standard textarea"></textarea>
-//         </form>
+//         <div class="subheader">Inline Loose</div>
+//         <div class="form-group form-group--inline form-group--loose">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-loose-one" id="inputtype="text">
+//                 <label for="input-spacing-inline-loose-one">One</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--inline form-group--loose">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-loose-two" type="text">
+//                 <label for="input-spacing-inline-loose-two">Two</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--inline form-group--loose">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-loose-three" type="text">
+//                 <label for="input-spacing-inline-loose-three">Three</label>
+//             </div>
+//         </div>
 //     </div>
 //     <div class="col-md-6 base-margin-top">
-//         <form>
-//             <textarea class="textarea textarea--well" rows="5" placeholder="standard textarea with well"></textarea>
-//         </form>
+//         <div class="subheader">Inline None</div>
+//         <div class="form-group form-group--inline form-group--nospacing">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-none-one" type="text">
+//                 <label for="input-spacing-inline-none-one">One</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--inline form-group--nospacing">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-none-two" type="text">
+//                 <label for="input-spacing-inline-none-two">Two</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--inline form-group--nospacing">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-inline-none-three" type="text">
+//                 <label for="input-spacing-inline-none-three">Three</label>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="divider divider--loose"></div>
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="subheader">Compressed</div>
+//         <div class="form-group form-group--compressed">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-compressed-one" type="text">
+//                 <label for="input-spacing-compressed-one">One</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--compressed">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-compressed-two" type="text">
+//                 <label for="input-spacing-compressed-two">Two</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--compressed">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-compressed-three" type="text">
+//                 <label for="input-spacing-compressed-three">Three</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="subheader">Default</div>
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-default-one" type="text">
+//                 <label for="input-spacing-default-one">One</label>
+//             </div>
+//         </div>
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-default-two" type="text">
+//                 <label for="input-spacing-default-two">Two</label>
+//             </div>
+//         </div>
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-default-three" type="text">
+//                 <label for="input-spacing-default-three">Three</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="subheader">Loose</div>
+//         <div class="form-group form-group--loose">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-loose-one" type="text">
+//                 <label for="input-spacing-loose-one">One</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--loose">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-loose-two" type="text">
+//                 <label for="input-spacing-loose-two">Two</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--loose">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-loose-three" type="text">
+//                 <label for="input-spacing-loose-three">Three</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="subheader">None</div>
+//         <div class="form-group form-group--nospacing">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-none-one" type="text">
+//                 <label for="input-spacing-none-one">One</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--nospacing">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-none-two" type="text">
+//                 <label for="input-spacing-none-two">Two</label>
+//             </div>
+//         </div>
+//         <div class="form-group form-group--nospacing">
+//             <div class="form-group__text">
+//                 <input id="input-spacing-none-three" type="text">
+//                 <label for="input-spacing-none-three">Three</label>
+//             </div>
+//         </div>
 //     </div>
 // </div>
 //
-// Styleguide Base.Input.Text Areas
+// Weight: 6
+//
+// Styleguide Primitives.Input.Spacing
 //
 
 
 //
-// Search
+// Hint Text
+//
+// <blockquote>Use hint text to provide a description of what the input field should contain.</blockquote>
+//
+// Markup:
+// <div class="section">
+//     <div class="row">
+//         <div class="col-md-3">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <input id="input-hint-default" type="text">
+//                     <label for="input-hint-default">PICA ID</label>
+//                 </div>
+//                 <div class="help-block text-muted">
+//                     <span>partner initiated customer access identifier</span>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="col-md-6">
+//             <div class="form-group">
+//                 <div class="form-group__text">
+//                     <textarea id="input-hint-textarea" class="textarea" rows="5"></textarea>
+//                     <label for="input-hint-textarea">PSIRT Description</label>
+//                 </div>
+//                 <div class="help-block text-muted" role="alert">
+//                     <span>Product security incident response team description</span>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 7
+//
+// Styleguide Primitives.Input.Hinting
+//
+
+
+//
+// Text Areas
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <textarea id="input-textarea-single" rows="1"></textarea>
+//                 <label for="input-textarea-single">Textarea (single row)</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <textarea id="input-textarea-multiple" class="textarea" rows="5"></textarea>
+//                 <label for="input-textarea-multiple">Textarea (multiple rows)</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <textarea id="input-textarea-disabled" rows="5" disabled></textarea>
+//                 <label for="input-textarea-disabled">Textarea (disabled)</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <textarea id="input-textarea-readonly" rows="5" readonly></textarea>
+//                 <label for="input-textarea-readonly">Textarea (readonly)</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="form-group">
+//             <div class="form-group__text">
+//                 <textarea id="input-textarea-well" class="textarea textarea--well" rows="5"></textarea>
+//                 <label for="input-textarea-well">Textarea with a well</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="form-group form-group--error">
+//             <div class="form-group__text">
+//                 <textarea id="input-textarea-invalid" class="textarea" rows="5">&^$%^$&*^*&</textarea>
+//                 <label for="input-textarea-invalid">Textarea Invalid</label>
+//             </div>
+//             <div class="help-block text-danger" role="alert">
+//                 <span>Invalid or unknown string</span>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 8
+//
+// Styleguide Primitives.Input.Text Areas
+//
+
+
+//
+// Examples
+//
+// <blockquote>You can use col-* classes to align your labels in stacked form groups. See the examples below.</blockquote>
 //
 // Markup:
 // <div class="row">
 //     <div class="col-md-6">
-//         <form>
-//             <div class="form-group">
-//                 <div class="form-group__text">
-//                     <input id="search" type="search">
-//                     <label for="search">Search Devices</label>
-//                     <button type="button" class="link">
-//                         <span class="icon-search"></span>
-//                     </button>
-//                 </div>
+//         <div class="subheader">Inline Labels (left)</div>
+//         <div class="form-group label--inline">
+//             <div class="form-group__text">
+//                 <input id="input-size-default" type="text">
+//                 <label class="col-3" for="input-size-default">Lorem</label>
 //             </div>
-//         </form>
+//         </div>
+//         <div class="form-group label--inline">
+//             <div class="form-group__text">
+//                 <input id="input-size-default" type="text">
+//                 <label class="col-3" for="input-size-default">Lorem Ipsum</label>
+//             </div>
+//         </div>
+//         <div class="form-group label--inline">
+//             <div class="form-group__text">
+//                 <input id="input-size-default" type="text">
+//                 <label class="col-3" for="input-size-default">Dolor</label>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="subheader">Inline Labels (right)</div>
+//         <div class="form-group label--inline">
+//             <div class="form-group__text">
+//                 <input id="input-size-default" type="text">
+//                 <label class="col-3 text-right" for="input-size-default">Lorem</label>
+//             </div>
+//         </div>
+//         <div class="form-group label--inline">
+//             <div class="form-group__text">
+//                 <input id="input-size-default" type="text">
+//                 <label class="col-3 text-right" for="input-size-default">Lorem Ipsum</label>
+//             </div>
+//         </div>
+//         <div class="form-group label--inline">
+//             <div class="form-group__text">
+//                 <input id="input-size-default" type="text">
+//                 <label class="col-3 text-right" for="input-size-default">Dolor</label>
+//             </div>
+//         </div>
 //     </div>
 // </div>
 //
-// Styleguide Base.Input.Search
+// Weight: 9
+//
+// Styleguide Primitives.Input.Examples
 //
 
-textarea.textarea {
+@mixin cui-input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        width: 100%;
+    }
+
+    input, select, textarea {
+        border: $base-border;
+        border-radius: $base-border-radius;
+        flex: 1;
+        flex-shrink: 0;
+        order: 3;
+        background: $white;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: $base-font-color;
+        font-style: italic;
+    }
+}
+
+@mixin cui-input-error {
+
+    border-color: $danger;
+    &:focus, .focus,
+    &:hover, &.hover {
+        border-color: $danger;
+    }
+    &:focus, .focus {
+        box-shadow: inset 0 0 0 2px rgba($danger, 0.25);
+    }
+}
+
+@mixin cui-input-type-password {
+    font: caption;
+    font-size: 18px;
+}
+
+@mixin cui-input-type-search(
+    $padding: $cui-input-padding,
+    $left: $base-spacing-qtr,
+    $top: $base-spacing)
+{
+    padding-left: $padding;
+
+    ~ button.link {
+        position: absolute;
+        left: $left;
+        top: $top;
+
+        &:hover,
+        &:active,
+        &:focus {
+            cursor: default;
+            color: $base-muted-color;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin cui-input-size(
+    $height: $cui-input-size,
+    $padding: $cui-input-padding,
+    $vert-center: $cui-input-vert-center)
+{
+    input, select {
+        height: $height;
+        max-height: $height;
+        line-height: 24px;
+    }
+    input, select, textarea {
+        min-height: $height;
+        padding: $padding;
+    }
+    select {
+        padding: 0 ($base-spacing * 2) 0 $padding;
+    }
+    label {
+        top: $vert-center;
+    }
+    &:after {
+        bottom: $vert-center;
+    }
+}
+
+@mixin cui-input-behaviors {
+
+    &:hover, &.hover,
+    &:focus, &.focus {
+        border-color: $base-accent-color;
+    }
+
+    &:focus, &.focus {
+        outline: none;
+        box-shadow: inset 0 0 0 2px rgba($base-accent-color, 0.25);
+    }
+
+    &.disabled, &[disabled],
+    &.readonly, &[readonly] {
+        background-color: $base-disabled-background;
+    }
+
+    &.disabled, &[disabled] {
+        @include disabled;
+
+        ~ label {
+            @include disabled;
+        }
+    }
+}
+
+textarea.textarea,
+.form-group .form-group__text textarea {
     resize: none;
     width: 100%;
     border: $base-border;
-    padding: $base-spacing * 0.5;
+    background-color: $white;
+    box-shadow: none;
+    padding: $base-spacing-half;
     color: $base-font-color;
-    font-weight: $base-font-weight;
-
-    &::placeholder {
-        font-style: italic;
-    }
+    overflow-x: hidden;
+    min-height: $base-spacing * 2;   // Prevent tiny height in IE when textarea is empty
 
     &--alt {
         background-color: $alt-background-color;
     }
     &--well {
-        box-shadow: inset 0 5px 10px -5px rgba(0, 0, 0, 0.25);
+        box-shadow: $base-panel-well !important;
+    }
+
+    @include cui-input-behaviors;
+}
+
+.form-group {
+    .form-group__text,
+    .form-group__text.select {
+
+        @include cui-input;
+        @include cui-input-size;
+
+        input[type="password"] {
+            @include cui-input-type-password;
+        }
+
+        input, select, textarea {
+            @include cui-input-behaviors;
+
+            &.input--dirty.input--invalid-required,
+            &.ng-dirty.ng-invalid-required,
+            &.ng-touched.ng-invalid-required,
+            &.input--dirty.input--invalid,
+            &.ng-dirty.ng-invalid,
+            &.ng-touched.ng-invalid {
+                @include cui-input-error;
+            }
+        }
+    }
+    &.input--compressed {
+        .form-group__text,
+        .form-group__text.select {
+            @include cui-input-size(
+                $height: $cui-input-size-compressed,
+                $padding: $cui-input-padding-compressed,
+                $vert-center: $cui-input-vert-center-compressed
+            );
+        }
+    }
+    &.label--floated {
+        padding-top: 24px;
+
+        .form-group__text {
+            position: relative;
+
+            textarea:focus + label,
+            textarea:valid + label,
+            input:focus + label,
+            input:valid + label {
+                left: 0;
+                font-style: normal;
+                transform: translate3d(0, -32px, 0);
+                transform-origin: left, top;
+            }
+
+            label {
+                position: absolute;
+                left: 11px;
+            }
+        }
+
+        &.input--compressed {
+            padding-top: 20px;
+
+            textarea:focus + label,
+            textarea:valid + label,
+            input:focus + label,
+            input:valid + label {
+                transform: translate3d(0, -26px, 0);
+            }
+
+            label {
+                top: 5px;
+                left: 6px;
+            }
+        }
+    }
+    &.label--inline {
+        .form-group__text {
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+
+            label {
+                margin: 0 $base-spacing-half 0 0;
+            }
+
+            &.select:after {
+                bottom: $cui-input-error-icon-bottom;
+            }
+
+            textarea ~ label {
+                align-self: flex-start;
+                margin-top: 8px;
+            }
+        }
+    }
+    &.label--inline .form-group__text label[class^=col-] {
+        height: $cui-input-size;
+    }
+    &.label--inline.input--compressed .form-group__text label[class^=col-] {
+        height: $cui-input-size-compressed;
+    }
+    &--error {
+        .form-group__text,
+        .form-group__text.select {
+            position: relative;
+
+            input, select, textarea {
+                @include cui-input-error;
+                padding-right: $base-spacing * 2;
+            }
+
+            &:after {
+                @include icon-error;
+                color: red;
+                font-size: $large-font-size;
+                bottom: $cui-input-vert-center;
+                right: $base-spacing-half;
+                position: absolute;
+            }
+        }
     }
 }
 
-.form-group__text,
-.form-group__text.select {
-    position: relative;
-    display: flex;
-    flex-direction: row;
+// Input icons
 
-    input[type="password"] {
-        font: small-caption;
-        font-size: 14px;
-    }
+.form-group {
+    &.input--icon {
+        input {
+            padding-left: $cui-input-size !important;
 
-    input[type="search"] { // Search icon should always be on the left
-        ~.link {
-            order: 1;
-            margin-left: 0;
-        }
-    }
-
-    input,
-    select,
-    textarea {
-        flex: 1;
-        flex-shrink: 0;
-        order: 3;
-        background: transparent;
-        color: $base-font-color;
-        border: 0;
-        box-shadow: none;
-        transition: color 0.2s ease;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-
-        ~ label {
-            font-style: italic;
-            &::after {
-                position: absolute;
-                display: block;
-                width: 100%;
-                height: 1px;
-                bottom: 0;
-                left: 0;
-                content: '';
-                background: $base-border-color;
-                transition: all 0.2s ease;
-            }
-        }
-
-        &:hover,
-        &:focus {
-            ~ label {
-                color: $base-font-color;
-            }
-        }
-
-        &:focus {
-            color: $base-accent-color;
-            outline: none;
-
-            ~ label {
-                font-style: normal;
-                &::after {
-                    bottom: -3px;
-                    height: 4px;
-                    background: $base-accent-color;
-                    transition: all 0.2s ease;
+            &:focus {
+                ~ button {
+                    color: $base-font-color;
                 }
             }
         }
+        .form-group__text {
+            input + button,
+            label + button {
+                font-size: $cui-input-icon-size;
+                position: absolute;
+                display: inline-flex;
+                height: $cui-input-size;
+                width: $cui-input-size;
+                align-items: center;
+                justify-content: center;
+                bottom: 0;
+                padding: 0;
+                margin: 0;
 
-        &.disabled,
-        &[disabled] {
-            @include disabled;
-
-            ~ label {
-                @include disabled;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $base-link-color;
+                    text-decoration: none;
+                }
+            }
+        }
+        &.label--floated {
+            .form-group__text {
+                label {
+                    left: $cui-input-size;
+                }
+            }
+        }
+        &.input--compressed {
+            .form-group__text {
+                label {
+                    left: $cui-input-size-compressed;
+                }
+                input + button,
+                label + button {
+                    font-size: $cui-input-icon-size-compressed;
+                    height: $cui-input-size-compressed;
+                    width: $cui-input-size-compressed;
+                }
+            }
+            input {
+                padding-left: $cui-input-size-compressed;
             }
         }
 
-        &.readonly,
-        &[readonly] {
-            @include readonly;
-
-            ~ label {
-                @include readonly;
+        &.label--inline {
+            input {
+                padding: $base-spacing-half;
             }
-        }
-
-        &.input--dirty.input--valid,
-        &.ng-dirty.ng-valid {
-            ~ label {
-                font-style: normal;
+            input + button,
+            label + button {
+                display: none;
             }
-        }
-
-        &.input--dirty.input--invalid,
-        &.ng-dirty.ng-invalid,
-        &.ng-touched.ng-invalid {
-            ~ label:after {
-                background: $danger;
-            }
-        }
-
-        &.input--dirty.input--invalid-required,
-        &.ng-dirty.ng-invalid-required,
-        &.ng-touched.ng-invalid-required {
-            ~ label:after,
-            &:focus ~ label:after {
-                background: $warning;
-            }
-        }
-    }
-
-    //
-    // This section fixes an issue in Firefox where a select dropdown in a modal
-    // dialog would not let the user select any options
-    //
-    select {
-        order: 0;
-        ~ label {
-            order: -1;
-        }
-        ~ .required-block {
-            order: 0;
-        }
-    }
-
-    textarea {
-        resize: none;
-        overflow-x: hidden; // Prevent initial additional line from appearing (Firefox)
-        min-height: $base-spacing * 2;   // Prevent tiny height in IE when textarea is empty
-    }
-
-    .required-block {
-        display: none;
-        position: relative;
-        right: 0;
-        top: 0;
-
-        @include media-breakpoint-up(md) {
-            display: flex;
-        }
-
-        align-items: center;
-        justify-content: center;
-        order: 100;
-        color: $base-muted-color;
-        font-size: $small-font-size;
-        font-weight: bold;
-        text-transform: uppercase;
-        transform: scale(0.5);
-        width: 24px;
-        transition: transform .1s ease-in;
-        margin-right: -28px;
-    }
-
-    .action-block {
-        display: flex;
-        order: 99;
-
-        a {
-            span[class^="icon-"] {
-                font-size: 20px;
-            }
-        }
-    }
-
-    .link {
-        display: flex;
-        order: 3;
-    }
-
-    .link {
-        order: 10;
-        align-self: center;
-        margin-left: $base-spacing * 0.25;
-    }
-
-    .spin {
-        order: 1;
-        align-self: center;
-        height: 100%;
-        margin-right: $base-spacing * 0.25;
-    }
-
-    .tags {
-        @include flex-fluid;
-        order: 4;
-
-        .button {
-            margin: 0 ($base-spacing * 0.25);
-            vertical-align: baseline;
         }
     }
 }
 
-.form-group__text.select {
-    &:after {
-        right: 0;
+// Help and Action Blocks
+
+.form-group.label--floated .form-group__text { min-height: $cui-input-size; }
+.form-group.label--floated.input--compressed .form-group__text { min-height: $cui-input-size-compressed; }
+
+.help-block {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2px;
+
+    span[class^="icon-"] + span {
+        margin-left: $base-spacing-qtr;
     }
+
+    &--normal  { text-transform: unset; }
+    &--lower   { text-transform: lowercase; }
+    &--capital { text-transform: capitalize; }
 }
 
-// Input Groups
+.action-block,
+.required-block {
+    display: none; // Deprecated. Use help-block instead
+}
 
-.input-group {
-    display: block;
-    font-size: 13px;
+// Global Modifiers
 
-    .select__icon {
-        position: absolute;
-        top: -1px;
-        left: $base-spacing * 0.5;
-        color: $base-disabled-color;
-        font-size: 10px;
+&.cui--compressed .form-group__text,
+&.cui--compressed .form-group__text.select {
+    @include cui-input-size(
+        $height: $cui-input-size-compressed,
+        $padding: $cui-input-padding-compressed,
+        $vert-center: $cui-input-vert-center-compressed
+    );
+}
+&.cui--compressed .label--inline .form-group__text label[class^=col-] {
+    height: $cui-input-size-compressed;
+}
 
-        ~ select {
-            padding-left: 30px;
-        }
+&.cui--animated .form-group__text,
+&.cui--animated .form-group__text.select {
+    input, textarea {
+        transition: border-color, box-shadow 0.5s ease;
     }
-
-    > .input-group__prefix {
-        margin-right: -1px;
-    }
-
-    > .input-group__suffix {
-        margin-left: -1px;
-    }
-
-    > .input-group__prefix,
-    > .input-group__suffix,
-    > .input-group__select {
-        display: inline-block;
-        position: relative;
-        height: 30px; // Firefox doesn't honor line-height in select menus, so we use px to set the height instead
-        box-shadow: 0 0 0 1px $base-border-color inset;
-        line-height: 30px;
-        vertical-align: middle;
-
-        select {
-            padding-right: 30px;
-        }
-
-        &:not(:first-child) {
-            select {
-                padding-left: $base-spacing * 0.5;
-            }
-        }
-
-        &:first-child {
-            border-top-left-radius: $base-button-border-radius;
-            border-bottom-left-radius: $base-button-border-radius;
-
-            .button,
-            .select {
-                border-top-left-radius: $base-button-border-radius;
-                border-bottom-left-radius: $base-button-border-radius;
-            }
-        }
-
-        &:last-child {
-            border-top-right-radius: $base-button-border-radius;
-            border-bottom-right-radius: $base-button-border-radius;
-
-            .button,
-            .select {
-                border-top-right-radius: $base-button-border-radius;
-                border-bottom-right-radius: $base-button-border-radius;
-            }
-        }
-
-        .button,
-        .link,
-        .select {
-            display: inline-block;
-            border-radius: 0;
-        }
-
-        .button,
-        .link {
-            padding-right: $base-spacing * 0.5;
-            padding-left: $base-spacing * 0.5;
-        }
+}
+&.cui--animated .form-group__text {
+    input:focus, input.focus ~ label, label {
+        transition: all 0.15s ease-out;
     }
 }

@@ -2,12 +2,13 @@
 <html lang="en" id="styleguide">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Cisco UI Kit</title>
 
         <link rel="stylesheet" href="public/css/animate.css">
         <link rel="stylesheet" href="assets/css/cui-styleguide.min.css">
         <link rel="stylesheet" href="public/css/featherlight.min.css">
+        <link rel="stylesheet" href="public/js/highlight/styles/atom-one-light.css">
         <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
 
         <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
@@ -16,39 +17,60 @@
         <script src="public/js/clipboard.js"></script>
         <script src="public/js/featherlight.min.js"></script>
         <script src="public/js/Markdown.Converter.js"></script>
+        <script src="public/js/highlight/highlight.pack.js"></script>
     </head>
-    <body class="cui styleguide">
+    <body class="cui cui--animated cui--headermargins cui--wide styleguide">
         <div class="content-fluid">
-            <nav id="styleguideSidebar" class="sidebar">
+            <nav id="styleguideSidebar" class="sidebar sidebar--mini sidebar--indigo" role="navigation">
                 <div class="sidebar__header">
-                    <div class="sidebar__header-title">Cisco UI</div>
+                    <a id="sidebar-toggle" class="sidebar-toggle hidden-xs hidden-sm">
+                        <span class="icon-toggle-menu"></span>
+                    </a>
+                    <div class="sidebar__header-title">Cisco UI Kit</div>
                 </div>
                 <ul id="rootSidebar" data-kss-ref="{{rootName}}">
                     <li class="sidebar__item" id="section-gettingStarted">
-                        <a onclick="doNav('./index.html')">Getting Started</a>
+                        <a onclick="doNav('./index.html')" title="Getting Started">
+                            <span class="icon-home"></span>
+                            <span>Home</span>
+                        </a>
                     </li>
                     <li class="sidebar__drawer">
-                        <a>Resources</a>
+                        <a tabindex="0" title="Resources">
+                            <span class="icon-tools"></span>
+                            <span>Resources</span>
+                        </a>
                         <ul>
                             <li class="sidebar__item"><a href="http://bx.cisco.com/cbx-portal/" target="_blank">Cisco Brand Exchange</a></li>
-                            <li class="sidebar__item"><a href="https://cisco.jiveon.com/groups/atlantic/pages/about" target="_blank">Jive Home Page</a></li>
-                            <li class="sidebar__item"><a href="https://cisco.jiveon.com/docs/DOC-1575948" target="_blank">Jive FAQ</a></li>
+                            <li class="sidebar__item"><a href="https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=f440dc5c-b623-4fdb-b5da-a455c5a1ac58" target="_blank">UI Kit Home Page</a></li>
+                            <li class="sidebar__item"><a href="https://apps.na.collabserv.com/wikis/home?lang=en-us#!/wiki/Wa4b9a3b71b87_4b16_88f1_7f66e71f0276/page/The%20UI%20Kit%20(Atlantic)%20-%20FAQs" target="_blank">UI Kit FAQ</a></li>
                             <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">Angular 1.x Components</a></li>
                             <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">Angular 4.x Components</a></li>
                             <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">React Components</a></li>
                         </ul>
                     </li>
                     <li class="sidebar__drawer">
-                        <a>For Designers</a>
+                        <a tabindex="0" title="For Designers">
+                            <span class="icon-draw"></span>
+                            <span>Files</span>
+                        </a>
                         <ul>
                             <li class="sidebar__item"><a href="public/documents/sketch/CiscoUI-Icons.sketch" download="public/documents/sketch/CiscoUI-Icons.sketch">Icons (Sketch)</a></li>
-                            <li class="sidebar__item"><a href="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip" download="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip">SketchPalette Plugin</a></li>
-                            <li class="sidebar__item"><a href="https://github.com/andrewfiorillo/sketch-palettes" target="_blank">SketchPalette Plugin Instructions</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/button.sketch" download="public/documents/sketch/button.sketch">Buttons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/checkbox.sketch" download="public/documents/sketch/checkbox.sketch">Checkboxes (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/radio.sketch" download="public/documents/sketch/radio.sketch">Radios (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/switch.sketch" download="public/documents/sketch/switch.sketch">Switches (Sketch)</a></li>
                         </ul>
                     </li>
                     <li class="sidebar__drawer">
-                        <a>Older Versions</a>
+                        <a tabindex="0" title="Older Versions">
+                            <span class="icon-history"></span>
+                            <span>Versions</span>
+                        </a>
                         <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.3.3-official/" target="_blank">Version 1.3.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.3.2-official/" target="_blank">Version 1.3.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.2-official/" target="_blank">Version 1.2.2</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.0-official/" target="_blank">Version 1.2.0</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.1.0-official/" target="_blank">Version 1.1.0</a></li>
                             <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.5-official/" target="_blank">Version 1.0.5</a></li>
@@ -60,159 +82,246 @@
                         </ul>
                     </li>
                     <li class="sidebar__drawer">
-                        <a>Examples</a>
+                        <a tabindex="0" title="Examples">
+                            <span class="icon-applications"></span>
+                            <span>Examples</span>
+                        </a>
                         <ul>
                             <li class="sidebar__item">
-                                <a href="assets/basic.html" target="_blank">Basic</a>
+                                <a href="assets/basic.html">Basic Page Template</a>
                             </li>
                             <li class="sidebar__item">
-                                <a href="assets/standard.html" target="_blank">Standard</a>
+                                <a href="assets/list.html">List Page Template</a>
                             </li>
                             <li class="sidebar__item">
-                                <a href="assets/dashboard.html" target="_blank">Dashboard</a>
+                                <a href="assets/standard.html">Standard Page Template</a>
                             </li>
                             <li class="sidebar__item">
-                                <a href="assets/stickyfooter.html" target="_blank">Sticky Footer</a>
+                                <a href="assets/sidebar.html">Sidebar Page Template</a>
                             </li>
                             <li class="sidebar__item">
-                                <a href="assets/cdc-guest.html" target="_blank">CDC Guest Template</a>
+                                <a href="assets/wide.html">Wide Page Template</a>
                             </li>
                             <li class="sidebar__item">
-                                <a href="assets/cdc-entitled.html" target="_blank">CDC Entitled Template</a>
-                            </li>
-                            <li class="sidebar__item">
-                                <a href="assets/cdc-employee.html" target="_blank">CDC Employee Template</a>
+                                <a href="assets/collage.html">Collage</a>
                             </li>
                         </ul>
                     </li>
                     <li id="rootDrawer" class="sidebar__drawer">
-                        <a>Pattern Library</a>
+                        <a tabindex="0" title="Pattern Library">
+                            <span class="icon-plugin"></span>
+                            <span>Patterns</span>
+
+                        </a>
                         <ul>
-                            {{#eachRoot}}
-                            <li class="sidebar__drawer" id="section-{{referenceURI}}">
-                                <a>{{header}}</a>
-                                <ul>
-                                {{#eachSection reference}}
-                                    {{#ifDepth 2}}
-                                    <li class="sidebar__item depth-2" id="section-{{referenceURI}}">
-                                        <a onclick="doNav('section-{{../../referenceURI}}.html#{{referenceURI}}')">{{checkTags header}}</a>
-                                    </li>
-                                    {{/ifDepth}}
-                                {{/eachSection}}
-                                </ul>
-                            </li>
-                            {{/eachRoot}}
+                            <li class="sidebar__item"><a href="index.html">Home</a></li>
+                            <li class="sidebar__item"><a href="section-design.html#design-typography">Design</a></li>
+                            <li class="sidebar__item"><a href="section-primitives.html#primitives-blockquote">Primitives</a></li>
+                            <li class="sidebar__item"><a href="section-components.html#components-alert">Components</a></li>
+                            <li class="sidebar__item"><a href="section-layout.html#layout-footer">Layout</a></li>
+                            <li class="sidebar__item"><a href="section-utilities.html#utilities-helpers">Utilities</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
             <main>
                 <header id="styleguideHeader" class="header header--compressed">
-                    <div class="header-bar container">
-                        <a class="btn btn--small btn--icon toggle-menu">
+                    <div class="header-bar flex-center-sm container-fluid">
+                        <a id="mobile-sidebar-toggle" class="sidebar-toggle visible-xs visible-sm base-margin-right">
                             <span class="icon-list-menu"></span>
                         </a>
                         <a class="header-bar__logo" href="http://www.cisco.com" target="_blank">
                             <span class="icon-cisco"></span>
                         </a>
-                        <div class="header-bar__main">
+                        <div class="header-bar__main hidden-xs hidden-sm">
                             <div class="header-heading">
-                                {{#if homepage}}
                                 <h1 class="page-title">Cisco UI Kit</h1>
-                                {{else}}
-                                <h1 class="page-title">
-                                    {{#eachSection rootName}}
-                                        {{#ifDepth 1}}
-                                            Cisco UI {{header}}
-                                        {{/ifDepth}}
-                                    {{/eachSection}}
-                                </h1>
-                                {{/if}}
                             </div>
                         </div>
-                        <div class="header-toolbar">
-                            <a class="btn btn--small btn--icon" href="mailto:atlantic-ui-styleguide@external.cisco.com?Subject=Feedback" title="Submit Feedback">
-                                <span class="icon-feedback"></span>
-                            </a>
+                        <div class="header-toolbar hidden-xs hidden-sm hidden-md">
+
+                            <div>
+                                <a href="index.html">Home</a>
+                                <a href="section-design.html#design-typography" class="base-margin-left">Design</a>
+                                <a href="section-primitives.html#primitives-blockquote" class="base-margin-left">Primitives</a>
+                                <a href="section-components.html#components-alert" class="base-margin-left">Components</a>
+                                <a href="section-layout.html#layout-footer" class="base-margin-left">Layout</a>
+                                <a href="section-utilities.html#utilities-helpers" class="base-margin-left">Utilities</a>
+
+                                <div class="dropdown dropdown--left dropdown--tail base-margin-left">
+                                    <a>Globals</a>
+                                    <div class="dropdown__menu">
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-animation" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Animations</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-headermargins" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Header Margins</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-spacing" type="checkbox">
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Compression</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-wide" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Wide View</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-sticky" type="checkbox">
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Sticky Header/Footer</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </header>
-                {{#if homepage}}
-                <div class="content">{{{homepage}}}</div>
-                {{else}}
-                <div class="content">
+            {{#if homepage}}
+                <div class="content content--alt">{{{homepage}}}</div>
+            {{else}}
+                <div class="content content--alt">
 
-                    <a name="top" class="invisible">&nbsp;</a>
-                    <div class="container">
+                {{#each sections}}
 
-                        {{#eachSection rootName}}
-
-                        {{#ifDepth 1}}
-                        <div id="{{referenceURI}}">
-                            <a class="link invisible" href="#{{referenceURI}}">
-                                <span class="icon-link"></span>
-                            </a>
-                        </div>
-                        {{/ifDepth}}
-
-                        {{#ifDepth 2}}
-                        <div class="panel panel--loose panel--indigo depth-2" id="{{referenceURI}}">
-                            <h1>{{checkTags header}}</h1>
-                        {{/ifDepth}}
-
-                        {{#ifDepth 3}}
-                        <div class="panel panel--loose depth-3">
-                            <h4 class="base-margin-bottom">
-                                <span class="subheading text-capitalize">{{extractParent referenceURI}}</span>
-                                <span class="text-normal">{{header}}</span>
-                            </h4>
-                        {{/ifDepth}}
-
-                            {{#if subheading}}
-                            <h5>{{{subheading}}}</h5>
-                            {{/if}}
-
-                            {{#if description}}
-                            <div>{{{checkTemplate description referenceURI}}}</div>
-                            {{/if}}
-
-                            {{#if markup}}
-                            <div>
-                                {{{markup}}}
-                                {{#eachModifier}}
-                                <div>
-                                    <div>
-                                        <div>
-                                            <code>{{name}}</code>
-                                        </div>
-                                        {{#if description}}
-                                        <div>{{{description}}}</div>
-                                        {{/if}}
-                                    </div>
-                                    {{{markup}}}
-                                </div>
-                                {{/eachModifier}}
-                            </div>
-                            <div class="base-margin-top">
-                                <div class="flex">
-                                    <a class="markup-toggle link">
-                                        <span class="markup-label">View Source </span>
-                                        <span class="markup-chevron icon-chevron-up qtr-margin-left"></span>
-                                    </a>
-                                    <a class="clipboard-toggle flex-fluid text-right hide link">Copy</a>
-                                </div>
-                                <div class="markup-code panel panel--ltgray panel--bordered panel--well hide qtr-margin-top">
-                                    <pre><code class="code-raw" data-language="html">{{removeIgnore markup}}</code></pre>
-                                </div>
-                            </div>
-                            {{/if}}
-                            {{#ifDepth 2}}</div>{{/ifDepth}}
-                            {{#ifDepth 3}}</div>{{/ifDepth}}
-                        {{/eachSection}}
+                {{#ifDepth 1}}
+                    <div id="{{referenceURI}}" class="hide">
+                        <a class="link invisible" href="#{{referenceURI}}">
+                            <span class="icon-link"></span>
+                        </a>
                     </div>
+
+                    {{#ifEquals referenceURI "changelog"}}
+                    <!-- inject:changelog -->
+                    <!-- contents of html partials will be injected here -->
+                    <!-- endinject -->
+                    {{else}} {{#ifEquals referenceURI "downloads"}}
+                    <!-- inject:downloads -->
+                    <!-- contents of html partials will be injected here -->
+                    <!-- endinject -->
+                    {{else}}
+
+                    <div id="{{referenceURI}}-section">
+                        <div class="container-fluid">
+                            <div class="section">
+                                <div class="row">
+                                    <div class="col-md-4 col-lg-3 col-xl-2">
+                                        <div class="panel panel--bordered-bottom panel--bordered-right panel--loose half-padding-left">
+                                            <h4 class="text-uppercase no-margin">{{checkTags header}}</h4>
+                                        </div>
+                                        <ul id="styleguideTabs" class="tabs tabs--vertical">
+                                            {{ buildTabs sections }}
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-8 col-lg-9 col-xl-10">
+                                        <div id="styleguideTabs-content" class="tab-content">
+                    {{/ifEquals}}{{/ifEquals}}
+
+                {{/ifDepth}}
+
+                                        {{#ifDepth 2}}
+                                            {{#ifNotEquals referenceURI "changelog"}}
+                                            {{#ifNotEquals referenceURI "downloads"}}
+                                            <div id="styleguideTabs-{{header}}-content" class="tab-pane">
+                                                <div class="flex-center-vertical">
+                                                    <h2 class="display-1 no-margin text-capitalize flex-fluid">{{extractParent referenceURI}}</h2>
+                                                    <div>{{checkSketch description referenceURI}}</div>
+                                                </div>
+                                            {{/ifNotEquals}}
+                                            {{/ifNotEquals}}
+                                        {{/ifDepth}}
+
+                                        {{#ifDepth 3}}
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+                                               {{#ifEquals header "Inventory"}}
+                                               <div class="row">
+                                                   <div class="col-md-3">
+                                                       <div class="form-group input--icon">
+                                                           <div class="form-group__text">
+                                                               <input id="icon-search-input" type="search" placeholder="Search Icons">
+                                                               <button type="button" class="link">
+                                                                   <span class="icon-search"></span>
+                                                               </button>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-md-9 text-right">
+                                                       <div>Showing <span id="icon-count"></span> of <span id="icon-total-count"></span> icons</div>
+                                                   </div>
+                                               </div>
+                                               {{/ifEquals}}
+
+                                               {{#ifNotEquals header "Inventory"}}
+                                               <h3 class="display-4">{{ header }}</h3>
+                                               {{/ifNotEquals}}
+
+                                            {{/ifDepth}}
+
+                                            {{#if subheading}}
+                                                <h5>{{{subheading}}}</h5>
+                                            {{/if}}
+
+                                            {{#if description}}
+                                                <div>{{{removeSketch description}}}</div>
+                                            {{/if}}
+
+                                            {{#if markup}}
+                                                <div class="section">
+                                                    {{{markup}}}
+                                                    {{#eachModifier}}
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <code>{{name}}</code>
+                                                            </div>
+                                                            {{#if description}}
+                                                            <div>{{{description}}}</div>
+                                                            {{/if}}
+                                                        </div>
+                                                        {{{markup}}}
+                                                    </div>
+                                                    {{/eachModifier}}
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">{{removeIgnore markup}}</code></pre>
+                                                </div>
+                                            {{/if}}
+
+
+                                            {{#ifDepth 3}}
+                                                </div>
+                                                {{ addConditionalDiv referenceURI }}
+                                            {{/ifDepth}}
+                {{/each}}
+            {{/if}}
                 </div>
-                {{/if}}
             </main>
         </div>
+        <div id="modal-backdrop" class="modal-backdrop hide"></div>
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

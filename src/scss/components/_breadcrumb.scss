@@ -1,23 +1,44 @@
 //
 // Breadcrumb
 //
-// Since 1.0.0<br><br>
-//
 // Styleguide Components.Breadcrumb
 //
 
 
 //
-// Example
+// Examples
 //
 // Markup:
-// <ul class="breadcrumb">
-//     <li><a>Previous Page</a></li>
-//     <li><a>Previous Page</a></li>
-//     <li><span>Current Page</span></li>
-// </ul>
+// <div>
+//     <ul class="breadcrumb">
+//         <li><a>Home</a></li>
+//         <li><a>Pages</a></li>
+//         <li><span>This Page</span></li>
+//     </ul>
+// </div>
+// <div class="base-margin-top">
+//     <ul class="breadcrumb">
+//         <li><a><span class="icon-home"></span></a></li>
+//         <li><a>Devices</a></li>
+//         <li><a>Switches</a></li>
+//         <li><span>Cisco Catalyst 3750E</span></li>
+//     </ul>
+// </div>
+// <div class="base-margin-top">
+//     <ul class="breadcrumb">
+//         <li><a>Downloads Home</a></li>
+//         <li><a>Security</a></li>
+//         <li><a>Firewalls</a></li>
+//         <li>...</li>
+//         <li><a>Software on Chassis</a></li>
+//         <li><a>Adaptive Security Appliance (ASA) Software</a></li>
+//         <li><span>9.1.7 Interim</span></li>
+//     </ul>
+// </div>
 //
-// Styleguide Components.Breadcrumb.Example
+// Weight: 1
+//
+// Styleguide Components.Breadcrumb.Examples
 //
 
 .breadcrumb {
@@ -27,18 +48,20 @@
 
     margin: 0;
     padding: 0;
+    background: 0 none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
 
     > li {
-        float: left;
-
         &.active {
             color: $breadcrumb-color;
         }
 
         + li:before {
             padding: $breadcrumb-padding;
-            color: $breadcrumb-color;
-            content: '/\00a0';
+            color: $base-muted-color;
+            content: $breadcrumb-separator;
         }
     }
 }

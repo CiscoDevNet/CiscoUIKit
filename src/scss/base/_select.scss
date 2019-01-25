@@ -1,171 +1,383 @@
 //
 // Select
 //
-// Since: 1.0.0
-//
-// Styleguide Base.Select
+// Styleguide Primitives.Select
 //
 
 
 //
-// Examples
-//
-// <blockquote>Add the attribute or class `disabled` to the select element to denote a disabled field.<br>Add the attribute or class `readonly` to the select element to denote a read-only field</blockquote>
+// Size
 //
 // Markup:
-// <form>
-//     <div class="row">
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text select">
-//                     <select name="select1">
-//                         <option value="0" selected>Select an Option</option>
-//                         <option value="option1">Option 1</option>
-//                         <option value="option2">Option 2</option>
-//                         <option value="option3">Option 3</option>
-//                     </select>
-//                 </div>
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-size-default" value="Select an Option">
+//                 <label for="select-size-default">Default</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
 //             </div>
 //         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text select">
-//                     <select name="select2">
-//                         <option value="0" selected>Select an Option</option>
-//                         <option value="option1">Option 1</option>
-//                         <option value="option2">Option 2</option>
-//                         <option value="option3">Option 3</option>
-//                     </select>
-//                     <label for="select2">With Label</label>
-//                 </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group dropdown input--compressed">
+//             <div class="form-group__text select">
+//                 <input id="select-size-compressed" value="Select an Option">
+//                 <label for="select-size-compressed">Compressed</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
 //             </div>
 //         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text select">
-//                     <select name="select3" required>
-//                         <option value="0" selected>Select an Option</option>
-//                         <option value="option1">Option 1</option>
-//                         <option value="option2">Option 2</option>
-//                         <option value="option3">Option 3</option>
-//                     </select>
-//                     <label for="select3">Required</label>
-//                     <div class="required-block">
-//                         <span class="icon-asterisk"></span>
-//                     </div>
-//                 </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Primitives.Select.Size
+//
+
+
+//
+// Types
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group">
+//             <div class="form-group__text select">
+//                 <select id="select-type-basic">
+//                     <option value="first">First Value</option>
+//                     <option value="second" selected="">Second Value</option>
+//                     <option value="third">Third Value</option>
+//                 </select>
+//                 <label for="select-type-basic">Unstyled</label>
 //             </div>
 //         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text select">
-//                     <select multiple name="select4">
-//                         <option value="0" selected>Select Options</option>
-//                         <option value="option1">Option 1</option>
-//                         <option value="option2">Option 2</option>
-//                         <option value="option3">Option 3</option>
-//                     </select>
-//                     <label for="select4">Multi-Select</label>
-//                 </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-type-styled" value="Select an Option">
+//                 <label for="select-type-styled">Styled</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
 //             </div>
 //         </div>
-//         <div class="col-md-6">
-//             <div class="form-group">
-//                 <div class="form-group__text select">
-//                     <select disabled name="select5">
-//                         <option value="0" selected>Select an Option</option>
-//                         <option value="option1">Option 1</option>
-//                         <option value="option2">Option 2</option>
-//                         <option value="option3">Option 3</option>
-//                     </select>
-//                     <label for="select5">Disabled</label>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Primitives.Select.Types
+//
+
+
+//
+// States
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-state-default" value="Select an Option">
+//                 <label for="select-state-default">Default</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-state-disabled" value="Select an Option" disabled>
+//                 <label for="select-state-disabled">Disabled</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-state-readonly" value="Select an Option" readonly>
+//                 <label for="select-state-readonly">Readonly</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-state-required" value="Select an Option" required>
+//                 <label for="select-state-required">
+//                     <span>Required</span>
+//                     <span title="this is a required field">*</span>
+//                 </label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-state-hover" value="Select an Option" class="hover">
+//                 <label for="select-state-hover">Hover</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-state-focus" value="Select an Option" class="focus">
+//                 <label for="select-state-focus">Focus</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group dropdown form-group--error">
+//             <div class="form-group__text select">
+//                 <input id="select-state-error" value="Select an Option">
+//                 <label for="select-state-error">
+//                     <span>Error</span>
+//                     <span title="this is a required field">*</span>
+//                 </label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//             <div class="help-block text-danger" role="alert">
+//                 <span>Please select an option</span>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Primitives.Select.States
+//
+
+
+//
+// Label Layout
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-layout-default" value="Select an Option">
+//                 <label for="select-layout-default">Default</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <br>
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group dropdown label--inline">
+//             <div class="form-group__text select">
+//                 <input id="select-layout-inline" value="Select an Option">
+//                 <label for="select-layout-inline">Inline</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Primitives.Select.Layout
+//
+
+
+//
+// Groups
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-groups-default" value="Select an Option">
+//                 <label for="select-groups-default">Default</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <div class="dropdown__group">
+//                     <div class="dropdown__group-header">Group 1</div>
+//                     <a>Option 1</a>
+//                     <a>Option 2</a>
+//                     <a>Option 3</a>
+//                 </div>
+//                 <div class="dropdown__group">
+//                     <div class="dropdown__group-header">Group 2</div>
+//                     <a>Option 1</a>
+//                     <a>Option 2</a>
+//                     <a>Option 3</a>
 //                 </div>
 //             </div>
 //         </div>
 //     </div>
-// </form>
+// </div>
 //
-// Styleguide Base.Select.Examples
+// Weight: 5
+//
+// Styleguide Primitives.Select.Groups
 //
 
-.select {
-    display: flex;
-    position: relative;
-    transition: all 0.2s ease;
+//
+// Selection
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-selection-single" value="Select an Option">
+//                 <label for="select-selection-single">Single Select</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>Option 1</a>
+//                 <a>Option 2</a>
+//                 <a>Option 3</a>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="form-group dropdown">
+//             <div class="form-group__text select">
+//                 <input id="select-selection-multi" value="Select an Option">
+//                 <label for="select-selection-multi">Multi Select</label>
+//             </div>
+//             <div class="dropdown__menu">
+//                 <a>
+//                     <label class="checkbox">
+//                         <input type="checkbox">
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                     <span>Option 1</span>
+//                 </a>
+//                 <a>
+//                     <label class="checkbox">
+//                         <input type="checkbox">
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                     <span>Option 2</span>
+//                 </a>
+//                 <a>
+//                     <label class="checkbox">
+//                         <input type="checkbox">
+//                         <span class="checkbox__input"></span>
+//                     </label>
+//                     <span>Option 3</span>
+//                 </a>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Primitives.Select.Selection
+//
 
-    &:after {
-        @include icon-dropdown;
-        position: absolute;
-        right: 15px;
-        top: 0;
-        color: $base-form-select-chevron-color;
-        pointer-events: none;
-        text-align: center;
-        transition: all 0.2s ease;
-    }
-
-    &:hover,
-    &:focus {
-        color: $base-accent-color;
-        z-index: 1;
-
+.form-group {
+    .form-group__text.select {
+        select {
+            cursor: pointer;
+        }
+        input {
+            user-select: none;
+            pointer-events: none;
+        }
         &:after {
-            color: $base-accent-color;
-        }
-
-        ~ label {
-            color: $base-font-color;
-        }
-    }
-
-    ~ label {
-        color: $base-muted-color;
-    }
-
-    label:first-of-type {
-        order: 0;
-    }
-
-    select {
-        order: 0;
-        position: relative;
-        flex: 1;
-        width: 100%;
-        background: none;
-        border: 0;
-        cursor: pointer;
-        user-select: none;
-        appearance: none;
-
-        &[multiple] {
-            overflow-y: auto;
-            margin-top: 1px;
-
-            option:not(:checked) {
-                color: $base-font-color;
-            }
-        }
-
-        &.disabled,
-        &[disabled] {
-            @include disabled;
-
-            ~ label {
-                @include disabled;
-            }
-        }
-
-        &.readonly,
-        &[readonly] {
-            @include readonly;
-
-            ~ label {
-                @include readonly;
-            }
-        }
-
-        &::-ms-expand {
-            display:none; // Hide select arrow in IE
+            @include drawer-closed;
+            position: absolute;
+            bottom: $cui-input-error-icon-bottom;
+            right: $base-spacing-half;
+            color: $base-muted-color;
+            text-align: center;
+            pointer-events: none;
         }
     }
+    &.active {
+        .form-group__text.select {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .form-group__text.select:after {
+            @include drawer-opened;
+            position: absolute;
+        }
+        .form-group__text.select input {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .form-group__text.select ~ .dropdown__menu {
+            border-top: 3px solid $base-accent-color;
+        }
+    }
+    &.input--compressed {
+        .form-group__text.select:after {
+            top: 26px;
+        }
+    }
+    .form-group__text.select ~.help-block {
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+}
+
+
+// Global Modifiers
+
+&.cui--animated .form-group .form-group__text.select:after {
+    transition: transform 0.3s ease;
 }

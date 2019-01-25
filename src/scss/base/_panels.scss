@@ -1,79 +1,74 @@
 //
 // Panel
 //
-// A panel is a fundamental general purpose container.<br><br>
-// Since: 1.0.0
-//
-// Styleguide Base.Panel
+// Styleguide Primitives.Panel
 //
 
 
 //
-// Color / Background
+// Color
 //
 // Markup:
-// <div class="row">
-//     <div class="col-md-6 panel-group panel-group--compressed">
-//         <div class="panel panel--bordered">
-//             <h6>Default (white background)</h6>
-//         </div>
-//         <div class="panel panel--blue">
-//             <h6>Blue</h6>
-//         </div>
-//         <div class="panel panel--ltgray">
-//             <h6>Light Gray</h6>
-//         </div>
-//         <div class="panel panel--mdgray">
-//             <h6>Medium Gray</h6>
+// <div class="row no-gutters">
+//     <div class="col-md-4">
+//         <div class="panel panel--loose panel--bordered">
+//             <span class="text-uppercase">Default</span>
+//             <a href="javascript:;">link</a>
 //         </div>
 //     </div>
-//     <div class="col-md-6 panel-group panel-group--compressed">
-//         <div class="panel panel--dkgray">
-//             <h6>Dark Gray</h6>
+//     <div class="col-md-4">
+//         <div class="panel panel--ltblue panel--loose">
+//             <span class="text-uppercase">Light Blue</span>
+//             <a href="javascript:;">link</a>
 //         </div>
-//         <div class="panel panel--dkblue">
-//             <h6>Dark Blue</h6>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="panel panel--ltgray panel--loose">
+//             <span class="text-uppercase">Light Gray</span>
+//             <a href="javascript:;">link</a>
 //         </div>
-//         <div class="panel panel--indigo">
-//             <h6>Indigo</h6>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="panel panel--mdgray panel--loose">
+//             <span class="text-uppercase">Medium Gray</span>
+//             <a href="javascript:;">link</a>
 //         </div>
-//         <div class="panel panel--gray-ghost">
-//             <h6>Gray Ghost (transparent background)</h6>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="panel panel--dkgray panel--loose">
+//             <span class="text-uppercase">Dark Gray</span>
+//             <a href="javascript:;">link</a>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="panel panel--blue panel--loose">
+//             <span class="text-uppercase">Blue</span>
+//             <a href="javascript:;">link</a>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="panel panel--vibblue panel--loose">
+//             <span class="text-uppercase">Vibrant Blue</span>
+//             <a href="javascript:;">link</a>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="panel panel--indigo panel--loose">
+//             <span class="text-uppercase">Indigo</span>
+//             <a href="javascript:;">link</a>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="panel panel--success panel--loose">
+//             <span class="text-uppercase">Success</span>
+//             <a href="javascript:;">link</a>
 //         </div>
 //     </div>
 // </div>
 //
 // Weight: 1
 //
-// Styleguide Base.Panel.Color
-//
-
-
-//
-// Color / Status
-//
-// Markup:
-// <div class="row">
-//     <div class="col-md-4">
-//         <div class="panel panel--success">
-//             <h6>Success</h6>
-//         </div>
-//     </div>
-//     <div class="col-md-4">
-//         <div class="panel panel--warning">
-//             <h6>Warning</h6>
-//         </div>
-//     </div>
-//     <div class="col-md-4">
-//         <div class="panel panel--danger">
-//             <h6>Danger</h6>
-//         </div>
-//     </div>
-// </div>
-//
-// Weight: 2
-//
-// Styleguide Base.Panel.Status
+// Styleguide Primitives.Panel.Color
 //
 
 
@@ -83,36 +78,36 @@
 // Markup:
 // <div class="row">
 //     <div class="col-md-4">
-//         <div class="panel panel--blue panel--compressed panel--bordered">
-//             <h6>Compressed</h6>
+//         <div class="panel panel--compressed panel--bordered">
+//             <div>Compressed</div>
 //         </div>
 //     </div>
 //     <div class="col-md-4">
-//         <div class="panel panel--blue panel--regular panel--bordered">
-//             <h6>Regular (default)</h6>
+//         <div class="panel panel--bordered">
+//             <div>Regular (default)</div>
 //         </div>
 //     </div>
 //     <div class="col-md-4">
-//         <div class="panel panel--blue panel--loose panel--bordered">
-//             <h6>Loose</h6>
+//         <div class="panel panel--loose panel--bordered">
+//             <div>Loose</div>
 //         </div>
 //     </div>
 // </div>
 //
-// Weight: 3
+// Weight: 2
 //
-// Styleguide Base.Panel.Padding
+// Styleguide Primitives.Panel.Padding
 //
 
 
 //
 // Spacing
 //
-// <blockquote>See pattern <a href="section-base.html#base-list">@List</a> for how to manage panel spacing</blockquote>
+// <blockquote>See <a href="section-list.html#list">@List</a> pattern for how to manage panel spacing.</blockquote>
 //
 // Weight: 3
 //
-// Styleguide Base.Panel.Spacing
+// Styleguide Primitives.Panel.Spacing
 //
 
 
@@ -123,29 +118,29 @@
 // <div class="row">
 //     <div class="col-md-3">
 //         <div class="panel panel--blue">
-//             <h6>Flat (default)</h6>
+//             <div>Flat (default)</div>
 //         </div>
 //     </div>
 //     <div class="col-md-3">
-//         <div class="panel panel--raised">
-//             <h6>Raised (small)</h6>
+//         <div class="panel panel--bordered panel--raised-small">
+//             <div>Raised (small)</div>
 //         </div>
 //     </div>
 //     <div class="col-md-3">
-//         <div class="panel panel--raised-medium">
-//             <h6>Raised (medium)</h6>
+//         <div class="panel panel--bordered panel--raised">
+//             <div>Raised (medium)</div>
 //         </div>
 //     </div>
 //     <div class="col-md-3">
-//         <div class="panel panel--raised-large">
-//             <h6>Raised (large)</h6>
+//         <div class="panel panel--bordered panel--raised-large">
+//             <div>Raised (large)</div>
 //         </div>
 //     </div>
 // </div>
 //
 // Weight: 4
 //
-// Styleguide Base.Panel.Raised
+// Styleguide Primitives.Panel.Raised
 //
 
 
@@ -156,7 +151,7 @@
 // <div class="row">
 //     <div class="col-md-6">
 //         <div class="panel panel--bordered">
-//             <h6>Bordered</h6>
+//             <div>Bordered</div>
 //         </div>
 //     </div>
 // </div>
@@ -164,29 +159,29 @@
 // <div class="row">
 //     <div class="col-md-6">
 //         <div class="panel panel--bordered-top">
-//             <h6>Bordered Top</h6>
+//             <div>Bordered Top</div>
 //         </div>
 //     </div>
 //     <div class="col-md-6">
 //         <div class="panel panel--bordered-right">
-//             <h6>Bordered Right</h6>
+//             <div>Bordered Right</div>
 //         </div>
 //     </div>
 //     <div class="col-md-6">
 //         <div class="panel panel--bordered-bottom">
-//             <h6>Bordered Bottom</h6>
+//             <div>Bordered Bottom</div>
 //         </div>
 //     </div>
 //     <div class="col-md-6">
 //         <div class="panel panel--bordered-left">
-//             <h6>Bordered Left</h6>
+//             <div>Bordered Left</div>
 //         </div>
 //     </div>
 // </div>
 //
 // Weight: 5
 //
-// Styleguide Base.Panel.Bordered
+// Styleguide Primitives.Panel.Bordered
 //
 
 
@@ -197,213 +192,14 @@
 // <div class="row">
 //     <div class="col-md-6">
 //         <div class="panel panel--ltgray panel--well">
-//             <h6>Well</h6>
-//         </div>
-//     </div>
-//     <div class="col-md-6">
-//         <div class="panel panel--success panel--well">
-//             <h6>Well</h6>
+//             <div>Well</div>
 //         </div>
 //     </div>
 // </div>
 //
 // Weight: 6
 //
-// Styleguide Base.Panel.Well
-//
-
-
-//
-// Hover
-//
-// <blockquote>Add a hover effect to your panels by turning them into anchors</blockquote>
-//
-// Markup:
-// <div class="row">
-//     <div class="col-md-2">
-//         <a class="panel panel--blue">
-//             <h6>blue</h6>
-//         </a>
-//     </div>
-//     <div class="col-md-2">
-//         <a class="panel panel--ltgray">
-//             <h6>ltgray</h6>
-//         </a>
-//     </div>
-//     <div class="col-md-2">
-//         <a class="panel panel--mdgray">
-//             <h6>mdgray</h6>
-//         </a>
-//     </div>
-//     <div class="col-md-2">
-//         <a class="panel panel--dkgray">
-//             <h6>dkgray</h6>
-//         </a>
-//     </div>
-//     <div class="col-md-2">
-//         <a class="panel panel--dkblue">
-//             <h6>dkblue</h6>
-//         </a>
-//     </div>
-//     <div class="col-md-2">
-//         <a class="panel panel--indigo">
-//             <h6>indigo</h6>
-//         </a>
-//     </div>
-//     <div class="col-md-2">
-//         <a class="panel panel--gray-ghost">
-//             <h6>gray-ghost</h6>
-//         </a>
-//     </div>
-//     <div class="col-md-2">
-//         <a class="panel panel--success">
-//             <h6>success</h6>
-//         </a>
-//     </div>
-//     <div class="col-md-2">
-//         <a class="panel panel--warning">
-//             <h6>warning</h6>
-//         </a>
-//     </div>
-//     <div class="col-md-2">
-//         <a class="panel panel--danger">
-//             <h6>danger</h6>
-//         </a>
-//     </div>
-// </div>
-//
-// Weight: 7
-//
-// Styleguide Base.Panel.Hover
-//
-
-
-//
-// Examples
-//
-// Markup:
-// <div class="row">
-//     <div class="col-md-3">
-//         <div class="panel panel--bordered text-center">
-//             <div class="panel__body">
-//                 <div class="flex-inline thumb thumb--large">
-//                     <img src="public/img/user-photo-thumb-1.png">
-//                 </div>
-//                 <h1>Jane Doe<h1>
-//                 <h5 class="subheading">Business Analyst</h6>
-//                 <div><small>jane.doe@cisco.com</small></div>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-md-3">
-//         <div class="panel panel--blue panel--loose">
-//             <h1>John Smith</h1>
-//             <div><span class="icon-mail"></span> jsmith@cisco.com</div>
-//             <div><span class="icon-home"></span> 2100 Kit Creek Road, Bldg 9</div>
-//             <div><span class="icon-phone"></span> +555 222-9980</div>
-//         </div>
-//     </div>
-//     <div class="col-md-3">
-//         <div class="panel panel--dkblue">
-//             <h1>$1,250</h1>
-//             <div>Quarterly Income</div>
-//             <div>
-//                 <small>Sales and Marketing</small>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-md-3">
-//         <div class="panel panel--danger panel--loose">
-//             <h1><span class="icon-alert"></span> 21 Alerts</h1>
-//             <div>Router Configuration Anomalies</div>
-//         </div>
-//     </div>
-// </div>
-// <br>
-// <div class="panel panel--bordered">
-//     <div class="row">
-//         <div class="col-md-6">
-//             <img class="img img--fluid" src="public/img/section-1.jpg">
-//         </div>
-//         <div class="col-md-6">
-//             <div class="panel panel--loose">
-//                 <h2><a href="https://www.cisco.com" target="_blank">Know the now: Cisco Tetration Analytics</a></h2>
-//                 <p>Pervasive visibility across everything in your data center in real-time. Radically simplify cloud migration, SDN, and zero-trust security.</p>
-//                 <a href="https://www.cisco.com" target="_blank">Find out how <span class="icon-right-arrow-outline"></span></a>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-// <br>
-// <div class="panel">
-//     <div class="row">
-//         <div class="col-md-4">
-//             <div class="panel panel--ltgray panel--loose panel--raised panel--fluid">
-//                 <img class="img img--fluid" src="public/img/section-2-1.jpg">
-//                 <h2 class="base-margin-top">Value-added resellers</h2>
-//                 <p>Sell and support products, services, and solutions for your customers.</p>
-//                 <a href="https://www.cisco.com" target="_blank">Channel Partner Program</a>
-//             </div>
-//         </div>
-//         <div class="col-md-4">
-//             <div class="panel panel--loose panel--raised panel--fluid">
-//                 <img class="img img--fluid" src="public/img/section-2-2.jpg">
-//                 <h2 class="base-margin-top">Providers</h2>
-//                 <p>Build and deliver managed and cloud services.</p>
-//                 <a href="https://www.cisco.com" target="_blank">Cloud and Managed Services Program</a>
-//             </div>
-//         </div>
-//         <div class="col-md-4">
-//             <div class="panel panel--ltgray panel--loose panel--raised panel--fluid">
-//                 <img class="img img--fluid" src="public/img/section-2-3.jpg">
-//                 <h2 class="base-margin-top">Consultants</h2>
-//                 <p>Use your expertise to define business outcomes and deliver results.</p>
-//                 <a href="https://www.cisco.com" target="_blank">Become a Consultant</a>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-// <br>
-// <div class="panel panel--compressed panel--indigo">
-//     <div class="text-center">
-//         <ul class="list list--loose list--inline">
-//             <li>
-//                 <a class="base-padding">
-//                     <span class="icon-home icon-medium"></span>
-//                     <div>Home</div>
-//                 </a>
-//             </li>
-//             <li>
-//                 <a class="base-padding">
-//                     <span class="icon-alarm icon-medium"></span>
-//                     <div>Alarms</div>
-//                 </a>
-//             </li>
-//             <li>
-//                 <a class="base-padding">
-//                     <span class="icon-analysis icon-medium"></span>
-//                     <div>Analysis</div>
-//                 </a>
-//             </li>
-//             <li>
-//                 <a class="base-padding">
-//                     <span class="icon-devices icon-medium"></span>
-//                     <div>Devices</div>
-//                 </a>
-//             </li>
-//             <li>
-//                 <a class="base-padding">
-//                     <span class="icon-bookmark icon-medium"></span>
-//                     <div>Bookmarks</div>
-//                 </a>
-//             </li>
-//         </ul>
-//     </div>
-// </div>
-//
-// Weight: 8
-//
-// Styleguide Base.Panel.Examples
+// Styleguide Primitives.Panel.Well
 //
 
 .panel-group { // Deprecated. Wrap panels in unordered list
@@ -442,9 +238,22 @@
         }
     }
 
-    &--raised           { box-shadow: $base-box-shadow; }
-    &--raised-medium    { box-shadow: $base-box-shadow-medium; }
+    &--raised,
+    &--raised-medium    { box-shadow: $base-box-shadow; }
+    &--raised-small     { box-shadow: $base-box-shadow-small; }
     &--raised-large     { box-shadow: $base-box-shadow-large; }
+
+    &--nopadding {
+        @include panel-padding($padding: 0);
+    }
+
+    &--content {
+        box-sizing: content-box;
+    }
+
+    &--fill {
+        height: 100%;
+    }
 
     &--skinny,
     &--compressed {
@@ -458,6 +267,11 @@
     &--loose,
     &--xspace {
         @include panel-padding($padding: $base-panel-loose-padding);
+    }
+
+    &--toolbar {
+        display: flex;
+        align-items: center;
     }
 
     &--bordered         { border: $base-border; }
@@ -505,7 +319,7 @@
     }
 
     &--well {
-        box-shadow: inset 0 5px 10px -5px rgba(0,0,0,0.25);
+        box-shadow: $base-panel-well;
     }
 
     &--fluid {

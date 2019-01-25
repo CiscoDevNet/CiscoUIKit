@@ -1,9 +1,7 @@
 //
 // Icons
 //
-// Since: 1.0.0
-//
-// Styleguide Base.Icons
+// Styleguide Primitives.Icons
 //
 
 @font-face {
@@ -28,7 +26,8 @@
   text-decoration:inherit;
   text-transform:none;
   text-rendering:optimizeLegibility;
-  vertical-align: -12%;
+  vertical-align: middle;
+  text-indent: 0.5px; // Prevent left-side clipping
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
@@ -54,23 +53,22 @@
 // Inventory
 //
 // Markup:
-// <div class="base-margin-top row"><% _.each(glyphs, function(glyph) { %>
-//   <div class="col-xs-6 col-sm-4 col-md-3 qtr-margin-bottom">
-//     <div class="panel panel--bordered" href="#base-icons-icon-<%= glyph.fileName %>">
+// <div id="icon-container" class="base-margin-top row"><% _.each(glyphs, function(glyph) { %>
+//   <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+//     <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed" href="#base-icons-icon-<%= glyph.fileName %>">
 //         <div class="flex-center-vertical">
 //             <div class="flex-center" style="width:48px;height:48px" data-balloon="icon-<%= glyph.fileName %>" data-balloon-pos="up" data-balloon-length="medium">
 //                 <span class="icon-<%= glyph.fileName %> icon-medium"></span>
 //             </div>
 //             <div class="flex-fluid half-margin-left text-ellipsis">
 //                 <div class="text-ellipsis">icon-<%= glyph.fileName %></div>
-//                 <small class="text-lowercase"><%= glyph.codePoint %></small>
 //             </div>
 //         </div>
 //     </div>
 //   </div><% }); %>
 // </div>
 //
-// Styleguide Base.Icons.Inventory
+// Styleguide Primitives.Icons.Inventory
 //
 
 <% _.each(glyphs, function(glyph) { %>

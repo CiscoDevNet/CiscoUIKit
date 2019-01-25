@@ -1,19 +1,29 @@
 //
-// Typography updated
+// Typography
 //
-// We use CiscoSans as primary<br>
-// CiscoSans includes ExtraLight, ExtraLightOblique, Light, LightOblique, Regular, and Bold.
-// The font stack in order is CiscoSans, Arial, Sans-Serif<br>
-//
-// Weight: -2
-//
-// Styleguide Base.Typography
+// Styleguide Design.Typography
 //
 
 @font-face {
   font-family: 'CiscoSans';
   font-style: normal;
   font-weight: 100;
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTThin.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTThin.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: oblique;
+  font-weight: 100;
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTThinOblique.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTThinOblique.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: normal;
+  font-weight: 200;
   src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTExtraLight.woff2') format('woff2'),
        url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTExtraLight.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
@@ -21,7 +31,7 @@
 @font-face {
   font-family: 'CiscoSans';
   font-style: oblique;
-  font-weight: 100;
+  font-weight: 200;
   src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTExtraLightOblique.woff2') format('woff2'),
        url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTExtraLightOblique.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
@@ -52,32 +62,51 @@
 }
 @font-face {
   font-family: 'CiscoSans';
+  font-style: oblique;
+  font-weight: 400;
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTRegularOblique.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTRegularOblique.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'CiscoSans';
   font-style: bold;
   font-weight: 700;
   src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTBold.woff2') format('woff2'),
        url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTBold.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
-html,
-html.cui {
-    position: relative;
-    height: 100%;
-    font-size: $html-font-size;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: oblique;
+  font-weight: 700;
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTBoldOblique.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTBoldOblique.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: normal;
+  font-weight: 900;
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTHeavy.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTHeavy.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: oblique;
+  font-weight: 900;
+  src: url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTHeavyOblique.woff2') format('woff2'),
+       url('#{$cui-resource-path}/fonts/CiscoSans/CiscoSansTTHeavyOblique.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-body,
-body.cui {
-    // By default we auto scale header (h1-h6) font sizes
-    @include scaled-headers();
+html {
+    height: 100%;
+    font-size: $html-font-size;
+}
 
-    &--fixed-headers {
-        @include fixed-headers($font-size: $medium-font-size);
-    }
-
+.cui body, body.cui {
     color: $base-font-color;
     font-family: $base-font-family;
     line-height: $base-line-height;
@@ -85,16 +114,25 @@ body.cui {
     font-size: $base-font-size;
     position: relative;
     min-width: $min-page-width;
+    max-width: $max-page-width;
     height: 100%;
     margin: 0;
+    padding: 0;
     overflow: hidden;
+
+    direction: ltr;
+    text-align: left;
+
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
 //
 // Filenames and URLs
 //
-// Add the class `text-darkgreen` for filenames and URLs (which are not rendered as links)
+// <blockquote>Add the class `text-darkgreen` for filenames and URLs (which are not rendered as links).</blockquote>
 //
 // Markup:
 // <div class="section">
@@ -117,5 +155,5 @@ body.cui {
 //
 // Weight: 10
 //
-// Styleguide Base.Typography.Filenames
+// Styleguide Design.Typography.Filenames
 //

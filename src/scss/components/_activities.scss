@@ -1,83 +1,7 @@
 //
 // Activity
 //
-// Activities and activity streams are used to show time-ordered activity in context (a document or issue, a project, a product, or a group of products). Each activity entry is timestamped, and usually has an actor, an action, and a subject or object of the action.<br><br>
-// Since: 1.0.0
 //
-// Styleguide Components.Activity
-//
-
-
-//
-// Composition
-//
-// Markup:
-// <div class="row">
-//     <div class="col-md-6">
-//         <p><b>Default</b></p>
-//         <div class="activity composition">
-//             <div class="thumbnail">Thumb</div>
-//             <div class="activity__body">
-//                 <div class="activity__title">Title</div>
-//                 <div class="activity__description">Description</div>
-//                 <div class="activity__timestamp">Timestamp</div>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-md-6">
-//         <p><b>Variant:</b> 1</p>
-//         <div class="activity composition">
-//             <div class="activity__body">
-//                 <div class="activity__title">Title</div>
-//                 <div class="activity__description">Description</div>
-//                 <div class="activity__timestamp activity__timestamp--bottom">Timestamp</div>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-// <div class="row">
-//     <div class="col-md-6">
-//         <p><b>Variant:</b> 2</p>
-//         <div class="activity composition">
-//             <div class="thumbnail">Thumb</div>
-//             <div class="activity__body">
-//                 <div class="activity__title">Title</div>
-//                 <div class="activity__timestamp">Timestamp</div>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-md-6">
-//         <p><b>Variant:</b> 3</p>
-//         <div class="activity composition">
-//             <div class="activity__body">
-//                 <div class="activity__title">Title</div>
-//                 <div class="activity__timestamp">Timestamp</div>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-//
-// Weight: 1
-//
-// Styleguide Components.Activity.Composition
-//
-
-.activity.composition {
-    background: transparent;
-    border: 1px solid $light-gray-3;
-
-    div.thumbnail,
-    div.activity__body div {
-        background: $light-gray-3;
-        color: $base-font-color;
-        font-size: $small-font-size;
-        font-weight: $base-font-weight;
-        padding: $base-spacing * 0.5;
-        margin: 2px;
-        pointer-events: none;
-        line-height: $base-spacing;
-    }
-}
 
 
 //
@@ -145,9 +69,8 @@
 //     </div>
 // </div>
 //
-// Weight: 2
+// Weight: 1
 //
-// Styleguide Components.Activity.Examples
 //
 
 .thumb + .activity__body {
@@ -286,5 +209,4 @@
 //
 // Weight: 3
 //
-// Styleguide Components.Activity.List
 //

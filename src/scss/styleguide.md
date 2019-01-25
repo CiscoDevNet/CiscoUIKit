@@ -1,300 +1,605 @@
-<div class="hero hero--indigo">
-    <div class="hero__content">
-        <div class="container center-xs">
-            <div class="row">
-                <div class="col-md-6 col-xl-3 flex-center">
-                    <img src="public/img/Collage.png">
+<div class="container-fluid center-xs">
+    <div id="broadcast" class="alert hide">
+        <div class="alert__icon icon-info-circle"></div>
+        <div id="broadcast-msg" class="alert__message"></div>
+    </div>
+    <div class="row base-margin-top base-padding-bottom">
+        <div class="col-md-8">
+            <div class="flex-center-vertical">
+                <img class="base-margin-right hidden-xs" src="public/img/marqueeLogo48.png">
+                <div class="flex-fluid">
+                    <small class="qtr-margin-left">Version {{VERSION}}</small>
+                    <h1 class="display-1">Cisco UI Kit</h1>
                 </div>
-                <div class="col-md-6 col-xl-9">
-                    <div class="flex-fluid">
-                        <h1>
-                            <span>Cisco user <span class="text-uppercase text-blue">interface</span> kit</span>
-                            <sup class="text-large hidden-xs">
-                                <span class="label label--ghost">1.2.2</span>
-                            </sup>
-                        </h1>
-                        <p class="text-large">A web-based implementation of the UI design language sponsored by Cisco Brand</p>
+            </div>
+            <p class="subtitle">The Cisco UI kit is a simple, modern and lightweight presentation layer you can use to build amazing web applications. The kit is mobile-friendly and mobile-responsive and has been tested across all major browsers and mobile platforms.</p>
+            <div class="section">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="flex-center-vertical">
+                            <span class="icon-check text-success icon-medium animated bounceIn"></span>
+                            <div class="subtitle half-margin-left">Cisco Brand approved</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="flex-center-vertical">
+                            <span class="icon-check text-success icon-medium animated bounceIn"></span>
+                            <div class="subtitle half-margin-left">Saves development costs</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="flex-center-vertical">
+                            <span class="icon-check text-success icon-medium animated bounceIn"></span>
+                            <div class="subtitle half-margin-left">Free and available now</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="flex-center-vertical">
+                            <span class="icon-check text-success icon-medium animated bounceIn"></span>
+                            <div class="subtitle half-margin-left">100+ applications built with this kit</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="flex-center-vertical">
+                            <span class="icon-check text-success icon-medium animated bounceIn"></span>
+                            <div class="subtitle half-margin-left">Follows industry-wide best practices</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="flex-center-vertical">
+                            <span class="icon-check text-success icon-medium animated bounceIn"></span>
+                            <div class="subtitle half-margin-left">Available via CDN or Download</div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="base-margin-top">
+                <a href="section-downloads.html" class="btn btn--wide btn--primary-ghost">Download</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="hidden-xs hidden-sm hidden-md">
+                <img class="animated fadeInRight" src="public/img/landing-marquee.jpg">
+            </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="section">
-        <div id="broadcast" class="alert hide">
-            <div class="alert__icon icon-info-circle"></div>
-            <div id="broadcast-msg" class="alert__message"></div>
+    <div class="divider divider--loose"></div>
+    <div class="row base-padding-top dbl-padding-bottom dbl-margin-bottom">
+        <div class="col-md-4">
+            <div class="hidden-xs hidden-sm hidden-md">
+                <img src="public/img/kit-layers-large.png">
+            </div>
         </div>
-        <div class="secondary-tabs">
-            <ul class="tabs tabs--tall">
-                <li id="tab-intro" class="tab active">
-                    <a><div class="tab-heading" title="Intro">&nbsp;&nbsp;Intro&nbsp;&nbsp;</div></a>
+        <div class="col-md-8">
+            <h1 class="display-0 text-warning">35+</h1>
+            <h4 class="display-3">Reusable UI Patterns</h4>
+            <p class="subtitle">The kit makes it easy to copy patterns directly into your code. The patterns are the building blocks of your application. Each pattern has been reviewed and approved by Cisco Brand. The building blocks are organized into separate groups depending upon their function:</p>
+            <ul class="list list--loose dbl-margin-top">
+                <li>
+                    <div class="flex-center-vertical">
+                        <img src="public/img/primitivesLogo64.png" style="height:64px">
+                        <div class="flex-fluid half-margin-left">
+                            <h3 class="display-4 no-margin">Primitives</h3>
+                            <div class="subtitle">These are the basic building blocks upon which all other patterns are built.</div>
+                        </div>
+                    </div>
                 </li>
-                <li id="tab-download" class="tab">
-                    <a><div class="tab-heading" title="Download">Download</div></a>
+                <li>
+                    <div class="flex-center-vertical">
+                        <img src="public/img/componentsLogo64.png" style="height:64px">
+                        <div class="flex-fluid half-margin-left">
+                            <h3 class="display-4 no-margin">Components</h3>
+                            <div class="subtitle">More complex and usually built on top of primitives.</div>
+                        </div>
+                    </div>
                 </li>
-                <li id="tab-changelog" class="tab">
-                    <a><div class="tab-heading" title="Change Log">Change Log</div></a>
+                <li>
+                    <div class="flex-center-vertical">
+                        <img src="public/img/layoutLogo64.png" style="height:64px">
+                        <div class="flex-fluid half-margin-left">
+                            <h3 class="display-4 no-margin">Layout</h3>
+                            <div class="subtitle">Control the format and organization of all primitives and components.</div>
+                        </div>
+                    </div>
                 </li>
             </ul>
-            <div class="tab-content">
-                <div id="tab-intro-content" class="tab-pane active">
-                    <div class="panel panel--loose panel--bordered">
-                        <div class="row">
-                            <div class="col-md-8 text-large">
-                                <h1 class="text-huge text-blue base-margin-bottom">Build Amazing Apps!</h1>
-                                <p>The Cisco UI kit is designed to be the modern, lightweight presentation layer you need to quickly skin your components with the latest from Cisco Brand.  The kit comes bundled with over 30 common patterns which can be used as building blocks with which you can construct your application.</p>
-                                <p>Using <a target="_blank" href="https://facebook.github.io/react/">React</a> or <a target="_blank" href="https://angularjs.org/">Angular</a>? Great! This kit is javascript-agnostic so use whatever javascript tooling that works for you and your team.</p>
-                                <p>The kit itself is internal open source so anyone can contribute. We welcome both designers and developers and believe that this kit is an important collaboration keystone between those two groups.</p>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="animated fadeInRight dbl-margin-bottom">
-                                    <img src="public/img/ui-kit-collage.png">
-                                </div>
-                            </div>
-                        </div>
+        </div>
+    </div>
+    <div class="divider divider--loose"></div>
+    <div class="base-padding-top dbl-padding-bottom dbl-margin-bottom">
+        <div>
+            <div class="flex-center-vertical">
+                <h1 class="flex-fluid display-1">What's New</h1>
+                <div class="flex-right">
+                    <a class="btn" href="section-changelog.html">View Changelog</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h4 class="text-warning text-bold">Accent Color</h4>
+            <div class="flex-center-vertical">
+                <span class="display-5 base-margin-right">FROM</span>
+                <div class="swatch swatch--ciscoblue"></div>
+                <span class="display-5 base-margin">TO</span>
+                <div class="swatch swatch--vibblue"></div>
+            </div>
+        </div>
+        <div class="section">
+            <h4 class="text-warning text-bold">Inline Tabs</h4>
+            <div class="flex-center-vertical">
+                <div class="form-group input--icon base-margin-right">
+                    <div class="form-group__text">
+                        <input id="input-type-search" type="search" placeholder="Search">
+                        <button type="button" class="link">
+                            <span class="icon-search"></span>
+                        </button>
                     </div>
-                    <div class="section">
-                        <div class="panel panel--loose panel--bordered">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <img src="public/img/new-logo.png">
-                                </div>
-                                <div class="col-md-9">
-                                    <h1 class="text-huge dbl-padding-top">What's New</h1>
-                                    <ul class="base-margin-top text-large">
-
-                                        <li>
-                                            <span class="label label--success">New</span>
-                                            <a href="section-components.html#components-modal">Modal</a> Pattern
-                                        </li>
-                                        <li>
-                                            <span class="label label--success">New</span>
-                                            <a href="section-components.html#components-dropdown">Dropdown</a> Pattern
-                                        </li>
-
-                                        <li>Once again - lots of bug fixes. See the change log for details.</li>
-
-                                        <li>
-                                            <span>New icons:</span>
-                                            <div>
-                                                <span class="text-xlarge" data-balloon="icon-filter" data-balloon-pos="up">
-                                                    <span class="icon-clipboard"></span>
-                                                </span>
-                                                <span class="text-xlarge half-margin-left" data-balloon="icon-cpu-chip" data-balloon-pos="up">
-                                                    <span class="icon-link-broken"></span>
-                                                </span>
-                                                <span class="text-xlarge" data-balloon="icon-filter" data-balloon-pos="up">
-                                                    <span class="icon-filter"></span>
-                                                </span>
-                                                <span class="text-xlarge half-margin-left" data-balloon="icon-cpu-chip" data-balloon-pos="up">
-                                                    <span class="icon-cpu-chip"></span>
-                                                </span>
-                                                <span class="text-xlarge half-margin-left" data-balloon="icon-memory-ram" data-balloon-pos="up">
-                                                    <span class="icon-memory-ram"></span>
-                                                </span>
-                                                <span class="text-xlarge half-margin-left" data-balloon="icon-virtual-machine" data-balloon-pos="up">
-                                                    <span class="icon-virtual-machine"></span>
-                                                </span>
-                                                <span class="text-xlarge half-margin-left" data-balloon="icon-software-certified" data-balloon-pos="up">
-                                                    <span class="icon-software-certified"></span>
-                                                </span>
-                                                <span class="text-xlarge half-margin-left" data-balloon="icon-software-suggested" data-balloon-pos="up">
-                                                    <span class="icon-software-suggested"></span>
-                                                </span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                </div>
+                <ul id="tabsv7" class="tabs tabs--inline">
+                    <li id="tabsv7-1" class="tab active">
+                        <a tabindex="0">
+                            <div class="tab__heading">Detracto</div>
+                        </a>
+                    </li>
+                    <li id="tabsv7-2" class="tab">
+                        <a tabindex="0">
+                            <div class="tab__heading">Sea et</div>
+                        </a>
+                    </li>
+                    <li id="tabsv7-3" class="tab">
+                        <a tabindex="0">
+                            <div class="tab__heading">Omittantur</div>
+                        </a>
+                    </li>
+                    <li id="tabsv7-4" class="tab">
+                        <a tabindex="0">
+                            <div class="tab__heading">Accommodare</div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="flex-fluid text-right">
+                    <ul class="list list--inline list--regular">
+                        <li><a href="javascript:;"><span class="icon-medium-small icon-print"></span></a></li>
+                        <li><a href="javascript:;"><span class="icon-medium-small icon-plus"></span></a></li>
+                        <li><a href="javascript:;"><span class="icon-medium-small icon-download"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="tabsv7-content" class="tab-content">
+                <div id="tabsv7-1-content" class="tab-pane active">
+                    <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+                    <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+                </div>
+                <div id="tabsv7-2-content" class="tab-pane">
+                    <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+                    <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+                </div>
+                <div id="tabsv7-3-content" class="tab-pane">
+                    <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+                    <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+                </div>
+                <div id="tabsv7-4-content" class="tab-pane">
+                    <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+                    <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h4 class="text-warning text-bold">New Icons</h4>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-aci icon-medium"></span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="section">
-                        <div class="panel panel--loose panel--bordered">
-                            <h1 class="text-huge text-center base-margin-bottom">Resources</h1>
-                            <div class="row">
-                                <div class="col-md-8 offset-md-2">
-                                    <div class="row text-center">
-                                        <div class="col-md-6">
-                                            <dl class="text-large">
-                                                <dt>UI Kit Documentation Home Page</dt>
-                                                <dd><a target="_blank" href="http://cisco-ui.cisco.com">UI Kit Docs</a></dd>
-                                                <dt>UI Kit Open Source Code Repository</dt>
-                                                <dd><a target="_blank" href="http://gitlab.cisco.com/cisco-ui/pattern-library">Pattern Library</a></dd>
-                                                <dt>Cisco Brand Exchange</dt>
-                                                <dd><a target="_blank" href="http://bx.cisco.com/cbx-portal/">Brand Exchange Home</a></dd>
-                                                <dt>Cisco Brand Digital Standards</dt>
-                                                <dd><a target="_blank" href="https://cisco.jiveon.com/groups/atlantic/pages/about">Digital Standards Home</a></dd>
-                                            </dl>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <dl class="text-large">
-                                                <dt>UI Kit Frequently Asked Questions</dt>
-                                                <dd><a target="_blank" href="https://cisco.jiveon.com/docs/DOC-1575948">FAQ</a></dd>
-                                                <dt>Request UI Kit Developer Access</dt>
-                                                <dd><a target="_blank" href="mailto:kbroich@cisco.com?Subject=Request%20To%20Contribute">Developer Mailer</a></dd>
-                                                <dt>Request UI Kit Support</dt>
-                                                <dd><a target="_blank" href="mailto:atlantic-ui-styleguide@external.cisco.com?Subject=Support">Support Mailer</a></dd>
-                                                <dt>Submit Sketch or Illustrator Templates</dt>
-                                                <dd><a target="_blank" href="mailto:atlantic-ui-styleguide@external.cisco.com?Subject=Contribute%20Templates">Template Mailer</a></dd>
-                                            </dl>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section">
-                        <div class="panel panel--loose panel--bordered">
-                            <h1 class="text-huge text-center base-margin-bottom">Browser Support</h1>
-                            <div class="row">
-                                <div class="col-md-8 offset-md-2">
-                                    <div class="row">
-                                        <div class="col-md-4 center-xs">
-                                            <img src="public/img/browserSupport.png">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="flex-fluid text-left center-xs">
-                                                <h6 class="section">The Cisco UI Kit is geared for modern browsers only. Minimum browser versions include:</h6>
-                                                <div class="label-group base-margin-bottom">
-                                                    <span class="label label--raised label--blue">Chrome 43</span>
-                                                    <span class="label label--raised label--blue">Edge 12</span>
-                                                    <span class="label label--raised label--blue">Firefox 41</span>
-                                                    <span class="label label--raised label--blue">Internet Explorer 11</span>
-                                                    <span class="label label--raised label--blue">Opera 33</span>
-                                                    <span class="label label--raised label--blue">Safari 10</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section">
-                        <div class="panel panel--loose panel--bordered">
-                            <div class="hero hero--loose">
-                                <div class="hero__content" style="background:url(public/img/networkintuitive.gif); background-size:cover; min-height:800px">
-                                    <div class="row">
-                                        <div class="col-md-6 offset-md-1">
-                                            <div class="base-margin">
-                                                <h1 class="text-huge base-margin-bottom">Coming Soon</h1>
-                                                <div class="text-large">
-                                                    <p>Angular web components. We have developers busy working on building out a set of reusable Angular 1.x and Angular 4.x components which follow the Cisco UI kit spec. You can access their code via the Git repositories <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">here</a> and <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">here</a>.</p>
-                                                    <p>Angular sandbox. In addition to the Angular web components we are also planning on making the Angular Sandbox available. This sandbox came from the Apollo team (thanks!) and will provide working component examples with documentation - very cool.</p>
-                                                    <p>React web components. Another team has been busy building out a set of React components for the UI kit. You can find the code in Git <a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">here</a>.</p>
-                                                    <p>Once the new digital web standards are available from Cisco Brand we will get busy working on version 2.0 of the UI kit which will look a lot more like the cisco.com home page. Stay tuned - we will announce once we get our grubby little hands on the spec.</p>
-                                                </div>
-                                                <blockquote class="dbl-margin-top blockquote--blue">
-                                                    <h1 class="text-blue">Cisco UI Kit<br>Development Team</h1>
-                                                </blockquote>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-aci</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="tab-download-content" class="tab-pane">
-                    <section>
-                    <!--
-                        <div class="section">
-                            <h3>Available via CDN</h3>
-                            <hr>
-                        </div>
-                        <div class="panel panel--loose">
-                            <p>All asset files now available via the Cisco.com CDN. You can access the latest version or older versions by including the main css file in the head element of your page:</p>
-<span class="label label--indigo">Latest</span><xmp><link rel="stylesheet" type="text/css" href="https://www.cisco.com/web/fw/cisco-ui/latest/dist/css/cui-standard.min.css">
-</xmp>
-<span class="label label--indigo">Older Versions</span><xmp><link rel="stylesheet" type="text/css" href="https://www.cisco.com/web/fw/cisco-ui/1.0.5/dist/css/cui-standard.min.css"></xmp>
-<xmp><link rel="stylesheet" type="text/css" ref="https://www.cisco.com/web/fw/cisco-ui/1.0.4/dist/css/cui-standard.min.css"></xmp>
-<xmp><link rel="stylesheet" type="text/css" href="https://www.cisco.com/web/fw/cisco-ui/1.0.3/dist/css/cui-standard.min.css"></xmp>
-<br>
-                        </div>
-                        <div class="section">
-                            <h3>Or Download one of these Packages:</h3>
-                            <hr>
-                        </div>
-                        -->
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 col-xl-4">
-                                <div class="panel panel--loose text-large" style="height:400px">
-                                    <div class="flex">
-                                        <h3 class="flex-fluid">Basic</h3>
-                                        <a class="btn btn--small btn--primary-ghost" target="_blank" href="dist/cui-{{VERSION}}-basic.zip">Download</a>
-                                    </div>
-                                    <h6 class="subheading half-margin-top base-margin-bottom">Includes font files plus:</h6>
-                                    <ul class="list" style="column-count:2">
-                                        <li><a href="section-base.html#base-button">Button</a></li>
-                                        <li><a href="section-base.html#base-checkbox">Checkbox</a></li>
-                                        <li><a href="section-base.html#base-form">Form</a></li>
-                                        <li><a href="section-base.html#base-icons">Icons</a></li>
-                                        <li><a href="section-base.html#base-label">Label</a></li>
-                                        <li><a href="section-base.html#base-link">Link</a></li>
-                                        <li><a href="section-base.html#base-list">List</a></li>
-                                        <li><a href="section-base.html#base-panel">Panel</a></li>
-                                        <li><a href="section-base.html#base-section">Section</a></li>
-                                        <li><a href="section-base.html#base-select">Select</a></li>
-                                        <li><a href="section-base.html#base-switch">Switch</a></li>
-                                        <li><a href="section-base.html#base-table">Table</a></li>
-                                        <li><a href="section-base.html#base-thumbnail">Thumbnail</a></li>
-                                        <li><a href="section-base.html#base-typography">Typography</a></li>
-                                        <li><a href="section-utilities.html#utilities-helpers">Utilities</a></li>
-                                        <li>&nbsp;</li>
-                                        <li><a target="_blank" href="https://v4-alpha.getbootstrap.com/layout/grid/">Bootstrap Grid</a></li>
-                                        <li><a target="_blank" href="https://necolas.github.io/normalize.css/">Normalize (reset)</a></li>
-                                    </ul>
-                                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-apps icon-medium"></span>
                             </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4">
-                                <div class="panel panel--blue panel--loose text-large" style="height:400px">
-                                    <div class="flex">
-                                        <h3 class="flex-fluid">Standard</h3>
-                                        <a class="btn btn--small btn--white-ghost" target="_blank" href="dist/cui-{{VERSION}}-standard.zip">Download</a>
-                                    </div>
-                                    <h6 class="half-margin-top base-margin-bottom">Includes everything in Basic plus:</h6>
-                                    <ul class="list" style="column-count:2">
-                                        <li><a href="section-components.html#components-activity">Activity</a></li>
-                                        <li><a href="section-components.html#components-alert">Alert</a></li>
-                                        <li><a href="section-components.html#components-badge">Badge</a></li>
-                                        <li><a href="section-components.html#components-breadcrumb">Breadcrumb</a></li>
-                                        <li><a href="section-components.html#components-carousel">Carousel</a></li>
-                                        <li><a href="section-components.html#components-dropdown">Dropdown</a></li>
-                                        <li><a href="section-components.html#components-figure">Figure</a></li>
-                                        <li><a href="section-components.html#components-footer">Footer</a></li>
-                                        <li><a href="section-components.html#components-gauge">Gauge</a></li>
-                                        <li><a href="section-components.html#components-header">Header</a></li>
-                                        <li><a href="section-components.html#components-hero">Hero</a></li>
-                                        <li><a href="section-components.html#components-loader">Loader</a></li>
-                                        <li><a href="section-components.html#components-modal">Modal</a></li>
-                                        <li><a href="section-components.html#components-rating">Rating</a></li>
-                                        <li><a href="section-components.html#components-scoreboard">Scoreboard</a></li>
-                                        <li><a href="section-components.html#components-sidebar">Sidebar</a></li>
-                                        <li><a href="section-components.html#components-step">Step</a></li>
-                                        <li><a href="section-components.html#components-tab">Tab</a></li>
-                                        <li><a href="section-components.html#components-toast">Toast</a></li>
-                                        <li><a href="section-components.html#components-tooltip">Tooltip</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-4">
-                                <div class="panel panel--loose panel--dkgray text-large" style="height:400px">
-                                    <div class="flex">
-                                        <h3 class="flex-fluid">Source</h3>
-                                        <a class="btn btn--small btn--white-ghost" target="_blank" href="dist/cui-{{VERSION}}-source.zip">Download</a>
-                                    </div>
-                                    <h6 class="half-margin-top half-margin-bottom">Includes SASS source, font files, and raw icons</h6>
-                                </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-apps</div>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
-                <div id="tab-changelog-content" class="tab-pane animated fadeIn">
-                    <section id="changelog-content"></section>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-compliance icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-compliance</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-configurations icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-configurations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-device-crash icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-device-crash</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-device-faults icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-device-faults</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-device-reload icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-device-reload</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-dna icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-dna</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-history icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-history</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-insights icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-insights</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-learning icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-learning</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-lifecycle icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-lifecycle</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-social-facebook icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-social-facebook</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-social-linkedin icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-social-linkedin</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-social-twitter icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-social-twitter</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-syslog icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-syslog</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-tine icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-tine</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h4 class="text-warning text-bold">Changed Icons</h4>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-account icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-account</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-bug icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-bug</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-cart icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-delete icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-delete</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-devices icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-devices</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-home icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-home</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-like icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-like</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-search icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-search</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 qtr-margin-bottom icon-panel animated fadeIn">
+                    <div class="panel panel--bordered-right panel--bordered-bottom panel--compressed">
+                        <div class="flex-center-vertical">
+                            <div class="flex-center" style="width:48px;height:48px">
+                                <span class="icon-software icon-medium"></span>
+                            </div>
+                            <div class="flex-fluid half-margin-left text-ellipsis">
+                                <div class="text-ellipsis">icon-software</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider divider--loose"></div>
+    <div class="base-padding-top dbl-padding-bottom dbl-margin-bottom">
+        <div>
+            <div class="text-center">
+                <h1 class="display-1">Getting Started</h1>
+                <h6 class="display-4 text-warning">Ready. Set. Go!</h6>
+            </div>
+            <div class="row dbl-margin-top">
+                <div class="col-md-4">
+                    <div class="panel">
+                        <div class="text-center">
+                            <img class="thumb thumb--raised thumb--huge" src="public/img/iconResources.png">
+                            <h3 class="display-4 base-margin-top">Resources</h3>
+                            <div class="panel panel--loose">
+                                <ul class="list list--regular">
+                                    <li>
+                                        <a class="subtitle" target="_blank" href="http://bx.cisco.com/cbx-portal/">Cisco Brand Exchange</a>
+                                    </li>
+                                    <li>
+                                        <a class="subtitle" target="_blank" href="https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=f440dc5c-b623-4fdb-b5da-a455c5a1ac58">Cisco Brand Digital Standards</a>
+                                    </li>
+                                    <li>
+                                        <a class="subtitle" target="_blank" href="https://cisco.jiveon.com/docs/DOC-1575948">UI Kit Frequently Asked Questions (FAQ)</a>
+                                    </li>
+                                    <li>
+                                        <a class="subtitle" target="_blank" href="mailto:kbroich@cisco.com?Subject=Request%20To%20Contribute">UI Kit Developer Access</a>
+                                    </li>
+                                    <li>
+                                        <a class="subtitle" target="_blank" href="mailto:atlantic-ui-styleguide@external.cisco.com?Subject=Support">UI Kit Support Mailer</a>
+                                    </li>
+                                    <li>
+                                        <a class="subtitle" target="_blank" href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui/pattern-library">UI Kit Source Repository</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel">
+                        <div class="text-center">
+                            <img class="thumb thumb--raised thumb--huge" src="public/img/iconTraining.png">
+                            <h3 class="display-4 base-margin-top">Training</h3>
+                            <div class="panel panel--loose">
+                                <ul class="list list--regular">
+                                    <li>
+                                        <a class="subtitle" href="https://www.cisco.com/web/fw/cisco-ui/videos/CiscoUIKitIntro.mp4" target="_blank">Introduction to the Cisco UI kit (Video by Kim Mayton)</a>
+                                    </li>
+                                    <li>
+                                        <a class="subtitle" href="public/documents/ciscoUIKit.pptx" target="_blank">Cisco UI Kit Powerpoint</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel">
+                        <div class="text-center">
+                            <img class="thumb thumb--raised thumb--huge" src="public/img/iconTools.png">
+                            <h3 class="display-4 base-margin-top">Tools</h3>
+                            <div class="panel panel--loose">
+                                <ul class="list list--regular">
+                                    <li>
+                                        <a class="subtitle" target="_blank" href="http://swtg-rtp-dev-7/angular/">Cisco UI Angular Components Sandbox</a>
+                                    </li>
+                                    <li>
+                                        <a class="subtitle" href="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip" download="https://github.com/andrewfiorillo/sketch-palettes/archive/master.zip">SketchPalette Plugin</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <a class="subtitle" href="https://github.com/andrewfiorillo/sketch-palettes" target="_blank">SketchPalette Plugin Instructions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
+<footer class="footer footer--basic">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/help.html" target="_blank">Help</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/terms-conditions.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/trademarks.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+</footer>

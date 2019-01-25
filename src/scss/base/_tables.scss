@@ -1,20 +1,18 @@
 //
-// Table updated
+// Table
 //
-// Since: 1.0.0
-//
-// Styleguide Base.Table
+// Styleguide Primitives.Table
 //
 
 
 //
 // Borders
 //
-// <blockquote>Add the class `table--bordered` to add borders to your cells, rows and table</blockquote>
+// <blockquote>Add the class `table--bordered` to add borders to your cells, rows and table.</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
-//     <p>No Borders (default)</p>
+//     <h4 class="section">No Borders (default)</h4>
 //     <table class="table">
 //         <thead>
 //             <tr>
@@ -43,8 +41,8 @@
 //     </table>
 // </div>
 // <div class="responsive-table">
-//     <p>With Borders</p>
-//     <table class="table table--bordered">
+//     <h4 class="section">With Borders</h4>
+//     <table class="table table--bordered table--selectable">
 //         <thead>
 //             <tr>
 //                 <th>Header 1</th>
@@ -74,19 +72,19 @@
 //
 // Weight: 1
 //
-// Styleguide Base.Table.Borders
+// Styleguide Primitives.Table.Borders
 //
 
 
 //
 // Striping
 //
-// <blockquote>By default all rows are striped for better visibility. Add the class `table--nostripes` to remove row striping</blockquote>
+// <blockquote>By default all rows are striped for better visibility. Add the class `table--nostripes` to remove row striping.</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
-//     <p>With Striping (default)</p>
-//     <table class="table table--bordered">
+//     <h4 class="section">With Striping (default)</h4>
+//     <table class="table">
 //         <thead>
 //             <tr>
 //                 <th>Header 1</th>
@@ -96,9 +94,9 @@
 //         </thead>
 //         <tbody>
 //             <tr>
-//                 <td>Row 1, Column 1</td>
-//                 <td>Row 1, Column 2</td>
-//                 <td>Row 1, Column 3</td>
+//                 <td>Row 1, Column 1 <a href="javascript:;">link</a></td>
+//                 <td>Row 1, Column 2 <a href="javascript:;">link</a></td>
+//                 <td>Row 1, Column 3 <a href="javascript:;">link</a></td>
 //             </tr>
 //             <tr>
 //                 <td>Row 2, Column 1</td>
@@ -114,8 +112,8 @@
 //     </table>
 // </div>
 // <div class="responsive-table">
-//     <p>No Striping</p>
-//     <table class="table table--bordered table--nostripes">
+//     <h4 class="section">No Striping</h4>
+//     <table class="table table--nostripes">
 //         <thead>
 //             <tr>
 //                 <th>Header 1</th>
@@ -125,9 +123,9 @@
 //         </thead>
 //         <tbody>
 //             <tr>
-//                 <td>Row 1, Column 1</td>
-//                 <td>Row 1, Column 2</td>
-//                 <td>Row 1, Column 3</td>
+//                 <td>Row 1, Column 1 <a href="javascript:;">link</a></td>
+//                 <td>Row 1, Column 2 <a href="javascript:;">link</a></td>
+//                 <td>Row 1, Column 3 <a href="javascript:;">link</a></td>
 //             </tr>
 //             <tr>
 //                 <td>Row 2, Column 1</td>
@@ -145,7 +143,7 @@
 //
 // Weight: 2
 //
-// Styleguide Base.Table.Striping
+// Styleguide Primitives.Table.Striping
 //
 
 
@@ -156,7 +154,7 @@
 //
 // Markup:
 // <div class="responsive-table">
-//     <table class="table table--bordered table--loose table--selectable">
+//     <table class="table table--selectable">
 //         <thead>
 //             <tr>
 //                 <th class="sortable">Header 1 <span class="sort-indicator icon-chevron-down"></span></th>
@@ -166,9 +164,9 @@
 //         </thead>
 //         <tbody>
 //             <tr>
-//                 <td>Row 1, Column 1</td>
-//                 <td>Row 1, Column 2</td>
-//                 <td>Row 1, Column 3</td>
+//                 <td>Row 1, Column 1 <a href="javascript:;">link</a></td>
+//                 <td>Row 1, Column 2 <a href="javascript:;">link</a></td>
+//                 <td>Row 1, Column 3 <a href="javascript:;">link</a></td>
 //             </tr>
 //             <tr class="active">
 //                 <td>ACTIVE</td>
@@ -186,18 +184,18 @@
 //
 // Weight: 3
 //
-// Styleguide Base.Table.Selection
+// Styleguide Primitives.Table.Selection
 //
 
 
 //
 // Highlighting
 //
-// <blockquote>Add the class `table--highlight` to add a row hover effect. You can also add the class `sortable` to a column header to indicate active sort</blockquote>
+// <blockquote>Add the class `table--highlight` to add a row hover effect. You can also add the class `sortable` to a column header to indicate active sort.</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
-//     <table class="table table--bordered table--highlight">
+//     <table class="table table--highlight">
 //         <thead>
 //             <tr>
 //                 <th>
@@ -219,9 +217,9 @@
 //                         <span class="checkbox__input"></span>
 //                     </label>
 //                 </td>
-//                 <td>Row 1, Column 1</td>
-//                 <td>Row 1, Column 2</td>
-//                 <td>Row 1, Column 3</td>
+//                 <td>Row 1, Column 1 <a href="javascript:;">link</a></td>
+//                 <td>Row 1, Column 2 <a href="javascript:;">link</a></td>
+//                 <td>Row 1, Column 3 <a href="javascript:;">link</a></td>
 //             </tr>
 //             <tr>
 //                 <td>
@@ -251,7 +249,7 @@
 //
 // Weight: 4
 //
-// Styleguide Base.Table.Highlighting
+// Styleguide Primitives.Table.Highlighting
 //
 
 
@@ -262,7 +260,7 @@
 //
 // Markup:
 // <div class="responsive-table">
-//     <table class="table table--bordered table--hover">
+//     <table class="table table--hover">
 //         <thead>
 //             <tr>
 //                 <th>
@@ -316,18 +314,18 @@
 //
 // Weight: 5
 //
-// Styleguide Base.Table.Hover
+// Styleguide Primitives.Table.Hover
 //
 
 
 //
 // Fixed
 //
-// <blockquote>Add the class `table--fixed` to change the table layout to fixed. A fixed table layout renders quicker than non-fixed but column widths are not determined by the data. By default tables are NOT fixed</blockquote>
+// <blockquote>Add the class `table--fixed` to change the table layout to fixed. A fixed table layout renders quicker than non-fixed but column widths are not determined by the data. By default tables are NOT fixed.</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
-//     <table class="table table--bordered table--fixed">
+//     <table class="table table--fixed">
 //         <thead>
 //             <tr>
 //                 <th>Header 1</th>
@@ -357,18 +355,18 @@
 //
 // Weight: 6
 //
-// Styleguide Base.Table.Fixed
+// Styleguide Primitives.Table.Fixed
 //
 
 
 //
 // Wrapped Text
 //
-// <blockquote>Add the class `table--wrap` to wrap text in the cells. By default, text is not wrapped</blockquote>
+// <blockquote>Add the class `table--wrap` to wrap text in the cells. By default, text is not wrapped.</blockquote>
 //
 // Markup:
 // <div class="responsive-table">
-//     <table class="table table--bordered table--wrap">
+//     <table class="table table--wrap">
 //         <thead>
 //             <tr>
 //                 <th>Header 1</th>
@@ -398,7 +396,7 @@
 //
 // Weight: 7
 //
-// Styleguide Base.Table.Wrap
+// Styleguide Primitives.Table.Wrap
 //
 
 
@@ -407,8 +405,8 @@
 //
 // Markup:
 // <div class="responsive-table">
-//     <p>Compressed</p>
-//     <table class="table table--bordered table--compressed">
+//     <h4 class="section">Compressed</h4>
+//     <table class="table table--compressed">
 //         <thead>
 //             <tr>
 //                 <th>Header 1</th>
@@ -436,8 +434,8 @@
 //     </table>
 // </div>
 // <div class="responsive-table">
-//     <p>Regular (default)</p>
-//     <table class="table table--bordered">
+//     <h4 class="section">Regular (default)</h4>
+//     <table class="table">
 //         <thead>
 //             <tr>
 //                 <th>Header 1</th>
@@ -465,8 +463,8 @@
 //     </table>
 // </div>
 // <div class="responsive-table">
-//     <p>Loose</p>
-//     <table class="table table--bordered table--loose">
+//     <h4 class="section">Loose</h4>
+//     <table class="table table--loose">
 //         <thead>
 //             <tr>
 //                 <th>Header 1</th>
@@ -496,8 +494,23 @@
 //
 // Weight: 8
 //
-// Styleguide Base.Table.Padding
+// Styleguide Primitives.Table.Padding
 //
+
+@mixin table-spacing(
+	$padding: $base-table-cell-padding,
+	$font-size: $base-font-size)
+{
+	th {
+		&:after {
+			display: none;
+		}
+	}
+	tr, td, th {
+		padding: $padding;
+		font-size: $font-size;
+	}
+}
 
 @mixin col-spotlight(
 	$column,
@@ -570,7 +583,7 @@
 	}
 
 	// Table wells
-	> tbody > tr.well td {
+	> tbody > tr.well > td {
 	    padding: 0;
 	    border-top: 0 none;
 	}
@@ -583,17 +596,6 @@
 	th {
 		position: relative;
 		text-align: left;
-		&:after {
-			position: absolute;
-			display: block;
-			content: '';
-			width: 1px;
-			height: 50%;
-			right: 0;
-			top: 50%;
-			background: $base-border-color;
-			transform: translateY(-50%);
-    	}
 
 		&:last-child {
 			&:after {
@@ -630,7 +632,6 @@
 			vertical-align: middle;
 		}
 	}
-
 	&--bordered {
 		border: $base-table-border;
 		th {
@@ -654,14 +655,22 @@
 			border: 0 none;
 		}
 	}
-
 	&--wrap {
-		tr, td, th {
-			white-space: normal;
-			overflow: visible;
+		@include table-wrap;
+	}
+	@include media-breakpoint-down(md) {
+		&--wrap-md {
+			@include table-wrap;
 		}
-		td {
-			vertical-align: top;
+	}
+	@include media-breakpoint-down(sm) {
+		&--wrap-sm {
+			@include table-wrap;
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		&--wrap-xs {
+			@include table-wrap;
 		}
 	}
 
@@ -670,27 +679,27 @@
 			white-space: nowrap;
 		}
 	}
-
 	&--nostripes {
 		> tbody > tr:nth-child(odd),
 		> tbody > tr:nth-child(even) {
 			background: transparent;
 		}
 	}
-
-	&--compressed {
-		th {
-			&:after {
-				display: none;
-			}
-		}
-
-		tr, td, th {
-			padding: $base-table-compressed-padding;
-			font-size: $base-table-compressed-font-size;
-		}
+	&--nopadding {
+		@include table-spacing($padding: $base-spacing-qtr 0);
 	}
-
+	&--compressed {
+		@include table-spacing(
+			$padding: $base-table-compressed-padding,
+			$font-size: $base-table-compressed-font-size
+		);
+	}
+	&--loose {
+		@include table-spacing(
+			$padding: $base-table-loose-padding,
+			$font-size: $base-table-loose-font-size
+		);
+	}
 	&--fixed {
 		table-layout: fixed;
 		tr, td, th {
@@ -700,20 +709,6 @@
 			}
 		}
 	}
-
-	&--loose {
-		th {
-			&:after {
-				display: none;
-			}
-		}
-
-		tr, td, th {
-			padding: $base-table-loose-padding;
-			font-size: $base-table-loose-font-size;
-		}
-	}
-
 	&--highlight {
 		> tbody > tr:hover {
 			cursor: pointer;
@@ -722,61 +717,32 @@
 			@include row-active;
 		}
 	}
-
 	&--nohighlight {
 		> tbody > tr:hover td:first-child {
 			border-left-color: transparent;
 		}
 	}
-
 	&--hover {
 		> tbody > tr:hover {
 			background-color: $base-hover-color;
 		}
 	}
-
 	&--selectable {
-
+		> tbody > tr > td {
+			border-bottom: 1px solid $white;
+		}
 	    > thead > th:first-child,
 		> tbody > tr > td:first-child {
 	        border-left: $base-table-active-row-border-width solid transparent;
-	        text-align: center;
 	    }
-
 		> tbody {
 			> tr {
-				> td {
-					border-bottom: 1px solid transparent;
-				}
 				&:hover,
 				td:hover {
 					cursor: pointer;
 				}
 				&.active {
 					background: rgba($base-accent-color, 0.2);
-
-			        > td {
-			            border-top-color: $base-accent-color;
-			            border-bottom-color: $base-accent-color;
-
-			            &:not(:first-child):not(:last-child) {
-			                border-left-color: transparent;
-			                border-right-color: transparent;
-			            }
-
-			            &:first-child {
-			                border-right-color: transparent;
-			            }
-
-			            &:last-child {
-			                border-right: 1px solid $base-accent-color
-			            }
-			        }
-				}
-			}
-			tr.active + tr.active {
-				> td {
-					border-top: 1px solid transparent;
 				}
 			}
 		}
@@ -804,7 +770,7 @@
 .sortable {
 	cursor: pointer;
 	&:hover, &.sorted {
-		color: $base-accent-color;
+		color: $cisco-blue4;
 	}
 }
 
@@ -831,6 +797,36 @@
 				width: 100%;
 				margin: 0;
 				padding: 0;
+			}
+		}
+	}
+}
+
+// Global Modifiers
+
+&.cui--compressed .table {
+	@include table-spacing(
+		$padding: $base-table-compressed-padding,
+		$font-size: $base-table-compressed-font-size
+	);
+}
+
+&.cui--animated .table.table--highlight {
+	> tbody > tr:hover td:first-child {
+		transition: $base-table-highlight-animation;
+	}
+}
+&.cui--animated .table.table--hover {
+	> tbody > tr:hover {
+		transition: $base-table-hover-animation;
+	}
+}
+&.cui--animated .table.table--selectable {
+	> tbody {
+		> tr {
+			transition: $base-table-selection-animation;
+			&:hover, &.active {
+				transition: $base-table-selection-animation;
 			}
 		}
 	}

@@ -1,0 +1,206 @@
+//
+// Blockquote
+//
+// Styleguide Primitives.Blockquote
+//
+
+
+//
+// Colors
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <blockquote>
+//             <p>"Perfect typography is the most elusive of all arts."</p>
+//             <cite>Jan Tschichold</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-3">
+//         <blockquote class="blockquote--blue">
+//             <p>"Everything should be made as simple as possible, but not simpler."</p>
+//             <cite>Albert Einstein</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-3">
+//         <blockquote class="blockquote--indigo">
+//             <p>"Good friends, good books, and a sleepy conscience: this is the ideal life."</p>
+//             <cite>Mark Twain</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-3">
+//         <blockquote class="blockquote--success">
+//             <p>"Good people do not need laws to tell them to act responsibly, while bad people will find a way around the laws."</p>
+//             <cite>Plato</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-3">
+//         <blockquote class="blockquote--danger">
+//             <p>"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us."</p>
+//             <cite>Helen Keller</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-3">
+//         <blockquote class="blockquote--info">
+//             <p>"Those who dare to fail miserably can achieve greatly."</p>
+//             <cite>John F. Kennedy</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-3">
+//         <blockquote class="blockquote--warning">
+//             <p>"Great minds discuss ideas; average minds discuss events; small minds discuss people."</p>
+//             <cite>Eleanor Roosevelt</cite>
+//         </blockquote>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Primitives.Blockquote.Colors
+//
+
+
+//
+// Alignment
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <blockquote class="blockquote--blue">
+//             <p>"I have come to believe that the whole world is an enigma, a harmless enigma that is made terrible by our own mad attempt to interpret it as though it had an underlying truth."</p>
+//             <cite>Umberto Eco</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-4">
+//         <blockquote class="blockquote--blue blockquote--center">
+//             <p>"Be nice to people on your way up because you meet them on your way down."</p>
+//             <cite>Jimmy Durante</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-4">
+//         <blockquote class="blockquote--blue blockquote--right">
+//             <p>"In science one tries to tell people, in such a way as to be understood by everyone, something that no one ever knew before. But in poetry, it's the exact opposite."</p>
+//             <cite>Paul Dirac</cite>
+//         </blockquote>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Primitives.Blockquote.Alignment
+//
+
+
+//
+// Spacing
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <blockquote class="blockquote--compressed blockquote--blue">
+//             <p>"There is a wisdom of the head, and a wisdom of the heart."</p>
+//             <cite>Charles Dickens</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-3">
+//         <blockquote class="blockquote--blue">
+//             <p>"You are remembered for the rules you break."</p>
+//             <cite>Douglas MacArthur</cite>
+//         </blockquote>
+//     </div>
+//     <div class="col-md-3">
+//         <blockquote class="blockquote--loose blockquote--blue">
+//             <p>"Weeds are flowers too, once you get to know them."</p>
+//             <cite>A. A. Milne</cite>
+//         </blockquote>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Primitives.Blockquote.Spacing
+//
+
+
+@mixin cui-blockquote-color($border-color: $base-border-color) {
+    border-color: $border-color;
+    cite {
+        border-color: $border-color;
+    }
+}
+@mixin cui-blockquote-position($align: "left") {
+    border-width: 0;
+    border-style: none;
+
+    @if $align == "left" {
+        border-left-width: $cui-blockquote-border-width;
+        border-left-style: solid;
+
+        p { animation-name: slideInLeftSmall; }
+    }
+    @else if $align == "right" {
+        text-align: right;
+        border-right-width: $cui-blockquote-border-width;
+        border-right-style: solid;
+
+        p { animation-name: slideInRightSmall; }
+    }
+    @else if $align == "center" {
+        text-align: center;
+        cite {
+            width: 50%;
+            padding-top: $base-spacing-half;
+            margin-top: $base-spacing-half;
+            border-top-width: $cui-blockquote-border-width;
+            border-top-style: solid;
+        }
+        p { animation-name: slideInUpSmall; }
+    }
+}
+@mixin cui-blockquote-size($size) {
+    padding: $size;
+}
+
+blockquote {
+    margin: 0;
+
+    @each $name, $size in $cui-blockquote-sizes {
+        @if $name == "default" {
+            @include cui-blockquote-size($size);
+        } @else {
+            &.blockquote--#{$name} {
+                @include cui-blockquote-size($size);
+            }
+        }
+    }
+
+    @each $name, $color in $cui-blockquote-colors {
+        @if $name == "default" {
+            @include cui-blockquote-color($color);
+        } @else {
+            &.blockquote--#{$name} {
+                @include cui-blockquote-color($color);
+            }
+        }
+    }
+
+    @each $name, $pos in $cui-blockquote-positions {
+        @if $name == "default" {
+            @include cui-blockquote-position($pos);
+        } @else {
+            &.blockquote--#{$name} {
+                @include cui-blockquote-position($pos);
+            }
+        }
+    }
+}
+
+cite {
+    display: inline-block;
+    color: lighten($base-font-color, 25);
+    font-style: italic;
+
+    &:before {
+        content: "\2014 \00A0";
+    }
+}

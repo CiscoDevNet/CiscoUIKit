@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="48px" viewBox="0 0 22 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-up-tail</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-up-tail" fill="#000000" fill-rule="nonzero">
+            <g transform="translate(11.000000, 24.000000) rotate(-90.000000) translate(-11.000000, -24.000000) translate(-13.000000, 13.000000)" id="Shape">
+                <path d="M27.1,0.9 C25.9,0.1 25,0.6 25,2 L25,9 L2,9 C0.9,9 0,9.9 0,11 C0,12.1 0.9,13 2,13 L25,13 L25,20 C25,21.4 25.9,21.9 27.1,21.1 L48,11 L27.1,0.9 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

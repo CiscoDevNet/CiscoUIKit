@@ -1,10 +1,7 @@
 //
 // Thumbnail
 //
-// Convert any image into a thumbnail<br><br>
-// Since 1.0.0
-//
-// Styleguide Base.Thumbnail
+// Styleguide Primitives.Thumbnail
 //
 
 
@@ -21,7 +18,7 @@
 //
 // Weight: 1
 //
-// Styleguide Base.Thumbnail.Size
+// Styleguide Primitives.Thumbnail.Size
 //
 
 
@@ -34,7 +31,7 @@
 //
 // Weight: 2
 //
-// Styleguide Base.Thumbnail.Shape
+// Styleguide Primitives.Thumbnail.Shape
 //
 
 
@@ -48,21 +45,7 @@
 //
 // Weight: 3
 //
-// Styleguide Base.Thumbnail.Bordered
-//
-
-
-//
-// Reflected
-//
-// Markup:
-// <img class="thumb thumb--huge thumb--reflected" src="public/img/user-photo-thumb-1.png">
-// <img class="thumb thumb--huge thumb--reflected" src="public/img/user-photo-thumb-2.png">
-// <img class="thumb thumb--huge thumb--reflected" src="public/img/user-photo-thumb-3.png">
-//
-// Weight: 4
-//
-// Styleguide Base.Thumbnail.Reflected
+// Styleguide Primitives.Thumbnail.Bordered
 //
 
 
@@ -74,9 +57,9 @@
 // <img class="thumb thumb--huge thumb--raised" src="public/img/user-photo-thumb-2.png">
 // <img class="thumb thumb--huge thumb--raised" src="public/img/user-photo-thumb-3.png">
 //
-// Weight: 5
+// Weight: 4
 //
-// Styleguide Base.Thumbnail.Raised
+// Styleguide Primitives.Thumbnail.Raised
 //
 
 .thumb {
@@ -100,7 +83,7 @@
     }
 
     &--raised {
-        box-shadow: $base-box-shadow;
+        box-shadow: $base-box-shadow-medium;
     }
 
     &--square {

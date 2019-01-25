@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="40px" viewBox="0 0 10 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>step-forward</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="step-forward" fill="#000000" fill-rule="nonzero">
+            <path d="M5,0 L5,0 C2.23857625,5.07265313e-16 5.50001544e-16,2.23857625 8.8817842e-16,5 L1.77635684e-15,35 C2.11453371e-15,37.7614237 2.23857625,40 5,40 L5,40 C7.76142375,40 10,37.7614237 10,35 L10,5 C10,2.23857625 7.76142375,-5.07265313e-16 5,0 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

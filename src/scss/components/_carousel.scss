@@ -1,89 +1,101 @@
 //
 // Carousel
 //
-// This pattern really covers just the carousel controls. The content of each carousel item is up to you.
-// Since: 1.1.0
-//
 // Styleguide Components.Carousel
 //
 
 
 //
-// Blue Controls
+// Color
+//
+// <blockquote>Add the class `active` to the slide and the controls to denote current element.<br>Add the class `slideInLeft` or `slideInRight` to add sliding animations to your carousel.</blockquote>
 //
 // Markup:
-// <div class="carousel">
-//     <div class="hero hero--split hero--split-75 hero--nogradient hero--bordered">
-//         <div class="hero__content hero--blue">
-//             <div class="container">
-//                 <h2>Edge Routers</h2>
-//                 <p>Grow density and resiliency with programmability for a scalable network edge.</p>
-//                 <button class="btn btn--white-ghost qtr-margin-top">Learn More</button>
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="subheader">Blue Controls (default)</div>
+//         <div class="carousel">
+//             <div id="slide-9300-content" class="carousel__slide active">
+//                 <img class="img img--fluid" src="public/img/9300-switches.png">
+//                 <h4 class="text-center">9300 Series Switches</h4>
+//             </div>
+//             <div id="slide-9400-content" class="carousel__slide">
+//                 <img class="img img--fluid" src="public/img/9400-switches.jpg">
+//                 <h4 class="text-center">9400 Series Switches</h4>
+//             </div>
+//             <div id="slide-9500-content" class="carousel__slide">
+//                 <img class="img img--fluid" src="public/img/9500-switches.png">
+//                 <h4 class="text-center">9500 Series Switches</h4>
+//             </div>
+//             <div class="carousel__controls">
+//                 <a class="back">
+//                     <span class="icon-chevron-left"></span>
+//                 </a>
+//                 <a id="slide-9300" class="dot active"><span class="icon-circle"></span></a>
+//                 <a id="slide-9400" class="dot"><span class="icon-circle"></span></a>
+//                 <a id="slide-9500" class="dot"><span class="icon-circle"></span></a>
+//                 <a class="next">
+//                     <span class="icon-chevron-right"></span>
+//                 </a>
 //             </div>
 //         </div>
-//         <div class="hero__marquee">
-//             <img class="img img--fluid" src="public/img/routers-edge.png">
-//         </div>
 //     </div>
-//     <div class="base-margin-top">
-//         <div class="carousel__controls">
-//             <a class="back disabled">
-//                 <span class="icon-chevron-left"></span>
-//             </a>
-//             <a class="dot selected"><span class="icon-circle"></span></a>
-//             <a class="dot"><span class="icon-circle"></span></a>
-//             <a class="dot"><span class="icon-circle"></span></a>
-//             <a class="next">
-//                 <span class="icon-chevron-right"></span>
-//             </a>
+//     <div class="col-md-4">
+//         <div class="subheader">Indigo Controls</div>
+//         <div class="carousel carousel--indigo">
+//             <div id="slide-3800i-content" class="carousel__slide active">
+//                 <img class="img img--fluid" src="public/img/wireless-3800i.png">
+//                 <div class="row">
+//                     <div class="col-md-6 offset-md-3">
+//                         <h4>Aironet 3800i AP</h4>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div id="slide-3800e-content" class="carousel__slide">
+//                 <img class="img img--fluid" src="public/img/wireless-3800e.png">
+//                 <div class="row">
+//                     <div class="col-md-6 offset-md-3">
+//                         <h4>Aironet 3800e AP</h4>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div id="slide-3800p-content" class="carousel__slide">
+//                 <img class="img img--fluid" src="public/img/wireless-3800p.png">
+//                 <div class="row">
+//                     <div class="col-md-6 offset-md-3">
+//                         <h4>Aironet 3800p AP</h4>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="carousel__controls">
+//                 <a class="back">
+//                     <span class="icon-chevron-left"></span>
+//                 </a>
+//                 <a id="slide-3800i" class="dot active"><span class="icon-circle"></span></a>
+//                 <a id="slide-3800e" class="dot"><span class="icon-circle"></span></a>
+//                 <a id="slide-3800p" class="dot"><span class="icon-circle"></span></a>
+//                 <a class="next">
+//                     <span class="icon-chevron-right"></span>
+//                 </a>
+//             </div>
 //         </div>
 //     </div>
 // </div>
 //
 // Weight: 1
 //
-// Styleguide Components.Carousel.Blue Controls
-//
-
-
-//
-// Indigo Controls
-//
-// Markup:
-// <div class="carousel carousel--indigo">
-//     <div class="hero hero--split hero--split-75 hero--nogradient hero--bordered">
-//         <div class="hero__marquee">
-//             <img class="img img--fluid" src="public/img/catalyst-9400series.jpg">
-//         </div>
-//         <div class="hero__content hero--indigo">
-//             <div class="container">
-//                 <h2>Catalyst 9400 Series Switches</h2>
-//                 <p>Cisco's leading modular-access switches for enterprise. Supports up to 9tbps.</p>
-//                 <button class="btn btn--white-ghost qtr-margin-top">Learn More</button>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="base-margin-top">
-//         <div class="carousel__controls">
-//             <a class="back disabled">
-//                 <span class="icon-chevron-left"></span>
-//             </a>
-//             <a class="dot selected"><span class="icon-circle"></span></a>
-//             <a class="dot"><span class="icon-circle"></span></a>
-//             <a class="dot"><span class="icon-circle"></span></a>
-//             <a class="next">
-//                 <span class="icon-chevron-right"></span>
-//             </a>
-//         </div>
-//     </div>
-// </div>
-//
-// Weight: 2
-//
-// Styleguide Components.Carousel.Indigo Controls
+// Styleguide Components.Carousel.Color
 //
 
 .carousel {
+
+    &__slide {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
 
     &__controls {
         display: flex;
@@ -95,15 +107,17 @@
         .back,
         .next {
             color: $base-accent-color;
+
+            &:active,
+            &:focus,
+            &:hover {
+                text-decoration: none;
+                color: $base-accent-color;
+            }
         }
 
-        .back {
-            margin-right: $base-spacing * 0.5;
-        }
-
-        .next {
-            margin-left: $base-spacing * 0.5;
-        }
+        .back { margin-right: $base-spacing * 0.5; }
+        .next { margin-left: $base-spacing * 0.5; }
 
         .back.disabled,
         .next.disabled {
@@ -111,14 +125,16 @@
         }
 
         .dot {
-            margin: 0 5px;
-            font-size: 20px;
+            margin: 0 2px;
+            font-size: $small-font-size;
             color: $light-gray-2;
             transition: color .5s;
 
             &:hover,
-            &.selected > span {
+            &.selected > span,
+            &.active > span {
                 color: $base-accent-color;
+                text-decoration: none;
             }
         }
     }
@@ -128,8 +144,18 @@
             .back,
             .next,
             .dot:hover,
-            .dot.selected > span {
+            .dot.selected > span,
+            .dot.active > span {
                 color: $indigo;
+            }
+            .back,
+            .next {
+                color: $indigo;
+                &:active,
+                &:focus,
+                &:hover {
+                    color: $indigo;
+                }
             }
         }
     }

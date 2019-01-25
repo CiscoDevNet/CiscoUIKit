@@ -1,155 +1,47 @@
 //
-// Scaffolding
-//
-
-//
-// Grid System
-//
-// We have adopted the Bootstrap 4 Grid system which has 5 grid tiers and is Flexbox-based<br>
-// You can view more details on the grid <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">here</a>
-//
-// Weight: -1
-//
-// Styleguide Base.Grid
-//
-
-//
-// Breakpoints
-//
-// Markup:
-// <div class="responsive-table">
-//     <table class="table table--bordered table--compressed">
-//         <thead>
-//             <tr>
-//                 <th>&nbsp;</th>
-//                 <th>Extra Small (<576px)</th>
-//                 <th>Small (>=576px)</th>
-//                 <th>Medium (>=768px)</th>
-//                 <th>Large (>=992px)</th>
-//                 <th>Extra Large (>=1200px)</th>
-//             </tr>
-//         </thead>
-//         <tbody>
-//             <tr>
-//                 <td>Class prefix</td>
-//                 <td>.col-</td>
-//                 <td>.col-sm-</td>
-//                 <td>.col-md-</td>
-//                 <td>.col-lg-</td>
-//                 <td>.col-xl-</td>
-//             </tr>
-//         </tbody>
-//     </table>
-// </div>
-//
-// Weight: 1
-//
-// Styleguide Base.Grid.Breakpoints
-//
-
-
-//
 // Headings
 //
-// By default the UI kit supports auto-scaling of header (h1-h6) font sizes. This means that at smaller breakpoints you do not have to add any special media queries to scale down header sizes as it is handled automatically.<br><br>
-// Specify the CSS class modifier `cui--fixed-headers` at the top-level to change to using fixed header (h1-h6) font sizes.
-//
 // Markup:
-// <h1>h1. Example Heading</h1>
-// <h2>h2. Example Heading</h2>
-// <h3>h3. Example Heading</h3>
-// <h4>h4. Example Heading</h4>
-// <h5>h5. Example Heading</h5>
-// <h6>h6. Example Heading</h6>
-// <br><br>
-// <div class="responsive-table">
-//     <table class="table table--bordered table--compressed">
-//         <thead>
-//             <tr>
-//                 <th>Heading</th>
-//                 <th>Weight</th>
-//                 <th>Source</th>
-//                 <th>Extra Small (<576px)</th>
-//                 <th>Small (>=576px)</th>
-//                 <th>Medium (>=768px)</th>
-//                 <th>Large (>=992px)</th>
-//                 <th>Extra Large (>=1200px)</th>
-//             </tr>
-//         </thead>
-//         <tbody>
-//             <tr>
-//                 <td>h1</td>
-//                 <td>100</td>
-//                 <td>CiscoSansExtraLight</td>
-//                 <td>28.8px</td>
-//                 <td>28.8px</td>
-//                 <td>33.6px</td>
-//                 <td>38.4px</td>
-//                 <td>38.4px</td>
-//             </tr>
-//             <tr>
-//                 <td>h2</td>
-//                 <td>100</td>
-//                 <td>CiscoSansExtraLight</td>
-//                 <td>24px</td>
-//                 <td>24px</td>
-//                 <td>28px</td>
-//                 <td>32px</td>
-//                 <td>32px</td>
-//             </tr>
-//             <tr>
-//                 <td>h3</td>
-//                 <td>200</td>
-//                 <td>CiscoSansLight</td>
-//                 <td>21.6px</td>
-//                 <td>21.6px</td>
-//                 <td>25.2px</td>
-//                 <td>28.8px</td>
-//                 <td>28.8px</td>
-//             </tr>
-//             <tr>
-//                 <td>h4</td>
-//                 <td>200</td>
-//                 <td>CiscoSansLight</td>
-//                 <td>19.2px</td>
-//                 <td>19.2px</td>
-//                 <td>22.4px</td>
-//                 <td>25.6px</td>
-//                 <td>25.6px</td>
-//             </tr>
-//             <tr>
-//                 <td>h5</td>
-//                 <td>200</td>
-//                 <td>CiscoSansLight</td>
-//                 <td>16.8px</td>
-//                 <td>16.8px</td>
-//                 <td>19.6px</td>
-//                 <td>22.4px</td>
-//                 <td>22.4px</td>
-//             </tr>
-//             <tr>
-//                 <td>h6</td>
-//                 <td>300</td>
-//                 <td>CiscoSans</td>
-//                 <td>14.4px</td>
-//                 <td>14.4px</td>
-//                 <td>16.8px</td>
-//                 <td>19.2px</td>
-//                 <td>19.2px</td>
-//             </tr>
-//         </tbody>
-//     </table>
-// </div>
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="section">
+//             <h1>H1 Heading</h1>
+//             <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+//         </div>
+//         <div class="section">
+//             <h2>H2 Heading</h2>
+//             <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+//         </div>
+//         <div class="section">
+//             <h3>H3 Heading</h3>
+//             <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="section">
+//             <h4>H4 Heading</h4>
+//             <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+//         </div>
+//         <div class="section">
+//             <h5>H5 Heading</h5>
+//             <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+//         </div>
+//         <div class="section">
+//             <h6>H6 Heading</h6>
+//             <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+//         </div>
+//      </div>
+//  </div>
 //
 // Weight: 2
 //
-// Styleguide Base.Typography.Headings
+// Styleguide Design.Typography.Headings
 //
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin: 0;
-    font-family: $header-font-family;
+    font-family: inherit;
     line-height: $header-line-height;
 
     small {
@@ -157,23 +49,89 @@ h1, h2, h3, h4, h5, h6,
     }
 }
 
+@each $heading, $heading-size, $heading-weight in $headings {
+    #{$heading}, .#{$heading} {
+        font-size: $heading-size;
+        font-weight: $heading-weight;
+    }
+}
+
+
+//
+// Display Headings
+//
+// Markup:
+// <h1 class="display-0">Display Heading 0</h1>
+// <h1 class="display-1">Display Heading 1</h1>
+// <h1 class="display-2">Display Heading 2</h1>
+// <h1 class="display-3">Display Heading 3</h1>
+// <h1 class="display-4">Display Heading 4</h1>
+//
+// Weight: 3
+//
+// Styleguide Design.Typography.Display Headings
+//
+
+.display-0 { @include display-size-0; }
+.display-1 { @include display-size-1; }
+.display-2 { @include display-size-2; }
+.display-3 { @include display-size-3; }
+.display-4 { @include display-size-4; }
+
+@include media-breakpoint-down(xs) {
+    .display-0-xs { @include display-size-0; }
+    .display-1-xs { @include display-size-1; }
+    .display-2-xs { @include display-size-2; }
+    .display-3-xs { @include display-size-3; }
+    .display-4-xs { @include display-size-4; }
+}
+@include media-breakpoint-down(sm) {
+    .display-0-sm { @include display-size-0; }
+    .display-1-sm { @include display-size-1; }
+    .display-2-sm { @include display-size-2; }
+    .display-3-sm { @include display-size-3; }
+    .display-4-sm { @include display-size-4; }
+}
+@include media-breakpoint-down(md) {
+    .display-0-md { @include display-size-0; }
+    .display-1-md { @include display-size-1; }
+    .display-2-md { @include display-size-2; }
+    .display-3-md { @include display-size-3; }
+    .display-4-md { @include display-size-4; }
+}
+
+
 
 //
 // Subheadings
 //
-// <blockquote>Lighten up your heading text by adding class `subheading` to any heading element</blockquote>
+// <blockquote>Lighten up your heading text by adding class `subheading` to any heading element.</blockquote>
 //
 // Markup:
 // <h1>Regular Heading</h1>
 // <h2 class="subheading">Subheading</h2>
+// <div class="subheader">Subtitle</div>
 //
 // Weight: 3
 //
-// Styleguide Base.Typography.Subheadings
+// Styleguide Design.Typography.Subheadings
 //
 
 .subheading {
     color: $base-muted-color;
+}
+.subheader {
+    text-transform: uppercase;
+    margin-bottom: $base-spacing;
+    font-weight: bold;
+
+    @include media-breakpoint-down(xs) {
+        font-size: $base-font-size-xs !important;
+    }
+}
+.subtitle {
+    font-size: 16px;
+    font-weight: 300;
 }
 
 
@@ -186,90 +144,12 @@ h1, h2, h3, h4, h5, h6,
 //
 // Weight: 4
 //
-// Styleguide Base.Typography.Paragraphs
+// Styleguide Design.Typography.Paragraphs
 //
 
 p {
-    margin: ($base-spacing * 0.5) 0;
+    margin: $base-spacing 0;
 }
-
-
-//
-// Ordered List
-//
-// Markup:
-// <ol>
-//     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-//     <li>Maecenas facilisis quam eget pellentesque efficitur.
-//         <ol>
-//             <li>Vivamus condimentum nunc sit amet lorem dapibus, quis scelerisque erat finibus.</li>
-//             <li>Sed dapibus ex ut tortor suscipit, sed tristique sapien luctus.
-//                 <ol>
-//                     <li>Aliquam vitae turpis porta, bibendum leo non, aliquet velit.</li>
-//                     <li>Proin tempor ligula ut fermentum faucibus.</li>
-//                 </ol>
-//             </li>
-//          </ol>
-//     </li>
-//     <li>Mauris consequat metus at magna tincidunt faucibus.</li>
-// </ol>
-//
-// Weight: 5
-//
-// Styleguide Base.Typography.Ordered List
-//
-
-
-//
-// Unordered List
-//
-// Markup:
-// <ul>
-//     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-//     <li>Maecenas facilisis quam eget pellentesque efficitur.
-//         <ul>
-//             <li>Vivamus condimentum nunc sit amet lorem dapibus, quis scelerisque erat finibus.</li>
-//             <li>Sed dapibus ex ut tortor suscipit, sed tristique sapien luctus.
-//                 <ul>
-//                     <li>Aliquam vitae turpis porta, bibendum leo non, aliquet velit.</li>
-//                     <li>Proin tempor ligula ut fermentum faucibus.</li>
-//                 </ul>
-//             </li>
-//         </ul>
-//     </li>
-//     <li>Mauris consequat metus at magna tincidunt faucibus.</li>
-// </ul>
-//
-// Weight: 6
-//
-// Styleguide Base.Typography.Unordered List
-//
-
-
-//
-// Unstyled List
-//
-// Markup:
-// <ul class="list--unstyled">
-//     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-//     <li>Maecenas facilisis quam eget pellentesque efficitur.
-//         <ul>
-//             <li>Vivamus condimentum nunc sit amet lorem dapibus, quis scelerisque erat finibus.</li>
-//             <li>Sed dapibus ex ut tortor suscipit, sed tristique sapien luctus.
-//                 <ul>
-//                     <li>Aliquam vitae turpis porta, bibendum leo non, aliquet velit.</li>
-//                     <li>Proin tempor ligula ut fermentum faucibus.</li>
-//                 </ul>
-//             </li>
-//         </ul>
-//     </li>
-//     <li>Mauris consequat metus at magna tincidunt faucibus.</li>
-// </ul>
-//
-// Weight: 7
-//
-// Styleguide Base.Typography.Unstyled List
-//
 
 ul, ol {
     margin: 0;
@@ -318,65 +198,13 @@ img.img {
     }
 }
 
-
-//
-// Blockquotes and Citations
-//
-// Markup:
-// <blockquote>
-//     <p>Perfect typography is the most elusive of all arts</p>
-//     <cite>Jan Tschichold</cite>
-// </blockquote>
-// <blockquote class="blockquote--blue">
-//     <p>Everything should be made as simple as possible, but not simpler</p>
-//     <cite>Albert Einstein</cite>
-// </blockquote>
-// <blockquote class="blockquote--danger">
-//     <p>Good friends, good books, and a sleepy conscience: this is the ideal life</p>
-//     <cite>Mark Twain</cite>
-// </blockquote>
-//
-// Weight: 8
-//
-// Styleguide Base.Typography.Citations
-//
-
-blockquote {
-    border-left: 5px solid $base-border-color;
-    margin: $base-spacing 0;
-    padding: 10px;
-
-    &.blockquote--blue      { border-left-color: $base-accent-color; }
-    &.blockquote--info      { border-left-color: $info; }
-    &.blockquote--warning   { border-left-color: $warning; }
-    &.blockquote--danger    { border-left-color: $danger; }
-
-    &.blockquote--compressed {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-cite {
-    color: lighten($base-font-color, 25);
-    font-style: italic;
-
-    &:before {
-        content: "\2014 \00A0";
-    }
-}
-
 * {
     box-sizing: inherit;
     &:before, &:after {
         box-sizing: inherit;
     }
-    &:focus {
-        outline: none;
-    }
 }
 
-.apollo-body, // @deprecated. Use .body-content instead
 .content-body {
     @include full-page;
     display: flex;
@@ -389,12 +217,16 @@ cite {
     background: $alt-background-color;
 }
 
-.apollo-content, // @deprecated. Use .content instead
 .content {
     flex: 1;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; // Enable momentum scrolling on touch devices
+    background: $base-background-color;
+
+    &.content--alt {
+        background: $alt-background-color;
+    }
 
     &__main {
         padding-top: $base-spacing * 0.5;
@@ -434,34 +266,33 @@ cite {
     }
 }
 
-.container {
-    @include clearfix;
-    box-sizing: border-box;
-    position: relative;
-    margin: 0 auto;
-    padding-right: $base-spacing * 0.5;
-    padding-left: $base-spacing * 0.5;
-
-    &--standalone {
-        max-width: none;
-    }
-
-    @include media-breakpoint-up(md) {
-        padding-right: $base-spacing;
-        padding-left: $base-spacing;
-    }
+.container,
+.container-fluid {
+    padding-right: $base-spacing;
+    padding-left: $base-spacing;
 }
 
 pre {
     margin: 0;
+    white-space: pre-wrap;
 }
 
 input,
 select,
 textarea,
 button {
+    color: $base-font-color;
     font-size: $base-font-size;
     font-family: $base-font-family;
+    font-weight: inherit;
+}
+
+iframe {
+  	width: 100%;
+  	height: 100%;
+  	border: 1px solid $base-border-color;
+  	margin: ($base-spacing * 0.5) 0;
+  	display: inline-block;
 }
 
 .content-fluid {
@@ -472,36 +303,13 @@ button {
     width: 100%;
     height: 100%;
 
-    .sidebar ~ main {
-        transform: translate3d($sidebar-menu-width,0,0);
-        transition: transform 0.25s;
-
-        @include media-breakpoint-up(md) {
-            margin-left: $sidebar-menu-width;
-            transform: translate3d(0,0,0);
-            transition: margin 0.25s;
-        }
-    }
-    .sidebar.sidebar--hidden ~ main {
-        margin-left: auto;
-        transform: translate3d(0,0,0);
-        transition: all 0.25s
-    }
-
     main {
-        display: flex;
+        height: 100%;
         flex: 1 100%;
         flex-direction: column;
         overflow: auto;
         position: relative;
-
-        .content {
-            background: $base-background-color;
-
-            &-background--alt {
-                background: $alt-background-color;
-            }
-        }
+        max-width: $max-page-width;
 
         .footer {
             flex: none;
@@ -510,3 +318,86 @@ button {
         }
     }
 }
+
+// Global Modifiers
+
+&.cui--wide {
+    .container {
+        max-width: 1600px;
+    }
+}
+
+&.cui--headermargins {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        margin: $heading-margin;
+    }
+}
+
+&.cui--sticky {
+    main {
+        display: flex;
+    }
+}
+
+//
+// Globals
+//
+// Styleguide Utilities.Globals
+//
+
+
+//
+// Global Modifiers
+//
+// <blockquote>Global modifiers you add to your body tag to modify behavior or spacing globally.</blockquote>
+//
+// Markup:
+// <div class="responsive-table">
+//     <table class="table table--loose">
+//         <thead>
+//             <tr>
+//                 <th>Class</th>
+//                 <th>Description</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>cui--animated</td>
+//                 <td>Toggles global animation on across all patterns</td>
+//             </tr>
+//             <tr>
+//                 <td>cui--compressed</td>
+//                 <td>Toggles compressed view on. Useful for data dense applications. Enables the 'compressed' spacing on all supported patterns.</td>
+//             </tr>
+//             <tr>
+//                 <td>cui--headerMargins</td>
+//                 <td>Toggles h1-h6 header margins (margin bottom). By default, header elements have no margins.</td>
+//             </tr>
+//             <tr>
+//                 <td>cui--wide</td>
+//                 <td>Toggles a wide container page bed (1600px). By default, the page bed is 1440px.</td>
+//             </tr>
+//             <tr>
+//                 <td>cui--sticky</td>
+//                 <td>Toggles whether the header and footer are sticky (affixed to top and bottom of page). By default sticky is disabled.</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Styleguide Utilities.Globals.Modifiers
+//
+
+
+//
+// Downloads
+//
+// Styleguide Downloads
+//
+
+//
+// Changelog
+//
+// Styleguide Changelog
+//

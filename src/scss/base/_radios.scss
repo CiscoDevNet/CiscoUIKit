@@ -1,0 +1,1267 @@
+//
+// Radio
+//
+// sketch
+//
+// Styleguide Primitives.Radio
+//
+
+
+//
+// States
+//
+// Markup:
+// <div class="panel">
+//     <div class="container-fluid">
+//     <div class="row">
+//         <div class="col-2">
+//             <div>&nbsp;</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Normal</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Hover</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Pressed</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Focus</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Disabled</div>
+//         </div>
+//     </div>
+//     <div class="row half-margin-bottom">
+//         <div class="col-2">
+//             <div class="text-right">ON</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//            </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="row">
+//         <div class="col-2">
+//             <div class="text-right">OFF</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Primitives.Radio.States
+//
+
+
+//
+// Layout
+//
+// <blockquote>Radio elements are stacked by default. Add the form group modifier <i>form-group--inline</i> to align them horizontally.</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="subheader">Stacked (default)</div>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-radio">
+//                 <span class="radio__input"></span>
+//                <span class="radio__label hidden-xs">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Three</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="subheader">Inline</div>
+//         <div class="form-group form-group--inline">
+//             <label class="radio">
+//                 <input type="radio" name="inline-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline">
+//             <label class="radio">
+//                 <input type="radio" name="inline-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline">
+//             <label class="radio">
+//                 <input type="radio" name="inline-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Three</span>
+//             </label>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Primitives.Radio.Layout
+//
+
+
+//
+// Spacing
+//
+// <blockquote>Wrap your radio elements in a form-group to control spacing. This applies to both inline and stacked switch elements.</blockquote>
+//
+// Markup:
+// <div class="row no-gutters">
+//     <div class="col-md-3">
+//         <div class="subheader">Compressed</div>
+//         <div class="form-group form-group--inline form-group--compressed">
+//             <label class="radio">
+//                 <input type="radio" name="inline-compressed-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline form-group--compressed">
+//             <label class="radio">
+//                 <input type="radio" name="inline-compressed-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline form-group--compressed">
+//             <label class="radio">
+//                 <input type="radio" name="inline-compressed-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Three</span>
+//             </label>
+//         </div>
+//         <hr>
+//         <div class="form-group form-group--compressed">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-compressed-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--compressed">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-compressed-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--compressed">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-compressed-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Three</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="subheader">Regular (default)</div>
+//         <div class="form-group form-group--inline">
+//             <label class="radio">
+//                 <input type="radio" name="inline-regular-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline">
+//             <label class="radio">
+//                 <input type="radio" name="inline-regular-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline">
+//             <label class="radio">
+//                 <input type="radio" name="inline-regular-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Three</span>
+//             </label>
+//         </div>
+//         <hr>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-regular-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-regular-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-regular-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Three</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="subheader">Loose</div>
+//         <div class="form-group form-group--inline form-group--loose">
+//             <label class="radio">
+//                 <input type="radio" name="inline-loose-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline form-group--loose">
+//             <label class="radio">
+//                 <input type="radio" name="inline-loose-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline form-group--loose">
+//             <label class="radio">
+//                 <input type="radio" name="inline-loose-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Three</span>
+//             </label>
+//         </div>
+//         <hr>
+//         <div class="form-group form-group--loose">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-loose-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--loose">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-loose-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--loose">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-loose-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Three</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="subheader">None</div>
+//         <div class="form-group form-group--inline form-group--nospacing">
+//             <label class="radio">
+//                 <input type="radio" name="inline-none-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline form-group--nospacing">
+//             <label class="radio">
+//                 <input type="radio" name="inline-none-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--inline form-group--nospacing">
+//             <label class="radio">
+//                 <input type="radio" name="inline-none-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Three</span>
+//             </label>
+//         </div>
+//         <hr>
+//         <div class="form-group form-group--nospacing">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-none-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">One</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--nospacing">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-none-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Two</span>
+//             </label>
+//         </div>
+//         <div class="form-group form-group--nospacing">
+//             <label class="radio">
+//                 <input type="radio" name="stacked-none-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Three</span>
+//             </label>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Primitives.Radio.Spacing
+//
+
+
+//
+// Allowed Backgrounds
+//
+// <blockquote>Checkboxes are only allowed on the following panels.</blockquote>
+//
+// Markup:
+// <div class="panel panel--loose">
+//     <div class="container-fluid">
+//     <h6>WHITE</h6>
+//     <div class="row">
+//         <div class="col-2">
+//             <div>&nbsp;</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Normal</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Hover</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Pressed</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Focus</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Disabled</div>
+//         </div>
+//     </div>
+//     <div class="row half-margin-bottom">
+//         <div class="col-2">
+//             <div class="text-right">ON</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//            </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="row half-margin-bottom">
+//         <div class="col-2">
+//             <div class="text-right">OFF</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     </div>
+// </div>
+// <div class="panel panel--loose panel--ltgray">
+//     <div class="container-fluid">
+//     <h6>LIGHT GRAY</h6>
+//     <div class="row">
+//         <div class="col-2">
+//             <div>&nbsp;</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Normal</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Hover</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Pressed</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Focus</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Disabled</div>
+//         </div>
+//     </div>
+//     <div class="row half-margin-bottom">
+//         <div class="col-2">
+//             <div class="text-right">ON</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//            </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="row">
+//         <div class="col-2">
+//             <div class="text-right">OFF</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     </div>
+// </div>
+// <div class="panel panel--loose panel--dkgray">
+//     <div class="container-fluid">
+//     <h6>DARK GRAY</h6>
+//     <div class="row">
+//         <div class="col-2">
+//             <div>&nbsp;</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Normal</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Hover</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Pressed</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Focus</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Disabled</div>
+//         </div>
+//     </div>
+//     <div class="row half-margin-bottom">
+//         <div class="col-2">
+//             <div class="text-right">ON</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//            </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="row">
+//         <div class="col-2">
+//             <div class="text-right">OFF</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     </div>
+// </div>
+// <div class="panel panel--loose panel--indigo">
+//     <div class="container-fluid">
+//     <h6>INDIGO</h6>
+//     <div class="row">
+//         <div class="col-2">
+//             <div>&nbsp;</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Normal</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Hover</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Pressed</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Focus</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Disabled</div>
+//         </div>
+//     </div>
+//     <div class="row half-margin-bottom">
+//         <div class="col-2">
+//             <div class="text-right">ON</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//            </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="row">
+//         <div class="col-2">
+//             <div class="text-right">OFF</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     </div>
+// </div>
+// <div class="panel panel--loose panel--success">
+//     <div class="container-fluid">
+//     <h6>GREEN</h6>
+//     <div class="row">
+//         <div class="col-2">
+//             <div>&nbsp;</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Normal</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Hover</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Pressed</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Focus</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Disabled</div>
+//         </div>
+//     </div>
+//     <div class="row half-margin-bottom">
+//         <div class="col-2">
+//             <div class="text-right">ON</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//            </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="row">
+//         <div class="col-2">
+//             <div class="text-right">OFF</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     </div>
+// </div>
+// <div class="panel panel--loose panel--blue">
+//     <div class="container-fluid">
+//     <h6>BLUE</h6>
+//     <div class="row">
+//         <div class="col-2">
+//             <div>&nbsp;</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Normal</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Hover</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Pressed</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Focus</div>
+//         </div>
+//         <div class="col-2">
+//             <div class="subheader">Disabled</div>
+//         </div>
+//     </div>
+//     <div class="row half-margin-bottom">
+//         <div class="col-2">
+//             <div class="text-right">ON</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" checked class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//            </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     <div class="row">
+//         <div class="col-2">
+//             <div class="text-right">OFF</div>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="active hover">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio">
+//                 <input type="radio" class="focus">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//         <div class="col-2">
+//             <label class="radio disabled">
+//                 <input type="radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label hidden-xs">Label</span>
+//             </label>
+//         </div>
+//     </div>
+//     </div>
+// </div>
+//
+// Weight: 4
+//
+// Styleguide Primitives.Radio.AllowedBackgrounds
+//
+
+
+//
+// Examples
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <h2 class="section">Option Ordering</h2>
+//         <blockquote>You should list the options in a logical order, such as most likely to be selected to least, simplest operation to most complex, or least risk to most. Alphabetical ordering is not recommended because it is language dependent and therefore not localizable.<br><br>Also make sure to offer a default selection. Radio buttons should always have one option pre-selected.</blockquote>
+//         <p class="text-bold">Dynamic Channel Assignment</p>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="example-ordering-radio" checked>
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">Best</span>
+//             </label>
+//         </div>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="example-ordering-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">20 MHz</span>
+//             </label>
+//         </div>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="example-ordering-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">40 MHz</span>
+//             </label>
+//         </div>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="example-ordering-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">80 MHz</span>
+//             </label>
+//         </div>
+//         <div class="form-group">
+//             <label class="radio">
+//                 <input type="radio" name="example-ordering-radio">
+//                 <span class="radio__input"></span>
+//                 <span class="radio__label">160 MHz</span>
+//             </label>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Primitives.Radio.Examples
+//
+
+@mixin cui-radio(
+    $background-disabled:       "",
+    $background-normal-on:      "",
+    $background-normal-off:     "",
+    $background-hover-on:       "",
+    $background-hover-off:      "",
+    $background-pressed:        "",
+    $background-focus:          "",
+    $background-knob-disabled:  "",
+    $border-disabled:           "",
+    $border-hover:              "",
+    $border-focus:              "",
+    $color-disabled:            "",
+    $color-normal:              "",
+    $outline-color:             "")
+{
+    &.disabled,
+    &[disabled] {
+        opacity: 1;
+        input {
+            &:checked {
+                ~ .radio__input:before {
+                    background-color: $background-disabled;
+                    box-shadow: inset 0 0 0 $cui-radio-border-width $border-disabled;
+                }
+                ~ .radio__input:after {
+                    background-color: $background-knob-disabled;
+                }
+                ~ .radio__label {
+                    color: $color-disabled;
+                }
+            }
+        }
+        .radio__input:before {
+            background-color: $background-disabled;
+            box-shadow: inset 0 0 0 $cui-radio-border-width $border-disabled;
+        }
+        .radio__input:after {
+            background-color: $background-knob-disabled;
+        }
+        .radio__label {
+            color: $color-disabled;
+        }
+    }
+
+    input {
+        @include hidden-input;
+        display: block;
+        position: absolute;
+        width: $cui-radio-size;
+        height: $cui-radio-size;
+        margin: 0;
+
+        &.hover, &:hover {
+            ~ .radio__input:before {
+                box-shadow: inset 0 0 0 $cui-radio-border-width-hover $border-hover;
+            }
+        }
+        &.checked, &:checked {
+            ~ .radio__label {
+                color: $color-normal;
+            }
+            &.hover, &:hover {
+                ~ .radio__input {
+                    &:before {
+                        background-color: $background-hover-on;
+                    }
+                    &:after {
+                        color: $white;
+                        background-color: $base-muted-color;
+                        border: 6px solid $background-hover-on;
+                    }
+                }
+            }
+            ~ .radio__input:before {
+                box-shadow: inset 0 0 0 $cui-radio-border-width $background-normal-on;
+                background-color: $background-normal-on;
+            }
+            ~ .radio__input:after {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &.focus, &:focus {
+            ~ .radio__input:before {
+                @include focus-outline($color: $outline-color);
+                box-shadow: inset 0 0 0 $cui-radio-border-width $border-focus;
+            }
+        }
+        &.active, &:active {
+            ~ .radio__input:before {
+                box-shadow: none;
+                background-color: $background-pressed;
+            }
+        }
+    }
+    .radio__input {
+        position: relative;
+        display: inline-flex;
+        width: $cui-radio-size;
+        min-width: $cui-radio-size;
+        height: $cui-radio-size;
+
+        &:before, &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $cui-radio-size;
+            height: $cui-radio-size;
+            content: '';
+        }
+        &:before {
+            border-radius: $cui-radio-border-radius;
+            background-color: $white;
+            box-shadow: inset 0 0 0 $cui-radio-border-width $base-muted-color;
+        }
+        &:after {
+            display: none;
+            box-shadow: inset 0 0 0 4px $white;
+            border-radius: 50%;
+            background-color: $background-normal-on;
+            border: 2px solid transparent;
+        }
+    }
+    .radio__label {
+        color: $color-normal;
+        margin-left: $base-form-label-margin-regular;
+        user-select: none;
+    }
+}
+
+.radio {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include cui-radio(map-get($cui-radio-light, params)...);
+
+    margin-right: $base-form-label-margin-regular;
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    &--nowrap {
+        .radio__label {
+            @include text-ellipsis;
+        }
+    }
+}
+
+.panel.panel--dkgray,
+.panel.panel--indigo {
+    .radio {
+        @include cui-radio(map-get($cui-radio-dark, params)...);
+    }
+}
+.radio.radio--dark {
+    @include cui-radio(map-get($cui-radio-dark, params)...);
+}
+
+.panel.panel--success,
+.panel.panel--blue {
+    .radio {
+        @include cui-radio(map-get($cui-radio-color, params)...);
+    }
+}
+.radio.radio--color {
+    @include cui-radio(map-get($cui-radio-color, params)...);
+}
+
+// Global Modifiers
+
+&.cui--animated .radio {
+    input {
+        ~ .radio__input:before {
+            transition: all .1s ease-out;
+        }
+    }
+    input:hover {
+        ~ .radio__input:before {
+            transition: all .1s ease-in;
+        }
+    }
+}

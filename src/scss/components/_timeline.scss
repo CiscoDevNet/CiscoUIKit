@@ -1,9 +1,6 @@
 //
 // Timeline
 //
-// Simple vertical timeline pattern.<br><br>
-// Since 1.1.0
-//
 // Styleguide Components.Timeline
 //
 
@@ -72,7 +69,7 @@
 //
 // Alignment
 //
-// <blockquote>You can align your timeline items top (default) or centered</blockquote>
+// <blockquote>You can align your timeline items top (default) or centered.</blockquote>
 //
 // Markup:
 // <div class="timeline">
@@ -154,56 +151,6 @@
 // Styleguide Components.Timeline.Display
 //
 
-
-//
-// Animation
-//
-// <blockquote>Specify the class `timeline--animation` modifier to add a hover animation to each timeline item</blockquote>
-//
-// Markup:
-// <div class="timeline timeline--animation">
-//     <div class="timeline__list">
-//         <div class="timeline__item">
-//             <div class="timeline__icon timeline--info"></div>
-//             <div class="timeline__time">3-4 October 2017</div>
-//             <div class="timeline__content">
-//                 <div class="row">
-//                     <div class="col-lg-3">
-//                         <img src="public/img/banking.jpg">
-//                     </div>
-//                     <div class="col-lg-9">
-//                         <h2 class="text-blue base-margin-bottom">Network Visualization & SDN Asia 2017</h2>
-//                         <p>Transformation through innovation for Network 2020</p>
-//                         <div>TechXLR8 Asia is the place to keep pace with the technologies enabling and shaping your connected future. Over three days you will meet business partners that will shape your company's strategy for years to come. The five co-located events as part of TechXLR8 Asia are 5G Asia, IoT Asia, the AI Summit, Network Virtualization & SDN Asia and Project Kairos.</div>
-//                         <p class="text-bold">TechXLR8 Asia kicked off with a press launch at the SGInnovate Innovation Campus in Singapore.</p>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//         <div class="timeline__item">
-//             <div class="timeline__icon timeline--success"></div>
-//             <div class="timeline__time">just now</div>
-//             <div class="timeline__content">
-//                 <div class="row">
-//                     <div class="col-lg-9">
-//                         <h2>The Time is Now</h2>
-//                         <div class="divider divider--compressed divider--thick divider--accent-blue"></div>
-//                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar accumsan leo, quis egestas quam luctus non. Donec tortor risus, finibus non porta ut, fringilla sed neque. Morbi scelerisque sem magna, nec scelerisque nisl egestas nec. Vestibulum a tellus eget erat dapibus interdum vel varius sapien. Suspendisse bibendum imperdiet lectus at efficitur. Donec fermentum justo id tortor maximus, id feugiat dui accumsan. Donec tellus est, maximus in enim id, porttitor blandit eros. Maecenas vel neque vitae felis cursus congue. Aenean vulputate ullamcorper velit eu hendrerit</div>
-//                     </div>
-//                     <div class="col-lg-3">
-//                         <img src="public/img/section-2-3.jpg">
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-//
-// Weight: 4
-//
-// Styleguide Components.Timeline.Animation
-//
-
 .timeline {
     position: relative;
 
@@ -215,13 +162,46 @@
         padding: $base-spacing * 0.5;
         width: 100%;
 
-        &:hover,
-        &:focus,
-        &:active {
+        &:hover, &:focus, &:active {
             cursor: default;
-            background-color: $base-background-color;
+            background-color: $base-hover-color;
             transition: background-color .5s;
         }
+    }
+    &__icon {
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 139px;
+        z-index: 2;
+        border: 5px solid $white;
+        background-color: $base-muted-color;
+    }
+
+    &__time {
+        float: left;
+        width: 125px;
+        min-width: 125px;
+        text-align: right;
+        font-style: italic;
+        padding-right: $base-spacing-half;
+    }
+
+    &__content {
+        margin-left: 50px;
+    }
+
+    &:after {
+        background-color: $cui-timeline-line-color;
+        content: ' ';
+        position: absolute;
+        display: block;
+        width: $cui-timeline-line-width;
+        top: 0;
+        left: 150px;
+        bottom: 0;
+        z-index: 1;
     }
 
     &--centered {
@@ -236,40 +216,13 @@
         }
     }
 
-    &__icon {
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        left: 139px;
-        z-index: 2;
-        border: 5px solid $base-background-color;
-        background-color: $base-font-color;
-    }
-
-    &__time {
-        float: left;
-        width: 125px;
-        min-width: 125px;
-        text-align: right;
-        font-style: italic;
-        padding-right: $base-spacing * 0.5;
-    }
-
-    &__content {
-        margin-left: 50px;
-    }
-
-    &:after {
-        background-color: $base-background-color;
-        content: ' ';
-        position: absolute;
-        display: block;
-        width: 2px;
-        top: 0;
-        left: 150px;
-        bottom: 0;
-        z-index: 1;
+    &--notime {
+        .timeline__icon {
+            left: 14px;
+        }
+        &:after {
+            left: 25px;
+        }
     }
 
     @include media-breakpoint-down(sm) {
@@ -284,13 +237,13 @@
 .timeline__icon.timeline--warning   { background-color: $warning; }
 .timeline__icon.timeline--danger    { background-color: $danger; }
 
+// Global Modifiers
+
+&--animated .timeline,
 .timeline.timeline--animation {
     .timeline__item {
-        &:hover,
-        &:focus,
-        &:active {
+        &:hover, &:focus, &:active {
             cursor: default;
-            background-color: $base-background-color;
             transition: background-color .5s;
 
             .timeline__icon {
@@ -310,30 +263,4 @@
             }
         }
     }
-}
-
-@keyframes pulseShadow {
-      0% { box-shadow: 0 0 0 0 rgba($base-font-color, 0.5); }
-     70% { box-shadow: 0 0 0 10px rgba($base-font-color, 0); }
-    100% { box-shadow: 0 0 0 0 rgba($base-font-color, 0); }
-}
-@keyframes pulseShadowInfo {
-      0% { box-shadow: 0 0 0 0 rgba($base-accent-color, 0.5); }
-     70% { box-shadow: 0 0 0 10px rgba($base-accent-color, 0); }
-    100% { box-shadow: 0 0 0 0 rgba($base-accent-color, 0); }
-}
-@keyframes pulseShadowSuccess {
-      0% { box-shadow: 0 0 0 0 rgba($success, 0.5); }
-     70% { box-shadow: 0 0 0 10px rgba($success, 0); }
-    100% { box-shadow: 0 0 0 0 rgba($success, 0); }
-}
-@keyframes pulseShadowWarning {
-      0% { box-shadow: 0 0 0 0 rgba($warning, 0.5); }
-     70% { box-shadow: 0 0 0 10px rgba($warning, 0); }
-    100% { box-shadow: 0 0 0 0 rgba($warning, 0); }
-}
-@keyframes pulseShadowDanger {
-      0% { box-shadow: 0 0 0 0 rgba($danger, 0.5); }
-     70% { box-shadow: 0 0 0 10px rgba($danger, 0); }
-    100% { box-shadow: 0 0 0 0 rgba($danger, 0); }
 }

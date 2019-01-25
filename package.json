@@ -1,16 +1,17 @@
 {
   "name": "cisco-ui",
   "private": true,
-  "version": "1.2.2-official",
+  "version": "1.3.4-official",
   "description": "Cisco UI Kit",
   "author": "Kevin Broich - Cisco Systems, Inc.",
   "homepage": "https://www.cisco.com",
-  "license": "2017 Cisco Systems, Inc. All rights reserved. Terms and Conditions: http://cisco.com/en/US/swassets/sw293/sitewide_important_notices.html",
+  "license": "2019 Cisco Systems, Inc. All rights reserved. Terms and Conditions: http://cisco.com/en/US/swassets/sw293/sitewide_important_notices.html",
   "scripts": {
     "build": "npm run build-prep && npm run build-docs && npm run build-post",
     "build-prep": "gulp pre",
     "build-docs": "./node_modules/kss/bin/kss-node --source ./src/scss --destination ./build/docs --template ./docs --helpers ./src/kss/helpers --nav-depth 5 --css ./src/scss/styles.scss",
-    "build-post": "gulp"
+    "build-post": "gulp",
+    "start": "npm run build"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -21,9 +22,10 @@
     "gulp-header": "^1.8.8",
     "gulp-htmlhint": "*",
     "gulp-htmlmin": "*",
-    "gulp-iconfont": "*",
-    "gulp-iconfont-css": "*",
+    "gulp-iconfont": "10.0.2",
+    "gulp-iconfont-css": "2.3.0",
     "gulp-if": "*",
+    "gulp-inject": "^4.3.2",
     "gulp-jade": "^1.1.0",
     "gulp-minify-css": "*",
     "gulp-minify-html": "*",
@@ -32,6 +34,7 @@
     "gulp-replace": "*",
     "gulp-rimraf": "^0.2.1",
     "gulp-sass": "*",
+    "gulp-transform": "^3.0.5",
     "gulp-using": "*",
     "gulp-util": "*",
     "kss": "^2.4.0",
@@ -40,8 +43,9 @@
   },
   "dependencies": {
     "balloon-css": "^0.5.0",
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0",
     "clipboard-js": "^0.3.5",
+    "fancy-log": "^1.3.2",
     "kss": "^2.4.0",
     "pagedown": "*"
   }

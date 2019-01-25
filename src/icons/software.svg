@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-<g>
-	<circle  cx="24" cy="24" r="2.5"/>
-	<path  d="M24,0C10.7,0,0,10.7,0,24s10.7,24,24,24s24-10.7,24-24S37.3,0,24,0z M24,30.5c-3.6,0-6.5-2.9-6.5-6.5
-		s2.9-6.5,6.5-6.5s6.5,2.9,6.5,6.5S27.6,30.5,24,30.5z"/>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="46px" viewBox="0 0 48 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>software</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="software" fill="#000000" fill-rule="nonzero">
+            <path d="M24,0 C10.766,0 0,10.766 0,24 C0,25.344 0.149,26.678 0.375,28 L3.4375,28 C3.1635,26.682 3,25.346 3,24 C3,12.972 12.972,3 24,3 C35.028,3 45,12.972 45,24 C45,25.346 44.8365,26.682 44.5625,28 L47.625,28 C47.853,26.678 48,25.344 48,24 C48,10.766 37.234,0 24,0 Z M24,18 C20.692,18 18,20.692 18,24 C18,25.542 18.6045,26.936 19.5625,28 L28.4375,28 C29.3975,26.936 30,25.542 30,24 C30,20.692 27.308,18 24,18 Z M24,21 C25.656,21 27,22.347 27,24 C27,25.653 25.656,27 24,27 C22.344,27 21,25.653 21,24 C21,22.347 22.344,21 24,21 Z M0,31 L0,43.5 C1.3527075e-16,44.6045695 0.8954305,45.5 2,45.5 L46,45.5 C47.1045695,45.5 48,44.6045695 48,43.5 L48,31 L0,31 Z" id="Shape"></path>
+        </g>
+    </g>
 </svg>

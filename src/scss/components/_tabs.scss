@@ -1,225 +1,389 @@
 //
-// Tab updated
-//
-// Since: 1.0.1
+// Tab
 //
 // Styleguide Components.Tab
 //
 
 
 //
-// Layout
-//
-// <blockquote>Add the class `active` on a tab to denote the current selection<br>Wrap your tabs in a `secondary-tabs` div to differentiate header tabs versus secondary tabs (bottom border is added for secondary tabs)</blockquote>
+// Horizontal, left
 //
 // Markup:
-// <div class="secondary-tabs">
-//     <ul class="tabs">
-//         <li class="tab active">
-//             <a>
-//                 <div class="tab__heading" title="Tab Title 1">Tab Title 1</div>
-//             </a>
-//         </li>
-//         <li class="tab">
-//             <a>
-//                 <div class="tab__heading" title="Tab Title 2">Tab Title 2</div>
-//             </a>
-//         </li>
-//         <li class="tab">
-//             <a>
-//                 <div class="tab__heading" title="Tab Title 3">Tab Title 3</div>
-//             </a>
-//         </li>
-//     </ul>
+// <ul id="tabsv1" class="tabs">
+//     <li id="tabsv1-1" class="tab active">
+//         <a tabindex="0">
+//             <div class="tab__heading">Detracto</div>
+//         </a>
+//     </li>
+//     <li id="tabsv1-2" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Sea et</div>
+//         </a>
+//     </li>
+//     <li id="tabsv1-3" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Omittantur</div>
+//         </a>
+//     </li>
+//     <li id="tabsv1-4" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Accommodare</div>
+//         </a>
+//     </li>
+// </ul>
+// <div id="tabsv1-content" class="tab-content">
+//     <div id="tabsv1-1-content" class="tab-pane active">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv1-2-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv1-3-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv1-4-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
 // </div>
 //
 // Weight: 1
 //
-// Styleguide Components.Tab.Layout
+// Styleguide Components.Tab.v1
 //
 
 
 //
-// Tall
-//
-// <blockquote>Add the class `nav-tabs--tall` or `tabs--tall` to render taller tabs<br>This only affects horizontal tabs but can be applied to either header tabs or secondary tabs</blockquote>
+// Horizontal, center
 //
 // Markup:
-// <div class="secondary-tabs">
-//     <ul class="tabs tabs--tall">
-//         <li class="tab active">
-//             <a>
-//                 <div class="tab__heading" title="Tall Tab 1">Tall Tab 1</div>
-//             </a>
-//         </li>
-//         <li class="tab">
-//             <a>
-//                 <div class="tab__heading" title="Tall Tab 2">Tall Tab 2</div>
-//             </a>
-//         </li>
-//         <li class="tab">
-//             <a>
-//                 <div class="tab__heading" title="Tall Tab 3">Tall Tab 3</div>
-//             </a>
-//         </li>
-//     </ul>
+// <ul id="tabsv2" class="tabs tabs--centered">
+//     <li id="tabsv2-1" class="tab active">
+//         <a tabindex="0">
+//             <div class="tab__heading">Detracto</div>
+//         </a>
+//     </li>
+//     <li id="tabsv2-2" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Sea et</div>
+//         </a>
+//     </li>
+//     <li id="tabsv2-3" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Omittantur</div>
+//         </a>
+//     </li>
+//     <li id="tabsv2-4" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Accommodare</div>
+//         </a>
+//     </li>
+// </ul>
+// <div id="tabsv2-content" class="tab-content">
+//     <div id="tabsv2-1-content" class="tab-pane active">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv2-2-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv2-3-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv2-4-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
 // </div>
 //
 // Weight: 2
 //
-// Styleguide Components.Tab.Tall
+// Styleguide Components.Tab.v2
 //
 
 
 //
-// Direction
-//
-// <blockquote>Tabs can flow horizontal (default) or add the class `tabs--vertical` for vertical</blockquote>
+// Horizontal, right
 //
 // Markup:
-// <ul class="tabs tabs--vertical">
-//     <li class="tab active">
-//         <a>
-//             <div class="tab__heading" title="Tab Title 1">Tab Title 1</div>
+// <ul id="tabsv3" class="tabs tabs--right">
+//     <li id="tabsv3-1" class="tab active">
+//         <a tabindex="0">
+//             <div class="tab__heading">Detracto</div>
 //         </a>
 //     </li>
-//     <li class="tab">
-//         <a>
-//             <div class="tab__heading" title="Tab Title 2">Tab Title 2</div>
+//     <li id="tabsv3-2" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Sea et</div>
 //         </a>
 //     </li>
-//     <li class="tab">
-//         <a>
-//             <div class="tab__heading" title="Tab Title 3">Tab Title 3</div>
+//     <li id="tabsv3-3" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Omittantur</div>
+//         </a>
+//     </li>
+//     <li id="tabsv3-4" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Accommodare</div>
 //         </a>
 //     </li>
 // </ul>
+// <div id="tabsv3-content" class="tab-content">
+//     <div id="tabsv3-1-content" class="tab-pane active">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv3-2-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv3-3-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv3-4-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+// </div>
 //
 // Weight: 3
 //
-// Styleguide Components.Tab.Direction
+// Styleguide Components.Tab.v3
 //
 
 
 //
-// Example
+// Horizontal, tall
 //
 // Markup:
-// <div class="secondary-tabs">
-//     <ul class="tabs">
-//         <li id="tab-routers" class="tab active">
-//             <a>
-//                 <div class="tab__heading" title="Routers">Routers</div>
-//             </a>
-//         </li>
-//         <li id="tab-switches" class="tab">
-//             <a>
-//                 <div class="tab__heading" title="Switches">Switches</div>
-//             </a>
-//         </li>
-//         <li id="tab-wireless" class="tab">
-//             <a>
-//                 <div class="tab__heading" title="Wireless">Wireless</div>
-//             </a>
-//         </li>
-//     </ul>
-//     <div class="tab-content">
-//         <div id="tab-routers-content" class="tab-pane active">
-//             <div class="section text-center">
-//                 <h1>Routers for networks of all types and sizes<h1>
-//                 <h6 class="base-margin-top">Find secure, digital-ready routers for any application, anywhere.</h6>
-//             </div>
-//             <div class="section">
-//                 <div class="row">
-//                     <div class="col-md-4">
-//                         <img src="public/img/branch-routers.png">
-//                         <h4>Branch</h4>
-//                         <p>Gain highly secure connectivity, machine learning, and cloud-managed security.</p>
-//                         <ul>
-//                             <li><a>ISR 800 Series</a></li>
-//                             <li><a>ISR 1000 Series</a></li>
-//                             <li><a>ISR 4000 Series</a></li>
-//                             <li><a>Meraki MX</a></li>
-//                         </ul>
-//                     </div>
-//                     <div class="col-md-4">
-//                         <img src="public/img/wan-routers.png">
-//                         <h4>WAN Aggregation</h4>
-//                         <p>Get performance and security for WAN, Internet, and M2M interconnectivity.</p>
-//                         <ul>
-//                             <li><a>NCS 5000 Series</a></li>
-//                             <li><a>NCS 5500 Series</a></li>
-//                             <li><a>ASR 1000 Series</a></li>
-//                         </ul>
-//                     </div>
-//                     <div class="col-md-4">
-//                         <img src="public/img/edge-routers.png">
-//                         <h4>Edge</h4>
-//                         <p>Grow density and resiliency with programmability for a scalable network edge.</p>
-//                         <ul>
-//                             <li><a>ASR 1000 Series</a></li>
-//                             <li><a>ASR 9000 Series</a></li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//         <div id="tab-switches-content" class="tab-pane">
-//             <div class="section text-center">
-//                 <h1>Switching for a changing world<h1>
-//                 <h6 class="base-margin-top">Our Catalyst 9000 switches constantly adapt to help you solve new challenges. Their integrated security helps you address ever-changing threats. They simplify management of your evolving mobility, Internet-of-Things (IoT), and cloud requirements. Introducing an entirely new era of networking. The Network. Intuitive.</h6>
-//             </div>
-//             <div class="section">
-//                 <div class="row">
-//                     <div class="col-md-4">
-//                         <img src="public/img/9300-switches.png">
-//                         <h4>Catalyst 9300 Series</h4>
-//                         <p>The Catalyst 9300 Series is our top fixed-access enterprise network switch series, stacking to 480 Gbps.</p>
-//                         <a>Explore the 9300</a>
-//                     </div>
-//                     <div class="col-md-4">
-//                         <img src="public/img/9400-switches.jpg">
-//                         <h4>Catalyst 9400 Series</h4>
-//                         <p>Cisco’s leading modular-access switches for enterprise, the Catalyst 9400 Series supports up to 9 Tbps.</p>
-//                         <a>Explore the 9400</a>
-//                     </div>
-//                     <div class="col-md-4">
-//                         <img src="public/img/edge-routers.png">
-//                         <h4>Catalyst 9500 Series</h4>
-//                         <p>The Catalyst 9500 Series is the industry’s first fixed-core 40-Gbps switch for the enterprise.</p>
-//                         <a>Explore the 9500</a>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//         <div id="tab-wireless-content" class="tab-pane">
-//             <div class="section text-center">
-//                 <h1>See what's possible with our products<h1>
-//                 <h6 class="base-margin-top">Provide enterprise-level, highly secure wireless access for businesses of any size, and easily manage your network.</h6>
-//             </div>
-//             <div class="section">
-//                 <div class="row">
-//                     <div class="col-md-4 text-center">
-//                         <img src="public/img/indoor-accesspoints-wireless.png">
-//                         <h4><a>Indoor Access Points</a></h4>
-//                     </div>
-//                     <div class="col-md-4 text-center">
-//                         <img src="public/img/outdoor-accesspoints-wireless.png">
-//                         <h4><a>Outdoor Access Points</a></h4>
-//                     </div>
-//                     <div class="col-md-4 text-center">
-//                         <img src="public/img/lan-wireless.png">
-//                         <h4><a>Wireless LAN Controllers</a></h4>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
+// <ul id="tabsv4" class="tabs tabs--tall">
+//     <li id="tabsv4-1" class="tab active">
+//         <a tabindex="0">
+//             <div class="tab__heading">Detracto</div>
+//         </a>
+//     </li>
+//     <li id="tabsv4-2" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Sea et</div>
+//         </a>
+//     </li>
+//     <li id="tabsv4-3" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Omittantur</div>
+//         </a>
+//     </li>
+//     <li id="tabsv4-4" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Accommodare</div>
+//         </a>
+//     </li>
+// </ul>
+// <div id="tabsv4-content" class="tab-content">
+//     <div id="tabsv4-1-content" class="tab-pane active">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv4-2-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv4-3-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv4-4-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
 //     </div>
 // </div>
 //
 // Weight: 4
 //
-// Styleguide Components.Tab.Example
+// Styleguide Components.Tab.v4
+//
+
+
+//
+// Vertical
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <ul id="tabsv5" class="tabs tabs--vertical">
+//             <li id="tabsv5-1" class="tab active">
+//                 <a tabindex="0">
+//                     <div class="tab__heading">Detracto</div>
+//                 </a>
+//             </li>
+//             <li id="tabsv5-2" class="tab">
+//                 <a tabindex="0">
+//                     <div class="tab__heading">Sea et</div>
+//                 </a>
+//             </li>
+//             <li id="tabsv5-3" class="tab">
+//                 <a tabindex="0">
+//                     <div class="tab__heading">Omittantur</div>
+//                 </a>
+//             </li>
+//             <li id="tabsv5-4" class="tab">
+//                 <a tabindex="0">
+//                     <div class="tab__heading">Accommodare</div>
+//                 </a>
+//             </li>
+//         </ul>
+//     </div>
+//     <div class="col-md-9">
+//         <div id="tabsv5-content" class="tab-content">
+//             <div id="tabsv5-1-content" class="tab-pane active">
+//                 <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//                 <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//             </div>
+//             <div id="tabsv5-2-content" class="tab-pane">
+//                 <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//                 <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//             </div>
+//             <div id="tabsv5-3-content" class="tab-pane">
+//                 <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//                 <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//             </div>
+//             <div id="tabsv5-4-content" class="tab-pane">
+//                 <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//                 <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 5
+//
+// Styleguide Components.Tab.v5
+//
+
+
+//
+// Bordered
+//
+// Markup:
+// <ul id="tabsv6" class="tabs tabs--bordered">
+//     <li id="tabsv6-1" class="tab active">
+//         <a tabindex="0">
+//             <div class="tab__heading">Detracto</div>
+//         </a>
+//     </li>
+//     <li id="tabsv6-2" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Sea et</div>
+//         </a>
+//     </li>
+//     <li id="tabsv6-3" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Omittantur</div>
+//         </a>
+//     </li>
+//     <li id="tabsv6-4" class="tab">
+//         <a tabindex="0">
+//             <div class="tab__heading">Accommodare</div>
+//         </a>
+//     </li>
+// </ul>
+// <div id="tabsv6-content" class="tab-content">
+//     <div id="tabsv6-1-content" class="tab-pane active">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv6-2-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv6-3-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv6-4-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Components.Tab.v6
+//
+
+
+//
+// Inline
+//
+// <blockquote>Tabs are block display by default. Add the class `tab--inline` for inline tabs.</blockquote>
+//
+// Markup:
+// <div class="flex-center-vertical">
+//     <div class="form-group input--icon base-margin-right">
+//         <div class="form-group__text">
+//             <input id="input-type-search" type="search" placeholder="Search">
+//             <button type="button" class="link">
+//                 <span class="icon-search"></span>
+//             </button>
+//         </div>
+//     </div>
+//     <ul id="tabsv7" class="tabs tabs--inline">
+//         <li id="tabsv7-1" class="tab active">
+//             <a tabindex="0">
+//                 <div class="tab__heading">Detracto</div>
+//             </a>
+//         </li>
+//         <li id="tabsv7-2" class="tab">
+//             <a tabindex="0">
+//                 <div class="tab__heading">Sea et</div>
+//             </a>
+//         </li>
+//         <li id="tabsv7-3" class="tab">
+//             <a tabindex="0">
+//                 <div class="tab__heading">Omittantur</div>
+//             </a>
+//         </li>
+//         <li id="tabsv7-4" class="tab">
+//             <a tabindex="0">
+//                 <div class="tab__heading">Accommodare</div>
+//             </a>
+//         </li>
+//     </ul>
+//     <div class="flex-fluid text-right">
+//         <ul class="list list--inline list--regular">
+//             <li><a href="javascript:;"><span class="icon-medium-small icon-print"></span></a></li>
+//             <li><a href="javascript:;"><span class="icon-medium-small icon-plus"></span></a></li>
+//             <li><a href="javascript:;"><span class="icon-medium-small icon-download"></span></a></li>
+//         </ul>
+//     </div>
+// </div>
+// <div id="tabsv7-content" class="tab-content">
+//     <div id="tabsv7-1-content" class="tab-pane active">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv7-2-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv7-3-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+//     <div id="tabsv7-4-content" class="tab-pane">
+//         <p>Equidem recteque sea et. Per detracto iracundia ea, duo nusquam denique omittantur in. Nam ex quas saperet, solum convenire vel in, dicant atomorum his ne. Putant bonorum in nam, nostrud neglegentur accommodare eam ad. Quo cu primis delenit.</p>
+//         <p>Nam ut viris disputando dissentiunt, sumo vocent ad mea. Vel justo debitis neglegentur an. Facer doctus inimicus et est, sed ea sint dicant. Per soleat pertinax complectitur et, pro no porro cetero, mea probo apeirian torquatos ut. Habeo dicat errem quo et, ut democritum sententiae eloquentiam cum. Sit ad oblique inciderint reformidans, homero albucius voluptatum pro te, saepe laoreet in est.</p>
+//     </div>
+// </div>
+//
+// Weight: 7
+//
+// Styleguide Components.Tab.v7
 //
 
 ul.tabs,
@@ -233,18 +397,16 @@ ul.tabs,
     overflow-y: hidden;
     white-space: nowrap;
     padding: 0;
+    box-shadow: 0 -1px 0 $base-border-color inset;
 
-    .header & {
-        display: block;
-
-        @include media-breakpoint-up(md) {
-            margin-top: 0;
-        }
+    a:active,
+    a:focus {
+        text-decoration: none;
     }
 
     > li {
         display: inline-block;
-        font-size: $base-font-size;
+        font-size: $large-font-size;
         vertical-align: bottom;
         margin: $base-tab-margin;
 
@@ -252,7 +414,7 @@ ul.tabs,
         &:hover {
             > a {
                 font-weight: normal;
-                box-shadow: 0 -5px 0 $base-accent-color inset;
+                box-shadow: 0 (-$base-tab-accent-width) 0 $base-accent-color inset;
                 color: $base-link-color;
             }
         }
@@ -271,12 +433,16 @@ ul.tabs,
                 color: $base-link-color;
                 text-decoration: none;
             }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 (-$base-tab-accent-width) 0 $base-accent-color inset;
+                color: $base-link-color;
+            }
         }
     }
 
-    .tab__heading,
-    tab-heading,
-    .tab-heading {
+    .tab__heading {
         display: block;
         margin: 0;
         padding: $base-tab-padding;
@@ -290,89 +456,115 @@ ul.tabs,
         }
     }
 
-    &--tall {
-        .tab__heading, tab-heading, .tab-heading {
+    &.tabs--right {
+        text-align: right;
+    }
+
+    &.tabs--centered {
+        text-align: center;
+    }
+
+    &.tabs--tall {
+        .tab__heading {
             padding: $base-tab-tall-padding;
         }
     }
 
     &.tabs--vertical {
         box-shadow: none;
+        border-right: $base-border;
+
         > li {
             display: block;
             font-size: $base-font-size;
             vertical-align: unset;
-            margin: 0;
+            margin-right: 1px;
 
             + li {
-                margin: ($base-spacing * 0.25) 0;
+                margin-top: $base-spacing-qtr;
+                margin-bottom: $base-spacing-qtr;
             }
 
             > a {
                 display: flex;
                 align-items: center;
-                padding: 0 0 0 ($base-spacing * 0.5);
                 height: $base-tab-vertical-height;
+                padding: 0 0 0 $base-spacing-half;
+
                 &.tab__heading {
-                    margin: 0 ($base-spacing * 0.25);
+                    margin: 0 $base-spacing-qtr;
+                }
+
+                &:focus {
+                    box-shadow: inset (-$base-tab-accent-width) 0 0 $base-accent-color;
                 }
             }
 
             &.active {
                 > a {
-                    box-shadow: 0 none;
-                    background-color: $base-accent-color;
-                    color: $white;
+                    box-shadow: inset (-$base-tab-accent-width) 0 0 $base-accent-color;
+                    background-color: $light-gray-4;
                 }
                 &:hover {
                     > a {
-                        color: $white;
+                        color: $base-link-color;
                     }
                 }
             }
 
             &:hover {
                 > a {
-                    box-shadow: ($base-spacing * 0.25) 0 $base-accent-color inset;
+                    box-shadow: inset (-$base-tab-accent-width) 0 0 $base-accent-color;
                 }
             }
         }
+    }
 
-        // Add right-hand border modifier to vertical tabs
-        &.tabs--border-right {
-            border: 0 none;
-            padding-right: 0;
+    &.tabs--bordered {
+        > li {
+            margin: 0;
 
-            @include media-breakpoint-up(md) {
-                border-right: $base-border;
-                padding-right: 1px;
+            + li {
+                margin-left: -1px;
+            }
+
+            &:first-child a {
+                border-top-left-radius: $base-border-radius;
+            }
+
+            &:last-child a {
+                border-top-right-radius: $base-border-radius;
+            }
+
+            > a {
+                display: flex;
+                background-color: $base-background-color;
+                padding: $base-spacing-qtr $base-spacing;
+                color: $base-font-color;
+                border: $base-border;
+
+                &:hover,
+                &:focus {
+                    color: $base-link-color;
+                    background-color: $white;
+                    box-shadow: none;
+                }
+            }
+
+            &.active {
+                > a {
+                    color: $base-link-color;
+                    box-shadow: none;
+                    background-color: $white;
+                    border-bottom-color: $white;
+                }
             }
         }
     }
-}
 
-.tab-icon {
-    margin: 0;
-}
-
-.tab-icon--status {
-    margin: 0 5px 0 -5px;
-}
-
-.tab-icon--close {
-    margin: 0 -5px 0 5px;
-    color: $base-muted-color;
-    padding: 0;
-
-    &:hover {
-        color: $danger;
-        opacity: 1;
-    }
-}
-
-.tab-content {
-    .header & {
-        display: none;
+    &.tabs--inline {
+        display: inline-flex;
+        box-shadow: none;
     }
 }
 
@@ -386,18 +578,21 @@ ul.tabs,
     }
 }
 
-.secondary-tabs {
-    .tabs, .nav-tabs {
-        display: block;
-        box-shadow: 0 -1px 0 $base-border-color inset;
-    }
-
-    .tab-pane {
-        padding: $base-spacing 0;
-    }
-}
-
 // Fix for text cutoff on mobile menu. Need to exclude tabs from the list
 ul.tabs.list li+li {
     margin: 0;
+}
+
+// Global Modifiers
+
+&.cui--compressed .nav-tabs > li,
+&.cui--compressed ul.tabs > li {
+    font-size: $base-font-size;
+}
+
+&.cui--animated .tabs,
+&.cui--animated .nav-tabs {
+    > li:hover > a {
+        transition: box-shadow .2s linear;
+    }
 }

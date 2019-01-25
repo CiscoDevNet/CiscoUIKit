@@ -9,7 +9,9 @@ var htmlmin = require('gulp-htmlmin');
 var htmlhint = require('gulp-htmlhint');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
+var inject = require('gulp-inject');
 var jade = require('gulp-jade');
+var log = require('fancy-log');
 var minifycss = require('gulp-minify-css');
 var minifyhtml = require('gulp-minify-html');
 var path = require('path');
@@ -22,14 +24,16 @@ var using = require('gulp-using');
 var util = require('gulp-util');
 var rimraf = require('gulp-rimraf');
 var replace = require('gulp-replace');
+var transform = require('gulp-transform');
 
 var cfg = {
     baseDir: path.dirname(process.cwd()),
+    docsDir: './docs',
     sourceDir: './src',
     targetDir: './build',
     distDir: './dist',
     fontName: 'cui-font',
-    isVerbose: true,
+    isVerbose: false,
     banner: [
         '/*! ',
         ' * ' + pkg.name + ' - ' + pkg.description,
@@ -53,7 +57,7 @@ var cfg = {
     * Build Task
     */
     gulp.task('default', function() {
-        run(['compile:fonts', 'pkg:images', 'pkg:bower', 'pkg:changelog', 'pkg:broadcast'], 'replace:version', 'pkg:examples');
+        run(['compile:fonts', 'pkg:images', 'pkg:bower', 'pkg:changelog', 'pkg:broadcast'], 'replace:version', 'pkg:examples', 'pkg:inject');
     });
 
 
@@ -87,9 +91,9 @@ var cfg = {
     * Task: replace:version
     */
     gulp.task('replace:version', function() {
-        return gulp.src(cfg.targetDir + '/docs/**/*.html')
+        return gulp.src(cfg.targetDir + '/**/*.html')
             .pipe(replace("{{VERSION}}", pkg.version))
-            .pipe(gulp.dest(cfg.targetDir + '/docs/'));
+            .pipe(gulp.dest(cfg.targetDir + '/'));
     });
 
     /*
@@ -206,6 +210,7 @@ var cfg = {
     */
     gulp.task('pkg:examples', function() {
         gulp.src(cfg.targetDir + '/docs/public/examples/*.html')
+        .on('end', function() { log('\n' + cfg.banner); })
         .pipe(gulp.dest(cfg.targetDir + '/docs/assets'));
     });
 
@@ -237,4 +242,26 @@ var cfg = {
 
         gulp.src(cfg.targetDir + '/docs/assets/img/**/*')
         .pipe(gulp.dest(cfg.distDir + '/img'));
+    });
+
+    /*
+    * Task: pkg:inject
+    */
+    gulp.task('pkg:inject', function() {
+        gulp.src(cfg.targetDir + '/docs/section-changelog.html')
+        .pipe(inject(gulp.src(cfg.docsDir + '/public/partials/changelog.html'), {
+            starttag: '<!-- inject:changelog -->',
+            transform: function(filePath, file) {
+                return file.contents.toString('utf8')
+            }
+        }))
+        .pipe(gulp.dest(cfg.targetDir + '/docs'));
+        gulp.src(cfg.targetDir + '/docs/section-downloads.html')
+        .pipe(inject(gulp.src(cfg.docsDir + '/public/partials/downloads.html'), {
+            starttag: '<!-- inject:downloads -->',
+            transform: function(filePath, file) {
+                return file.contents.toString('utf8')
+            }
+        }))
+        .pipe(gulp.dest(cfg.targetDir + '/docs'));
     });

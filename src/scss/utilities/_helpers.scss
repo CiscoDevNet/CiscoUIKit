@@ -6,225 +6,163 @@
 
 
 //
-// Readonly
-//
-// To readonly any element, you can add a `readonly` attribute or the class `.readonly`
-//
-// Markup:
-// <textarea rows="4" style="width:100%;resize:none" class="readonly">Readonly text area</textarea>
-//
-// Styleguide Utilities.Helpers.Readonly
-//
-
-.readonly {
-    @include readonly;
-}
-
-
-//
-// Disabled
-//
-// To disable any element, you can add a `disabled` attribute or the class `.disabled`
-//
-// Markup:
-// <button class="btn btn--small" disabled>Disabled via Attribute</button>
-// <button class="btn btn--small disabled">Disabled via Class</button>
-//
-// Styleguide Utilities.Helpers.Disabled
-//
-
-*[disabled],
-.disabled {
-    @include disabled;
-}
-
-
-//
-// Clearfix
-//
-// To apply a clearfix to a block element containing floated elements, you can add the class `.clearfix` on the element in the markup
-//
-// Styleguide Utilities.Helpers.Clearfix
-//
-
-.clearfix {
-    @include clearfix;
-}
-
-
-//
-// Absolute Center
-//
-// To horizontally and vertically center an element inside of another element, you can add the class `.absolute-center` on the element in the markup
-//
-// Markup:
-// <div class="row" IGNORED>
-//     <div class="col-md-6" IGNORED>
-//         <div class="panel panel--blue panel--bordered" style="height:200px;">
-//             <h1 class="absolute-center text-uppercase">centered</h1>
-//         </div>
-//     </div IGNORED>
-//     <div class="col-md-6" IGNORED>
-//         <div class="panel panel--blue panel--bordered" style="height:200px;">
-//             <h1 class="absolute-center absolute-center--top text-uppercase">top</h1>
-//         </div>
-//     </div IGNORED>
-//     <div class="col-md-6" IGNORED>
-//         <div class="panel panel--blue panel--bordered" style="height:200px;">
-//             <h1 class="absolute-center absolute-center--right text-uppercase">right</h1>
-//         </div>
-//     </div IGNORED>
-//     <div class="col-md-6" IGNORED>
-//         <div class="panel panel--blue panel--bordered" style="height:200px;">
-//             <h1 class="absolute-center absolute-center--bottom text-uppercase">bottom</h1>
-//         </div>
-//     </div IGNORED>
-//     <div class="col-md-6" IGNORED>
-//         <div class="panel panel--blue panel--bordered" style="height:200px;">
-//             <h1 class="absolute-center absolute-center--left text-uppercase">left</h1>
-//         </div>
-//     </div IGNORED>
-// </div IGNORED>
-//
-// Styleguide Utilities.Helpers.Absolute Center
-//
-
-.absolute-center {
-    @include absolute-center;
-
-    &--top      { top: 30% !important; }
-    &--right    { left: 70% !important; }
-    &--bottom   { top: 70% !important; }
-    &--left     { left: 30% !important; }
-}
-
-
-//
-// Float Left
-//
-// Use the class `pull-left` to float any element left
-//
-// Markup:
-// <div class="clearfix">
-//     <div class="pull-left">pull-left</div>
-// </div>
-//
-// Styleguide Utilities.Helpers.Float Left
-//
-
-.pull-left {
-    float: left !important;
-}
-
-.pull-center {
-    float: center !important;
-}
-
-
-//
-// Float Right
-//
-// Use the class `pull-right` to float any element right
-//
-// Markup:
-// <div class="clearfix">
-//     <div class="pull-right">pull-right</div>
-// </div>
-//
-// Styleguide Utilities.Helpers.Float Right
-//
-
-.pull-right {
-    float: right !important;
-}
-
-
-// Flex Helpers
-
-.flex {
-    @include flex;
-}
-.flex-inline {
-    display: inline-flex;
-}
-.flex-center {
-    @include flex-center;
-}
-.flex-center-vertical {
-    @include flex-center-vertical;
-}
-.flex-center-horizontal {
-    @include flex-center-horizontal;
-}
-.flex-fluid {
-    @include flex-fluid;
-}
-.flex-fill {
-    flex: 1 0 auto;
-}
-.flex-inline-center-horizontal {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-}
-.flex-inline-center-vertical {
-    display: inline-flex;
-    justify-content: center;
-}
-.flex-align-end {
-    align-items: flex-end !important;
-}
-.flex-align-start {
-    align-items: flex-start !important;
-}
-.flex--compressed > * {
-    flex-basis: $base-spacing-compressed;
-}
-.flex--regular > * {
-    flex-basis: $base-spacing-regular;
-}
-.flex--loose > * {
-    flex-basis: $base-spacing * 2;
-}
-.flex-right {
-    justify-content: flex-end;
-}
-.flex-column {
-    flex-direction: column;
-}
-.flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-//
 // Text Helpers
 //
 // Markup:
-// <div class="text-left">text-left</div>
-// <div class="text-center">text-center</div>
-// <div class="text-right">text-right</div>
-// <div class="text-bold">text-bold</div>
-// <div class="text-muted">text-muted</div>
-// <div class="text-normal">text-normal</div>
-// <div class="text-ghost">text-ghost</div>
-// <div class="text-light">text-light</div>
-// <div class="text-muted">text-muted</div>
-// <div class="text-lowercase">text-lowercase</div>
-// <div class="text-uppercase">text-uppercase</div>
-// <div class="text-capitalize">text-capitalize</div>
-// <div class="text-tiny">text-tiny</div>
-// <div class="text-xsmall">text-xsmall</div>
-// <div class="text-small">text-small</div>
-// <div class="text-medium">text-medium</div>
-// <div class="text-large">text-large</div>
-// <div class="text-huge">text-huge</div>
-// <div class="text-italic">text-italic</div>
-// <div class="text-monospace">text-monospace</div>
-// <div style="width:200px" class="text-ellipsis">text-ellipsis This is an ellipsed string.</div>
-// <div class="text-noselect">text-noselect Try and select me</div>
-// <div class="text-break">text-break ThisIsReallyLongTextWithoutWhiteSpaceSoItWillOverrideContainersAndOtherSuchHtmlItemsBecauseOfNoLogicalBreakPointsBeingBuiltIn</div>
+// <div class="subheader">Colors</div>
+// <div class="responsive-table">
+//     <table class="table">
+//         <tbody>
+//             <tr>
+//                 <td>text-info</td>
+//                 <td class="text-info">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-success</td>
+//                 <td class="text-success">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-danger</td>
+//                 <td class="text-danger">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-warning</td>
+//                 <td class="text-warning">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-warning-alt</td>
+//                 <td class="text-warning-alt">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-primary</td>
+//                 <td class="text-primary">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-secondary</td>
+//                 <td class="text-secondary">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-default</td>
+//                 <td class="text-default">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-turquoise</td>
+//                 <td class="text-turquoise">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-blue</td>
+//                 <td class="text-blue">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-dkgray-1</td>
+//                 <td class="text-dkgray-1">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-dkgray-4</td>
+//                 <td class="text-dkgray-4">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-indigo</td>
+//                 <td class="text-indigo">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-vibrant</td>
+//                 <td class="text-vibrant">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+// <div class="subheader base-margin-top">Position</div>
+// <div class="responsive-table">
+//     <table class="table">
+//         <tbody>
+//             <tr>
+//                 <td>text-left</td>
+//                 <td class="text-left">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-center</td>
+//                 <td class="text-center">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-right</td>
+//                 <td class="text-right">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+// <div class="subheader base-margin-top">Transforms</div>
+// <div class="responsive-table">
+//     <table class="table">
+//         <tbody>
+//             <tr>
+//                 <td>text-bold</td>
+//                 <td class="text-bold">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-muted</td>
+//                 <td class="text-muted">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-lowercase</td>
+//                 <td class="text-lowercase">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-uppercase</td>
+//                 <td class="text-uppercase">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-capitalize</td>
+//                 <td class="text-capitalize">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-italic</td>
+//                 <td class="text-italic">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-monospace</td>
+//                 <td class="text-monospace">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+// <div class="subheader base-margin-top">Size</div>
+// <div class="responsive-table">
+//     <table class="table">
+//         <tbody>
+//             <tr>
+//                 <td>text-tiny</td>
+//                 <td class="text-tiny">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-xsmall</td>
+//                 <td class="text-xsmall">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-small</td>
+//                 <td class="text-small">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-medium</td>
+//                 <td class="text-medium">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-large</td>
+//                 <td class="text-large">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-xlarge</td>
+//                 <td class="text-xlarge">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//             <tr>
+//                 <td>text-huge</td>
+//                 <td class="text-huge">Lorem ipsum dolor sit amet</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// Weight: 2
 //
 // Styleguide Utilities.Helpers.Text Helpers
 //
@@ -239,7 +177,7 @@
     font-weight: bold !important;
 }
 .text-muted {
-    color: $base-muted-color !important;
+    color: $base-muted-color;
 }
 .text-normal {
     font-weight: normal !important;
@@ -267,27 +205,34 @@
 }
 .text-tiny {
     font-size: $tiny-font-size !important;
+    line-height: $tiny-font-size !important;
 }
 .text-xsmall {
     font-size: $xsmall-font-size !important;
+    line-height: $xsmall-font-size !important;
 }
 .text-small {
     font-size: $small-font-size !important;
 }
 .text-medium {
     font-size: $medium-font-size !important;
+    line-height: $medium-font-size !important;
 }
 .text-large {
     font-size: $large-font-size !important;
+    line-height: $large-font-size !important;
 }
 .text-xlarge {
     font-size: $xlarge-font-size !important;
+    line-height: $xlarge-font-size !important;
 }
 .text-huge {
     font-size: $huge-font-size !important;
+    line-height: $huge-font-size !important;
 }
 .text-goliath {
     font-size: $goliath-font-size !important;
+    line-height: $goliath-font-size !important;
 }
 .text-italic {
     font-style: italic !important;
@@ -296,7 +241,7 @@
     color: $white !important;
 }
 .text-transparent-qtr {
-    opacity: .25;
+    opacity: .25 !important;
 }
 .monospace,
 .text-monospace {
@@ -315,97 +260,78 @@
     @include text-break;
 }
 .text-marquee {
-    font-size: 32px;
+    font-size: 32px !important;
 
     @include media-breakpoint-up(sm) {
-        font-size: 40px;
+        font-size: 40px !important;
     }
     @include media-breakpoint-up(md) {
-        font-size: 48px;
+        font-size: 48px !important;
     }
 }
+.text-billboard {
+    font-size: $billboard-font-size !important;
 
-
-
-//
-// Text Colors
-//
-// Markup:
-// <div class="text-primary">text-primary</div>
-// <div class="text-secondary">text-secondary</div>
-// <div class="text-default">text-default</div>
-// <div class="text-cta">text-cta</div>
-// <div class="text-info">text-info</div>
-// <div class="text-success">text-success</div>
-// <div class="text-danger">text-danger</div>
-// <div class="text-warning">text-warning</div>
-//
-// Styleguide Utilities.Helpers.Text Colors
-//
-
+    @include media-breakpoint-down(md) {
+        font-size: $billboard-font-size-md !important;
+    }
+}
+.text-billboard-title {
+    font-size: $billboard-title-font-size !important;
+}
+.text-billboard-subtitle {
+    font-size: $billboard-subtitle-font-size !important;
+}
+.text-subheading {
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    margin-bottom: $base-spacing * 0.5 !important;
+}
 .text-primary, .text--primary           { color: $primary !important; }
 .text-secondary, .text--secondary       { color: $secondary !important; }
 .text-default, .text--default           { color: $base-font-color !important; }
 .text-cta, .text--cta                   { color: $cisco-green !important; }
-.text-info, .text--info                 { color: $info !important; }
+.text-info, .text--info                 { color: $base-accent-color !important; }
 .text-success, .text--success           { color: $success !important; }
 .text-danger, .text--danger             { color: $danger !important; }
 .text-warning, .text--warning           { color: $warning !important; }
 .text-warning-alt, .text--warning-alt   { color: $warning-alt !important; }
+.text-turquoise, .text--turquoise       { color: $status-turq !important; }
 .text-default-color                     { color: $dark-gray-2 !important; }
-.text-blue                              { color: $cisco-blue !important; }
+.text-blue                              { color: $base-accent-color !important; }
 .text-darkgreen                         { color: $cisco-darkgreen !important; }
 .text-dkgray-1                          { color: $dark-gray-1 !important; }
 .text-dkgray-4                          { color: $dark-gray-4 !important; }
 .text-indigo, .text--indigo             { color: $indigo !important; }
+.text-vibrant                           { color: $vibrant-blue !important; }
 
 
-// Icon Helpers
-
-.icon-huge {
-    &:before {
-        line-height: 84px;
-        font-size: 84px;
-    }
-}
-.icon-large {
-    &:before {
-        line-height: 56px;
-        font-size: 56px;
-    }
-}
-.icon-medium-large {
-    &:before {
-        line-height: 36px;
-        font-size: 36px;
-    }
-}
-.icon-medium {
-    &:before {
-        line-height: 28px;
-        font-size: 28px;
-    }
-}
-.icon-medium-small {
-    &:before {
-        line-height: 24px;
-        font-size: 24px;
-    }
-}
-.icon-small {
-    &:before {
-        line-height: 18px;
-        font-size: 18px;
-    }
-}
-.icon-tiny {
-    &:before {
-        line-height: 10px;
-        font-size: 10px;
-    }
-}
-
+//
 // Nudges
+//
+// <blockquote>Use nudges to add extra margin (or padding) to your elements. Nudges are built off of the base spacing (20px) value so `half-margin-left` is equivalent to margin left 10px.</blockquote>
+//
+// Markup:
+// <div class="subheader">Margin Nudges</div>
+// <div>no-margin</div>
+// <div>no-margin-[top,right,bottom,left]</div>
+// <div>qtr-margin-[top,right,bottom,left]</div>
+// <div>half-margin-[top,right,bottom,left]</div>
+// <div>base-margin-[top,right,bottom,left]</div>
+// <div>dbl-margin-[top,right,bottom,left]</div>
+// <br>
+// <div class="subheader">Padding Nudges</div>
+// <div>no-padding</div>
+// <div>no-padding-[top,right,bottom,left]</div>
+// <div>qtr-padding-[top,right,bottom,left]</div>
+// <div>half-padding-[top,right,bottom,left]</div>
+// <div>base-padding-[top,right,bottom,left]</div>
+// <div>dbl-padding-[top,right,bottom,left]</div>
+//
+// Weight: 3
+//
+// Styleguide Utilities.Helpers.Nudges
+//
 
 .inline-qtr-spacing {
     > *+* {
@@ -413,11 +339,11 @@
     }
 }
 
-.no-margin           { margin: 0; }
-.no-margin-top       { margin-top: 0; }
-.no-margin-right     { margin-right: 0; }
-.no-margin-bottom    { margin-bottom: 0; }
-.no-margin-left      { margin-left: 0; }
+.no-margin           { margin: 0 !important; }
+.no-margin-top       { margin-top: 0 !important; }
+.no-margin-right     { margin-right: 0 !important; }
+.no-margin-bottom    { margin-bottom: 0 !important; }
+.no-margin-left      { margin-left: 0 !important; }
 
 .qtr-margin          { margin: $base-spacing * 0.25 !important; }
 .qtr-margin-top      { margin-top: $base-spacing * 0.25 !important; }
@@ -443,11 +369,11 @@
 .dbl-margin-bottom   { margin-bottom: $base-spacing * 2 !important; }
 .dbl-margin-left     { margin-left: $base-spacing * 2 !important; }
 
-.no-padding          { padding: 0; }
-.no-padding-top      { padding-top: 0; }
-.no-padding-right    { padding-right: 0; }
-.no-padding-bottom   { padding-bottom: 0; }
-.no-padding-left     { padding-left: 0; }
+.no-padding          { padding: 0 !important; }
+.no-padding-top      { padding-top: 0 !important; }
+.no-padding-right    { padding-right: 0 !important; }
+.no-padding-bottom   { padding-bottom: 0 !important; }
+.no-padding-left     { padding-left: 0 !important; }
 
 .qtr-padding         { padding: $base-spacing * 0.25 !important; }
 .qtr-padding-top     { padding-top: $base-spacing * 0.25 !important; }
@@ -473,6 +399,418 @@
 .dbl-padding-bottom  { padding-bottom: $base-spacing * 2 !important; }
 .dbl-padding-left    { padding-left: $base-spacing * 2 !important; }
 
+@include media-breakpoint-down(xs) {
+    .padding-none-xs {
+        padding: 0 !important;
+    }
+}
+
+//
+// Disabled
+//
+// <blockquote>To disable any element, you can add a `disabled` attribute or the class `disabled`.</blockquote>
+//
+// Markup:
+// <button class="btn btn--small" disabled>Disabled via Attribute</button>
+// <button class="btn btn--small disabled">Disabled via Class</button>
+//
+// Weight: 4
+//
+// Styleguide Utilities.Helpers.Disabled
+//
+
+*[disabled], .disabled {
+    @include disabled;
+}
+
+.readonly {
+    @include readonly;
+}
+
+
+//
+// Blurred
+//
+// <blockquote>Add the class `.blurred` to add a blur effect.</blockquote>
+//
+// Markup:
+// <div class="panel panel--bordered blurred">Lorem ipsum dolor sit amet Pellentesque commodo fringilla pellentesque. Donec bibendum sem auctor, aliquet odio non, ornare nulla. Vivamus lobortis eros et metus ultricies, eu interdum mi efficitur. Ut et nulla justo. Praesent vulputate mauris mi, ut mollis diam mollis finibus. Donec a orci ex. Praesent dictum sapien massa, lacinia lobortis elit imperdiet eget. Integer maximus erat vestibulum porttitor sodales. Donec accumsan nisl a sagittis hendrerit. Maecenas rhoncus cursus rutrum. Donec congue ipsum eget lacus sagittis, vel pellentesque arcu condimentum. Praesent vel laoreet dui, at mattis elit. In hac habitasse platea dictumst.</div>
+//
+// Weight: 5
+//
+// Styleguide Utilities.Helpers.Blurred
+//
+
+.blurred {
+    pointer-events: none !important;
+    filter: blur(5px) !important;
+}
+
+
+//
+// Clearfix
+//
+// <blockquote>To apply a clearfix to a block element containing floated elements, you can add the class `.clearfix` on the element in the markup.</blockquote>
+//
+//
+
+.clearfix {
+    @include clearfix;
+}
+
+
+//
+// Absolute Center
+//
+
+.absolute-center {
+    @include absolute-center;
+
+    &--top      { top: 30% !important; }
+    &--right    { left: 70% !important; }
+    &--bottom   { top: 70% !important; }
+    &--left     { left: 30% !important; }
+}
+.absolute-top {
+    position: absolute !important;
+    top: 0 !important;
+}
+.absolute-bottom {
+    position: absolute !important;
+    bottom: 0 !important;
+}
+.absolute-left {
+    position: absolute !important;
+    left: 0 !important;
+}
+.absolute-right {
+    position: absolute !important;
+    right: 0 !important;
+}
+.absolute-top-half-negative {
+    position: absolute !important;
+    top: -50%;
+}
+
+
+//
+// Float Helpers
+//
+// <blockquote>Use the class `pull-left` or `pull-right` to float elements.</blockquote>
+//
+// Markup:
+// <div class="clearfix">
+//     <div class="panel panel--bordered pull-left">pull-left</div>
+//     <div class="panel panel--bordered pull-right">pull-right</div>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Utilities.Helpers.Floats
+//
+
+.pull-left {
+    float: left !important;
+}
+.pull-center {
+    float: center !important;
+}
+.pull-right {
+    float: right !important;
+}
+
+
+//
+// Opacity Helpers
+//
+// <blockquote>Set the opacity of any element using these helper classes.</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-1">
+//         <div class="subheader">10%</div>
+//         <span class="icon-acessibility icon-medium opacity-10"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">20%</div>
+//         <span class="icon-acessibility icon-medium opacity-20"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">30%</div>
+//         <span class="icon-acessibility icon-medium opacity-30"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">40%</div>
+//         <span class="icon-acessibility icon-medium opacity-40"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">50%</div>
+//         <span class="icon-acessibility icon-medium opacity-50"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">60%</div>
+//         <span class="icon-acessibility icon-medium opacity-60"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">70%</div>
+//         <span class="icon-acessibility icon-medium opacity-70"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">80%</div>
+//         <span class="icon-acessibility icon-medium opacity-80"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">90%</div>
+//         <span class="icon-acessibility icon-medium opacity-90"></span>
+//     </div>
+// </div>
+//
+// Weight: 7
+//
+// Styleguide Utilities.Helpers.Opacity
+//
+
+.opacity-10 { opacity: .10 !important; }
+.opacity-20 { opacity: .20 !important; }
+.opacity-30 { opacity: .30 !important; }
+.opacity-40 { opacity: .40 !important; }
+.opacity-50 { opacity: .50 !important; }
+.opacity-60 { opacity: .60 !important; }
+.opacity-70 { opacity: .70 !important; }
+.opacity-80 { opacity: .80 !important; }
+.opacity-90 { opacity: .90 !important; }
+
+
+//
+// Rotate Helpers
+//
+// <blockquote>Rotate any element using these helper classes.</blockquote>
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-1">
+//         <div class="subheader">30&deg;</div>
+//         <span class="icon-acessibility icon-medium rotate-30"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">45&deg;</div>
+//         <span class="icon-acessibility icon-medium rotate-45"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">60&deg;</div>
+//         <span class="icon-acessibility icon-medium rotate-60"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">90&deg;</div>
+//         <span class="icon-acessibility icon-medium rotate-90"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">135&deg;</div>
+//         <span class="icon-acessibility icon-medium rotate-135"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">180&deg;</div>
+//         <span class="icon-acessibility icon-medium rotate-180"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">225&deg;</div>
+//         <span class="icon-acessibility icon-medium rotate-225"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">270&deg;</div>
+//         <span class="icon-acessibility icon-medium rotate-270"></span>
+//     </div>
+//     <div class="col-md-1">
+//         <div class="subheader">315&deg;</div>
+//         <span class="icon-acessibility icon-medium rotate-315"></span>
+//     </div>
+// </div>
+//
+// Weight: 8
+//
+// Styleguide Utilities.Helpers.Rotate
+//
+
+.rotate-30  { transform: rotate(30deg) !important; }
+.rotate-45  { transform: rotate(45deg) !important; }
+.rotate-60  { transform: rotate(60deg) !important; }
+.rotate-90  { transform: rotate(90deg) !important; }
+.rotate-135 { transform: rotate(135deg) !important; }
+.rotate-180 { transform: rotate(180deg) !important; }
+.rotate-225 { transform: rotate(225deg) !important; }
+.rotate-270 { transform: rotate(270deg) !important; }
+.rotate-315 { transform: rotate(315deg) !important; }
+
+
+//
+// Flex Helpers
+//
+// Markup:
+// <div class="subheader">flex-fluid</div>
+// <div class="flex">
+//     <div class="panel panel--bordered">Fills only what is needed</div>
+//     <div class="flex-fluid">
+//         <div class="panel panel--ltgray">Fills rest of horizontal space</div>
+//     </div>
+// </div>
+// <div class="subheader base-margin-top">flex-center-horizontal</div>
+// <div class="flex-center-horizontal">
+//     <label class="checkbox">
+//         <input type="checkbox">
+//         <span class="checkbox__input"></span>
+//         <span class="checkbox__label">Click me</span>
+//     </label>
+//     <button class="btn btn--primary half-margin-left">Click me</button>
+//     <div class="half-margin-left">Centered horizontal</div>
+// </div>
+// <div class="subheader base-margin-top">flex-center-vertical</div>
+// <div class="flex-center-vertical">
+//     <label class="checkbox">
+//         <input type="checkbox">
+//         <span class="checkbox__input"></span>
+//         <span class="checkbox__label">Click me</span>
+//     </label>
+//     <button class="btn btn--primary half-margin-left">Click me</button>
+//     <div class="half-margin-left">Centered vertical</div>
+// </div>
+// <div class="subheader base-margin-top">flex-center</div>
+// <div class="flex-center">
+//     <label class="checkbox">
+//         <input type="checkbox">
+//         <span class="checkbox__input"></span>
+//         <span class="checkbox__label">Click me</span>
+//     </label>
+//     <button class="btn btn--primary half-margin-left">Click me</button>
+//     <div class="half-margin-left">Centered vertical and horizontal</div>
+// </div>
+//
+// Weight: 9
+//
+// Styleguide Utilities.Helpers.Flex
+//
+
+.flex {
+    @include flex;
+}
+.flex-inline {
+    display: inline-flex !important;
+}
+.flex-center {
+    @include flex-center;
+}
+.flex-center-vertical {
+    @include flex-center-vertical;
+}
+.flex-center-horizontal {
+    @include flex-center-horizontal;
+}
+.flex-fluid {
+    @include flex-fluid;
+}
+.flex-inline-center-horizontal {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.flex-inline-center-vertical {
+    display: inline-flex !important;
+    justify-content: center !important;
+}
+.flex-align-end {
+    align-items: flex-end !important;
+}
+.flex-align-start {
+    align-items: flex-start !important;
+}
+.flex--compressed > * {
+    flex-basis: $base-spacing-compressed !important;
+}
+.flex--regular > * {
+    flex-basis: $base-spacing-regular !important;
+}
+.flex--loose > * {
+    flex-basis: $base-spacing * 2 !important;
+}
+.flex-right {
+    justify-content: flex-end !important;
+}
+
+@include media-breakpoint-down(xs) {
+    .flex-center-xs {
+        @include flex-center;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .text-center-sm {
+        text-align: center !important;
+    }
+    .flex-center-sm {
+        @include flex-center;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .text-center-lg {
+        text-align: center !important;
+    }
+    .flex-center-lg {
+        @include flex-center;
+    }
+}
+
+
+// Icon Helpers
+
+.icon-action {
+    &:before {
+        line-height: $huge-icon-font-size !important;
+        font-size: $huge-icon-font-size !important;
+    }
+}
+.icon-huge {
+    &:before {
+        line-height: 84px !important;
+        font-size: 84px !important;
+    }
+}
+.icon-large {
+    &:before {
+        line-height: 56px !important;
+        font-size: 56px !important;
+    }
+}
+.icon-medium-large {
+    &:before {
+        line-height: 36px !important;
+        font-size: 36px !important;
+    }
+}
+.icon-medium {
+    &:before {
+        line-height: 28px !important;
+        font-size: 28px !important;
+    }
+}
+.icon-medium-small {
+    &:before {
+        line-height: 24px !important;
+        font-size: 24px !important;
+    }
+}
+.icon-small {
+    &:before {
+        line-height: 18px !important;
+        font-size: 18px !important;
+    }
+}
+.icon-tiny {
+    &:before {
+        line-height: 10px !important;
+        font-size: 10px !important;
+    }
+}
+
 
 // Hide on iOS Devices
 .is-ios-device {
@@ -482,7 +820,7 @@
 }
 
 .toggle {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .v-separator {
@@ -509,11 +847,6 @@
     @return mix(black, $color, $percent);
 }
 
-// Rotate element 180 degrees
-.rotate-180 {
-    transform: rotate(180deg);
-}
-
 .hide {
     display: none !important;
 }
@@ -522,20 +855,24 @@
     display: block !important;
 }
 
+.hide-overflow {
+    overflow: hidden !important;
+}
+
 .visible {
-    visibility: visible;
+    visibility: visible !important;
 }
 
 .invisible {
-    visibility: hidden;
+    visibility: hidden !important;
 }
 
 .user-entered-data {
-    white-space: pre-line;
+    white-space: pre-line !important;
 }
 
 .small {
-    font-size: $small-font-size;
+    font-size: $small-font-size !important;
 }
 
 @media (max-width: 767px) {
@@ -554,18 +891,18 @@
 }
 
 .row.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 .row.no-gutters > [class^="col-"],
 .row.no-gutters > [class*=" col-"] {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
 // Add disabled mouse / touch pointer
 .disable-pointer {
-    pointer-events: none;
+    pointer-events: none !important;
 }
 
 //
@@ -574,49 +911,105 @@
 // NOTE: These are deprecated in 1.0.5 and you should use the new Bootstrap 4
 //       hidden-{breakpoint}-{up|down} visibility helper classes instead
 //
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .hidden-xs {
         display: none !important;
     }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 576px) and (max-width: 767px) {
     .hidden-sm {
         display: none !important;
     }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .hidden-md {
         display: none !important;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199px) {
     .hidden-lg {
+        display: none !important;
+    }
+}
+@media (min-width: 1200px) {
+    .hidden-xl {
         display: none !important;
     }
 }
 .visible-xs,
 .visible-sm,
 .visible-md,
-.visible-lg {
+.visible-lg
+.visible-xl {
     display: none !important;
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .visible-xs {
         display: block !important;
     }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 576px) and (max-width: 767px) {
     .visible-sm {
         display: block !important;
     }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .visible-md {
         display: block !important;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199px) {
     .visible-lg {
         display: block !important;
     }
+}
+@media (min-width: 1200px) {
+    .visible-xl {
+        display: block !important;
+    }
+}
+
+.hidden-sm-down { @include media-breakpoint-down(sm) { display: none !important; }}
+.hidden-md-down { @include media-breakpoint-down(md) { display: none !important; }}
+.hidden-lg-down { @include media-breakpoint-down(lg) { display: none !important; }}
+.hidden-xl-down { @include media-breakpoint-down(xl) { display: none !important; }}
+
+.visible-sm-down { @include media-breakpoint-down(sm) { display: block !important; }}
+.visible-md-down { @include media-breakpoint-down(md) { display: block !important; }}
+.visible-lg-down { @include media-breakpoint-down(lg) { display: block !important; }}
+.visible-xl-down { @include media-breakpoint-down(xl) { display: block !important; }}
+
+.hidden-sm-up { @include media-breakpoint-up(sm) { display: none !important; }}
+.hidden-md-up { @include media-breakpoint-up(md) { display: none !important; }}
+.hidden-lg-up { @include media-breakpoint-up(lg) { display: none !important; }}
+.hidden-xl-up { @include media-breakpoint-up(xl) { display: none !important; }}
+
+.visible-sm-up { @include media-breakpoint-up(sm) { display: block !important; }}
+.visible-md-up { @include media-breakpoint-up(md) { display: block !important; }}
+.visible-lg-up { @include media-breakpoint-up(lg) { display: block !important; }}
+.visible-xl-up { @include media-breakpoint-up(xl) { display: block !important; }}
+
+.max-height { height: 100% !important; }
+.max-width { width: 100% !important; }
+
+.no-link {
+    color: $base-font-color !important;
+    font-weight: inherit !important;
+
+    &:hover,
+    &:focus {
+        color: $base-link-color !important;
+        text-decoration: none !important;
+    }
+}
+
+.absolute {
+    position: absolute !important;
+}
+.relative {
+    position: relative !important;
+}
+
+.opacity-10 {
+    opacity: .10 !important;
 }

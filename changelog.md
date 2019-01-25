@@ -1,5 +1,69 @@
-### Change Log
+
 All notable changes to this project will be documented in this file with the most recent releases at the top
+
+<br>
+
+#### 1.3.4 Released 01/02/2019
+- [Issue-84](https://wwwin-gitlab-sjc.cisco.com/cisco-ui/pattern-library/issues/84) Select box dropdown in FF has margin between menu entries (discovered by Larry Meaney)
+- [Issue-85](https://wwwin-gitlab-sjc.cisco.com/cisco-ui/pattern-library/issues/85) Disabled dropdown pointer events should not be disabled (discovered by Santosh Arun Kumar Gudipati)
+- [Issue-86](https://wwwin-gitlab-sjc.cisco.com/cisco-ui/pattern-library/issues/86) Read only fields should still allow focus, select, and copy/paste functionality (discovered by Bernard Schmitz)
+- [Issue-87](https://wwwin-gitlab-sjc.cisco.com/cisco-ui/pattern-library/issues/87) Add xl/full size option for modal (requested by Blake Callens)
+- New icons added: aci, compliance, configurations, dna, history, insights, learning, lifecycle, social-facebook, social-linkedin, social-twitter, tine, trophy
+- Added new tab variant inline tabs
+- Changes to icons: account, cart, delete, devices, like, search, software
+- Changed accent blue from light Cisco blue to original Cisco blue for visual consistency
+- Added very slight background and rounded edges to Alert pattern. This brings it more in line with Cisco.com alerts
+
+<br><br>
+
+#### 1.3.3 Released 10/11/2018
+- CDN Support!!!! Big thanks to Kim Mayton for setting this up with IT. I know it took a long time and required a lot of follow-up but thanks.
+- Change link color from vibrant blue to indigo to accommodate striped tables and light gray panels (accessibility issue spotted by Stephanie Mattern)
+- Added outlined labels
+- Added syntax highlighting to the code markup sections
+- Added new webex team and meeting icons for 16px/24px/48px sizes
+- Added new bordered tabs variation (requested by Stephanie Mattern)
+- Add search icon back (discovered by Andrew Wolder). Whilst fixing this realized that we could use this to add the ability to add any icon to an input field.
+
+<br><br>
+
+#### 1.3.2 Released 07/23/2018
+- [Issue-73](https://wwwin-gitlab-sjc.cisco.com/cisco-ui/pattern-library/issues/73) Disabled buttons in button group do not align with group (discovered by Justin Etzine)
+- [Issue-77](https://wwwin-gitlab-sjc.cisco.com/cisco-ui/pattern-library/issues/77) links are invisible in hero hero--vibblue (discovered by Daniel Kahle)
+- Remove uppercase transform in legend element (discovered by Daniel Kahle)
+- Remove focus outline on dropdown menu (discovered by Taylor Deckard)
+- Add additional colors and spacing modifiers to Blockquote pattern (requested by Dan Linton and Kim Mayton)
+- Update Typography Headings table. The h4 and h5 elements had incorrect font weight (noted by Steve Chiang)
+
+<br><br>
+
+#### 1.3.1 Released 06/14/2018
+- Make the chevron down drawer pattern consistent across Sidebar, Button dropdowns, Select and View source styleguide (noted by Arthur Chang)
+- Added notes to Tooltip pattern on how to add newlines (fix discovered by Alper Ortac)
+- Fixed button size jump issue when disabled (discovered by Vitaly Kumov)
+- Fixed invalid source code repository URL in docs
+- Fixed focus issue with Loader examples (discovered by Dave Keehn)
+- Added new progressbar pattern
+- Added colors to the Tooltip pattern
+- Fixed focus/visited issue with links in Sidebar (discovered by Dave Keehn)
+- Fixed Input vertical alignment issues in Firefox
+
+<br><br>
+
+#### 1.3.0 Released 06/01/2018
+- New Card pattern
+- New Advanced Grid pattern
+- Fixed button group margin issue which showed up on Safari
+- Form element changes. Cosmetic updates to all form elements.
+- Added ability to search icons (YEAH!)
+- Switch elements are now inline by default. This may require you to change the layout of your forms.
+- Switch elements are now small by default to match the rest of the updated form elements. Large switches can be added using a modifier.
+- Upgraded to Bootstrap v4.0.0 official version and cleaned up the import to only include grid-related variables and mixins
+- Removed all references to previously-deprecated Jeet grid
+- Moved headers h1-h6 into the .cui namespace (discovered by Felipe de Mello)
+- Remove previously-deprecated popover pattern
+
+<br><br>
 
 #### 1.2.2
 - [Issue-65](https://wwwin-gitlab-sjc.cisco.com/cisco-ui/pattern-library/issues/65) Add broken link icon to kit

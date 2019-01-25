@@ -1,8 +1,6 @@
 //
 // Loader
 //
-// Since: 1.0.4 updated
-//
 // Styleguide Components.Loader
 //
 
@@ -11,28 +9,24 @@
 // Spinner
 //
 // Markup:
-// <div class="row" IGNORE>
-//     <div class="col-md-3" IGNORE>
-//         <div class="panel panel--bordered" IGNORE>
-//             <h4 class="text-center half-margin-bottom">Default</h4 IGNORE>
-//             <div class="loading-spinner flex-center">
-//                 <div class="wrapper">
-//                     <div class="wheel"></div>
-//                 </div>
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="subheader text-center">Default</div>
+//         <div class="loading-spinner flex-center" aria-label="Loading, please wait...">
+//             <div class="wrapper">
+//                 <div class="wheel"></div>
 //             </div>
-//         </div IGNORE>
-//     </div IGNORE>
-//     <div class="col-md-3" IGNORE>
-//         <div class="panel panel--bordered" IGNORE>
-//             <h4 class="text-center half-margin-bottom">Indigo</h4 IGNORE>
-//             <div class="loading-spinner loading-spinner--indigo flex-center">
-//                 <div class="wrapper">
-//                     <div class="wheel"></div>
-//                 </div>
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="subheader text-center">Indigo</div>
+//         <div class="loading-spinner loading-spinner--indigo flex-center" aria-label="Loading, please wait...">
+//             <div class="wrapper">
+//                 <div class="wheel"></div>
 //             </div>
-//         </div IGNORE>
-//     </div IGNORE>
-// </div IGNORE>
+//         </div>
+//     </div>
+// </div>
 //
 // Weight: 1
 //
@@ -44,48 +38,48 @@
 // Dots
 //
 // Markup:
-// <div class="row" IGNORE>
-//     <div class="col-md-3" IGNORE>
-//         <div class="panel panel--dkgray" IGNORE>
-//             <h4 class="text-center">Default</h4 IGNORE>
-//             <div class="loading-dots">
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="panel panel--dkgray">
+//             <div class="subheader text-center">Default</div>
+//             <div class="loading-dots" aria-label="Loading, please wait...">
 //                 <span></span>
 //                 <span></span>
 //                 <span></span>
 //             </div>
-//         </div IGNORE>
-//     </div IGNORE>
-//     <div class="col-md-3" IGNORE>
-//         <div class="panel panel--bordered" IGNORE>
-//             <h4 class="text-center">Muted</h4 IGNORE>
-//             <div class="loading-dots loading-dots--muted">
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="panel">
+//             <div class="subheader text-center">Muted</div>
+//             <div class="loading-dots loading-dots--muted" aria-label="Loading, please wait...">
 //                 <span></span>
 //                 <span></span>
 //                 <span></span>
 //             </div>
-//         </div IGNORE>
-//     </div IGNORE>
-//     <div class="col-md-3" IGNORE>
-//         <div class="panel panel--bordered" IGNORE>
-//             <h4 class="text-center">Success</h4 IGNORE>
-//             <div class="loading-dots loading-dots--success">
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="panel">
+//             <div class="subheader text-center">Success</div>
+//             <div class="loading-dots loading-dots--success" aria-label="Loading, please wait...">
 //                 <span></span>
 //                 <span></span>
 //                 <span></span>
 //             </div>
-//         </div IGNORE>
-//     </div IGNORE>
-//     <div class="col-md-3" IGNORE>
-//         <div class="panel panel--bordered" IGNORE>
-//             <h4 class="text-center">Info</h4 IGNORE>
-//             <div class="loading-dots loading-dots--info">
+//         </div>
+//     </div>
+//     <div class="col-md-3">
+//         <div class="panel">
+//             <div class="subheader text-center">Info</div>
+//             <div class="loading-dots loading-dots--info" aria-label="Loading, please wait...">
 //                 <span></span>
 //                 <span></span>
 //                 <span></span>
 //             </div>
-//         </div IGNORE>
-//     </div IGNORE>
-// </div IGNORE>
+//         </div>
+//     </div>
+// </div>
 //
 // Weight: 2
 //
@@ -119,6 +113,10 @@
 }
 
 .loading-spinner {
+    &:focus {
+        @include focus-outline;
+    }
+
     .wrapper {
         .wheel {
             position: relative;
@@ -140,15 +138,14 @@
         }
     }
 }
-@keyframes load {
-    0%   { transform: rotate(7deg); }
-    100% { transform: rotate(360deg); }
-}
-
 
 .loading-dots {
     padding: $base-spacing * 0.5;
     text-align: center;
+
+    &:focus {
+        @include focus-outline;
+    }
 
     &.loading-dots--muted {
         > span {

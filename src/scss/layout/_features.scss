@@ -50,12 +50,6 @@
     margin: $base-spacing * 2 0;
 }
 
-.feature-block {
-    @include media-breakpoint-up(md) {
-        @include col(1/3, $cycle: 3, $gutter: 2);
-    }
-}
-
 .feature-block__image {
     margin-bottom: $base-spacing;
 

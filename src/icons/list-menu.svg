@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-<g>
-	<path  d="M4,9h40c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,5,2,5.896,2,7S2.896,9,4,9z"/>
-	<path  d="M44,39H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h40c1.104,0,2-0.896,2-2S45.104,39,44,39z"/>
-	<path  d="M44,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h40c1.104,0,2-0.896,2-2S45.104,22,44,22z"/>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="38px" viewBox="0 0 44 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>list-menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="list-menu" fill="#000000" fill-rule="nonzero">
+            <path d="M2,5 L42,5 C43.104,5 44,3.88 44,2.5 C44,1.12 43.104,0 42,0 L2,0 C0.896,0 0,1.12 0,2.5 C0,3.88 0.896,5 2,5 Z" id="Shape"></path>
+            <path d="M42,33 L2,33 C0.896,33 0,34.12 0,35.5 C0,36.88 0.896,38 2,38 L42,38 C43.104,38 44,36.88 44,35.5 C44,34.12 43.104,33 42,33 Z" id="Shape"></path>
+            <path d="M42,16 L2,16 C0.896,16 0,17.12 0,18.5 C0,19.88 0.896,21 2,21 L42,21 C43.104,21 44,19.88 44,18.5 C44,17.12 43.104,16 42,16 Z" id="Shape"></path>
+        </g>
+    </g>
 </svg>

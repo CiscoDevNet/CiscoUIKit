@@ -3,62 +3,36 @@
     .content .sidebar {
         position: relative;
         transform: none;
-        overflow: hidden;
     }
 
-    .panel.depth-3 {
-        border-top: $base-border;
+    .subheader {
+        font-weight: normal;
+        color: $base-muted-color;
     }
 
     pre {
-        margin: 0;
-        line-height: 1.1;
-        overflow: auto;
-        white-space: pre;
-
+        white-space: pre-wrap;
         code {
-            border: 0px;
-            padding: 0px;
-            margin: 0px;
-            border-radius: 0px;
-            font-size: $small-font-size;
-        }
-
-        .comment {
-            color: $black;
+            font-size: $base-font-size;
         }
     }
 
-    pre, code {
-        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        color: $black;
-        padding: $base-spacing * 0.25;
-    }
-
-    .mobile {
-        height: 775px;
-        background-image: url(../../public/img/responsive-mobile.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        text-align: center;
-
-        iframe {
-            width: 320px;
-            height: 570px;
-            top: 100px;
-            overflow-y: hidden;
-            background-color: $white;
-            border-color: $black;
-            position: relative;
-            margin: 0;
-            padding: 0;
+    .markup {
+        display: inline-flex;
+        align-items: center;
+        
+        &-label {
+            margin-right: 2px;
         }
-    }
-
-    .tablet iframe {
-
-    }
-    .laptop iframe {
-
+        a.markup-toggle:hover {
+            text-decoration: none;
+        }
+        &-toggle:after {
+            @include drawer-closed;
+            transition: all .2s;
+        }
+        &.active .markup-toggle:after {
+            @include drawer-opened;
+        }
     }
 }

@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-<path  d="M45.415,42.587l-14.78-14.795C32.736,25.084,34,21.693,34,18c0-8.836-7.163-16-16-16C9.164,2,2,9.164,2,18
-	s7.164,16,16,16c3.701,0,7.099-1.269,9.809-3.378l14.776,14.791C42.976,45.805,43.487,46,44,46c0.512,0,1.023-0.195,1.413-0.585
-	C46.195,44.634,46.195,43.368,45.415,42.587z M6,18c0-6.617,5.383-12,12-12c6.616,0,12,5.383,12,12s-5.384,12-12,12
-	C11.383,30,6,24.617,6,18z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search" fill="#000000" fill-rule="nonzero">
+            <path d="M22.868731,25.8346665 C25.9688926,23.6628747 28,20.0641999 28,16 C28,9.383 22.616,4 16,4 C9.383,4 4,9.383 4,16 C4,22.617 9.383,28 16,28 C17.1176625,28 18.2001656,27.8463775 19.2274922,27.5591353 L19.1916911,27.5760905 L20.4295247,31.2966309 C19.6614212,31.5346867 19.0882875,31.6874374 18.7101237,31.7548828 C17.459684,31.9778985 16.5863785,32 16,32 C7.164,32 0,24.836 0,16 C0,7.164 7.164,0 16,0 C24.837,0 32,7.164 32,16 C32,19.693 30.736,23.084 28.635,25.792 L43.415,40.587 L40.585,43.413 L22.8973056,25.8211337 L22.868731,25.8346665 Z" id="Shape"></path>
+        </g>
+    </g>
 </svg>

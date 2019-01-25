@@ -1,8 +1,6 @@
 //
 // Header
 //
-// Since: 1.0.0
-//
 // Styleguide Layout.Header
 //
 
@@ -14,17 +12,17 @@
 // <div class="panel panel--ltgray panel--compressed IGNORE">
 // <header class="header">
 //     <div class="header-bar container">
-//         <a class="btn btn--small btn--icon toggle-menu">
+//         <a href="javascript:;" class="btn btn--small btn--icon toggle-menu">
 //             <span class="icon-list-menu"></span>
 //         </a>
-//         <a class="header-bar__logo">
+//         <a href="javascript:;" class="header-bar__logo">
 //             <span class="icon-cisco"></span>
 //         </a>
 //         <div class="header-bar__main">
 //             <div class="header-breadcrumbs">
 //                 <ul class="breadcrumb">
-//                     <li><a>Operate</a></li>
-//                     <li><a>Devices</a></li>
+//                     <li><a href="javascript:;">Operate</a></li>
+//                     <li><a href="javascript:;">Devices</a></li>
 //                     <li><span>Discovery</span></li>
 //                 </ul>
 //             </div>
@@ -33,13 +31,13 @@
 //             </div>
 //         </div>
 //         <div class="header-toolbar">
-//             <a class="btn btn--small btn--icon">
+//             <a href="javascript:;" class="btn btn--icon">
 //                 <span class="icon-search"></span>
 //             </a>
-//             <a class="btn btn--small btn--icon">
+//             <a href="javascript:;" class="btn btn--icon">
 //                 <span class="icon-alert"></span>
 //             </a>
-//             <a class="btn btn--small btn--icon">
+//             <a href="javascript:;" class="btn btn--icon">
 //                 <span class="icon-cog"></span>
 //             </a>
 //         </div>
@@ -60,10 +58,10 @@
 // <div class="panel panel--ltgray panel--compressed IGNORE">
 // <header class="header">
 //     <div class="header-bar container">
-//         <a class="btn btn--small btn--icon toggle-menu">
+//         <a href="javascript:;" class="btn btn--small btn--icon toggle-menu">
 //             <span class="icon-list-menu"></span>
 //         </a>
-//         <a class="header-bar__logo">
+//         <a href="javascript:;" class="header-bar__logo">
 //             <span class="icon-cisco"></span>
 //         </a>
 //         <div class="header-bar__main">
@@ -72,10 +70,10 @@
 //             </div>
 //         </div>
 //         <div class="header-toolbar">
-//             <a class="btn btn--small btn--icon">
+//             <a href="javascript:;" class="btn btn--icon">
 //                 <span class="icon-search"></span>
 //             </a>
-//             <a class="btn btn--small btn--icon">
+//             <a href="javascript:;" class="btn btn--icon">
 //                 <span class="icon-cog"></span>
 //             </a>
 //         </div>
@@ -96,7 +94,7 @@
 // <div class="panel panel--ltgray panel--compressed IGNORE">
 // <header class="header header--compressed">
 //     <div class="header-bar container">
-//         <a class="header-bar__logo">
+//         <a href="javascript:;" class="header-bar__logo">
 //             <span class="icon-cisco"></span>
 //         </a>
 //         <div class="header-bar__main">
@@ -105,13 +103,13 @@
 //             </div>
 //         </div>
 //         <div class="header-toolbar">
-//             <a class="btn btn--small btn--icon">
+//             <a href="javascript:;" class="btn btn--small btn--icon">
 //                 <span class="icon-search"></span>
 //             </a>
-//             <a class="btn btn--small btn--icon">
+//             <a href="javascript:;" class="btn btn--small btn--icon">
 //                 <span class="icon-tools"></span>
 //             </a>
-//             <a class="btn btn--small btn--icon btn--negative">
+//             <a href="javascript:;" class="btn btn--icon btn--small btn--negative">
 //                 <span class="icon-close"></span>
 //             </a>
 //         </div>
@@ -128,39 +126,37 @@
 //
 // Everything
 //
-// <blockquote>We recommend that you add the class `header--tall` when using all of the header elements</blockquote>
-//
 // Markup:
 // <div class="panel panel--ltgray panel--compressed IGNORE">
 // <header class="header header--tall">
 //     <div class="header-bar container">
-//         <a class="btn btn--small btn--icon toggle-menu">
+//         <a href="javascript:;" class="btn btn--small btn--icon toggle-menu">
 //             <span class="icon-list-menu"></span>
 //         </a>
-//         <a class="header-bar__logo">
+//         <a href="javascript:;" class="header-bar__logo">
 //             <span class="icon-cisco"></span>
 //         </a>
 //         <div class="header-bar__main">
 //             <div class="header-breadcrumbs">
 //                 <ul class="breadcrumb">
-//                     <li><a>Operate</a></li>
-//                     <li><a>Devices</a></li>
+//                     <li><a href="javascript:;">Operate</a></li>
+//                     <li><a href="javascript:;">Devices</a></li>
 //                     <li><span>Discovery</span></li>
 //                 </ul>
 //             </div>
 //             <div class="header-heading">
 //                 <h1 class="page-title">Wide Array Extended Network Dashboard</h1>
 //                 <div class="header-utilities">
-//                     <a class="link">
+//                     <a href="javascript:;" class="link">
 //                         <span class="icon-home"></span>
 //                     </a>
-//                     <a class="link">
+//                     <a href="javascript:;" class="link">
 //                         <span class="icon-star"></span>
 //                     </a>
-//                     <a class="link">
+//                     <a href="javascript:;" class="link">
 //                         <span class="icon-refresh"></span>
 //                     </a>
-//                     <a class="link">
+//                     <a href="javascript:;" class="link">
 //                         <span class="icon-info-circle"></span>
 //                     </a>
 //                 </div>
@@ -168,31 +164,31 @@
 //             <div class="header-menus">
 //                 <ul class="nav nav-tabs">
 //                     <li class="tab active">
-//                         <a><div class="tab__heading" title="Tab 1">Tab 1</div></a>
+//                         <a href="javascript:;"><div class="tab__heading" title="Tab 1">Tab 1</div></a>
 //                     </li>
 //                     <li class="tab">
-//                         <a><div class="tab__heading" title="Tab 2">Tab 2</div></a>
+//                         <a href="javascript:;"><div class="tab__heading" title="Tab 2">Tab 2</div></a>
 //                     </li>
 //                     <li class="tab">
-//                         <a><div class="tab__heading" title="Tab 3">Tab 3</div></a>
+//                         <a href="javascript:;"><div class="tab__heading" title="Tab 3">Tab 3</div></a>
 //                     </li>
 //                 </ul>
 //             </div>
 //         </div>
 //         <div class="header-toolbar">
-//             <a class="avatar">John Doe</a>
-//             <button class="btn btn--small btn--icon">
+//             <a href="javascript:;" class="avatar">John Doe</a>
+//             <button class="btn btn--icon">
 //                 <span class="icon-search"></span>
 //             </button>
-//             <button class="btn btn--small btn--icon btn--negative">
+//             <button class="btn btn--icon btn--negative">
 //                 <span class="icon-alert"></span>
 //                 <span class="btn__subtext">999+</span>
 //             </button>
-//             <button class="btn btn--small btn--icon btn--dkblue">
+//             <button class="btn btn--icon">
 //                 <span class="icon-mail"></span>
 //                 <span class="btn__subtext">34</span>
 //             </button>
-//             <button class="btn btn--small btn--icon">
+//             <button class="btn btn--icon">
 //                 <span class="icon-cog"></span>
 //             </button>
 //         </div>
@@ -217,7 +213,8 @@
     }
 
     &-bar {
-        @include flex-center-vertical;
+        display: flex;
+        align-items: center;
         height: $header-height-small;
 
         @include media-breakpoint-up(xs) {
@@ -229,14 +226,6 @@
             > span {
                 font-weight: bold;
             }
-
-            @include button-color(
-                $background: $header-hamburger-background,
-                $color: $header-hamburger-color,
-                $background-active: $header-hamburger-background-active,
-                $background-hover: $header-hamburger-background-hover,
-                $color-active: $header-hamburger-color-active
-            );
         }
 
         &__logo {
@@ -248,12 +237,12 @@
             }
 
             &:hover {
-                text-decoration: none;
+                text-decoration: none !important;
             }
 
             span.icon-cisco {
+                color: $cisco-logo;
                 display: block;
-                color: $base-accent-color;
                 font-size: $header-logo-size;
                 line-height: 1;
             }
@@ -268,7 +257,7 @@
         &__main {
             flex: 1;
             align-self: stretch;
-            margin-right: 24px;
+            margin: 0 $base-spacing;
             position: relative;
 
             @include media-breakpoint-up(xs) {
@@ -324,19 +313,16 @@
     right: 0;
     bottom: 0;
     left: 0;
-    margin-left: 0;
 
     .page-title {
         @include text-ellipsis;
         margin-left: auto;
         margin-right: auto;
         font-size: $header-title-size-small;
-        font-weight: $h2-font-weight;
-        line-height: 1;
+        font-weight: 200;
 
         @include media-breakpoint-up(xs) {
-            margin-top: 3px;
-            margin-left: 0;
+            margin: 0;
             font-size: $header-title-size-large;
             max-width: inherit;
         }
@@ -400,20 +386,6 @@
             margin-right: 0;
         }
     }
-
-    .button {
-        @include button-color(
-        $color: $header-utilities-color,
-        $color-active: $header-utilities-color-active,
-        $color-hover: $header-utilities-color-hover,
-        $color-disabled: $header-utilities-color-disabled,
-        $background: $header-utilities-background,
-        $background-active: $header-utilities-background-active,
-        $background-hover: $header-utilities-background-hover,
-        $background-disabled: $header-utilities-background-disabled
-        );
-        font-size: $header-utilities-font-size;
-    }
 }
 
 
@@ -456,48 +428,9 @@
     }
 
     @include media-breakpoint-up(xs) {
-        @include flex-center-vertical;
+        display: flex;
+        align-items: center;
     }
-
-    .button {
-        @include button-color(
-        $background: $header-toolbar-background,
-        $color: $header-toolbar-color,
-        $background-hover: $header-toolbar-background-hover,
-        $color-hover: $header-toolbar-color-hover
-        );
-
-        &.button--info {
-            @include button-color(
-            $background: $info,
-            $color: $header-toolbar-color,
-            $background-hover: $header-toolbar-background-hover,
-            $color-hover: $header-toolbar-color-hover
-            );
-        }
-
-        &.button--warning {
-            @include button-color(
-            $background: $warning,
-            $color: $header-toolbar-color,
-            $background-hover: $header-toolbar-background-hover,
-            $color-hover: $header-toolbar-color-hover
-            );
-        }
-
-        &.button--danger {
-            @include button-color(
-            $background: $danger,
-            $color: $header-toolbar-color,
-            $background-hover: $header-toolbar-background-hover,
-            $color-hover: $header-toolbar-color-hover
-            );
-        }
-    }
-}
-
-.standalone .header-buttons {
-    @include flex-center-vertical;
 }
 
 .secondary-nav {

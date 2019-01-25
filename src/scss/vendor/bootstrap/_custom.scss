@@ -3,11 +3,30 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-$small-font-size: 12px;
+$enable-grid-classes: true !default;
+$small-font-size: 12px !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 20px !default;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+   2xl: 1440px,
+   3xl: 1600px,
+   4xl: 1840px,
+   5xl: 2100px
+) !default;
 
 $container-max-widths: (
-  sm: 100%,
-  md: 100%,
-  lg: 992px,
-  xl: 1440px
-);
+    sm: 540px,
+    md: 720px,
+    lg: 992px,
+    xl: 1440px,
+   2xl: 2560px,
+   3xl: 2560px,
+   4xl: 2560px,
+   5xl: 2100px
+) !default;

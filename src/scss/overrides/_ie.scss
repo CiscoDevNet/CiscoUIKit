@@ -2,7 +2,82 @@
  * Note: This file contains only the IE-specific overrides for UI kit elements
  *       Once IE goes away this file will go with it
  */
+
+
+ @mixin ie-column-create($cols, $max-cols, $row-percent) {
+
+     $cui-grid-gutter-fudge: $cui-grid-default-gutter + 2px;
+
+     .card {
+         @include make-col-ready();
+
+         padding: 0 !important;
+         margin: $cui-grid-default-gutter * 0.5 !important;
+         flex: 0 0;
+
+                  &.grid--3up { @include ie-column-create(4, 12, 33%); }
+                  &.grid--4up { @include ie-column-create(3, 12, 25%); }
+                  &.grid--5up { @include ie-column-create(2, 10, 20%); }
+
+         @include media-breakpoint-up(lg) {
+             @include make-col($cols, $max-cols);
+             flex-basis: calc(#{$row-percent} - #{$cui-grid-gutter-fudge});
+         }
+         @include media-breakpoint-between(md, lg) {
+             @include make-col($cols, $max-cols);
+             flex-basis: calc(#{$row-percent} - #{$cui-grid-gutter-fudge});
+         }
+         @include media-breakpoint-between(sm, md) {
+             column-count: 3;
+         }
+         @include media-breakpoint-between(xs ,sm) {
+             column-count: 2;
+         }
+         @include media-breakpoint-down(xs) {
+             column-count: 1;
+         }
+     }
+}
+
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+
+    // Hide the crappy dropdown button thingy in IE11
+    select::-ms-expand {
+        display: none;
+    }
+
+    // Hide the crappy arrows in textareas in IE11
+    textarea {
+        overflow: auto;
+    }
+
+    .label {
+        display: inline-block;
+        line-height: 24px;
+    }
+    .label.label--tiny {
+        line-height: 15px;
+    }
+    .label.label--small {
+        line-height: 20px;
+    }
+    .label.label--large {
+        line-height: 30px;
+    }
+
+    // Hide the 'x' button in input elements in IE11
+    ::-ms-clear {
+        display: none;
+    }
+
+    .form-group {
+        min-width: 200px;
+    }
+
+    // Floated labels needed special offset in IE11
+    .form-group.label--floated .form-group__text label {
+        top: 12px;
+    }
 
     // Fix IE11 container at smallest breakpoint no cards displayed
     .smart-content__main {
@@ -15,20 +90,107 @@
     .radio .checkbox__label,
     .radio .radio__label {
         flex: 1 1 auto;
+        padding-top: 5px;
     }
+
+    // Fix IE11 issue where switch is mis-rendered
+    .switch .switch__input {
+        display: inline-block;
+        height: 100%;
+    }
+
     // Fix IE11 issue where figcaption text is centered versus left-justified
     .figure figcaption {
         text-align: left;
     }
 
     // Overriding line height for page title to fix IE issue (AP-4540 #11)
+    // Otherwise page title gets clipped
     .header-heading .page-title {
-        line-height: $base-line-height;
+        line-height: 40px;
     }
 
     // Fix IE11 issue where inset box-shadow is too faint
     .btn.btn--icon.btn--primary-ghost {
         box-shadow: none;
         border: 1px solid $cisco-blue;
+    }
+    button.btn {
+        padding-top: 2px;
+    }
+
+    // Fix IE11 issue with Steps and use of inline-flex
+    .ui-steps .ui-step .step__icon {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 100%;
+    }
+
+    // Polyfill for IE since it's so crappy it doesn't support Grid
+    .grid {
+
+        display: flex !important;
+        flex-wrap: wrap;
+        margin: -($cui-grid-default-gutter * 0.5) !important;
+
+        $cui-grid-gutter-fudge: $cui-grid-default-gutter + 2px;
+
+        .card {
+            @include make-col-ready();
+
+            padding: 0 !important;
+            margin: $cui-grid-default-gutter * 0.5 !important;
+            flex: 0 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            &.grid--5up .card {
+                @include make-col(2, 10);
+                flex-basis: calc(20% - #{$cui-grid-gutter-fudge});
+            }
+            &.grid--4up .card {
+                @include make-col(3, 12);
+                flex-basis: calc(25% - #{$cui-grid-gutter-fudge});
+            }
+            &.grid--3up .card {
+                @include make-col(4, 12);
+                flex-basis: calc(33% - #{$cui-grid-gutter-fudge});
+            }
+        }
+        @include media-breakpoint-between(md, lg) {
+            &.grid--5up .card {
+                @include make-col(3, 12);
+                flex-basis: calc(25% - #{$cui-grid-gutter-fudge});
+            }
+            &.grid--4up .card,
+            &.grid--3up .card {
+                @include make-col(4, 12);
+                flex-basis: calc(33% - #{$cui-grid-gutter-fudge});
+            }
+        }
+        @include media-breakpoint-between(sm, md) {
+            &.grid--5up .card,
+            &.grid--4up .card,
+            &.grid--3up .card {
+                @include make-col(4, 12);
+                flex-basis: calc(33% - #{$cui-grid-gutter-fudge});
+            }
+        }
+        @include media-breakpoint-between(xs ,sm) {
+            &.grid--5up .card,
+            &.grid--4up .card,
+            &.grid--3up .card {
+                @include make-col(6, 12);
+                flex-basis: calc(50% - #{$cui-grid-gutter-fudge});
+            }
+        }
+        @include media-breakpoint-down(xs) {
+            &.grid--5up .card,
+            &.grid--4up .card,
+            &.grid--3up .card {
+                @include make-col(12, 12);
+                flex-basis: 100%;
+            }
+        }
     }
 }

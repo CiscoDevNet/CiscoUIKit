@@ -1,3 +1,4 @@
+
 form {
     margin-bottom: $base-spacing;
 
@@ -17,137 +18,49 @@ fieldset {
     }
 }
 
-legend,
-.legend {
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-
-    &--toggle {
-        cursor: pointer;
-        user-select: none;
-
-        &:hover {
-            color: $base-accent-color;
-        }
-    }
-}
+// Form groups
 
 .form-group {
-    @include clearfix;
-
-    margin-right: 0;
-    @include media-breakpoint-up(md) {
-        margin-right: $base-spacing * 0.5;
-    }
-
+    display: flex;
     position: relative;
-    margin-bottom: $base-spacing * 0.5;
-    box-shadow: 0 -1px 0 0 $base-form-border-color inset;
-    line-height: $base-line-height;
-
-    &--noseparator {
-        box-shadow: none;
-    }
-
-    &--helper {
-        box-shadow: 0 0 0 0 $base-form-border-color inset;
-        .help-block {
-            margin-top: 5px;
-        }
-    }
-
-    label,
-    select {
-        line-height: $base-line-height;
-    }
-
-    select {
-        padding: 6px $base-spacing 6px 0;
-    }
-
-    label {
-        padding: 6px 10px 6px 0;
-        margin-bottom: 0;
-        float: left;
-        transition: color 0.2s ease;
-
-        &:first-of-type {
-            @include text-ellipsis;
-            color: $base-form-label-color;
-            order: 2;
-
-            &[for] {
-                cursor: pointer;
-                user-select: none;
-
-                &:hover {
-                    color: $base-font-color;
-                }
-            }
-        }
-    }
-
-    input {
-        position: relative;
-        padding: 6px 0;
-
-        &::-ms-clear {
-            display: none; // Hide clear field button in IE
-        }
-        // allow selecting text in disabled inputs:
-        &[disabled] {
-            pointer-events: auto;
-        }
-    }
-
-    textarea {
-        padding: 6px 0;
-    }
-
-    .select:after {
-        top: 6px;
-    }
+    flex-direction: column;
+    margin: 0;
 }
 
-.msd-elastic {
-    max-height: 150px;
-    overflow-y: scroll;
-}
+// Standard form groups
 
-.help-block {
+.form-group + .form-group {
+    margin: $base-spacing-half 0 0;
+}
+.form-group.form-group--compressed + .form-group.form-group--compressed { margin: $base-spacing-qtr 0 0; }
+.form-group.form-group--regular + .form-group.form-group--regular { margin: $base-spacing-half 0 0; }
+.form-group.form-group--loose + .form-group.form-group--loose { margin: $base-spacing 0 0; }
+.form-group.form-group--nospacing + .form-group.form-group--nospacing { margin: 0; }
+
+// Inline form groups
+
+.form-group.form-group--inline {
+    display: inline-flex;
+}
+.form-group.form-group--inline + .form-group.form-group--inline {
+    margin: 0 0 0 $base-spacing-half;
+}
+.form-group.form-group--inline.form-group--compressed + .form-group.form-group--inline.form-group--compressed { margin: 0 0 0 $base-spacing-qtr; }
+.form-group.form-group--inline.form-group--regular + .form-group.form-group--inline.form-group--regular { margin: 0 0 0 $base-spacing-half; }
+.form-group.form-group--inline.form-group--loose + .form-group.form-group--inline.form-group--loose { margin: 0 0 0 $base-spacing; }
+.form-group.form-group--inline.form-group--nospacing + .form-group.form-group--inline.form-group--nospacing { margin: 0; }
+
+// Dropdowns on form groups require block display
+
+.form-group.dropdown {
     display: block;
-    color: $base-muted-color;
-    margin-top: -5px;
-    font-weight: normal;
-
-    &--normal  { text-transform: unset; }
-    &--lower   { text-transform: lowercase; }
-    &--capital { text-transform: capitalize; }
-
-    span + span {
-        vertical-align: middle;
-        margin-left: $base-spacing * 0.15;
-    }
 }
 
-.form-group__dropdown {
-    input {
-        padding-right: (($base-spacing * 0.25) * 2) + 14px;
-    }
-}
-
-.form-group--noseparator {
-    box-shadow: none;
-}
-
-.form-group--typeahead {
-    position: relative;
-
-    .dropdown-menu {
-        position: absolute;
-        z-index: 1100;
-    }
+.checkbox__label,
+.radio__label,
+.switch__label,
+.form-group label {
+    text-align: left;
 }
 
 .form-dropdown__select {
@@ -183,7 +96,7 @@ legend,
 }
 
 .form-dropdown__chevron {
-    &::after {
+    &:after {
         @include icon-chevron-down;
         color: $base-disabled-color;
         font-size: $small-font-size;
@@ -193,5 +106,16 @@ legend,
         top: 50%;
         transform: translateY(-50%);
         transition: all 0.2s ease;
+    }
+}
+
+// Global Modifiers
+
+&.cui--compressed {
+    .form-group + .form-group {
+        margin-top: $base-spacing-half;
+    }
+    .form-group.form-group--inline + .form-group.form-group--inline {
+        margin-left: $base-spacing-half;
     }
 }

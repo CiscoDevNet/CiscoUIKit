@@ -1,0 +1,165 @@
+//
+// Progressbar
+//
+// Styleguide Components.Progressbar
+//
+
+
+//
+// Size
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-4">
+//         <div class="subheader">Small</div>
+//         <div class="progressbar progressbar--small" data-percentage="33">
+//             <div class="progressbar__fill"></div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="subheader">Default</div>
+//         <div class="progressbar" data-percentage="33">
+//             <div class="progressbar__fill"></div>
+//         </div>
+//     </div>
+//     <div class="col-md-4">
+//         <div class="subheader">Large</div>
+//         <div class="progressbar progressbar--large" data-percentage="33">
+//             <div class="progressbar__fill"></div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Components.Progressbar.Size
+//
+
+
+//
+// Color
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-6">
+//         <div class="subheader">Empty</div>
+//         <div class="progressbar" data-percentage="0">
+//             <div class="progressbar__fill"></div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="subheader">Default</div>
+//         <div class="progressbar" data-percentage="66">
+//             <div class="progressbar__fill"></div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="subheader">Success</div>
+//         <div class="progressbar progressbar--success" data-percentage="66">
+//             <div class="progressbar__fill"></div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="subheader">Indigo</div>
+//         <div class="progressbar progressbar--indigo" data-percentage="66">
+//             <div class="progressbar__fill"></div>
+//         </div>
+//     </div>
+//     <div class="col-md-6">
+//         <div class="subheader">Warning</div>
+//         <div class="progressbar progressbar--warning" data-percentage="66">
+//             <div class="progressbar__fill"></div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: 2
+//
+// Styleguide Components.Progressbar.Color
+//
+
+
+//
+// Labels
+//
+// Markup:
+// <div class="progressbar progressbar--indigo" data-percentage="25">
+//     <div class="progressbar__fill"></div>
+//     <div class="progressbar__label">Uploading sample_image.jpg...</div>
+// </div>
+// <br>
+// <div id="progressbar" class="progressbar progressbar--small progressbar--success" data-balloon-success data-balloon-visible data-percentage="0" data-balloon="0" data-balloon-pos="up">
+//     <div class="progressbar__fill"></div>
+//     <div class="progressbar__label">0%</div>
+// </div>
+//
+// Weight: 3
+//
+// Styleguide Components.Progressbar.Labels
+//
+
+@mixin cui-progressbar-color($color) {
+    .progressbar__fill {
+        background-color: $color;
+    }
+}
+
+@mixin cui-progressbar-size($size) {
+    height: $size;
+    .progressbar__fill {
+        height: $size;
+    }
+}
+
+.progressbar {
+    margin: $base-spacing 0;
+    background: $base-border-color;
+    border-radius: $base-button-border-radius;
+
+    &__fill {
+        display: block;
+        border-radius: $base-button-border-radius;
+    }
+
+    &__label {
+        display: block;
+        margin-top: 2px;
+    }
+
+    @each $name, $size in $cui-progressbar-sizes {
+        @if $name == "default" {
+            @include cui-progressbar-size($size);
+        } @else {
+            &.progressbar--#{$name} {
+                @include cui-progressbar-size($size);
+            }
+        }
+    }
+
+    @each $name, $color in $cui-progressbar-colors {
+        @if $name == "default" {
+            @include cui-progressbar-color($color);
+        } @else {
+            &.progressbar--#{$name} {
+                @include cui-progressbar-color($color);
+            }
+        }
+    }
+
+    $i: 0;
+    @for $i from 0 through 100 {
+        &[data-percentage="#{$i}"] {
+            .progressbar__fill {
+                width: #{$i}#{'%'};
+            }
+        }
+    }
+}
+
+// Global Modifiers
+
+&.cui--animated .progressbar {
+    &__fill {
+        transition: width 1s;
+    }
+}

@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="locale" content="US">
+        <meta name="language" content="en">
+        <meta name="country" content="US">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Support Insights User Dashboard Template</title>
+        <link rel="stylesheet" href="css/cui-standard.min.css">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="//www.cisco.com/favicon.ico">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="///www.cisco.com/favicon.ico">
+
+        <!--
+            Highcharts used here for the trend line charts
+            Use whatever javascript tooling you want
+        -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+    </head>
+    <body class="cui cui--wide">
+        <div class="content-fluid">
+            <main>
+                <header class="header header--compressed">
+                    <div class="header-bar container flex-center">
+                        <a href="javascript:;" class="header-bar__logo">
+                            <span class="icon-cisco icon-medium"></span>
+                        </a>
+                    </div>
+                </header>
+                <div class="content">
+                    <div class="panel panel--bordered-bottom">
+                        <div class="container text-center-sm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="http://swtg-rtp-dev-7/cdx/img/insights-title.png" alt="Support Insights Title">
+
+                                    <div class="flex-center-vertical flex-center-sm qtr-margin-top half-margin-bottom">
+                                        <button class="btn btn--icon btn--secondary">
+                                            <span class="icon-download"></span>
+                                        </button>
+                                        <button class="btn btn--icon btn--secondary">
+                                            <span class="icon-print"></span>
+                                        </button>
+                                        <button class="btn btn--icon btn--secondary">
+                                            <span class="icon-cog"></span>
+                                        </button>
+                                        <div class="form-group dropdown base-margin-left">
+                                            <div class="form-group__text select">
+                                                <input value="Across all Zones" style="width:225px">
+                                            </div>
+                                            <div class="dropdown__menu">
+                                                <a class="selected">Across all Zones</a>
+                                                <a>Canada</a>
+                                                <a>Mexico</a>
+                                                <a>Brazil</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 flex-inline flex-center-vertical flex-center-sm flex-right">
+                                    <div>
+                                        <h6 class="text-center">Risk Score</h6>
+                                        <div class="flex-inline flex-center-vertical">
+                                            <h1 class="display-0 display-3-sm display-2-md">
+                                                <a class="no-link" href="javscript:;">4.6</a>
+                                            </h1>
+                                            <span class="text-danger icon-arrow-up-tail icon-medium"></span>
+                                            <span class="text-danger qtr-margin-left">12%</span>
+                                        </div>
+                                    </div>
+                                    <div class="v-separator v-separator--huge base-margin-left base-margin-right"></div>
+                                    <div>
+                                        <h6 class="text-center">Total Devices</h6>
+                                        <div class="flex-inline flex-center-vertical">
+                                            <h1 class="display-0 display-3-sm display-2-md">
+                                                <a class="no-link" href="javascript:;">290</a>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="section">
+                            <div class="row">
+
+                                <!--
+                                    ACTIONS
+                                    Render max 3 required actions
+                                    Actions should be sorted by severity and no. of impacted devices
+                                    Limit action summary to 180 characters
+                                -->
+                                <div class="col-lg-4">
+                                    <div class="base-margin-bottom">
+                                        <h2 class="display-4">Action Required</h2>
+                                        <div class="flex">
+                                            <div class="flex-fluid">Showing 3 of 24 events</div>
+                                            <a href="javascript:;" class="flex-right">view all</a>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel--bordered">
+                                        <div class="flex">
+                                            <span class="icon-circle text-danger"></span>
+                                            <div class="flex-fluid half-margin-left">
+                                                <div>To allocate more power, either move to 220v input or change supplies to combined mode.</div>
+                                                <div class="half-margin-top">
+                                                    <ul class="list list--inline list--divider">
+                                                        <li><a href="javascript:;">details</a></li>
+                                                        <li><a href="javascript:;">5 devices impacted</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="flex-right half-margin-left">
+                                                <span class="label label--small label--dkgray">open</span>
+                                                <span class="qtr-margin-left">3d</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel--bordered">
+                                        <div class="flex">
+                                            <span class="icon-circle text-info"></span>
+                                            <div class="flex-fluid half-margin-left">
+                                                <div>Disable "logging flash-bufferwrap" by going into configuration mode and executing the command...</div>
+                                                <div class="half-margin-top">
+                                                    <ul class="list list--inline list--divider">
+                                                        <li><a href="javascript:;">details</a></li>
+                                                        <li><a href="javascript:;">1 device impacted</a></li>
+                                                        <li><a href="javascript:;">fix now</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="flex-right half-margin-left">
+                                                <span class="label label--small label--dkgray">open</span>
+                                                <span class="qtr-margin-left">4d</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel--bordered">
+                                        <div class="flex">
+                                            <span class="icon-circle text-info"></span>
+                                            <div class="flex-fluid half-margin-left">
+                                                <div>Based on the configuration and issues found on this device the following versions of code are...</div>
+                                                <div class="half-margin-top">
+                                                    <ul class="list list--inline list--divider">
+                                                        <li><a href="javascript:;">details</a></li>
+                                                        <li><a href="javascript:;">2 devices impacted</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="flex-right half-margin-left">
+                                                <span class="label label--small label--dkgray">open</span>
+                                                <span class="qtr-margin-left">1w</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="grid grid--3up">
+
+                                        <!--
+                                            TILES
+                                            If the tile has a number (total) that should be a link
+                                        -->
+                                        <div class="card card--raised half-padding half-padding" style="height:230px">
+                                            <h4>Active Events</h4>
+                                            <div class="flex">
+                                                <h4 class="display-2 flex-fluid">
+                                                    <a class="no-link" href="javascript:;">24</a>
+                                                </h4>
+                                                <div class="base-margin-right">
+                                                    <div>
+                                                        <a class="no-link flex-center-vertical" title="1 critical event" href="javascript:;">
+                                                            <span class="icon-error-outline icon-medium text-danger"></span>
+                                                            <span class="half-margin-left text-xlarge">1</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="half-margin-top">
+                                                        <a class="no-link flex-center-vertical" title="14 urgent events" href="javascript:;">
+                                                            <span class="icon-warning-outline icon-medium text-warning"></span>
+                                                            <span class="half-margin-left text-xlarge">14</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="half-margin-top">
+                                                        <a class="no-link flex-center-vertical" title="9 recommended events" href="javascript:;">
+                                                            <span class="icon-info-outline icon-medium text-info"></span>
+                                                            <span class="half-margin-left text-xlarge">9</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="half-margin" style="position:absolute;left:0;bottom:0">
+                                                <div id="active-events-trendline"></div>
+                                                <small>past 30 days</small>
+                                            </div>
+                                        </div>
+                                        <div class="card card--raised half-padding" style="height:230px">
+                                            <h4>Resolved Events</h4>
+                                            <div class="flex">
+                                                <h4 class="display-2">
+                                                    <a class="no-link" href="javascript:;">5</a>
+                                                </h4>
+                                                <span class="flex-center-vertical half-margin-left col-8">Last event resolved 1 week ago</span>
+                                            </div>
+                                            <div class="half-margin absolute-bottom absolute-left">
+                                                <div id="resolved-events-trendline"></div>
+                                                <small>past 30 days</small>
+                                            </div>
+                                        </div>
+                                        <div class="card card--raised half-padding" style="height:230px">
+                                            <h4>Security Alerts</h4>
+                                            <div class="flex">
+                                                <h4 class="display-2 flex-fluid">
+                                                    <a class="no-link" href="javascript:;">16</a>
+                                                </h4>
+                                                <div class="base-margin-right">
+                                                    <div>
+                                                        <a class="no-link flex-center-vertical" title="1 critical severity alert" href="javascript:;">
+                                                            <span class="icon-error-outline icon-medium text-danger"></span>
+                                                            <span class="half-margin-left text-xlarge">1</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="half-margin-top">
+                                                        <a class="no-link flex-center-vertical" title="3 high severity alerts" href="javascript:;">
+                                                            <span class="icon-dc-power icon-medium text-warning-alt"></span>
+                                                            <span class="half-margin-left text-xlarge">3</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="half-margin-top">
+                                                        <a class="no-link flex-center-vertical" title="4 medium severity alerts" href="javascript:;">
+                                                            <span class="icon-warning-outline icon-medium text-warning"></span>
+                                                            <span class="half-margin-left text-xlarge">4</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="half-margin-top">
+                                                        <a class="no-link flex-center-vertical" title="8 low severity alerts" href="javascript:;">
+                                                            <span class="icon-info-outline icon-medium text-info"></span>
+                                                            <span class="half-margin-left text-xlarge">8</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="half-margin absolute-bottom absolute-left">
+                                                <div id="security-trendline"></div>
+                                                <small>past 30 days</small>
+                                            </div>
+                                        </div>
+                                        <div class="card card--raised half-padding" style="height:230px">
+                                            <h4 class="base-margin-bottom">Business Disruption</h4>
+                                            <table class="table table--compressed table--nostripes base-padding-left">
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <a class="no-link" href="javscript:;">High Severity Cases</a>
+                                                    </td>
+                                                    <td>
+                                                        <span class="icon-error-outline icon-small text-danger"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <a class="no-link" href="javscript:;">Initial Response Time</a>
+                                                    </td>
+                                                    <td>
+                                                        <span class="icon-check-outline icon-small text-success"></span>
+                                                        <span class="icon-arrow-down-tail text-success qtr-margin-left"></span>
+                                                        <span class="qtr-margin-left">-0.11%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <a class="no-link" href="javscript:;">Initial Solution Time</a>
+                                                    </td>
+                                                    <td>
+                                                        <span class="icon-check-outline icon-small text-success"></span>
+                                                        <span class="icon-arrow-down-tail text-success qtr-margin-left"></span>
+                                                        <span class="qtr-margin-left">-71%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <a class="no-link" href="javscript:;">First Time Fix Rate</a>
+                                                    </td>
+                                                    <td>
+                                                        <span class="icon-check-outline icon-small text-success"></span>
+                                                        <span class="icon-arrow-down-tail text-danger qtr-margin-left"></span>
+                                                        <span class="qtr-margin-left">-65%</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="card card--raised half-padding" style="height:230px">
+                                            <h4 class="base-margin-bottom">Operational Efficiency</h4>
+                                            <table class="table table--compressed table--nostripes base-padding-left">
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <a class="no-link" href="javscript:;">First Time Fix Rate</a>
+                                                    </td>
+                                                    <td>
+                                                        <span class="icon-error-outline icon-small text-danger"></span>
+                                                        <span class="icon-arrow-down-tail text-danger qtr-margin-left"></span>
+                                                        <span class="qtr-margin-left">-69%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <a class="no-link" href="javscript:;">Ping Pong</a>
+                                                    </td>
+                                                    <td>
+                                                        <span class="icon-check-outline icon-small text-success"></span>
+                                                        <span class="icon-arrow-down-tail text-success qtr-margin-left"></span>
+                                                        <span class="qtr-margin-left">-88%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <a class="no-link" href="javscript:;">vs. Cisco Time</a>
+                                                    </td>
+                                                    <td>
+                                                        <span class="icon-check-outline icon-small text-success"></span>
+                                                        <span class="icon-arrow-down-tail text-success qtr-margin-left"></span>
+                                                        <span class="qtr-margin-left">-61%</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="card card--raised half-padding" style="height:230px">
+                                            <h4>Open Cases / RMAs</h4>
+                                            <div class="flex">
+                                                <h4 class="display-2 flex-fluid">
+                                                    <a class="no-link" href="javascript:;">10</a>
+                                                </h4>
+                                                <div class="base-margin-right">
+                                                    <div>
+                                                        <a class="no-link flex-center-vertical" title="1 critical severity case" href="javascript:;">
+                                                            <span class="label label--danger text-bold">S1</span>
+                                                            <span class="half-margin-left text-xlarge">1</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="half-margin-top">
+                                                        <a class="no-link flex-center-vertical" title="0 urgent severity cases" href="javascript:;">
+                                                            <span class="label label--warning-alt text-bold">S2</span>
+                                                            <span class="half-margin-left text-xlarge">0</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="half-margin-top">
+                                                        <a class="no-link flex-center-vertical" title="4 warning severity cases" href="javascript:;">
+                                                            <span class="label label--warning text-bold">S3</span>
+                                                            <span class="half-margin-left text-xlarge">4</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="half-margin-top">
+                                                        <a class="no-link flex-center-vertical" title="5 low severity cases" href="javascript:;">
+                                                            <span class="label label--info text-bold">S4</span>
+                                                            <span class="half-margin-left text-xlarge">4</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="half-margin-top">
+                                                        <a class="no-link flex-center-vertical" title="1 RMA case" href="javascript:;">
+                                                            <span class="icon-transit icon--medium"></span>
+                                                            <span class="half-margin-left text-xlarge">1</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="half-margin absolute-bottom absolute-left">
+                                                <div id="cases-trendline"></div>
+                                                <small>past 30 days</small>
+                                            </div>
+                                        </div>
+                                        <div class="card card--raised half-padding" style="height:230px">
+                                            <h4>Contract Coverage</h4>
+                                            <div class="flex">
+                                                <h4 class="display-2">
+                                                    <a class="no-link" href="javascript:;">11</a>
+                                                </h4>
+                                                <span class="flex-center-vertical half-margin-left col-8">Devices approaching coverage expiration</span>
+                                            </div>
+                                        </div>
+                                        <div class="card card--raised half-padding" style="height:230px">
+                                            <h4>Product Lifecycle</h4>
+                                            <div class="flex">
+                                                <h4 class="display-2">
+                                                    <a class="no-link" href="javascript:;">30</a>
+                                                </h4>
+                                                <span class="flex-center-vertical half-margin-left col-8">Devices approaching last day of support</span>
+                                            </div>
+                                        </div>
+                                        <div class="card card--raised half-padding" style="height:230px">
+                                            <h4>Software Update</h4>
+                                            <div class="flex">
+                                                <h4 class="display-2">
+                                                    <a class="no-link" href="javascript:;">31</a>
+                                                </h4>
+                                                <span class="flex-center-vertical half-margin-left col-8">Devices impacted by pending software updates</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <footer class="footer footer--basic">
+                    <div class="footer__links">
+                        <ul class="list">
+                            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+                            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+                            <li><a href="https://www.cisco.com/c/en/us/about/help.html" target="_blank">Help</a></li>
+                            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+                            <li><a href="https://www.cisco.com/c/en/us/about/legal/terms-conditions.html" target="_blank">Terms & Conditions</a></li>
+                            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html" target="_blank">Privacy Statement</a></li>
+                            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies" target="_blank">Cookie Policy</a></li>
+                            <li><a href="https://www.cisco.com/c/en/us/about/legal/trademarks.html" target="_blank">Trademarks</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </main>
+        </div>
+
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(event) {
+                var trendOptions = {
+                    title: {
+                        text: ''
+                    },
+                    credits: false,
+                    exporting: {
+                        enabled: false
+                    },
+                    chart: {
+                        width: 200,
+                        height: 50,
+                        type: 'line',
+                        margin: [2, 0, 2, 0],
+                        style: {
+                            overflow: 'visible'
+                        },
+                        skipClone: true
+                    },
+                    yAxis: {
+                        endOnTick: false,
+                        startOnTick: false,
+                        labels: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                        tickPositions: []
+                    },
+
+                    xAxis: {
+                        endOnTick: false,
+                        startOnTick: false,
+                        minorTickLength: 0,
+                        tickLength: 0,
+                        lineWidth: 0,
+                        minorGridLineWidth: 0,
+                        labels: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                        tickPositions: []
+                    },
+                    tooltip: {
+                        enabled: true,
+                        pointFormat: '<b>{point.y}</b> {series.name}'
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        line: {
+                            color: '#00bceb',
+                            lineWidth: 1,
+                            marker: {
+                                radius: 1
+                            }
+                        }
+                    }
+                };
+
+                new Highcharts.Chart('active-events-trendline',
+                    Object.assign(trendOptions, {
+                        series: [{
+                            name: "active events",
+                            data: [
+                                { "name":"06/03/2018 03:00am", "y": 14 },
+                                { "name":"06/10/2018 03:00am", "y": 18 },
+                                { "name":"06/17/2018 03:00am", "y": 32 },
+                                { "name":"06/24/2018 03:00am", "y":  6 },
+                                { "name":"07/01/2018 03:00am", "y": 12 },
+                                { "name":"07/08/2018 03:00am", "y": 18 },
+                                { "name":"07/15/2018 03:00am", "y": 24 },
+                                { "name":"07/22/2018 03:00am", "y": 10 },
+                                { "name":"07/29/2018 03:00am", "y":  8 },
+                                { "name":"08/05/2018 03:00am", "y":  6 }
+                            ]
+                        }]
+                    }));
+
+                new Highcharts.Chart('resolved-events-trendline',
+                    Object.assign(trendOptions, {
+                        series: [{
+                            name: "resolved events",
+                            data: [
+                                { "name":"06/03/2018 03:00am", "y": 1 },
+                                { "name":"06/10/2018 03:00am", "y": 3 },
+                                { "name":"06/17/2018 03:00am", "y": 1 },
+                                { "name":"06/24/2018 03:00am", "y": 2 },
+                                { "name":"07/01/2018 03:00am", "y": 8 },
+                                { "name":"07/08/2018 03:00am", "y": 9 },
+                                { "name":"07/15/2018 03:00am", "y": 8 },
+                                { "name":"07/22/2018 03:00am", "y": 5 },
+                                { "name":"07/29/2018 03:00am", "y": 2 },
+                                { "name":"08/05/2018 03:00am", "y": 1 }
+                            ]
+                        }]
+                    }));
+
+                new Highcharts.Chart('security-trendline',
+                    Object.assign(trendOptions, {
+                        series: [{
+                            name: "psirts",
+                            data: [
+                                { "name":"06/03/2018 03:00am", "y":  1 },
+                                { "name":"06/10/2018 03:00am", "y":  1 },
+                                { "name":"06/17/2018 03:00am", "y":  1 },
+                                { "name":"06/24/2018 03:00am", "y":  2 },
+                                { "name":"07/01/2018 03:00am", "y":  1 },
+                                { "name":"07/08/2018 03:00am", "y":  2 },
+                                { "name":"07/15/2018 03:00am", "y":  4 },
+                                { "name":"07/22/2018 03:00am", "y":  9 },
+                                { "name":"07/29/2018 03:00am", "y": 11 },
+                                { "name":"08/05/2018 03:00am", "y": 16 }
+                            ]
+                        }]
+                    }));
+
+                new Highcharts.Chart('cases-trendline',
+                    Object.assign(trendOptions, {
+                        series: [{
+                            name: "cases",
+                            data: [
+                                { "name":"06/03/2018 03:00am", "y":  4 },
+                                { "name":"06/10/2018 03:00am", "y":  4 },
+                                { "name":"06/17/2018 03:00am", "y":  2 },
+                                { "name":"06/24/2018 03:00am", "y":  1 },
+                                { "name":"07/01/2018 03:00am", "y":  2 },
+                                { "name":"07/08/2018 03:00am", "y":  7 },
+                                { "name":"07/15/2018 03:00am", "y":  8 },
+                                { "name":"07/22/2018 03:00am", "y":  7 },
+                                { "name":"07/29/2018 03:00am", "y":  9 },
+                                { "name":"08/05/2018 03:00am", "y": 10 }
+                            ]
+                        }]
+                    }));
+            });
+        </script>
+    </body>
+</html>

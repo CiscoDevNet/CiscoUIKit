@@ -1,0 +1,202 @@
+//
+// Grid
+//
+// Styleguide Layout.Grid
+//
+
+
+//
+// Info
+//
+// Markup:
+// <div class="row">
+//     <div class="col-md-3">
+//         <div class="panel">
+//             <img src="public/img/CiscoUIMainLogo-2.png">
+//         </div>
+//     </div>
+//     <div class="col-md-9">
+//         <h4 class="base-margin-top">Built With Bootstrap 4</h4>
+//         <p class="subtitle">Bootstrap is made to not only look and behave great in the latest desktop browsers, but in tablet and smartphone browsers too. The UI kit makes use of one of Bootstrap's best features - the 12 column responsive mobile-first grid.</p>
+//         <div>See <a href="https://getbootstrap.com/docs/4.1/layout/grid/" target="_blank">Bootstrap Grid</a> for more details.</div>
+//     </div>
+// </div>
+// <div class="base-margin-top">
+//     <div class="responsive-table">
+//         <table class="table table--bordered">
+//             <thead>
+//                 <tr>
+//                     <th></th>
+//                     <th>
+//                         <div>Extra small</div>
+//                         <div class="text-normal">Phones (<576px)</div>
+//                     </th>
+//                     <th>
+//                         <div>Small</div>
+//                             <div class="text-normal">Phones / Tablets (&#8805;576px)</div>
+//                         </th>
+//                         <th>
+//                             <div>Medium</div>
+//                             <div class="text-normal">Tablets / Desktops (&#8805;768px)</div>
+//                         </th>
+//                         <th>
+//                             <div>Large</div>
+//                             <div class="text-normal">Desktops (&#8805;992px)</div>
+//                         </th>
+//                         <th>
+//                             <div>XL</div>
+//                             <div class="text-normal">&#8805;1200px</div>
+//                         </th>
+//                         <th>
+//                             <div>2XL</div>
+//                             <div class="text-normal">&#8805;1440px</div>
+//                         </th>
+//                         <th>
+//                             <div>3XL</div>
+//                             <div class="text-normal">&#8805;1600px</div>
+//                         </th>
+//                         <th>
+//                             <div>4xl</div>
+//                             <div class="text-normal">&#8805;1840px</div>
+//                         </th>
+//                         <th>
+//                             <div>5xl</div>
+//                             <div class="text-normal">&#8805;2100px</div>
+//                         </th>
+//                     </tr>
+//                 </thead>
+//                 <tbody>
+//                     <tr>
+//                         <td class="text-bold">Grid Behavior</td>
+//                         <td>Horizontal at all times</td>
+//                         <td colspan="8">Collapsed to start, horizontal above breakpoints</td>
+//                     </tr>
+//                     <tr>
+//                         <td class="text-bold">Class prefix</td>
+//                         <td>.col-</td>
+//                         <td>.col-sm-</td>
+//                         <td>.col-md-</td>
+//                         <td>.col-lg-</td>
+//                         <td>.col-xl-</td>
+//                         <td>.col-2xl-</td>
+//                         <td>.col-3xl-</td>
+//                         <td>.col-4xl-</td>
+//                         <td>.col-5xl-</td>
+//                     </tr>
+//                     <tr>
+//                         <td class="text-bold"># of columns</td>
+//                         <td colspan="9">12</td>
+//                     </tr>
+//                     <tr>
+//                         <td class="text-bold">Gutter width</td>
+//                         <td colspan="9">20px (10px on each side of a column)</td>
+//                     </tr>
+//                 </tbody>
+//             </table>
+//         </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Layout.Grid.Info
+//
+
+
+//
+// Advanced Grid
+//
+// <blockquote>The advanced grid is a specialized container for cards which provides more control over gutters and element selection. NOTE: This grid is only supported on modern browsers (no IE11 support).</blockquote>
+//
+// Markup:
+// <div class="row base-margin-bottom">
+//     <div class="col-xl-6 flex-center-vertical">
+//         <div class="btn-group btn-group--square">
+//             <button id="grid-group" class="btn btn--gray-ghost">3up</button>
+//             <button id="grid-group" class="btn btn--gray-ghost">4up</button>
+//             <button id="grid-group" class="btn btn--gray-ghost selected">5up</button>
+//         </div>
+//     </div>
+//     <div class="col-xl-6 flex-center-vertical flex-right">
+//         <div class="form-group form-group--inline">
+//             <label class="switch">
+//                 <input id="grid-selectable" type="checkbox" checked>
+//                 <span class="switch__input"></span>
+//                 <span class="switch__label">Selectable</span>
+//             </label>
+//         </div>
+//         <div class="base-margin-left form-group form-group--inline label--inline">
+//             <div class="form-group__text">
+//                 <input id="grid-cards" type="number" value="15">
+//                 <label for="grid-cards">Cards</label>
+//             </div>
+//         </div>
+//         <div class="base-margin-left form-group form-group--inline label--inline">
+//             <div class="form-group__text">
+//                 <input id="grid-gutters" type="number" value="10">
+//                 <label for="grid-gutters">Gutters</label>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div id="grid" class="grid grid--selectable grid--5up"></div>
+//
+// Weight: 2
+//
+// Styleguide Layout.Grid.Dynamo
+//
+
+.grid {
+
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(auto-fill, minmax($cui-grid-default-card-size, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax($cui-grid-default-card-size, 1fr));
+    grid-gap: $cui-grid-default-gutter;
+
+    @for $i from 1 through $cui-grid-default-rows {
+        &.grid--row-#{$i} {
+            grid-template-rows: repeat($i, minmax($cui-grid-default-card-size, 1fr));
+        }
+    }
+
+    @for $i from 1 through $cui-grid-default-cols {
+        &.grid--col-#{$i},
+        &.grid--#{$i}up {
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+            &.grid--col#{$infix}-1 {
+                grid-template-columns: 100%;
+            }
+            @for $i from 2 through $cui-grid-default-cols {
+                &.grid--col#{$infix}-#{$i} {
+                    grid-template-columns: repeat($i, 1fr);
+                }
+                .area-col#{$infix}-#{$i} {
+                    grid-column: span $i;
+                }
+                .area-row#{$infix}-#{$i} {
+                    grid-row: span $i;
+                }
+            }
+        }
+    }
+
+    &.grid--selectable {
+        > *:hover {
+            border: 1px solid $base-accent-color;
+            cursor: pointer;
+        }
+    }
+
+    &.grid--spacing-qtr     { grid-gap: $base-spacing-qtr; }
+    &.grid--spacing-half    { grid-gap: $base-spacing-half; }
+    &.grid--spacing-base    { grid-gap: $base-spacing; }
+    &.grid--spacing-dbl     { grid-gap: $base-spacing-dbl; }
+}

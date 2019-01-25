@@ -1,48 +1,17 @@
 //
-// Sidebar updated
-//
-// Note: 3 Levels is the maximum depth we recommend and support<br>
-//
-// Since: 1.0.0
+// Sidebar
 //
 // Styleguide Layout.Sidebar
 //
 
 
 //
-// Simple
-//
-// <blockquote>A simple sidebar consists of a `sidebar__header` and a list of `sidebar__item`<br>Add the class `sidebar__item--selected` to denote the item state is selected</blockquote>
-//
-// Markup:
-// <div class="sidebar">
-//     <div class="sidebar__header">
-//         <div class="sidebar__header-title">John Smith</div>
-//     </div>
-//     <ul>
-//         <li class="sidebar__item"><a>Conversations</a></li>
-//         <li class="sidebar__item"><a>Favorite Conversations</a></li>
-//         <li class="sidebar__item"><a>Contacts</a></li>
-//         <li class="sidebar__item"><a>Favorite Contacts</a></li>
-//         <li class="sidebar__item"><a>Settings</a></li>
-//         <li class="sidebar__item"><a>Feedback</a></li>
-//         <li class="sidebar__item"><a>Unlink Device</a></li>
-//     </ul>
-// </div>
-//
-// Weight: 1
-//
-// Styleguide Layout.Sidebar.Simple
-//
-
-
-//
-// Color
+// Spacing
 //
 // Markup:
 // <div class="row">
 //     <div class="col-md-3">
-//         <div class="sidebar">
+//         <nav class="sidebar">
 //             <div class="sidebar__header">
 //                 <div class="sidebar__header-title">Default</div>
 //             </div>
@@ -72,10 +41,111 @@
 //                 </li>
 //                 <li class="sidebar__item"><a>Reports</a></li>
 //             </ul>
-//         </div>
+//         </nav>
 //     </div>
-//     <div class="col-md-3">
-//         <div class="sidebar sidebar--ltgray">
+//     <div class="col-md-9">
+//         <nav class="sidebar sidebar--compressed">
+//             <div class="sidebar__header">
+//                 <div class="sidebar__header-title">Compressed</div>
+//             </div>
+//             <ul>
+//                 <li class="sidebar__item"><a>Dashboard</a></li>
+//                 <li class="sidebar__item"><a>Monitor</a></li>
+//                 <li class="sidebar__drawer">
+//                     <a>Configuration</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Open Device Configuration</a></li>
+//                         <li class="sidebar__item"><a>Configuration Guides</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Inventory</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Routers</a></li>
+//                         <li class="sidebar__item"><a>Switches</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Services</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Dashboard</a></li>
+//                         <li class="sidebar__item"><a>Monitor</a></li>
+//                         <li class="sidebar__drawer">
+//                             <a>Configuration</a>
+//                             <ul>
+//                                 <li class="sidebar__item"><a>Open Device Configuration</a></li>
+//                                 <li class="sidebar__item"><a>Configuration Guides</a></li>
+//                             </ul>
+//                         </li>
+//                         <li class="sidebar__drawer">
+//                             <a>Inventory</a>
+//                             <ul>
+//                                 <li class="sidebar__item"><a>Routers</a></li>
+//                                 <li class="sidebar__item"><a>Switches</a></li>
+//                             </ul>
+//                         </li>
+//                         <li class="sidebar__drawer">
+//                             <a>Services</a>
+//                             <ul>
+//                                 <li class="sidebar__item"><a>Network Services</a></li>
+//                                 <li class="sidebar__item"><a>Mobility Services</a></li>
+//                             </ul>
+//                         </li>
+//                         <li class="sidebar__item"><a>Reports</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__item"><a>Reports</a></li>
+//             </ul>
+//         </nav>
+//     </div>
+// </div>
+//
+// Weight: 1
+//
+// Styleguide Layout.Sidebar.Spacing
+//
+
+
+//
+// Color
+//
+// Markup:
+// <div class="row">
+//     <div class="col-lg-3">
+//         <nav class="sidebar">
+//             <div class="sidebar__header">
+//                 <div class="sidebar__header-title">Default</div>
+//             </div>
+//             <ul>
+//                 <li class="sidebar__item"><a>Dashboard</a></li>
+//                 <li class="sidebar__item"><a>Monitor</a></li>
+//                 <li class="sidebar__drawer">
+//                     <a>Configuration</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Open Device Configuration</a></li>
+//                         <li class="sidebar__item"><a>Configuration Guides</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Inventory</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Routers</a></li>
+//                         <li class="sidebar__item"><a>Switches</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__drawer">
+//                     <a>Services</a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Network Services</a></li>
+//                         <li class="sidebar__item"><a>Mobility Services</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__item"><a>Reports</a></li>
+//             </ul>
+//         </nav>
+//     </div>
+//     <div class="col-lg-3">
+//         <nav class="sidebar sidebar--ltgray">
 //             <div class="sidebar__header">
 //                 <div class="sidebar__header-title">Light Gray</div>
 //             </div>
@@ -105,10 +175,10 @@
 //                 </li>
 //                 <li class="sidebar__item"><a>Reports</a></li>
 //             </ul>
-//         </div>
+//         </nav>
 //     </div>
-//     <div class="col-md-3">
-//         <div class="sidebar sidebar--dkgray">
+//     <div class="col-lg-3">
+//         <nav class="sidebar sidebar--dkgray">
 //             <div class="sidebar__header">
 //                 <div class="sidebar__header-title">Dark Gray</div>
 //             </div>
@@ -138,10 +208,10 @@
 //                 </li>
 //                 <li class="sidebar__item"><a>Reports</a></li>
 //             </ul>
-//         </div>
+//         </nav>
 //     </div>
-//     <div class="col-md-3">
-//         <div class="sidebar sidebar--indigo">
+//     <div class="col-lg-3">
+//         <nav class="sidebar sidebar--indigo">
 //             <div class="sidebar__header">
 //                 <div class="sidebar__header-title">Indigo</div>
 //             </div>
@@ -171,7 +241,7 @@
 //                 </li>
 //                 <li class="sidebar__item"><a>Reports</a></li>
 //             </ul>
-//         </div>
+//         </nav>
 //     </div>
 // </div>
 //
@@ -182,212 +252,244 @@
 
 
 //
-// Toolbar
-//
-// <blockquote>A sidebar can contain a `sidebar__toolbar` with a list of buttons</blockquote>
+// Size
 //
 // Markup:
-// <div class="sidebar">
-//     <div class="sidebar__header">
-//         <div class="sidebar__header-title">Cisco Prime</div>
-//         <div class="sidebar__header-toolbar">
-//             <button class="btn btn--icon btn--primary">
-//                 <span class="icon-feedback"></span>
-//             </button>
-//             <button class="btn btn--icon btn--primary">
-//                 <span class="icon-star"></span>
-//             </button>
-//             <button class="btn btn--icon btn--primary">
-//                 <span class="icon-search"></span>
-//             </button>
-//         </div>
+// <div class="row">
+//     <div class="col-md-3">
+//         <nav class="sidebar">
+//             <div class="sidebar__header">
+//                 <div class="sidebar__header-title">Default</div>
+//             </div>
+//             <ul>
+//                 <li class="sidebar__item selected">
+//                     <a>
+//                         <span class="icon-home"></span>
+//                         <span>Home</span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-bell"></span>
+//                         <span>Alerts</span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-graph"></span>
+//                         <span>Charts</span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__drawer sidebar__drawer--opened">
+//                     <a>
+//                         <span class="icon-devices"></span>
+//                         <span>Devices</span>
+//                     </a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Aironet 3500i Access Point</a></li>
+//                         <li class="sidebar__item"><a>Cisco Catalyst 3750-24TS</a></li>
+//                         <li class="sidebar__item"><a>Cisco 1841 ISR</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-cog"></span>
+//                         <span>Settings</span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-help"></span>
+//                         <span>Help</span>
+//                     </a>
+//                 </li>
+//             </ul>
+//         </nav>
 //     </div>
-//     <ul>
-//         <li class="sidebar__item"><a>Dashboard</a></li>
-//         <li class="sidebar__item"><a>Monitor</a></li>
-//         <li class="sidebar__item"><a>Configuration</a></li>
-//     </ul>
+//     <div class="col-md-4">
+//         <nav class="sidebar sidebar--mini">
+//             <div class="sidebar__header">
+//                 <div class="sidebar__header-title">Mini</div>
+//             </div>
+//             <ul>
+//                 <li class="sidebar__item selected">
+//                     <a>
+//                         <span class="icon-home"></span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="badge-wrapper">
+//                             <span class="icon-alert icon-medium"></span>
+//                             <span class="badge badge--danger">3</span>
+//                         </span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-graph"></span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__drawer sidebar__drawer--opened">
+//                     <a>
+//                         <span class="icon-devices"></span>
+//                     </a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Aironet 3500i Access Point</a></li>
+//                         <li class="sidebar__item"><a>Cisco Catalyst 3750-24TS</a></li>
+//                         <li class="sidebar__item"><a>Cisco 1841 ISR</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-cog"></span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-help"></span>
+//                     </a>
+//                 </li>
+//             </ul>
+//         </nav>
+//     </div>
+//     <div class="col-md-4">
+//         <nav class="sidebar sidebar--mini">
+//             <div class="sidebar__header">
+//                 <div class="sidebar__header-title">Mini</div>
+//             </div>
+//             <ul>
+//                 <li class="sidebar__item selected">
+//                     <a>
+//                         <span class="icon-home"></span>
+//                         <span>Home</span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-bell"></span>
+//                         <span>Alerts</span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-graph"></span>
+//                         <span>Charts</span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__drawer sidebar__drawer--opened">
+//                     <a>
+//                         <span class="icon-devices"></span>
+//                         <span>Devices</span>
+//                     </a>
+//                     <ul>
+//                         <li class="sidebar__item"><a>Aironet 3500i Access Point</a></li>
+//                         <li class="sidebar__item"><a>Cisco Catalyst 3750-24TS</a></li>
+//                         <li class="sidebar__item"><a>Cisco 1841 ISR</a></li>
+//                     </ul>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-cog"></span>
+//                         <span>Settings</span>
+//                     </a>
+//                 </li>
+//                 <li class="sidebar__item">
+//                     <a>
+//                         <span class="icon-help"></span>
+//                         <span>Help</span>
+//                     </a>
+//                 </li>
+//             </ul>
+//         </nav>
+//     </div>
 // </div>
 //
 // Weight: 3
 //
-// Styleguide Layout.Sidebar.Toolbar
+// Styleguide Layout.Sidebar.Size
 //
 
-//
-// Drawers
-//
-// <blockquote>A sidebar can contain a `sidebar__drawer` which can contain sidebar items or other drawers<br>Add the class `sidebar__drawer--opened` to denote the state as opened</blockquote>
-//
-// Markup:
-// <div class="sidebar">
-//     <div class="sidebar__header">
-//         <div class="sidebar__header-title">Cisco Prime</div>
-//         <div class="sidebar__header-toolbar">
-//             <button class="btn btn--icon btn--primary">
-//                 <span class="icon-feedback"></span>
-//             </button>
-//             <button class="btn btn--icon btn--primary">
-//                 <span class="icon-star"></span>
-//             </button>
-//             <button class="btn btn--icon btn--primary">
-//                 <span class="icon-search"></span>
-//             </button>
-//         </div>
-//     </div>
-//     <ul>
-//         <li class="sidebar__item"><a>Dashboard</a></li>
-//         <li class="sidebar__item"><a>Monitor</a></li>
-//         <li class="sidebar__drawer">
-//             <a>Configuration</a>
-//             <ul>
-//                 <li class="sidebar__item"><a>Open Device Configuration</a></li>
-//                 <li class="sidebar__item"><a>Configuration Guides</a></li>
-//             </ul>
-//         </li>
-//         <li class="sidebar__drawer">
-//             <a>Inventory</a>
-//             <ul>
-//                 <li class="sidebar__item"><a>Routers</a></li>
-//                 <li class="sidebar__item"><a>Switches</a></li>
-//             </ul>
-//         </li>
-//         <li class="sidebar__drawer">
-//             <a>Services</a>
-//             <ul>
-//                 <li class="sidebar__item"><a>Network Services</a></li>
-//                 <li class="sidebar__item"><a>Mobility Services</a></li>
-//             </ul>
-//         </li>
-//         <li class="sidebar__item"><a>Reports</a></li>
-//     </ul>
-// </div>
-//
-// Weight: 4
-//
-// Styleguide Layout.Sidebar.Drawers
-//
+@mixin sidebar-color($background, $background-selected, $background-opened,
+    $background-hover, $color, $color-selected, $border-selected, $divider-color)
+{
+    background: $background;
+    color: $color;
 
+    &__header {
+        border-bottom: 1px solid $divider-color; // divider lines
+    }
 
-//
-// Example
-//
-// <blockquote>A sidebar item can contain an action which is right justified. <br>Add the class `sidebar__item-action` to a sidebar item to align the action properly<br>Add the class `sidebar--hidden` to hide the sidebar completely<br></blockquote>
-//
-// Markup:
-// <div class="sidebar">
-//     <div class="sidebar__header">
-//         <div class="sidebar__header-title">CLI Analyzer</div>
-//     </div>
-//     <ul class="sidebar__drawer">
-//         <li class="sidebar__item">
-//             <a>
-//                 <span class="icon-devices"></span>
-//                 <span class="qtr-margin-left">Dashboard</span>
-//             </a>
-//         </li>
-//         <li class="sidebar__item sidebar__item--selected">
-//             <a>
-//                 <span class="icon-plus"></span>
-//                 <span class="qtr-margin-left">New Session</span>
-//             </a>
-//         </li>
-//         <li class="sidebar__item">
-//             <a>
-//                 <span class="icon-diagnostics"></span>
-//                 <span class="qtr-margin-left">File Analysis</span>
-//             </a>
-//         </li>
-//         <li class="sidebar__item">
-//             <a>
-//                 <span class="icon-cog"></span>
-//                 <span class="qtr-margin-left">Settings</span>
-//             </a>
-//         </li>
-//     </ul>
-//     <ul>
-//         <li class="sidebar__drawer sidebar__drawer--opened">
-//             <a>Current Sessions</a>
-//             <ul>
-//                 <li class="sidebar__item">
-//                     <a>
-//                         <span class="icon-circle text-success"></span>
-//                         <span class="qtr-margin-left">172.18.194.56</span>
-//                         <div class="sidebar__item-action">
-//                             <span class="icon-close"></span>
-//                         </div>
-//                     </a>
-//                 </li>
-//                 <li class="sidebar__item">
-//                     <a>
-//                         <span class="icon-circle text-danger"></span>
-//                         <span class="qtr-margin-left">svn-sj-2960</span>
-//                         <div class="sidebar__item-action">
-//                             <span class="icon-close"></span>
-//                         </div>
-//                     </a>
-//                 </li>
-//                 <li class="sidebar__item">
-//                     <a>
-//                         <span class="icon-circle text-success"></span>
-//                         <span class="qtr-margin-left">172.18.194.59</span>
-//                         <div class="sidebar__item-action">
-//                             <span class="icon-close"></span>
-//                         </div>
-//                     </a>
-//                 </li>
-//            </ul>
-//         </li>
-//     </ul>
-//     <ul>
-//         <li class="sidebar__drawer sidebar__drawer--opened">
-//             <a>Recent Sessions</a>
-//             <ul>
-//                 <li class="sidebar__item">
-//                     <a>172.18.194.56</a>
-//                 </li>
-//                 <li class="sidebar__item">
-//                     <a>svn-sj-2960</a>
-//                 </li>
-//                 <li class="sidebar__item">
-//                     <a>172.18.194.59</a>
-//                 </li>
-//             </ul>
-//         </li>
-//     </ul>
-//     <ul>
-//         <li class="sidebar__item">
-//             <a>
-//                 <span class="icon-contact"></span>
-//                 <span class="qtr-margin-left">Logged in as kbroich</span>
-//             </a>
-//         </li>
-//         <li class="sidebar__item">
-//             <a>
-//                 <span class="icon-feedback"></span>
-//                 <span class="qtr-margin-left">Feedback</span>
-//             </a>
-//         </li>
-//         <li class="sidebar__item">
-//             <a>
-//                 <span class="icon-help"></span>
-//                 <span class="qtr-margin-left">Help</span>
-//             </a>
-//         </li>
-//     </ul>
-// </div>
-//
-// Weight: 5
-//
-// Styleguide Layout.Sidebar.Example
-//
+    a {
+        color: $color;
+        span[class^=icon-] {
+            color: rgba($color, 0.75);
+        }
+    }
+
+    > ul > li > a {
+        &:hover,
+        &:visited,
+        &:active,
+        &:focus {
+            box-shadow: inset 3px 0 0 0 $border-selected;
+            span[class^=icon-] {
+                color: $color;
+            }
+        }
+    }
+    > ul > li {
+        &.sidebar__item--selected a,
+        &.selected a {
+            box-shadow: inset 3px 0 0 0 $border-selected;
+            span[class^=icon-] {
+                color: $color;
+            }
+        }
+    }
+
+    li {
+        &.sidebar__item--selected a,
+        &.selected a {
+            opacity: 1;
+            color: $color-selected;
+            background-color: $background-selected;
+        }
+
+        a:hover {
+            background-color: $background-selected;
+        }
+
+        a:hover,
+        a:visited,
+        a:active,
+        a:focus {
+            opacity: 1;
+            text-decoration: none;
+            color: $color;
+        }
+    }
+
+    > ul li.sidebar__drawer > a:after {
+        color: $color; // Colorize chevrons
+    }
+
+    > ul li.sidebar__drawer:hover > a:after {
+        color: $color-selected; // Colorize chevrons on hover
+    }
+
+    li.sidebar__drawer.sidebar__drawer--opened {
+        position:relative;
+
+        ul {
+            position: relative;
+            background-color: $background-opened;
+
+        }
+    }
+}
 
 $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
-
-.standalone .show-menu .content-body,
-.styleguide .show-menu .content-fluid {
-    padding-left: $mobile-menu-width;
-}
 
 .content-fluid,
 .content-body {
@@ -440,7 +542,34 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     }
 }
 
-.apollo-sidebar, // Deprecated. Use sidebar instead
+
+
+.sidebar ~ main,
+main.withSidebar {
+    transform: translate3d($sidebar-menu-width,0,0);
+
+    @include media-breakpoint-up(md) {
+        margin: 0 0 0 $sidebar-menu-width;
+        transform: none;
+        transform: translate3d(0,0,0);
+    }
+}
+.sidebar.sidebar--mini ~ main {
+    transform: translate3d($sidebar-menu-width-mini,0,0);
+
+    @include media-breakpoint-up(md) {
+        margin: 0 0 0 $sidebar-menu-width-mini;
+        transform: none;
+        transform: translate3d(0,0,0);
+    }
+}
+.sidebar.sidebar--hidden ~ main,
+.sidebar.sidebar--hidden.sidebar--mini ~ main,
+main.withSidebar.sidebarHidden {
+    margin: 0;
+    transform: translate3d(0,0,0);
+}
+
 .sidebar {
     display: block;
     position: absolute;
@@ -452,27 +581,30 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     height: 100%;
     z-index: $sidebar-zindex;
 
-    visibility: visible;
-    transform: translate3d(0,0,0);
-    transition: transform 0.25s;
-
-    @include media-breakpoint-up(sm) {
-        visibility: visible;
-        transform: translate3d(0,0,0);
-    }
-
-    @include sidebar-color();
-
     @each $sidebar-obj in $sidebar-colors {
-        &--#{map-get($sidebar-obj, name)} {
+        @if map-get($sidebar-obj, name) == "default" {
             @include sidebar-color(map-get($sidebar-obj, params)...);
+        } @else {
+            &--#{map-get($sidebar-obj, name)} {
+                @include sidebar-color(map-get($sidebar-obj, params)...);
+            }
         }
     }
 
-    &--hidden {
-        visibility: hidden;
-        transition: all 0.25s;
-        transform: translate3d(-$sidebar-menu-width,0,0);
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: $header-height-small;
+        padding: $base-spacing * 0.75;
+
+        a:hover {
+            box-shadow: none;
+        }
+    }
+
+    &.sidebar--hidden {
+        width: 0;
     }
 
     ul {
@@ -481,27 +613,34 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     }
 
     li {
+        a {
+            display: flex;
+            align-items: center;
+            height: $sidebar-item-height;
+            padding: 0 $base-spacing;
+            user-select: none;
+            font-size: $base-font-size;
+
+            span[class^="icon-"] {
+                margin-right: $base-spacing-half;
+            }
+        }
+
+        &.sidebar__item {
+            @include text-ellipsis;
+            position: relative;
+        }
         &.sidebar__item--selected a,
         &.selected a,
         a:hover {
-            box-shadow: $sidebar-item-border-selected;
             text-decoration: none;
         }
     }
 
-    a {
-        display: flex;
-        align-items: center;
-        height: $sidebar-item-height;
-        padding: 0 $base-spacing;
-        line-height: $sidebar-item-height;
-        font-weight: normal;
-    }
-
-    > ul {
+    ul {
         @include clearfix;
 
-        > li {
+        li {
             &.sidebar__drawer,
             &.sidebar-drawer {
                 &:hover {
@@ -514,11 +653,10 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
 
                 > a {
                     &:after {
-                        @include icon-chevron-right;
+                        @include drawer-closed;
+                        opacity: 0.5;
                         position: absolute;
                         right: 14px;
-                        font-size: $base-font-size;
-                        opacity: 0.5;
                     }
                 }
 
@@ -529,7 +667,7 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
                 &--opened {
                     > a {
                         &:after {
-                            @include icon-chevron-down;
+                            @include drawer-opened;
                             opacity: 1;
                         }
                     }
@@ -541,14 +679,11 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
             }
 
             ul > li > a {
-                font-size: 12px;
-                font-weight: bold;
                 padding-left: $base-spacing * 2;
             }
 
             // NOTE: 3 levels deep is the max we style
             ul > li > ul > li > a {
-                font-weight: normal;
                 padding-left: $base-spacing * 3;
             }
         }
@@ -569,6 +704,119 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
         }
     }
 
+    &.sidebar--compressed {
+        .sidebar__header {
+            padding: $base-spacing-half;
+        }
+        a {
+            height: $sidebar-item-height-compressed;
+            font-size: $sidebar-font-size-compressed;
+        }
+        ul li ul > li > a,
+        ul > li.sidebar__drawer a:after {
+            font-size: $sidebar-font-size-compressed;
+        }
+    }
+
+    &.sidebar--mini.sidebar--hidden {
+        width: 0;
+        overflow: hidden;
+    }
+
+    &.sidebar--mini {
+        width: $sidebar-menu-width-mini;
+        overflow: visible;
+
+        .sidebar__header .sidebar__header-title {
+            font-size: 0;
+        }
+        .sidebar__drawer > a:after {
+            display: none;
+            font-size: 10px;
+            right: $base-spacing-half;
+            top: auto;
+            transform: rotate(270deg);
+        }
+        .sidebar__drawer.sidebar__drawer--opened > a:after {
+            transform: rotate(90deg);
+        }
+        > ul > li.sidebar__item--selected a {
+            span[class^=icon-] {
+                opacity: 1;
+            }
+        }
+        > ul > li> a {
+            &:hover,
+            &:focus,
+            &:active {
+                span[class^=icon-] {
+                    opacity: 1;
+                }
+            }
+        }
+        li a {
+            height: auto;
+            padding: 15px 20px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            position: relative;
+        }
+        .sidebar__item a,
+        .sidebar__drawer a {
+            justify-content: center;
+        }
+        .sidebar__drawer ul {
+            display: block;
+            opacity: 0;
+            margin-left: -100%;
+            height: 0;
+            width: 0;
+            visibility: hidden;
+        }
+        .sidebar__drawer.sidebar__drawer--opened {
+            ul {
+                position: absolute;
+                margin-left: 0;
+                width: auto;
+                min-width: 250px;
+                height: auto;
+                opacity: 1;
+                flex-wrap: wrap;
+                left: 100%;
+                top: 0;
+                visibility: visible;
+                transition: margin-left .2s, opacity .5s;
+                box-shadow: 5px 0 10px -5px rgba(0,0,0,.2), inset 5px 0 10px -5px rgba(0,0,0,0.2);
+
+                a {
+                    justify-content: flex-start;
+                    padding-left: $base-spacing;
+                    align-items: flex-start;
+                }
+                ul {
+                    overflow-y: auto;
+                    height: auto;
+                    max-height: 250px;
+                }
+            }
+        }
+        a {
+            opacity: 1;
+        }
+        a span[class^=icon-] {
+            margin: 0;
+            font-size: $sidebar-menu-icon-size-mini;
+
+            + * {
+                text-align: center;
+                white-space: normal;
+                margin-top: $base-spacing-qtr;
+                font-size: $sidebar-menu-font-size-mini;
+                font-weight: normal;
+            }
+        }
+    }
+
     .sidebar-header + .sidebar-section,
     .sidebar-section + .sidebar-section {
         border-top: $sidebar-item-border;
@@ -585,20 +833,10 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     }
 }
 
-.sidebar__header,
-.sidebar-header {
-    padding: $base-spacing * 0.75;
-    text-align: center;
-
-    a:hover {
-        box-shadow: none;
-    }
-}
-
 .sidebar__header-title,
 .sidebar-header__title {
     font-size: $sidebar-title-font-size;
-    line-height: 1;
+    font-weight: $sidebar-title-font-weight;
 }
 
 .sidebar__header-toolbar,
@@ -628,33 +866,22 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
     opacity: 0;
     cursor: pointer;
     pointer-events: none;
+}
 
-    .show-desktop-menu & {
-        @media screen and (max-width: 1199px) {
-            transition: $menu-transition;
-        }
+a.sidebar-toggle {
+    opacity: 1;
+    position: absolute;
+    left: 26.5px;
+
+    span[class^=icon-] {
+        font-weight: bold;
+        font-size: $sidebar-menu-icon-size-mini;
     }
 
-    .show-desktop-menu.show-menu & {
-        @media screen and (max-width: 1199px) {
-            transform: translateX($mobile-menu-width);
-            opacity: 1;
-            pointer-events: auto;
-        }
-    }
-
-    .hide-desktop-menu & {
-        @media screen and (max-width: 767px) {
-            transition: $menu-transition;
-        }
-    }
-
-    .hide-desktop-menu.show-menu & {
-        @media screen and (max-width: 767px) {
-            transform: translateX($mobile-menu-width);
-            opacity: 1;
-            pointer-events: auto;
-        }
+    &:hover {
+        opacity: 1;
+        color: inherit;
+        text-decoration: none;
     }
 }
 
@@ -679,4 +906,49 @@ $menu-transition: padding-left 0.5s, transform 0.5s, opacity 0.5s;
         font-size: 10px;
         display: block;
     }
+}
+
+// Global Modifiers
+
+&.cui--compressed .sidebar .sidebar__header {
+    padding: $base-spacing-half;
+}
+&.cui--compressed .sidebar a {
+    font-size: $sidebar-font-size-compressed;
+}
+&.cui--compressed .sidebar ul > li a {
+    height: $sidebar-item-height-compressed;
+}
+&.cui--compressed .sidebar ul li ul > li > a,
+&.cui--compressed .sidebar ul > li.sidebar__drawer a:after {
+    font-size: $sidebar-font-size-compressed;
+}
+&.cui--compressed .sidebar.sidebar--mini ul li ul > li > a,
+&.cui--compressed .sidebar.sidebar--mini ul > li.sidebar__drawer a:after {
+    font-size: 10px;
+}
+&.cui--compressed .sidebar.sidebar--mini ul > li a {
+    height: auto;
+}
+
+&.cui--animated .sidebar,
+&.cui--animated main {
+    transition: width .2s;
+}
+&.cui--animated .sidebar ul > li.sidebar__drawer a {
+    &:hover::after {
+        transition: all .2s;
+    }
+}
+&.cui--animated .sidebar .sidebar__header .sidebar__header-title {
+    transition: font-size .2s;
+}
+&.cui--animated .sidebar.sidebar--mini .sidebar__header .sidebar__header-title {
+    transition: none;
+}
+&.cui--animated .sidebar ul li a {
+    transition: padding .2s;
+}
+&.cui--animated .sidebar ul > li.sidebar__drawer.sidebar__drawer--opened {
+    transition: all 1s;
 }

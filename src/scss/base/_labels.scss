@@ -1,10 +1,7 @@
 //
 // Label
 //
-// Labels can be used for classification of content<br><br>
-// Since 1.0.0
-//
-// Styleguide Base.Label
+// Styleguide Primitives.Label
 //
 
 
@@ -19,7 +16,7 @@
 //
 // Weight: 1
 //
-// Styleguide Base.Label.Size
+// Styleguide Primitives.Label.Size
 //
 
 
@@ -27,7 +24,7 @@
 // Color
 //
 // Markup:
-// <div class="panel panel--compressed panel--bordered">
+// <div class="panel panel--compressed">
 //     <span class="label label--info">info</span>
 //     <span class="label label--success">success</span>
 //     <span class="label label--warning">warning</span>
@@ -35,12 +32,11 @@
 //     <span class="label label--danger">danger</span>
 //     <span class="label">default</span>
 //     <span class="label label--blue">blue</span>
-//     <span class="label label--mdgray">medium gray</span>
 //     <span class="label label--dkgray">dark gray</span>
-//     <span class="label label--dkblue">dark blue</span>
+//     <span class="label label--vibblue">vibrant blue</span>
 //     <span class="label label--indigo">indigo</span>
 // </div>
-// <div class="panel panel--dkgray panel--compressed base-margin-top">
+// <div class="panel panel--dkgray panel--compressed base-margin-top col-4">
 //     <span class="label label--ltgray">light gray</span>
 //     <span class="label label--white">white</span>
 //     <span class="label label--ghost">ghost</span>
@@ -48,7 +44,7 @@
 //
 // Weight: 2
 //
-// Styleguide Base.Label.Color
+// Styleguide Primitives.Label.Color
 //
 
 
@@ -71,7 +67,7 @@
 //
 // Weight: 3
 //
-// Styleguide Base.Label.Raised
+// Styleguide Primitives.Label.Raised
 //
 
 
@@ -98,24 +94,30 @@
 //
 // Weight: 4
 //
-// Styleguide Base.Label.Removable
+// Styleguide Primitives.Label.Removable
 //
 
 
 //
-// Bordered
+// Outlined
 //
 // Markup:
-// <div class="panel panel--dkgray panel--compressed base-margin-top">
-//     <span class="label label--bordered">bordered</span>
-//     <span class="label label--blue label--bordered">bordered</span>
-//     <span class="label label--success label--bordered label--bordered-white">bordered (white)</span>
-//     <span class="label label--danger label--bordered label--bordered-white">bordered (white)</span>
+// <div class="panel panel--compressed">
+//     <span class="label label--info label--outlined">info</span>
+//     <span class="label label--success label--outlined">success</span>
+//     <span class="label label--warning label--outlined">warning</span>
+//     <span class="label label--warning-alt label--outlined">warning-alt</span>
+//     <span class="label label--danger label--outlined">danger</span>
+//     <span class="label label--outlined">default</span>
+//     <span class="label label--blue label--outlined">blue</span>
+//     <span class="label label--dkgray label--outlined">dark gray</span>
+//     <span class="label label--vibblue label--outlined">vibrant blue</span>
+//     <span class="label label--indigo label--outlined">indigo</span>
 // </div>
 //
 // Weight: 5
 //
-// Styleguide Base.Label.Bordered
+// Styleguide Primitives.Label.Outlined
 //
 
 
@@ -135,6 +137,7 @@
 //     <span class="label label--circle label--warning">9</span>
 //     <span class="label label--circle label--danger">0</span>
 // </div>
+// <br>
 // <div>
 //     <span class="label label--circle label--small label--success">
 //         <span class="icon-check"></span>
@@ -158,7 +161,7 @@
 //
 // Weight: 6
 //
-// Styleguide Base.Label.Circle
+// Styleguide Primitives.Label.Circle
 //
 
 .label + .label {
@@ -168,17 +171,29 @@
 .label {
 
     display: inline-flex;
+    font-weight: $base-font-weight;
     align-items: center;
     border: 0 none;
     border-radius: $base-label-border-radius;
-    -webkit-font-smoothing: auto;
+    letter-spacing: 0.025rem; // Helps legibility
 
-    @include label-size();
-    @include label-color();
+    &:focus {
+        @include focus-outline;
+    }
+
+    @include label-size;
+    @include label-color;
+
+    &--outlined {
+        @include label-outlined($color: $base-font-color, $border: $base-border-color);
+    }
 
     @each $label-name, $label-color, $label-background, $label-border in $label-colors {
         &--#{$label-name} {
             @include label-color($background: $label-background, $color: $label-color, $border: $label-border);
+        }
+        &--#{$label-name}.label--outlined {
+            @include label-outlined($color: $base-font-color, $border: $label-background);
         }
     }
 
