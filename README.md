@@ -10,7 +10,7 @@ This library is a collaboration between Cisco Brand and Cisco Engineering
 
 ## Copyright and License
 
-Code and documentation copyright 2018 Cisco Systems.
+Code and documentation copyright 2019 Cisco Systems.
 
 ---
 
@@ -33,7 +33,7 @@ NOTE: If you are using Windows 10 make sure to grab gitbash [here](https://git-f
 ```sh
 $ mkdir cui
 $ cd cui
-$ git clone http@wwwin-gitlab-sjc.cisco.com:cisco-ui/pattern-library.git .
+$ git clone https://github.com/CiscoDevNet/CiscoUIKit.git .
 ```
 
 NOTE: You will want to work on a feature branch (not master!). To create a feature branch called `foo` run this:
@@ -44,23 +44,23 @@ $ git checkout -b foo origin/master
 #### 4.2 Or you can fetch the UI Kit source from Git via NPM like this:
 in your package.json file add this line to the dependencies section:
 ```
-"cisco-ui": "git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official"
+"cisco-ui": "git+https://github.com/CiscoDevNet/CiscoUIKit.git"
 ```
 or from your command-line run:
 ```
-npm install git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official --save
+npm install git+https://github.com/CiscoDevNet/CiscoUIKit.git --save
 ```
 
 #### 4.3 Or you can fetch the UI Kit source from Git via Bower like this:
 in your bower.json file add this line to the dependencies section:
 ```
-"cisco-ui": "http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official"
+"cisco-ui": "https://github.com/CiscoDevNet/CiscoUIKit.git"
 ```
 
 #### 4.4 Or you can fetch the UI Kit source from Git via Yarn like this:
 From the command-line run:
 ```
-yarn add git+http://gitlab-sjc.cisco.com/cisco-ui/pattern-library.git#v1.1.0-official
+yarn add git+https://github.com/CiscoDevNet/CiscoUIKit.git
 ```
 
 NOTE: We use a common naming syntax like this v.{version}-official
